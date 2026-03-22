@@ -17,7 +17,7 @@ albedo_color = Color(0.681584, 0.422495, 0.077547, 1)
 material = SubResource("StandardMaterial3D_jvk27")
 size = Vector3(0.5, 0.2, 1)
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="jugon" type="CharacterBody3D" groups=["jugon"]]
 script = ExtResource("1_he6aj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
