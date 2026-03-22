@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cf5p26uaj7snn"]
+
+[ext_resource type="Script" uid="uid://bh6ow7383g1h7" path="res://escenarios/juador/jugador.gd" id="1_he6aj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1q4m4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_he6aj"]
+albedo_color = Color(0.92, 0.797333, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_he6aj"]
+material = SubResource("StandardMaterial3D_he6aj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvk27"]
+albedo_color = Color(0.681584, 0.422495, 0.077547, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_24u8i"]
+material = SubResource("StandardMaterial3D_jvk27")
+size = Vector3(0.5, 0.2, 1)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_he6aj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_1q4m4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -0.150069, 1, 0.150069)
+mesh = SubResource("CapsuleMesh_he6aj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -0.150069, 1.35281, -0.150069)
+mesh = SubResource("BoxMesh_24u8i")
