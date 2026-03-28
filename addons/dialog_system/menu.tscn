@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://7qiks0q8bq65"]
+[gd_scene load_steps=2 format=3 uid="uid://7qiks0q8bq65"]
 
 [ext_resource type="Script" uid="uid://dpaut7dspjunq" path="res://addons/dialog_system/menu.gd" id="1_lti8b"]
 
-[node name="Menu" type="PanelContainer" unique_id=123626551]
+[node name="Menu" type="PanelContainer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -17,16 +17,16 @@ grow_vertical = 2
 size_flags_vertical = 4
 script = ExtResource("1_lti8b")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=424902473]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="question" type="Label" parent="VBoxContainer" unique_id=280346503]
+[node name="question" type="Label" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Hey, are you ready for the next round?"
 
-[node name="choicese" type="VBoxContainer" parent="VBoxContainer" unique_id=288728567]
+[node name="choicese" type="VBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10

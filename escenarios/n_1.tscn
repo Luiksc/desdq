@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=15 format=3 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" uid="uid://dafkk2dwr20td" path="res://escenarios/nivel_1.gd" id="1_oxi0n"]
 [ext_resource type="Script" uid="uid://dvvv48u8fo0nq" path="res://escenarios/camararigida.gd" id="2_tyn7n"]
 [ext_resource type="PackedScene" uid="uid://cqpeejgxglac6" path="res://escenarios/npc.tscn" id="3_3ccld"]
 [ext_resource type="Script" uid="uid://cscpwvurjvpep" path="res://escenarios/label.gd" id="5_ysm6u"]
+[ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="6_ytt0h"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3ccld"]
 
@@ -129,6 +130,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -146,3 +148,5 @@ INTERACTURAR"
 label_settings = SubResource("LabelSettings_oxi0n")
 horizontal_alignment = 1
 script = ExtResource("5_ysm6u")
+
+[node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]

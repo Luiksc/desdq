@@ -4,6 +4,7 @@ signal corpus_entro
 signal corpus_salio
 
 
+
 func _on_body_entered(body: Node3D) -> void:
 	corpus_entro.emit()
 	
