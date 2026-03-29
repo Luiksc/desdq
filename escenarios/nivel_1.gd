@@ -11,6 +11,9 @@ func _ready() -> void:
 	
 func mostrar_interac():
 	interac.show()
+	if Input.is_action_just_pressed("interaccion"):
+		print("Boton presionado")
+
 func hide_interac():
 	interac.hide()
 	

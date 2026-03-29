@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=16 format=3 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" uid="uid://dafkk2dwr20td" path="res://escenarios/nivel_1.gd" id="1_oxi0n"]
 [ext_resource type="Script" uid="uid://dvvv48u8fo0nq" path="res://escenarios/camararigida.gd" id="2_tyn7n"]
 [ext_resource type="PackedScene" uid="uid://cqpeejgxglac6" path="res://escenarios/npc.tscn" id="3_3ccld"]
+[ext_resource type="Script" uid="uid://ds6v5y4711ycj" path="res://escenarios/npc.gd" id="5_r4wtg"]
 [ext_resource type="Script" uid="uid://cscpwvurjvpep" path="res://escenarios/label.gd" id="5_ysm6u"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="6_ytt0h"]
 
@@ -114,6 +115,9 @@ shape = SubResource("ConcavePolygonShape3D_tyn7n")
 
 [node name="npc" parent="." instance=ExtResource("3_3ccld")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22341, 0, -2.95877)
+script = ExtResource("5_r4wtg")
+
+[node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -143,10 +147,8 @@ offset_right = 828.0
 offset_bottom = 579.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "[ESPACIO] PARA 
+text = "[E] PARA 
 INTERACTURAR"
 label_settings = SubResource("LabelSettings_oxi0n")
 horizontal_alignment = 1
 script = ExtResource("5_ysm6u")
-
-[node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]

@@ -21,8 +21,8 @@ addons/rakugo/save_folder="user://saves"
 
 [autoload]
 
-Rakugo="*res://addons/Rakugo/Rakugo.gd"
 Global="*res://Global.gd"
+DialogSystem="*res://addons/dialog_system/dialog_System.tscn"
 
 [docks]
 
