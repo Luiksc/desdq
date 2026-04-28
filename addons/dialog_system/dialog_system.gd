@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 class_name  Dialog_system
-#NPC Dialog imports
+
 @onready var box: Panel = %dialogo_box
 @onready var npc_label: Label = %npc_name
 @onready var text_label: RichTextLabel = %convo
@@ -10,10 +10,7 @@ class_name  Dialog_system
 
 @export var typewriter_speed: float = 30.0
 
-#@onready var menu_object=preload("res://addons/dialog_system/menu.tscn")
-#@onready var input_object=preload("res://addons/dialog_system/input.tscn")
-#signal input_received(value)
-#signal talking(value)
+
 signal dialogo_opa
 
 var current_tween: Tween
@@ -34,6 +31,7 @@ func says(text: String, npc_name: String = "", speed: float = -1.0) -> void:
 		_show_next()
 
 func _show_next() -> void:
+
 	if queue.is_empty():
 		mostrar = false
 		hide()
@@ -57,6 +55,12 @@ func _show_next() -> void:
 	current_tween = create_tween()
 	current_tween.tween_property(text_label, "visible_characters", total_chars, duration)
 
+func estar_mostrando() -> bool:
+	return mostrar
+
+func neixt():
+	_on_next_button_pressed()
+	
 func _on_next_button_pressed() -> void:
 	if text_label.visible_characters < text_label.get_total_character_count():
 		if current_tween and current_tween.is_running():
