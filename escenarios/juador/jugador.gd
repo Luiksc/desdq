@@ -1,32 +1,42 @@
 extends CharacterBody3D
 
-var velo_max : float = 8
-var distans_salto: float = 2.5 #metros
-var timp_salto: float= 0.3#segundos
+
+
+
+var velo_max : float = 11
+var distans_salto: float = 2.5 
+var timp_salto: float= 0.3
 var aceleracion: float= 7
-var friccion:float= 20
+var friccion:float= 50
 var jump_buffer_timer: float = 0.0
 var coyote_timer: float = 0.0
-var estuvo_suelo: bool = true
-var puede_moverse: bool = true
-
-@export var tiem_jump_buffer: float = 0.25
-@export var tiem_coyote:float = 1
-
 var fuerza_salto : float
 var gravedad : float
-#onready porque son variable creadas anteriormente
+
+var estuvo_suelo: bool = true
+var puede_moverse: bool = true
+var mouse_cam: bool= true #bloquea la camara al presionar escape
+
+@export var tiem_jump_buffer: float = 0.15
+@export var tiem_coyote: float = 0.15
+
+
+	
+
+
 func _ready() -> void:
 	fuerza_salto = (2 * distans_salto) / timp_salto
 	gravedad = (-2 * distans_salto) / (timp_salto * timp_salto)
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
+
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
 	moviminto(delta)
 	move_and_slide()
 	mouse_appear()
 func saltar():
 	velocity.y = fuerza_salto
+
 
 func moviminto(delta: float) -> void:
 	# Gravedad siempre activa (aunque no pueda moverse, para que no flote)
@@ -46,16 +56,23 @@ func moviminto(delta: float) -> void:
 	input_direccion.z = Input.get_axis("ui_up", "ui_down")
 	input_direccion = input_direccion.normalized() # normaliza y regulariza movement
 
-	# COYOTE TIEMPO
-	if estuvo_suelo and not is_on_floor():
-		coyote_timer = tiem_coyote
-		estuvo_suelo = is_on_floor()
+	# coyote time
+	# estuvo_suelo se actualiza cada frame: true si está en suelo false si está en aire
+	if is_on_floor():
+		estuvo_suelo = true
+		coyote_timer = tiem_coyote  # recarga el timer mientras está en suelo
+	elif estuvo_suelo:
+		# acaba de salir del suelo sin saltar -> activar ventana coyote
+		estuvo_suelo = false
+		# el timer ya está cargado desde el frame anterior
+
 	if coyote_timer > 0:
 		coyote_timer -= delta
 
 	var salto_posible = is_on_floor() or coyote_timer > 0
 
-	#   salto con buffer
+	# JUMP BUFFER
+	# Registra la intención de salto aunque el jugador no esté en suelo aún
 	if Input.is_action_just_pressed("saltar"):
 		jump_buffer_timer = tiem_jump_buffer
 	if jump_buffer_timer > 0:
@@ -81,12 +98,16 @@ func moviminto(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, friccion * delta)
 		velocity.z = move_toward(velocity.z, 0, friccion * delta)
+		
+		
 func mouse_appear() -> void:
 	if Input.is_action_just_pressed("escape"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			mouse_cam = false
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			mouse_cam=true
 
 
 

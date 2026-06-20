@@ -45,6 +45,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Salir"
 
-[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]
