@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bucuo6nuuek1a"]
+
+[ext_resource type="Texture2D" uid="uid://dm0li7jnqs7sv" path="res://UI/fondo inicio ejemplo.webp" id="1_dhc5j"]
+[ext_resource type="Script" path="res://UI/scrips/menutscn.gd" id="1_xkvug"]
+
+[node name="inicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xkvug")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.72, 0.70752, 0.6624, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1147.0
+offset_bottom = 654.0
+texture = ExtResource("1_dhc5j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 319.0
+offset_right = 726.0
+offset_bottom = 433.0
+theme_override_constants/separation = 25
+
+[node name="jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Jugar"
+
+[node name="salir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]

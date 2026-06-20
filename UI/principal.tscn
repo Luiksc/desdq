@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dspvjgecv7f0s"]
 
-[ext_resource type="Script" uid="uid://bw4jcjhyunvtd" path="res://addons/dialog_system/example/npc_saliba.gd" id="1_0r3x5"]
+[ext_resource type="Script" path="res://addons/dialog_system/example/npc_saliba.gd" id="1_0r3x5"]
 [ext_resource type="PackedScene" uid="uid://7qiks0q8bq65" path="res://addons/dialog_system/menu.tscn" id="1_4ltf4"]
 [ext_resource type="PackedScene" uid="uid://c5uqldsokrm7f" path="res://addons/dialog_system/example/demo.tscn" id="2_86bjg"]
 
