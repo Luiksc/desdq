@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5uqldsokrm7f"]
 
-[ext_resource type="Script" uid="uid://bfh88jx0t282c" path="res://addons/dialog_system/example/npc_AL.gd" id="1_n7tud"]
-[ext_resource type="Script" uid="uid://bw4jcjhyunvtd" path="res://addons/dialog_system/example/npc_saliba.gd" id="2_ghs6p"]
+[ext_resource type="Script" path="res://addons/dialog_system/example/npc_AL.gd" id="1_n7tud"]
+[ext_resource type="Script" path="res://addons/dialog_system/example/npc_saliba.gd" id="2_ghs6p"]
 
 [node name="Demo" type="CanvasLayer"]
 
