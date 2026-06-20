@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cb2qeh0ro8vw2"]
 
-[ext_resource type="Script" uid="uid://bowrqca6gony2" path="res://addons/dialog_system/dialog_system.gd" id="1_rmm2v"]
+[ext_resource type="Script" path="res://addons/dialog_system/dialog_system.gd" id="1_rmm2v"]
 [ext_resource type="AudioStream" uid="uid://c466nssra6nq7" path="res://addons/dialog_system/coin.mp3" id="3_rmm2v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmm2v"]

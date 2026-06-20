@@ -1,10 +1,11 @@
 extends Node3D
 
-@onready var interac: Label=$Control/Label
-@onready var npc=$npc/Area3D
+@onready var interac: Label = $Control/Label
+@onready var npc = $npc/Area3D
+@onready var jugador = $jugador  # referencia al nodo del jugador
 
-var jugador_puede_interac:bool = false
-var dialogo_activo := false
+var jugador_puede_interac: bool = false
+var dialogo_activo: bool = false
 
 
 func _ready() -> void:
@@ -15,36 +16,44 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if jugador_puede_interac and Input.is_action_just_pressed("interaccion"):
-		print("yes")
-	if DialogSystem.estar_mostrando():
-		 DialogSystem.neixt()
-	else:
-		inic_dialo()
+	if dialogo_activo:
+		# E funciona como "next" mientras el diálogo está activo
+		if Input.is_action_just_pressed("interaccion"):
+			DialogSystem.neixt()
+	elif jugador_puede_interac:
+		# E inicia el diálogo si el jugador está en el área y no hay diálogo activo
+		if Input.is_action_just_pressed("interaccion"):
+			inic_dialo()
 
-func inic_dialo():
+
+func inic_dialo() -> void:
+	dialogo_activo = true
 	interac.hide()
+	jugador.puede_moverse = false  # bloquea el movimiento del jugador
 	DialogSystem.says("afsdasfadfdd", "sa")
 	DialogSystem.says("mi boooooombo", "sa")
-	endialogo = true
 
-func dialog_terminado():
-	dialogo_activo=false
+
+# Se llama via señal cuando el DialogSystem termina todos los mensajes
+func dialog_terminado() -> void:
+	dialogo_activo = false
+	jugador.puede_moverse = true  # desbloquea el movimiento
+	# Si el jugador todavía está en el área, volvemos a mostrar el label de interacción
 	if jugador_puede_interac:
 		interac.show()
-	
-func fin_dialo():
-	DialogSystem._on_next_button_pressed()
-	endialogo =false
-	
-	
-func mostrar_interac():
-	interac.show()
-	jugador_puede_interac=true
-	
 
-func hide_interac():
+
+# El jugador entra al área del NPC
+func mostrar_interac() -> void:
+	interac.show()
+	jugador_puede_interac = true
+
+
+# El jugador sale del área del NPC
+func hide_interac() -> void:
 	interac.hide()
-	jugador_puede_interac=false
-	
-	
+	jugador_puede_interac = false
+	# Si se va mientras hay un diálogo activo, reseteamos y desbloqueamos
+	if dialogo_activo:
+		dialogo_activo = false
+		jugador.puede_moverse = true

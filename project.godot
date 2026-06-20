@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="desde 1"
-run/main_scene="uid://47xbkcamudd2"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="res://escenarios/n_1.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 addons/rakugo/game_version=1.0
 addons/rakugo/narrator_name="narrator"
