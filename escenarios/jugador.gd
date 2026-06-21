@@ -65,10 +65,8 @@ func moviminto(delta: float) -> void:
 		# acaba de salir del suelo sin saltar -> activar ventana coyote
 		estuvo_suelo = false
 		# el timer ya está cargado desde el frame anterior
-
 	if coyote_timer > 0:
 		coyote_timer -= delta
-
 	var salto_posible = is_on_floor() or coyote_timer > 0
 
 	# JUMP BUFFER

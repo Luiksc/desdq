@@ -19,7 +19,8 @@ albedo_color = Color(0.681584, 0.422495, 0.077547, 1)
 material = SubResource("StandardMaterial3D_jvk27")
 size = Vector3(0.5, 0.2, 1)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_s1l0q"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ir053"]
+radius = 0.3
 
 [node name="jugon" type="CharacterBody3D" groups=["jugon"]]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00116591, 0, 0)
@@ -40,14 +41,16 @@ mesh = SubResource("BoxMesh_24u8i")
 [node name="pivote" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24271, 0)
 script = ExtResource("2_jglub")
+minim_angulo_vertical = -0.785398
 
 [node name="SpringArm3D" type="SpringArm3D" parent="pivote"]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, 0)
-shape = SubResource("SphereShape3D_s1l0q")
-spring_length = 0.3
+shape = SubResource("SphereShape3D_ir053")
+spring_length = 5.0
 
 [node name="posicion spring" type="Node3D" parent="pivote/SpringArm3D"]
 
 [node name="Camera3D" type="Camera3D" parent="pivote" node_paths=PackedStringArray("spring_arm")]
 script = ExtResource("3_hqykb")
 spring_arm = NodePath("../SpringArm3D/posicion spring")
+lerp_power = 5.0
