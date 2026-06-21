@@ -1,9 +1,11 @@
 extends CharacterBody3D
 
-
-
+@onready var modelo: Node3D = $MeshInstance3D     
+@onready var modelo2: Node3D = $MeshInstance3D2    
+@onready var pivote: Node3D = $pivote              # nodo de la cámara 
 
 var velo_max : float = 11
+@export var vel_rotacion: float = 10.0 # qué tan rápido rota el personaje
 var distans_salto: float = 2.5 
 var timp_salto: float= 0.3
 var aceleracion: float= 7
@@ -23,11 +25,9 @@ var mouse_cam: bool= true #bloquea la camara al presionar escape
 
 	
 
-
 func _ready() -> void:
 	fuerza_salto = (2 * distans_salto) / timp_salto
 	gravedad = (-2 * distans_salto) / (timp_salto * timp_salto)
-	
 	
 
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
@@ -39,12 +39,12 @@ func saltar():
 
 
 func moviminto(delta: float) -> void:
-	# Gravedad siempre activa (aunque no pueda moverse, para que no flote)
+	# Gravedad siempre activa (aunque no pueda moverse para que no flote)
 	if not is_on_floor():
 		velocity.y += gravedad * delta
 		velocity.y = max(velocity.y, gravedad * 3) # limite de caida
 
-	# Si el movimiento está bloqueado (ej: durante un diálogo), frenar y salir
+	# Si el movimiento está bloqueado, frenar y salir
 	if not puede_moverse:
 		velocity.x = move_toward(velocity.x, 0, friccion * delta)
 		velocity.z = move_toward(velocity.z, 0, friccion * delta)
@@ -71,7 +71,7 @@ func moviminto(delta: float) -> void:
 
 	# JUMP BUFFER
 	# Registra la intención de salto aunque el jugador no esté en suelo aún
-	if Input.is_action_pressed("saltar"):
+	if Input.is_action_just_pressed("saltar"):
 		jump_buffer_timer = tiem_jump_buffer
 	if jump_buffer_timer > 0:
 		jump_buffer_timer -= delta
@@ -83,22 +83,24 @@ func moviminto(delta: float) -> void:
 
 	#   MOVIMIENTO horizontal
 	if input_direccion.length() > 0.1:
-		var direction = (transform.basis * input_direccion)
-		direction.y = 0
-		direction = direction.normalized()
-		var target_velocity = direction * velo_max
+		# Dirección relativa a la cámara (pivote), ignorando la rotación del cuerpo
+		var direccion = (pivote.global_transform.basis * input_direccion)
+		direccion.y = 0
+		direccion = direccion.normalized()
+
+		# Rotar
+		var angulo_destino = atan2(direccion.x, direccion.z)
+		modelo.rotation.y = lerp_angle(modelo.rotation.y, angulo_destino, vel_rotacion * delta)
+		modelo2.rotation.y = lerp_angle(modelo2.rotation.y, angulo_destino, vel_rotacion * delta)
+
+		var target_velocity = direccion * velo_max
 		var velo_horizontal = Vector3(velocity.x, 0, velocity.z)
-		var cambio_direccion = velo_horizontal.dot(direction) < 0.0
+		var cambio_direccion = velo_horizontal.dot(direccion) < 0.0
 		var aceleracion_actual = friccion if cambio_direccion else aceleracion
+
 
 		velocity.x = move_toward(velocity.x, target_velocity.x, aceleracion_actual * delta)
 		velocity.z = move_toward(velocity.z, target_velocity.z, aceleracion_actual * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, friccion * delta)
 		velocity.z = move_toward(velocity.z, 0, friccion * delta)
-		
-		
-
-
-
-		

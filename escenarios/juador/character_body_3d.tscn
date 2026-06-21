@@ -23,7 +23,8 @@ size = Vector3(0.5, 0.2, 1)
 radius = 0.3
 
 [node name="jugon" type="CharacterBody3D" groups=["jugon"]]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00116591, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00116591, 0, 0)
+collision_layer = 2
 script = ExtResource("1_he6aj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

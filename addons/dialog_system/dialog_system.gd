@@ -2,7 +2,7 @@ extends CanvasLayer
 
 class_name  Dialog_system
 
-@onready var box: Panel = %dialogo_box
+
 @onready var npc_label: Label = %npc_name
 @onready var text_label: RichTextLabel = %convo
 @onready var next_button: Button = %next_button
