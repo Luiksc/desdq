@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cf5p26uaj7snn"]
+[gd_scene load_steps=10 format=3 uid="uid://cf5p26uaj7snn"]
 
-[ext_resource type="Script" path="res://escenarios/juador/jugador.gd" id="1_he6aj"]
-[ext_resource type="Script" path="res://escenarios/juador/camara_spring_arm_3d.gd" id="2_jglub"]
+[ext_resource type="Script" path="res://escenarios/jugador.gd" id="1_he6aj"]
+[ext_resource type="Script" path="res://escenarios/scripts/camara_spring_arm_3d.gd" id="2_jglub"]
+[ext_resource type="Script" path="res://escenarios/juador/seguimiento de camara.gd" id="3_hqykb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1q4m4"]
 
@@ -17,6 +18,8 @@ albedo_color = Color(0.681584, 0.422495, 0.077547, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_24u8i"]
 material = SubResource("StandardMaterial3D_jvk27")
 size = Vector3(0.5, 0.2, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_s1l0q"]
 
 [node name="jugon" type="CharacterBody3D" groups=["jugon"]]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00116591, 0, 0)
@@ -34,9 +37,17 @@ mesh = SubResource("CapsuleMesh_he6aj")
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0.00821304, 1.35281, -0.150069)
 mesh = SubResource("BoxMesh_24u8i")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="."]
-transform = Transform3D(1, -3.27994e-08, -7.34688e-09, 3.29853e-08, 0.999637, 0.0269103, 6.46159e-09, -0.0269103, 0.999637, -0.145742, 1.15755, 0.0896973)
-spring_length = 6.0
+[node name="pivote" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24271, 0)
 script = ExtResource("2_jglub")
 
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+[node name="SpringArm3D" type="SpringArm3D" parent="pivote"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, 0)
+shape = SubResource("SphereShape3D_s1l0q")
+spring_length = 0.3
+
+[node name="posicion spring" type="Node3D" parent="pivote/SpringArm3D"]
+
+[node name="Camera3D" type="Camera3D" parent="pivote" node_paths=PackedStringArray("spring_arm")]
+script = ExtResource("3_hqykb")
+spring_arm = NodePath("../SpringArm3D/posicion spring")

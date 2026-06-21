@@ -27,13 +27,13 @@ var mouse_cam: bool= true #bloquea la camara al presionar escape
 func _ready() -> void:
 	fuerza_salto = (2 * distans_salto) / timp_salto
 	gravedad = (-2 * distans_salto) / (timp_salto * timp_salto)
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
 	
 
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
 	moviminto(delta)
 	move_and_slide()
-	mouse_appear()
+	
 func saltar():
 	velocity.y = fuerza_salto
 
@@ -73,7 +73,7 @@ func moviminto(delta: float) -> void:
 
 	# JUMP BUFFER
 	# Registra la intención de salto aunque el jugador no esté en suelo aún
-	if Input.is_action_just_pressed("saltar"):
+	if Input.is_action_pressed("saltar"):
 		jump_buffer_timer = tiem_jump_buffer
 	if jump_buffer_timer > 0:
 		jump_buffer_timer -= delta
@@ -100,15 +100,6 @@ func moviminto(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, friccion * delta)
 		
 		
-func mouse_appear() -> void:
-	if Input.is_action_just_pressed("escape"):
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-			mouse_cam = false
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-			mouse_cam=true
-
 
 
 
