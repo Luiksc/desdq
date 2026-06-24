@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
-@onready var modelo: Node3D = $MeshInstance3D     
-@onready var modelo2: Node3D = $MeshInstance3D2    
-@onready var pivote: Node3D = $pivote              # nodo de la cámara 
+ 
+   
+@onready var pivote: Node3D = $pivote  
+@onready var piel: Node3D = $blockbench_export
+@onready var animaciones : AnimationPlayer = $blockbench_export/AnimationPlayer       # nodo de la cámara 
 
 var velo_max : float = 11
 @export var vel_rotacion: float = 10.0 # qué tan rápido rota el personaje
@@ -18,11 +20,12 @@ var gravedad : float
 var estuvo_suelo: bool = true
 var puede_moverse: bool = true
 var mouse_cam: bool= true #bloquea la camara al presionar escape
+var input_direccion := Vector3.ZERO
 
 @export var tiem_jump_buffer: float = 0.15
 @export var tiem_coyote: float = 0.15
 
-
+const  LERP_VAL = .15
 	
 
 func _ready() -> void:
@@ -33,6 +36,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
 	moviminto(delta)
 	move_and_slide()
+	
+	if input_direccion.length()>0.1:
+		animaciones.play("odipara")
+	else:
+		animaciones.play("oha'aro")
 	
 func saltar():
 	velocity.y = fuerza_salto
@@ -51,7 +59,7 @@ func moviminto(delta: float) -> void:
 		return
 
 	#   DIRECCION con input
-	var input_direccion := Vector3.ZERO
+
 	input_direccion.x = Input.get_axis("ui_left", "ui_right")
 	input_direccion.z = Input.get_axis("ui_up", "ui_down")
 	input_direccion = input_direccion.normalized() # normaliza y regulariza movement
@@ -87,11 +95,16 @@ func moviminto(delta: float) -> void:
 		var direccion = (pivote.global_transform.basis * input_direccion)
 		direccion.y = 0
 		direccion = direccion.normalized()
+		piel.rotation.y= lerp_angle(piel.rotation.y, (atan2(direccion.x, direccion.z))+ 3*PI/2, LERP_VAL)
+		# este codigo espera que el modelo mire hacia la direccion z, el modelo esta mal y entonces se compensa
+		#con una rotacion de 3*PI/2 que son 270° en radianes
+			
+			
 
 		# Rotar
 		var angulo_destino = atan2(direccion.x, direccion.z)
-		modelo.rotation.y = lerp_angle(modelo.rotation.y, angulo_destino, vel_rotacion * delta)
-		modelo2.rotation.y = lerp_angle(modelo2.rotation.y, angulo_destino, vel_rotacion * delta)
+		
+		
 
 		var target_velocity = direccion * velo_max
 		var velo_horizontal = Vector3(velocity.x, 0, velocity.z)

@@ -18,7 +18,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotation.x -= event.relative.y * sensi
 		rotation.x = clamp(rotation.x, minim_angulo_vertical, maxim_angulo_vertical)
 		
-	if event.is_action_pressed("escape"):
+	if event.is_action_pressed("escape") or event.is_action_pressed("clicki"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 				

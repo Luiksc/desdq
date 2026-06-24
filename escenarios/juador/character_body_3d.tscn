@@ -1,43 +1,26 @@
-[gd_scene load_steps=10 format=3 uid="uid://cf5p26uaj7snn"]
+[gd_scene load_steps=7 format=3 uid="uid://cf5p26uaj7snn"]
 
 [ext_resource type="Script" path="res://escenarios/jugador.gd" id="1_he6aj"]
+[ext_resource type="PackedScene" uid="uid://bdktx0ukjf3o3" path="res://modelos/delfina servin/delfina Servin.gltf" id="2_fdxjg"]
 [ext_resource type="Script" path="res://escenarios/scripts/camara_spring_arm_3d.gd" id="2_jglub"]
 [ext_resource type="Script" path="res://escenarios/juador/seguimiento de camara.gd" id="3_hqykb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1q4m4"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_he6aj"]
-albedo_color = Color(0.92, 0.797333, 0, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_he6aj"]
-material = SubResource("StandardMaterial3D_he6aj")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvk27"]
-albedo_color = Color(0.681584, 0.422495, 0.077547, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_24u8i"]
-material = SubResource("StandardMaterial3D_jvk27")
-size = Vector3(0.5, 0.2, 1)
-
 [sub_resource type="SphereShape3D" id="SphereShape3D_ir053"]
 radius = 0.3
 
 [node name="jugon" type="CharacterBody3D" groups=["jugon"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00116591, 0, 0)
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.00116591, 0, 0)
 collision_layer = 2
 script = ExtResource("1_he6aj")
+
+[node name="blockbench_export" parent="." instance=ExtResource("2_fdxjg")]
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00574918, 1, 1.23927e-08)
 shape = SubResource("CapsuleShape3D_1q4m4")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0.00212503, 1, 0.150069)
-mesh = SubResource("CapsuleMesh_he6aj")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0.00821304, 1.35281, -0.150069)
-mesh = SubResource("BoxMesh_24u8i")
 
 [node name="pivote" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24271, 0)
