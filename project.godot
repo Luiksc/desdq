@@ -36,6 +36,10 @@ script/search_in_file_extensions=PackedStringArray("gd", "gdshader", "rk")
 
 enabled=PackedStringArray()
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 ui_left={

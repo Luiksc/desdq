@@ -1,41 +1,22 @@
-[gd_scene load_steps=14 format=3 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=16 format=3 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
 [ext_resource type="PackedScene" uid="uid://cqpeejgxglac6" path="res://escenarios/npc.tscn" id="3_3ccld"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="6_ytt0h"]
 
-[sub_resource type="GDScript" id="GDScript_ek3q0"]
-script/source = "extends Node3D
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y1fdu"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-# Arrastrá tu jugador aquí desde el editor
-@export var offset: Vector3 = Vector3(0, 5, 8)
-@export var velocidad_seguimiento: float = 10.0
-@onready var jugador: CharacterBody3D= get_node(\"../jugador\")
+[sub_resource type="Sky" id="Sky_xsllj"]
+sky_material = SubResource("ProceduralSkyMaterial_y1fdu")
 
-func _ready() -> void:
-	# Busca el jugador automáticamente, sin necesidad de asignarlo en el editor
-	if jugador == null:
-		jugador = get_tree().get_first_node_in_group(\"jugador\")
-	
-	if jugador != null:
-		global_position = jugador.global_position + offset
-		look_at(jugador.global_position, Vector3.UP)
-	else:
-		push_error(\"CameraRig: no se encontró el jugador\")
-func _process(delta: float) -> void:
-	
-	if jugador == null:
-		jugador = get_tree().get_first_node_in_group(\"jugador\")
-		
-	var target_pos = jugador.global_position + offset
-	global_position = global_position.lerp(target_pos, velocidad_seguimiento * delta)
-	
-	
-	# La rotación NUNCA cambia: la cámara siempre mira en la misma dirección
-	# Si querés que siempre apunte al jugador descomentá la siguiente línea:
-	# look_at(jugador.global_position, Vector3.UP)
-"
+[sub_resource type="Environment" id="Environment_3adup"]
+background_mode = 2
+sky = SubResource("Sky_xsllj")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_3ccld"]
 
@@ -65,15 +46,16 @@ outline_color = Color(0.00392157, 0.027451, 0.027451, 1)
 [node name="n1" type="Node3D"]
 script = ExtResource("1_oxi0n")
 
-[node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.89381, 0.448446, 0, -0.448446, 0.89381, 0, 3.38039, 8.14852)
-script = SubResource("GDScript_ek3q0")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3adup")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.711678, -0.640746, -0.288026, -0.493469, 0.164149, 0.854133, -0.500003, 0.749999, -0.43301, 0, 5.08688, 0)
+light_color = Color(1, 0.8045, 0.49, 1)
+shadow_enabled = true
 
 [node name="jugador" parent="." instance=ExtResource("1_5bv6o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51978, 0.998009, 5.02518)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.0260851, 0.884257, 0.466272, 0.0677855, -0.466921, 0.881697, 0.997359, 0.00860735, -0.0721194, 2.21755, 5.53788, 0)
 
 [node name="objetor" type="Node" parent="."]
 

@@ -6,12 +6,12 @@ extends CharacterBody3D
 @onready var piel: Node3D = $blockbench_export
 @onready var animaciones : AnimationPlayer = $blockbench_export/AnimationPlayer       # nodo de la cámara 
 
-var velo_max : float = 11
+var velo_max : float = 10
 @export var vel_rotacion: float = 10.0 # qué tan rápido rota el personaje
 var distans_salto: float = 2.5 
 var timp_salto: float= 0.3
-var aceleracion: float= 7
-var friccion:float= 50
+var aceleracion: float= 50
+var friccion:float= 100
 var jump_buffer_timer: float = 0.0
 var coyote_timer: float = 0.0
 var fuerza_salto : float
