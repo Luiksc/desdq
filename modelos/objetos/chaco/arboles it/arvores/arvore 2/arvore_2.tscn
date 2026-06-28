@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://coiv2nsbf1uhg"]
-
-[ext_resource type="PackedScene" uid="uid://chcjqpflrxtw4" path="res://modelos/objetos/chaco/arboles it/arvores/arvore 2/arvore 2.fbx" id="1_5om2l"]
-
-[node name="arvore 2" instance=ExtResource("1_5om2l")]
-
-[node name="arvore 2" parent="." index="0"]
-transform = Transform3D(27.5153, 0, 0, 0, -3.28007e-06, 27.5153, 0, -27.5153, -3.28007e-06, 0, 0, 0)

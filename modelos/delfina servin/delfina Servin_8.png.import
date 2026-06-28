@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caqj0s1fhpjsp"
+uid="uid://bklew5qswb6be"
 path.s3tc="res://.godot/imported/delfina Servin_8.png-34223b71fcd8854d0554a8ec622e170d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "19b37c9d22358b7d5f68a4548ce062ae"
 }
 
 [deps]
