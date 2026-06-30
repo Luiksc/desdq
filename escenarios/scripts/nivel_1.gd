@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if dialogo_activo:
-		# E funciona como "next" mientras el diálogo está activo
+		# E funciona como "next" mientras el diálogo está ocurriendo
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
 	elif jugador_puede_interac:
@@ -30,11 +30,11 @@ func inic_dialo() -> void:
 	dialogo_activo = true
 	interac.hide()
 	jugador.puede_moverse = false  # bloquea el movimiento del jugador
-	DialogSystem.says("afsdasfadfdd", "sa")
-	DialogSystem.says("mi boooooombo", "sa")
+	DialogSystem.says("¿No te enteraste de la fiesta que hizo la fábrica por el Día de la Raza ? Todos están ahí; seguramente Mateo también.", "Ña Clotilde")
 
 
-# Se llama via señal cuando el DialogSystem termina todos los mensajes
+
+# se llama mendiante señal cuando el dialogsystem termina todos los mensajes
 func dialog_terminado() -> void:
 	dialogo_activo = false
 	jugador.puede_moverse = true  # desbloquea el movimiento

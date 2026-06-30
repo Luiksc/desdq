@@ -10,6 +10,7 @@ size = Vector3(1.56575, 0.281006, 2.77472)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m84ka"]
 
 [node name="StaticBody3D" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.192885, 0.132115, 0.147788)
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 1.24079, 0)

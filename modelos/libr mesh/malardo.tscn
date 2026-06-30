@@ -181,7 +181,6 @@ transform = Transform3D(-0.707107, 0.707107, 0, 0, 5.96046e-08, -1, -0.707107, -
 
 [node name="valla0" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.737659, 0.719942, 5.0555)
-visible = false
 
 [node name="laballa0" parent="valla0" instance=ExtResource("3_rjibj")]
 transform = Transform3D(2.86603e-15, 6.55671e-08, -1.5, 1.5, -6.55671e-08, 3.97047e-21, -6.55671e-08, -1.5, -6.55671e-08, -0.0259937, 0.605206, 0)
@@ -195,7 +194,6 @@ shape = SubResource("BoxShape3D_aw6xs")
 
 [node name="valla1" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36576, 0.30091, 5.0555)
-visible = false
 
 [node name="lavalla1" parent="valla1" instance=ExtResource("9_60imw")]
 transform = Transform3D(-4.95019e-15, -1.13247e-07, 1.5, 1.5, -6.55671e-08, 8.47033e-21, 6.55671e-08, 1.5, 1.13247e-07, -0.625, 1.03125, 0)
@@ -209,7 +207,6 @@ shape = SubResource("BoxShape3D_aw6xs")
 
 [node name="valla2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36576, 0.30091, 5.0555)
-visible = false
 
 [node name="lavalla2" parent="valla2" instance=ExtResource("10_1d4p0")]
 transform = Transform3D(6.55671e-08, 1.5, 2.26494e-07, 1.5, -6.55671e-08, 6.35275e-21, 9.90036e-15, 2.26494e-07, -1.5, -0.625, 1.03125, 0)
@@ -223,7 +220,6 @@ shape = SubResource("BoxShape3D_aw6xs")
 
 [node name="valla3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36576, 0.30091, 5.0555)
-visible = false
 
 [node name="lavalla3" parent="valla3" instance=ExtResource("11_wg2f4")]
 transform = Transform3D(-6.55671e-08, -1.5, 6.5567e-08, 1.5, -6.55671e-08, -3.97047e-21, 2.86603e-15, 6.5567e-08, 1.5, -0.625, 1.03125, 0)
@@ -237,7 +233,6 @@ shape = SubResource("BoxShape3D_aw6xs")
 
 [node name="valla4" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36576, 0.30091, 5.0555)
-visible = false
 
 [node name="lavalla4" parent="valla4" instance=ExtResource("12_01nab")]
 transform = Transform3D(4.63629e-08, 1.06066, 1.06066, 1.5, -6.55671e-08, 0, 4.63629e-08, 1.06066, -1.06066, -0.625, 1.03125, 0)
@@ -251,7 +246,6 @@ shape = SubResource("BoxShape3D_aw6xs")
 
 [node name="valla5" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36576, 0.30091, 5.0555)
-visible = false
 
 [node name="lavalla5" parent="valla5" instance=ExtResource("13_n18je")]
 transform = Transform3D(-4.63629e-08, -1.06066, -1.06066, 1.5, -6.55671e-08, 0, -4.63629e-08, -1.06066, 1.06066, -0.625, 1.03125, 0)
@@ -265,7 +259,6 @@ shape = SubResource("BoxShape3D_aw6xs")
 
 [node name="valla6" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36576, 0.30091, 5.0555)
-visible = false
 
 [node name="lavalla6" parent="valla6" instance=ExtResource("14_b7cya")]
 transform = Transform3D(4.63629e-08, 1.06066, -1.06066, 1.5, -6.55671e-08, 0, -4.63629e-08, -1.06066, -1.06066, -0.625, 1.03125, 0)
@@ -292,19 +285,16 @@ shape = SubResource("BoxShape3D_aw6xs")
 
 [node name="quebracho" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6151, 0, 0)
-visible = false
 
 [node name="qebra" parent="quebracho" instance=ExtResource("11_nw5fa")]
 
 [node name="quebracho2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.681, 0, 0)
-visible = false
 
 [node name="cylinder" parent="quebracho2" instance=ExtResource("16_0dpfu")]
 
 [node name="tape1" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-visible = false
 
 [node name="t1" parent="tape1" instance=ExtResource("5_gxg0l")]
 
@@ -317,7 +307,6 @@ shape = SubResource("ConcavePolygonShape3D_asjvu")
 
 [node name="tape2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
-visible = false
 
 [node name="t2" parent="tape2" instance=ExtResource("6_8751l")]
 
@@ -328,7 +317,6 @@ shape = SubResource("ConcavePolygonShape3D_7d10m")
 
 [node name="tape3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5)
-visible = false
 
 [node name="t3" parent="tape3" instance=ExtResource("7_vss5m")]
 
@@ -339,7 +327,6 @@ shape = SubResource("ConcavePolygonShape3D_fpho1")
 
 [node name="tape4" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
-visible = false
 
 [node name="t4" parent="tape4" instance=ExtResource("8_g4xo0")]
 
@@ -350,7 +337,6 @@ shape = SubResource("ConcavePolygonShape3D_0m2ax")
 
 [node name="tape5" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
-visible = false
 
 [node name="t5" parent="tape5" instance=ExtResource("9_s4ks3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
@@ -362,7 +348,6 @@ shape = SubResource("ConcavePolygonShape3D_k7kd8")
 
 [node name="tape6" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
-visible = false
 
 [node name="t6" parent="tape6" instance=ExtResource("10_mydtb")]
 
