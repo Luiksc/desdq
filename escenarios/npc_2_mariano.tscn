@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg3cospwacyuc"]
+
+[ext_resource type="Script" path="res://escenarios/npc2.gd" id="1_j6y2w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tgmgc"]
+size = Vector3(7.54108, 1, 7.0932)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ph6m5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvqvn"]
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+script = ExtResource("1_j6y2w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.359772, 0, 3.0466)
+shape = SubResource("BoxShape3D_tgmgc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_ph6m5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kvqvn")
+
+[node name="Npc2-Mariano" type="Node3D" parent="."]
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
+[connection signal="corpus_entro" from="Area3D" to="Area3D" method="_on_corpus_entro"]
+[connection signal="corpus_salio" from="Area3D" to="Area3D" method="_on_corpus_salio"]

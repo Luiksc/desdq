@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=4 uid="uid://n4kskiow4j0k"]
+
+[ext_resource type="Texture2D" uid="uid://tcc7syul30f7" path="res://modelos/objetos/chaco/hierba 3/hierbas 3 (1)_0.png" id="1_dlepn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ypx51"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_dlepn")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7slf7"]
+_surfaces = [{
+"aabb": AABB(-0.5625, -0.5625, -1.4375, 1.125, 1.125, 2.875),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYACAAKAAkACAALAAoADAAOAA0ADAAPAA4A"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("////f///AAD///9/AAAAAAAA/38AAAAAAAD/f///AAD/fwAA//8AAP9/AAAAAAAA/3///wAAAAD/f/////8AAF7ehin//wAAXt6GKQAAAACgIXjWAAAAAKAheNb//wAAhimgIf//AACGKaAhAAAAAHjWXt4AAAAAeNZe3v//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cqhwq"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5625, -0.5625, -1.4375, 1.125, 1.125, 2.875),
+"attribute_data": PackedByteArray("/5X/x/+VAAAAAAAAAAD/x/+V/8f/lQAAAAAAAAAA/8f/lf/H/5UAAAAAAAAAAP/H/5X/x/+VAAAAAAAAAAD/xw=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYACAAKAAkACAALAAoADAAOAA0ADAAPAA4A"),
+"material": SubResource("StandardMaterial3D_ypx51"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("////f////7////9/AAD/vwAA/38AAP+/AAD/f////7//fwAA//9U1f9/AAAAAFTV/3///wAAVNX/f/////9U1V7ehin//13FXt6GKQAAXcWgIXjWAABdxaAheNb//13FhimgIf//duiGKaAhAAB26HjWXt4AAHboeNZe3v//duj///9/////f////3////9/qqpUVaqqVFWqqlRVqqpUVf/H/2P/x/9j/8f/Y//H/2MUl4pLFJeKSxSXiksUl4pL")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7slf7")
+
+[node name="plane" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 1.4375, 0)
+mesh = SubResource("ArrayMesh_cqhwq")
+skeleton = NodePath("")

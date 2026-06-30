@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://80y4qlhsw2ou"
-path.s3tc="res://.godot/imported/delfina Servin_11.png-6742480db2a0b91bc5f0daa09e244c1b.s3tc.ctex"
+uid="uid://bdefis7k0svan"
+path.s3tc="res://.godot/imported/casa cutre3_0.png-bf4670a3bf91b880d68e365b93d2fc43.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "f98a7bb165a841f0c22d0b10ab11afd2"
+}
 
 [deps]
 
-source_file="res://modelos/delfina servin/delfina Servin_11.png"
-dest_files=["res://.godot/imported/delfina Servin_11.png-6742480db2a0b91bc5f0daa09e244c1b.s3tc.ctex"]
+source_file="res://modelos/objetos/chaco/ÓGA+/casa cutre3_0.png"
+dest_files=["res://.godot/imported/casa cutre3_0.png-bf4670a3bf91b880d68e365b93d2fc43.s3tc.ctex"]
 
 [params]
 

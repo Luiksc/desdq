@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://80y4qlhsw2ou"
-path.s3tc="res://.godot/imported/delfina Servin_11.png-6742480db2a0b91bc5f0daa09e244c1b.s3tc.ctex"
+uid="uid://fh2ux0bfybhv"
+path.s3tc="res://.godot/imported/sorpresa.png-779892c35c60ba02e4c08a1a6619081f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://modelos/delfina servin/delfina Servin_11.png"
-dest_files=["res://.godot/imported/delfina Servin_11.png-6742480db2a0b91bc5f0daa09e244c1b.s3tc.ctex"]
+source_file="res://modelos/sprite sueltos/sorpresa.png"
+dest_files=["res://.godot/imported/sorpresa.png-779892c35c60ba02e4c08a1a6619081f.s3tc.ctex"]
 
 [params]
 

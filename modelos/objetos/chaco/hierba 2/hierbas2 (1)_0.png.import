@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://80y4qlhsw2ou"
-path.s3tc="res://.godot/imported/delfina Servin_11.png-6742480db2a0b91bc5f0daa09e244c1b.s3tc.ctex"
+uid="uid://8nnthajivpvj"
+path.s3tc="res://.godot/imported/hierbas2 (1)_0.png-c8b795d862494690230662622d02c7bb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "4badc55187d0786d0405a6b5896b3c5e"
+}
 
 [deps]
 
-source_file="res://modelos/delfina servin/delfina Servin_11.png"
-dest_files=["res://.godot/imported/delfina Servin_11.png-6742480db2a0b91bc5f0daa09e244c1b.s3tc.ctex"]
+source_file="res://modelos/objetos/chaco/hierba 2/hierbas2 (1)_0.png"
+dest_files=["res://.godot/imported/hierbas2 (1)_0.png-c8b795d862494690230662622d02c7bb.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxkgxyh6ujemx"]
+
+[ext_resource type="Script" path="res://escenarios/scripts/np3.gd" id="1_l1bb1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8n6ce"]
+size = Vector3(5.10736, 1, 6.31519)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_voewk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hboc1"]
+
+[node name="kalo\'i" type="StaticBody3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+script = ExtResource("1_l1bb1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.908295, 0, -0.853394)
+shape = SubResource("BoxShape3D_8n6ce")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.802145, 0)
+mesh = SubResource("CapsuleMesh_voewk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.801707, 0)
+shape = SubResource("CapsuleShape3D_hboc1")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

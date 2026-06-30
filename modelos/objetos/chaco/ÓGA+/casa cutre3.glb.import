@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://35vqf68mu8yf"
-path="res://.godot/imported/casa cutre.gltf-7a434011ba398e7187d79a4b2885f2b2.scn"
+uid="uid://jv48t3w6f6r3"
+path="res://.godot/imported/casa cutre3.glb-e6fa85025f9e82a9e65c62d8888c6aa3.scn"
 
 [deps]
 
-source_file="res://modelos/objetos/chaco/ÓGA+/casa cutre.gltf"
-dest_files=["res://.godot/imported/casa cutre.gltf-7a434011ba398e7187d79a4b2885f2b2.scn"]
+source_file="res://modelos/objetos/chaco/ÓGA+/casa cutre3.glb"
+dest_files=["res://.godot/imported/casa cutre3.glb-e6fa85025f9e82a9e65c62d8888c6aa3.scn"]
 
 [params]
 
