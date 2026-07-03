@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=4 uid="uid://ctpepetfyamp7"]
+
+[ext_resource type="Texture2D" uid="uid://dt564lyl6wye3" path="res://modelos/objetos/chaco/tape/tape rembe/tape 4_0.png" id="1_0bog3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h6xey"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_0bog3")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eb20d"]
+_surfaces = [{
+"aabb": AABB(-1.5, 0.1875, -1.5, 3, 0.125, 3),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYABQAAAAEABQAGAAAAAwAEAAIAAwAHAAQAAgAFAAEAAgAEAAUABgADAAAABgAHAAMA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD///////8AAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAA/////wAAAAD//wAAAAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ab2km"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-1.5, 0.1875, -1.5, 3, 0.125, 3),
+"attribute_data": PackedByteArray("BcIAAAZkAAAGZP8DBcL/A7/B/wm/wf8F/2P/Bf9j/wkAAH9g/2M/YP9jAAAAAD8AP2M/wj9kf2IAAP9hAAA/wv/B/xX/wf8R/2P/Ef9j/xX/wf8L/2P/C/9j/w//wf8P"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYACAAKAAkACAALAAoADAAOAA0ADAAPAA4AEAASABEAEAATABIAFAAWABUAFAAXABYA"),
+"material": SubResource("StandardMaterial3D_h6xey"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////wAA/7//////////v///AAD///+///8AAAAA/78AAAAA////vwAA//////+/AAD//wAA/78AAAAAAAD/vwAA//////+//////////7//////AAD/vwAA//8AAP+///8AAAAA/7///wAA////vwAAAAD///+/AAAAAAAA/7///wAA//8AgP///////wCAAAD/////AIAAAAAA//8AgAAA//8AAP///////wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9///+q/ymAqv8pgKr/KYCq/ymAKgBUgFUAqYAqAFSAAAD/f/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_eb20d")
+
+[node name="mesh" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
+mesh = SubResource("ArrayMesh_ab2km")
+skeleton = NodePath("")

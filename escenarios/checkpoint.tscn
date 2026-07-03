@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu6x4eg13j6hq"]
+
+[ext_resource type="Script" path="res://escenarios/scripts/checkpoint.gd" id="1_nqau0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yvwj3"]
+size = Vector3(15.8271, 4.73529, 1)
+
+[node name="checkpoint" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_nqau0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57767, 2.14159, 0.433061)
+shape = SubResource("BoxShape3D_yvwj3")
+
+[node name="puntodeRespawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

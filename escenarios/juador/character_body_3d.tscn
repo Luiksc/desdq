@@ -5,22 +5,24 @@
 [ext_resource type="Script" path="res://escenarios/scripts/camara_spring_arm_3d.gd" id="2_jglub"]
 [ext_resource type="Script" path="res://escenarios/juador/seguimiento de camara.gd" id="3_hqykb"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1q4m4"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_t0yxi"]
+height = 2.49319
+radius = 0.354085
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ir053"]
 radius = 0.3
 
-[node name="jugon" type="CharacterBody3D" groups=["jugon"]]
+[node name="jugador" type="CharacterBody3D" groups=["jugon"]]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.00116591, 0, 0)
 collision_layer = 2
 script = ExtResource("1_he6aj")
 
 [node name="blockbench_export" parent="." instance=ExtResource("2_fdxjg")]
-transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 0, 0, 0)
+transform = Transform3D(-4.00987e-08, 0, -0.922378, 0, 0.942562, 0, 0.917351, 0, -4.03184e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00574918, 1, 1.23927e-08)
-shape = SubResource("CapsuleShape3D_1q4m4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0298708, 1.27099, 1.28057e-08)
+shape = SubResource("CylinderShape3D_t0yxi")
 
 [node name="pivote" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.24271, 0)

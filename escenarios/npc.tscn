@@ -1,16 +1,55 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqpeejgxglac6"]
+[gd_scene load_steps=9 format=3 uid="uid://cqpeejgxglac6"]
 
+[ext_resource type="Script" path="res://escenarios/npc1.gd" id="1_48hyt"]
 [ext_resource type="Script" path="res://escenarios/scripts/npc1.gd" id="1_m84ka"]
+[ext_resource type="PackedScene" uid="uid://dgvuiax4dsyhg" path="res://modelos/Ña florida/Ña floridas.tscn" id="2_1ofti"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dfi00"]
-size = Vector3(1.56575, 0.281006, 2.77472)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_dfi00"]
+size = Vector3(2.21106, 0.281006, 2.77472)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m84ka"]
 
+[sub_resource type="Animation" id="Animation_ym1wa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.03448, 1.00474, 1.04338)]
+}
+
+[sub_resource type="Animation" id="Animation_lbc7a"]
+resource_name = "opytu"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.03448, 1.00474, 1.04338), Vector3(1.034, 0.988, 1.043)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yk7ci"]
+_data = {
+"RESET": SubResource("Animation_ym1wa"),
+"opytu": SubResource("Animation_lbc7a")
+}
+
 [node name="StaticBody3D" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.192885, 0.132115, 0.147788)
+script = ExtResource("1_48hyt")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 1.24079, 0)
@@ -18,16 +57,20 @@ collision_mask = 2
 script = ExtResource("1_m84ka")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0956505, -0.0985107, -0.095184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.418305, -0.0985107, -0.095184)
 shape = SubResource("BoxShape3D_dfi00")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_dfi00")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_m84ka")
+
+[node name="florida" parent="." instance=ExtResource("2_1ofti")]
+transform = Transform3D(1.03448, 0, 0, 0, 1.00474, 0, 0, 0, 1.04338, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="florida"]
+libraries = {
+"": SubResource("AnimationLibrary_yk7ci")
+}
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

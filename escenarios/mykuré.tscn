@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd0yo6fujp6nb"]
+
+[ext_resource type="Script" path="res://escenarios/myku_area.gd" id="1_h2w5y"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wfbmr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_homyl"]
+size = Vector3(7.94977, 1, 8.22467)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfeyf"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_wfbmr")
+skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+script = ExtResource("1_h2w5y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.468903, 0, -0.00283813)
+shape = SubResource("BoxShape3D_homyl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_wfeyf")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

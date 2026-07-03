@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var npc_id: String = "clotilde"
+@export var npc_id: String = "florida"
 
 signal corpus_entro(npc_id: String)
 signal corpus_salio(npc_id: String)

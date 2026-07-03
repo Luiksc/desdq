@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://escenarios/scripts/np3.gd" id="1_l1bb1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n6ce"]
-size = Vector3(5.10736, 1, 6.31519)
+size = Vector3(7.79733, 1, 8.5116)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_voewk"]
 
@@ -16,7 +16,7 @@ collision_mask = 2
 script = ExtResource("1_l1bb1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.908295, 0, -0.853394)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.436691, 0, 0.244811)
 shape = SubResource("BoxShape3D_8n6ce")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

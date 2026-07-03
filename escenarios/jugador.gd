@@ -6,7 +6,7 @@ extends CharacterBody3D
 @onready var piel: Node3D = $blockbench_export
 @onready var animaciones : AnimationPlayer = $blockbench_export/AnimationPlayer       # nodo de la cámara 
 
-var velo_max : float = 10
+var velo_max : float = 13
 @export var vel_rotacion: float = 10.0 # qué tan rápido rota el personaje
 var distans_salto: float = 2.5 
 var timp_salto: float= 0.3
@@ -102,7 +102,7 @@ func moviminto(delta: float) -> void:
 			
 
 		# Rotar
-		var angulo_destino = atan2(direccion.x, direccion.z)
+		#var angulo_destino = atan2(direccion.x, direccion.z)
 		
 		
 

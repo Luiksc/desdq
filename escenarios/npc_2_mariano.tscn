@@ -1,15 +1,55 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg3cospwacyuc"]
+[gd_scene load_steps=10 format=3 uid="uid://bg3cospwacyuc"]
 
+[ext_resource type="Script" path="res://escenarios/mariano.gd" id="1_0adu3"]
 [ext_resource type="Script" path="res://escenarios/npc2.gd" id="1_j6y2w"]
+[ext_resource type="PackedScene" uid="uid://irw30dwcjua0" path="res://modelos/Don Mariano/Don Mariano Roque alonzo .tscn" id="2_vyw47"]
+[ext_resource type="PackedScene" uid="uid://ch254p7quxh7a" path="res://modelos/Don Mariano/apykai.tscn" id="3_qddvh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tgmgc"]
 size = Vector3(7.54108, 1, 7.0932)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ph6m5"]
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvqvn"]
 
+[sub_resource type="Animation" id="Animation_li0ct"]
+resource_name = "balance"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.23333, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(7.13476e-09, -1.0472, 0.292203), Vector3(-0.0164561, -1.04098, 0.521041), Vector3(0, -1.0472, 0.29147)]
+}
+
+[sub_resource type="Animation" id="Animation_1u7e8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(7.13476e-09, -1.0472, 0.292203)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jy7w6"]
+_data = {
+"RESET": SubResource("Animation_1u7e8"),
+"balance": SubResource("Animation_li0ct")
+}
+
 [node name="StaticBody3D" type="StaticBody3D"]
+script = ExtResource("1_0adu3")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 2
@@ -19,13 +59,21 @@ script = ExtResource("1_j6y2w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.359772, 0, 3.0466)
 shape = SubResource("BoxShape3D_tgmgc")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_ph6m5")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_kvqvn")
 
 [node name="Npc2-Mariano" type="Node3D" parent="."]
+
+[node name="Mariano" parent="." instance=ExtResource("2_vyw47")]
+transform = Transform3D(0.478806, -0.144031, -0.866026, 0.288063, 0.957612, -7.13476e-09, 0.829316, -0.249469, 0.5, 0.0275975, 0.365552, 0.0159335)
+
+[node name="torus" parent="Mariano" instance=ExtResource("3_qddvh")]
+transform = Transform3D(-0.957612, 8.9407e-08, -0.240981, 0.288063, -2.98023e-08, -0.801096, -1.19209e-07, -1, -6.23283e-09, -0.294927, 0.17271, -0.511613)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Mariano"]
+libraries = {
+"": SubResource("AnimationLibrary_jy7w6")
+}
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1fcgx1pm0gu7"]
+
+[ext_resource type="PackedScene" uid="uid://bxpxhdn1ie7lu" path="res://modelos/objetos/chaco/arbuz epina/espinosoi.tscn" id="1_hxxk2"]
+[ext_resource type="PackedScene" uid="uid://xmsjj0p4pxbx" path="res://modelos/objetos/chaco/arbuz epina/espinosoi1.tscn" id="2_fokjr"]
+
+[node name="espinosos" type="Node3D"]
+
+[node name="espino" parent="." instance=ExtResource("1_hxxk2")]
+
+[node name="alto_espino" parent="." instance=ExtResource("2_fokjr")]
