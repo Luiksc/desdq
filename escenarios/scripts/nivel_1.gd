@@ -51,13 +51,14 @@ func _ready() -> void:
 	
 	$triggers/triger_delfi.corpus_entro.connect(piensa_dialog)
 	
-	$"mykure}/Area3D".corpus_entro.connect(espanta)
-
+	$"triggers/Mykure_trigger".body_entered.connect(espanta)
+#on_mykure_trigger_body_entered
 	
 
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 
 
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if dialogo_activo:
 		# E funciona como "next" mientras el diálogo está ocurriendo
@@ -144,5 +145,9 @@ func destru_piensa() -> void:
 	if is_instance_valid(pensamiento):
 		pensamiento.queue_free()
 		
-func espanta():
+func espanta(_body):
 	espantad.show()
+
+
+func _on_mykure_trigger_body_exited(_body: Node3D) -> void:
+	espantad.hide()
