@@ -13,12 +13,16 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_body_entered(body: Node3D) -> void:
-	if body.is_in_group("jugon"):
-		
-		jugonomano()
+
+
 		
 func jugonomano():
 	jugador.position=checkpoint_gestor.ultima_posicion
 		
 	
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.is_in_group("jugon") or is_in_group("jugador_global"):
+		
+		jugonomano()

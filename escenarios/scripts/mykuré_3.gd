@@ -108,6 +108,7 @@ func detenido_sape() -> void:
 	if is_instance_valid(triger_mykure):
 		triger_mykure.queue_free()
 		triger_mykure = null
+		hide()
 
 
 func reinicio() -> void:
@@ -119,26 +120,10 @@ func reinicio() -> void:
 	puede_espantar = false
 
 
-func _on_mykure_trigger_body_entered(body: Node3D) -> void:
-	activar_persecucion(body)
-
-
-func _on_mykure_trigger_2_body_entered(body: Node3D) -> void:
-	activar_persecucion(body)
-
 
 func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
 	activar_persecucion(body)
 
-
-func _on_area_3d_daña_body_entered(body: Node3D) -> void:
-	if es_jugador(body):
-		reinicio()
-
-
-func _on_area_3d_daña_2_body_entered(body: Node3D) -> void:
-	if es_jugador(body):
-		reinicio()
 
 
 func _on_area_3d_daña_3_body_entered(body: Node3D) -> void:

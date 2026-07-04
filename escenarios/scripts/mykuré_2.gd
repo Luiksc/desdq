@@ -81,7 +81,7 @@ func buscar_trigger_en(nodo: Node) -> Area3D:
 	if triggers == null:
 		return null
 
-	var nombre_trigger := "Mykure_trigger" + obtener_numero_de_mykure()
+	var nombre_trigger := "Mykure_trigger2" #+ obtener_numero_de_mykure()
 	return triggers.get_node_or_null(nombre_trigger) as Area3D
 
 
@@ -108,6 +108,7 @@ func detenido_sape() -> void:
 	if is_instance_valid(triger_mykure):
 		triger_mykure.queue_free()
 		triger_mykure = null
+		
 
 
 func reinicio() -> void:
@@ -119,28 +120,14 @@ func reinicio() -> void:
 	puede_espantar = false
 
 
-func _on_mykure_trigger_body_entered(body: Node3D) -> void:
-	activar_persecucion(body)
+
 
 
 func _on_mykure_trigger_2_body_entered(body: Node3D) -> void:
 	activar_persecucion(body)
 
 
-func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
-	activar_persecucion(body)
-
-
-func _on_area_3d_daña_body_entered(body: Node3D) -> void:
-	if es_jugador(body):
-		reinicio()
-
 
 func _on_area_3d_daña_2_body_entered(body: Node3D) -> void:
-	if es_jugador(body):
-		reinicio()
-
-
-func _on_area_3d_daña_3_body_entered(body: Node3D) -> void:
-	if es_jugador(body):
+	if body.is_in_group("jugador_global"):
 		reinicio()

@@ -48,9 +48,12 @@ func _physics_process(_delta: float) -> void:
 			direccion = direccion.normalized()
 			velocity = direccion * SPEED
 			move_and_slide()
+			
+			if global_position == punto_retiro.global_position:
+					hide()
 
-			if global_position.distance_to(punto_retiro.global_position) < 0.5:
-				hide()
+		
+
 
 	if Input.is_action_just_pressed("interaccion") and puede_espantar:
 		detenido_sape()
@@ -81,7 +84,7 @@ func buscar_trigger_en(nodo: Node) -> Area3D:
 	if triggers == null:
 		return null
 
-	var nombre_trigger := "Mykure_trigger" + obtener_numero_de_mykure()
+	var nombre_trigger := "Mykure_trigger"
 	return triggers.get_node_or_null(nombre_trigger) as Area3D
 
 
@@ -108,7 +111,7 @@ func detenido_sape() -> void:
 	if is_instance_valid(triger_mykure):
 		triger_mykure.queue_free()
 		triger_mykure = null
-
+	
 
 func reinicio() -> void:
 	Estado = estado.esperando
@@ -123,24 +126,7 @@ func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 	activar_persecucion(body)
 
 
-func _on_mykure_trigger_2_body_entered(body: Node3D) -> void:
-	activar_persecucion(body)
-
-
-func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
-	activar_persecucion(body)
-
 
 func _on_area_3d_daña_body_entered(body: Node3D) -> void:
-	if es_jugador(body):
-		reinicio()
-
-
-func _on_area_3d_daña_2_body_entered(body: Node3D) -> void:
-	if es_jugador(body):
-		reinicio()
-
-
-func _on_area_3d_daña_3_body_entered(body: Node3D) -> void:
 	if es_jugador(body):
 		reinicio()
