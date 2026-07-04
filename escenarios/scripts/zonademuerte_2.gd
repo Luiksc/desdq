@@ -7,8 +7,6 @@ var jugador
 func _ready() -> void:
 	checkpoint_gestor= get_parent().get_node("gestor_de_checkpoint")
 	jugador = get_parent().get_node("jugador")
-	print(checkpoint_gestor)
-	print(jugador)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
