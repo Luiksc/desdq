@@ -117,3 +117,7 @@ func moviminto(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, friccion * delta)
 		velocity.z = move_toward(velocity.z, 0, friccion * delta)
+
+
+func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.

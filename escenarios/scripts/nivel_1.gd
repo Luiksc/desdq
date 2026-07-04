@@ -3,9 +3,7 @@ extends Node3D
 @onready var interac: Label = $Control/Interactuar
 @onready var espantad: Label = $Control/espantar
 @onready var jugador = $jugador  # referencia al nodo del jugador
-@onready var mykure = $"mykure}"
-@onready var sorpre_1 =$objetos/sorpresa
-@onready var sorpre_2 =$objetos/sorpresa2
+@onready var mykure = $"enemigos/mykure"
 @onready var pensamiento=$triggers/triger_delfi
 
 
@@ -64,6 +62,8 @@ func _process(delta: float) -> void:
 		# E funciona como "next" mientras el diálogo está ocurriendo
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
+			$DialogSystem/sound.play()
+			
 			
 	elif jugador_puede_interac:
 		# E inicia el diálogo si el jugador está en el área y no hay diálogo activo
@@ -86,9 +86,7 @@ func piensa_dialog(id: String) -> void:
 		DialogSystem.says(linea[1], linea[0])
 
 func inic_dialo() -> void:
-
 	if npc_actual=="":
-
 		return
 	if not dialogos.has(npc_actual):
 		return
@@ -151,3 +149,25 @@ func espanta(_body):
 
 func _on_mykure_trigger_body_exited(_body: Node3D) -> void:
 	espantad.hide()
+
+
+func _on_mykure_trigger_2_body_entered(body: Node3D) -> void:
+	espanta(body)
+
+
+func _on_mykure_trigger_2_body_exited(body: Node3D) -> void:
+	espantad.hide()
+	
+
+
+func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
+	espanta(body)
+
+
+func _on_mykure_trigger_3_body_exited(body: Node3D) -> void:
+	espantad.hide()
+
+
+func _on_mykure_trigger_body_entered(body: Node3D) -> void:
+	espantad.show()
+	

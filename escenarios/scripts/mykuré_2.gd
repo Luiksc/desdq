@@ -3,7 +3,7 @@ extends CharacterBody3D
 var jugador: Node3D
 var triger_mykure: Area3D
 var puede_espantar: bool = false
-var SPEED: float = 16.0
+var SPEED: float = 20.0
 
 @export var inicio: Marker3D
 @export var punto_retiro: Marker3D
@@ -48,7 +48,7 @@ func _physics_process(_delta: float) -> void:
 			direccion = direccion.normalized()
 			velocity = direccion * SPEED
 			move_and_slide()
-
+			
 			if global_position.distance_to(punto_retiro.global_position) < 0.5:
 				hide()
 

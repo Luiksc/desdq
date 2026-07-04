@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3a4jp6inrrjm"]
+
+[ext_resource type="Script" path="res://escenarios/scripts/mykuré_3.gd" id="1_x5mqj"]
+[ext_resource type="Script" path="res://escenarios/scripts/mykure_dañatrigger.gd" id="2_2k8ts"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wfbmr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_homyl"]
+size = Vector3(2.22475, 1, 1.37408)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfeyf"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_x5mqj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_wfbmr")
+skeleton = NodePath("")
+
+[node name="Area3D_daña3" type="Area3D" parent="."]
+collision_mask = 2
+script = ExtResource("2_2k8ts")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_daña3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00968146, 0, 0.0124207)
+shape = SubResource("BoxShape3D_homyl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_wfeyf")
+
+[connection signal="body_entered" from="Area3D_daña3" to="." method="_on_area_3d_daña_3_body_entered"]
+[connection signal="body_entered" from="Area3D_daña3" to="Area3D_daña3" method="_on_body_entered"]
