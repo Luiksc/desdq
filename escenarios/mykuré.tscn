@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dd0yo6fujp6nb"]
+[gd_scene load_steps=7 format=3 uid="uid://dd0yo6fujp6nb"]
 
 [ext_resource type="Script" path="res://escenarios/scripts/mykuré.gd" id="1_77be3"]
 [ext_resource type="Script" path="res://escenarios/scripts/mykure_dañatrigger.gd" id="2_rc71c"]
+[ext_resource type="AudioStream" uid="uid://dbwlyxyi4io4i" path="res://audios/sonido mykure.mp3" id="3_1xbby"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wfbmr"]
 
@@ -29,6 +30,10 @@ shape = SubResource("BoxShape3D_homyl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_wfeyf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1xbby")
+volume_db = -5.357
 
 [connection signal="body_entered" from="Area3D_daña" to="." method="_on_area_3d_daña_body_entered"]
 [connection signal="body_entered" from="Area3D_daña" to="Area3D_daña" method="_on_body_entered"]

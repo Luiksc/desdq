@@ -5,6 +5,7 @@ extends Node3D
 @onready var jugador = $jugador  # referencia al nodo del jugador
 @onready var mykure = $"enemigos/mykure"
 @onready var pensamiento=$triggers/triger_delfi
+@onready var anima_transi_sali = $transicio/AnimationPlayer
 
 
 var mykure_velocidad: float = 10
@@ -15,25 +16,34 @@ var npc_actual: String = ""
 var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
 var dialogos ={
 	"florida":[
-		["Ña florida","¡Que tal Ña Delfina! ¿le buscás a Mateo?"],
+		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],
 		["Ña florida","Hay una fiesta en la fábrica por el día de la Raza"],
-		["Ña florida","Ikatu Mateo ohora'e napépe."]
+		["Ña florida","Ikatu Mateo ohora'e napépe.
+(seguro se fue allá)"]
 ],
 	"Mariano":[
-		["Don Mariano", "Mba'eichapa Ña Servín"],
-		["Don Mariano", "¿Mateo? Upe karia'y jeýma, le vi kuri yendose a la fiesta en la casa de Miguel Medina"],
-		["Don Mariano", "Chéve guara, oho ojopo petei kuña ndive, ¡Ñandejára!"]
+		["Don Mariano", "Mba'éichapa Ña Servín
+(Cómo está Doña Servín)"],
+		["Don Mariano", "¿Mateo? Upe karia'y jeýma, le vi kuri yendose a la fiesta en la casa de Miguel Medina
+(¿Mateo? ese muchacho ya otra vez, se estaba yendo a la fiesta en la casa de Miguel Madina)"],
+		["Don Mariano", "Chéve g̃uarã, oho ojopo Emilia Ortiz ndive, ¡Ñandejára!
+(Para mí que se iba agarrado de la mano con Emilia Ortiz, ¡Dios mío!)"]
 	],
 	"kaloi":[
 		["Kalo'i","Hola Señora, Mateo se fue derecho ko tapére, allaitee en la casa de Don Medina"]
 	],
 	"Piensadelfi":[
-		["delfina", "Acá esta lleno de mykuré, ambosápe manteva'erá ko'a vícho"],
-		["delfina", "(Presiona E para espantar bichos)"]
+		["delfina", "Acá esta lleno de mykurẽ, ambosápe manteva'erá ko'a vícho
+(Acá está lleno de mykurés, Debo ahuyentarles a estos animales)"],
+		["delfina", "(Presiona E para espantar animales)"]
 	]
 }
 
 func _ready() -> void:
+	anima_transi_sali.play("salimos")
+	await anima_transi_sali.animation_finished
+
+	
 	espantad.hide()
 	interac.hide()
 	$npcs/npc_florida/Area3D.corpus_entro.connect(mostrar_interac)
@@ -150,22 +160,6 @@ func espanta(_body):
 func _on_mykure_trigger_body_exited(_body: Node3D) -> void:
 	espantad.hide()
 
-
-func _on_mykure_trigger_2_body_entered(body: Node3D) -> void:
-	espanta(body)
-
-
-func _on_mykure_trigger_2_body_exited(body: Node3D) -> void:
-	espantad.hide()
-	
-
-
-func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
-	espanta(body)
-
-
-func _on_mykure_trigger_3_body_exited(body: Node3D) -> void:
-	espantad.hide()
 
 
 func _on_mykure_trigger_body_entered(body: Node3D) -> void:

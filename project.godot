@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="desde 1"
-run/main_scene="res://escenarios/n_1.tscn"
+run/main_scene="res://UI/menutscn.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 addons/rakugo/game_version=1.0

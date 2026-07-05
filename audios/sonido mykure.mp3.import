@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbwlyxyi4io4i"
+path="res://.godot/imported/sonido mykure.mp3-31a5e7b0c71fe802918b668a79bd9aaf.mp3str"
+
+[deps]
+
+source_file="res://audios/sonido mykure.mp3"
+dest_files=["res://.godot/imported/sonido mykure.mp3-31a5e7b0c71fe802918b668a79bd9aaf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

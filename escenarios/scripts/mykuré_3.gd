@@ -4,7 +4,9 @@ var jugador: Node3D
 var triger_mykure: Area3D
 var puede_espantar: bool = false
 var SPEED: float = 20.0
-
+  
+@onready var sape = $"../../Sápe"
+@onready var atake_sond = $SonidoMykure
 @export var inicio: Marker3D
 @export var punto_retiro: Marker3D
 
@@ -31,7 +33,7 @@ func _physics_process(_delta: float) -> void:
 			if jugador == null:
 				velocity = Vector3.ZERO
 				return
-
+			
 			var direccion = jugador.global_position - global_position
 			
 			direccion = direccion.normalized()
@@ -53,7 +55,9 @@ func _physics_process(_delta: float) -> void:
 				hide()
 
 	if Input.is_action_just_pressed("interaccion") and puede_espantar:
+		sape.play()
 		detenido_sape()
+		puede_espantar=false
 
 
 func buscar_referencias() -> void:
@@ -95,6 +99,7 @@ func obtener_numero_de_mykure() -> String:
 
 func activar_persecucion(body: Node3D) -> void:
 	if es_jugador(body):
+		atake_sond.play()
 		puede_espantar = true
 		Estado = estado.persiguiendo
 
@@ -122,6 +127,7 @@ func reinicio() -> void:
 
 
 func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
+	
 	activar_persecucion(body)
 
 
