@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=113 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cqpeejgxglac6" path="res://escenarios/npc.tscn" id="3_3ccld"]
 [ext_resource type="MeshLibrary" uid="uid://rhowvwxd6qjc" path="res://modelos/libr mesh/1libreria_chaco.tres" id="5_ce0le"]
 [ext_resource type="Texture2D" uid="uid://bap1tjuet1l42" path="res://modelos/KINCHO/kincho perron-reakls_0.png" id="5_m7ox8"]
+[ext_resource type="PackedScene" uid="uid://dt8fxjokm7w7t" path="res://escenarios/nivel_1_final.tscn" id="5_nk8o6"]
 [ext_resource type="Texture2D" uid="uid://be56g6tfookgy" path="res://modelos/KINCHO/kincho perron-reakls_1.png" id="6_tcqda"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="6_ytt0h"]
 [ext_resource type="Texture2D" uid="uid://dh3u4sqm23yrm" path="res://modelos/KINCHO/kincho perron-reakls_2.png" id="7_lfen8"]
@@ -55,6 +56,9 @@
 [ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="32_oa7xj"]
 [ext_resource type="AudioStream" uid="uid://rnfh0p7isxb7" path="res://audios/sápe.mp3" id="34_6xlwd"]
 [ext_resource type="AudioStream" uid="uid://s2ssaqulrhei" path="res://audios/hýpy (mp3cut.net).mp3" id="35_k2y46"]
+[ext_resource type="PackedScene" uid="uid://br72pgind7jsh" path="res://escenarios/emilia.tscn" id="39_v3laf"]
+[ext_resource type="PackedScene" uid="uid://cvcmq2x0et610" path="res://UI/mate_gamarra.tscn" id="40_8o8iu"]
+[ext_resource type="PackedScene" uid="uid://cm4gmnji8mv4e" path="res://escenarios/ojerokyva.tscn" id="41_mkucl"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ycvxn"]
 panorama = ExtResource("2_whcm0")
@@ -1106,7 +1110,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ir4kh")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ei46q"]
-size = Vector3(9.26867, 7.27344, 3.17228)
+size = Vector3(7.25684, 4.19238, 3.17228)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ofc2a"]
 size = Vector3(4.88818, 2.2587, 0.268433)
@@ -1118,7 +1122,7 @@ size = Vector3(0.179688, 1.55865, 3.88873)
 size = Vector3(5.1322, 1.12878, 0.186401)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mqbgb"]
-size = Vector3(16.3608, 9, 6.6646)
+size = Vector3(4, 9, 10.5776)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ansc1"]
 size = Vector3(1.89154, 0.670898, 2.81567)
@@ -1135,6 +1139,9 @@ size = Vector3(9.76758, 8.04205, 2.39233)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8hdld"]
 size = Vector3(9.60666, 14.4949, 6.46325)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ynlww"]
+size = Vector3(3.65381, 8.61926, 6.18213)
+
 [node name="n1" type="Node3D"]
 script = ExtResource("1_oxi0n")
 
@@ -1147,9 +1154,11 @@ light_color = Color(1, 0.8045, 0.49, 1)
 shadow_enabled = true
 
 [node name="jugador" parent="." groups=["jugador_global"] instance=ExtResource("1_5bv6o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6889, 2.67893, 13.9938)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.0432, 2.67893, 6.9874)
 
 [node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]
+
+[node name="final" parent="." instance=ExtResource("5_nk8o6")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -1504,7 +1513,7 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="*objetos/carruaje/mesh"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="*objetos/carruaje/mesh/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0280457, 0, -0.0670013)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03392, -1.54053, -0.0669632)
 shape = SubResource("BoxShape3D_ei46q")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="*objetos/carruaje/mesh/StaticBody3D"]
@@ -1537,7 +1546,7 @@ shape = SubResource("BoxShape3D_ei46q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6428, 0, -203.228)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="*objetos/colisione"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, -8.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.493774, 4, -4.58894)
 shape = SubResource("BoxShape3D_mqbgb")
 
 [node name="colisione3" type="StaticBody3D" parent="*objetos"]
@@ -1551,7 +1560,7 @@ shape = SubResource("BoxShape3D_mqbgb")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.6428, 0, -198.113)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="*objetos/colisione2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, 5.4629)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32581, 4, 3.50833)
 shape = SubResource("BoxShape3D_mqbgb")
 
 [node name="VALLA" type="Node3D" parent="*objetos"]
@@ -1584,6 +1593,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6114, 0.382818, 0)
 
 [node name="sorpresa2" parent="npcs/npc2-Mariano" instance=ExtResource("10_coj83")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.0109997, 4.48728, -0.174253)
+
+[node name="emilia" parent="npcs" instance=ExtResource("39_v3laf")]
+transform = Transform3D(-0.999729, 0, 0.023298, 0, 1, 0, -0.023298, 0, -0.999729, 15.3057, 0.33556, -258.514)
+
+[node name="Mate_gamarra" parent="npcs" instance=ExtResource("40_8o8iu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.287, 0.340874, -259.27)
+
+[node name="bailarine" type="Node" parent="npcs"]
+
+[node name="Node3D" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 15.4667, 0.153035, -267.759)
+
+[node name="Node3D2" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.1141, 0.153035, -266.855)
+
+[node name="Node3D3" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 9.34665, 0.153035, -268.353)
+
+[node name="Node3D4" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 11.8059, 0.153035, -266.484)
+
+[node name="Node3D5" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 11.3373, 0.153035, -268.437)
+
+[node name="Node3D6" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9218, 0.153035, -264.649)
+
+[node name="Node3D7" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9218, 0.153035, -250.574)
+
+[node name="Node3D8" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9218, 0.153035, -248.735)
+
+[node name="Node3D9" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 12.2741, 0.153035, -249.838)
+
+[node name="Node3D10" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 12.2741, 0.153035, -246.983)
+
+[node name="Node3D11" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 10.7981, 0.153035, -246.13)
+
+[node name="Node3D13" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 8.5688, 0.153035, -248.035)
+
+[node name="Node3D12" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
+transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 10.7981, 0.153035, -249.793)
 
 [node name="zonademuerte" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -76.4789)
@@ -1673,6 +1729,14 @@ collision_mask = 2
 transform = Transform3D(0.886066, 0, -0.463559, 0, 1, 0, 0.463559, 0, 0.886066, 1.15402, -1.92795, 1.05186)
 shape = SubResource("BoxShape3D_8hdld")
 
+[node name="FINAL" type="Area3D" parent="triggers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3933, 0, -259.631)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="triggers/FINAL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3269, 3.80963, 2.59106)
+shape = SubResource("BoxShape3D_ynlww")
+
 [node name="enemigos" type="Node" parent="."]
 
 [node name="mykure" parent="enemigos" node_paths=PackedStringArray("inicio", "punto_retiro") instance=ExtResource("23_01tds")]
@@ -1732,6 +1796,7 @@ unit_size = 11.75
 autoplay = true
 
 [node name="transicio" parent="." instance=ExtResource("32_oa7xj")]
+visible = false
 
 [node name="Sápe" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("34_6xlwd")
@@ -1755,3 +1820,4 @@ volume_db = -5.2
 [connection signal="body_entered" from="triggers/Mykure_trigger3" to="." method="_on_mykure_trigger_3_body_entered"]
 [connection signal="body_entered" from="triggers/Mykure_trigger3" to="enemigos/mykure3" method="_on_mykure_trigger_3_body_entered"]
 [connection signal="body_exited" from="triggers/Mykure_trigger3" to="." method="_on_mykure_trigger_3_body_exited"]
+[connection signal="body_entered" from="triggers/FINAL" to="." method="_on_final_body_entered"]

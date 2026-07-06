@@ -6,6 +6,8 @@ extends Node3D
 @onready var mykure = $"enemigos/mykure"
 @onready var pensamiento=$triggers/triger_delfi
 @onready var anima_transi_sali = $transicio/AnimationPlayer
+@onready var final = $final
+@onready var final_ani = $final/AnimationPlayer
 
 
 var mykure_velocidad: float = 10
@@ -42,6 +44,7 @@ var dialogos ={
 func _ready() -> void:
 	espantad.hide()
 	interac.hide()
+	final.hide()
 	anima_transi_sali.play("salimos")
 	await anima_transi_sali.animation_finished
 
@@ -166,3 +169,9 @@ func _on_mykure_trigger_body_exited(_body: Node3D) -> void:
 func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 	espantad.show()
 	
+
+
+func _on_final_body_entered(body: Node3D) -> void:
+	if body.is_in_group("jugador_global") or is_in_group("jugon"):
+		final.show()
+		final_ani.play("sale")

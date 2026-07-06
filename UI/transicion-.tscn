@@ -127,9 +127,8 @@ mouse_filter = 2
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_top = -1104.0
 offset_right = 1457.0
-offset_bottom = -275.0
+offset_bottom = 829.0
 texture = ExtResource("1_kx07s")
 
 [node name="ColorRect" type="ColorRect" parent="."]

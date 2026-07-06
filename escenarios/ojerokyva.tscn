@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://cm4gmnji8mv4e"]
+
+[ext_resource type="Texture2D" uid="uid://da8hchofql220" path="res://modelos/sprite sueltos/ojerokya.png" id="1_10xku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chdjn"]
+atlas = ExtResource("1_10xku")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grc8x"]
+atlas = ExtResource("1_10xku")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmahw"]
+atlas = ExtResource("1_10xku")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr3i4"]
+atlas = ExtResource("1_10xku")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aawex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chdjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grc8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmahw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr3i4")
+}],
+"loop": true,
+"name": &"ojeroky",
+"speed": 4.0
+}]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.349014, 0, 0, 0, 0.396454, 0, 0, 0, 0.275466, 0, 0.629615, 0)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3.46489, 0, 0, 0, 4.13667, 0, 0, 0, 1, 0, 1.97147, 0)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_aawex")
+animation = &"ojeroky"
+autoplay = "ojeroky"
+frame_progress = 0.768873
