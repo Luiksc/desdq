@@ -1154,7 +1154,7 @@ light_color = Color(1, 0.8045, 0.49, 1)
 shadow_enabled = true
 
 [node name="jugador" parent="." groups=["jugador_global"] instance=ExtResource("1_5bv6o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.0432, 2.67893, 6.9874)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.7211, 2.67893, 12.1877)
 
 [node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]
 
