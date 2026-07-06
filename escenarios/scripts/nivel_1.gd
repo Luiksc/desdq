@@ -40,12 +40,13 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	espantad.hide()
+	interac.hide()
 	anima_transi_sali.play("salimos")
 	await anima_transi_sali.animation_finished
 
 	
-	espantad.hide()
-	interac.hide()
+
 	$npcs/npc_florida/Area3D.corpus_entro.connect(mostrar_interac)
 	$npcs/npc_florida/Area3D.corpus_salio.connect(hide_interac)
 	

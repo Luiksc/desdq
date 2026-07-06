@@ -3,8 +3,7 @@
 [ext_resource type="Script" path="res://escenarios/scripts/mykuré_3.gd" id="1_x5mqj"]
 [ext_resource type="Script" path="res://escenarios/scripts/mykure_dañatrigger.gd" id="2_2k8ts"]
 [ext_resource type="AudioStream" uid="uid://dbwlyxyi4io4i" path="res://audios/sonido mykure.mp3" id="3_l8f8m"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wfbmr"]
+[ext_resource type="PackedScene" uid="uid://deebm504swr5m" path="res://modelos/animañas/mykuré/myku salta.glb" id="4_lcdlu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_homyl"]
 size = Vector3(2.22475, 1, 1.37408)
@@ -13,11 +12,6 @@ size = Vector3(2.22475, 1, 1.37408)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_x5mqj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_wfbmr")
-skeleton = NodePath("")
 
 [node name="Area3D_daña3" type="Area3D" parent="."]
 collision_mask = 2
@@ -34,6 +28,9 @@ shape = SubResource("CapsuleShape3D_wfeyf")
 [node name="SonidoMykure" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_l8f8m")
 volume_db = -6.983
+
+[node name="blockbench_export" parent="." instance=ExtResource("4_lcdlu")]
+transform = Transform3D(-3.18442, 0, 3.18442, 0, 4.50346, 0, -3.18442, 0, -3.18442, -0.364407, -0.312707, 0.205625)
 
 [connection signal="body_entered" from="Area3D_daña3" to="." method="_on_area_3d_daña_3_body_entered"]
 [connection signal="body_entered" from="Area3D_daña3" to="Area3D_daña3" method="_on_body_entered"]

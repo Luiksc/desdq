@@ -3,7 +3,7 @@ extends CharacterBody3D
 var jugador: Node3D
 var triger_mykure: Area3D
 var puede_espantar: bool = false
-var SPEED: float = 20.0
+var SPEED: float = 25
   
 @onready var sape = $"../../Sápe"
 @onready var atake_sond = $SonidoMykure

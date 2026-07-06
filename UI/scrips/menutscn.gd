@@ -1,6 +1,6 @@
 extends Control
 
-@onready var transi = $"ã/AnimationPlayer"
+@onready var transi = $"CanvasLayer/Control/ã/AnimationPlayer"
 
 
 func _ready() -> void:

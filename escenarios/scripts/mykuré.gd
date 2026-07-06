@@ -36,10 +36,10 @@ func _physics_process(_delta: float) -> void:
 			
 			var direccion = jugador.global_position - global_position
 			direccion.y = 0
-			
 			direccion = direccion.normalized()
 			velocity = direccion * SPEED
 			move_and_slide()
+			
 
 		estado.retirada:
 			if punto_retiro == null:
