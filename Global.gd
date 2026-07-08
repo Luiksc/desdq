@@ -1,3 +1,3 @@
 extends Node
 
-var custom_variable={}
+var final_n1 : bool= false

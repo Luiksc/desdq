@@ -4,10 +4,12 @@ extends CharacterBody3D
    
 @onready var pivote: Node3D = $pivote  
 @onready var piel: Node3D = $blockbench_export
-@onready var animaciones : AnimationPlayer = $blockbench_export/AnimationPlayer       # nodo de la cámara 
+@onready var animaciones : AnimationPlayer = $blockbench_export/AnimationPlayer      # nodo de la cámara 
 
-var velo_max : float = 13
 @export var vel_rotacion: float = 10.0 # qué tan rápido rota el personaje
+
+var anima_activo = true
+var velo_max : float = 13
 var distans_salto: float = 2.5 
 var timp_salto: float= 0.3
 var aceleracion: float= 50
@@ -31,9 +33,11 @@ const  LERP_VAL = .15
 func _ready() -> void:
 	fuerza_salto = (2 * distans_salto) / timp_salto
 	gravedad = (-2 * distans_salto) / (timp_salto * timp_salto)
+	anima_activo= true
 	
 
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
+	
 	moviminto(delta)
 	move_and_slide()
 	
@@ -119,5 +123,9 @@ func moviminto(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, friccion * delta)
 
 
-func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
-	pass # Replace with function body.
+
+
+
+func _on_final_body_entered(body: Node3D) -> void:
+	puede_moverse = false
+	

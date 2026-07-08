@@ -3,13 +3,17 @@ extends Node3D
 @onready var interac: Label = $Control/Interactuar
 @onready var espantad: Label = $Control/espantar
 @onready var jugador = $jugador  # referencia al nodo del jugador
+@onready var anima_jugador = $jugador/blockbench_export/AnimationPlayer
 @onready var mykure = $"enemigos/mykure"
 @onready var pensamiento=$triggers/triger_delfi
 @onready var anima_transi_sali = $transicio/AnimationPlayer
 @onready var final = $final
-@onready var final_ani = $final/AnimationPlayer
+@onready var ani_final = $final/AnimationPlayer
 
 
+
+
+var jugom_anima_actio = true
 var mykure_velocidad: float = 10
 var jugador_puede_interac: bool = false
 var mykure_activu: bool = false
@@ -19,7 +23,7 @@ var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento
 var dialogos ={
 	"florida":[
 		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],
-		["Ña florida","Hay una fiesta en la fábrica por el día de la Raza"],
+		["Ña florida","Hay una fiesta cerca de la fábrica por el día de la Raza"],
 		["Ña florida","Ikatu Mateo ohora'e napépe.
 (seguro se fue allá)"]
 ],
@@ -42,6 +46,7 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	
 	espantad.hide()
 	interac.hide()
 	final.hide()
@@ -75,6 +80,7 @@ func _process(delta: float) -> void:
 	if dialogo_activo:
 		# E funciona como "next" mientras el diálogo está ocurriendo
 		if Input.is_action_just_pressed("interaccion"):
+			anima_jugador.play("oha'aro")
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
 			
@@ -96,6 +102,7 @@ func piensa_dialog(id: String) -> void:
 	pensamiento_activo = true
 	dialogo_activo = true
 	jugador.puede_moverse = false
+	jugom_anima_actio = false
 	for linea in dialogos[id]:
 		DialogSystem.says(linea[1], linea[0])
 
@@ -172,6 +179,10 @@ func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 
 
 func _on_final_body_entered(body: Node3D) -> void:
-	if body.is_in_group("jugador_global") or is_in_group("jugon"):
+	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
+		anima_jugador.play("oha'aro")
 		final.show()
-		final_ani.play("sale")
+		ani_final.play("aparece")
+		Input.mouse_mode= Input.MOUSE_MODE_VISIBLE
+		
+		

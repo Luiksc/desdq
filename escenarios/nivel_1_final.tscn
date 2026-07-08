@@ -1,274 +1,67 @@
-[gd_scene load_steps=9 format=3 uid="uid://dt8fxjokm7w7t"]
+[gd_scene load_steps=5 format=3 uid="uid://dt8fxjokm7w7t"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ry71b"]
-font_color = Color(1, 0.892667, 0.72, 1)
+[ext_resource type="Texture2D" uid="uid://ctohoc7fyid1u" path="res://UI/nivel_1_carta.png" id="1_ypj4c"]
 
-[sub_resource type="Animation" id="Animation_02k5d"]
+[sub_resource type="Animation" id="Animation_n4gcv"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect2:position")
+tracks/0/path = NodePath("TextureRect:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(535, 279)]
+"values": [Vector2(384, 384)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect2:size")
+tracks/1/path = NodePath("TextureRect:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(772, 517)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect3:size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(734, 487)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(214, 75)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect4:size")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(721, 476)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ColorRect4:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(220, 80)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("VBoxContainer/Label:label_settings:font_color")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.93, 0.88412, 0.2418, 1)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("VBoxContainer/Label:label_settings:shadow_color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("VBoxContainer/Label2:label_settings:font_size")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [16]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("VBoxContainer/Label3:label_settings")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("LabelSettings_ry71b")]
+"values": [Vector2(272, 46)]
 }
 
-[sub_resource type="Animation" id="Animation_m7elj"]
-resource_name = "sale"
+[sub_resource type="Animation" id="Animation_hjtks"]
+resource_name = "aparece"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect2:position")
+tracks/0/path = NodePath("TextureRect:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(535, 279), Vector2(198, 58)]
+"values": [Vector2(384, 384), Vector2(30950, 28050)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect2:size")
+tracks/1/path = NodePath("TextureRect:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(85, 87), Vector2(772, 517)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect3:size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(74, 79), Vector2(734, 487)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ColorRect3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(541, 283), Vector2(214, 75)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect4:size")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(68, 72), Vector2(721, 476)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ColorRect4:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(544, 286), Vector2(220, 80)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("VBoxContainer/Label:label_settings:font_color")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.93, 0.88412, 0.2418, 0), Color(0.93, 0.88412, 0.2418, 1)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("VBoxContainer/Label:label_settings:shadow_color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("VBoxContainer/Label2:label_settings:font_size")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 16]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("VBoxContainer/Label3:label_settings")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("LabelSettings_ry71b")]
+"values": [Vector2(572, 320), Vector2(272, 46)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fai6g"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p6c81"]
 _data = {
-"RESET": SubResource("Animation_02k5d"),
-"sale": SubResource("Animation_m7elj")
+"RESET": SubResource("Animation_n4gcv"),
+"aparece": SubResource("Animation_hjtks")
 }
-
-[sub_resource type="FontVariation" id="FontVariation_4joak"]
-
-[sub_resource type="FontVariation" id="FontVariation_epkrq"]
-base_font = SubResource("FontVariation_4joak")
-
-[sub_resource type="LabelSettings" id="LabelSettings_7tbvp"]
-font = SubResource("FontVariation_epkrq")
-font_size = 56
-font_color = Color(0.93, 0.88412, 0.2418, 1)
-shadow_size = 4
-
-[sub_resource type="LabelSettings" id="LabelSettings_vfbhi"]
-shadow_color = Color(0, 0, 0, 1)
 
 [node name="final" type="Control"]
 layout_mode = 3
@@ -278,84 +71,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_fai6g")
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 0.513726)
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "
-
-Mateo Gamarra Káso"
-label_settings = SubResource("LabelSettings_7tbvp")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Alto Paraguay, Puerto Guarani
-1931"
-label_settings = SubResource("LabelSettings_vfbhi")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label3" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "
-
-
-Al medio día, Delfina, la esposa de Mateo, se entera que su marido 
-se encuentra en una farra bailando con Emilia Ortiz.
-Al llegar advierte a Mateo, pero éste no le da importancia. Delfina 
-agarra un arma de fuego y descarga 5 tiros contra Gamarra"
-label_settings = SubResource("LabelSettings_ry71b")
-horizontal_alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 2
-offset_left = 576.0
-offset_top = 324.0
-offset_right = 576.0
-offset_bottom = 324.0
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -278.0
+offset_right = 80.0
+offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.254902)
+scale = Vector2(0.02, 0.02)
+mouse_filter = 2
+texture = ExtResource("1_ypj4c")
+metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 2
-offset_left = 535.0
-offset_top = 279.0
-offset_right = 1307.0
-offset_bottom = 796.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.341176, 0.266667, 0.160784, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="."]
-layout_mode = 2
-offset_left = 214.0
-offset_top = 75.0
-offset_right = 948.0
-offset_bottom = 562.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.95, 0.92245, 0.6745, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="."]
-layout_mode = 2
-offset_left = 220.0
-offset_top = 80.0
-offset_right = 941.0
-offset_bottom = 556.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.34, 0.26792, 0.1598, 1)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p6c81")
+}

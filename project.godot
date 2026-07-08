@@ -24,6 +24,10 @@ addons/rakugo/save_folder="user://saves"
 Global="*res://Global.gd"
 DialogSystem="*res://addons/dialog_system/dialog_System.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [docks]
 
 filesystem/textfile_extensions="txt,md,cfg,ini,log,json,yml,yaml,toml,xml,rk"
