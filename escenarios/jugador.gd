@@ -35,6 +35,7 @@ func _ready() -> void:
 	gravedad = (-2 * distans_salto) / (timp_salto * timp_salto)
 	anima_activo= true
 	
+	
 
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
 	

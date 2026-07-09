@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=114 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -7,6 +7,7 @@
 [ext_resource type="MeshLibrary" uid="uid://rhowvwxd6qjc" path="res://modelos/libr mesh/1libreria_chaco.tres" id="5_ce0le"]
 [ext_resource type="Texture2D" uid="uid://bap1tjuet1l42" path="res://modelos/KINCHO/kincho perron-reakls_0.png" id="5_m7ox8"]
 [ext_resource type="PackedScene" uid="uid://dt8fxjokm7w7t" path="res://escenarios/nivel_1_final.tscn" id="5_nk8o6"]
+[ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="6_f6spo"]
 [ext_resource type="Texture2D" uid="uid://be56g6tfookgy" path="res://modelos/KINCHO/kincho perron-reakls_1.png" id="6_tcqda"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="6_ytt0h"]
 [ext_resource type="Texture2D" uid="uid://dh3u4sqm23yrm" path="res://modelos/KINCHO/kincho perron-reakls_2.png" id="7_lfen8"]
@@ -42,7 +43,7 @@
 [ext_resource type="Script" path="res://escenarios/scripts/_1trigger_piensa_delfi.gd" id="22_av5rt"]
 [ext_resource type="Texture2D" uid="uid://slt4yh33s38d" path="res://modelos/KINCHO/kincho perron-reakls_17.png" id="22_dc5lq"]
 [ext_resource type="PackedScene" uid="uid://dd0yo6fujp6nb" path="res://escenarios/mykuré.tscn" id="23_01tds"]
-[ext_resource type="Texture2D" uid="uid://b2r8jdiv51lmj" path="res://modelos/KINCHO/kincho perron-reakls_18.png" id="23_nett5"]
+[ext_resource type="Texture2D" uid="uid://bxpw2dnqakfh6" path="res://modelos/KINCHO/kincho perron-reakls_18.png" id="23_nett5"]
 [ext_resource type="PackedScene" uid="uid://dtlvmopo2nteu" path="res://modelos/objetos/chaco/ÓGA+/Casa_Delfi.tscn" id="25_p8wol"]
 [ext_resource type="PackedScene" uid="uid://ciwilhcr182tb" path="res://escenarios/mykuré2.tscn" id="25_wpn38"]
 [ext_resource type="PackedScene" uid="uid://kaql6p3h1tgl" path="res://modelos/objetos/chaco/ÓGA+/oga.tscn" id="26_h7bmc"]
@@ -74,11 +75,13 @@ ambient_light_color = Color(1, 0.909804, 0.752941, 1)
 fog_light_color = Color(1, 0.915667, 0.77, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_oxi0n"]
+font = ExtResource("6_f6spo")
 font_size = 30
 outline_size = 11
 outline_color = Color(0.00392157, 0.027451, 0.027451, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_celoa"]
+font = ExtResource("6_f6spo")
 font_size = 40
 font_color = Color(1, 0, 0.0166664, 1)
 outline_size = 11

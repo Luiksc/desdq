@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2r8jdiv51lmj"
+uid="uid://bxpw2dnqakfh6"
 path.s3tc="res://.godot/imported/kincho perron-reakls_18.png-79ee993e89cfa7067b39520189cb8326.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "8152ec16b96713b47a1ab2100015803c"
 }
 
 [deps]

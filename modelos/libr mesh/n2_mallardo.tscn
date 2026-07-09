@@ -373,6 +373,22 @@ transform = Transform3D(0.365418, 0, -0.162695, 0, 0.4, 0, 0.162695, 0, 0.365418
 mesh = SubResource("ArrayMesh_2ubn0")
 skeleton = NodePath("")
 
+[node name="cedron3" type="Node3D" parent="."]
+transform = Transform3D(-2.54393e-08, 0, -0.581984, 0, 0.581984, 0, 0.581984, 0, -2.54393e-08, 0, 0, 0)
+
+[node name="cedrons" type="MeshInstance3D" parent="cedron3"]
+transform = Transform3D(0.365418, 0, -0.162695, 0, 0.4, 0, 0.162695, 0, 0.365418, 0, 1.0111, 0)
+mesh = SubResource("ArrayMesh_2ubn0")
+skeleton = NodePath("")
+
+[node name="cedron4" type="Node3D" parent="."]
+transform = Transform3D(-0.581984, 0, 5.08787e-08, 0, 0.581984, 0, -5.08787e-08, 0, -0.581984, 0, 0, 0)
+
+[node name="cedrons" type="MeshInstance3D" parent="cedron4"]
+transform = Transform3D(0.365418, 0, -0.162695, 0, 0.4, 0, 0.162695, 0, 0.365418, 0, 1.0111, 0)
+mesh = SubResource("ArrayMesh_2ubn0")
+skeleton = NodePath("")
+
 [node name="cedron2" type="Node3D" parent="."]
 transform = Transform3D(0.581984, 0, 0, 0, 0.581984, 0, 0, 0, 0.581984, 0, 0, 0)
 

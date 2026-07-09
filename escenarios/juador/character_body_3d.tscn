@@ -1165,9 +1165,10 @@ script = ExtResource("1_he6aj")
 transform = Transform3D(-4.00987e-08, 0, -0.922378, 0, 0.942562, 0, 0.917351, 0, -4.03184e-08, 0, 0, 0)
 
 [node name="controlador" type="Node3D" parent="blockbench_export"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08125, 0)
 
 [node name="cabexa" type="Node3D" parent="blockbench_export/controlador"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, 2.06562, 0)
+transform = Transform3D(0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0, 0, 1, 0.1125, 2.05938, 0)
 
 [node name="nambi1" type="MeshInstance3D" parent="blockbench_export/controlador/cabexa"]
 transform = Transform3D(0.206971, 0.922442, 0.325981, -0.976383, 0.173648, 0.128543, 0.0619677, -0.344887, 0.936597, 0, 0.4, -0.40625)
@@ -1200,7 +1201,7 @@ mesh = SubResource("ArrayMesh_qr70y")
 skeleton = NodePath("")
 
 [node name="vena" type="Node3D" parent="blockbench_export/controlador/cabexa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, 0.109375, 0.003125)
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -0.00625, 0.109375, 0.003125)
 
 [node name="pochy" type="MeshInstance3D" parent="blockbench_export/controlador/cabexa/vena"]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0.00625, 0.859375, -0.346875)
@@ -1208,7 +1209,7 @@ mesh = SubResource("ArrayMesh_t4fbs")
 skeleton = NodePath("")
 
 [node name="corpu" type="Node3D" parent="blockbench_export/controlador"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00625, 1.425, 0)
+transform = Transform3D(0.996195, 0.0871558, 0, -0.0871558, 0.996195, 0, 0, 0, 1, 0.05625, 1.425, 0)
 
 [node name="sái" type="MeshInstance3D" parent="blockbench_export/controlador/corpu"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.575, 0)
@@ -1223,7 +1224,7 @@ mesh = SubResource("ArrayMesh_08dlo")
 skeleton = NodePath("")
 
 [node name="retyma derecho" type="Node3D" parent="blockbench_export/controlador"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0.0625, 0.775, 0.128125)
+transform = Transform3D(0.636078, -0.768689, -0.0672516, 0.771625, 0.633657, 0.0554379, 1.11759e-08, -0.0871558, 0.996195, 0.125, 0.821875, 0.128125)
 
 [node name="jyva 2" type="MeshInstance3D" parent="blockbench_export/controlador/retyma derecho"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0733944, 0.184604, 0.00856625)
@@ -1236,7 +1237,7 @@ mesh = SubResource("ArrayMesh_dk08b")
 skeleton = NodePath("")
 
 [node name="py2" type="Node3D" parent="blockbench_export/controlador/retyma derecho"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0391056, -0.640396, 0.00231625)
+transform = Transform3D(0.99863, 0.0523359, 0, -0.0523359, 0.99863, 0, 0, 0, 1, 0.0391056, -0.640396, 0.00231625)
 
 [node name="py" type="MeshInstance3D" parent="blockbench_export/controlador/retyma derecho/py2"]
 transform = Transform3D(0.999813, 0.00693664, -0.0180279, -0.0081893, 0.997488, -0.0703663, 0.0174945, 0.0705008, 0.997358, 0, 0, 0)
@@ -1244,7 +1245,7 @@ mesh = SubResource("ArrayMesh_l7dbj")
 skeleton = NodePath("")
 
 [node name="retyma izquierdo" type="Node3D" parent="blockbench_export/controlador"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0.034375, 0.915625, -0.134375)
+transform = Transform3D(0.71934, 0.692015, -0.0605435, -0.694659, 0.716603, -0.0626947, -4.09782e-08, 0.0871558, 0.996195, 0.009375, 0.915625, -0.134375)
 
 [node name="jyva 4" type="MeshInstance3D" parent="blockbench_export/controlador/retyma izquierdo"]
 transform = Transform3D(0.999848, 0.0174524, 0, 0.0174524, -0.999848, -1.22465e-16, -2.1373e-18, 1.22446e-16, -1, -0.04375, -0.321111, -0.0103294)
@@ -1257,7 +1258,7 @@ mesh = SubResource("ArrayMesh_bjdu1")
 skeleton = NodePath("")
 
 [node name="pie" type="Node3D" parent="blockbench_export/controlador/retyma izquierdo"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.875, 0)
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0.03125, -0.875, 0)
 
 [node name="py3" type="MeshInstance3D" parent="blockbench_export/controlador/retyma izquierdo/pie"]
 transform = Transform3D(0.992479, 0.0118717, 0.121838, -0.0212255, 0.9969, 0.0757645, -0.120561, -0.0777808, 0.989654, 0.04375, 0.0882638, -0.04436)
@@ -1265,7 +1266,7 @@ mesh = SubResource("ArrayMesh_trhsu")
 skeleton = NodePath("")
 
 [node name="izquierdabrazo" type="Node3D" parent="blockbench_export/controlador"]
-transform = Transform3D(0.996195, 0.0871558, 5.30854e-08, -0.0864101, 0.987672, -0.130526, -0.0113762, 0.130029, 0.991445, 0.0625, 1.8375, -0.38125)
+transform = Transform3D(0.499325, -0.858301, 0.118297, 0.866341, 0.496399, -0.0551628, -0.0113762, 0.13003, 0.991445, 0.0625, 1.8375, -0.38125)
 
 [node name="jyva 1" type="MeshInstance3D" parent="blockbench_export/controlador/izquierdabrazo"]
 transform = Transform3D(0.991445, 0.128543, -0.0226657, -0.13003, 0.987802, -0.0856757, 0.0113762, 0.08789, 0.996065, 0, 0.0895656, 0.0220562)
@@ -1273,7 +1274,7 @@ mesh = SubResource("ArrayMesh_c53oi")
 skeleton = NodePath("")
 
 [node name="antejyva" type="Node3D" parent="blockbench_export/controlador/izquierdabrazo"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0375, -0.363559, -0.0529438)
+transform = Transform3D(0.976296, -0.21644, 0, 0.21644, 0.976296, 0, 0, 0, 1, -0.0375, -0.363559, -0.0529438)
 
 [node name="jyva 22" type="MeshInstance3D" parent="blockbench_export/controlador/izquierdabrazo/antejyva"]
 transform = Transform3D(-0.0698588, 0.140084, 0.987672, -0.0454385, -0.98951, 0.137131, 0.996521, -0.0352985, 0.0754912, 0, 0, 0)
@@ -1286,7 +1287,7 @@ mesh = SubResource("ArrayMesh_0th7o")
 skeleton = NodePath("")
 
 [node name="derecha brazo" type="Node3D" parent="blockbench_export/controlador"]
-transform = Transform3D(0.999048, -0.0436194, -6.42613e-08, 0.0432462, 0.990501, 0.130526, -0.00569341, -0.130402, 0.991445, 0.025, 1.8375, 0.365625)
+transform = Transform3D(0.536976, 0.835989, 0.113039, -0.843578, 0.533026, 0.0652631, -0.0056935, -0.130402, 0.991445, 0.025, 1.8375, 0.365625)
 
 [node name="jyva 12" type="MeshInstance3D" parent="blockbench_export/controlador/derecha brazo"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, -0.130029, 0.987672, 0.0871557, 0.0113761, -0.0864101, 0.996195, 0, 0.0895656, -0.0158063)
@@ -1294,7 +1295,7 @@ mesh = SubResource("ArrayMesh_nnr0p")
 skeleton = NodePath("")
 
 [node name="antebrazo" type="Node3D" parent="blockbench_export/controlador/derecha brazo"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, -0.3375, 0.009375)
+transform = Transform3D(0.976296, -0.21644, 0, 0.21644, 0.976296, 0, 0, 0, 1, -0.025, -0.3375, 0.009375)
 
 [node name="po2" type="MeshInstance3D" parent="blockbench_export/controlador/derecha brazo/antebrazo"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025, -0.341684, 0.0248188)

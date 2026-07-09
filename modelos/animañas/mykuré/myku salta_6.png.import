@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgx3o5ostav0g"
+uid="uid://bndn7t82pirwb"
 path.s3tc="res://.godot/imported/myku salta_6.png-86381663d0c459322582bf8088f84df1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "46c94ee9c85d341d61559e92facba08e"
 }
 
 [deps]
