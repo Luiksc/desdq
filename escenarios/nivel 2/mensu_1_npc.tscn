@@ -1,6 +1,6 @@
 [gd_scene load_steps=93 format=4 uid="uid://c2y0bfhltf7rl"]
 
-[ext_resource type="Script" path="res://escenarios/nivel 2/scripts/mensu_1_npc.gd" id="1_8t2qa"]
+[ext_resource type="Script" path="res://escenarios/nivel 2/scripts/mensu_2_npc.gd" id="1_ak0r0"]
 [ext_resource type="Texture2D" uid="uid://dasi7l3faxio6" path="res://modelos/mensu 1/expor/mensu1_0.png" id="2_pl0p0"]
 [ext_resource type="Texture2D" uid="uid://d2s4pxsmnk04t" path="res://modelos/mensu 1/expor/mensu1_1.png" id="3_3fj7t"]
 [ext_resource type="Texture2D" uid="uid://bgccp2qgnp5xd" path="res://modelos/mensu 1/expor/mensu1_2.png" id="4_2hjw5"]
@@ -1386,19 +1386,19 @@ shadow_mesh = SubResource("ArrayMesh_3erq1")
 height = 2.98112
 
 [node name="mensu1" type="CharacterBody3D"]
-script = ExtResource("1_8t2qa")
+script = ExtResource("1_ak0r0")
 
 [node name="blockbench_export" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
 
 [node name="base" type="Node3D" parent="blockbench_export"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.999848, -0.0174524, 0, 0.0174524, 0.999848, 0, 0.03125, 0)
 
 [node name="extremidades2" type="Node3D" parent="blockbench_export/base"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24375, 0)
 
 [node name="brazoizquierda2" type="Node3D" parent="blockbench_export/base/extremidades2"]
-transform = Transform3D(-0.325953, 0.917282, -0.228797, -0.259011, -0.319402, -0.911535, -0.909213, -0.237856, 0.341696, 0.1, 1.51875, 0.3375)
+transform = Transform3D(0.984808, -0.173483, -0.00757442, 0.173648, 0.98387, 0.0429567, -8.84757e-09, -0.0436194, 0.999048, -0.1375, 1.4, 0.29375)
 
 [node name="jyva 1" type="MeshInstance3D" parent="blockbench_export/base/extremidades2/brazoizquierda2"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, -0.130029, 0.987672, 0.0871557, 0.0113761, -0.0864101, 0.996195, 0, 0.168009, 0.0766406)
@@ -1416,7 +1416,7 @@ mesh = SubResource("ArrayMesh_57n4s")
 skeleton = NodePath("")
 
 [node name="brazoderecha2" type="Node3D" parent="blockbench_export/base/extremidades2"]
-transform = Transform3D(-0.0561437, 0.853259, 0.518456, 0.343111, -0.471161, 0.812578, 0.937616, 0.223509, -0.26631, 0.14375, 1.3875, -0.35625)
+transform = Transform3D(0.991445, -0.130402, 0.00569348, 0.130526, 0.990501, -0.0432463, 1.02445e-08, 0.0436194, 0.999049, -0.09375, 1.40625, -0.35625)
 
 [node name="po2" type="MeshInstance3D" parent="blockbench_export/base/extremidades2/brazoderecha2"]
 transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0, -0.640196, -0.0795525)
@@ -1434,7 +1434,7 @@ mesh = SubResource("ArrayMesh_2hr1c")
 skeleton = NodePath("")
 
 [node name="retyma3" type="Node3D" parent="blockbench_export/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0.59375, 0.078125)
+transform = Transform3D(0.965926, -0.257834, -0.0225576, 0.258819, 0.96225, 0.084186, -7.45058e-09, -0.0871557, 0.996195, 0, 0.59375, 0.078125)
 
 [node name="jyva 23" type="MeshInstance3D" parent="blockbench_export/base/extremidades2/retyma3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18125, 0.138803, 0.112699)
@@ -1462,7 +1462,7 @@ mesh = SubResource("ArrayMesh_x0dic")
 skeleton = NodePath("")
 
 [node name="retyma4" type="Node3D" parent="blockbench_export/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, -0.1875, 0.66875, -0.228125)
+transform = Transform3D(0.976296, 0.215616, -0.0188639, -0.216439, 0.972581, -0.0850898, 3.35276e-08, 0.0871557, 0.996195, -0.1875, 0.66875, -0.228125)
 
 [node name="jyva 42" type="MeshInstance3D" parent="blockbench_export/base/extremidades2/retyma4"]
 transform = Transform3D(1, 0, 0, 0, -1, -1.22465e-16, 0, 1.22465e-16, -1, 0.00625, -0.289008, 0.0339162)
@@ -1490,7 +1490,7 @@ mesh = SubResource("ArrayMesh_73h01")
 skeleton = NodePath("")
 
 [node name="cabexa2" type="Node3D" parent="blockbench_export/base"]
-transform = Transform3D(0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0, 0, 1, 0.25625, 1.35625, 0)
+transform = Transform3D(0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 0, 0, 1, -0.11875, 1.45938, 0)
 
 [node name="nambi1" type="MeshInstance3D" parent="blockbench_export/base/cabexa2"]
 transform = Transform3D(0.206971, 0.851822, 0.481209, -0.976383, 0.148689, 0.156744, 0.0619676, -0.502286, 0.862479, 0, 0.8375, -0.39375)
@@ -1523,7 +1523,7 @@ mesh = SubResource("ArrayMesh_x86hr")
 skeleton = NodePath("")
 
 [node name="corpu2" type="Node3D" parent="blockbench_export/base"]
-transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -0.18125, 0.8875, 0)
+transform = Transform3D(0.994522, 0.104528, 0, -0.104528, 0.994522, 0, 0, 0, 1, -0.18125, 0.8875, 0)
 
 [node name="pecho" type="MeshInstance3D" parent="blockbench_export/base/corpu2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10625, 0)
@@ -1546,10 +1546,10 @@ libraries = {
 }
 
 [node name="sako" type="Node3D" parent="blockbench_export"]
-transform = Transform3D(-0.157871, 0.000523182, 0.98746, -0.569164, 0.817125, -0.091428, -0.806926, -0.57646, -0.128702, -0.0551402, 1.21352, 0.537047)
+transform = Transform3D(-0.157871, 0.000523182, 0.98746, -0.569164, 0.817125, -0.091428, -0.806926, -0.57646, -0.128702, -0.92943, 0.784551, 0.537047)
 
 [node name="kaa" type="MeshInstance3D" parent="blockbench_export/sako"]
-transform = Transform3D(0.550926, -0.369667, -1.19419, 1.23398, 0.369667, 0.454853, 0.200063, -1.26212, 0.482992, -0.30852, 1.49029, -0.462887)
+transform = Transform3D(0.550926, -0.369667, -1.19419, 1.23398, 0.369667, 0.454853, 0.200063, -1.26212, 0.482992, -0.387118, 1.49055, 0.0287321)
 mesh = SubResource("ArrayMesh_xhrmv")
 skeleton = NodePath("")
 

@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://5emlvdl6tsoq"
+path="res://.godot/imported/capanga1_9.png-1ea8fa2255f09d825eb841b14ab98f51.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "11f66f209983970b11eb546b5a24acbe"
+}
+
+[deps]
+
+source_file="res://modelos/kapánga/expo/capanga1_9.png"
+dest_files=["res://.godot/imported/capanga1_9.png-1ea8fa2255f09d825eb841b14ab98f51.ctex"]
+
+[params]
+
+compress/mode=3
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
