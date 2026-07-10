@@ -177,7 +177,6 @@ func _process(delta: float) -> void:
 
 func inic_dialo() -> void:
 	if npc_actual=="":
-		print("no")
 		return
 	if not dialogos.has(npc_actual):
 		print("tampoco")

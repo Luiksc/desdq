@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=4 uid="uid://dnajqg0f3h4cg"]
+[gd_scene load_steps=106 format=4 uid="uid://dnajqg0f3h4cg"]
 
 [ext_resource type="Texture2D" uid="uid://ruydtyeqm1v5" path="res://modelos/objetos/Alto parana/cabaña/cabaña_0.png" id="1_fpfy5"]
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/despensa_ryepype.gd" id="1_qp4aq"]
@@ -7,8 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://n4c46tcmmmul" path="res://modelos/objetos/Alto parana/cabaña/cabaña_3.png" id="4_nvhoo"]
 [ext_resource type="Texture2D" uid="uid://bwb5bdatt5ok3" path="res://modelos/objetos/Alto parana/cabaña/cabaña_4.png" id="5_ohs35"]
 [ext_resource type="Texture2D" uid="uid://btmjwoclu3onm" path="res://modelos/objetos/Alto parana/cabaña/cabaña_5.png" id="6_wa4kb"]
+[ext_resource type="Texture2D" uid="uid://dgikimjwy5jpu" path="res://modelos/objetos/Alto parana/mesa/Mesa_0.png" id="8_4huky"]
 [ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="8_5b6ik"]
-[ext_resource type="PackedScene" uid="uid://buq8e4ipgot5g" path="res://modelos/objetos/Alto parana/mesa/Mesa.glb" id="9_eaojp"]
+[ext_resource type="Texture2D" uid="uid://bjfkaxbaswwrm" path="res://modelos/objetos/Alto parana/mesa/Mesa_1.png" id="9_occ55"]
+[ext_resource type="Script" path="res://escenarios/nivel 2/scripts/kioskero.gd" id="10_4c2or"]
 [ext_resource type="Texture2D" uid="uid://w2leitpg2m0n" path="res://modelos/capanga2/eldelas recargas/capanga2_0.png" id="10_qx6av"]
 [ext_resource type="Texture2D" uid="uid://dwed2hmxj504p" path="res://modelos/capanga2/eldelas recargas/capanga2_1.png" id="11_waci7"]
 [ext_resource type="Texture2D" uid="uid://djkoavytwldhw" path="res://modelos/capanga2/eldelas recargas/capanga2_2.png" id="12_vjapk"]
@@ -23,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://boi1hq36rmud2" path="res://modelos/capanga2/eldelas recargas/capanga2_11.png" id="21_m4ax6"]
 [ext_resource type="Texture2D" uid="uid://l0aw0pi6wxij" path="res://modelos/capanga2/eldelas recargas/capanga2_12.png" id="22_ffquo"]
 [ext_resource type="Texture2D" uid="uid://bmlgxkkq3svns" path="res://modelos/capanga2/eldelas recargas/capanga2_13.png" id="23_4sfhe"]
+[ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="24_vocx0"]
+[ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="25_rb1pc"]
+[ext_resource type="Script" path="res://escenarios/nivel 2/scripts/inicia_despensa.gd" id="27_2wmmy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70fi5"]
 resource_name = "material_0"
@@ -230,6 +235,80 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_objke")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iaqlv"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("8_4huky")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1k6xi"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("9_occ55")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3rwcv"]
+_surfaces = [{
+"aabb": AABB(-1.5, -0.4375, -0.5, 3, 1.375, 2.125),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AgABAAAAAgADAAEABgAFAAQABgAHAAUABAAIAAkABAAFAAgABwAKAAsABwAGAAoADAANAA4ADAAPAA0ABQALAAgABQAHAAsAAAAKAAkAAAABAAoAAQALAAoAAQADAAsAAwAIAAsAAwACAAgAAgAJAAgAAgAAAAkADgAGAAwADgAKAAYADQAKAA4ADQAJAAoADwAJAA0ADwAEAAkADAAEAA8ADAAGAAQA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/////3h4AAD//wAAeHgAAP////8AAAAA//8AAAAAAAAAAP//eHgAAAAA//8AAAAAAAAAAHh4AAAAAAAAAAAAAKpK//8AAAAAqkr//3h4AACqSgAAeHgAAKpKAAAAAAAAAAAAAP//AACqSv////8AAKpKAAD//wAAAAD/////AAA=")
+}, {
+"aabb": AABB(-1.625, 0.9375, -0.5625, 3.1875, 0.0625, 2.3125),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AgABAAAAAgADAAEABgAFAAQABgAHAAUAAgAIAAkAAgAAAAgAAQAKAAsAAQADAAoAAAALAAgAAAABAAsAAwAJAAoAAwACAAkABAAJAAgABAAFAAkABQAKAAkABQAHAAoABwALAAoABwAGAAsADAAOAA0ADAAPAA4ADQAGAAwADQALAAYADgALAA0ADgAIAAsADwAIAA4ADwAEAAgADAAEAA8ADAAGAAQA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/////4l8AAD//wAAiXwAAP////8AAAAA//8AAAAAAAAAAP//iXwAAAAA//8AAAAAAAAAAIl8AAAAAAAAAAAAANdX//+JfAAA11f//wAAAADXVwAAAAAAANdXAACJfAAAAAAAAP//AADXVwAA//8AANdX/////wAAAAD/////AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tpgig"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-1.5, -0.4375, -0.5, 3, 1.375, 2.125),
+"attribute_data": PackedByteArray("/4v/W/+L/4f/q/9b/6v/h/8f/2kAAP9p/x//lQAA/5UAAP8f/xsAAP8b/x8AAAAA/x//Z/87/0f/O/9n/x//R/+L/7X/p/+J/6f/tf+L/4n/wQAA/6X/K/+lAAD/wf8r/4n/af9F/2n/Rf+V/4n/lf9//0f/O/9H/zv/Z/9//2f/Yf8r/6X/K/+lAAD/YQAA/18AAP8bAAD/G/8f/1//H/87/yP/H/8j/x//R/87/0f/gf8t/4H/Wf+l/1n/pf8tAAD/Q/8b/0P/G/8fAAD/H/9D/5X/Q/9p/x//af8f/5U="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AgABAAAAAgADAAEABgAFAAQABgAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAaABkAGAAbABoAHAAeAB0AHAAfAB4AIAAiACEAIAAjACIAJAAmACUAJAAnACYAKAAqACkAKAArACoALAAuAC0ALAAvAC4AMAAyADEAMAAzADIANAA2ADUANAA3ADYA"),
+"material": SubResource("StandardMaterial3D_iaqlv"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("/////3h4/7///wAAeHj/v/////8AAP+///8AAAAA/78AAP//eHj/vwAA//8AAP+/AAAAAHh4/78AAAAAAAD/vwAA//94eP+/qkr//wAA/7+qSv//eHj/vwAA//8AAP+/AAAAAAAA/7+qSgAAeHj/v6pKAAAAAP+/AAAAAHh4/78AAAAA//8AgKpK/////wCAqkoAAP//AIAAAP////8AgAAA//8AAP//qkoAAAAA//+qSv//AAD//wAAAAAAAP///////3h4AICqSv//eHgAgKpKAAB4eACA//8AAHh4AID//wAAeHj/v6pKAAB4eP+/qkoAAAAA/7///wAAAAD/v///AAAAAP//qkoAAAAA//+qSv//AAD///////8AAP///////wAA/7+qSv//AAD/v6pK//94eP+//////3h4/7+qSgAA////vwAAAAD///+/AAAAAHh4/7+qSgAAeHj/v6pK//////+/qkoAAP///7+qSgAAeHj/v6pK//94eP+/AAD//////7+qSv//////v6pK//94eP+/AAD//3h4/78AAAAA////vwAA//////+/AAD//3h4/78AAAAAeHj/v/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f///////f////3////9/////fwAA/38AAP9/AAD/fwAA/3//f////3////9/////f////3////9/////f////3////9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//3////9/////f////3///////3////9/////f////38AAP9/AAD/fwAA/38AAP9//38AAP9/AAD/fwAA/38AAP///3////9/////f////3//f////3////9/////f///")
+}, {
+"aabb": AABB(-1.625, 0.9375, -0.5625, 3.1875, 0.0625, 2.3125),
+"attribute_data": PackedByteArray("AAD/SwAA/03/I/9L/yP/Tf9v/yv/S/8r/2//Lf9L/y3/ZQAA/yL/I/8iAAD/Zf8j/4v/Tf9I/3H/SP9N/4v/cf+O/y//S/8x/0v/L/+O/zH/S/8p/47/J/+O/yn/S/8nAAD/I/8i/yP/IgAAAAAAAP+x/yf/jv8n/47/Kf+x/yn/Jf9x/0j/cf9I/03/Jf9N/0v/Of9u/zn/bv83/0v/N/9I/yf/Jf8n/yX/Tf9I/03/S/8z/0v/Nf9x/zX/cf8zAAD/Sf8i/0n/Iv8jAAD/I/+V/y3/lf8r/2//K/9v/y0="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AgABAAAAAgADAAEABgAFAAQABgAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAaABkAGAAbABoAHAAeAB0AHAAfAB4AIAAiACEAIAAjACIAJAAmACUAJAAnACYAKAAqACkAKAArACoALAAuAC0ALAAvAC4AMAAyADEAMAAzADIANAA2ADUANAA3ADYA"),
+"material": SubResource("StandardMaterial3D_1k6xi"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("/////4l8/7///wAAiXz/v/////8AAP+///8AAAAA/78AAP//iXz/vwAA//8AAP+/AAAAAIl8/78AAAAAAAD/v/////8AAP+/11f//4l8/7/XV///AAD/v/////+JfP+///8AAIl8/7/XVwAAAAD/v9dXAACJfP+///8AAAAA/7//////iXwAgNdXAACJfACA11f//4l8AID//wAAiXwAgP//AAAAAP//11f//wAA///XVwAAAAD///////8AAP//AAD//4l8/7/XV///iXz/v9dX//8AAP+/AAD//wAA/78AAP//AAD//9dX//8AAP//11cAAAAA//8AAAAAAAD//wAAAAAAAP+/11cAAAAA/7/XVwAAiXz/vwAAAACJfP+/AAAAAP//AIDXVwAA//8AgNdX/////wCAAAD/////AIDXVwAA////vwAAAAD///+/AAAAAIl8/7/XVwAAiXz/v9dX//////+/11cAAP///7/XVwAAiXz/v9dX//+JfP+/AAD//////7/XV///////v9dX//+JfP+/AAD//4l8/78AAAAA////vwAA//////+/AAD//4l8/78AAAAAiXz/v/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f///////f////3////9/////fwAA/38AAP9/AAD/fwAA/3//f////3////9/////f////3////9/////f////3///////3////9/////f////3//f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//38AAP9/AAD/fwAA/38AAP///3////9/////f////3//f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3rwcv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ms70y"]
 resource_name = "material_0"
@@ -1128,6 +1207,51 @@ _data = {
 "repira": SubResource("Animation_muih0")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_cywwi"]
+font = ExtResource("24_vocx0")
+font_size = 27
+
+[sub_resource type="LabelSettings" id="LabelSettings_k8fmf"]
+font = ExtResource("24_vocx0")
+font_size = 21
+
+[sub_resource type="Animation" id="Animation_ki808"]
+resource_name = "mostra"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.16667, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bjrhl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_at7m7"]
+_data = {
+"RESET": SubResource("Animation_bjrhl"),
+"mostra": SubResource("Animation_ki808")
+}
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_qp4aq")
 
@@ -1158,13 +1282,17 @@ spot_range = 21.0
 spot_attenuation = -1.17
 spot_angle = 51.9756
 
-[node name="ã" parent="." instance=ExtResource("8_5b6ik")]
-
-[node name="mesita" parent="." instance=ExtResource("9_eaojp")]
+[node name="mesita" type="Node3D" parent="."]
 transform = Transform3D(-4.76, 0, 2.44784e-07, 0, 3.36, 0, -4.16132e-07, 0, -2.8, -13.3435, 0, -3)
+
+[node name="mesh" type="MeshInstance3D" parent="mesita"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4375, 0)
+mesh = SubResource("ArrayMesh_tpgig")
+skeleton = NodePath("")
 
 [node name="blockbench_export2" type="Node3D" parent="."]
 transform = Transform3D(1.90919, 0, -1.90919, 0, 2.7, 0, 1.90919, 0, 1.90919, -12, 1, -5)
+script = ExtResource("10_4c2or")
 
 [node name="base" type="Node3D" parent="blockbench_export2"]
 
@@ -1303,3 +1431,93 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_anofp")
 }
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ã" parent="Control" instance=ExtResource("8_5b6ik")]
+layout_mode = 1
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 325.0
+offset_bottom = 112.0
+text = "ahorros:
+12 Guaraníes"
+label_settings = SubResource("LabelSettings_cywwi")
+
+[node name="compra" type="Button" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.076
+anchor_bottom = 0.103
+offset_left = 829.0
+offset_top = 220.0
+offset_right = 1019.45
+offset_bottom = 220.256
+text = "
+"
+
+[node name="Label2" type="Label" parent="Control/compra"]
+layout_mode = 1
+offset_left = 29.0
+offset_top = 11.0
+offset_right = 353.0
+offset_bottom = 98.0
+scale = Vector2(1.00574, 1.53234)
+text = "Comprar"
+label_settings = SubResource("LabelSettings_cywwi")
+
+[node name="deber" type="Button" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.076
+anchor_bottom = 0.103
+offset_left = 829.0
+offset_top = 362.0
+offset_right = 1019.45
+offset_bottom = 362.256
+text = "
+"
+
+[node name="Label2" type="Label" parent="Control/deber"]
+layout_mode = 1
+offset_left = 29.0
+offset_top = 11.0
+offset_right = 353.0
+offset_bottom = 98.0
+scale = Vector2(1.00574, 1.53234)
+text = "Deber"
+label_settings = SubResource("LabelSettings_cywwi")
+
+[node name="comprr" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 476.0
+offset_right = 823.0
+offset_bottom = 526.0
+text = "ahorros insuficientes"
+label_settings = SubResource("LabelSettings_k8fmf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/comprr"]
+libraries = {
+"": SubResource("AnimationLibrary_at7m7")
+}
+
+[node name="DialogSystem" parent="." instance=ExtResource("25_rb1pc")]
+visible = false
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("27_2wmmy")
+
+[connection signal="pressed" from="Control/compra" to="." method="_on_compra_pressed"]
+[connection signal="pressed" from="Control/deber" to="." method="_on_deber_pressed"]

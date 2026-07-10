@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=135 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://7yu7ojmlqm7e" path="res://escenarios/sorpresa.tscn" id="28_jobur"]
 [ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="32_wniec"]
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/inicio.gd" id="34_wrvqm"]
+[ext_resource type="AudioStream" uid="uid://b3lx7jfg11bg3" path="res://audios/Sonidos de la selva - Anochecer en la selva misionera.mp3" id="36_mgxaw"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xgu5u"]
 radius = 0.7
@@ -53,6 +54,8 @@ sky_material = SubResource("PanoramaSkyMaterial_wrp15")
 background_mode = 2
 sky = SubResource("Sky_salt6")
 ambient_light_color = Color(0.176722, 0.366855, 0.55426, 1)
+fog_light_color = Color(0.0445912, 0.0661593, 0.125339, 1)
+fog_light_energy = 1.7
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_itebp"]
 size = Vector3(2.17871, 5.54168, 4.6261)
@@ -2357,6 +2360,10 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -63.4286, 3.0026, -68.1992
 [node name="inicio" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.4341, 1.16402, -34.1221)
 script = ExtResource("34_wrvqm")
+
+[node name="SonidosDeLaSelva-AnochecerEnLaSelvaMisionera" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("36_mgxaw")
+autoplay = true
 
 [connection signal="body_entered" from="kapanga5_patrulla/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="kapanga3_patrulla/atrapado2" to="." method="_on_atrapado_2_body_entered"]

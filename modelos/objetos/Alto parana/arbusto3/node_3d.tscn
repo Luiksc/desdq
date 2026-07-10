@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://djjdyixuxcb4y"]
+
+[ext_resource type="PackedScene" uid="uid://cggo5i06lely1" path="res://modelos/objetos/Alto parana/arbusto3/Arbol (2).glb" id="1_0cx6s"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="blockbench_export" parent="." instance=ExtResource("1_0cx6s")]
+transform = Transform3D(0.303584, 0, 0, 0, 0.238337, 0, 0, 0, 0.271382, 0, 0, 0)

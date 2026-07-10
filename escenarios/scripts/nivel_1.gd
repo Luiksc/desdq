@@ -23,6 +23,7 @@ var jgd_omamo : bool = false
 var mykure_velocidad: float = 10
 var jugador_puede_interac: bool = false
 var mykure_activu: bool = false
+
 var dialogo_activo: bool = false
 var npc_actual: String = ""
 var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo

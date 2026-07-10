@@ -4,8 +4,7 @@ extends CharacterBody3D
 @onready var sond_sorpresa = $Exclamacion
 @onready var sorpresa = $sorpresa
 @onready var timer = $Timer
-
-
+@onready var timer_omuña = $Timer2
 
 @export var ohota : Array[Marker3D]
 
@@ -15,7 +14,7 @@ var indice_vuelta=0
 var gravedad := 100
 var detectado :bool = false
 
-var velocidad :float = 7
+var velocidad :float = 10
 
 
 enum estado{
@@ -29,7 +28,10 @@ func _ready() -> void:
 	sorpresa.hide()
 	animacion.animation_finished.connect(animacion_termino)
 	Estado = estado.oho
-	
+	timer_omuña.wait_time = 4.0
+	timer_omuña.one_shot = true
+	if not timer_omuña.timeout.is_connected(_on_timer_omuña_timeout):
+		timer_omuña.timeout.connect(_on_timer_omuña_timeout)
 
 
 
@@ -72,10 +74,7 @@ func _physics_process(delta: float) -> void:
 				indice_ida = indice_ida +1
 				if indice_ida >= ohota.size():
 					indice_ida =0
-			if detectado:
-				Estado = estado.omuña
 				
-					
 		estado.omuña:
 		
 			if jugador == null:
@@ -92,13 +91,14 @@ func _physics_process(delta: float) -> void:
 			rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 			direccion = direccion.normalized()
 			velocity = direccion*velocidad
-					
+				
 		estado.oinopa:
 			if velocity.x == 0 and velocity.z == 0:
 				if animacion.current_animation != "oinupa":
 					animacion.play("oinupa")
 				
 	move_and_slide()
+
 func animacion_termino(nombre):
 	if nombre == "oinupa":
 		indice_ida +=1
@@ -109,17 +109,32 @@ func animacion_termino(nombre):
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	detectado=true
+	if not (body.is_in_group("jugon") or body.is_in_group("jugador_global")):
+		return
+	detectado = true
 	sond_sorpresa.play()
 	sorpresa.show()
 	timer.start()
-	await timer.timeout
 	
+	# Obtener referencia al jugador
 	var nivel := get_tree().current_scene
 	if nivel != null:
 		jugador = nivel.get_node_or_null("jugador")
+	if jugador == null:
+		jugador = body
+	
+	# Entrar en omuña y (re)iniciar el timer de 4 segundos
+	Estado = estado.omuña
+	timer_omuña.stop()
+	timer_omuña.start()
 
 
 func _on_timer_timeout() -> void:
 	sorpresa.hide()
-	
+
+
+func _on_timer_omuña_timeout() -> void:
+	# Pasaron 4 segundos: volver a patrullar
+	detectado = false
+	jugador = null
+	Estado = estado.oho

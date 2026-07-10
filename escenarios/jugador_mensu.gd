@@ -9,7 +9,7 @@ extends CharacterBody3D
 @export var vel_rotacion: float  # qué tan rápido rota el personaje
 
 var anima_activo = true
-var velo_max : float = 14
+var velo_max : float = 10
 var distans_salto: float = 2.5 
 var timp_salto: float= 0.3
 var aceleracion: float= 50
