@@ -1,15 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6qwfnbs0d4bs"]
+[gd_scene load_steps=6 format=3 uid="uid://b6qwfnbs0d4bs"]
 
 [ext_resource type="PackedScene" uid="uid://mmawkx0piwnu" path="res://modelos/objetos/Alto parana/arbul2/arbol1.tscn" id="1_7tilk"]
 [ext_resource type="PackedScene" uid="uid://blj6k0272crkb" path="res://modelos/objetos/Alto parana/arbul3/arbol3.tscn" id="2_fcuun"]
 [ext_resource type="PackedScene" uid="uid://cg1ljbvf120h6" path="res://modelos/objetos/Alto parana/arbusto/arbusto.tscn" id="3_5v5kp"]
+[ext_resource type="PackedScene" uid="uid://5e8erdsjf16m" path="res://modelos/objetos/Alto parana/arbusto2/arbusto2.tscn" id="4_ks3fr"]
+[ext_resource type="PackedScene" uid="uid://djjdyixuxcb4y" path="res://modelos/objetos/Alto parana/arbusto3/node_3d.tscn" id="5_0wf3t"]
 
 [node name="plantitas" type="Node3D"]
 
 [node name="Node3D" parent="." instance=ExtResource("1_7tilk")]
-transform = Transform3D(0.512, 0, 0, 0, 0.512, 0, 0, 0, 0.512, 0, 0, 0)
+transform = Transform3D(0.481916, 0, 0, 0, 0.423656, 0, 0, 0, 0.512, 0, 0, 0)
 
 [node name="Node3D2" parent="." instance=ExtResource("2_fcuun")]
 transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.324, 0, 0, 0)
 
+[node name="Node3D5" parent="." instance=ExtResource("2_fcuun")]
+transform = Transform3D(0.3888, 0, 0, 0, 0.351, 0, 0, 0, 0.324, 0, 0, 0)
+
 [node name="Node3D3" parent="." instance=ExtResource("3_5v5kp")]
+
+[node name="Node3D4" parent="." instance=ExtResource("3_5v5kp")]
+transform = Transform3D(1, 0, 0, 0, 1.6, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Node3D6" parent="." instance=ExtResource("4_ks3fr")]
+
+[node name="Node3D7" parent="." instance=ExtResource("4_ks3fr")]
+transform = Transform3D(0.8, 0, 0, 0, 2.32, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Node3D8" parent="." instance=ExtResource("4_ks3fr")]
+transform = Transform3D(0.96, 0, 0, 0, 0.8, 0, 0, 0, 0.96, 0, 0.6, 0)
+
+[node name="Node3D9" parent="." instance=ExtResource("5_0wf3t")]
+transform = Transform3D(0.48, 0, 0, 0, 0.48, 0, 0, 0, 0.48, 0, 0, 0)
+
+[node name="Node3D10" parent="." instance=ExtResource("2_fcuun")]
+transform = Transform3D(0.0396953, 0, -0.14386, 0, 0.243938, 0, 0.148145, 0, 0.0385473, -1, 0, 0)
