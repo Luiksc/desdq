@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxu4lm8v3gba"
-path.s3tc="res://.godot/imported/cabaña_1.png-65279ce14639af1854852066b5d9358e.s3tc.ctex"
+path="res://.godot/imported/cabaña_1.png-65279ce14639af1854852066b5d9358e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "ff96a1412d64022b7dbd1682b4b75136"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/Alto parana/cabaña/cabaña_1.png"
-dest_files=["res://.godot/imported/cabaña_1.png-65279ce14639af1854852066b5d9358e.s3tc.ctex"]
+dest_files=["res://.godot/imported/cabaña_1.png-65279ce14639af1854852066b5d9358e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

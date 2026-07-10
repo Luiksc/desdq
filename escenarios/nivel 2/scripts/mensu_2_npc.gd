@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var sako:=$blockbench_export/sako
 @onready var animacion = $blockbench_export/AnimationPlayer
 
+
 @export var outa :Marker3D
 @export var ohota : Marker3D
 
@@ -65,8 +66,8 @@ func _physics_process(delta: float) -> void:
 
 		estado.oho:
 			sako.hide()
-			if animacion.current_animation != "ojevy":
-					animacion.play("ojevy")
+			if animacion.current_animation != "odipara":
+					animacion.play("odipara")
 			var distancia_minima := 1
 			var posicion_target = ohota.global_position
 			var direccion = posicion_target - global_position
@@ -85,8 +86,8 @@ func _physics_process(delta: float) -> void:
 			else:
 				velocity.x = move_toward(velocity.x, 1, velocidad * delta)
 				velocity.z = move_toward(velocity.z, 1, velocidad * delta)
-			if animacion.current_animation != "ojevy":
-				animacion.play("ojevy")
+			if animacion.current_animation != "odipara":
+				animacion.play("odipara")
 			
 			if distancia < distancia_minima:
 			

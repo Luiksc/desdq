@@ -1,7 +1,7 @@
 [gd_scene load_steps=54 format=4 uid="uid://ciwilhcr182tb"]
 
 [ext_resource type="Script" path="res://escenarios/scripts/mykuré_2.gd" id="1_nfjch"]
-[ext_resource type="Script" path="res://escenarios/scripts/mykure_dañatrigger.gd" id="2_52gfv"]
+[ext_resource type="Script" path="res://escenarios/scripts/area_3d_daña_2.gd" id="2_yyk1f"]
 [ext_resource type="AudioStream" uid="uid://dbwlyxyi4io4i" path="res://audios/sonido mykure.mp3" id="3_msc2w"]
 [ext_resource type="Texture2D" uid="uid://3w0q35ptigbp" path="res://modelos/animañas/mykuré/Myku_0.png" id="4_uodeu"]
 [ext_resource type="Texture2D" uid="uid://b8san6c5tktou" path="res://modelos/animañas/mykuré/Myku_1.png" id="5_ap10s"]
@@ -661,7 +661,7 @@ script = ExtResource("1_nfjch")
 
 [node name="Area3D_daña2" type="Area3D" parent="."]
 collision_mask = 2
-script = ExtResource("2_52gfv")
+script = ExtResource("2_yyk1f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D_daña2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00968146, 0, 0.0124207)

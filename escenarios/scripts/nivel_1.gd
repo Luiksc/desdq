@@ -2,18 +2,24 @@ extends Node3D
 
 @onready var interac: Label = $Control/Interactuar
 @onready var espantad: Label = $Control/espantar
+@onready var perder: Label = $Control/perdiendo
 @onready var jugador = $jugador  # referencia al nodo del jugador
 @onready var anima_jugador = $jugador/blockbench_export/AnimationPlayer
 @onready var mykure = $"enemigos/mykure"
 @onready var pensamiento=$triggers/triger_delfi
-@onready var anima_transi_sali = $transicio/AnimationPlayer
-@onready var final = $final
-@onready var ani_final = $final/AnimationPlayer
+@onready var transicion =$"Control/ã/AnimationPlayer"
+@onready var final = $Control/final
+@onready var ani_final = $Control/final/AnimationPlayer
+@onready var checkpoint = $gestor_de_checkpoint
 
+@onready var ambiente = $chaco_ambiente
+@onready var ambiente2= $pajaros_ambiente
+@onready var musica = $musica
 
 
 
 var jugom_anima_actio = true
+var jgd_omamo : bool = false
 var mykure_velocidad: float = 10
 var jugador_puede_interac: bool = false
 var mykure_activu: bool = false
@@ -46,12 +52,12 @@ var dialogos ={
 }
 
 func _ready() -> void:
-	
+	perder.hide()
 	espantad.hide()
 	interac.hide()
 	final.hide()
-	anima_transi_sali.play("salimos")
-	await anima_transi_sali.animation_finished
+	transicion.play("salida")
+	await transicion.animation_finished
 
 	
 
@@ -69,6 +75,10 @@ func _ready() -> void:
 	$triggers/triger_delfi.corpus_entro.connect(piensa_dialog)
 	
 	$"triggers/Mykure_trigger".body_entered.connect(espanta)
+	
+	$"enemigos/mykure/Area3D_daña".jgd_omano.connect(jugador_omano)
+	$"enemigos/mykure2/Area3D_daña2".jgd_omano.connect(jugador_omano)
+	$"enemigos/mykure3/Area3D_daña3".jgd_omano.connect(jugador_omano)
 #on_mykure_trigger_body_entered
 	
 
@@ -89,7 +99,10 @@ func _process(delta: float) -> void:
 		# E inicia el diálogo si el jugador está en el área y no hay diálogo activo
 		if Input.is_action_just_pressed("interaccion"):
 			inic_dialo()
-			
+	if jgd_omamo: 
+		if Input.is_action_just_pressed("clicki") or Input.is_action_just_pressed("interaccion"):
+			print("reset")
+			reset()
 # Recibe el npc_id emitido por la señal corpus_entro del trigger
 func piensa_dialog(id: String) -> void:
 
@@ -185,4 +198,32 @@ func _on_final_body_entered(body: Node3D) -> void:
 		ani_final.play("aparece")
 		Input.mouse_mode= Input.MOUSE_MODE_VISIBLE
 		
+func jugador_omano():
+	ambiente.stop()
+	ambiente2.stop()
+	musica.stop()
+	transicion.play("entrafa")
+	jugador.puede_moverse = false
+	jgd_omamo=true
+	perder.show()
+	
+	
+	
+func reset():
+	perder.hide()
+	jgd_omamo=false
+	jugador.global_position = checkpoint.ultima_posicion
+	transicion.play("salida")
+	jugador.puede_moverse=true
+	ambiente.play()
+	ambiente2.play()
+	musica.play()
 		
+
+
+func _on_zonademuerte_body_entered(body: Node3D) -> void:
+	jugador_omano()
+
+
+func _on_zonademuerte_2_body_entered(body: Node3D) -> void:
+	jugador_omano()

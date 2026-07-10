@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=115 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -86,6 +86,12 @@ font_size = 40
 font_color = Color(1, 0, 0.0166664, 1)
 outline_size = 11
 outline_color = Color(0.00392157, 0.027451, 0.027451, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sp1lg"]
+font = ExtResource("6_f6spo")
+font_size = 85
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lmal"]
 resource_name = "material_0"
@@ -1161,8 +1167,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6877, 2.67893, 15.1799)
 
 [node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]
 
-[node name="transicio" parent="." instance=ExtResource("32_oa7xj")]
-
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
@@ -1213,7 +1217,36 @@ text = "[E] PARA ESPANTAR"
 label_settings = SubResource("LabelSettings_celoa")
 horizontal_alignment = 1
 
-[node name="final" parent="." instance=ExtResource("5_nk8o6")]
+[node name="ã" parent="Control" instance=ExtResource("32_oa7xj")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.7
+anchor_bottom = 16.05
+offset_bottom = -6.10352e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="final" parent="Control" instance=ExtResource("5_nk8o6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.65
+anchor_bottom = 16.225
+metadata/_edit_use_anchors_ = true
+
+[node name="perdiendo" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.639
+anchor_bottom = 16.316
+offset_left = 244.0
+offset_top = 176.0
+offset_right = -221.56
+offset_bottom = -301.64
+grow_horizontal = 2
+grow_vertical = 2
+text = "EPERDEMA"
+label_settings = SubResource("LabelSettings_sp1lg")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="*objetos" type="Node" parent="."]
 
@@ -1793,7 +1826,7 @@ stream = ExtResource("31_8t052")
 volume_db = 8.631
 autoplay = true
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="musica" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2789, 0, -297.552)
 stream = ExtResource("32_i8tdx")
 volume_db = -4.055
@@ -1810,6 +1843,7 @@ volume_db = -5.2
 
 [connection signal="body_entered" from="zonademuerte" to="." method="_on_zonademuerte_body_entered"]
 [connection signal="body_entered" from="zonademuerte" to="zonademuerte" method="_on_body_entered"]
+[connection signal="body_entered" from="zonademuerte2" to="." method="_on_zonademuerte_2_body_entered"]
 [connection signal="body_entered" from="zonademuerte2" to="zonademuerte2" method="_on_body_entered"]
 [connection signal="body_entered" from="triggers/triger_delfi" to="triggers/triger_delfi" method="_on_body_entered"]
 [connection signal="body_exited" from="triggers/triger_delfi" to="triggers/triger_delfi" method="_on_body_exited"]

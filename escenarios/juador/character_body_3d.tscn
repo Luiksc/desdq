@@ -1319,7 +1319,8 @@ shape = SubResource("CylinderShape3D_t0yxi")
 [node name="pivote" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.24271, 0)
 script = ExtResource("2_jglub")
-minim_angulo_vertical = -0.785398
+minim_angulo_vertical = -0.97913
+maxim_angulo_vertical = 0.197222
 
 [node name="SpringArm3D" type="SpringArm3D" parent="pivote"]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, 0)

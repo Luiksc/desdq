@@ -4,6 +4,9 @@ extends CharacterBody3D
 @onready var sako:=$blockbench_export/sako
 @onready var animacion = $blockbench_export/AnimationPlayer
 
+@onready var jugador = $"../jugador"
+
+@onready var punto_ini =$"../waypoints mensu1/waypoint1"
 @export var waypoint :Array[Marker3D]
 @export var jevyrenda : Array[Marker3D] 
 
@@ -14,6 +17,7 @@ var gravedad := 100
 var velocidad :float = 6
 
 enum estado{
+	oho,
 	oraha,
 	ojevy,
 	opytu,
@@ -22,7 +26,9 @@ var Estado = estado
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sako.hide()
-	Estado = estado.oraha
+	if animacion.current_animation != "repira":
+			animacion.play("repira")
+	$"..".se_va.connect(iniciar)
 	
 
 
@@ -32,9 +38,28 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= gravedad * delta
 		velocity.y = max(velocity.y, -gravedad * 3)
 	match Estado:
+		
+		estado.oho:
+			if animacion.current_animation != "ojevy":
+				animacion.play("ojevy")
+			var direccion = punto_ini.global_position - global_position
+			direccion.y = 0
+			var target = punto_ini.global_position
+			var distancia = direccion.length()
+			velocity = direccion * 0.08
+			var angulo = atan2(direccion.x,direccion.z)
+			rotation.y = lerp_angle(rotation.y, angulo, 2 * delta)
+			direccion = direccion.normalized()
+			
+			
+			
+			if distancia < 0.15:
+				Estado = estado.oraha
+			
 		estado.oraha:
 			sako.show()
-			animacion.play("oraha")
+			if animacion.current_animation != "oraha":
+				animacion.play("oraha")
 			indice_vuelta = 0
 			var distancia_minima := 0.15
 			
@@ -105,3 +130,5 @@ func _physics_process(delta: float) -> void:
 			
 	move_and_slide()
 			
+func iniciar():
+	Estado = estado.oho

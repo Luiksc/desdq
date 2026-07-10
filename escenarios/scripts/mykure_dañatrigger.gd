@@ -3,6 +3,7 @@ extends Area3D
 var checkpoint_gestor: Node
 var jugador: Node3D
 
+signal jgd_omano
 
 func _ready() -> void:
 	var nivel := get_tree().current_scene
@@ -25,10 +26,10 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
-		jugonomano()
+		emit_signal("jgd_omano")
 		
-func jugonomano():
-	if jugador == null or checkpoint_gestor == null:
-		return
-	jugador.global_position = checkpoint_gestor.ultima_posicion
+#func jugonomano():
+	#if jugador == null or checkpoint_gestor == null:
+	#	return
+	#jugador.global_position = checkpoint_gestor.ultima_posicion
 		

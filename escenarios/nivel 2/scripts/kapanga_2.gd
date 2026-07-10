@@ -2,7 +2,9 @@ extends CharacterBody3D
 
 #@onready var sako:=$blockbench_export/sako
 @onready var animacion = $blockbench_export/AnimationPlayer
-
+@onready var sond_sorpresa = $Exclamacion
+@onready var sorpresa = $sorpresa
+@onready var timer = $Timer
 
 
 
@@ -14,7 +16,7 @@ var indice_vuelta=0
 var gravedad := 100
 var detectado :bool = false
 
-var velocidad :float = 6
+var velocidad :float = 7
 
 
 enum estado{
@@ -25,6 +27,7 @@ enum estado{
 var Estado = estado
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	sorpresa.hide()
 	animacion.animation_finished.connect(animacion_termino)
 	Estado = estado.oho
 	
@@ -39,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		estado.oho:
 			if animacion.current_animation != "camina":
 				animacion.play("camina")
-			var distancia_minima := 0.1
+			var distancia_minima := 1
 			
 			var posicion_target = ohota[indice_ida].global_position
 			var direccion = posicion_target - global_position
@@ -48,7 +51,7 @@ func _physics_process(delta: float) -> void:
 			rotation.y = lerp_angle(rotation.y, angulo, 2 * delta)
 			var distancia = direccion.length()
 			direccion = direccion.normalized()
-			
+		
 			var diferencia = abs(angle_difference(rotation.y, angulo))
 	
 			if diferencia < 0.15:
@@ -74,19 +77,22 @@ func _physics_process(delta: float) -> void:
 				
 					
 		estado.omuña:
+		
 			if jugador == null:
 				velocity = Vector3.ZERO
 				return
 			
 			var direccion = jugador.global_position - global_position
 			direccion.y = 0
+			if not is_on_floor():
+				velocity.y -= gravedad * delta
+				velocity.y = max(velocity.y, -gravedad * 3)
 			var target = jugador.global_position
-			var punto_mira = Vector3(target.x, global_position.y, -target.z) 
-			if global_position.distance_to(punto_mira) > 0.1: 
-				look_at(punto_mira, Vector3.UP)
+			var angulo = atan2(direccion.x,direccion.z)
+			rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
+			velocity = direccion*velocidad
 			direccion = direccion.normalized()
-			velocity = direccion * velocidad
-			move_and_slide()
+			
 					
 					
 					
@@ -107,6 +113,16 @@ func animacion_termino(nombre):
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	detectado=true
+	sond_sorpresa.play()
+	sorpresa.show()
+	timer.start()
+	await timer.timeout
+	
 	var nivel := get_tree().current_scene
 	if nivel != null:
 		jugador = nivel.get_node_or_null("jugador")
+
+
+func _on_timer_timeout() -> void:
+	sorpresa.hide()
+	

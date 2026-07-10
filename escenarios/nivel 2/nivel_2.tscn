@@ -1,12 +1,13 @@
-[gd_scene load_steps=125 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=134 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="2_7d368"]
 [ext_resource type="PackedScene" uid="uid://cksj0bd233k1q" path="res://escenarios/nivel 2/kapanga_2.tscn" id="2_bdbkj"]
 [ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="2_m8hrf"]
+[ext_resource type="PackedScene" uid="uid://byiyq2kgcvee1" path="res://escenarios/nivel 2/kapanga_4.tscn" id="2_mwm4t"]
 [ext_resource type="PackedScene" uid="uid://cpft0awscm16o" path="res://escenarios/nivel 2/mensu_2_npc.tscn" id="2_uajcu"]
-[ext_resource type="PackedScene" uid="uid://bdj1hxmuyjfth" path="res://escenarios/nivel 2/kapanga.tscn" id="3_pmpv6"]
+[ext_resource type="PackedScene" uid="uid://bxfiav3wbpf6i" path="res://escenarios/nivel 2/kapanga_3.tscn" id="3_osffg"]
 [ext_resource type="MeshLibrary" uid="uid://bmc24havvlr2e" path="res://modelos/libr mesh/adsas.tres" id="5_3md3v"]
 [ext_resource type="PackedScene" uid="uid://cqpeejgxglac6" path="res://escenarios/npc.tscn" id="5_btmwg"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="6_84008"]
@@ -32,6 +33,14 @@
 [ext_resource type="Texture2D" uid="uid://b1c2wbneyjnc0" path="res://modelos/objetos/Alto parana/tinglado/Takuara_2.png" id="24_vs2pi"]
 [ext_resource type="PackedScene" uid="uid://djdiuudqnkjkp" path="res://escenarios/juador/Dionisio_n2.tscn" id="25_4y7wp"]
 [ext_resource type="PackedScene" uid="uid://7yu7ojmlqm7e" path="res://escenarios/sorpresa.tscn" id="28_jobur"]
+[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="32_wniec"]
+[ext_resource type="Script" path="res://escenarios/nivel 2/scripts/inicio.gd" id="34_wrvqm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xgu5u"]
+radius = 0.7
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_x7h2y"]
+radius = 0.8
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wrp15"]
 panorama = ExtResource("1_na6p1")
@@ -45,6 +54,12 @@ background_mode = 2
 sky = SubResource("Sky_salt6")
 ambient_light_color = Color(0.176722, 0.366855, 0.55426, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_itebp"]
+size = Vector3(2.17871, 5.54168, 4.6261)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wqmpn"]
+size = Vector3(1, 3.7, 3.1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1jyd"]
 resource_name = "material_0"
 transparency = 2
@@ -52,6 +67,7 @@ alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("7_t8ju0")
+metallic_specular = 0.09
 texture_filter = 0
 texture_repeat = false
 
@@ -409,8 +425,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_71vof")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_itebp"]
-size = Vector3(2.17871, 5.54168, 4.6261)
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmaow"]
+size = Vector3(3, 6, 3)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_s3g8u"]
 height = 1.4031
@@ -1281,6 +1297,9 @@ size = Vector3(2.17468, 15.5232, 40.6345)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kyu0t"]
 size = Vector3(10.4762, 19.0575, 25.6412)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5is55"]
+size = Vector3(1, 3.9, 2.2)
+
 [sub_resource type="Animation" id="Animation_i424w"]
 length = 0.001
 tracks/0/type = "value"
@@ -1360,38 +1379,81 @@ outline_color = Color(0.00392157, 0.027451, 0.027451, 1)
 font = ExtResource("6_84008")
 font_size = 24
 
-[node name="nivel_2" type="Node3D" node_paths=PackedStringArray("sakos1", "sakos2")]
+[sub_resource type="LabelSettings" id="LabelSettings_04quh"]
+font = ExtResource("6_84008")
+font_size = 64
+
+[node name="nivel_2" type="Node3D" node_paths=PackedStringArray("sakos1", "sakos2", "sakos3", "sakos4")]
 script = ExtResource("1_a4scs")
 sakos1 = [NodePath("objetos/sako1 arrib"), NodePath("objetos/sako2 arrib"), NodePath("objetos/sako3 arrib")]
 sakos2 = [NodePath("objetos/sako1 baj"), NodePath("objetos/sako2 baj"), NodePath("objetos/sako3 baj")]
-
-[node name="kapanga2" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("2_bdbkj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 3, -72.6595)
-ohota = [NodePath("../waypoints kapanga2/Marker3D"), NodePath("../waypoints kapanga2/Marker3D2"), NodePath("../waypoints kapanga2/Marker3D3"), NodePath("../waypoints kapanga2/Marker3D4")]
+sakos3 = [NodePath("objetos/sako4 baj"), NodePath("objetos/sako5 baj"), NodePath("objetos/sako6 baj")]
+sakos4 = [NodePath("objetos/sako7 baj"), NodePath("objetos/sako8 baj"), NodePath("objetos/sako9 baj")]
 
 [node name="mensu2" parent="." node_paths=PackedStringArray("outa", "ohota") instance=ExtResource("2_uajcu")]
 transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 27, 0.727514, -74)
 outa = NodePath("../waypoints mensu2/Marker3D")
 ohota = NodePath("../waypoints mensu2/Marker3D2")
 
-[node name="kapanga" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("3_pmpv6")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 17.9707, 23.6645, 25.6473)
-ohota = [NodePath("../waypoints kapanga/Marker3D"), NodePath("../waypoints kapanga/Marker3D2"), NodePath("../waypoints kapanga/Marker3D3"), NodePath("../waypoints kapanga/Marker3D4")]
-
 [node name="jugador" parent="." groups=["jugador_global"] instance=ExtResource("25_4y7wp")]
-transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, 33.4067, 2.56059, -75.8519)
+transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, -52.157, 2.56059, -32.8519)
 
 [node name="mensu1" parent="." node_paths=PackedStringArray("waypoint", "jevyrenda") instance=ExtResource("14_3hira")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.68486, 23.3007, 22.9517)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -52.6849, 0.300699, -26.0483)
 script = ExtResource("6_oq5hf")
 waypoint = [NodePath("../waypoints mensu1/waypoint1"), NodePath("../waypoints mensu1/waypoint2"), NodePath("../waypoints mensu1/waypoint3")]
 jevyrenda = [NodePath("../waypoints mensu1/waypoint4"), NodePath("../waypoints mensu1/waypoint5")]
+
+[node name="kapanga5_patrulla" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("2_mwm4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 1, -40)
+ohota = [NodePath("../waypoints kapanga4/Marker3D3"), NodePath("../waypoints kapanga4/Marker3D6"), NodePath("../waypoints kapanga4/Marker3D4"), NodePath("../waypoints kapanga4/Marker3D2"), NodePath("../waypoints kapanga4/Marker3D5")]
+
+[node name="Area3D" type="Area3D" parent="kapanga5_patrulla"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kapanga5_patrulla/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("SphereShape3D_xgu5u")
+
+[node name="kapanga3_patrulla" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("3_osffg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 1.1, -23)
+ohota = [NodePath("../waypoints kapanga3/Marker3D2"), NodePath("../waypoints kapanga3/Marker3D3"), NodePath("../waypoints kapanga3/Marker3D4"), NodePath("../waypoints kapanga3/Marker3D5")]
+
+[node name="atrapado2" type="Area3D" parent="kapanga3_patrulla"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0.3405)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kapanga3_patrulla/atrapado2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.3, 0)
+shape = SubResource("SphereShape3D_x7h2y")
+
+[node name="kapanga2_patrulla" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("2_bdbkj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.1, -72.6595)
+ohota = [NodePath("../waypoints kapanga2/Marker3D"), NodePath("../waypoints kapanga2/Marker3D2"), NodePath("../waypoints kapanga2/Marker3D3"), NodePath("../waypoints kapanga2/Marker3D4")]
+
+[node name="atrapado" type="Area3D" parent="kapanga2_patrulla"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kapanga2_patrulla/atrapado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_x7h2y")
+
+[node name="kapanga4_patrulla2" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("2_bdbkj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 24.1, 37.3405)
+ohota = [NodePath("../waypoints kapanga/Marker3D"), NodePath("../waypoints kapanga/Marker3D2"), NodePath("../waypoints kapanga/Marker3D3"), NodePath("../waypoints kapanga/Marker3D4")]
+
+[node name="atrapado3" type="Area3D" parent="kapanga4_patrulla2"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kapanga4_patrulla2/atrapado3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_x7h2y")
 
 [node name="DialogSystem" parent="." instance=ExtResource("2_7d368")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999994, 0.00204299, 0.00265624, -0.00323685, 0.383728, 0.923441, 0.000867311, -0.923444, 0.383733, 0, 182.471, 0)
-light_color = Color(0.386601, 0.638074, 0.733458, 1)
+light_color = Color(0.254768, 0.464204, 0.54226, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xj86k")
@@ -1415,10 +1477,27 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 23, 0)
 
 [node name="npc_florida" parent="." instance=ExtResource("5_btmwg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.1554, 3.74536, -50.7751)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.155, 0.74536, -50.7751)
+visible = false
 collision_mask = 2
 
 [node name="objetos" type="Node" parent="."]
+
+[node name="dejar" type="Area3D" parent="objetos"]
+transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 4.92041e-08, 0.352867, 0.331539, 0.874966, 26.433, 0.120685, -72.4869)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/dejar"]
+transform = Transform3D(0.638078, 0.515024, -0.572369, -0.76962, 0.404104, -0.494357, -0.0233096, 0.755946, 0.654221, -0.154986, 1.8098, 1.70927)
+shape = SubResource("BoxShape3D_itebp")
+
+[node name="llevar2" type="Area3D" parent="objetos"]
+transform = Transform3D(0.637666, 0.599122, -0.484184, -0.716823, 0.691653, -0.0882081, 0.282039, 0.403321, 0.870508, 26.5138, 0.967563, -70.7393)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/llevar2"]
+transform = Transform3D(0.743607, 0.666663, 0.0518074, -0.662445, 0.723967, 0.192693, 0.090956, -0.177602, 0.979973, 0.753981, 1.27695, -0.28241)
+shape = SubResource("BoxShape3D_wqmpn")
 
 [node name="elevacion" type="Node3D" parent="objetos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.5222)
@@ -1466,6 +1545,7 @@ shape = SubResource("BoxShape3D_fwljw")
 
 [node name="sako1 baj" type="Node3D" parent="objetos"]
 transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 3.13926e-09, 0.352867, 0.331539, 0.874966, 25.7699, 0.120681, -71.4507)
+visible = false
 
 [node name="kaa" type="MeshInstance3D" parent="objetos/sako1 baj"]
 transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, -0.576418, 1.66509, 0.1875)
@@ -1474,6 +1554,7 @@ skeleton = NodePath("")
 
 [node name="sako2 baj" type="Node3D" parent="objetos"]
 transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 3.13926e-09, 0.352867, 0.331539, 0.874966, 21.9361, 0.120681, -71.2625)
+visible = false
 
 [node name="kaa" type="MeshInstance3D" parent="objetos/sako2 baj"]
 transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, 1.41368, 4.30214, -1.01545)
@@ -1482,40 +1563,57 @@ skeleton = NodePath("")
 
 [node name="sako3 baj" type="Node3D" parent="objetos"]
 transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 3.13926e-09, 0.352867, 0.331539, 0.874966, 23.705, 0.120681, -70.1283)
+visible = false
 
 [node name="kaa" type="MeshInstance3D" parent="objetos/sako3 baj"]
 transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, 0.205674, 2.39991, -0.406342)
 mesh = SubResource("ArrayMesh_y4tbb")
 skeleton = NodePath("")
 
-[node name="dejar" type="Area3D" parent="objetos/sako3 baj"]
-transform = Transform3D(1, 0, 2.98023e-08, -7.45058e-09, 1, 5.96046e-08, 0, 0, 1, 0.907291, 0.852451, -3.38454)
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/sako3 baj/dejar"]
-transform = Transform3D(0.638078, 0.515024, -0.572369, -0.76962, 0.404104, -0.494357, -0.0233098, 0.755947, 0.654222, -0.154988, 1.8098, 1.70927)
-shape = SubResource("BoxShape3D_itebp")
-
-[node name="sako3 baj2" type="Node3D" parent="objetos"]
+[node name="sako4 baj" type="Node3D" parent="objetos"]
 transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 3.13926e-09, 0.352867, 0.331539, 0.874966, 25.9711, 0.120681, -70.9707)
 
-[node name="kaa" type="MeshInstance3D" parent="objetos/sako3 baj2"]
+[node name="kaa" type="MeshInstance3D" parent="objetos/sako4 baj"]
 transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, -0.576418, 1.66509, 0.1875)
 mesh = SubResource("ArrayMesh_y4tbb")
 skeleton = NodePath("")
 
-[node name="sako3 baj3" type="Node3D" parent="objetos"]
+[node name="sako5 baj" type="Node3D" parent="objetos"]
 transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 3.13926e-09, 0.352867, 0.331539, 0.874966, 27.4115, 0.120681, -70.6671)
 
-[node name="kaa" type="MeshInstance3D" parent="objetos/sako3 baj3"]
+[node name="kaa" type="MeshInstance3D" parent="objetos/sako5 baj"]
 transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, -0.576418, 1.66509, 0.1875)
 mesh = SubResource("ArrayMesh_y4tbb")
 skeleton = NodePath("")
 
-[node name="sako3 baj5" type="Node3D" parent="objetos"]
+[node name="sako6 baj" type="Node3D" parent="objetos"]
 transform = Transform3D(0.637666, 0.599122, -0.484184, -0.716823, 0.691653, -0.0882081, 0.282039, 0.403321, 0.870508, 26.5138, 0.967563, -70.7393)
 
-[node name="kaa" type="MeshInstance3D" parent="objetos/sako3 baj5"]
+[node name="kaa" type="MeshInstance3D" parent="objetos/sako6 baj"]
+transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, -0.576418, 1.66509, 0.1875)
+mesh = SubResource("ArrayMesh_y4tbb")
+skeleton = NodePath("")
+
+[node name="sako7 baj" type="Node3D" parent="objetos"]
+transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 3.13926e-09, 0.352867, 0.331539, 0.874966, 28.0711, 0.120681, -100.271)
+
+[node name="kaa" type="MeshInstance3D" parent="objetos/sako7 baj"]
+transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, -0.576418, 1.66509, 0.1875)
+mesh = SubResource("ArrayMesh_y4tbb")
+skeleton = NodePath("")
+
+[node name="sako8 baj" type="Node3D" parent="objetos"]
+transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 3.13926e-09, 0.352867, 0.331539, 0.874966, 29.5115, 0.120681, -99.9671)
+
+[node name="kaa" type="MeshInstance3D" parent="objetos/sako8 baj"]
+transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, -0.576418, 1.66509, 0.1875)
+mesh = SubResource("ArrayMesh_y4tbb")
+skeleton = NodePath("")
+
+[node name="sako9 baj" type="Node3D" parent="objetos"]
+transform = Transform3D(0.637666, 0.599122, -0.484184, -0.716823, 0.691653, -0.0882081, 0.282039, 0.403321, 0.870508, 28.6138, 0.967563, -100.039)
+
+[node name="kaa" type="MeshInstance3D" parent="objetos/sako9 baj"]
 transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, -0.576418, 1.66509, 0.1875)
 mesh = SubResource("ArrayMesh_y4tbb")
 skeleton = NodePath("")
@@ -1527,6 +1625,14 @@ transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 3.13
 transform = Transform3D(0.425524, -0.371429, -0.855251, 0.953101, 0.371429, 0.325756, 0.154524, -1.26814, 0.345909, -0.576418, 1.66509, 0.1875)
 mesh = SubResource("ArrayMesh_y4tbb")
 skeleton = NodePath("")
+
+[node name="dejar2" type="Area3D" parent="objetos"]
+transform = Transform3D(0.637666, 0.599122, -0.484184, -0.716823, 0.691653, -0.0882081, 0.282039, 0.403321, 0.870508, 28.6138, 0.967563, -100.039)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/dejar2"]
+transform = Transform3D(0.70629, 0.633755, 0.315486, -0.692197, 0.52479, 0.495462, 0.148437, -0.568303, 0.809345, 0.786709, 0.802261, 0.929047)
+shape = SubResource("BoxShape3D_qmaow")
 
 [node name="kaa_tata2" type="Node3D" parent="objetos"]
 transform = Transform3D(-6.83708e-08, -6.42382e-08, -2.14622, -1.4696, 1.56414, 0, 1.56414, 1.4696, -9.38143e-08, 41.3318, 0.0217018, -88.0919)
@@ -1827,7 +1933,194 @@ shape = SubResource("BoxShape3D_v0vhg")
 transform = Transform3D(0.985882, 0, 0.16744, 0, 1, 0, -0.16744, 0, 0.985882, 47.5504, -0.273132, -17.3788)
 shape = SubResource("BoxShape3D_kyu0t")
 
+[node name="catres_tinglado" type="StaticBody3D" parent="objetos"]
+transform = Transform3D(-0.686998, 0, -0.266883, 0, 0.737016, 0, 0.266883, 0, -0.686998, -55.4061, 0, -31.244)
+
+[node name="tinglado" type="Node3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(2.78762, 0, -14.3992, 0, 12.0815, 0, 18.1178, 0, 2.21548, 32.946, 0.241466, -3.8504)
+
+[node name="mesh" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado"]
+transform = Transform3D(0, -1, 0, 0, 0, -1, 1, 0, 0, 0.0453125, 1.20938, -1.22656)
+mesh = SubResource("ArrayMesh_7vjfn")
+skeleton = NodePath("")
+
+[node name="mesh2" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado"]
+transform = Transform3D(0, -1, 0, 0, 0, -1, 1, 0, 0, 0.0453125, 1.39688, 1.22656)
+mesh = SubResource("ArrayMesh_cgdsn")
+skeleton = NodePath("")
+
+[node name="mesh3" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado"]
+transform = Transform3D(0, -1, 0, 0, 0, -1, 1, 0, 0, 0.0453125, 1.34063, 0.503125)
+mesh = SubResource("ArrayMesh_1iq83")
+skeleton = NodePath("")
+
+[node name="mesh4" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado"]
+transform = Transform3D(0, -1, 0, 0, 0, -1, 1, 0, 0, 0.0453125, 1.26406, -0.5)
+mesh = SubResource("ArrayMesh_lcav7")
+skeleton = NodePath("")
+
+[node name="pillar" type="Node3D" parent="objetos/catres_tinglado/tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00208313, 0.625, -0.000520625)
+
+[node name="mesh5" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22865, 0, -1.22604)
+mesh = SubResource("ArrayMesh_bg1wj")
+skeleton = NodePath("")
+
+[node name="mesh6" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22865, 0, -0.499479)
+mesh = SubResource("ArrayMesh_kn6lq")
+skeleton = NodePath("")
+
+[node name="mesh7" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22865, 0, 0.503646)
+mesh = SubResource("ArrayMesh_6ebmw")
+skeleton = NodePath("")
+
+[node name="mesh8" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22292, 0, 1.22708)
+mesh = SubResource("ArrayMesh_d364d")
+skeleton = NodePath("")
+
+[node name="mesh9" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.497917, 0, 1.22708)
+mesh = SubResource("ArrayMesh_foael")
+skeleton = NodePath("")
+
+[node name="mesh10" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.502083, 0, 1.22708)
+mesh = SubResource("ArrayMesh_fir2e")
+skeleton = NodePath("")
+
+[node name="mesh11" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22865, 0, 1.22708)
+mesh = SubResource("ArrayMesh_75vv1")
+skeleton = NodePath("")
+
+[node name="mesh12" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.496354, 0, -1.22604)
+mesh = SubResource("ArrayMesh_6d78i")
+skeleton = NodePath("")
+
+[node name="mesh13" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.503646, 0, -1.22604)
+mesh = SubResource("ArrayMesh_ef87o")
+skeleton = NodePath("")
+
+[node name="mesh14" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2237, 0, -0.862761)
+mesh = SubResource("ArrayMesh_ypd8f")
+skeleton = NodePath("")
+
+[node name="mesh15" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22292, 0, 0.503646)
+mesh = SubResource("ArrayMesh_sk6ej")
+skeleton = NodePath("")
+
+[node name="mesh16" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22292, 0, -0.499479)
+mesh = SubResource("ArrayMesh_gkan5")
+skeleton = NodePath("")
+
+[node name="piso" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0265625, 0)
+mesh = SubResource("ArrayMesh_aymqu")
+skeleton = NodePath("")
+
+[node name="techo" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 1.35781, 0)
+mesh = SubResource("ArrayMesh_auttw")
+skeleton = NodePath("")
+
+[node name="pared" type="Node3D" parent="objetos/catres_tinglado/tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.375, 0.53125, -1.375)
+
+[node name="mesh17" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pared"]
+mesh = SubResource("ArrayMesh_iw37y")
+skeleton = NodePath("")
+
+[node name="mesh18" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pared"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0, -0.53125, 1.5)
+mesh = SubResource("ArrayMesh_2x8jo")
+skeleton = NodePath("")
+
+[node name="mesh19" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado/pared"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -0.53125, 0)
+mesh = SubResource("ArrayMesh_wdshx")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7014, 10.4685, 8.08862)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8988, 10.4685, -10.1763)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9297, 10.4685, -23.314)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2453, 10.4685, -24.8951)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.7185, 10.4685, -27.1921)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6624, 10.4685, 21.159)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5708, 10.4685, 17.1474)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.9203, 10.4685, 15.7361)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.9908, 10.4685, 2.52328)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3124, 10.4685, -15.5095)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.3073, 10.4685, -28.6763)
+shape = SubResource("CylinderShape3D_gme0q")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(0.988391, 0, 0.151934, 0, 1, 0, -0.151934, 0, 0.988391, 52.9981, 8.95442, -6.2231)
+shape = SubResource("BoxShape3D_v0vhg")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="objetos/catres_tinglado"]
+transform = Transform3D(0.151934, 0, -0.988391, 0, 1, 0, 0.988391, 0, 0.151934, 28.006, 8.95442, -28.5902)
+shape = SubResource("BoxShape3D_v0vhg")
+
 [node name="colisione" type="Node" parent="objetos"]
+
+[node name="cabaña2" type="MeshInstance3D" parent="objetos"]
+transform = Transform3D(0.143476, 0, 0.428754, 0, 0.452123, 0, -0.428754, 0, 0.143476, -70.9283, 4.56047, -67.314)
+mesh = SubResource("ArrayMesh_cb6ey")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="objetos/cabaña2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/cabaña2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0.359909, -5.992, -0.316833)
+shape = SubResource("BoxShape3D_fwljw")
+
+[node name="puerta_despensa" type="Area3D" parent="objetos/cabaña2"]
+transform = Transform3D(0.701885, 0, -2.09747, 0, 2.21179, 0, 2.09747, 0, 0.701885, 7.6974, -5.66321, 11.2511)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/cabaña2/puerta_despensa"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25855, 0.25663)
+shape = SubResource("BoxShape3D_5is55")
 
 [node name="waypoints mensu1" type="Node" parent="."]
 
@@ -1854,6 +2147,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7911, -0.0944548, -98.6369
 [node name="Marker3D2" type="Marker3D" parent="waypoints mensu2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2743, -0.0944548, -69.6949)
 
+[node name="waypoints kapanga" type="Node" parent="."]
+
+[node name="Marker3D" type="Marker3D" parent="waypoints kapanga"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2089, 23.7421, 49.5914)
+
+[node name="Marker3D2" type="Marker3D" parent="waypoints kapanga"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7257, 23.9139, 45.7247)
+
+[node name="Marker3D3" type="Marker3D" parent="waypoints kapanga"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7911, 23.7421, 28.5914)
+
+[node name="Marker3D4" type="Marker3D" parent="waypoints kapanga"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2089, 23.7421, 24.5914)
+
 [node name="waypoints kapanga2" type="Node" parent="."]
 
 [node name="Marker3D" type="Marker3D" parent="waypoints kapanga2"]
@@ -1863,24 +2170,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.1742, -0.0944548, -70.8367
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2743, 2.90555, -55.6949)
 
 [node name="Marker3D3" type="Marker3D" parent="waypoints kapanga2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7257, 2.90555, -96.6949)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7257, 2.90555, -78.6949)
 
 [node name="Marker3D4" type="Marker3D" parent="waypoints kapanga2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7257, 2.90555, -78.6949)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2743, 2.90555, -84.6949)
 
-[node name="waypoints kapanga" type="Node" parent="."]
+[node name="waypoints kapanga3" type="Node" parent="."]
 
-[node name="Marker3D" type="Marker3D" parent="waypoints kapanga"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7911, 23.7421, 25.5914)
+[node name="Marker3D2" type="Marker3D" parent="waypoints kapanga3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2743, 16.6055, 7.60511)
 
-[node name="Marker3D2" type="Marker3D" parent="waypoints kapanga"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2743, 23.9139, 45.7247)
+[node name="Marker3D3" type="Marker3D" parent="waypoints kapanga3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7257, 0.90555, -16.6949)
 
-[node name="Marker3D3" type="Marker3D" parent="waypoints kapanga"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7911, 23.7421, 30.5914)
+[node name="Marker3D4" type="Marker3D" parent="waypoints kapanga3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2743, 1.20555, -40.6949)
 
-[node name="Marker3D4" type="Marker3D" parent="waypoints kapanga"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2089, 23.7421, 46.5914)
+[node name="Marker3D5" type="Marker3D" parent="waypoints kapanga3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1742, 1.40555, -22.8367)
+
+[node name="waypoints kapanga4" type="Node" parent="."]
+
+[node name="Marker3D3" type="Marker3D" parent="waypoints kapanga4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.7257, 0.90555, -39.6949)
+
+[node name="Marker3D6" type="Marker3D" parent="waypoints kapanga4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.8258, 1.40555, -28.8367)
+
+[node name="Marker3D4" type="Marker3D" parent="waypoints kapanga4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7257, 1.20555, -35.7002)
+
+[node name="Marker3D2" type="Marker3D" parent="waypoints kapanga4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7257, 0.00554848, -12.3949)
+
+[node name="Marker3D5" type="Marker3D" parent="waypoints kapanga4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8258, 1.40555, -28.8367)
 
 [node name="luces" type="Node" parent="."]
 
@@ -1937,8 +2261,9 @@ offset_bottom = 150.0
 grow_horizontal = 0
 mouse_filter = 2
 item_count = 3
-item_0/text = "llevar sacos de yerba mate. 0/3"
-item_1/text = "poner a secar "
+item_0/text = "-llevar sacos de yerba mate. 0/3"
+item_1/text = "-poner a secar  la yerba"
+item_2/text = "-Comprar harina"
 
 [node name="Interactuar" type="Label" parent="Control"]
 layout_mode = 1
@@ -2007,10 +2332,42 @@ text = "[E] PARA BAJAR
 label_settings = SubResource("LabelSettings_1pjuo")
 metadata/_edit_use_anchors_ = true
 
+[node name="ã" parent="Control" instance=ExtResource("32_wniec")]
+layout_mode = 1
+
+[node name="gameover" type="Label" parent="Control"]
+layout_mode = 0
+anchor_left = 0.213542
+anchor_top = 0.334877
+anchor_right = 0.769097
+anchor_bottom = 0.478395
+text = "HE'ÚMA ÚLE"
+label_settings = SubResource("LabelSettings_04quh")
+metadata/_edit_use_anchors_ = true
+
 [node name="sorpresa" parent="." instance=ExtResource("28_jobur")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.428645, 26.0026, 25.3008)
 
-[connection signal="body_entered" from="objetos/sako3 baj/dejar" to="." method="_on_dejar_body_entered"]
-[connection signal="body_exited" from="objetos/sako3 baj/dejar" to="." method="_on_dejar_body_exited"]
+[node name="sorpresa2" parent="." instance=ExtResource("28_jobur")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 27.5714, 2.0026, -70.6992)
+
+[node name="sorpresa3" parent="." instance=ExtResource("28_jobur")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -63.4286, 3.0026, -68.1992)
+
+[node name="inicio" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.4341, 1.16402, -34.1221)
+script = ExtResource("34_wrvqm")
+
+[connection signal="body_entered" from="kapanga5_patrulla/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="kapanga3_patrulla/atrapado2" to="." method="_on_atrapado_2_body_entered"]
+[connection signal="body_entered" from="kapanga2_patrulla/atrapado" to="." method="_on_atrapado_body_entered"]
+[connection signal="body_entered" from="kapanga4_patrulla2/atrapado3" to="." method="_on_atrapado_3_body_entered"]
+[connection signal="body_entered" from="objetos/dejar" to="." method="_on_dejar_body_entered"]
+[connection signal="body_exited" from="objetos/dejar" to="." method="_on_dejar_body_exited"]
+[connection signal="body_entered" from="objetos/llevar2" to="." method="_on_llevar_2_body_entered"]
+[connection signal="body_exited" from="objetos/llevar2" to="." method="_on_llevar_2_body_exited"]
+[connection signal="body_entered" from="objetos/dejar2" to="." method="_on_dejar_2_body_entered"]
+[connection signal="body_exited" from="objetos/dejar2" to="." method="_on_dejar_2_body_exited"]
 [connection signal="body_entered" from="objetos/recojer" to="." method="_on_recojer_body_entered"]
 [connection signal="body_exited" from="objetos/recojer" to="." method="_on_recojer_body_exited"]
+[connection signal="body_entered" from="objetos/cabaña2/puerta_despensa" to="." method="_on_puerta_despensa_body_entered"]
