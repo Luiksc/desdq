@@ -3,6 +3,7 @@ extends Node3D
 @onready var interac: Label = $Control/Interactuar
 @onready var espantad: Label = $Control/espantar
 @onready var perder: Label = $Control/perdiendo
+@onready var siguente: Label = $Control/siguietne
 @onready var jugador = $jugador  # referencia al nodo del jugador
 @onready var anima_jugador = $jugador/blockbench_export/AnimationPlayer
 @onready var mykure = $"enemigos/mykure"
@@ -23,6 +24,7 @@ var jgd_omamo : bool = false
 var mykure_velocidad: float = 10
 var jugador_puede_interac: bool = false
 var mykure_activu: bool = false
+var finiquitable: bool = false
 
 var dialogo_activo: bool = false
 var npc_actual: String = ""
@@ -53,6 +55,7 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	siguente.hide()
 	perder.hide()
 	espantad.hide()
 	interac.hide()
@@ -91,7 +94,8 @@ func _process(delta: float) -> void:
 	if dialogo_activo:
 		# E funciona como "next" mientras el diálogo está ocurriendo
 		if Input.is_action_just_pressed("interaccion"):
-			anima_jugador.play("oha'aro")
+			if anima_jugador.current_animation != "oha'aro":
+				anima_jugador.play("oha'aro")
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
 			
@@ -104,6 +108,9 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("clicki") or Input.is_action_just_pressed("interaccion"):
 			print("reset")
 			reset()
+	if finiquitable:
+		if Input.is_action_just_pressed("interaccion"):
+			seguimos()
 # Recibe el npc_id emitido por la señal corpus_entro del trigger
 func piensa_dialog(id: String) -> void:
 
@@ -194,9 +201,12 @@ func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 
 func _on_final_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
+		jugador.puede_moverse=false
 		anima_jugador.play("oha'aro")
 		final.show()
 		ani_final.play("aparece")
+		siguente.show()
+		finiquitable = true
 		Input.mouse_mode= Input.MOUSE_MODE_VISIBLE
 		
 func jugador_omano():
@@ -228,3 +238,5 @@ func _on_zonademuerte_body_entered(body: Node3D) -> void:
 
 func _on_zonademuerte_2_body_entered(body: Node3D) -> void:
 	jugador_omano()
+func seguimos():
+	get_tree().change_scene_to_file("res://escenarios/nivel 2/nivel_2.tscn")

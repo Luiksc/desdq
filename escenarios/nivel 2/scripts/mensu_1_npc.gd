@@ -42,6 +42,7 @@ func _physics_process(delta: float) -> void:
 		estado.oho:
 			if animacion.current_animation != "ojevy":
 				animacion.play("ojevy")
+			velocidad = 10
 			var direccion = punto_ini.global_position - global_position
 			direccion.y = 0
 			var target = punto_ini.global_position
@@ -57,6 +58,8 @@ func _physics_process(delta: float) -> void:
 				Estado = estado.oraha
 			
 		estado.oraha:
+			velocidad = 6
+			
 			sako.show()
 			if animacion.current_animation != "oraha":
 				animacion.play("oraha")

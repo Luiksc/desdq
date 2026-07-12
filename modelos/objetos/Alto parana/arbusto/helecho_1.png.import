@@ -2,14 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmrp1cqr37jmi"
+uid="uid://8pe0tf8bu7e1"
 path.s3tc="res://.godot/imported/helecho_1.png-48d959a3dd8e2b257fc69a06e7575436.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "29836d15f7f17c92d6d7f00a6ea0e5c2"
+"md5": "d087c254033bdfc63edadb7fefa044f3"
 }
 
 [deps]

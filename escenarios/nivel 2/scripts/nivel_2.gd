@@ -12,6 +12,8 @@ extends Node3D
 
 @onready var kapanga2 = $kapanga2_patrulla
 @onready var kapanga3 = $kapanga3_patrulla
+@onready var kapanga4 = $kapanga4_patrulla
+@onready var kapanga5 =$kapanga5_patrulla
 
 
 @onready var sako_baj1 = $"objetos/sako1 baj"
@@ -98,6 +100,8 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	perdeu.hide()
 	indicador2.hide()
 	indicador3.hide()
@@ -360,7 +364,10 @@ func _on_atrapado_body_entered(body: Node3D) -> void:
 func oipoo():
 	omano = true
 	kapanga2.velocidad = 0
-	kapanga3.velocidad=0
+	kapanga3.velocidad = 0
+	kapanga4.velocidad = 0
+	kapanga5.velocidad = 0
+
 	jugador.puede_moverse=false
 	perdeu.show()
 	transicion.play("entrafa")
@@ -389,4 +396,12 @@ func conversa(id_del_npc: String):
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	oipoo()
+	if body.is_in_group("jugador_global"):
+		oipoo()
+
+
+
+
+func _on_atrapado_4_body_entered(body: Node3D) -> void:
+	if body.is_in_group("jugador_global"):
+		oipoo()

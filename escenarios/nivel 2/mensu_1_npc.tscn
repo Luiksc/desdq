@@ -1382,8 +1382,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3erq1")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xr4s8"]
-height = 2.98112
+[sub_resource type="BoxShape3D" id="BoxShape3D_hejnx"]
+size = Vector3(1, 2.28906, 1)
 
 [node name="mensu1" type="CharacterBody3D"]
 script = ExtResource("1_ak0r0")
@@ -1554,5 +1554,5 @@ mesh = SubResource("ArrayMesh_xhrmv")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28035, 0)
-shape = SubResource("CapsuleShape3D_xr4s8")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27095, 0)
+shape = SubResource("BoxShape3D_hejnx")

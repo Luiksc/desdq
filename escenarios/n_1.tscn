@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=116 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -92,6 +92,10 @@ font = ExtResource("6_f6spo")
 font_size = 85
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jvlji"]
+font = ExtResource("6_f6spo")
+font_size = 30
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lmal"]
 resource_name = "material_0"
@@ -1247,6 +1251,16 @@ text = "EPERDEMA"
 label_settings = SubResource("LabelSettings_sp1lg")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="siguietne" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 569.0
+offset_right = 1020.0
+offset_bottom = 599.0
+text = "[E] para el siguiente relato
+"
+label_settings = SubResource("LabelSettings_jvlji")
 
 [node name="*objetos" type="Node" parent="."]
 

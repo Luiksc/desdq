@@ -3,8 +3,8 @@ extends CharacterBody3D
  
    
 @onready var pivote: Node3D = $pivote
-@onready var piel: Node3D = $blockbench_export2
-@onready var animaciones : AnimationPlayer = $blockbench_export2/AnimationPlayer      # nodo de la cámara 
+@onready var piel: Node3D = $blockbench_export
+@onready var animaciones : AnimationPlayer =  $blockbench_export/AnimationPlayer  # nodo de la cámara 
 
 @export var vel_rotacion: float  # qué tan rápido rota el personaje
 
@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo,
 	move_and_slide()
 	
 	if input_direccion.length()>0.1:
-		animaciones.play("corre")
+		animaciones.play("oho")
 	else:
 		animaciones.play("repira")
 	

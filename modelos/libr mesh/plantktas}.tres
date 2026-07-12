@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://hi21a7ciwqrl" path="res://modelos/objetos/Alto parana/arbul3/arbol2_0.png" id="1_vrreh"]
 [ext_resource type="Texture2D" uid="uid://ct81fdi2duwlx" path="res://modelos/objetos/Alto parana/arbul3/arbol2_1.png" id="2_5qde4"]
-[ext_resource type="Texture2D" uid="uid://bmrp1cqr37jmi" path="res://modelos/objetos/Alto parana/arbusto/helecho_1.png" id="3_eng2t"]
+[ext_resource type="Texture2D" uid="uid://8pe0tf8bu7e1" path="res://modelos/objetos/Alto parana/arbusto/helecho_1.png" id="3_eng2t"]
 [ext_resource type="Texture2D" uid="uid://boychvmwac8qw" path="res://modelos/objetos/Alto parana/arbusto3/Arbol (2)_0.png" id="4_da71d"]
 [ext_resource type="Texture2D" uid="uid://dh6oft5qqjmm1" path="res://modelos/objetos/Alto parana/arbusto2/Arbusto (1)_0.png" id="5_04imh"]
 

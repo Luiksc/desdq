@@ -1,10 +1,13 @@
 extends Control
 
 @onready var transi = $"CanvasLayer/Control/ã/AnimationPlayer"
-
+@onready var anjma = $Panel/AnimationPlayer
 
 func _ready() -> void:
 	transi.play("RESET")
+	
+func _process(delta: float) -> void:
+	anjma.play("mueve")
 func _on_salir_pressed() -> void:
 	get_tree().quit()
 

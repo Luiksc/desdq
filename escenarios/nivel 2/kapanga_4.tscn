@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=4 uid="uid://byiyq2kgcvee1"]
+[gd_scene load_steps=91 format=4 uid="uid://ds7mv810730er"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/kapanga_2.gd" id="1_h74df"]
 [ext_resource type="PackedScene" uid="uid://7yu7ojmlqm7e" path="res://escenarios/sorpresa.tscn" id="2_1b2mk"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://7cyej4nsa485" path="res://modelos/kapánga/expo/capanga1_15.png" id="18_0mm7w"]
 [ext_resource type="Texture2D" uid="uid://bh4drujwitu6e" path="res://modelos/kapánga/expo/capanga1_16.png" id="19_66lys"]
 [ext_resource type="AudioStream" uid="uid://dqfwgw70l08id" path="res://audios/exclamacion.mp3" id="20_5447j"]
+[ext_resource type="AudioStream" uid="uid://b580x6s0gsupa" path="res://audios/llaves.mp3" id="21_q808c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kiuc8"]
 resource_name = "material_0"
@@ -1140,9 +1141,9 @@ _data = {
 height = 3.67243
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_to5os"]
-radius = 8.69542
+radius = 10.6496
 
-[node name="kapanga" type="CharacterBody3D"]
+[node name="kapanga4" type="CharacterBody3D"]
 script = ExtResource("1_h74df")
 
 [node name="Timer" type="Timer" parent="."]
@@ -1311,9 +1312,14 @@ shape = SubResource("SphereShape3D_to5os")
 
 [node name="Exclamacion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_5447j")
+volume_db = -5.6
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("21_q808c")
+unit_size = 1.5
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="detecta" to="." method="_on_area_3d_body_entered"]

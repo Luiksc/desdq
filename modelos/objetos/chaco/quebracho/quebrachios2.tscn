@@ -159,6 +159,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6d4ml")
 
 [node name="cylinder" type="MeshInstance3D"]
-transform = Transform3D(0.182709, 0, -0.0813475, 0, 0.2, 0, 0.0813475, 0, 0.182709, 0, 0.51684, 0)
+transform = Transform3D(0.417587, 0, -0.237079, 0, 0.514578, 0, 0.185922, 0, 0.532487, 0, 0.51684, 0)
 mesh = SubResource("ArrayMesh_2ubn0")
 skeleton = NodePath("")

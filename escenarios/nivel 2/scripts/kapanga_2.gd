@@ -6,6 +6,7 @@ extends CharacterBody3D
 @onready var sorpresa = $sorpresa
 @onready var timer = $Timer
 @onready var timer_omuña = $Timer2
+@onready var llaves := $AudioStreamPlayer3D
 
 @export var ohota : Array[Marker3D]
 
@@ -28,11 +29,12 @@ var Estado = estado
 func _ready() -> void:
 	sorpresa.hide()
 	animacion.animation_finished.connect(animacion_termino)
-	Estado = estado.oho
+	
 	timer_omuña.wait_time = 4.0
 	timer_omuña.one_shot = true
 	if not timer_omuña.timeout.is_connected(_on_timer_omuña_timeout):
 		timer_omuña.timeout.connect(_on_timer_omuña_timeout)
+	llaves.play()
 
 
 
@@ -40,6 +42,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravedad * delta
 		velocity.y = max(velocity.y, -gravedad * 3)
+	if not llaves.playing:
+		llaves.play()
 	match Estado:
 		estado.oho:
 			if animacion.current_animation != "camina":

@@ -97,6 +97,9 @@ func dialog_terminado() -> void:
 	if npc_actual == "Comprado":
 		ahorro.text = "ahorros:
 19 Guaraníes"
+		anima.play("entrafa")
+		await anima.animation_finished
+		get_tree().change_scene_to_file("res://escenarios/nivel 2/cinematicas/cinamatica_n_2.tscn")
   # desbloquea el movimiento
 
 	# Si era un pensamiento de Delfina, destruimos el trigger y listo

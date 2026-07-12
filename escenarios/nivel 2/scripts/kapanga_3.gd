@@ -5,7 +5,7 @@ extends CharacterBody3D
 @onready var sorpresa = $sorpresa
 @onready var timer = $Timer
 @onready var timer_omuña = $Timer2
-
+@onready var sonio := $AudioStreamPlayer3D
 @export var ohota : Array[Marker3D]
 
 var jugador 
@@ -27,16 +27,18 @@ var Estado = estado
 func _ready() -> void:
 	sorpresa.hide()
 	animacion.animation_finished.connect(animacion_termino)
-	Estado = estado.oho
+	
 	timer_omuña.wait_time = 4.0
 	timer_omuña.one_shot = true
 	if not timer_omuña.timeout.is_connected(_on_timer_omuña_timeout):
 		timer_omuña.timeout.connect(_on_timer_omuña_timeout)
+	sonio.play()
 
 
 
 func _physics_process(delta: float) -> void:
-
+	if not sonio.playing:
+		sonio.play()
 	match Estado:
 		estado.oho:
 			if not is_on_floor():
