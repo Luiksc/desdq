@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b423wgvhmsmhb"
+uid="uid://t82bw5qrtih"
 path.s3tc="res://.godot/imported/Myku_2.png-bf6783e9b0676a4ccc17f19b749d5545.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "88be89cc57bfe71827126f38906135fc"
 }
 
 [deps]

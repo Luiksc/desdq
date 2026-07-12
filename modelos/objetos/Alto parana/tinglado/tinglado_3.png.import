@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyu2s7au0hfdv"
+uid="uid://6fi3qrukma3b"
 path.s3tc="res://.godot/imported/tinglado_3.png-76ee3094e887cd6ce196eae2eeea122a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "a264092a0f88206e75644b13b02fdb95"
 }
 
 [deps]

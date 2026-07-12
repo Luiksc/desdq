@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnn51pcu53i2o"
+uid="uid://dhax2jv7m4cx7"
 path.s3tc="res://.godot/imported/Guitarra_2.png-66853bdc84faafdffad574c37464174c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ae27ce7abf3c0f1a3ba94dd60b343576"
 }
 
 [deps]
