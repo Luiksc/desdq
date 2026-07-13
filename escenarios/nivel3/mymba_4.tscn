@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcyn7t805ygop"]
+
+[ext_resource type="Script" path="res://escenarios/nivel3/scripts mymba/mymba_4.gd" id="1_444gr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_efoov"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_h7hqy"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_444gr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_efoov")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.628795, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_h7hqy")

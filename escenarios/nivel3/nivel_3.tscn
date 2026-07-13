@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=130 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="1_4t7wk"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="2_3bf3m"]
@@ -27,9 +27,17 @@
 [ext_resource type="Texture2D" uid="uid://bjfkaxbaswwrm" path="res://modelos/objetos/Alto parana/mesa/Mesa_1.png" id="24_hm2e2"]
 [ext_resource type="PackedScene" uid="uid://cocyxrb2xpew8" path="res://modelos/objetos/Alto parana/arbul2/yvyralillo.tscn" id="25_57rt0"]
 [ext_resource type="PackedScene" uid="uid://drdoix7ai6o83" path="res://modelos/objetos/chaco/arbusto1/arbusro2.tscn" id="26_2cpkd"]
+[ext_resource type="PackedScene" uid="uid://cbcbd3hmh6few" path="res://escenarios/nivel3/Mymba_!.tscn" id="28_gxq1s"]
 [ext_resource type="AudioStream" uid="uid://0faos2olkbko" path="res://audios/musica de nivel/El karau - Quemil Yambay letra'y.mp3" id="29_hb2yn"]
-[ext_resource type="PackedScene" path="res://escenarios/nivel3/capsula_yuyo.tscn" id="30_capsula"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="29_ovnw8"]
+[ext_resource type="PackedScene" uid="uid://cgfd2i107euag" path="res://escenarios/nivel3/mymba_2.tscn" id="29_xkk50"]
+[ext_resource type="PackedScene" uid="uid://cdg0sw07h2j2l" path="res://escenarios/nivel3/mymba_3.tscn" id="30_r0cbi"]
+[ext_resource type="PackedScene" uid="uid://bcyn7t805ygop" path="res://escenarios/nivel3/mymba_4.tscn" id="31_72if7"]
+[ext_resource type="PackedScene" uid="uid://dsl4gpy0sbsdv" path="res://escenarios/nivel3/mymba_5.tscn" id="32_ww5g0"]
+[ext_resource type="PackedScene" uid="uid://jl1ntqcxeoos" path="res://escenarios/nivel3/mymba_6.tscn" id="33_ygf5p"]
+[ext_resource type="PackedScene" uid="uid://kntyohn40tlx" path="res://escenarios/nivel3/mymba_7.tscn" id="34_s5y6e"]
+[ext_resource type="PackedScene" uid="uid://cb1bbwbd4sdbx" path="res://escenarios/nivel3/mymba_8.tscn" id="35_466hp"]
+[ext_resource type="PackedScene" uid="uid://bnm7f5w8mo36" path="res://escenarios/nivel3/mymba_9.tscn" id="36_iuag4"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
 panorama = ExtResource("3_3kqdd")
@@ -1807,7 +1815,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1.4, 42)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 1.4, 37)
 
 [node name="Marker3D3" type="Marker3D" parent="posible aparecer ka\'arurupa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 1.4, 35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 1.4, 33)
 
 [node name="posible_aparecer_ka\'are" type="Node" parent="."]
 
@@ -1833,32 +1841,50 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9286, 2.58875, 128)
 
 [node name="capsulas_yuyo" type="Node3D" parent="."]
 
-[node name="capsula_kaarurupa_1" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1.4, 40)
+[node name="mymba1_kaarurupa" parent="capsulas_yuyo" instance=ExtResource("28_gxq1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 2, 59)
+collision_layer = 128
+collision_mask = 128
 
-[node name="capsula_kaarurupa_2" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 1.4, 35)
+[node name="mymba2_kaarurupa" parent="capsulas_yuyo" instance=ExtResource("29_xkk50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6854, 5.13405, 44)
+collision_layer = 128
+collision_mask = 128
 
-[node name="capsula_kaarurupa_3" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 1.4, 33)
+[node name="mymba3_kaarurupa" parent="capsulas_yuyo" instance=ExtResource("30_r0cbi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 2, 42)
+collision_layer = 128
+collision_mask = 128
 
-[node name="capsula_kaare_1" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 2, 55)
+[node name="mymba4_kaare" parent="capsulas_yuyo" instance=ExtResource("31_72if7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 2.5, 62.7)
+collision_layer = 128
+collision_mask = 128
 
-[node name="capsula_kaare_2" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2, 72)
+[node name="mymba5_kaare" parent="capsulas_yuyo" instance=ExtResource("32_ww5g0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3, 72)
+collision_layer = 128
+collision_mask = 128
 
-[node name="capsula_kaare_3" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2.2, 85)
+[node name="mymba6_kaare" parent="capsulas_yuyo" instance=ExtResource("33_ygf5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 2, 86.3032)
+collision_layer = 128
+collision_mask = 128
 
-[node name="capsula_ambay_1" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 119)
+[node name="mymba7_ambay" parent="capsulas_yuyo" instance=ExtResource("34_s5y6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 119)
+collision_layer = 128
+collision_mask = 128
 
-[node name="capsula_ambay_2" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 2, 88)
+[node name="mymba8_ambay" parent="capsulas_yuyo" instance=ExtResource("35_466hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9, 2.4, 87.9)
+collision_layer = 128
+collision_mask = 128
 
-[node name="capsula_ambay_3" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9286, 2.58875, 126)
+[node name="mymba9_ambay" parent="capsulas_yuyo" instance=ExtResource("36_iuag4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 3, 126)
+collision_layer = 128
+collision_mask = 128
 
 [node name="final" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1.38278, 193)

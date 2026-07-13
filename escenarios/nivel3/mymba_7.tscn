@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://kntyohn40tlx"]
+
+[ext_resource type="Script" path="res://escenarios/nivel3/scripts mymba/mymba_7.gd" id="1_77rmq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hkftg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u8l3x"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_77rmq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_hkftg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_u8l3x")

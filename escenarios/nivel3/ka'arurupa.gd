@@ -89,15 +89,16 @@ func spawn_yuyo1():
 		push_error("No hay Marker3D para hacer spawn.")
 		return
 
-	var marcador : Marker3D = marcadores.pick_random()
+	var idx : int = randi() % marcadores.size()
+	var marcador : Marker3D = marcadores[idx]
 	instancia_yuyo.global_position = marcador.global_position
 
-	# Vincular las 3 cápsulas de ka'arurupa con este yuyo instanciado
-	for nombre in ["capsula_kaarurupa_1", "capsula_kaarurupa_2", "capsula_kaarurupa_3"]:
-		var capsula = capsulas_yuyo.get_node_or_null(nombre)
-		if capsula:
-			capsula.vincular_yuyo(instancia_yuyo)
-			capsula.id_yuyo_esperado = "ka'arurupa"
+	
+	var nombres_capsulas = ["capsula_kaarurupa_1", "capsula_kaarurupa_2", "capsula_kaarurupa_3"]
+	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
+	if capsula:
+		capsula.id_yuyo_esperado = "ka'arurupa"
+		capsula.vincular_yuyo(instancia_yuyo)
 
 func spawn_yuyo2():
 	var instancia_yuyo: Node3D = kaare.instantiate()
@@ -115,16 +116,17 @@ func spawn_yuyo2():
 		push_error("No hay Marker3D para hacer spawn.")
 		return
 
-	var marcador : Marker3D = marcadores.pick_random()
+	var idx : int = randi() % marcadores.size()
+	var marcador : Marker3D = marcadores[idx]
 	instancia_yuyo.global_position = marcador.global_position
 
-	# Vincular las 3 cápsulas de ka'are con este yuyo instanciado
-	for nombre in ["capsula_kaare_1", "capsula_kaare_2", "capsula_kaare_3"]:
-		var capsula = capsulas_yuyo.get_node_or_null(nombre)
-		if capsula:
-			capsula.vincular_yuyo(instancia_yuyo)
-			capsula.id_yuyo_esperado = "ka'aré"
 	
+	var nombres_capsulas = ["capsula_kaare_1", "capsula_kaare_2", "capsula_kaare_3"]
+	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
+	if capsula:
+		capsula.id_yuyo_esperado = "ka'aré"
+		capsula.vincular_yuyo(instancia_yuyo)
+
 func spawn_yuyo3():
 	var instancia_yuyo: Node3D = ambay.instantiate()
 	add_child(instancia_yuyo)
@@ -141,15 +143,16 @@ func spawn_yuyo3():
 		push_error("No hay Marker3D para hacer spawn.")
 		return
 
-	var marcador : Marker3D = marcadores.pick_random()
+	var idx : int = randi() % marcadores.size()
+	var marcador : Marker3D = marcadores[idx]
 	instancia_yuyo.global_position = marcador.global_position
 
-	# Vincular las 3 cápsulas de amba'y con este yuyo instanciado
-	for nombre in ["capsula_ambay_1", "capsula_ambay_2", "capsula_ambay_3"]:
-		var capsula = capsulas_yuyo.get_node_or_null(nombre)
-		if capsula:
-			capsula.vincular_yuyo(instancia_yuyo)
-			capsula.id_yuyo_esperado = "amba'y"
+	
+	var nombres_capsulas = ["capsula_ambay_1", "capsula_ambay_2", "capsula_ambay_3"]
+	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
+	if capsula:
+		capsula.id_yuyo_esperado = "amba'y"
+		capsula.vincular_yuyo(instancia_yuyo)
 
 
 
@@ -158,8 +161,8 @@ func _process(delta: float) -> void:
 	if final:
 		ohotama()
 		
-	
-	if Input.is_action_just_pressed("interaccion"):
+	if dialogo_activo:
+		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
 func inic_dialo() -> void:
@@ -250,13 +253,16 @@ func _on_objeto_recogido(id: String) -> void:
 	objetos_recogidos = id
 	print(objetos_recogidos) 
 	if objetos_recogidos == "ambay":
+		$DialogSystem/sound.play()
 		lista.set_item_text(0, "Erekóma Amba'y")
-		$DialogSystem/sound.play()
+		
 	elif objetos_recogidos == "ka'arurupa":
+		$DialogSystem/sound.play()
 		lista.set_item_text(1, "Erekóma Ka'arurupa")
-		$DialogSystem/sound.play()
+		
 	if objetos_recogidos == "ka'aré":
-		lista.set_item_text(2, "Erekóma Ka'aré")
 		$DialogSystem/sound.play()
+		lista.set_item_text(2, "Erekóma Ka'aré")
+		
 		
 		
