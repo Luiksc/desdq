@@ -1,6 +1,7 @@
-[gd_scene load_steps=107 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=110 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="1_4t7wk"]
+[ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="2_3bf3m"]
 [ext_resource type="PackedScene" uid="uid://cg1pi2x020okd" path="res://escenarios/juador/Karau_n3.tscn" id="2_pm7n1"]
 [ext_resource type="Texture2D" uid="uid://dxb4t3eibfkqf" path="res://background/yvaga sky.png" id="3_3kqdd"]
 [ext_resource type="Texture2D" uid="uid://c2l31jmeldghj" path="res://modelos/objetos/chaco/ÓGA+/casa cutre2_0.png" id="4_y7okn"]
@@ -26,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://bjfkaxbaswwrm" path="res://modelos/objetos/Alto parana/mesa/Mesa_1.png" id="24_hm2e2"]
 [ext_resource type="PackedScene" uid="uid://cocyxrb2xpew8" path="res://modelos/objetos/Alto parana/arbul2/yvyralillo.tscn" id="25_57rt0"]
 [ext_resource type="PackedScene" uid="uid://drdoix7ai6o83" path="res://modelos/objetos/chaco/arbusto1/arbusro2.tscn" id="26_2cpkd"]
+[ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="29_ovnw8"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
 panorama = ExtResource("3_3kqdd")
@@ -374,7 +376,7 @@ shadow_mesh = SubResource("ArrayMesh_qg6ru")
 size = Vector3(16.9, 13, 8.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1kxg"]
-size = Vector3(59, 14, 35)
+size = Vector3(43, 14, 35)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twbcg"]
 resource_name = "material_0"
@@ -1321,8 +1323,14 @@ size = Vector3(1, 10, 49)
 [sub_resource type="BoxShape3D" id="BoxShape3D_6xnkr"]
 size = Vector3(26, 10, 13)
 
+[sub_resource type="LabelSettings" id="LabelSettings_4j4su"]
+font = ExtResource("29_ovnw8")
+font_size = 30
+
 [node name="Nivel 3" type="Node3D"]
 script = ExtResource("14_dsh1k")
+
+[node name="DialogSystem" parent="." instance=ExtResource("2_3bf3m")]
 
 [node name="GridMap yvy" type="GridMap" parent="."]
 mesh_library = ExtResource("1_4t7wk")
@@ -1382,7 +1390,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 198)
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/casa1/trigger_farra"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 6.5, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 6.5, -3)
 shape = SubResource("BoxShape3D_h1kxg")
 
 [node name="arbolito" parent="objetos" instance=ExtResource("12_01wi0")]
@@ -1714,4 +1722,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 1.4, 37)
 [node name="Marker3D3" type="Marker3D" parent="posible aparecer ka\'arurupa"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 1.4, 35)
 
+[node name="final" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1.38278, 193)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="interac" type="Label" parent="Control"]
+layout_mode = 0
+anchor_left = 8.825
+anchor_top = 13.775
+anchor_right = 20.075
+anchor_bottom = 14.525
+text = "[E] PARA AGARRA"
+label_settings = SubResource("LabelSettings_4j4su")
+metadata/_edit_use_anchors_ = true
+
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="." method="_on_trigger_farra_body_entered"]
+[connection signal="body_entered" from="objetos/casa1/trigger_farra" to="objetos/casa1" method="_on_trigger_farra_body_entered"]

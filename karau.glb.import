@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://8kqycxlls7d1"
-path="res://.godot/imported/karau.glb-4ce92f90b7b32eb2da71238cd8a2aa98.scn"
+path="res://.godot/imported/karau.glb-5e6f775a490c8b62c97a0572e313b38a.scn"
 
 [deps]
 
-source_file="res://modelos/karau omaña hi'arupi/karau.glb"
-dest_files=["res://.godot/imported/karau.glb-4ce92f90b7b32eb2da71238cd8a2aa98.scn"]
+source_file="res://karau.glb"
+dest_files=["res://.godot/imported/karau.glb-5e6f775a490c8b62c97a0572e313b38a.scn"]
 
 [params]
 

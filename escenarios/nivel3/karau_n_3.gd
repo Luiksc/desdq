@@ -44,10 +44,12 @@ func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo,
 	moviminto(delta)
 	move_and_slide()
 	
-	if input_direccion.length()>0.1:
-		animaciones.play("oho")
-	else:
-		animaciones.play("repira")
+	# Solo cambiar animación si el movimiento está activo (para no pisar animaciones cinemáticas)
+	if puede_moverse:
+		if input_direccion.length() > 0.1:
+			animaciones.play("oho")
+		else:
+			animaciones.play("repira")
 	
 func saltar():
 	velocity.y = fuerza_salto

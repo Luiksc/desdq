@@ -1,15 +1,16 @@
 [gd_scene load_steps=54 format=4 uid="uid://dd0yo6fujp6nb"]
 
-[ext_resource type="Script" path="res://escenarios/scripts/mykuré.gd" id="1_77be3"]
+[ext_resource type="Script" path="res://addons/dialog_system/mykuré.gd" id="1_77be3"]
 [ext_resource type="Script" path="res://escenarios/scripts/mykure_dañatrigger.gd" id="2_rc71c"]
 [ext_resource type="AudioStream" uid="uid://dbwlyxyi4io4i" path="res://audios/sonido mykure.mp3" id="3_1xbby"]
-[ext_resource type="Texture2D" uid="uid://3w0q35ptigbp" path="res://modelos/animañas/mykuré/Myku_0.png" id="4_1puho"]
+[ext_resource type="Texture2D" uid="uid://dv61qfbj6eu0j" path="res://modelos/animañas/mykuré/Myku_0.png" id="4_1puho"]
 [ext_resource type="Texture2D" uid="uid://b8san6c5tktou" path="res://modelos/animañas/mykuré/Myku_1.png" id="5_yughh"]
-[ext_resource type="Texture2D" uid="uid://b423wgvhmsmhb" path="res://modelos/animañas/mykuré/Myku_2.png" id="6_wyqge"]
+[ext_resource type="Texture2D" uid="uid://t82bw5qrtih" path="res://modelos/animañas/mykuré/Myku_2.png" id="6_wyqge"]
 [ext_resource type="Texture2D" uid="uid://dlfi863cha7n8" path="res://modelos/animañas/mykuré/Myku_3.png" id="7_mpc47"]
 [ext_resource type="Texture2D" uid="uid://df3rgnqblfh0f" path="res://modelos/animañas/mykuré/Myku_4.png" id="8_ebl8h"]
 [ext_resource type="Texture2D" uid="uid://ccnpmhqgxkiex" path="res://modelos/animañas/mykuré/Myku_5.png" id="9_jfsc7"]
 [ext_resource type="Texture2D" uid="uid://dl0oio22b18p7" path="res://modelos/animañas/mykuré/Myku_6.png" id="10_op3f4"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_homyl"]
 size = Vector3(2.22475, 1, 1.37408)
