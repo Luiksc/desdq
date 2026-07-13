@@ -21,12 +21,21 @@ var final = false
 @onready var puntos_spawn3 : Node = $"posible_aparecer_amba'y"
 @onready var ambay: Resource = preload("res://escenarios/nivel3/ambay.tscn")
 
+@onready var lista =$Control/ItemList
+
 var dialogo_activo: bool = false
 var npc_actual: String = ""
 var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
 
+#-----pohañana------
+var uno = "amba'y"
+var dos = "ka'arurupa"
+var tres = "ka'aré"
 
 var omano = false
+
+# Lista que acumula los identificadores de objetos recogidos por el jugador
+var objetos_recogidos: String
 
 
 var dialogos ={
@@ -56,6 +65,7 @@ func _ready() -> void:
 	spawn_yuyo1()
 	spawn_yuyo2()
 	spawn_yuyo3()
+	
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 
 
@@ -63,6 +73,8 @@ func _ready() -> void:
 func spawn_yuyo1():
 	var instancia_yuyo: Node3D = kaarurupa.instantiate()
 	add_child(instancia_yuyo)
+	
+	instancia_yuyo.jugador_entro.connect(_on_objeto_recogido)
 
 	var marcadores: Array[Marker3D] = []
 
@@ -81,6 +93,8 @@ func spawn_yuyo2():
 	var instancia_yuyo: Node3D = kaare.instantiate()
 	add_child(instancia_yuyo)
 
+	instancia_yuyo.jugador_entro.connect(_on_objeto_recogido)
+
 	var marcadores: Array[Marker3D] = []
 
 	for hijo in puntos_spawn2.get_children():
@@ -97,6 +111,8 @@ func spawn_yuyo2():
 func spawn_yuyo3():
 	var instancia_yuyo: Node3D = ambay.instantiate()
 	add_child(instancia_yuyo)
+
+	instancia_yuyo.jugador_entro.connect(_on_objeto_recogido)
 
 	var marcadores: Array[Marker3D] = []
 
@@ -119,6 +135,7 @@ func _process(delta: float) -> void:
 	if final:
 		ohotama()
 		
+	
 	if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
@@ -126,7 +143,7 @@ func inic_dialo() -> void:
 	if npc_actual=="":
 		return
 	if not dialogos.has(npc_actual):
-		print("tampoco")
+		
 		return
 	
 	
@@ -202,3 +219,21 @@ func ohotama():
 func piensa(id_del_npc: String) -> void:
 	npc_actual = id_del_npc
 	inic_dialo()
+
+# Se llama cuando el jugador entra al área de un objeto recolectable.
+# Recibe el identificador del objeto y lo añade a la lista de recogidos.
+
+func _on_objeto_recogido(id: String) -> void:
+	objetos_recogidos = id
+	print(objetos_recogidos) 
+	if objetos_recogidos == "ambay":
+		lista.set_item_text(0, "Erekóma Amba'y")
+		$DialogSystem/sound.play()
+	elif objetos_recogidos == "ka'arurupa":
+		lista.set_item_text(1, "Erekóma Ka'arurupa")
+		$DialogSystem/sound.play()
+	if objetos_recogidos == "ka'aré":
+		lista.set_item_text(2, "Erekóma Ka'aré")
+		$DialogSystem/sound.play()
+		
+		

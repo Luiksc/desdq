@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4ee8kkevv21g"]
+[gd_scene load_steps=5 format=3 uid="uid://b4ee8kkevv21g"]
+
+[ext_resource type="Script" path="res://escenarios/nivel3/ambay_ID.gd" id="1_5ijkq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eefm2"]
 albedo_color = Color(1, 0.833333, 0, 1)
@@ -6,7 +8,17 @@ albedo_color = Color(1, 0.833333, 0, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_kpva0"]
 material = SubResource("StandardMaterial3D_eefm2")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_ambay"]
+radius = 1.0
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_5ijkq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_kpva0")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+shape = SubResource("SphereShape3D_ambay")
