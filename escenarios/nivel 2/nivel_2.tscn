@@ -2241,7 +2241,6 @@ jevyrenda = [NodePath("../waypoints mensu1/waypoint4"), NodePath("../waypoints m
 
 [node name="kapanga5_patrulla" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("2_mwm4t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 1, -40)
-visible = false
 ohota = [NodePath("../waypoints kapanga5/Marker3D3"), NodePath("../waypoints kapanga5/Marker3D6"), NodePath("../waypoints kapanga5/Marker3D4"), NodePath("../waypoints kapanga5/Marker3D2"), NodePath("../waypoints kapanga5/Marker3D5")]
 
 [node name="Area3D" type="Area3D" parent="kapanga5_patrulla"]
@@ -2253,7 +2252,6 @@ shape = SubResource("SphereShape3D_xgu5u")
 
 [node name="kapanga3_patrulla" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("3_osffg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.1, -60)
-visible = false
 ohota = [NodePath("../waypoints kapanga3/Marker3D"), NodePath("../waypoints kapanga3/Marker3D2"), NodePath("../waypoints kapanga3/Marker3D3"), NodePath("../waypoints kapanga3/Marker3D4")]
 
 [node name="atrapado2" type="Area3D" parent="kapanga3_patrulla"]
@@ -2266,7 +2264,6 @@ shape = SubResource("SphereShape3D_x7h2y")
 
 [node name="kapanga2_patrulla" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("2_bdbkj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 23, 23.3405)
-visible = false
 ohota = [NodePath("../waypoints kapanga2/Marker3D"), NodePath("../waypoints kapanga2/Marker3D2"), NodePath("../waypoints kapanga2/Marker3D3"), NodePath("../waypoints kapanga2/Marker3D4")]
 
 [node name="atrapado" type="Area3D" parent="kapanga2_patrulla"]
@@ -2278,7 +2275,6 @@ shape = SubResource("SphereShape3D_x7h2y")
 
 [node name="kapanga6" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("10_j1ndj")]
 transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, -17.157, 0.66059, -106.852)
-visible = false
 ohota = [NodePath("../waypoints kapanga6/Marker3D3"), NodePath("../waypoints kapanga6/Marker3D6"), NodePath("../waypoints kapanga6/Marker3D4"), NodePath("../waypoints kapanga6/Marker3D2"), NodePath("../waypoints kapanga6/Marker3D5")]
 
 [node name="atrapado6" type="Area3D" parent="kapanga6"]
@@ -2289,7 +2285,6 @@ shape = SubResource("SphereShape3D_7hbra")
 
 [node name="kapanga4_patrulla" parent="." node_paths=PackedStringArray("ohota") instance=ExtResource("2_mwm4t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0.9, -23)
-visible = false
 ohota = [NodePath("../waypoints kapanga4/Marker3D2"), NodePath("../waypoints kapanga4/Marker3D3"), NodePath("../waypoints kapanga4/Marker3D4"), NodePath("../waypoints kapanga4/Marker3D5")]
 
 [node name="atrapado4" type="Area3D" parent="kapanga4_patrulla"]

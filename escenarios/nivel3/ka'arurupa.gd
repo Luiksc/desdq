@@ -5,15 +5,21 @@ var posicion2 : Vector3
 var final = false
 
 @onready var final_punto = $final
-@onready var jugador =$dionisio
-@onready var control_camara = $dionisio/pivote
-@onready var anima_jugon = $dionisio/blockbench_export/AnimationPlayer
-
+@onready var jugador =$karau
+@onready var control_camara = $karau/pivote
+@onready var anima_jugon = $karau/blockbench_export/AnimationPlayer
 @onready var tri_fr = $objetos/casa1/trigger_farra
-@onready var puntos_spawn: Node =$"posible aparecer ka'arurupa"
-@onready var kaarurupa: Resource = preload("res://escenarios/nivel3/ka'arurupa.tscn")
 @onready var interac = $Control/interac
 @onready var dialogo_piensa = $objetos/casa1
+
+@onready var puntos_spawn: Node =$"posible aparecer ka'arurupa"
+@onready var kaarurupa: Resource = preload("res://escenarios/nivel3/ka'arurupa.tscn")
+
+@onready var puntos_spawn2: Node  = $"posible_aparecer_ka'are"
+@onready var kaare: Resource= preload("res://escenarios/nivel3/ka'are.tscn")
+
+@onready var puntos_spawn3 : Node = $"posible_aparecer_amba'y"
+@onready var ambay: Resource = preload("res://escenarios/nivel3/ambay.tscn")
 
 var dialogo_activo: bool = false
 var npc_actual: String = ""
@@ -45,13 +51,16 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	interac.hide()
 	randomize()
-	spawn_yuyo()
+	spawn_yuyo1()
+	spawn_yuyo2()
+	spawn_yuyo3()
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 
 
 
-func spawn_yuyo():
+func spawn_yuyo1():
 	var instancia_yuyo: Node3D = kaarurupa.instantiate()
 	add_child(instancia_yuyo)
 
@@ -68,6 +77,41 @@ func spawn_yuyo():
 	var marcador : Marker3D = marcadores.pick_random()
 	instancia_yuyo.global_position = marcador.global_position
 	
+func spawn_yuyo2():
+	var instancia_yuyo: Node3D = kaare.instantiate()
+	add_child(instancia_yuyo)
+
+	var marcadores: Array[Marker3D] = []
+
+	for hijo in puntos_spawn2.get_children():
+		if hijo is Marker3D:
+			marcadores.append(hijo)
+
+	if marcadores.is_empty():
+		push_error("No hay Marker3D para hacer spawn.")
+		return
+
+	var marcador : Marker3D = marcadores.pick_random()
+	instancia_yuyo.global_position = marcador.global_position
+	
+func spawn_yuyo3():
+	var instancia_yuyo: Node3D = ambay.instantiate()
+	add_child(instancia_yuyo)
+
+	var marcadores: Array[Marker3D] = []
+
+	for hijo in puntos_spawn3.get_children():
+		if hijo is Marker3D:
+			marcadores.append(hijo)
+
+	if marcadores.is_empty():
+		push_error("No hay Marker3D para hacer spawn.")
+		return
+
+	var marcador : Marker3D = marcadores.pick_random()
+	instancia_yuyo.global_position = marcador.global_position
+	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -4,6 +4,7 @@ var cinematica :bool = false
 var farra := false
 
 @onready var camara=$Camera3D
+@onready var punto_farra = $"../punto_cinema_farra"
 
 @export var sensi := 0.004
 @export_range(-90.0, 0.0, 0.1, "radians_as_degrees") var minim_angulo_vertical = -PI/2
@@ -16,6 +17,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _unhandled_input(event: InputEvent) -> void:
+	
+
 	
 	if cinematica == false:
 		if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -32,7 +35,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-
+func posiciona():
+	cinematica = true
+	camara.position = punto_farra.position
 		#la funcion clamp hace que se limiten ciertos valores
 	
  

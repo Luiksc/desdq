@@ -1,6 +1,7 @@
 [gd_scene load_steps=80 format=4 uid="uid://cg1pi2x020okd"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/karau_n_3.gd" id="1_pil3v"]
+[ext_resource type="Script" path="res://escenarios/juador/pivote_karau_n3.gd" id="2_8qu80"]
 [ext_resource type="Texture2D" uid="uid://dnk6dawjb7fm7" path="res://modelos/karau omaña hi'arupi/karau_0.png" id="4_g2xx3"]
 [ext_resource type="Texture2D" uid="uid://dholiclseo6om" path="res://modelos/karau omaña hi'arupi/karau_1.png" id="5_1papy"]
 [ext_resource type="Texture2D" uid="uid://dbnuemb87qdow" path="res://modelos/karau omaña hi'arupi/karau_2.png" id="6_e044e"]
@@ -15,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://b43e0b8egw8ln" path="res://modelos/karau omaña hi'arupi/karau_11.png" id="15_e5vup"]
 [ext_resource type="Texture2D" uid="uid://c80ol0yqbanp1" path="res://modelos/karau omaña hi'arupi/karau_12.png" id="16_sn71h"]
 [ext_resource type="Texture2D" uid="uid://sycen38k7toh" path="res://modelos/karau omaña hi'arupi/karau_13.png" id="17_d0l3j"]
-[ext_resource type="Script" path="res://escenarios/scripts/camara_spring_arm_3d.gd" id="17_mqnvt"]
 [ext_resource type="Script" path="res://escenarios/juador/seguimiento de camara.gd" id="18_grc35"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_t0yxi"]
@@ -1100,8 +1100,7 @@ shape = SubResource("CylinderShape3D_t0yxi")
 
 [node name="pivote" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.24271, 0)
-script = ExtResource("17_mqnvt")
-minim_angulo_vertical = -0.785398
+script = ExtResource("2_8qu80")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="pivote"]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, 0)

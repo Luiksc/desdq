@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0faos2olkbko"
+path="res://.godot/imported/El karau - Quemil Yambay letra'y.mp3-e1549a8581f7eb616e1ed1ab439b1595.mp3str"
+
+[deps]
+
+source_file="res://audios/musica de nivel/El karau - Quemil Yambay letra'y.mp3"
+dest_files=["res://.godot/imported/El karau - Quemil Yambay letra'y.mp3-e1549a8581f7eb616e1ed1ab439b1595.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

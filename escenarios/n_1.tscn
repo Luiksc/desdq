@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_whcm0"]
 [ext_resource type="PackedScene" uid="uid://cqpeejgxglac6" path="res://escenarios/npc.tscn" id="3_3ccld"]
 [ext_resource type="MeshLibrary" uid="uid://rhowvwxd6qjc" path="res://modelos/libr mesh/1libreria_chaco.tres" id="5_ce0le"]
-[ext_resource type="Texture2D" uid="uid://bap1tjuet1l42" path="res://modelos/KINCHO/kincho perron-reakls_0.png" id="5_m7ox8"]
+[ext_resource type="Texture2D" uid="uid://di03i3g5cdwfy" path="res://modelos/KINCHO/kincho perron-reakls_0.png" id="5_m7ox8"]
 [ext_resource type="PackedScene" uid="uid://dt8fxjokm7w7t" path="res://escenarios/nivel_1_final.tscn" id="5_nk8o6"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="6_f6spo"]
 [ext_resource type="Texture2D" uid="uid://be56g6tfookgy" path="res://modelos/KINCHO/kincho perron-reakls_1.png" id="6_tcqda"]
@@ -53,13 +53,13 @@
 [ext_resource type="AudioStream" uid="uid://ogvi4vkp2wxm" path="res://audios/Sonidos del chaco. (mp3cut.net).mp3" id="30_qdt6t"]
 [ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/Sonidos del Chaco ambiente.mp3" id="31_8t052"]
 [ext_resource type="PackedScene" uid="uid://bxkgxyh6ujemx" path="res://escenarios/npc3_kalo'i.tscn" id="31_mq55w"]
-[ext_resource type="AudioStream" uid="uid://bcnwb5v13qbut" path="res://audios/Selección De Polkas 1 - Mamá Cumanda  Jagua Ñetu´o  Achuita.mp3" id="32_i8tdx"]
 [ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="32_oa7xj"]
 [ext_resource type="AudioStream" uid="uid://rnfh0p7isxb7" path="res://audios/sápe.mp3" id="34_6xlwd"]
 [ext_resource type="AudioStream" uid="uid://s2ssaqulrhei" path="res://audios/hýpy (mp3cut.net).mp3" id="35_k2y46"]
 [ext_resource type="PackedScene" uid="uid://br72pgind7jsh" path="res://escenarios/emilia.tscn" id="39_v3laf"]
 [ext_resource type="PackedScene" uid="uid://cvcmq2x0et610" path="res://UI/mate_gamarra.tscn" id="40_8o8iu"]
 [ext_resource type="PackedScene" uid="uid://cm4gmnji8mv4e" path="res://escenarios/ojerokyva.tscn" id="41_mkucl"]
+[ext_resource type="AudioStream" uid="uid://bldraj880nhfk" path="res://audios/musica de nivel/Mateo-gamarra-Duo-Quintana-letra_yme.mp3" id="58_hpo7d"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ycvxn"]
 panorama = ExtResource("2_whcm0")
@@ -1842,9 +1842,9 @@ autoplay = true
 
 [node name="musica" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2789, 0, -297.552)
-stream = ExtResource("32_i8tdx")
-volume_db = -4.055
-unit_size = 11.75
+stream = ExtResource("58_hpo7d")
+volume_db = 5.457
+unit_size = 13.0
 autoplay = true
 
 [node name="Sápe" type="AudioStreamPlayer" parent="."]

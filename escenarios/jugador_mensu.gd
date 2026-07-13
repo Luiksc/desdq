@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo,
 	move_and_slide()
 	
 	if input_direccion.length()>0.1:
-		animaciones.play("oho")
+		animaciones.play("corre")
 	else:
 		animaciones.play("repira")
 	
