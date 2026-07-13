@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dl4hympx2v4ha" path="res://modelos/objetos/chaco/karanda'y/arboreo_1.png" id="3_tqv1f"]
 [ext_resource type="PackedScene" uid="uid://l4ucjffyyage" path="res://modelos/objetos/chaco/karanda'y/arbolito2.tscn" id="4_5gggf"]
 [ext_resource type="PackedScene" uid="uid://bfj2fl0m56kx7" path="res://modelos/objetos/chaco/tape/tape extenso/meshes/1.tscn" id="5_gxg0l"]
-[ext_resource type="PackedScene" uid="uid://dojhdsvgguyqy" path="res://modelos/objetos/chaco/arbusto1/arbutiti.tscn" id="5_tdeim"]
+[ext_resource type="PackedScene" uid="uid://dojhdsvgguyqy" path="res://modelos/objetos/chaco/arboles it/arvores/arbutiti.tscn" id="5_tdeim"]
 [ext_resource type="PackedScene" uid="uid://b1mlablv1vkwe" path="res://modelos/objetos/chaco/karanda'y/arbolito3.tscn" id="5_wmcka"]
 [ext_resource type="PackedScene" uid="uid://c0h2cvna2qbyo" path="res://modelos/objetos/chaco/tape/tape extenso/meshes/2.tscn" id="6_8751l"]
 [ext_resource type="PackedScene" uid="uid://pvf8817wmd3s" path="res://modelos/objetos/chaco/arbusto1/plane.tscn" id="7_ptgc5"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://ctpepetfyamp7" path="res://modelos/objetos/chaco/tape/tape rembe/4.tscn" id="28_y57ls"]
 [ext_resource type="PackedScene" uid="uid://gp14dad7ou80" path="res://modelos/objetos/chaco/tape/tape rembe/5.tscn" id="29_30pdi"]
 [ext_resource type="PackedScene" uid="uid://dy0ltmxot0no6" path="res://modelos/objetos/chaco/tape/tape rembe/6.tscn" id="30_02nst"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sdmn"]
 resource_name = "material_0"

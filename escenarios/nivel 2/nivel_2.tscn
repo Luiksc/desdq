@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cra8g8vnhdjn5" path="res://modelos/objetos/Alto parana/tinglado/tinglado_0.png" id="17_mlsp7"]
 [ext_resource type="Texture2D" uid="uid://bpdpqk4na5sr" path="res://modelos/objetos/Alto parana/tinglado/tinglado_1.png" id="18_lcr77"]
 [ext_resource type="Texture2D" uid="uid://dwf0hfthamvqq" path="res://modelos/objetos/Alto parana/tinglado/tinglado_2.png" id="19_0faeu"]
-[ext_resource type="Texture2D" uid="uid://cyu2s7au0hfdv" path="res://modelos/objetos/Alto parana/tinglado/tinglado_3.png" id="20_406b4"]
+[ext_resource type="Texture2D" uid="uid://6fi3qrukma3b" path="res://modelos/objetos/Alto parana/tinglado/tinglado_3.png" id="20_406b4"]
 [ext_resource type="Texture2D" uid="uid://by0asytavplbj" path="res://modelos/objetos/Alto parana/tinglado/tinglado_4.png" id="21_tmgyu"]
 [ext_resource type="Texture2D" uid="uid://nsls3lxptj1r" path="res://modelos/objetos/Alto parana/tinglado/Takuara_0.png" id="22_r4bvy"]
 [ext_resource type="Texture2D" uid="uid://cjlfevlb3cj4a" path="res://modelos/objetos/Alto parana/tinglado/Takuara_1.png" id="23_sj4ut"]
@@ -2230,7 +2230,7 @@ transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 27, 0.
 outa = NodePath("../waypoints mensu2/Marker3D")
 ohota = NodePath("../waypoints mensu2/Marker3D2")
 
-[node name="jugador" parent="." groups=["jugador_global"] instance=ExtResource("25_4y7wp")]
+[node name="jugador" parent="." instance=ExtResource("25_4y7wp")]
 transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, -52.9695, 0.712607, -22.0727)
 
 [node name="mensu1" parent="." node_paths=PackedStringArray("waypoint", "jevyrenda") instance=ExtResource("14_3hira")]

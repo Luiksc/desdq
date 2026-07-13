@@ -3,11 +3,13 @@ extends CharacterBody3D
  
    
 @onready var pivote: Node3D = $pivote
-@onready var piel: Node3D = $blockbench_export2
-@onready var animaciones : AnimationPlayer =  $blockbench_export2/AnimationPlayer # nodo de la cámara 
+@onready var piel: Node3D = $blockbench_export
+@onready var animaciones : AnimationPlayer =  $blockbench_export/AnimationPlayer  # nodo de la cámara 
+
 
 @export var vel_rotacion: float  # qué tan rápido rota el personaje
 
+var farra := false
 var anima_activo = true
 var velo_max : float = 10
 var distans_salto: float = 2.5 
@@ -64,10 +66,10 @@ func moviminto(delta: float) -> void:
 		return
 
 	#   DIRECCION con input
-
-	input_direccion.x = Input.get_axis("ui_left", "ui_right")
-	input_direccion.z = Input.get_axis("ui_up", "ui_down")
-	input_direccion = input_direccion.normalized() # normaliza y regulariza movement
+	if farra == false:
+		input_direccion.x = Input.get_axis("ui_left", "ui_right")
+		input_direccion.z = Input.get_axis("ui_up", "ui_down")
+		input_direccion = input_direccion.normalized() # normaliza y regulariza movement
 
 	# coyote time
 	# estuvo_suelo se actualiza cada frame: true si está en suelo false si está en aire

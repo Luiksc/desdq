@@ -1068,7 +1068,7 @@ radius = 0.354085
 [sub_resource type="SphereShape3D" id="SphereShape3D_ir053"]
 radius = 0.1
 
-[node name="dionisio" type="CharacterBody3D" groups=["jugon"]]
+[node name="dionisio" type="CharacterBody3D" groups=["jugador_global", "jugon"]]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.00116591, 0, 0)
 collision_layer = 2
 script = ExtResource("1_jxq0r")
@@ -1082,7 +1082,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.666
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24375, 0)
 
 [node name="brazoizquierda2" type="Node3D" parent="blockbench_export2/base/extremidades2"]
-transform = Transform3D(0.766044, -0.642176, -0.028038, 0.642788, 0.765315, 0.0334144, -3.72529e-09, -0.0436194, 0.999048, -0.18125, 1.49375, 0.31875)
+transform = Transform3D(0.766044, -0.642176, -0.028038, 0.642788, 0.765315, 0.0334144, -2.23517e-08, -0.0436194, 0.999048, -0.18125, 1.49375, 0.31875)
 
 [node name="jyva 1" type="MeshInstance3D" parent="blockbench_export2/base/extremidades2/brazoizquierda2"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, -0.130029, 0.987672, 0.0871557, 0.0113761, -0.0864101, 0.996195, 0, 0.0941706, 0.0483925)
@@ -1100,7 +1100,7 @@ mesh = SubResource("ArrayMesh_4blqx")
 skeleton = NodePath("")
 
 [node name="brazoderecha2" type="Node3D" parent="blockbench_export2/base/extremidades2"]
-transform = Transform3D(0.766044, 0.642176, -0.028038, -0.642788, 0.765315, -0.0334144, -3.72529e-09, 0.0436194, 0.999048, -0.2375, 1.41875, -0.2875)
+transform = Transform3D(0.766044, 0.642176, -0.028038, -0.642788, 0.765315, -0.0334144, -2.23517e-08, 0.0436194, 0.999048, -0.2375, 1.41875, -0.2875)
 
 [node name="po2" type="MeshInstance3D" parent="blockbench_export2/base/extremidades2/brazoderecha2"]
 transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0.05625, -0.636951, -0.148509)
@@ -1118,7 +1118,7 @@ mesh = SubResource("ArrayMesh_3xr23")
 skeleton = NodePath("")
 
 [node name="retyma3" type="Node3D" parent="blockbench_export2/base/extremidades2"]
-transform = Transform3D(0.766044, 0.640342, 0.0560226, -0.642788, 0.763129, 0.0667652, 3.72529e-09, -0.0871557, 0.996195, 0, 0.74375, 0.346875)
+transform = Transform3D(0.766044, 0.640342, 0.0560226, -0.642788, 0.763129, 0.0667651, 4.09782e-08, -0.0871557, 0.996195, 0, 0.74375, 0.346875)
 
 [node name="jyva 23" type="MeshInstance3D" parent="blockbench_export2/base/extremidades2/retyma3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18125, 0.0127969, -0.168103)
@@ -1141,7 +1141,7 @@ mesh = SubResource("ArrayMesh_2qydk")
 skeleton = NodePath("")
 
 [node name="retyma4" type="Node3D" parent="blockbench_export2/base/extremidades2"]
-transform = Transform3D(0.793353, -0.606445, 0.0530571, 0.608761, 0.790334, -0.0691453, 3.72529e-09, 0.0871557, 0.996195, -0.1875, 0.61875, -0.228125)
+transform = Transform3D(0.793352, -0.606445, 0.0530571, 0.608762, 0.790334, -0.0691452, 1.86264e-08, 0.0871557, 0.996195, -0.1875, 0.61875, -0.228125)
 
 [node name="jyva 4" type="MeshInstance3D" parent="blockbench_export2/base/extremidades2/retyma4"]
 transform = Transform3D(1, 0, 0, 0, -1, -1.22465e-16, 0, 1.22465e-16, -1, 0.00625, -0.239198, 0.0295581)
