@@ -30,7 +30,7 @@ func _ready() -> void:
 	
 	sorpresa.hide()
 	animacion.animation_finished.connect(animacion_termino)
-	
+	Estado = estado.oho
 	timer_omuña.wait_time = 4.0
 	timer_omuña.one_shot = true
 	if not timer_omuña.timeout.is_connected(_on_timer_omuña_timeout):

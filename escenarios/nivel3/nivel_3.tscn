@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=122 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="1_4t7wk"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="2_3bf3m"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://cocyxrb2xpew8" path="res://modelos/objetos/Alto parana/arbul2/yvyralillo.tscn" id="25_57rt0"]
 [ext_resource type="PackedScene" uid="uid://drdoix7ai6o83" path="res://modelos/objetos/chaco/arbusto1/arbusro2.tscn" id="26_2cpkd"]
 [ext_resource type="AudioStream" uid="uid://0faos2olkbko" path="res://audios/musica de nivel/El karau - Quemil Yambay letra'y.mp3" id="29_hb2yn"]
+[ext_resource type="PackedScene" path="res://escenarios/nivel3/capsula_yuyo.tscn" id="30_capsula"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="29_ovnw8"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
@@ -1829,6 +1830,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 2, 90)
 
 [node name="Marker3D3" type="Marker3D" parent="posible_aparecer_amba\'y"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9286, 2.58875, 128)
+
+[node name="capsulas_yuyo" type="Node3D" parent="."]
+
+[node name="capsula_kaarurupa_1" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1.4, 40)
+
+[node name="capsula_kaarurupa_2" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 1.4, 35)
+
+[node name="capsula_kaarurupa_3" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 1.4, 33)
+
+[node name="capsula_kaare_1" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 2, 55)
+
+[node name="capsula_kaare_2" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2, 72)
+
+[node name="capsula_kaare_3" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2.2, 85)
+
+[node name="capsula_ambay_1" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 119)
+
+[node name="capsula_ambay_2" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 2, 88)
+
+[node name="capsula_ambay_3" parent="capsulas_yuyo" instance=ExtResource("30_capsula")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9286, 2.58875, 126)
 
 [node name="final" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1.38278, 193)

@@ -23,6 +23,9 @@ var final = false
 
 @onready var lista =$Control/ItemList
 
+# Referencia al contenedor de cápsulas
+@onready var capsulas_yuyo: Node3D = $capsulas_yuyo
+
 var dialogo_activo: bool = false
 var npc_actual: String = ""
 var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
@@ -88,7 +91,14 @@ func spawn_yuyo1():
 
 	var marcador : Marker3D = marcadores.pick_random()
 	instancia_yuyo.global_position = marcador.global_position
-	
+
+	# Vincular las 3 cápsulas de ka'arurupa con este yuyo instanciado
+	for nombre in ["capsula_kaarurupa_1", "capsula_kaarurupa_2", "capsula_kaarurupa_3"]:
+		var capsula = capsulas_yuyo.get_node_or_null(nombre)
+		if capsula:
+			capsula.vincular_yuyo(instancia_yuyo)
+			capsula.id_yuyo_esperado = "ka'arurupa"
+
 func spawn_yuyo2():
 	var instancia_yuyo: Node3D = kaare.instantiate()
 	add_child(instancia_yuyo)
@@ -107,6 +117,13 @@ func spawn_yuyo2():
 
 	var marcador : Marker3D = marcadores.pick_random()
 	instancia_yuyo.global_position = marcador.global_position
+
+	# Vincular las 3 cápsulas de ka'are con este yuyo instanciado
+	for nombre in ["capsula_kaare_1", "capsula_kaare_2", "capsula_kaare_3"]:
+		var capsula = capsulas_yuyo.get_node_or_null(nombre)
+		if capsula:
+			capsula.vincular_yuyo(instancia_yuyo)
+			capsula.id_yuyo_esperado = "ka'aré"
 	
 func spawn_yuyo3():
 	var instancia_yuyo: Node3D = ambay.instantiate()
@@ -126,7 +143,13 @@ func spawn_yuyo3():
 
 	var marcador : Marker3D = marcadores.pick_random()
 	instancia_yuyo.global_position = marcador.global_position
-	
+
+	# Vincular las 3 cápsulas de amba'y con este yuyo instanciado
+	for nombre in ["capsula_ambay_1", "capsula_ambay_2", "capsula_ambay_3"]:
+		var capsula = capsulas_yuyo.get_node_or_null(nombre)
+		if capsula:
+			capsula.vincular_yuyo(instancia_yuyo)
+			capsula.id_yuyo_esperado = "amba'y"
 
 
 

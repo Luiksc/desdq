@@ -29,7 +29,7 @@ var Estado = estado
 func _ready() -> void:
 	sorpresa.hide()
 	animacion.animation_finished.connect(animacion_termino)
-
+	Estado = estado.oho
 	timer_omuña.wait_time = 4.0
 	timer_omuña.one_shot = true
 	if not timer_omuña.timeout.is_connected(_on_timer_omuña_timeout):
@@ -88,7 +88,9 @@ func _physics_process(delta: float) -> void:
 			if jugador == null:
 				velocity = Vector3.ZERO
 				return
-			
+			if not is_on_floor():
+				velocity.y -= gravedad * delta
+				velocity.y = max(velocity.y, -gravedad * 3)
 			var direccion = jugador.global_position - global_position
 			direccion.y = 0
 			if not is_on_floor():

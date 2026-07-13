@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://capsula_yuyo_01"]
+
+[ext_resource type="Script" path="res://escenarios/nivel3/capsula_yuyo.gd" id="1_capsula"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_capsula"]
+radius = 0.4
+height = 1.2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_capsula"]
+radius = 0.4
+height = 1.2
+
+[node name="CapsulaNodo" type="Node3D"]
+script = ExtResource("1_capsula")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+mesh = SubResource("CapsuleMesh_capsula")
