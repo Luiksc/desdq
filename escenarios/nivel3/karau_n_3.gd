@@ -188,7 +188,10 @@ func procesar_combo():
 	if teclas_faltantes.is_empty():
 		# Combo completado exitosamente
 		puede_moverse = true
-		camara_contro.cinematica = false
+		if camara_contro.has_method("opa_combo"):
+			camara_contro.opa_combo()
+		else:
+			camara_contro.cinematica = false
 		
 		# Ocultar todos los sprites y volver al frame 0
 		for accion in ui_combo_nodos:

@@ -6,4 +6,5 @@ extends Camera3D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position = lerp(position, spring_arm.position, delta * lerp_power)
+	if spring_arm:
+		global_transform = global_transform.interpolate_with(spring_arm.global_transform, delta * lerp_power)

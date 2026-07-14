@@ -1491,7 +1491,7 @@ data = {
 }
 
 [node name="karau" parent="." instance=ExtResource("2_pm7n1")]
-transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, 7.0012, 3, 6)
+transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, 25.0012, 3, 144)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.739942, 0.496967, -0.453331, -0.198267, 0.805117, 0.558996, 0.642788, -0.323744, 0.694272, -27, 19, 37)
