@@ -2,10 +2,11 @@ extends CharacterBody3D
 
 @export var teclas_combo: Array[String] = ["ui_down", "ui_up", "ui_left"]
 var pos_original: Vector3
-var vel_normal: float = 10
+var vel_normal: float = 13
 
 @onready var jugador = $"../../karau"
-var SPEED = 8
+@export var ojevy :  Marker3D
+var SPEED = 12
 var persigue = false
 
 @export var id_yuyo_esperado: String = ""
@@ -45,11 +46,14 @@ func _ready() -> void:
 
 func velocidad_reducida(reducir: bool) -> void:
 	if reducir:
-		SPEED = 0.4
+		SPEED = 1.5
 	else:
 		SPEED = vel_normal
 
 func volver_a_origen() -> void:
 	persigue = false
 	velocidad_reducida(false)
-	global_position = pos_original
+	var direccion = ojevy.global_position - global_position
+	direccion = direccion.normalized()
+	velocity = direccion * SPEED
+	move_and_slide()

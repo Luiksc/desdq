@@ -9,7 +9,7 @@ var final = false
 @onready var control_camara = $karau/pivote
 @onready var anima_jugon = $karau/blockbench_export/AnimationPlayer
 @onready var tri_fr = $objetos/casa1/trigger_farra
-@onready var interac = $Control/interac
+
 @onready var dialogo_piensa = $objetos/casa1
 
 @onready var puntos_spawn: Node =$"posible aparecer ka'arurupa"
@@ -61,7 +61,7 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	interac.hide()
+
 	randomize()
 	spawn_yuyo1()
 	spawn_yuyo2()
@@ -201,16 +201,16 @@ func dialog_terminado() -> void:
 	#	interac.show()
 
 func mostrar_interac(id_del_npc: String) -> void:
-	interac.show()
+
 	#jugador_puede_interac = true
 	npc_actual = id_del_npc
-# El jugador sale del área del NPC
+
 func hide_interac(id_del_npc: String) -> void:
 	if npc_actual == id_del_npc:
-		interac.hide()
-	#	jugador_puede_interac = false
+	
+	
 		npc_actual=""
-	# Si se va mientras hay un diálogo activo, reseteamos y desbloqueamos
+	
 	if dialogo_activo:
 		dialogo_activo = false
 		jugador.puede_moverse = true
@@ -253,12 +253,12 @@ func _on_objeto_recogido(id: String) -> void:
 	print(objetos_recogidos) 
 	if objetos_recogidos == "ambay":
 		$DialogSystem/sound.play()
-		lista.set_item_text(0, "Erekóma Amba'y")
+		lista.set_item_text(0, "Amba'y 1/2")
 		
 	elif objetos_recogidos == "ka'arurupa":
 		$DialogSystem/sound.play()
-		lista.set_item_text(1, "Erekóma Ka'arurupa")
+		lista.set_item_text(1, "Ka'arurupa 1/1")
 		
 	if objetos_recogidos == "ka'aré":
 		$DialogSystem/sound.play()
-		lista.set_item_text(2, "Erekóma Ka'aré")
+		lista.set_item_text(2, "Ka'arẽ 1/1")

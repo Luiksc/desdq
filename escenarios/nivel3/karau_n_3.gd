@@ -12,6 +12,7 @@ signal combo
 var mymba_en_combo: Node3D = null
 var teclas_faltantes: Array[String] = []
 var posibles_acciones = ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar"]
+var ui_combo_nodos: Dictionary = {}
 var farra := false
 var anima_activo = true
 var velo_max : float = 10
@@ -41,6 +42,15 @@ func _ready() -> void:
 	anima_activo= true
 	animaciones.play("repira")
 	
+	# Buscar los nodos AnimatedSprite2D para el combo y ocultarlos inicialmente
+	var root = get_tree().get_root()
+	for accion in posibles_acciones:
+		var nodo_sprite = root.find_child(accion, true, false)
+		if nodo_sprite and nodo_sprite is AnimatedSprite2D:
+			ui_combo_nodos[accion] = nodo_sprite
+			nodo_sprite.hide()
+			nodo_sprite.frame = 0
+
 
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
 	
@@ -152,6 +162,16 @@ func _on_combo_body_entered(body: Node3D) -> void:
 		else:
 			teclas_faltantes = ["interaccion", "ui_up", "ui_right"]
 			
+		# Mostrar los sprites correspondientes al combo
+		for accion in posibles_acciones:
+			if ui_combo_nodos.has(accion):
+				var sprite = ui_combo_nodos[accion]
+				if accion in teclas_faltantes:
+					sprite.show()
+					sprite.frame = 0
+				else:
+					sprite.hide()
+			
 		puede_moverse = false
 		if body.has_method("velocidad_reducida"):
 			body.velocidad_reducida(true)
@@ -161,12 +181,19 @@ func procesar_combo():
 		if Input.is_action_just_pressed(accion):
 			if accion in teclas_faltantes:
 				teclas_faltantes.erase(accion)
+				# Cambiar al frame 1 cuando se presiona correctamente
+				if ui_combo_nodos.has(accion):
+					ui_combo_nodos[accion].frame = 1
 				
 	if teclas_faltantes.is_empty():
 		# Combo completado exitosamente
 		puede_moverse = true
 		camara_contro.cinematica = false
 		
+		# Ocultar todos los sprites y volver al frame 0
+		for accion in ui_combo_nodos:
+			ui_combo_nodos[accion].hide()
+			ui_combo_nodos[accion].frame = 0
 		
 		# Hacer que todos los mymbas del mismo yuyo vuelvan a su origen
 		if mymba_en_combo != null and "id_yuyo_esperado" in mymba_en_combo:

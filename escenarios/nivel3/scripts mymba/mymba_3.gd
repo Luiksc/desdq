@@ -2,27 +2,28 @@ extends CharacterBody3D
 
 @export var teclas_combo: Array[String] = ["ui_left", "ui_down", "interaccion"]
 var pos_original: Vector3
-var vel_normal: float = 10
+var vel_normal: float = 14
 
 @onready var jugador = $"../../karau"
-@onready var interac = $"../../Control/interac"
-var SPEED = 8
+
+@export var ojevy :  Marker3D
+@export var id_yuyo_esperado: String = ""
+
+
+var SPEED = 14
 var persigue = false
 
 func _ready() -> void:
 	pos_original = global_position
 	vel_normal = SPEED
-
 func _physics_process(delta: float) -> void:
 	if persigue:
 		var direccion = jugador.global_position - global_position
-		direccion.y = 0
+		
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
 	move_and_slide()
-@export var id_yuyo_esperado: String = ""
-
-
+	
 var yuyo_instancia: Node3D = null
 
 
@@ -44,5 +45,26 @@ func _reaccionar(id: String) -> void:
 	
 	persigue = true
 
-func combo():
-	SPEED = 0.5
+func velocidad_reducida(reducir: bool) -> void:
+	
+	if reducir:
+		SPEED = 0.5
+	else:
+		SPEED = vel_normal
+	
+
+func volver_a_origen() -> void:
+	persigue = false
+
+	velocidad_reducida(false)
+	var direccion = ojevy.global_position - global_position
+	
+	direccion = direccion.normalized()
+	velocity = direccion * SPEED
+	
+	move_and_slide()
+	
+	
+	
+	
+	
