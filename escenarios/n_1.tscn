@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=120 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="6_ytt0h"]
 [ext_resource type="Texture2D" uid="uid://dh3u4sqm23yrm" path="res://modelos/KINCHO/kincho perron-reakls_2.png" id="7_lfen8"]
 [ext_resource type="Texture2D" uid="uid://b4odljolj1x4r" path="res://modelos/KINCHO/kincho perron-reakls_3.png" id="8_3ljbb"]
+[ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="8_fhyh1"]
 [ext_resource type="PackedScene" uid="uid://bg3cospwacyuc" path="res://escenarios/npc_2_mariano.tscn" id="9_4f3fa"]
 [ext_resource type="Texture2D" uid="uid://cw6gur2e77e8w" path="res://modelos/KINCHO/kincho perron-reakls_4.png" id="9_qkwhr"]
 [ext_resource type="Texture2D" uid="uid://bbctlcu37cv7x" path="res://modelos/KINCHO/kincho perron-reakls_5.png" id="10_bdgcw"]
@@ -96,6 +97,28 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_jvlji"]
 font = ExtResource("6_f6spo")
 font_size = 30
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlxe7"]
+atlas = ExtResource("8_fhyh1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27jxw"]
+atlas = ExtResource("8_fhyh1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bha3u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlxe7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27jxw")
+}],
+"loop": true,
+"name": &"interactura",
+"speed": 2.0
+}]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lmal"]
 resource_name = "material_0"
@@ -1170,6 +1193,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6877, 2.67893, 15.1799)
 
 [node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]
+visible = false
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -1186,6 +1210,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Interactuar" type="Label" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -1204,7 +1229,6 @@ label_settings = SubResource("LabelSettings_oxi0n")
 horizontal_alignment = 1
 
 [node name="espantar" type="Label" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -1261,6 +1285,14 @@ offset_bottom = 599.0
 text = "[E] para el siguiente relato
 "
 label_settings = SubResource("LabelSettings_jvlji")
+
+[node name="Interac" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(582, 575)
+scale = Vector2(3.28125, 2.875)
+sprite_frames = SubResource("SpriteFrames_bha3u")
+animation = &"interactura"
+frame_progress = 0.591745
 
 [node name="*objetos" type="Node" parent="."]
 

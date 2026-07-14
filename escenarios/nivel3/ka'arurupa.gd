@@ -68,7 +68,7 @@ func _ready() -> void:
 	spawn_yuyo3()
 	
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
-	$karau.combo.connect(opa_combo1)
+
 
 
 
@@ -262,7 +262,3 @@ func _on_objeto_recogido(id: String) -> void:
 	if objetos_recogidos == "ka'aré":
 		$DialogSystem/sound.play()
 		lista.set_item_text(2, "Erekóma Ka'aré")
-func opa_combo1():
-	$capsulas_yuyo/mymba1_kaarurupa.queue_free()
-	$capsulas_yuyo/mymba2_kaarurupa.queue_free()
-	$capsulas_yuyo/mymba3_kaarurupa.queue_free()

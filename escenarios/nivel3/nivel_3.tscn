@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=151 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="1_4t7wk"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="2_3bf3m"]
@@ -38,6 +38,11 @@
 [ext_resource type="PackedScene" uid="uid://kntyohn40tlx" path="res://escenarios/nivel3/mymba_7.tscn" id="34_s5y6e"]
 [ext_resource type="PackedScene" uid="uid://cb1bbwbd4sdbx" path="res://escenarios/nivel3/mymba_8.tscn" id="35_466hp"]
 [ext_resource type="PackedScene" uid="uid://bnm7f5w8mo36" path="res://escenarios/nivel3/mymba_9.tscn" id="36_iuag4"]
+[ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="38_rumrb"]
+[ext_resource type="Texture2D" uid="uid://d3csp86as7104" path="res://UI/UI_boton/[W].png" id="39_17kh3"]
+[ext_resource type="Texture2D" uid="uid://d188xd71j2pqp" path="res://UI/UI_boton/[S].png" id="40_p12pk"]
+[ext_resource type="Texture2D" uid="uid://d1qrhj015a60b" path="res://UI/UI_boton/[A].png" id="41_wguq1"]
+[ext_resource type="Texture2D" uid="uid://ch5smsjk200cx" path="res://UI/UI_boton/[D].png" id="42_6jmce"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
 panorama = ExtResource("3_3kqdd")
@@ -1370,10 +1375,118 @@ size = Vector3(23, 13, 2)
 font = ExtResource("29_ovnw8")
 font_size = 30
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ibgw"]
+atlas = ExtResource("38_rumrb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fscnf"]
+atlas = ExtResource("38_rumrb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvs7u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ibgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fscnf")
+}],
+"loop": false,
+"name": &"[E]",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anrbk"]
+atlas = ExtResource("39_17kh3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cusk"]
+atlas = ExtResource("39_17kh3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4nrg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anrbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cusk")
+}],
+"loop": false,
+"name": &"W",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibl0f"]
+atlas = ExtResource("40_p12pk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt4gg"]
+atlas = ExtResource("40_p12pk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m22j0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibl0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt4gg")
+}],
+"loop": false,
+"name": &"s",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0op5k"]
+atlas = ExtResource("41_wguq1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0yii"]
+atlas = ExtResource("41_wguq1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eia1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0op5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0yii")
+}],
+"loop": false,
+"name": &"a",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bww2j"]
+atlas = ExtResource("42_6jmce")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e331a"]
+atlas = ExtResource("42_6jmce")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82cd2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bww2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e331a")
+}],
+"loop": false,
+"name": &"d",
+"speed": 2.0
+}]
+
 [node name="Nivel 3" type="Node3D"]
 script = ExtResource("14_dsh1k")
-
-[node name="DialogSystem" parent="." instance=ExtResource("2_3bf3m")]
 
 [node name="GridMap yvy" type="GridMap" parent="."]
 mesh_library = ExtResource("1_4t7wk")
@@ -1855,7 +1968,7 @@ collision_layer = 128
 collision_mask = 128
 
 [node name="mymba3_kaarurupa" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("30_r0cbi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 2, 42)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 2, 44)
 collision_layer = 128
 collision_mask = 128
 
@@ -1892,6 +2005,9 @@ collision_mask = 128
 [node name="final" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1.38278, 193)
 
+[node name="DialogSystem" parent="." instance=ExtResource("2_3bf3m")]
+visible = false
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -1904,7 +2020,7 @@ anchor_left = 8.825
 anchor_top = 13.775
 anchor_right = 20.075
 anchor_bottom = 14.525
-text = "[E] PARA AGARRA"
+text = "PRESIONA [E]  [W]  [D]"
 label_settings = SubResource("LabelSettings_4j4su")
 metadata/_edit_use_anchors_ = true
 
@@ -1921,6 +2037,43 @@ item_0/text = "Eporeka Amba'y"
 item_1/text = "Etopa Ka'arurupa"
 item_2/text = "Eheka ka'aré"
 metadata/_edit_use_anchors_ = true
+
+[node name="interaccion" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(252, 553)
+scale = Vector2(2, 2.09375)
+sprite_frames = SubResource("SpriteFrames_gvs7u")
+animation = &"[E]"
+frame = 1
+frame_progress = 1.0
+
+[node name="ui_up" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(415, 555)
+scale = Vector2(2.09375, 2.15625)
+sprite_frames = SubResource("SpriteFrames_f4nrg")
+animation = &"W"
+
+[node name="ui_down" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(562, 553.75)
+scale = Vector2(2.0625, 2.04688)
+sprite_frames = SubResource("SpriteFrames_m22j0")
+animation = &"s"
+
+[node name="ui_left" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(728, 553.5)
+scale = Vector2(2.0625, 2.09375)
+sprite_frames = SubResource("SpriteFrames_eia1w")
+animation = &"a"
+
+[node name="ui_right" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(896, 553.5)
+scale = Vector2(2, 2.09375)
+sprite_frames = SubResource("SpriteFrames_82cd2")
+animation = &"d"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 4, 193)

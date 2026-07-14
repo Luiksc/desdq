@@ -1,13 +1,19 @@
 extends CharacterBody3D
 
+@export var teclas_combo: Array[String] = ["ui_down", "ui_up", "ui_left"]
+var pos_original: Vector3
+var vel_normal: float = 10
+
 @onready var jugador = $"../../karau"
+@onready var interac = $"../../Control/interac"
 var SPEED = 8
 var persigue = false
 
 @export var id_yuyo_esperado: String = ""
 
 func  _ready() -> void:
-	$"../../karau".combo.connect(combo)
+	pos_original = global_position
+	vel_normal = SPEED
 
 func _physics_process(delta: float) -> void:
 	if persigue:
@@ -38,6 +44,17 @@ func _reaccionar(id: String) -> void:
 	
 	persigue = true
 
-func combo():
-	SPEED = 0.2
+func velocidad_reducida(reducir: bool) -> void:
+	interac.show()
+	if reducir:
+		SPEED = 0.4
+	else:
+		SPEED = vel_normal
+	
+
+func volver_a_origen() -> void:
+	persigue = false
+	interac.hide()
+	velocidad_reducida(false)
+	global_position = pos_original
 	

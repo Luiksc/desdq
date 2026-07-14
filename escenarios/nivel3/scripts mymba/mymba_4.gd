@@ -1,5 +1,9 @@
 extends CharacterBody3D
 
+@export var teclas_combo: Array[String] = ["ui_down", "ui_right", "ui_left"]
+var pos_original: Vector3
+var vel_normal: float = 10
+
 @onready var jugador = $"../../karau"
 var SPEED = 8
 var persigue = false
@@ -35,3 +39,18 @@ func _on_yuyo_recibido(id: String) -> void:
 func _reaccionar(id: String) -> void:
 	
 	persigue = true
+
+func _ready() -> void:
+	pos_original = global_position
+	vel_normal = SPEED
+
+func velocidad_reducida(reducir: bool) -> void:
+	if reducir:
+		SPEED = 0.4
+	else:
+		SPEED = vel_normal
+
+func volver_a_origen() -> void:
+	persigue = false
+	velocidad_reducida(false)
+	global_position = pos_original

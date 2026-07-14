@@ -6,7 +6,7 @@ class_name  Dialog_system
 @onready var npc_label: Label = %npc_name
 @onready var text_label: RichTextLabel = %convo
 @onready var next_button: Button = %next_button
-@onready var sound_tool: AudioStreamPlayer = %sound
+
 
 @export var typewriter_speed: float = 30.0
 
@@ -59,6 +59,7 @@ func estar_mostrando() -> bool:
 	return mostrar
 
 func neixt():
+	
 	_on_next_button_pressed()
 	
 func _on_next_button_pressed() -> void:

@@ -1092,7 +1092,7 @@ _data = {
 [sub_resource type="SphereShape3D" id="SphereShape3D_vencc"]
 radius = 5.0
 
-[node name="dionisio" type="CharacterBody3D" groups=["jugador_global", "jugon"]]
+[node name="karau" type="CharacterBody3D" groups=["jugador_global", "jugon"]]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.00116591, 0, 0)
 collision_layer = 2
 script = ExtResource("1_pil3v")

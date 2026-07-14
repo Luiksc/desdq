@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var interac: Label = $Control/Interactuar
+@onready var interac: AnimatedSprite2D = $Control/Interac
 @onready var espantad: Label = $Control/espantar
 @onready var perder: Label = $Control/perdiendo
 @onready var siguente: Label = $Control/siguietne
@@ -94,8 +94,8 @@ func _process(delta: float) -> void:
 	if dialogo_activo:
 		# E funciona como "next" mientras el diálogo está ocurriendo
 		if Input.is_action_just_pressed("interaccion"):
-			if anima_jugador.current_animation != "oha'aro":
-				anima_jugador.play("oha'aro")
+			
+			
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
 			
@@ -164,6 +164,7 @@ func dialog_terminado() -> void:
 # El jugador entra al área del NPC
 func mostrar_interac(id_del_npc: String) -> void:
 	interac.show()
+	interac.play()
 	jugador_puede_interac = true
 	npc_actual = id_del_npc
 
@@ -186,16 +187,18 @@ func destru_piensa() -> void:
 		pensamiento.queue_free()
 		
 func espanta(_body):
-	espantad.show()
+	interac.show()
+	interac.play()
 
 
 func _on_mykure_trigger_body_exited(_body: Node3D) -> void:
-	espantad.hide()
+	interac.hide()
 
 
 
 func _on_mykure_trigger_body_entered(body: Node3D) -> void:
-	espantad.show()
+	interac.show()
+	interac.play()
 	
 
 

@@ -3279,7 +3279,7 @@ outa = NodePath("../waypoints mensu2/Marker3D")
 ohota = NodePath("../waypoints mensu2/Marker3D2")
 
 [node name="jugador" parent="." instance=ExtResource("25_4y7wp")]
-transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, -52.9695, 0.712607, -22.0727)
+transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, -52.9695, 0.512607, -22.0727)
 
 [node name="mensu1" parent="." node_paths=PackedStringArray("waypoint", "jevyrenda") instance=ExtResource("14_3hira")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -50.7387, 0.400699, -19.3917)

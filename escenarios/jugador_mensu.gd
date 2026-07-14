@@ -4,7 +4,9 @@ extends CharacterBody3D
    
 @onready var pivote: Node3D = $pivote
 @onready var piel: Node3D = $blockbench_export2
+@onready var piel_oraha = $oraha
 @onready var animaciones : AnimationPlayer =  $blockbench_export2/AnimationPlayer # nodo de la cámara 
+@onready var anima_oraha : AnimationPlayer = $oraha/AnimationPlayer
 
 @export var vel_rotacion: float  # qué tan rápido rota el personaje
 
@@ -19,10 +21,12 @@ var coyote_timer: float = 0.0
 var fuerza_salto : float
 var gravedad : float
 
+
 var estuvo_suelo: bool = true
 var puede_moverse: bool = true
 var mouse_cam: bool= true #bloquea la camara al presionar escape
 var input_direccion := Vector3.ZERO
+var oraha = false
 
 @export var tiem_jump_buffer: float = 0.15
 @export var tiem_coyote: float = 0.15
@@ -31,10 +35,17 @@ const  LERP_VAL = .15
 	
 
 func _ready() -> void:
+	piel_oraha.hide()
 	fuerza_salto = (2 * distans_salto) / timp_salto
 	gravedad = (-2 * distans_salto) / (timp_salto * timp_salto)
 	anima_activo= true
-	animaciones.play("repira")
+	if oraha == false:
+		animaciones.play("repira")
+	else:
+		piel.hide()
+		piel_oraha.show()
+		anima_oraha.play("oraha")
+
 	
 
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
@@ -43,9 +54,24 @@ func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo,
 	move_and_slide()
 	
 	if input_direccion.length()>0.1:
-		animaciones.play("corre")
+		if oraha:
+			piel.hide()
+			piel_oraha.show()
+			anima_oraha.play("oraha")
+		else :
+			piel_oraha.hide()
+			piel.show()
+			animaciones.play("corre")
+		
 	else:
-		animaciones.play("repira")
+		if oraha:
+			piel.hide()
+			piel_oraha.show()
+			anima_oraha.play("opytuu")
+		else:
+			piel_oraha.hide()
+			piel.show()
+			animaciones.play("repira")
 	
 func saltar():
 	velocity.y = fuerza_salto
@@ -101,6 +127,7 @@ func moviminto(delta: float) -> void:
 		direccion.y = 0
 		direccion = direccion.normalized()
 		piel.rotation.y= lerp_angle(piel.rotation.y, (atan2(direccion.x, direccion.z))+ 3*PI/2, LERP_VAL)
+		piel_oraha.rotation.y= lerp_angle(piel_oraha.rotation.y, (atan2(direccion.x, direccion.z))+ 3*PI/2, LERP_VAL)
 		# este codigo espera que el modelo mire hacia la direccion z, el modelo esta mal y entonces se compensa
 		#con una rotacion de 3*PI/2 que son 270° en radianes
 			

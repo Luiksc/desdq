@@ -146,25 +146,29 @@ func _process(delta: float) -> void:
 	if puede_recoger and llevando == false:
 		if Input.is_action_just_pressed("interaccion"):
 			llevando=true
-			
+			jugador.oraha=true
+
 			recoger()
 			
 	if puede_dejar and llevando :
 		if Input.is_action_just_pressed("interaccion"):
 			oheja()
 			llevando = false
+			jugador.oraha= false
 			print("dejado")
 		
 	if puede_recoger2 and llevando2 == false:
 		if Input.is_action_just_pressed("interaccion"):
 			llevando2=true
+			jugador.oraha= true
 			recoger2()
 	if puede_dejar2 and llevando2:
 		if Input.is_action_just_pressed("interaccion"):
 			dejar2()
 			llevando2=false
+			jugador.oraha = false
 			print("dejao
-			")
+			.")
 	
 	if llevar == true:
 		indicador2.hide()

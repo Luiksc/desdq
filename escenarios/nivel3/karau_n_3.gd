@@ -5,12 +5,13 @@ signal combo
 @onready var pivote: Node3D = $pivote
 @onready var piel: Node3D = $blockbench_export
 @onready var animaciones : AnimationPlayer =  $blockbench_export/AnimationPlayer  # nodo de la cámara 
-
+@onready var camara_contro = $pivote
 
 @export var vel_rotacion: float  # qué tan rápido rota el personaje
 
-var opa_combo1 = false
-var combo_activo= false
+var mymba_en_combo: Node3D = null
+var teclas_faltantes: Array[String] = []
+var posibles_acciones = ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar"]
 var farra := false
 var anima_activo = true
 var velo_max : float = 10
@@ -43,8 +44,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
 	
-	if combo_activo:
-		combo1()
+	if mymba_en_combo != null:
+		procesar_combo()
 	
 	moviminto(delta)
 	move_and_slide()
@@ -142,26 +143,37 @@ func _on_final_body_entered(body: Node3D) -> void:
 
 
 func _on_combo_body_entered(body: Node3D) -> void:
-	if body.is_in_group("mymba"):
+	if body.is_in_group("mymba") and mymba_en_combo == null:
+		mymba_en_combo = body
+		
+		# Leer teclas combo del mymba o usar un valor por defecto
+		if "teclas_combo" in body:
+			teclas_faltantes = body.teclas_combo.duplicate()
+		else:
+			teclas_faltantes = ["interaccion", "ui_up", "ui_right"]
+			
 		puede_moverse = false
-		combo.emit()
-		combo_activo = true
+		if body.has_method("velocidad_reducida"):
+			body.velocidad_reducida(true)
 		
-func combo1():
-	var tecla1 = false
-	var tecla2 = false
-	var tecla3 = false
-	if combo_activo:
-		if Input.is_action_just_pressed("interaccion"):
-			tecla1 = true
-		if Input.is_action_just_pressed("ui_up"):
-			tecla2 = true
-		if Input.is_action_just_pressed("ui_right"):
-			tecla3 = true
-	if tecla1 and tecla2 and tecla3 == true:
-		print("omano")
-		opa_combo1=true
-		puede_moverse= true
-		combo_activo=false
-
+func procesar_combo():
+	for accion in posibles_acciones:
+		if Input.is_action_just_pressed(accion):
+			if accion in teclas_faltantes:
+				teclas_faltantes.erase(accion)
+				
+	if teclas_faltantes.is_empty():
+		# Combo completado exitosamente
+		puede_moverse = true
+		camara_contro.cinematica = false
 		
+		
+		# Hacer que todos los mymbas del mismo yuyo vuelvan a su origen
+		if mymba_en_combo != null and "id_yuyo_esperado" in mymba_en_combo:
+			var grupo_yuyo = mymba_en_combo.id_yuyo_esperado
+			for m in get_tree().get_nodes_in_group("mymba"):
+				if m.get("id_yuyo_esperado") == grupo_yuyo:
+					if m.has_method("volver_a_origen"):
+						m.volver_a_origen()
+						
+		mymba_en_combo = null
