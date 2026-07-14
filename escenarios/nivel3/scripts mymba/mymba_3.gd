@@ -4,6 +4,9 @@ extends CharacterBody3D
 var SPEED = 8
 var persigue = false
 
+func _ready() -> void:
+	$"../../karau".combo.connect(combo)
+
 func _physics_process(delta: float) -> void:
 	if persigue:
 		var direccion = jugador.global_position - global_position
@@ -34,3 +37,6 @@ func _on_yuyo_recibido(id: String) -> void:
 func _reaccionar(id: String) -> void:
 	
 	persigue = true
+
+func combo():
+	SPEED = 0.5

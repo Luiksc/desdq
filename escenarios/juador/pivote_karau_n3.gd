@@ -2,9 +2,11 @@ extends Node3D
 
 var cinematica :bool = false
 var farra := false
+var combo := false
 
 @onready var camara=$Camera3D
 @onready var punto_farra = $"../punto_cinema_farra"
+@onready var punto_combo = $"../punto_combo"
 
 @export var sensi := 0.004
 @export_range(-90.0, 0.0, 0.1, "radians_as_degrees") var minim_angulo_vertical = -PI/2
@@ -38,6 +40,19 @@ func _unhandled_input(event: InputEvent) -> void:
 func posiciona():
 	cinematica = true
 	camara.position = punto_farra.position
+	
+func posiciona_combo():
+	camara.position = punto_combo.position
+	cinematica = true
+
+func opa_combo():
+	cinematica = false
 		#la funcion clamp hace que se limiten ciertos valores
 	
  
+
+
+func _on_combo_body_entered(body: Node3D) -> void:
+	if body.is_in_group("mymba"):
+		posiciona_combo()
+	

@@ -47,6 +47,7 @@ import/blender/enabled=false
 [global_group]
 
 jugador_global=""
+mymba=""
 
 [input]
 

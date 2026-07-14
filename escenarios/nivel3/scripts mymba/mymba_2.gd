@@ -6,10 +6,13 @@ var persigue = false
 
 @export var id_yuyo_esperado: String = ""
 
+func  _ready() -> void:
+	$"../../karau".combo.connect(combo)
+
 func _physics_process(delta: float) -> void:
 	if persigue:
 		var direccion = jugador.global_position - global_position
-		direccion.y = 0
+		
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
 	move_and_slide()
@@ -34,3 +37,7 @@ func _on_yuyo_recibido(id: String) -> void:
 func _reaccionar(id: String) -> void:
 	
 	persigue = true
+
+func combo():
+	SPEED = 0.2
+	

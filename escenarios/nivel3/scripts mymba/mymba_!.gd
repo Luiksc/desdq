@@ -7,6 +7,8 @@ var persigue = false
 
 @export var id_yuyo_esperado: String = ""
 
+func _ready() -> void:
+	$"../../karau".combo.connect(combo)
 
 var yuyo_instancia: Node3D = null
 
@@ -35,3 +37,7 @@ func _on_yuyo_recibido(id: String) -> void:
 func _reaccionar(id: String) -> void:
 	
 	persigue = true
+
+func combo():
+	SPEED = 0.2
+	

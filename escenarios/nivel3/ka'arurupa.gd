@@ -31,9 +31,7 @@ var npc_actual: String = ""
 var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
 
 #-----pohañana------
-var uno = "amba'y"
-var dos = "ka'arurupa"
-var tres = "ka'aré"
+
 
 var omano = false
 
@@ -70,6 +68,7 @@ func _ready() -> void:
 	spawn_yuyo3()
 	
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
+	$karau.combo.connect(opa_combo1)
 
 
 
@@ -94,7 +93,7 @@ func spawn_yuyo1():
 	instancia_yuyo.global_position = marcador.global_position
 
 	
-	var nombres_capsulas = ["capsula_kaarurupa_1", "capsula_kaarurupa_2", "capsula_kaarurupa_3"]
+	var nombres_capsulas = ["mymba1_kaarurupa", "mymba2_kaarurupa", "mymba3_kaarurupa"]
 	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
 	if capsula:
 		capsula.id_yuyo_esperado = "ka'arurupa"
@@ -121,7 +120,7 @@ func spawn_yuyo2():
 	instancia_yuyo.global_position = marcador.global_position
 
 	
-	var nombres_capsulas = ["capsula_kaare_1", "capsula_kaare_2", "capsula_kaare_3"]
+	var nombres_capsulas = ["mymba4_kaare", "mymba5_kaare", "mymba6_kaare"]
 	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
 	if capsula:
 		capsula.id_yuyo_esperado = "ka'aré"
@@ -148,7 +147,7 @@ func spawn_yuyo3():
 	instancia_yuyo.global_position = marcador.global_position
 
 	
-	var nombres_capsulas = ["capsula_ambay_1", "capsula_ambay_2", "capsula_ambay_3"]
+	var nombres_capsulas = ["mymba7_ambay", "mymba8_ambay", "mymba9_ambay"]
 	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
 	if capsula:
 		capsula.id_yuyo_esperado = "amba'y"
@@ -263,6 +262,7 @@ func _on_objeto_recogido(id: String) -> void:
 	if objetos_recogidos == "ka'aré":
 		$DialogSystem/sound.play()
 		lista.set_item_text(2, "Erekóma Ka'aré")
-		
-		
-		
+func opa_combo1():
+	$capsulas_yuyo/mymba1_kaarurupa.queue_free()
+	$capsulas_yuyo/mymba2_kaarurupa.queue_free()
+	$capsulas_yuyo/mymba3_kaarurupa.queue_free()

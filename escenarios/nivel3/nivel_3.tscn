@@ -1,4 +1,4 @@
-[gd_scene load_steps=130 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=131 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="1_4t7wk"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="2_3bf3m"]
@@ -1322,19 +1322,22 @@ shadow_mesh = SubResource("ArrayMesh_8mb3w")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6a7bn"]
 resource_local_to_scene = true
-size = Vector3(4, 27, 98)
+size = Vector3(6.2, 14, 98)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hplpa"]
 size = Vector3(14, 18, 58)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1pmlx"]
-size = Vector3(1, 10, 52)
+size = Vector3(1, 10, 62)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6xnkr"]
 size = Vector3(40, 10, 16.1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d33tb"]
-size = Vector3(21, 12, 31)
+size = Vector3(21, 12, 31.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jiave"]
+size = Vector3(56, 12, 5.47852)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_03ybw"]
 size = Vector3(5, 13, 38)
@@ -1720,7 +1723,7 @@ transform = Transform3D(-0.814315, 1.25282, 0, 0, 1.05605e-07, -2.07129, -0.8143
 [node name="vallas" type="StaticBody3D" parent="objetos/coliciones"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/coliciones/vallas"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 2, -15.2)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 8.5, -14.1)
 shape = SubResource("BoxShape3D_6a7bn")
 
 [node name="arbole" type="StaticBody3D" parent="objetos/coliciones"]
@@ -1741,7 +1744,7 @@ shape = SubResource("BoxShape3D_hplpa")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 10)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/coliciones/arbole3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.2, 4.5, 4.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.2, 4.5, 2.9)
 shape = SubResource("BoxShape3D_1pmlx")
 
 [node name="arbole4" type="StaticBody3D" parent="objetos/coliciones"]
@@ -1752,12 +1755,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 3.5, 2.55)
 shape = SubResource("BoxShape3D_6xnkr")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="objetos/coliciones/arbole4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 5.5, 25.7643)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 5.5, 25.7143)
 shape = SubResource("BoxShape3D_d33tb")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="objetos/coliciones/arbole4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9, 5.5, 34.7643)
-shape = SubResource("BoxShape3D_d33tb")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, 5.5, 42.2393)
+shape = SubResource("BoxShape3D_jiave")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="objetos/coliciones/arbole4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 5, 60.5)
@@ -1809,80 +1812,80 @@ shape = SubResource("BoxShape3D_c5yv8")
 [node name="posible aparecer ka\'arurupa" type="Node" parent="."]
 
 [node name="Marker3D" type="Marker3D" parent="posible aparecer ka\'arurupa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1.4, 42)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1.4, 41)
 
 [node name="Marker3D2" type="Marker3D" parent="posible aparecer ka\'arurupa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 1.4, 37)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 1.4, 35)
 
 [node name="Marker3D3" type="Marker3D" parent="posible aparecer ka\'arurupa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 1.4, 33)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 1.4, 32)
 
 [node name="posible_aparecer_ka\'are" type="Node" parent="."]
 
 [node name="Marker3D" type="Marker3D" parent="posible_aparecer_ka\'are"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 2, 57)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2, 54)
 
 [node name="Marker3D2" type="Marker3D" parent="posible_aparecer_ka\'are"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2, 74)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2, 74)
 
 [node name="Marker3D3" type="Marker3D" parent="posible_aparecer_ka\'are"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2.2, 87)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 2.2, 87)
 
 [node name="posible_aparecer_amba\'y" type="Node" parent="."]
 
 [node name="Marker3D" type="Marker3D" parent="posible_aparecer_amba\'y"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 121.343)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7, 3.2, 114.443)
 
 [node name="Marker3D2" type="Marker3D" parent="posible_aparecer_amba\'y"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 2, 90)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9, 2.4, 96.2)
 
 [node name="Marker3D3" type="Marker3D" parent="posible_aparecer_amba\'y"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9286, 2.58875, 128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9286, 2.58875, 128)
 
 [node name="capsulas_yuyo" type="Node3D" parent="."]
 
-[node name="mymba1_kaarurupa" parent="capsulas_yuyo" instance=ExtResource("28_gxq1s")]
+[node name="mymba1_kaarurupa" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("28_gxq1s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 2, 59)
 collision_layer = 128
 collision_mask = 128
 
-[node name="mymba2_kaarurupa" parent="capsulas_yuyo" instance=ExtResource("29_xkk50")]
+[node name="mymba2_kaarurupa" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("29_xkk50")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6854, 5.13405, 44)
 collision_layer = 128
 collision_mask = 128
 
-[node name="mymba3_kaarurupa" parent="capsulas_yuyo" instance=ExtResource("30_r0cbi")]
+[node name="mymba3_kaarurupa" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("30_r0cbi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 2, 42)
 collision_layer = 128
 collision_mask = 128
 
-[node name="mymba4_kaare" parent="capsulas_yuyo" instance=ExtResource("31_72if7")]
+[node name="mymba4_kaare" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("31_72if7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 2.5, 62.7)
 collision_layer = 128
 collision_mask = 128
 
-[node name="mymba5_kaare" parent="capsulas_yuyo" instance=ExtResource("32_ww5g0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3, 72)
+[node name="mymba5_kaare" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("32_ww5g0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 3, 73)
 collision_layer = 128
 collision_mask = 128
 
-[node name="mymba6_kaare" parent="capsulas_yuyo" instance=ExtResource("33_ygf5p")]
+[node name="mymba6_kaare" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("33_ygf5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 2, 86.3032)
 collision_layer = 128
 collision_mask = 128
 
-[node name="mymba7_ambay" parent="capsulas_yuyo" instance=ExtResource("34_s5y6e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 119)
+[node name="mymba7_ambay" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("34_s5y6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 3, 119)
 collision_layer = 128
 collision_mask = 128
 
-[node name="mymba8_ambay" parent="capsulas_yuyo" instance=ExtResource("35_466hp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9, 2.4, 87.9)
+[node name="mymba8_ambay" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("35_466hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9, 2.4, 87.9)
 collision_layer = 128
 collision_mask = 128
 
-[node name="mymba9_ambay" parent="capsulas_yuyo" instance=ExtResource("36_iuag4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 3, 126)
+[node name="mymba9_ambay" parent="capsulas_yuyo" groups=["mymba"] instance=ExtResource("36_iuag4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1, 3, 126.5)
 collision_layer = 128
 collision_mask = 128
 
