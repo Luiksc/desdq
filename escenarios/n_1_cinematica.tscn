@@ -967,7 +967,7 @@ grow_vertical = 2
 [node name="ã" parent="Control" instance=ExtResource("5_ivfqn")]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 28.7
+anchor_right = 28.5
 anchor_bottom = 16.05
 offset_bottom = -6.10352e-05
 metadata/_edit_use_anchors_ = true
@@ -1206,7 +1206,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="GridMap_general" type="GridMap" parent="gridmaps"]
+[node name="GridMap_plantas" type="GridMap" parent="gridmaps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0224952, 0.235226, -0.149063)
 mesh_library = ExtResource("51_m768r")
 cell_size = Vector3(0.3, 0.1, 0.3)

@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 #@onready var sako:=$blockbench_export/sako
-@onready var animacion = $blockbench_export/AnimationPlayer
+@onready var animacion = $blockbench_export2/AnimationPlayer
 @onready var sond_sorpresa = $Exclamacion
 @onready var sorpresa = $sorpresa
 @onready var timer = $Timer

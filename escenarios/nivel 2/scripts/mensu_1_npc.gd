@@ -42,12 +42,13 @@ func _physics_process(delta: float) -> void:
 		estado.oho:
 			if animacion.current_animation != "ojevy":
 				animacion.play("ojevy")
-			velocidad = 10
+			velocidad = 0.5
+			
 			var direccion = punto_ini.global_position - global_position
 			direccion.y = 0
 			var target = punto_ini.global_position
 			var distancia = direccion.length()
-			velocity = direccion * 0.08
+			velocity = direccion * velocidad
 			var angulo = atan2(direccion.x,direccion.z)
 			rotation.y = lerp_angle(rotation.y, angulo, 2 * delta)
 			direccion = direccion.normalized()
@@ -59,7 +60,6 @@ func _physics_process(delta: float) -> void:
 			
 		estado.oraha:
 			velocidad = 6
-			
 			sako.show()
 			if animacion.current_animation != "oraha":
 				animacion.play("oraha")
