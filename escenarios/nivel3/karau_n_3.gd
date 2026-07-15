@@ -13,7 +13,11 @@ var mymba_en_combo: Node3D = null
 var teclas_faltantes: Array[String] = []
 var posibles_acciones = ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar"]
 var ui_combo_nodos: Dictionary = {}
-var farra := false
+var farra := false:
+	set(value):
+		farra = value
+		if value and is_inside_tree():
+			camara_contro.posiciona()
 var anima_activo = true
 var velo_max : float = 10
 var distans_salto: float = 2.5 

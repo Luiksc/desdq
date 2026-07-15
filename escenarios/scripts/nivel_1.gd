@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var interac: AnimatedSprite2D = $Control/Interac
-@onready var espantad: Label = $Control/espantar
+
 @onready var perder: Label = $Control/perdiendo
 @onready var siguente: Label = $Control/siguietne
 @onready var jugador = $jugador  # referencia al nodo del jugador
@@ -57,7 +57,6 @@ var dialogos ={
 func _ready() -> void:
 	siguente.hide()
 	perder.hide()
-	espantad.hide()
 	interac.hide()
 	final.hide()
 	transicion.play("salida")

@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgthwuke41voa"
-path.s3tc="res://.godot/imported/delfina tranqui_10.png-0d3bd0e1a3793c0fcea0610135ec0df6.s3tc.ctex"
+path="res://.godot/imported/delfina tranqui_10.png-0d3bd0e1a3793c0fcea0610135ec0df6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "c4b9caf31b862415b5225e8e64974ca0"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/delfina servin/delfina tranqui/delfina tranqui_10.png"
-dest_files=["res://.godot/imported/delfina tranqui_10.png-0d3bd0e1a3793c0fcea0610135ec0df6.s3tc.ctex"]
+dest_files=["res://.godot/imported/delfina tranqui_10.png-0d3bd0e1a3793c0fcea0610135ec0df6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

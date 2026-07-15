@@ -390,7 +390,7 @@ shadow_mesh = SubResource("ArrayMesh_qg6ru")
 size = Vector3(16.9, 13, 8.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1kxg"]
-size = Vector3(43, 14, 35)
+size = Vector3(53, 14, 35)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twbcg"]
 resource_name = "material_0"
@@ -1491,7 +1491,7 @@ data = {
 }
 
 [node name="karau" parent="." instance=ExtResource("2_pm7n1")]
-transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, 25.0012, 3, 144)
+transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, 1.0012, 3, 11)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.739942, 0.496967, -0.453331, -0.198267, 0.805117, 0.558996, 0.642788, -0.323744, 0.694272, -27, 19, 37)
@@ -1541,7 +1541,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 198)
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/casa1/trigger_farra"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 6.5, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 6.5, -3)
 shape = SubResource("BoxShape3D_h1kxg")
 
 [node name="arbolito" parent="objetos" instance=ExtResource("12_01wi0")]

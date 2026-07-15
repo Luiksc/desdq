@@ -903,7 +903,7 @@ mesh = SubResource("ArrayMesh_ei10b")
 skeleton = NodePath("")
 
 [node name="brazoderecha2" type="Node3D" parent="blockbench_export/base/extremidades2"]
-transform = Transform3D(0.996195, 0.0871557, 0, -0.0867545, 0.991608, 0.0958458, 0.00835351, -0.095481, 0.995396, -0.2375, 0.74375, -0.34375)
+transform = Transform3D(0.996195, 0.0871558, -9.31322e-10, -0.0867546, 0.991608, 0.0958458, 0.00835352, -0.095481, 0.995396, -0.2375, 0.74375, -0.34375)
 
 [node name="jyva 12" type="MeshInstance3D" parent="blockbench_export/base/extremidades2/brazoderecha2"]
 transform = Transform3D(0.991445, 0.128543, -0.0226657, -0.13003, 0.987802, -0.0856757, 0.0113762, 0.08789, 0.996065, 0, 0.7875, 0.05625)

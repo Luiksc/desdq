@@ -40,15 +40,14 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func posiciona():
 	cinematica = true
-	punto_farra = punto_farra.position
 	punto_farra.look_at(get_parent().global_position + Vector3(0, 1, 0), Vector3.UP)
 	if camara and "spring_arm" in camara:
 		camara.spring_arm = punto_farra
+	cinematica = true
 	
 func posiciona_combo():
 	cinematica = true
 	
-	# Ajustamos la posición relativa del punto_combo para que esté arriba y a la izquierda.
 	# Al poner x=-4 y z=4, y hacer que mire al jugador, la rotación en el eje Y será exactamente -45 grados.
 	punto_combo.position = Vector3(-4, 5, 4)
 	punto_combo.look_at(get_parent().global_position + Vector3(0, 1, 0), Vector3.UP)

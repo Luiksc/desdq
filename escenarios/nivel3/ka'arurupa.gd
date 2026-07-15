@@ -3,12 +3,14 @@ extends Node
 var posicion1 : Vector3
 var posicion2 : Vector3
 var final = false
+var ikatu_oho = false
 
 @onready var final_punto = $final
 @onready var jugador =$karau
 @onready var control_camara = $karau/pivote
 @onready var anima_jugon = $karau/blockbench_export/AnimationPlayer
 @onready var tri_fr = $objetos/casa1/trigger_farra
+
 
 @onready var dialogo_piensa = $objetos/casa1
 
@@ -46,7 +48,11 @@ var dialogos ={
 		["Ña florida","Ikatu Mateo ohora'e napépe.
 (seguro se fue allá)"]
 	],
-	"pensamiento":[
+	"pensamiento1":[
+		["Karáu", "Emañamina mba'eichaite ipora pe kuñatai.
+Que hermosa es esa chica."]
+	],
+	"pensamiento2":[
 		["Karáu", "Ahasamíta ko fárrare, sapy'aiténte.
 (Voy a la fiesta, un ratito nomás.)"],
 		
@@ -159,11 +165,18 @@ func spawn_yuyo3():
 func _process(delta: float) -> void:
 	if final:
 		ohotama()
+	
+		
+		
 		
 	if dialogo_activo:
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
+	if ikatu_oho:
+		ohota_primio()
+
+
 func inic_dialo() -> void:
 	if npc_actual=="":
 		return
@@ -183,17 +196,22 @@ func inic_dialo() -> void:
 # Se llama mediante señal cuando el DialogSystem termina todos los mensajes
 func dialog_terminado() -> void:
 	dialogo_activo = false
-	jugador.puede_moverse = true  # desbloquea el movimiento
 	
-	if npc_actual == "pensamiento":
-		final = true 
-		control_camara.cinematica = false 
+	# Secuencia farra: pensamiento1 → animación → pensamiento2 → ohotama
+	if npc_actual == "pensamiento1":
+		ikatu_oho = true  # activa ohota_primio en _process (una sola vez)
+		return  # no re-habilitar movimiento todavía
 		
+	if npc_actual == "pensamiento2":
+		final = true  # _process llamará ohotama() de forma continua
+		return  # no re-habilitar movimiento (ohotama lo controla)
+	
+	# Para cualquier otro diálogo: re-habilitar movimiento normalmente
+	jugador.puede_moverse = true
+	
 	# Si era un pensamiento de Delfina, destruimos el trigger y listo
 	if pensamiento_activo:
 		pensamiento_activo = false
-		#if is_instance_valid(pensamiento):
-		#	pensamiento.queue_free()
 		return
 
 	# Si el jugador todavía está en el área de un NPC, volvemos a mostrar el label
@@ -219,20 +237,12 @@ func hide_interac(id_del_npc: String) -> void:
 
 func _on_trigger_farra_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
+		tri_fr.queue_free()
+		piensa1("pensamiento1")
 		
-		control_camara.posiciona()
-		jugador.farra = true
-		jugador.puede_moverse = false
-		control_camara.cinematica = true  # era .farra, pero el pivote usa .cinematica para bloquear el mouse
-		anima_jugon.play("repiraomañavo")
-		await anima_jugon.animation_finished
-		 # espera que termine la animación cinemática
-		piensa("pensamiento")
-		# --- fin cinemática ---
-				 # desbloquea el movimiento del jugador
-		   # devuelve el control de cámara al jugador
-			  # vuelve a la animación idle
+		
 func ohotama():
+	control_camara.cinematica = true
 	var direccion = final_punto.global_position - jugador.global_position
 	direccion.y = 0
 	direccion = direccion.normalized()
@@ -241,10 +251,24 @@ func ohotama():
 		anima_jugon.play("oho")
 
 	jugador.move_and_slide()
-func piensa(id_del_npc: String) -> void:
+func piensa2(id_del_npc: String) -> void:
 	npc_actual = id_del_npc
 	inic_dialo()
-
+func piensa1(id_del_npc: String) -> void:
+	npc_actual = id_del_npc
+	inic_dialo()
+	
+func ohota_primio():
+	ikatu_oho = false  # evitar que _process la llame de nuevo cada frame
+	
+	control_camara.posiciona()
+	jugador.farra = true
+	jugador.puede_moverse = false
+	control_camara.cinematica = true  
+	anima_jugon.play("repiraomañavo")
+	await anima_jugon.animation_finished
+	piensa2("pensamiento2")
+	
 # Se llama cuando el jugador entra al área de un objeto recolectable.
 # Recibe el identificador del objeto y lo añade a la lista de recogidos.
 

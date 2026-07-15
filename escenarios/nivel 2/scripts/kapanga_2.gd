@@ -90,14 +90,12 @@ func _physics_process(delta: float) -> void:
 			
 			var direccion = jugador.global_position - global_position
 			direccion.y = 0
-			if not is_on_floor():
-				velocity.y -= gravedad * delta
-				velocity.y = max(velocity.y, -gravedad * 3)
-			var target = jugador.global_position
 			var angulo = atan2(direccion.x,direccion.z)
 			rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 			direccion = direccion.normalized()
-			velocity = direccion*velocidad
+			velocity.x = direccion.x * velocidad
+			velocity.z = direccion.z * velocidad
+			# velocity.y lo maneja la gravedad del inicio del _physics_process
 			
 				
 				
