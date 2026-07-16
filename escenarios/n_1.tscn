@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=124 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cqpeejgxglac6" path="res://escenarios/npc.tscn" id="3_3ccld"]
 [ext_resource type="MeshLibrary" uid="uid://rhowvwxd6qjc" path="res://modelos/libr mesh/1libreria_chaco.tres" id="5_ce0le"]
 [ext_resource type="Texture2D" uid="uid://di03i3g5cdwfy" path="res://modelos/KINCHO/kincho perron-reakls_0.png" id="5_m7ox8"]
-[ext_resource type="PackedScene" uid="uid://dt8fxjokm7w7t" path="res://escenarios/nivel_1_final.tscn" id="5_nk8o6"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="6_f6spo"]
 [ext_resource type="Texture2D" uid="uid://be56g6tfookgy" path="res://modelos/KINCHO/kincho perron-reakls_1.png" id="6_tcqda"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="6_ytt0h"]
@@ -1282,13 +1281,6 @@ anchors_preset = -1
 anchor_right = 28.7
 anchor_bottom = 16.05
 offset_bottom = -6.10352e-05
-metadata/_edit_use_anchors_ = true
-
-[node name="final" parent="Control" instance=ExtResource("5_nk8o6")]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 28.65
-anchor_bottom = 16.225
 metadata/_edit_use_anchors_ = true
 
 [node name="perdiendo" type="Label" parent="Control"]

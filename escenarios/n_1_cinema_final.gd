@@ -9,6 +9,15 @@ extends Node3D
 @onready var anima_delfi = $delfina/AnimationPlayer
 var ojeroky = false
 
+@onready var timer = $Timer
+@onready var mirada = $Control/mirada
+@onready var anima_mira = $Control/mirada/AnimationPlayer
+@onready var transi_negro= $Control/ColorRect/AnimationPlayer
+@onready var bloque= $Control/ColorRect
+@onready var carta =$Control/final
+@onready var anima_carta= $Control/final/AnimationPlayer
+
+var pochyha = false
 
 var dialogo_activo: bool = false
 var npc_actual: String = ""
@@ -40,7 +49,9 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	carta.hide()
+	mirada.hide()
+	bloque.hide()
 	piel_jeroky.hide()
 	transicion.play("salida")
 	await transicion.animation_finished
@@ -50,6 +61,7 @@ func _ready() -> void:
 	piel_ini.hide()
 	piel_jeroky.show()
 	ojeroky =true
+	DialogSystem.dialogo_opa.connect(dialog_terminado)
 
 
 
@@ -63,8 +75,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
-			
-
+	
 func inic_dialo() -> void:
 	if npc_actual=="":
 		return
@@ -79,7 +90,36 @@ func inic_dialo() -> void:
 
 func dialog_terminado() -> void:
 	dialogo_activo = false
+
+	if npc_actual == "Dialogo1":
+		disparate()
+	return
 	
 func ini_dialog(id_del_npc: String) -> void:
 	npc_actual = id_del_npc
 	inic_dialo()
+func disparate():
+	$musica.stop()
+	bloque.show()
+	transi_negro.play("desvanecido")
+	await transi_negro.animation_finished
+	mirada.show()
+	transi_negro.play("aparecido")
+	await  transi_negro.animation_finished
+	timer.start()
+	await timer.timeout
+	transi_negro.play("desvanecido")
+	
+	await transi_negro.animation_finished
+	anima_mira.play("omaña")
+	transi_negro.play("aparecido")
+	await  transi_negro.animation_finished
+	transi_negro.play("desvanecido")
+	await transi_negro.animation_finished
+	$SonidoDePistola.play()
+	await $SonidoDePistola.finished
+	carta.show()
+	anima_carta.play("aparece")
+	
+	
+	

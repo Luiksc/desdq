@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bstmje1k1q5rc"
+path="res://.godot/imported/SONIDO DE PISTOLA.mp3-d9faa1c9e1275222ced4b28e83dbe3a9.mp3str"
+
+[deps]
+
+source_file="res://audios/SONIDO DE PISTOLA.mp3"
+dest_files=["res://.godot/imported/SONIDO DE PISTOLA.mp3-d9faa1c9e1275222ced4b28e83dbe3a9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

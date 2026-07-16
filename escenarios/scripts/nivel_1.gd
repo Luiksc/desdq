@@ -9,8 +9,8 @@ extends Node3D
 @onready var mykure = $"enemigos/mykure"
 @onready var pensamiento=$triggers/triger_delfi
 @onready var transicion =$"Control/ã/AnimationPlayer"
-@onready var final = $Control/final
-@onready var ani_final = $Control/final/AnimationPlayer
+
+
 @onready var checkpoint = $gestor_de_checkpoint
 
 @onready var ambiente = $chaco_ambiente
@@ -58,7 +58,6 @@ func _ready() -> void:
 	siguente.hide()
 	perder.hide()
 	interac.hide()
-	final.hide()
 	transicion.play("salida")
 	await transicion.animation_finished
 
@@ -204,13 +203,9 @@ func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 func _on_final_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
 		jugador.puede_moverse=false
-		anima_jugador.play("oha'aro")
-		final.show()
-		ani_final.play("aparece")
-		siguente.show()
 		finiquitable = true
 		Input.mouse_mode= Input.MOUSE_MODE_VISIBLE
-		
+		get_tree().change_scene_to_file("res://escenarios/n_1_cinema_final.tscn")
 func jugador_omano():
 	ambiente.stop()
 	ambiente2.stop()
