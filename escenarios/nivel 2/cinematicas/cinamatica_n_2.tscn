@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cr27yk5q2mb4v" path="res://modelos/Dionisio/expo/dionisio sucio (1)_13.png" id="19_syi2v"]
 [ext_resource type="Texture2D" uid="uid://dipylf6p26iu4" path="res://modelos/Dionisio/expo/dionisio sucio (1)_14.png" id="20_d2why"]
 
+
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h086u"]
 panorama = ExtResource("4_ftsph")
 
