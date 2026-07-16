@@ -2215,21 +2215,6 @@ _data = {
 "oha'aro": SubResource("Animation_110n6")
 }
 
-[sub_resource type="Animation" id="Animation_hp5ho"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("55_e5hi2")]
-}
-
 [sub_resource type="Animation" id="Animation_tvahf"]
 resource_name = "omaña"
 length = 0.5
@@ -2244,6 +2229,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [ExtResource("55_e5hi2"), ExtResource("56_7ttit")]
+}
+
+[sub_resource type="Animation" id="Animation_hp5ho"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("55_e5hi2")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_35y37"]

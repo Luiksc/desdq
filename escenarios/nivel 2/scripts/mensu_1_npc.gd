@@ -37,13 +37,11 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravedad * delta
 		velocity.y = max(velocity.y, -gravedad * 3)
-	else:
-		velocity.y = 0
 	match Estado:
 		
 		estado.oho:
-			if animacion.current_animation != "oho":
-				animacion.play("oho")
+			if animacion.current_animation != "ojevy":
+				animacion.play("ojevy")
 			velocidad = 0.5
 			
 			var direccion = punto_ini.global_position - global_position
@@ -86,8 +84,8 @@ func _physics_process(delta: float) -> void:
 				velocity.x = direccion.x * velocidad
 				velocity.z = direccion.z * velocidad
 			else:
-				velocity.x = move_toward(velocity.x, 0, velocidad * delta)
-				velocity.z = move_toward(velocity.z, 0, velocidad * delta)
+				velocity.x = move_toward(velocity.x, 1, velocidad * delta)
+				velocity.z = move_toward(velocity.z, 1, velocidad * delta)
 			
 			if distancia < distancia_minima:
 				
@@ -122,8 +120,8 @@ func _physics_process(delta: float) -> void:
 				velocity.x = direccion.x * velocidad
 				velocity.z = direccion.z * velocidad
 			else:
-				velocity.x = move_toward(velocity.x, 0, velocidad * delta)
-				velocity.z = move_toward(velocity.z, 0, velocidad * delta)
+				velocity.x = move_toward(velocity.x, 1, velocidad * delta)
+				velocity.z = move_toward(velocity.z, 1, velocidad * delta)
 			
 			
 			if distancia < distancia_minima:
