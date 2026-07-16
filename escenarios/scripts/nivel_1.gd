@@ -9,7 +9,7 @@ extends Node3D
 @onready var mykure = $"enemigos/mykure"
 @onready var pensamiento=$triggers/triger_delfi
 @onready var transicion =$"Control/ã/AnimationPlayer"
-
+@onready var anima_datos =$Control/Datos/AnimationPlayer
 
 @onready var checkpoint = $gestor_de_checkpoint
 
@@ -30,6 +30,12 @@ var dialogo_activo: bool = false
 var npc_actual: String = ""
 var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
 var dialogos ={
+	"okakula":[
+		["Delfina servpin","...
+(Piensa en guaraní)"],
+		["Delfina","Anichéneti ko este ára niko feriado Día de la Raza.
+(No puede ser hoy es feriado por Día de la Raza.)"],
+],
 	"florida":[
 		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],
 		["Ña florida","Hay una fiesta cerca de la fábrica por el día de la Raza"],
@@ -58,11 +64,15 @@ func _ready() -> void:
 	siguente.hide()
 	perder.hide()
 	interac.hide()
+	transicion.play("opyta")
+	anima_datos.play("aparece")
+	await anima_datos.animation_finished
+	anima_datos.play("desaparece")
+	await anima_datos.animation_finished
 	transicion.play("salida")
 	await transicion.animation_finished
 
 	
-
 	$npcs/npc_florida/Area3D.corpus_entro.connect(mostrar_interac)
 	$npcs/npc_florida/Area3D.corpus_salio.connect(hide_interac)
 	
@@ -86,6 +96,7 @@ func _ready() -> void:
 
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 
+	delfi_okalkula("okakula")
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
@@ -106,9 +117,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("clicki") or Input.is_action_just_pressed("interaccion"):
 			print("reset")
 			reset()
-	if finiquitable:
-		if Input.is_action_just_pressed("interaccion"):
-			seguimos()
+	
 # Recibe el npc_id emitido por la señal corpus_entro del trigger
 func piensa_dialog(id: String) -> void:
 
@@ -130,7 +139,6 @@ func inic_dialo() -> void:
 		return
 	if not dialogos.has(npc_actual):
 		return
-	
 	
 	dialogo_activo = true
 	interac.hide()
@@ -203,9 +211,10 @@ func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 func _on_final_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
 		jugador.puede_moverse=false
-		finiquitable = true
+	
 		Input.mouse_mode= Input.MOUSE_MODE_VISIBLE
 		get_tree().change_scene_to_file("res://escenarios/n_1_cinema_final.tscn")
+		finiquitable = true
 func jugador_omano():
 	ambiente.stop()
 	ambiente2.stop()
@@ -235,5 +244,8 @@ func _on_zonademuerte_body_entered(body: Node3D) -> void:
 
 func _on_zonademuerte_2_body_entered(body: Node3D) -> void:
 	jugador_omano()
-func seguimos():
-	get_tree().change_scene_to_file("res://escenarios/nivel 2/nivel_2.tscn")
+func delfi_okalkula(id_del_npc: String) -> void:
+	npc_actual = id_del_npc
+	inic_dialo()
+	
+	

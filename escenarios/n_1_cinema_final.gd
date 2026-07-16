@@ -18,6 +18,7 @@ var ojeroky = false
 @onready var anima_carta= $Control/final/AnimationPlayer
 
 var pochyha = false
+var seguir = false
 
 var dialogo_activo: bool = false
 var npc_actual: String = ""
@@ -75,7 +76,9 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
-	
+	if seguir:
+		if Input.is_action_just_pressed("interaccion"):
+			get_tree().change_scene_to_file("res://escenarios/nivel 2/nivel_2.tscn")
 func inic_dialo() -> void:
 	if npc_actual=="":
 		return
@@ -120,6 +123,7 @@ func disparate():
 	await $SonidoDePistola.finished
 	carta.show()
 	anima_carta.play("aparece")
+	seguir = true
 	
 	
 	

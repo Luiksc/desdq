@@ -113,7 +113,7 @@ func _ready() -> void:
 	$inicio.oñepyru.connect(conversa)
 	transicion.play("salida")
 	await transicion.animation_finished
-	
+	$Control/ItemList.hide()
 	conversa("iniciarf")
 	
 	sako_baj1.hide()
@@ -205,6 +205,7 @@ func dialog_terminado() -> void:
 	jugador.puede_moverse = true  # desbloquea el movimiento
 	if npc_actual == "iniciarf":
 		se_va.emit()
+		$Control/ItemList.show()
 	# Si era un pensamiento de Delfina, destruimos el trigger y listo
 	if pensamiento_activo:
 		pensamiento_activo = false

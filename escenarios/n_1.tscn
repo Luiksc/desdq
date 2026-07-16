@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=128 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -78,9 +78,98 @@ fog_light_color = Color(1, 0.915667, 0.77, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_sp1lg"]
 font = ExtResource("6_f6spo")
-font_size = 85
+font_size = 80
+font_color = Color(1, 1, 1, 0)
 outline_size = 3
-outline_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_3cyf0"]
+resource_name = "aparece"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:label_settings:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wvquj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:label_settings:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q7v3c"]
+resource_name = "desaparece"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:label_settings:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uur28"]
+_data = {
+"RESET": SubResource("Animation_wvquj"),
+"aparece": SubResource("Animation_3cyf0"),
+"desaparece": SubResource("Animation_q7v3c")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_jvlji"]
 font = ExtResource("6_f6spo")
@@ -1299,6 +1388,28 @@ label_settings = SubResource("LabelSettings_sp1lg")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Datos" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.639
+anchor_bottom = 16.316
+offset_left = -11.0
+offset_top = 176.0
+offset_right = 33.4399
+offset_bottom = -301.64
+grow_horizontal = 2
+grow_vertical = 2
+text = "Puerto Guaraní
+12 de octubre"
+label_settings = SubResource("LabelSettings_sp1lg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Datos"]
+libraries = {
+"": SubResource("AnimationLibrary_uur28")
+}
+
 [node name="siguietne" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 180.0
@@ -1927,6 +2038,9 @@ volume_db = -4.333
 [node name="Hýpy(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("35_k2y46")
 volume_db = -5.2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 
 [connection signal="body_entered" from="zonademuerte" to="." method="_on_zonademuerte_body_entered"]
 [connection signal="body_entered" from="zonademuerte" to="zonademuerte" method="_on_body_entered"]
