@@ -59,7 +59,6 @@ func estar_mostrando() -> bool:
 	return mostrar
 
 func neixt():
-	
 	_on_next_button_pressed()
 	
 func _on_next_button_pressed() -> void:

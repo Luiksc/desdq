@@ -211,7 +211,6 @@ func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 func _on_final_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
 		jugador.puede_moverse=false
-	
 		Input.mouse_mode= Input.MOUSE_MODE_VISIBLE
 		get_tree().change_scene_to_file("res://escenarios/n_1_cinema_final.tscn")
 		finiquitable = true

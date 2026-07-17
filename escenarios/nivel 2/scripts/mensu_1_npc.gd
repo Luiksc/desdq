@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 			if animacion.current_animation != "oraha":
 				animacion.play("oraha")
 			indice_vuelta = 0
-			var distancia_minima := 0.15
+			var distancia_minima := 1
 			
 			var posicion_target = waypoint[indice_ida].global_position
 			var direccion = posicion_target - global_position
@@ -100,8 +100,8 @@ func _physics_process(delta: float) -> void:
 
 		estado.ojevy:
 		
-			var distancia_minima := 1
-			var posicion_target = waypoint[indice_vuelta].global_position
+			var distancia_minima := 3
+			var posicion_target = jevyrenda[indice_vuelta].global_position
 			var direccion = posicion_target - global_position
 			var distancia = direccion.length()
 			var angulo = atan2(direccion.x,direccion.z)
@@ -124,12 +124,12 @@ func _physics_process(delta: float) -> void:
 				velocity.z = move_toward(velocity.z, 1, velocidad * delta)
 			
 			
-			if distancia < distancia_minima:
+			if distancia <= distancia_minima:
 				indice_vuelta = indice_vuelta + 1
+				Estado = estado.oraha
 				if indice_vuelta >= jevyrenda.size():
 					indice_ida = 0
-					
-					Estado = estado.oraha
+			
 			
 	move_and_slide()
 			
