@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bdktx0ukjf3o3" path="res://modelos/delfina servin/delfina Servin.gltf" id="1_gyk6o"]
 
+
 [node name="blockbench_export" instance=ExtResource("1_gyk6o")]
 
 [node name="controlador" parent="." index="0"]

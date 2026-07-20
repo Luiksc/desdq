@@ -2,35 +2,23 @@ extends Node3D
 
 @onready var transicion = $Control/ColorRect/AnimationPlayer
 
-@onready var karau = $karau
-@onready var karau2 = $karau2
-@onready var anima_karau2 =$karau2/AnimationPlayer
-@onready var anima_karau2_oho= $karau2/AnimationPlayer2
-
-@onready var anima_iru = $iru/blockbench_export/AnimationPlayer
-@onready var camara = $Camera3D
-@onready var destino1_camara = $punto3
-
 var dialogo_activo: bool = false
 var npc_actual: String = ""
 var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
+@onready var timero = $Timer2
 
 var dialogos ={
 	"noticia":[
-		["Karau", "Ipytũmbáma, .¿Mámopa opyta nde róga?
-(Ya obscureció todo, ¿Por dónde está tu casa?)"],
-		["Arami", "Ndaimombyrýi che róga chevisitaserõ...
-(Mi casa no está lejos si me queres visitar)"],
-		["Arami", "Rehechaga'úne nde sy...
-(Haz de extrañar a tu mamá)"],
+		["Karau", "MBA'ÉICHAIKO NAÑATENDEMO'AI CHE TIEMPO REHE, HA MOO PIKO OIME RÓGA
+(CÓMO NO VOY A ATENDER MI TIEMPO, Y DÓNDE ESTÁ MI CASA)"],
+		["Karaú", "ANICHÉNE AKAÑY... ¡MAMÁ!
+(NO ME DIGAS QUE ME PERDÍ...¡MAMÁ!)"],
 	]
 }
 
 func _ready() -> void:
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
-	karau2.hide()
 	asigna_id("noticia")
-
 	
 	
 
@@ -71,14 +59,7 @@ func dialog_terminado() -> void:
 	if pensamiento_activo:
 		pensamiento_activo = false
 	if npc_actual == "noticia":
-		karau.hide()
-		karau2.show()
-		camara.position = $final.position
-		anima_karau2.play("ndoroviai")
-		anima_karau2_oho.play("OHO")
-		await anima_karau2_oho.animation_finished
-		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/n3_cinema-nro3.tscn")
-		
+		timero.start()
+		await timero.timeout
+		print("tupak")
 	return
-
-	
