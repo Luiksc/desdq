@@ -1,6 +1,0 @@
-*arbusto=bush
-*avore=tree
-*cogumelo=mushroom
-*rocha=rock 
-
-*conjunto completo=complete set

@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyw8htumrhq0b"
-path.s3tc="res://.godot/imported/Marta_poti_2.png-afeed7b66778f9d8800ba2750340c01c.s3tc.ctex"
+path="res://.godot/imported/Marta_poti_2.png-afeed7b66778f9d8800ba2750340c01c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "127679d135a0e55af41e9ce94d685879"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Marta/Marta_poti_2.png"
-dest_files=["res://.godot/imported/Marta_poti_2.png-afeed7b66778f9d8800ba2750340c01c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Marta_poti_2.png-afeed7b66778f9d8800ba2750340c01c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

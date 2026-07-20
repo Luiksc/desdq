@@ -62,6 +62,7 @@ var dialogos ={
 
 func _ready() -> void:
 	siguente.hide()
+	$Control/Label.hide()
 	perder.hide()
 	interac.hide()
 	transicion.play("opyta")
@@ -219,14 +220,17 @@ func jugador_omano():
 	ambiente2.stop()
 	musica.stop()
 	transicion.play("entrafa")
+	await transicion.animation_finished
 	jugador.puede_moverse = false
 	jgd_omamo=true
 	perder.show()
-	
+	$Control/Label.show()
 	
 	
 func reset():
 	perder.hide()
+	$Control/Label.hide()#escondete kape
+	
 	jgd_omamo=false
 	jugador.global_position = checkpoint.ultima_posicion
 	transicion.play("salida")

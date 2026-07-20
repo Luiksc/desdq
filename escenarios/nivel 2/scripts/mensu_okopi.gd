@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@onready var animacion = $blockbench_export/AnimationPlayer
+@onready var animacion = $"../labura kopindo2/AnimationPlayer"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

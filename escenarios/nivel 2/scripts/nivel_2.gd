@@ -4,6 +4,7 @@ extends Node3D
 @onready var interac2: Label =$Control/Interactuar2
 @onready var interac3: Label =$Control/Interactuar3
 @onready var transicion = $"Control/ã/AnimationPlayer"
+@onready var data =$"Control/Data/AnimationPlayer"
 
 @onready var indicador1 =$sorpresa 
 @onready var indicador2 =$sorpresa2
@@ -78,18 +79,15 @@ var omano = false
 
 
 var dialogos ={
-	"florida":[
-		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],                #ejemplo
-		["Ña florida","Hay una fiesta cerca de la fábrica por el día de la Raza"],
-		["Ña florida","Ikatu Mateo ohora'e napépe.
-(seguro se fue allá)"]
-	],
 	"iniciarf":[
-		["Rogelio", "Mba'épa reĩ? Haimetetéma opa ko jornada chamígo."],
-		["Rogelio", "Eñatendéke chamígo, oje'e la kapangakuéra ñandehegui, neranẽ (nde akua va'erã)"],
-		["Dionisio", "Héẽ, tré kósa mante ajapo'arã ha ja ahátama añeno"],
-		["Rogelio", "Iporãsíto upéa, che ahátama agueru amoite arriba ka'aty sáko.
-¡Eju!"],
+		["Rogelio", "Mba'épa reĩ? Haimetetéma opa ko jornada chamígo.
+(Qué tal está, ya casi termina esta jornada amigo mío)"],
+		["Rogelio", "Eñatendéke chamígo, oje'e la kapangakuéra ipochy nendive, neranẽva'erã (nde akua va'erã)
+(Prestá antencion amigo mío, se dice que los capataces se molestaron con vos, tenés que ser rápido.)"],
+		["Dionisio", "Héẽ, almenos tre kósa mante ajapo'arã ha ja ahátama añeno
+(Sí, almenos solo tres cosas me quedan por hacer, y después ya me acuesto.)"],
+		["Rogelio", "Iporãsíto upéa, ejapysaka la llaves ipuhatã, upéa he'íse kapánga oime ag̃ui ndehegui.
+che ahátama aguejy ka'a sáko amoite arriba ¡Ejúpy!"],
 	],
 	
 	"Piensadelfi":[
@@ -111,11 +109,20 @@ func _ready() -> void:
 	$npc_florida/Area3D.corpus_entro.connect(mostrar_interac)
 	$npc_florida/Area3D.corpus_salio.connect(hide_interac)
 	$inicio.oñepyru.connect(conversa)
+	$Control/ItemList.hide()
+	transicion.play("opyta")
+	data.play("aparece")
+	await data.animation_finished
+	data.play("desaparece")
+	await data.animation_finished
 	transicion.play("salida")
 	await transicion.animation_finished
-	$Control/ItemList.hide()
+
 	conversa("iniciarf")
 	
+	$"labura kopindo/AnimationPlayer".play("okopi")
+	$"labura kopindo2/AnimationPlayer".play("okopi")
+	$"labura kopindo3/AnimationPlayer".play("okopi")
 	sako_baj1.hide()
 	sako_baj2.hide()
 	sako_baj3.hide()

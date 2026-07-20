@@ -52,6 +52,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$marta/blockbench_export/AnimationPlayer.play("arregla")
 	if dialogo_activo:
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()

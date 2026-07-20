@@ -78,7 +78,9 @@ func _process(delta: float) -> void:
 			$DialogSystem/sound.play()
 	if seguir:
 		if Input.is_action_just_pressed("interaccion"):
-			get_tree().change_scene_to_file("res://escenarios/nivel 2/nivel_2.tscn")
+			transicion.play("entrafa")
+			await transicion.animation_finished
+			get_tree().change_scene_to_file("res://escenarios/nivel 2/cinematicas/1r_cinamatica_n_2.tscn")
 func inic_dialo() -> void:
 	if npc_actual=="":
 		return

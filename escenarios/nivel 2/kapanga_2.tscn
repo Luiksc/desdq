@@ -1137,8 +1137,7 @@ _data = {
 "repira": SubResource("Animation_5t7el")
 }
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wq6wg"]
-height = 3.67243
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_k2yoy"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_to5os"]
 radius = 10.1474
@@ -1299,8 +1298,8 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39596, 0)
-shape = SubResource("CapsuleShape3D_wq6wg")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08054, 0)
+shape = SubResource("CylinderShape3D_k2yoy")
 
 [node name="detecta" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

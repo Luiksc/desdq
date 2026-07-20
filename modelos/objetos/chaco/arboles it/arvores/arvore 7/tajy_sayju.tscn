@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dewuy24js3g4x"]
-
-[ext_resource type="PackedScene" uid="uid://040u1fotkfwp" path="res://modelos/objetos/chaco/arboles it/arvores/arvore 7/arvore 7.fbx" id="1_6eb5p"]
-
-[node name="tajy sayju" instance=ExtResource("1_6eb5p")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-
-[node name="arvore 7" parent="." index="0"]
-transform = Transform3D(34.2364, 0, 0, 0, -4.08129e-06, 34.2364, 0, -34.2364, -4.08129e-06, 0, 0, 0)

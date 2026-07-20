@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dncw5iet1q1mc"
+path.s3tc="res://.godot/imported/doña_11.png-ce118d1b11aa4ba1d2eef5e8d1778006.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "78c7cf41e34eef8242c11c228fbced48"
+}
+
+[deps]
+
+source_file="res://modelos/mama karau/doña_11.png"
+dest_files=["res://.godot/imported/doña_11.png-ce118d1b11aa4ba1d2eef5e8d1778006.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
