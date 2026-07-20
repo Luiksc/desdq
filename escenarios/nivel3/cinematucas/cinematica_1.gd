@@ -31,6 +31,8 @@ var dialogos ={
 }
 func _ready() -> void:
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
+	$"Control/ã/AnimationPlayer".play("salida")
+	await $"Control/ã/AnimationPlayer".animation_finished 
 	asigna_clave("Mami")
 func _process(delta: float) -> void:
 	$mama/AnimationPlayer.play("repira")
@@ -54,6 +56,10 @@ func inic_dialog() -> void:
 
 func dialog_terminado() -> void:
 	dialog_activo = false
+	if npc_actual == "Mami":
+		$"Control/ã/AnimationPlayer".play("entrafa")
+		await $"Control/ã/AnimationPlayer".animation_finished
+		get_tree().change_scene_to_file("res://escenarios/nivel3/nivel_3.tscn")
 	
 func asigna_clave(id_del_npc: String) -> void:
 	npc_actual = id_del_npc

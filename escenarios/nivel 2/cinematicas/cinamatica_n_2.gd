@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 			$DialogSystem/sound.play()
 	if fino:
 		if Input.is_action_just_pressed("interaccion"):
-			pass
+			get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/mama.tscn")
 
 func inic_dialo() -> void:
 	if npc_actual=="":
@@ -74,7 +74,9 @@ func dialog_terminado() -> void:
 	dialogo_activo = false
 	if npc_actual == "conversa":
 		transi.play("entrafa")
+
 		carto.play("aparece")
+		await  carto.animation_finished
 		fino = true
 		return
 func inicia_dialoga(id_npc: String) -> void:

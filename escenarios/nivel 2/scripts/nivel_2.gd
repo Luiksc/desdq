@@ -257,14 +257,7 @@ func recoger():
 
 	if sakos1.is_empty():
 		sako_mayor.queue_free()
-		print("bay")
-	#sakos1[ind_sako_arriba].hide()
-	#print(sakos1.size())
-	#ind_sako_arriba +=  1
-	
-	#if ind_sako_arriba >= sakos1.size():
-		#print("ya eta")
-		#sako_mayor.queue_free()
+		
 
 func oheja():
 	if sakos2.is_empty():
@@ -294,11 +287,10 @@ func recoger2():
 	
 	var saco = sakos3.pop_front()
 	saco.hide()
-	print("recogido")
+	
 
 	if sakos3.is_empty():
 		sako_principal.queue_free()
-		print("bay")
 	
 func dejar2():
 	if sakos4.is_empty():
@@ -392,7 +384,8 @@ func _on_atrapado_2_body_entered(body: Node3D) -> void:
 		oipoo()
 
 func _on_atrapado_3_body_entered(body: Node3D) -> void:
-	oipoo()
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
+		oipoo()
 
 func _on_puerta_despensa_body_entered(body: Node3D) -> void:
 	if llevar and secar:

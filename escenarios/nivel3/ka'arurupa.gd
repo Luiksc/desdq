@@ -5,6 +5,7 @@ var posicion2 : Vector3
 var final = false
 var ikatu_oho = false
 
+@onready var transicion = $"Control/ã/AnimationPlayer"
 @onready var final_punto = $final
 @onready var jugador =$karau
 @onready var control_camara = $karau/pivote
@@ -67,7 +68,8 @@ Que hermosa es esa chica."]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-
+	transicion.play("salida")
+	await transicion.animation_finished
 	randomize()
 	spawn_yuyo1()
 	spawn_yuyo2()
@@ -165,9 +167,6 @@ func spawn_yuyo3():
 func _process(delta: float) -> void:
 	if final:
 		ohotama()
-	
-		
-		
 		
 	if dialogo_activo:
 		if Input.is_action_just_pressed("interaccion"):
@@ -190,33 +189,28 @@ func inic_dialo() -> void:
 	jugador.puede_moverse = false
 	for linea in dialogos[npc_actual]:
 		DialogSystem.says(linea[1], linea[0])
-	 # bloquea el movimiento del jugador
-	#DialogSystem.says("¿No te enteraste de la fiesta que hizo la fábrica por el Día de la Raza ? Todos están ahí; seguramente Mateo también.", "Ña Clotilde")
 
-# Se llama mediante señal cuando el DialogSystem termina todos los mensajes
 func dialog_terminado() -> void:
 	dialogo_activo = false
 	
-	# Secuencia farra: pensamiento1 → animación → pensamiento2 → ohotama
+
 	if npc_actual == "pensamiento1":
-		ikatu_oho = true  # activa ohota_primio en _process (una sola vez)
-		return  # no re-habilitar movimiento todavía
+		ikatu_oho = true 
+		return  
 		
 	if npc_actual == "pensamiento2":
-		final = true  # _process llamará ohotama() de forma continua
-		return  # no re-habilitar movimiento (ohotama lo controla)
+		final = true  
+		return  
 	
-	# Para cualquier otro diálogo: re-habilitar movimiento normalmente
+
 	jugador.puede_moverse = true
 	
-	# Si era un pensamiento de Delfina, destruimos el trigger y listo
+
 	if pensamiento_activo:
 		pensamiento_activo = false
 		return
 
-	# Si el jugador todavía está en el área de un NPC, volvemos a mostrar el label
-	#if jugador_puede_interac:
-	#	interac.show()
+
 
 func mostrar_interac(id_del_npc: String) -> void:
 
@@ -245,12 +239,18 @@ func ohotama():
 	control_camara.cinematica = true
 	var direccion = final_punto.global_position - jugador.global_position
 	direccion.y = 0
+	var distancia = direccion.length()
 	direccion = direccion.normalized()
 	jugador.velocity = direccion * 8
 	if anima_jugon.current_animation != "oho":
 		anima_jugon.play("oho")
-
 	jugador.move_and_slide()
+	if distancia <= 1:
+		jugador.puede_moverse = false
+		transicion.play("entrafa")
+		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/n3_cinema-nro.tscn")
+		
+	
 func piensa2(id_del_npc: String) -> void:
 	npc_actual = id_del_npc
 	inic_dialo()
