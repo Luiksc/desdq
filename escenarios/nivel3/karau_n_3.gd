@@ -3,8 +3,8 @@ extends CharacterBody3D
 signal combo
    
 @onready var pivote: Node3D = $pivote
-@onready var piel: Node3D = $blockbench_export
-@onready var animaciones : AnimationPlayer =  $blockbench_export/AnimationPlayer  # nodo de la cámara 
+@onready var piel: Node3D = $karau
+@onready var anima_karau : AnimationPlayer =  $karau/AnimationPlayer  # nodo de la cámara 
 @onready var camara_contro = $pivote
 
 @export var vel_rotacion: float  # qué tan rápido rota el personaje
@@ -41,10 +41,11 @@ const  LERP_VAL = .15
 	
 
 func _ready() -> void:
+	
 	fuerza_salto = (2 * distans_salto) / timp_salto
 	gravedad = (-2 * distans_salto) / (timp_salto * timp_salto)
 	anima_activo= true
-	animaciones.play("repira")
+	anima_karau.play("repira")
 	
 	# Buscar los nodos AnimatedSprite2D para el combo y ocultarlos inicialmente
 	var root = get_tree().get_root()
@@ -67,9 +68,11 @@ func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo,
 	# Solo cambiar animación si el movimiento está activo (para no pisar animaciones cinemáticas)
 	if puede_moverse:
 		if input_direccion.length() > 0.1:
-			animaciones.play("oho")
+			anima_karau.play("oho")
+
 		else:
-			animaciones.play("repira")
+			anima_karau.play("repira")
+
 	
 func saltar():
 	velocity.y = fuerza_salto

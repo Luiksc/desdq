@@ -6,10 +6,12 @@ extends Node3D
 @onready var karau2 = $karau2
 @onready var anima_karau2 =$karau2/AnimationPlayer
 @onready var anima_karau2_oho= $karau2/AnimationPlayer2
+@onready var anima_karau= $karau/AnimationPlayer
+@onready var anima_kuñatai = $"kuñatai/AnimationPlayer"
 
-@onready var anima_iru = $iru/blockbench_export/AnimationPlayer
 @onready var camara = $Camera3D
-@onready var destino1_camara = $punto3
+
+@onready var destino_camara= $final
 
 var dialogo_activo: bool = false
 var npc_actual: String = ""
@@ -31,14 +33,10 @@ func _ready() -> void:
 	karau2.hide()
 	asigna_id("noticia")
 
-	
-	
 
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$karau/AnimationPlayer.play("repira")
-	$"kuña/AnimationPlayer".play("repira")
+	anima_karau.play("repira")
+	anima_kuñatai.play("repira")
 	if dialogo_activo:
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
@@ -73,7 +71,7 @@ func dialog_terminado() -> void:
 	if npc_actual == "noticia":
 		karau.hide()
 		karau2.show()
-		camara.position = $final.position
+		camara.position = destino_camara.position
 		anima_karau2.play("ndoroviai")
 		anima_karau2_oho.play("OHO")
 		await anima_karau2_oho.animation_finished

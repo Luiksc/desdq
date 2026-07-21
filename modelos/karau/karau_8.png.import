@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mrx4jxwptvcn"
-path.s3tc="res://.godot/imported/karau_8.png-08ea6d60fdd6a93213f587bbae4502fe.s3tc.ctex"
+path="res://.godot/imported/karau_8.png-08ea6d60fdd6a93213f587bbae4502fe.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "5f4fe0bc6393a3257decc400f13830e3"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/karau/karau_8.png"
-dest_files=["res://.godot/imported/karau_8.png-08ea6d60fdd6a93213f587bbae4502fe.s3tc.ctex"]
+dest_files=["res://.godot/imported/karau_8.png-08ea6d60fdd6a93213f587bbae4502fe.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

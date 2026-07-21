@@ -63,7 +63,7 @@ func _ready() -> void:
 	await transicion.animation_finished
 	$DirectionalLight3D.light_color= Color(0.269, 0.316, 0.791)
 	fondo.environment.sky.sky_material.panorama = nuevo_fonde
-	ambos.position = $punto2.position
+	ambos.position = $punto.position
 	camara.position = destino1_camara.position
 	transicion.play("desaparece")
 	await transicion.animation_finished
@@ -118,6 +118,9 @@ func dialog_terminado() -> void:
 	if npc_actual == "noticia":
 		anima_ojeroky.play("oñemoi")
 		await anima_ojeroky.animation_finished
+		transicion.play("aparece")
+		await transicion.animation_finished
+		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/n3_cinema-nro2.tscn")
 		
 	return
 

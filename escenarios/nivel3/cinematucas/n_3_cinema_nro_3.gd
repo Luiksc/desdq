@@ -1,11 +1,15 @@
 extends Node3D
 
 @onready var transicion = $Control/ColorRect/AnimationPlayer
+@onready var jugador = $karau
+@onready var timer = $Timer2
+@onready var prim_timer = $Timer3
 
 var dialogo_activo: bool = false
 var npc_actual: String = ""
-var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
-@onready var timero = $Timer2
+var pensamiento_activo: bool = false
+ # true mientras el diálogo de pensamiento está corriendo
+@onready var timero = $Timer
 
 var dialogos ={
 	"noticia":[
@@ -17,7 +21,10 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
+	timer.start()
+	await timer.timeout
 	asigna_id("noticia")
 	
 	
@@ -25,12 +32,14 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$karau/AnimationPlayer.play("repira")
-	$"kuña/AnimationPlayer".play("repira")
+	await prim_timer.timeout
+	dialog_terminado()
+	
 	if dialogo_activo:
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
+		
 
 func asigna_id(id_del_npc: String) ->void:
 	npc_actual = id_del_npc
@@ -38,6 +47,7 @@ func asigna_id(id_del_npc: String) ->void:
 	
 
 func inic_dialo() -> void:
+	prim_timer.start()
 	if npc_actual=="":
 		return
 	if not dialogos.has(npc_actual):

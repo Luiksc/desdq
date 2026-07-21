@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://njufq5lppwfu"
-path.s3tc="res://.godot/imported/ewar_7.png-d34f8f72650d6a1f75010c4dbe431a82.s3tc.ctex"
+path="res://.godot/imported/ewar_7.png-d34f8f72650d6a1f75010c4dbe431a82.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "500e3ccfbffabccdceeba0fa0ff4c012"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/chica/ewar_7.png"
-dest_files=["res://.godot/imported/ewar_7.png-d34f8f72650d6a1f75010c4dbe431a82.s3tc.ctex"]
+dest_files=["res://.godot/imported/ewar_7.png-d34f8f72650d6a1f75010c4dbe431a82.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
