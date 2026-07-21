@@ -89,9 +89,14 @@ func _process(delta: float) -> void:
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
 
-func asigna_id(id_del_npc: String) ->void:
+func asigna_id(id_del_npc: String) -> void:
 	npc_actual = id_del_npc
 	inic_dialo()
+	if id_del_npc == "noticia":
+		await get_tree().create_timer(40.0).timeout
+		if dialogo_activo and npc_actual == "noticia":
+			DialogSystem.terminar_dialogo()
+
 	
 
 func inic_dialo() -> void:

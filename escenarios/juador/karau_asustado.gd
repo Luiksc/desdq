@@ -69,12 +69,16 @@ func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo,
 	
 	# Solo cambiar animación si el movimiento está activo (para no pisar animaciones cinemáticas)
 	if puede_moverse:
+		
 		if input_direccion.length() > 0.1:
 			
 			anima_karau_asustado.play("oho")
 		else:
 			
 			anima_karau_asustado.play("repira")
+	else :
+		
+		anima_karau_asustado.play("repira")
 	
 func saltar():
 	velocity.y = fuerza_salto

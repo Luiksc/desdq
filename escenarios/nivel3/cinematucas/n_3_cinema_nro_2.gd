@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var transicion = $Control/ColorRect/AnimationPlayer
-
+@onready var transicion_pixel =  $"Control/ã/AnimationPlayer"
 @onready var karau = $karau
 @onready var karau2 = $karau2
 @onready var anima_karau2 =$karau2/AnimationPlayer
@@ -29,6 +29,7 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	transicion_pixel.play("RESET")
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 	karau2.hide()
 	asigna_id("noticia")
@@ -42,9 +43,14 @@ func _process(delta: float) -> void:
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
 
-func asigna_id(id_del_npc: String) ->void:
+func asigna_id(id_del_npc: String) -> void:
 	npc_actual = id_del_npc
 	inic_dialo()
+	if id_del_npc == "noticia":
+		await get_tree().create_timer(40.0).timeout
+		if dialogo_activo and npc_actual == "noticia":
+			DialogSystem.terminar_dialogo()
+
 	
 
 func inic_dialo() -> void:
@@ -75,7 +81,8 @@ func dialog_terminado() -> void:
 		anima_karau2.play("ndoroviai")
 		anima_karau2_oho.play("OHO")
 		await anima_karau2_oho.animation_finished
-		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/n3_cinema-nro3.tscn")
+		transicion_pixel.play("entrafa")
+		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/n3_escena_Final.tscn")
 		
 	return
 

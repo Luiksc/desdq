@@ -9,7 +9,7 @@ var ikatu_oho = false
 @onready var final_punto = $final
 @onready var jugador =$karau
 @onready var control_camara = $karau/pivote
-@onready var anima_jugon = $karau/blockbench_export/AnimationPlayer
+@onready var anima_jugon = $karau/karau/AnimationPlayer
 @onready var tri_fr = $objetos/casa1/trigger_farra
 
 

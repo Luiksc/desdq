@@ -1,4 +1,4 @@
-[gd_scene load_steps=310 format=4 uid="uid://pukp5k7pxmg8"]
+[gd_scene load_steps=311 format=4 uid="uid://pukp5k7pxmg8"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematucas/n_3_cinema_nro_2.gd" id="1_tx0ph"]
 [ext_resource type="Texture2D" uid="uid://btuvjdpwyjjmk" path="res://modelos/karau/karau oñeme'e encuenta_0.png" id="2_3hiju"]
@@ -59,6 +59,7 @@
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="52_jsynv"]
 [ext_resource type="Texture2D" uid="uid://dgww8k0g05cbu" path="res://modelos/objetos/yo bancoo/apykapukukupepe_0.png" id="54_j24pb"]
 [ext_resource type="Texture2D" uid="uid://4s4ukc5xqvf5" path="res://modelos/objetos/yo bancoo/apykapukukupepe_1.png" id="55_eybxm"]
+[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="60_fir3b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5kv86"]
 resource_name = "material_0"
@@ -5246,6 +5247,9 @@ color = Color(0.0735, 0.079875, 0.15, 0)
 libraries = {
 "": SubResource("AnimationLibrary_uqhpe")
 }
+
+[node name="ã" parent="Control" instance=ExtResource("60_fir3b")]
+layout_mode = 1
 
 [node name="DialogSystem2" parent="." instance=ExtResource("52_jsynv")]
 

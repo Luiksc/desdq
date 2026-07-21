@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dimc7dfhjlipf"
+path="res://.godot/imported/Tupã Rekoy.mp3-2999ccc2cb7caa5fc64731ff429ff0e1.mp3str"
+
+[deps]
+
+source_file="res://audios/Tupã Rekoy.mp3"
+dest_files=["res://.godot/imported/Tupã Rekoy.mp3-2999ccc2cb7caa5fc64731ff429ff0e1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

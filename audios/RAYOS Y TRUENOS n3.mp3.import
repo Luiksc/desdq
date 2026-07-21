@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dryii8rb2rwu"
+path="res://.godot/imported/RAYOS Y TRUENOS n3.mp3-5d280ee8c8992d914695fcaa0d6e6bce.mp3str"
+
+[deps]
+
+source_file="res://audios/RAYOS Y TRUENOS n3.mp3"
+dest_files=["res://.godot/imported/RAYOS Y TRUENOS n3.mp3-5d280ee8c8992d914695fcaa0d6e6bce.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

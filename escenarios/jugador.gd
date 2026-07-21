@@ -61,7 +61,9 @@ func moviminto(delta: float) -> void:
 	if not puede_moverse:
 		velocity.x = move_toward(velocity.x, 0, friccion * delta)
 		velocity.z = move_toward(velocity.z, 0, friccion * delta)
+		animaciones.play("oha'aro")
 		return
+		
 
 	#   DIRECCION con input
 

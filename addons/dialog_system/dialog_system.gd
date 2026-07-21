@@ -68,3 +68,13 @@ func _on_next_button_pressed() -> void:
 		text_label.visible_characters = text_label.get_total_character_count()
 	else:
 		_show_next()
+
+func terminar_dialogo() -> void:
+	if not mostrar:
+		return
+	queue.clear()
+	if current_tween and current_tween.is_running():
+		current_tween.kill()
+	mostrar = false
+	hide()
+	dialogo_opa.emit()
