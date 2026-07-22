@@ -5473,10 +5473,10 @@ jevyrenda = [NodePath("../waypoints mensu1/waypoint5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 1, -40)
 ohota = [NodePath("../waypoints kapanga5/Marker3D3"), NodePath("../waypoints kapanga5/Marker3D6"), NodePath("../waypoints kapanga5/Marker3D4"), NodePath("../waypoints kapanga5/Marker3D2"), NodePath("../waypoints kapanga5/Marker3D5")]
 
-[node name="Area3D" type="Area3D" parent="kapanga5_patrulla"]
+[node name="atrapado5" type="Area3D" parent="kapanga5_patrulla"]
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="kapanga5_patrulla/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kapanga5_patrulla/atrapado5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("SphereShape3D_xgu5u")
 
@@ -9008,9 +9008,10 @@ libraries = {
 "": SubResource("AnimationLibrary_x8pej")
 }
 
-[connection signal="body_entered" from="kapanga5_patrulla/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="kapanga5_patrulla/atrapado5" to="." method="_on_atrapado_5_body_entered"]
 [connection signal="body_entered" from="kapanga3_patrulla/atrapado2" to="." method="_on_atrapado_2_body_entered"]
 [connection signal="body_entered" from="kapanga2_patrulla/atrapado" to="." method="_on_atrapado_body_entered"]
+[connection signal="body_entered" from="kapanga6/atrapado6" to="." method="_on_atrapado_6_body_entered"]
 [connection signal="body_entered" from="kapanga4_patrulla/atrapado4" to="." method="_on_atrapado_4_body_entered"]
 [connection signal="body_entered" from="objetos/dejar" to="." method="_on_dejar_body_entered"]
 [connection signal="body_exited" from="objetos/dejar" to="." method="_on_dejar_body_exited"]

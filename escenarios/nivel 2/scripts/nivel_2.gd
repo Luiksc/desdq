@@ -329,21 +329,15 @@ func _on_dejar_body_exited(body: Node3D) -> void:
 	puede_dejar = false
 	interac3.hide()
 
-
-	
-
-
 func _on_dejar_2_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
 		interac3.show()
 		puede_dejar2=true
 
-
 func _on_dejar_2_body_exited(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
 		interac3.hide()
 		puede_dejar2=false
-
 
 func _on_llevar_2_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
@@ -353,7 +347,6 @@ func _on_llevar_2_body_entered(body: Node3D) -> void:
 		if llevar:
 			puede_recoger2 = true
 
-
 func _on_llevar_2_body_exited(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
 		if llevar:
@@ -361,7 +354,6 @@ func _on_llevar_2_body_exited(body: Node3D) -> void:
 		
 		if llevar:
 			puede_recoger2=false
-	
 
 func _on_atrapado_body_entered(body: Node3D) -> void:
 	oipoo()
@@ -380,13 +372,6 @@ func reset():
 	omano= false
 	get_tree().reload_current_scene()
 
-func _on_atrapado_2_body_entered(body: Node3D) -> void:
-	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
-		oipoo()
-
-func _on_atrapado_3_body_entered(body: Node3D) -> void:
-	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
-		oipoo()
 
 func _on_puerta_despensa_body_entered(body: Node3D) -> void:
 	if llevar and secar:
@@ -400,14 +385,22 @@ func conversa(id_del_npc: String):
 	npc_actual = id_del_npc
 	inic_dialo()
 
-
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.is_in_group("jugador_global"):
+func _on_atrapado_4_body_entered(body: Node3D) -> void:
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
 		oipoo()
 
+func _on_atrapado_5_body_entered(body: Node3D) -> void:
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
+		oipoo()
 
-
-
-func _on_atrapado_4_body_entered(body: Node3D) -> void:
-	if body.is_in_group("jugador_global"):
+func _on_atrapado_6_body_entered(body: Node3D) -> void:
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
+		oipoo()
+		
+func _on_atrapado_3_body_entered(body: Node3D) -> void:
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
+		oipoo()
+		
+func _on_atrapado_2_body_entered(body: Node3D) -> void:
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
 		oipoo()
