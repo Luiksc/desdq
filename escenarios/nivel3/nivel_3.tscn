@@ -3975,7 +3975,6 @@ offset_bottom = 40.0
 layout_mode = 1
 
 [node name="ItemList" type="ItemList" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 22.925

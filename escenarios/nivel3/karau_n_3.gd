@@ -13,6 +13,8 @@ var mymba_en_combo: Node3D = null
 var teclas_faltantes: Array[String] = []
 var posibles_acciones = ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar"]
 var ui_combo_nodos: Dictionary = {}
+var combo_delay_timer: float = 0.0  # Tiempo de espera antes de detectar teclas en el combo
+const COMBO_INPUT_DELAY: float = 0.2  # Segundos de delay al inicio del combo
 var farra := false:
 	set(value):
 		farra = value
@@ -60,7 +62,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
 	
 	if mymba_en_combo != null:
-		procesar_combo()
+		if combo_delay_timer > 0:
+			combo_delay_timer -= delta
+		else:
+			procesar_combo()
 	
 	moviminto(delta)
 	move_and_slide()
@@ -180,6 +185,7 @@ func _on_combo_body_entered(body: Node3D) -> void:
 					sprite.hide()
 			
 		puede_moverse = false
+		combo_delay_timer = COMBO_INPUT_DELAY  # Iniciar el delay antes de detectar teclas
 		if body.has_method("velocidad_reducida"):
 			body.velocidad_reducida(true)
 		
@@ -191,6 +197,10 @@ func procesar_combo():
 				# Cambiar al frame 1 cuando se presiona correctamente
 				if ui_combo_nodos.has(accion):
 					ui_combo_nodos[accion].frame = 1
+			else:
+				# Tecla incorrecta presionada durante el combo
+				print("mal")
+				emit_signal("combo")
 				
 	if teclas_faltantes.is_empty():
 		# Combo completado exitosamente

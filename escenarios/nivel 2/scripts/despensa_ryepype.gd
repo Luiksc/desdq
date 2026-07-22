@@ -99,7 +99,7 @@ func dialog_terminado() -> void:
 19 Guaraníes"
 		anima.play("entrafa")
 		await anima.animation_finished
-		get_tree().change_scene_to_file("res://escenarios/nivel 2/cinematicas/cinamatica_n_2.tscn")
+		get_tree().change_scene_to_file("res://escenarios/nivel 2/cinematicas/cinamatica_n_2_Final.tscn")
   # desbloquea el movimiento
 
 	# Si era un pensamiento de Delfina, destruimos el trigger y listo

@@ -1,6 +1,9 @@
 extends Node3D
 
 @onready var interac: AnimatedSprite2D = $Control/Interac
+@onready var sorpresa_npc1 = $npcs/npc_florida/sorpresa
+@onready var sorpresa_npc2 = $"npcs/npc2-Mariano/sorpresa2"
+@onready var sorpresa_npc3 = $"npcs/kalo'i/sorpresa3"
 
 @onready var perder: Label = $Control/perdiendo
 @onready var siguente: Label = $Control/siguietne
@@ -61,6 +64,7 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	jugador.puede_moverse = false
 	siguente.hide()
 	$Control/Label.hide()
 	perder.hide()
@@ -101,6 +105,7 @@ func _ready() -> void:
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
+	interac.play()
 	if dialogo_activo:
 		# E funciona como "next" mientras el diálogo está ocurriendo
 		if Input.is_action_just_pressed("interaccion"):
@@ -162,7 +167,13 @@ func dialog_terminado() -> void:
 		if is_instance_valid(pensamiento):
 			pensamiento.queue_free()
 		return
-
+		
+	if npc_actual == "florida":
+		sorpresa_npc1.hide()
+	elif npc_actual == "Mariano":
+		sorpresa_npc2.hide()
+	elif npc_actual == "kaloi":
+		sorpresa_npc3.hide()
 	# Si el jugador todavía está en el área de un NPC, volvemos a mostrar el label
 	if jugador_puede_interac:
 		interac.show()
@@ -205,7 +216,7 @@ func _on_mykure_trigger_body_exited(_body: Node3D) -> void:
 
 func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 	interac.show()
-	interac.play()
+	
 	
 
 
@@ -224,13 +235,14 @@ func jugador_omano():
 	jugador.puede_moverse = false
 	jgd_omamo=true
 	perder.show()
+	interac.show()
 	$Control/Label.show()
 	
 	
 func reset():
 	perder.hide()
+	interac.hide()
 	$Control/Label.hide()#escondete kape
-	
 	jgd_omamo=false
 	jugador.global_position = checkpoint.ultima_posicion
 	transicion.play("salida")

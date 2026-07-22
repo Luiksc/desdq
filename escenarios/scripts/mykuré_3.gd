@@ -30,6 +30,7 @@ func _physics_process(_delta: float) -> void:
 			velocity = Vector3.ZERO
 
 		estado.persiguiendo:
+			
 			if jugador == null:
 				velocity = Vector3.ZERO
 				return
@@ -46,9 +47,9 @@ func _physics_process(_delta: float) -> void:
 				return
 
 			var direccion = punto_retiro.global_position - global_position
-			direccion.y = 0
+			
 			direccion = direccion.normalized()
-			velocity = direccion * SPEED
+			velocity = direccion * 14
 			move_and_slide()
 
 			if global_position.distance_to(punto_retiro.global_position) < 0.5:
@@ -100,8 +101,9 @@ func obtener_numero_de_mykure() -> String:
 func activar_persecucion(body: Node3D) -> void:
 	if es_jugador(body):
 		atake_sond.play()
-		puede_espantar = true
+		await get_tree().create_timer(0.4).timeout
 		Estado = estado.persiguiendo
+		puede_espantar = true
 
 
 func es_jugador(body: Node3D) -> bool:
@@ -113,7 +115,7 @@ func detenido_sape() -> void:
 	if is_instance_valid(triger_mykure):
 		triger_mykure.queue_free()
 		triger_mykure = null
-		hide()
+		#hide()
 
 
 func reinicio() -> void:
@@ -127,7 +129,6 @@ func reinicio() -> void:
 
 
 func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
-	
 	activar_persecucion(body)
 
 

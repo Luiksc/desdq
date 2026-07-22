@@ -36,6 +36,7 @@ func _physics_process(_delta: float) -> void:
 				return
 			
 			var direccion = jugador.global_position - global_position
+			
 			direccion.y = 0
 			direccion = direccion.normalized()
 			velocity = direccion * SPEED
@@ -104,8 +105,9 @@ func obtener_numero_de_mykure() -> String:
 
 func activar_persecucion(body: Node3D) -> void:
 	atake_sond.play()
+	await get_tree().create_timer(0.4).timeout
+	puede_espantar = true
 	if es_jugador(body):
-		puede_espantar = true
 		Estado = estado.persiguiendo
 
 

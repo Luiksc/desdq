@@ -65,7 +65,7 @@ var jugador_puede_interac: bool = false
 var mykure_activu: bool = false
 var dialogo_activo: bool = false
 var npc_actual: String = ""
-var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
+var pensamiento_activo: bool = false 
 
 var puede_recoger = false
 var puede_dejar = false
@@ -98,6 +98,7 @@ che ahátama aguejy ka'a sáko amoite arriba ¡Ejúpy!"],
 }
 
 func _ready() -> void:
+	jugador.puede_moverse= false
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	perdeu.hide()

@@ -48,6 +48,7 @@ func _ready() -> void:
 	transicion.play("salida")
 	await transicion.animation_finished
 	inicia_cine("Dialogo1")
+	$Control/Interac.play("interactura")
 	
 
 
@@ -92,7 +93,9 @@ func inic_dialo() -> void:
 func dialog_terminado() -> void:
 	dialogo_activo = false
 	if npc_actual == "Dialogo1":
+		$Control/Interac.hide()
 		transicion.play("entrafa")
+		
 		await transicion.animation_finished
 		get_tree().change_scene_to_file("res://escenarios/n_1.tscn")
 

@@ -91,7 +91,7 @@ mesh = SubResource("ArrayMesh_xcajd")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(0.99999, -0.00419308, -0.00168568, 0.00419291, 0.999991, -0.000105862, 0.00168611, 9.8793e-05, 0.999999, 0, 0.414322, 0)
+transform = Transform3D(0.99999, -0.00419308, -0.00168568, 0.00419291, 0.999991, -0.000105862, 0.00168611, 9.8793e-05, 0.999999, 0, 0.836496, 0)
 light_color = Color(1, 0.929, 0.29, 1)
-light_energy = 3.0
+light_energy = 1.189
 omni_range = 3.01264

@@ -1,8 +1,9 @@
-[gd_scene load_steps=105 format=4 uid="uid://b3sejkfqdkt0"]
+[gd_scene load_steps=109 format=4 uid="uid://b3sejkfqdkt0"]
 
 [ext_resource type="Script" path="res://escenarios/n_1_cinematica.gd" id="1_ypeu1"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_mwopg"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="4_yht7x"]
+[ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="5_f7vi3"]
 [ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="5_ivfqn"]
 [ext_resource type="Texture2D" uid="uid://dobjff0w0vwfq" path="res://modelos/objetos/chaco/ÓGA+/Casa_delfina_0.png" id="23_ih2oe"]
 [ext_resource type="PackedScene" uid="uid://kaql6p3h1tgl" path="res://modelos/objetos/chaco/ÓGA+/oga.tscn" id="29_aypkw"]
@@ -46,6 +47,28 @@ sky = SubResource("Sky_ojd1x")
 ambient_light_source = 2
 ambient_light_color = Color(1, 0.909804, 0.752941, 1)
 fog_light_color = Color(1, 0.915667, 0.77, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlxe7"]
+atlas = ExtResource("5_f7vi3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27jxw"]
+atlas = ExtResource("5_f7vi3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pb4u8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlxe7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27jxw")
+}],
+"loop": true,
+"name": &"interactura",
+"speed": 2.0
+}]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abevo"]
 resource_name = "material_0"
@@ -967,10 +990,19 @@ grow_vertical = 2
 [node name="ã" parent="Control" instance=ExtResource("5_ivfqn")]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 28.5
-anchor_bottom = 16.05
+anchor_left = 0.8
+anchor_top = -1.675
+anchor_right = 29.3
+anchor_bottom = 14.375
 offset_bottom = -6.10352e-05
 metadata/_edit_use_anchors_ = true
+
+[node name="Interac" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(1041, 393)
+scale = Vector2(3.28125, 2.875)
+sprite_frames = SubResource("SpriteFrames_pb4u8")
+animation = &"interactura"
 
 [node name="*objetos" type="Node" parent="."]
 

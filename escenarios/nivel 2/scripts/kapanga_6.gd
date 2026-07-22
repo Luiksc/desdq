@@ -99,9 +99,6 @@ func _physics_process(delta: float) -> void:
 			velocity.z = direccion.z * velocidad
 			# velocity.y lo maneja la gravedad del inicio del _physics_process
 			
-				
-				
-				
 		estado.oinopa:
 			if velocity.x == 0 and velocity.z == 0:
 				if animacion.current_animation != "oinupa":
