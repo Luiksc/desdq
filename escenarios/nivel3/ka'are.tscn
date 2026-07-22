@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu2b3a7h35ohb"]
+[gd_scene load_steps=9 format=4 uid="uid://bu2b3a7h35ohb"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/ka'are_ID.gd" id="1_lpdqa"]
+[ext_resource type="Texture2D" uid="uid://cdkoheylwnmk0" path="res://modelos/objetos/nivel_3/ka'are_0.png" id="2_tj7hy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yl1tg"]
 albedo_color = Color(1, 0.00999999, 0.00999999, 1)
@@ -11,10 +12,53 @@ material = SubResource("StandardMaterial3D_yl1tg")
 [sub_resource type="SphereShape3D" id="SphereShape3D_kaare"]
 radius = 1.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3bxa1"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_tj7hy")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nme1k"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.515771, 1, 1, 1.03154),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYACAAKAAkACAALAAoADAAOAA0ADAAPAA4A"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("////fxX8AAD///9/6QMAAAAA/3/pAwAAAAD/fxX8AAD/fwAAFfwAAP9/AADpAwAA/3///+kDAAD/f///FfwAACnaoifC/QAAZeJBK74FAADVJVzYPAIAAJkdvdRA+gAAW9J43P//AACW2hbg+wcAAKMthiMAAAAAaCXoHwP4AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_85f00"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.515771, 1, 1, 1.03154),
+"attribute_data": PackedByteArray("////////AAAAAAAAAAD//////////wAAAAAAAAAA//////////8AAAAAAAAAAP//////////AAAAAAAAAAD//w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYACAAKAAkACAALAAoADAAOAA0ADAAPAA4A"),
+"material": SubResource("StandardMaterial3D_3bxa1"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("////fxX8/7////9/6QP/vwAA/3/pA/+/AAD/fxX8/7//fwAAFfxU1f9/AADpA1TV/3///+kDVNX/f///FfxU1SnaoifC/W3EZeJBK74FbcTVJVzYPAJtxJkdvdRA+m3EW9J43P//osaW2hbg+weixqMthiMAAKLGaCXoHwP4osb///9/////f////3////9/qqpUVaqqVFWqqlRVqqpUVYrHvGSKx7xkise8ZIrHvGS/4OG7v+Dhu7/g4bu/4OG7")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nme1k")
+
 [node name="ka\'are" type="Node3D"]
 script = ExtResource("1_lpdqa")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("SphereMesh_p74i0")
 
 [node name="Area3D" type="Area3D" parent="MeshInstance3D"]
@@ -22,3 +66,17 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
 shape = SubResource("SphereShape3D_kaare")
+
+[node name="blockbench_export" type="Node3D" parent="."]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, -0.72088, 0)
+
+[node name="hojas" type="MeshInstance3D" parent="blockbench_export"]
+transform = Transform3D(0, -0.999048, -0.0436194, 0, 0.0436193, -0.999048, 1, 0, 0, 0, 1, 0)
+mesh = SubResource("ArrayMesh_85f00")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.779342, 0)
+light_color = Color(0.95, 0.799267, 0.304, 1)
+light_energy = 6.434
+omni_range = 2.0

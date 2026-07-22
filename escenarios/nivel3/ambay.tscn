@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4ee8kkevv21g"]
+[gd_scene load_steps=9 format=4 uid="uid://b4ee8kkevv21g"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/ambay_ID.gd" id="1_5ijkq"]
+[ext_resource type="Texture2D" uid="uid://bsfutl3jci86r" path="res://modelos/objetos/nivel_3/amba'y (1)_0.png" id="2_1j7mm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eefm2"]
 albedo_color = Color(1, 0.833333, 0, 1)
@@ -11,10 +12,53 @@ material = SubResource("StandardMaterial3D_eefm2")
 [sub_resource type="SphereShape3D" id="SphereShape3D_ambay"]
 radius = 1.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vj5a5"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_1j7mm")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tgswq"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////f///AAD///9/AAAAAAAA/38AAAAAAAD/f///AAD/f/////8AAP9///8AAAAA/38AAAAAAAD/fwAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xcajd"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("////////AAAAAAAAAAD//////////wAAAAAAAAAA//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYA"),
+"material": SubResource("StandardMaterial3D_vj5a5"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////f////7////9/AAD/vwAA/38AAP+/AAD/f////7//f/////9U1f9///8AAFTV/38AAAAAVNX/fwAA//9U1f///3////9/////f////39U1VTVVNVU1VTVVNVU1VTV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_tgswq")
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_5ijkq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("SphereMesh_kpva0")
 
 [node name="Area3D" type="Area3D" parent="MeshInstance3D"]
@@ -22,3 +66,32 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
 shape = SubResource("SphereShape3D_ambay")
+
+[node name="blockbench_export" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.53403, 0)
+
+[node name="plane" type="MeshInstance3D" parent="blockbench_export"]
+transform = Transform3D(0.559092, 0, 0.829106, 0.829106, 0, -0.559092, 0, 1, 0, -0.415145, 0.834536, 0)
+mesh = SubResource("ArrayMesh_xcajd")
+skeleton = NodePath("")
+
+[node name="plane3" type="MeshInstance3D" parent="blockbench_export"]
+transform = Transform3D(0.763925, 0.404775, 0.502569, 0.549606, 0, -0.835424, -0.338158, 0.914416, -0.222467, -0.395509, 1.30775, 0)
+mesh = SubResource("ArrayMesh_xcajd")
+skeleton = NodePath("")
+
+[node name="plane2" type="MeshInstance3D" parent="blockbench_export"]
+transform = Transform3D(0.357138, 0.537078, -0.764199, -0.68161, -0.409544, -0.606368, -0.63864, 0.737442, 0.219814, 0.387642, 0.989632, 0)
+mesh = SubResource("ArrayMesh_xcajd")
+skeleton = NodePath("")
+
+[node name="plane4" type="MeshInstance3D" parent="blockbench_export"]
+transform = Transform3D(0.697295, 0.67541, -0.240003, -0.325453, 0, -0.945558, -0.63864, 0.737442, 0.219814, 0.0700226, 1.76267, 0)
+mesh = SubResource("ArrayMesh_xcajd")
+skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.99999, -0.00419308, -0.00168568, 0.00419291, 0.999991, -0.000105862, 0.00168611, 9.8793e-05, 0.999999, 0, 0.414322, 0)
+light_color = Color(1, 0.929, 0.29, 1)
+light_energy = 3.0
+omni_range = 3.01264

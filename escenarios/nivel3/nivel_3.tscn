@@ -1372,7 +1372,7 @@ size = Vector3(30, 15, 6)
 size = Vector3(20.4, 12, 40)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7grfc"]
-size = Vector3(46.6, 12, 10)
+size = Vector3(49, 12, 11.8872)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2gov"]
 size = Vector3(4, 12, 30)
@@ -3320,7 +3320,7 @@ data = {
 }
 
 [node name="karau" parent="." instance=ExtResource("3_pm1yq")]
-transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, 1.0012, 1.17219, 11)
+transform = Transform3D(1, 0, 5.56363e-08, 0, 1, 0, -5.56363e-08, 0, 1, 25.0012, 1.17219, 15)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.739942, 0.496967, -0.453331, -0.198267, 0.805117, 0.558996, 0.642788, -0.323744, 0.694272, -27, 19, 37)
@@ -3745,7 +3745,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.850001, 5.5, 68.5)
 shape = SubResource("BoxShape3D_vlaaj")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="objetos/coliciones/boque"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2, 5.5, -2.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 5.5, -3.24361)
 shape = SubResource("BoxShape3D_7grfc")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="objetos/coliciones/boque"]
@@ -3809,13 +3809,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 2.2, 87)
 [node name="posible_aparecer_amba\'y" type="Node" parent="."]
 
 [node name="Marker3D" type="Marker3D" parent="posible_aparecer_amba\'y"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7, 3.2, 114.443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1.5, 113.743)
 
 [node name="Marker3D2" type="Marker3D" parent="posible_aparecer_amba\'y"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9, 2.4, 96.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6, 1.36418, 94.4)
 
 [node name="Marker3D3" type="Marker3D" parent="posible_aparecer_amba\'y"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9286, 2.58875, 128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9286, 2.10676, 128.273)
 
 [node name="capsulas_yuyo" type="Node3D" parent="."]
 
@@ -3924,22 +3924,22 @@ transform = Transform3D(0.417373, 0, -0.502485, 0, 0.786206, 0, 0.722911, 0, 0.2
 transform = Transform3D(0.417373, 0, -0.502485, 0, 0.786206, 0, 0.722911, 0, 0.29011, -6.46354, 0.153035, 13.6741)
 
 [node name="Node3D" parent="final/Node3D6" instance=ExtResource("36_ly6c4")]
-transform = Transform3D(-5.96046e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, -5.96046e-08, -19.2492, 0.153035, -19.8729)
+transform = Transform3D(-8.9407e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, 2.98023e-08, -19.2492, 0.229208, -19.8729)
 
 [node name="Node3D2" parent="final/Node3D6" instance=ExtResource("36_ly6c4")]
-transform = Transform3D(-5.96046e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, -5.96046e-08, -20.3949, 0.153035, -22.6552)
+transform = Transform3D(-8.9407e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, 2.98023e-08, -20.3949, 0.229208, -22.6552)
 
 [node name="Node3D3" parent="final/Node3D6" instance=ExtResource("36_ly6c4")]
-transform = Transform3D(-5.96046e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, -5.96046e-08, -19.5085, 0.153035, -26.5513)
+transform = Transform3D(-8.9407e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, 2.98023e-08, -19.5085, 0.229208, -26.5513)
 
 [node name="Node3D4" parent="final/Node3D6" instance=ExtResource("36_ly6c4")]
-transform = Transform3D(-5.96046e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, -5.96046e-08, -20.9103, 0.153035, -24.1773)
+transform = Transform3D(-8.9407e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, 2.98023e-08, -20.9103, 0.229208, -24.1773)
 
 [node name="Node3D5" parent="final/Node3D6" instance=ExtResource("36_ly6c4")]
-transform = Transform3D(-5.96046e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, -5.96046e-08, -19.1681, 0.153035, -24.3263)
+transform = Transform3D(-8.9407e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, 2.98023e-08, -19.1681, 0.229208, -24.3263)
 
 [node name="Node3D6" parent="final/Node3D6" instance=ExtResource("36_ly6c4")]
-transform = Transform3D(-5.96046e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, -5.96046e-08, -22.3261, 0.153035, -22.178)
+transform = Transform3D(-8.9407e-08, 0, -0.58022, 0, 0.786206, 0, 0.834746, 0, -2.98023e-08, -22.3261, -0.49447, -22.178)
 
 [node name="Node3D7" parent="final" instance=ExtResource("36_ly6c4")]
 transform = Transform3D(0.417373, 0, -0.502485, 0, 0.786206, 0, 0.722911, 0, 0.29011, -11.6528, 0.153035, 19.7116)

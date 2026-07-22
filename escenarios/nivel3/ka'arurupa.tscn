@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxgjc6akvakt4"]
+[gd_scene load_steps=5 format=3 uid="uid://dxgjc6akvakt4"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/objeto_recolectable.gd" id="1_kaarurupa"]
+[ext_resource type="PackedScene" uid="uid://cjfp5m88b4anb" path="res://modelos/objetos/nivel_3/ka'arurupa.glb" id="2_bj0aw"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_4islj"]
 
@@ -12,6 +13,7 @@ script = ExtResource("1_kaarurupa")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+visible = false
 mesh = SubResource("SphereMesh_4islj")
 
 [node name="Area3D" type="Area3D" parent="MeshInstance3D"]
@@ -19,3 +21,15 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
 shape = SubResource("SphereShape3D_ohbss")
+
+[node name="blockbench_export" parent="." instance=ExtResource("2_bj0aw")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, -0.671969, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.763405, 0)
+light_color = Color(0.89, 0.784683, 0.2581, 1)
+light_energy = 5.498
+light_indirect_energy = 2.0
+light_volumetric_fog_energy = 2.0
+light_specular = 7.142
+omni_range = 2.0
