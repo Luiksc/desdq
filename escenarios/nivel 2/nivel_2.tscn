@@ -8119,7 +8119,6 @@ libraries = {
 
 [node name="sorpresa" parent="." instance=ExtResource("28_jobur")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.428645, 26.0026, 25.3008)
-visible = false
 
 [node name="sorpresa2" parent="." instance=ExtResource("28_jobur")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 27.5714, 2.0026, -70.6992)
@@ -9007,6 +9006,9 @@ root_node = NodePath("../blockbench_export")
 libraries = {
 "": SubResource("AnimationLibrary_x8pej")
 }
+
+[node name="spawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.8181, 1.36935, -21.2352)
 
 [connection signal="body_entered" from="kapanga5_patrulla/atrapado5" to="." method="_on_atrapado_5_body_entered"]
 [connection signal="body_entered" from="kapanga3_patrulla/atrapado2" to="." method="_on_atrapado_2_body_entered"]

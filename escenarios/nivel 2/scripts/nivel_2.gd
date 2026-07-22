@@ -15,7 +15,7 @@ extends Node3D
 @onready var kapanga3 = $kapanga3_patrulla
 @onready var kapanga4 = $kapanga4_patrulla
 @onready var kapanga5 =$kapanga5_patrulla
-
+@onready var kapanga6 = $kapanga6
 
 @onready var sako_baj1 = $"objetos/sako1 baj"
 @onready var sako_baj2 = $"objetos/sako2 baj"
@@ -98,6 +98,7 @@ che ahátama aguejy ka'a sáko amoite arriba ¡Ejúpy!"],
 }
 
 func _ready() -> void:
+	indicador1.show()
 	jugador.puede_moverse= false
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -364,13 +365,71 @@ func oipoo():
 	kapanga3.velocidad = 0
 	kapanga4.velocidad = 0
 	kapanga5.velocidad = 0
+	kapanga6.velocidad = 0
 
 	jugador.puede_moverse=false
 	perdeu.show()
 	transicion.play("entrafa")
 func reset():
-	omano= false
-	get_tree().reload_current_scene()
+	omano = false
+
+	# Mover jugador al punto de spawn
+	var spawn = get_node_or_null("spawn")
+	if spawn:
+		jugador.global_position = spawn.global_position
+		jugador.global_rotation = spawn.global_rotation
+	jugador.puede_moverse = true
+	perdeu.hide()
+	transicion.play("salida")
+
+	# Restaurar kapangas
+	kapanga2.velocidad = 10
+	kapanga3.velocidad =  10
+	kapanga4.velocidad = 10
+	kapanga5.velocidad =10
+	kapanga6.velocidad =10
+
+	if not llevar:
+
+		sakos1.clear()
+		sakos1.append(sako_baj1)
+		sakos1.append(sako_baj2)
+		sakos1.append(sako_baj3)
+		for s in sakos1:
+			s.show()
+
+		sakos2.clear()
+		sakos2.append(sako_baj4)
+		sakos2.append(sako_baj5)
+		sakos2.append(sako_baj6)
+		for s in sakos2:
+			s.hide()
+
+		lista.set_item_text(0, "llevar sacos de yerba mate. 0/3")
+
+		# Resetear estado de carga de tarea 1
+		llevando = false
+		jugador.oraha = false
+
+
+	if not secar:
+	
+		for s in sakos3:
+			s.show()
+
+	
+		sakos4.clear()
+		sakos4.append(sako_baj7)
+		sakos4.append(sako_baj8)
+		sakos4.append(sako_baj9)
+		for s in sakos4:
+			s.hide()
+
+		lista.set_item_text(1, "poner a secar  la yerba. 0/3")
+
+		# Resetear estado de carga de tarea 2
+		llevando2 = false
+		jugador.oraha = false
 
 
 func _on_puerta_despensa_body_entered(body: Node3D) -> void:
@@ -385,6 +444,8 @@ func conversa(id_del_npc: String):
 	npc_actual = id_del_npc
 	inic_dialo()
 
+
+#--------COlisiones de kapangas-------------------#
 func _on_atrapado_4_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
 		oipoo()
