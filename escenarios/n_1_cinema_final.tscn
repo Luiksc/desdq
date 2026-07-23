@@ -47,13 +47,13 @@
 [ext_resource type="Texture2D" uid="uid://dp1p0vnxh1rhg" path="res://modelos/delfina servin/pochyeterei rokoko/delfina Servin_14.png" id="44_8kjyf"]
 [ext_resource type="PackedScene" uid="uid://cm4gmnji8mv4e" path="res://escenarios/ojerokyva.tscn" id="47_o1eeb"]
 [ext_resource type="MeshLibrary" uid="uid://dbntdg3qnqfgd" path="res://modelos/libr mesh/arbustos_espinosos.tres" id="52_4hhw2"]
-[ext_resource type="AudioStream" uid="uid://bstmje1k1q5rc" path="res://audios/SONIDO DE PISTOLA.mp3" id="52_nin6r"]
 [ext_resource type="MeshLibrary" uid="uid://rhowvwxd6qjc" path="res://modelos/libr mesh/1libreria_chaco.tres" id="53_w4xoh"]
 [ext_resource type="MeshLibrary" uid="uid://btt733selbmy1" path="res://modelos/libr mesh/2libreria_chaco.tres" id="54_h5en2"]
 [ext_resource type="Texture2D" uid="uid://bwe166xxxy0wi" path="res://background/delfina_pochy1.png" id="55_e5hi2"]
 [ext_resource type="Texture2D" uid="uid://dee6pnf4np6kh" path="res://background/delfina_pochy2.png" id="56_7ttit"]
 [ext_resource type="PackedScene" uid="uid://dt8fxjokm7w7t" path="res://escenarios/nivel_1_final.tscn" id="58_3h5k6"]
 [ext_resource type="AudioStream" uid="uid://ogvi4vkp2wxm" path="res://audios/Sonidos del chaco. (mp3cut.net).mp3" id="59_2pp5e"]
+[ext_resource type="AudioStream" uid="uid://b6w3vjsjt1jer" path="res://audios/5-disparos.mp3" id="59_g5b2q"]
 [ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/Sonidos del Chaco ambiente.mp3" id="60_2jgir"]
 [ext_resource type="AudioStream" uid="uid://bldraj880nhfk" path="res://audios/musica de nivel/Mateo-gamarra-Duo-Quintana-letra_yme.mp3" id="61_1sqjm"]
 [ext_resource type="AudioStream" uid="uid://rnfh0p7isxb7" path="res://audios/sápe.mp3" id="62_6vwja"]
@@ -2726,9 +2726,6 @@ volume_db = 5.457
 unit_size = 13.0
 autoplay = true
 
-[node name="SonidoDePistola" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("52_nin6r")
-
 [node name="Sápe" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("62_6vwja")
 volume_db = -4.333
@@ -2786,3 +2783,6 @@ libraries = {
 layout_mode = 1
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="5-disparos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("59_g5b2q")

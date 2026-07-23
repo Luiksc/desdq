@@ -5,6 +5,7 @@ extends Node3D
 @onready var anima_jeroky = $"npcs/Mateo ha emilia/Mateo a emilia/ojeroky/AnimationPlayer"
 @onready var piel_ini = $"npcs/Mateo ha emilia/Mateo a emilia/inicia"
 @onready var piel_jeroky = $"npcs/Mateo ha emilia/Mateo a emilia/ojeroky"
+@onready var sonido_pistola =$"5-disparos"
 
 @onready var anima_delfi = $delfina/AnimationPlayer
 var ojeroky = false
@@ -121,8 +122,8 @@ func disparate():
 	await  transi_negro.animation_finished
 	transi_negro.play("desvanecido")
 	await transi_negro.animation_finished
-	$SonidoDePistola.play()
-	await $SonidoDePistola.finished
+	sonido_pistola.play()
+	await sonido_pistola.finished
 	carta.show()
 	anima_carta.play("aparece")
 	seguir = true

@@ -8086,9 +8086,9 @@ metadata/_edit_use_anchors_ = true
 [node name="ã" parent="Control" instance=ExtResource("32_wniec")]
 layout_mode = 1
 offset_left = -9.0
-offset_top = -27.0
+offset_top = 0.0
 offset_right = 8.0
-offset_bottom = -27.0
+offset_bottom = 0.0
 
 [node name="gameover" type="Label" parent="Control"]
 layout_mode = 0

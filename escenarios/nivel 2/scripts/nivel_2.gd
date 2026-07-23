@@ -17,6 +17,12 @@ extends Node3D
 @onready var kapanga5 =$kapanga5_patrulla
 @onready var kapanga6 = $kapanga6
 
+@onready var kapanga2_puntoorigen= $"waypoints kapanga2/Marker3D"
+@onready var kapanga3_puntoorigen= $"waypoints kapanga3/Marker3D"
+@onready var kapanga4_puntoorigen= $"waypoints kapanga4/Marker3D2"
+@onready var kapanga5_puntoorigen= $"waypoints kapanga5/Marker3D3"
+@onready var kapanga6_puntoorigen= $"waypoints kapanga6/Marker3D3"
+
 @onready var sako_baj1 = $"objetos/sako1 baj"
 @onready var sako_baj2 = $"objetos/sako2 baj"
 @onready var sako_baj3 = $"objetos/sako3 baj"
@@ -366,7 +372,12 @@ func oipoo():
 	kapanga4.velocidad = 0
 	kapanga5.velocidad = 0
 	kapanga6.velocidad = 0
-
+	kapanga2.global_position = kapanga2_puntoorigen.global_position
+	kapanga3.global_position = kapanga3_puntoorigen.global_position
+	kapanga4.global_position = kapanga4_puntoorigen.global_position
+	kapanga5.global_position = kapanga5_puntoorigen.global_position
+	kapanga6.global_position = kapanga6_puntoorigen.global_position
+	
 	jugador.puede_moverse=false
 	perdeu.show()
 	transicion.play("entrafa")

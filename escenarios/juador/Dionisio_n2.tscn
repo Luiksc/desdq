@@ -1,7 +1,7 @@
 [gd_scene load_steps=172 format=4 uid="uid://djdiuudqnkjkp"]
 
 [ext_resource type="Script" path="res://escenarios/jugador_mensu.gd" id="1_jxq0r"]
-[ext_resource type="Script" path="res://escenarios/scripts/camara_spring_arm_3d.gd" id="17_o1xon"]
+[ext_resource type="Script" path="res://escenarios/juador/pivote_n3.gd" id="17_8i3rt"]
 [ext_resource type="Script" path="res://escenarios/juador/seguimiento de camara.gd" id="18_uyfk0"]
 [ext_resource type="Texture2D" uid="uid://cqjflskulxkwa" path="res://modelos/Dionisio/expo/dionisio sucio (1)_0.png" id="19_1whos"]
 [ext_resource type="Texture2D" uid="uid://ceugre1n5yntg" path="res://modelos/Dionisio/expo oraha/dionisio sucio oraha_0.png" id="19_un3l1"]
@@ -2436,8 +2436,8 @@ shape = SubResource("CylinderShape3D_t0yxi")
 
 [node name="pivote" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.24271, 0)
-script = ExtResource("17_o1xon")
-minim_angulo_vertical = -0.785398
+script = ExtResource("17_8i3rt")
+minim_angulo_vertical = -1.53589
 
 [node name="SpringArm3D" type="SpringArm3D" parent="pivote"]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, 0)
@@ -2449,7 +2449,7 @@ spring_length = 5.0
 [node name="Camera3D" type="Camera3D" parent="pivote" node_paths=PackedStringArray("spring_arm")]
 script = ExtResource("18_uyfk0")
 spring_arm = NodePath("../SpringArm3D/posicion spring")
-lerp_power = 5.0
+lerp_power = 7.0
 
 [node name="oraha" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.38498e-09, 0, 0.2)
@@ -2592,7 +2592,7 @@ mesh = SubResource("ArrayMesh_20nwt")
 skeleton = NodePath("")
 
 [node name="kaa" type="MeshInstance3D" parent="oraha/base/corpu2/cosa"]
-transform = Transform3D(0.507473, -1.25899, -0.153839, -0.478842, -0.343602, 1.23244, -1.17449, -0.403895, -0.568935, -0.744483, 1.94521, -0.434774)
+transform = Transform3D(0.507473, -1.25899, -0.153839, -0.478842, -0.343602, 1.23244, -1.17449, -0.403895, -0.568935, -1.21799, 2.05626, -0.458054)
 mesh = SubResource("ArrayMesh_cuwd8")
 skeleton = NodePath("")
 
@@ -2608,3 +2608,6 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_8xpef")
 }
+
+[node name="mira_atras" type="Marker3D" parent="."]
+transform = Transform3D(1, 6.20961e-09, 1.74433e-09, -6.20961e-09, 0.853724, 0.520727, 1.74433e-09, -0.520727, 0.853724, -7.30963e-08, 5.53802, 6.12972)
