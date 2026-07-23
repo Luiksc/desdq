@@ -9,8 +9,12 @@ extends Node3D
 @onready var ave_karau_vuela = $vuela
 @onready var anima_vuelo_ave = $vuela/AnimationPlayer
 @onready var ruta_vuelo = $vuela/desplazaminetoi
+@onready var carta = $Control/TextureRect/AnimationPlayer
+@onready var info = $Control/informacion
 
 func _ready() -> void:
+	info.hide()
+	carta.play("RESET")
 	karau_ave.hide()
 	ave_karau_vuela.hide()
 	transicion.play("desaparece")
@@ -34,7 +38,8 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	await get_tree().create_timer(3.0).timeout
 	transicion.play("aparece")
-	
+	carta.play("aparece")
+	info.show()
 	
 	
 	

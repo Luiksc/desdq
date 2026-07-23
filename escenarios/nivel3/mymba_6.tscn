@@ -9,9 +9,16 @@
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_dlwqp")
 
-[node name="daña" type="CollisionShape3D" parent="."]
+[node name="colision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.788105, 0)
 shape = SubResource("SphereShape3D_1w6xn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_m405p")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="daña" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.788105, 0)
+shape = SubResource("SphereShape3D_1w6xn")

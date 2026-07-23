@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal jugador_danado(id_yuyo: String)
+
 @export var teclas_combo: Array[String] = ["ui_up", "ui_right", "interaccion"]
 var pos_original: Vector3
 var vel_normal: float = 14
@@ -37,7 +39,6 @@ func vincular_yuyo(yuyo: Node3D) -> void:
 
 func _on_yuyo_recibido(id: String) -> void:
 	print("Capsula [", name, "] recibio señal del yuyo: ", id)
-
 	_reaccionar(id)
 
 
@@ -48,6 +49,14 @@ func _reaccionar(id: String) -> void:
 func _ready() -> void:
 	pos_original = global_position
 	vel_normal = SPEED
+	var area = get_node_or_null("Area3D")
+	if area:
+		if not area.body_entered.is_connected(_on_zona_daña_body_entered):
+			area.body_entered.connect(_on_zona_daña_body_entered)
+
+func _on_zona_daña_body_entered(body: Node3D) -> void:
+	if persigue and (body.is_in_group("jugador_global") or body.is_in_group("jugon")):
+		emit_signal("jugador_danado", id_yuyo_esperado)
 
 func velocidad_reducida(reducir: bool) -> void:
 	if reducir:
@@ -58,9 +67,8 @@ func velocidad_reducida(reducir: bool) -> void:
 func volver_a_origen() -> void:
 	persigue = false
 	velocidad_reducida(false)
-	var direccion = ojevy.global_position - global_position
-	var angulo = atan2(direccion.x,direccion.z)
-	rotation.y = lerp_angle(rotation.y, angulo, 5)
-	direccion = direccion.normalized()
-	velocity = direccion * SPEED
-	move_and_slide()
+	velocity = Vector3.ZERO
+	if ojevy != null and is_instance_valid(ojevy):
+		global_position = ojevy.global_position
+	else:
+		global_position = pos_original

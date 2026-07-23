@@ -52,6 +52,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$cosa/Ulise/corpu2/pecho/AnimationPlayer.play("okemano")
+	$cosa/Rogelio/AnimationPlayer.play("okemano")
+	
+	
 	$marta/blockbench_export/AnimationPlayer.play("arregla")
 	if dialogo_activo:
 		if Input.is_action_just_pressed("interaccion"):

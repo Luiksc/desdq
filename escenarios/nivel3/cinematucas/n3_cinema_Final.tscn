@@ -1,4 +1,4 @@
-[gd_scene load_steps=187 format=4 uid="uid://bqn6jif5g1ppb"]
+[gd_scene load_steps=193 format=4 uid="uid://bqn6jif5g1ppb"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematucas/n_3_cinema_final.gd" id="1_xwnb2"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_d7v4s"]
@@ -11,7 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://00n614hfpmmk" path="res://modelos/karau/karai_conversion_2.png" id="7_byq8v"]
 [ext_resource type="PackedScene" uid="uid://llhj5sy1rdln" path="res://UI/transicion_fadde.tscn" id="7_h8p2y"]
 [ext_resource type="Texture2D" uid="uid://bq1cn68yweeex" path="res://modelos/karau/karai_conversion_3.png" id="8_5crje"]
+[ext_resource type="Texture2D" uid="uid://bn5syl772cno2" path="res://UI/nivel_2_carta.png" id="8_72ygu"]
 [ext_resource type="Texture2D" uid="uid://iyw75hnx6m57" path="res://modelos/karau/karai_conversion_4.png" id="9_3dq2i"]
+[ext_resource type="FontFile" uid="uid://2efbjbt4sdx" path="res://UI/fuentes/Upheaval/upheavtt.ttf" id="9_dkqai"]
 [ext_resource type="Texture2D" uid="uid://mnjg0b72cyka" path="res://modelos/karau/karai_conversion_5.png" id="10_sb6ib"]
 [ext_resource type="Texture2D" uid="uid://bjkix2wie2uh" path="res://modelos/karau/karai_conversion_6.png" id="11_k1njw"]
 [ext_resource type="Texture2D" uid="uid://bdck6b1sjv473" path="res://modelos/karau/karai_conversion_7.png" id="12_4vn20"]
@@ -106,6 +108,94 @@ _data = {
 "aparece": SubResource("Animation_echg1"),
 "desaparece": SubResource("Animation_4xyci")
 }
+
+[sub_resource type="Animation" id="Animation_usmyu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(604, 570)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(570, 250)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_lc0bb"]
+resource_name = "aparece"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(604, 570)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(570, 270), Vector2(262, 41)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3ej1"]
+_data = {
+"RESET": SubResource("Animation_usmyu"),
+"aparece": SubResource("Animation_lc0bb")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_wuuhy"]
+font = ExtResource("9_dkqai")
+font_size = 25
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43vwk"]
 resource_name = "material_0"
@@ -2598,6 +2688,44 @@ layout_mode = 1
 
 [node name="fade" parent="Control" instance=ExtResource("7_h8p2y")]
 layout_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 262.0
+offset_top = 41.0
+offset_right = -286.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("8_72ygu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/TextureRect"]
+libraries = {
+"": SubResource("AnimationLibrary_b3ej1")
+}
+
+[node name="informacion" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.354
+anchor_top = 0.802
+anchor_right = 0.638
+anchor_bottom = 0.899
+offset_left = 9.19199
+offset_top = 0.303955
+offset_right = 18.024
+offset_bottom = 12.448
+scale = Vector2(0.944752, 0.833576)
+text = "Música:
+NHE'E PORÃ: Tupã Reko'y
+Comunida Mbya Guaraní"
+label_settings = SubResource("LabelSettings_wuuhy")
+horizontal_alignment = 1
 
 [node name="colisioones" type="Node" parent="."]
 

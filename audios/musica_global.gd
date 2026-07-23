@@ -2,7 +2,7 @@ extends AudioStreamPlayer
 
 const musica_n3 = preload("res://audios/Tupã Rekoy.mp3")
 
-func play_music(music:AudioStream, volume = 1):
+func play_music(music:AudioStream, volume = -15):
 	if stream == music:
 		return
 	stream = music

@@ -15,6 +15,7 @@ var ikatu_oho = false
 
 @onready var dialogo_piensa = $objetos/casa1
 
+#-----pohañana------
 @onready var puntos_spawn: Node =$"posible aparecer ka'arurupa"
 @onready var kaarurupa: Resource = preload("res://escenarios/nivel3/ka'arurupa.tscn")
 
@@ -26,42 +27,47 @@ var ikatu_oho = false
 
 @onready var lista =$Control/ItemList
 
-# Referencia al contenedor de cápsulas
 @onready var capsulas_yuyo: Node3D = $capsulas_yuyo
 
 var dialogo_activo: bool = false
 var npc_actual: String = ""
-var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
+var pensamiento_activo: bool = false  
 
-#-----pohañana------
 
 
 var omano = false
 
-# Lista que acumula los identificadores de objetos recogidos por el jugador
+
 var objetos_recogidos: String
+
+
+var posicion_inicial_jugador: Vector3
+
+
+var instancia_kaarurupa: Node3D = null
+var instancia_kaare: Node3D = null
+var instancia_ambay: Node3D = null
+
+
+var reseteando: bool = false
 
 
 var dialogos ={
 	"florida":[
-		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],                #ejemplo
+		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],            
 		["Ña florida","Hay una fiesta cerca de la fábrica por el día de la Raza"],
-		["Ña florida","Ikatu Mateo ohora'e napépe.
-(seguro se fue allá)"]
+		["Ña florida","Ikatu Mateo ohora'e napépe.\n(seguro se fue allá)"]
 	],
 	"pensamiento1":[
-		["Karáu", "Emañamina mba'eichaite ipora pe kuñatai.
-Que hermosa es esa chica."]
+		["Karáu", "Emañamina mba'eichaite ipora pe kuñatai.\nQue hermosa es esa chica."]
 	],
 	"pensamiento2":[
-		["Karáu", "Ahasamíta ko fárrare, sapy'aiténte.
-(Voy a la fiesta, un ratito nomás.)"],
+		["Karáu", "Ahasamíta ko fárrare, sapy'aiténte.\n(Voy a la fiesta, un ratito nomás.)"],
 		
 	],
 	
 	"Piensadelfi":[
-		["delfina", "Acá esta lleno de mykurẽ, ambosápe manteva'erá ko'a vícho    
-(Acá está lleno de mykurés, Debo ahuyentarles a estos animales)"],               #pensamiento ejemplo
+		["delfina", "Acá esta lleno de mykurẽ, ambosápe manteva'erá ko'a vícho    \n(Acá está lleno de mykurés, Debo ahuyentarles a estos animales)"],               #pensamiento ejemplo
 		["delfina", "(Presiona E para espantar animales)"]
 	]
 }
@@ -71,6 +77,8 @@ func _ready() -> void:
 	transicion.play("salida")
 	await transicion.animation_finished
 	randomize()
+	posicion_inicial_jugador = jugador.global_position
+	
 	spawn_yuyo1()
 	spawn_yuyo2()
 	spawn_yuyo3()
@@ -79,10 +87,22 @@ func _ready() -> void:
 
 
 
+func hay_mymba_persiguiendo() -> bool:
+	for m in get_tree().get_nodes_in_group("mymba"):
+		if m.get("persigue") == true:
+			return true
+	return false
+
 
 func spawn_yuyo1():
+	
+	if instancia_kaarurupa != null and is_instance_valid(instancia_kaarurupa):
+		instancia_kaarurupa.queue_free()
+		instancia_kaarurupa = null
+	
 	var instancia_yuyo: Node3D = kaarurupa.instantiate()
 	add_child(instancia_yuyo)
+	instancia_kaarurupa = instancia_yuyo
 	
 	instancia_yuyo.jugador_entro.connect(_on_objeto_recogido)
 
@@ -106,10 +126,19 @@ func spawn_yuyo1():
 	if capsula:
 		capsula.id_yuyo_esperado = "ka'arurupa"
 		capsula.vincular_yuyo(instancia_yuyo)
+	
+
+	_conectar_daña_grupo("ka'arurupa")
 
 func spawn_yuyo2():
+
+	if instancia_kaare != null and is_instance_valid(instancia_kaare):
+		instancia_kaare.queue_free()
+		instancia_kaare = null
+	
 	var instancia_yuyo: Node3D = kaare.instantiate()
 	add_child(instancia_yuyo)
+	instancia_kaare = instancia_yuyo
 
 	instancia_yuyo.jugador_entro.connect(_on_objeto_recogido)
 
@@ -133,10 +162,18 @@ func spawn_yuyo2():
 	if capsula:
 		capsula.id_yuyo_esperado = "ka'aré"
 		capsula.vincular_yuyo(instancia_yuyo)
+	
+	_conectar_daña_grupo("ka'aré")
 
 func spawn_yuyo3():
+
+	if instancia_ambay != null and is_instance_valid(instancia_ambay):
+		instancia_ambay.queue_free()
+		instancia_ambay = null
+	
 	var instancia_yuyo: Node3D = ambay.instantiate()
 	add_child(instancia_yuyo)
+	instancia_ambay = instancia_yuyo
 
 	instancia_yuyo.jugador_entro.connect(_on_objeto_recogido)
 
@@ -160,7 +197,64 @@ func spawn_yuyo3():
 	if capsula:
 		capsula.id_yuyo_esperado = "amba'y"
 		capsula.vincular_yuyo(instancia_yuyo)
+	
+	_conectar_daña_grupo("amba'y")
 
+
+func _conectar_daña_grupo(id_yuyo: String) -> void:
+	
+	await get_tree().process_frame
+	for m in get_tree().get_nodes_in_group("mymba"):
+		if m.get("id_yuyo_esperado") == id_yuyo:
+			if m.has_signal("jugador_danado"):
+				if not m.jugador_danado.is_connected(_on_jugador_danado):
+					m.jugador_danado.connect(_on_jugador_danado)
+
+
+
+func _on_jugador_danado(id_yuyo: String) -> void:
+	if reseteando:
+		return
+	reseteando = true
+	print("¡Jugador dañado! Reseteando yuyo: ", id_yuyo)
+	await reset_por_yuyo(id_yuyo)
+	reseteando = false
+
+func reset_por_yuyo(id_yuyo: String) -> void:
+	# 1. Resetear la posición y estado de TODOS los mymbas en la escena a sus marcadores 'ojevy'
+	for m in get_tree().get_nodes_in_group("mymba"):
+		if m.has_method("volver_a_origen"):
+			m.volver_a_origen()
+		m.set("persigue", false)
+	
+	# 2. Resetear el modo combo del jugador si estaba activo y restaurar la cámara
+	if jugador != null and jugador.has_method("resetear_combo"):
+		jugador.resetear_combo()
+	if control_camara != null:
+		if control_camara.has_method("opa_combo"):
+			control_camara.opa_combo()
+		else:
+			control_camara.cinematica = false
+	
+	# 3. Volver al jugador a su posición inicial sin movimiento
+	jugador.global_position = posicion_inicial_jugador
+	jugador.velocity = Vector3.ZERO
+	jugador.puede_moverse = true
+	
+	# 4. Resetear la animación del jugador
+	anima_jugon.play("repira")
+	
+	# 5. Resetear ItemList al estado inicial según el yuyo y volver a hacer spawn
+	match id_yuyo:
+		"ka'arurupa":
+			lista.set_item_text(1, "Ka'arurupa 0/1")
+			spawn_yuyo1()
+		"ka'aré":
+			lista.set_item_text(2, "ka'arẽ  0/1")
+			spawn_yuyo2()
+		"amba'y":
+			lista.set_item_text(0, " Amba'y 0/2")
+			spawn_yuyo3()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -232,6 +326,9 @@ func hide_interac(id_del_npc: String) -> void:
 
 func _on_trigger_farra_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
+		# Bloquear si algún mymba está persiguiendo al jugador
+		if hay_mymba_persiguiendo():
+			return
 		tri_fr.queue_free()
 		piensa1("pensamiento1")
 		
@@ -251,7 +348,7 @@ func ohotama():
 		transicion.play("entrafa")
 		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/n3_cinema-nro.tscn")
 		
-	
+
 func piensa2(id_del_npc: String) -> void:
 	npc_actual = id_del_npc
 	inic_dialo()

@@ -9,10 +9,17 @@
 [node name="mymba_2" type="CharacterBody3D"]
 script = ExtResource("1_w7pvk")
 
-[node name="daña" type="CollisionShape3D" parent="."]
+[node name="colision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.424307, 0)
 shape = SubResource("SphereShape3D_oo5xf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.7, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_sbgxt")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.424307, 0)
+collision_mask = 2
+
+[node name="daña" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_oo5xf")

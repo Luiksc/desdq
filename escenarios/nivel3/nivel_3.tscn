@@ -3972,6 +3972,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ã" parent="Control" instance=ExtResource("37_j4qvg")]
 layout_mode = 1
@@ -3979,10 +3980,11 @@ layout_mode = 1
 [node name="ItemList" type="ItemList" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 22.925
-anchor_top = 0.7
-anchor_right = 28.225
-anchor_bottom = 5.375
+anchor_left = 0.807
+anchor_right = 1.0
+anchor_bottom = 0.285
+offset_left = 0.335938
+offset_bottom = 0.319977
 grow_horizontal = 0
 item_count = 5
 item_0/text = " Amba'y 0/2"
@@ -3990,7 +3992,6 @@ item_1/text = "Ka'arurupa 0/1"
 item_2/text = "ka'arẽ  0/1"
 item_3/text = "Tarope 0/4"
 item_4/text = "Cedrón 0/3"
-metadata/_edit_use_anchors_ = true
 
 [node name="interaccion" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1

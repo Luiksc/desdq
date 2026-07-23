@@ -222,5 +222,19 @@ func procesar_combo():
 				if m.get("id_yuyo_esperado") == grupo_yuyo:
 					if m.has_method("volver_a_origen"):
 						m.volver_a_origen()
-						
 		mymba_en_combo = null
+
+func resetear_combo() -> void:
+	mymba_en_combo = null
+	teclas_faltantes.clear()
+	combo_delay_timer = 0.0
+	for accion in ui_combo_nodos:
+		if ui_combo_nodos.has(accion) and ui_combo_nodos[accion] != null:
+			ui_combo_nodos[accion].hide()
+			ui_combo_nodos[accion].frame = 0
+	puede_moverse = true
+	if camara_contro != null:
+		if camara_contro.has_method("opa_combo"):
+			camara_contro.opa_combo()
+		else:
+			camara_contro.cinematica = false

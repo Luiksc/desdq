@@ -851,7 +851,7 @@ _data = {
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_icrro")
 
-[node name="daña" type="CollisionShape3D" parent="."]
+[node name="colision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.383914, 0)
 shape = SubResource("SphereShape3D_fnvng")
 
@@ -995,3 +995,10 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_sdsdj")
 }
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="daña" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.383914, 0)
+shape = SubResource("SphereShape3D_fnvng")

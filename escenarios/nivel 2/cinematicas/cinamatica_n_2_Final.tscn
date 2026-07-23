@@ -1,4 +1,4 @@
-[gd_scene load_steps=451 format=4 uid="uid://v5qsj0tl4f2l"]
+[gd_scene load_steps=452 format=4 uid="uid://v5qsj0tl4f2l"]
 
 [ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="1_2q6qu"]
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinamatica_n_2.gd" id="1_jtlin"]
@@ -2121,7 +2121,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(262, 41)]
+"values": [Vector2(570, 250)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -2142,7 +2142,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:size")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0.5),
@@ -2154,19 +2154,19 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(365, -38), Vector2(262, 41)]
+"values": [Vector2(570, 270), Vector2(262, 41)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath(".:scale")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
@@ -5907,9 +5907,13 @@ tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_q8wk0"]
+resource_name = "okemano"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_umgsb"]
 _data = {
 "odipara": SubResource("Animation_wgkjv"),
+"okemano": SubResource("Animation_q8wk0"),
 "okopi": SubResource("Animation_uyu8j"),
 "opytuu": SubResource("Animation_4w62x"),
 "oraha": SubResource("Animation_b20dm")
@@ -6279,10 +6283,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 262.0
-offset_top = 41.0
-offset_right = -286.0
-offset_bottom = -37.0
+offset_left = 570.0
+offset_top = 250.0
+offset_right = 22.0
+offset_bottom = 172.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1e-05, 1e-05)
@@ -7144,16 +7148,16 @@ libraries = {
 }
 
 [node name="carlos" type="Node3D" parent="cosa"]
-transform = Transform3D(-0.866025, 0, 0.5, 4.37114e-08, -1, 7.57103e-08, 0.5, 8.74228e-08, 0.866025, -19.6, 5, -15.4)
+transform = Transform3D(-0.866025, 0, 0.5, 4.37114e-08, -1, 7.57103e-08, 0.5, 8.74228e-08, 0.866025, -19.6, 2.52831, -16.4)
 
 [node name="base" type="Node3D" parent="cosa/carlos"]
-transform = Transform3D(0.832749, 0.466693, 0.297871, 0.319915, 0.0334937, -0.946854, -0.451867, 0.883785, -0.121411, -0.371838, 2.33729, -1.1)
+transform = Transform3D(0.832749, 0.466693, 0.297871, 0.319915, 0.0334937, -0.946854, -0.451867, 0.883785, -0.121411, 0, 0, 0)
 
 [node name="extremidades2" type="Node3D" parent="cosa/carlos/base"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24375, 0)
 
 [node name="retyma3" type="Node3D" parent="cosa/carlos/base/extremidades2"]
-transform = Transform3D(0.843232, 0.537514, -0.00616337, -0.530323, 0.829967, -0.17295, -0.0878476, 0.149105, 0.984911, -0.187499, 0.681252, 0.159376)
+transform = Transform3D(0.942504, -0.334117, 0.00718721, 0.309236, 0.863757, -0.397864, 0.126725, 0.377211, 0.917416, -0.1875, 0.681253, 0.159375)
 
 [node name="jyva 2" type="MeshInstance3D" parent="cosa/carlos/base/extremidades2/retyma3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0381858, 0.0637466, 0.0108945)
@@ -7166,7 +7170,7 @@ mesh = SubResource("ArrayMesh_myyed")
 skeleton = NodePath("")
 
 [node name="retyma4" type="Node3D" parent="cosa/carlos/base/extremidades2"]
-transform = Transform3D(0.0218925, -0.462321, -0.886443, 0.911449, 0.373583, -0.172331, 0.410832, -0.804174, 0.429561, -0.187502, 0.681248, -0.165624)
+transform = Transform3D(0.996195, -0.0871559, -7.21776e-08, 0.0868242, 0.992404, -0.0871559, 0.00759622, 0.0868242, 0.996196, -0.187502, 0.681248, -0.165624)
 
 [node name="jyva 3" type="MeshInstance3D" parent="cosa/carlos/base/extremidades2/retyma4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0381858, 0.0637466, -0.0108945)
@@ -7179,7 +7183,7 @@ mesh = SubResource("ArrayMesh_1itw7")
 skeleton = NodePath("")
 
 [node name="brazoizquierda2" type="Node3D" parent="cosa/carlos/base/extremidades2"]
-transform = Transform3D(0.522693, -0.852455, 0.0105898, 0.780508, 0.4835, 0.396278, -0.342929, -0.198866, 0.91807, -0.136104, 1.35211, 0.171632)
+transform = Transform3D(0.407446, -0.435698, 0.802593, 0.51862, 0.833776, 0.189343, -0.751679, 0.339094, 0.565681, -0.156254, 1.35, 0.23125)
 
 [node name="jyva 1" type="MeshInstance3D" parent="cosa/carlos/base/extremidades2/brazoizquierda2"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, -0.130029, 0.987672, 0.0871557, 0.0113761, -0.0864101, 0.996195, -0.00356663, 0.198526, 0.0978524)
@@ -7197,7 +7201,7 @@ mesh = SubResource("ArrayMesh_vk46y")
 skeleton = NodePath("")
 
 [node name="brazoderecha2" type="Node3D" parent="cosa/carlos/base/extremidades2"]
-transform = Transform3D(-0.374538, -0.700647, -0.607302, 0.925996, -0.316178, -0.206309, -0.0474653, -0.63963, 0.767217, -0.156245, 1.35, -0.281247)
+transform = Transform3D(0.999048, -0.0436194, 8.70787e-08, 0.0435779, 0.998098, -0.0436194, 0.00190257, 0.0435779, 0.999049, -0.15625, 1.35, -0.28125)
 
 [node name="jyva 23" type="MeshInstance3D" parent="cosa/carlos/base/extremidades2/brazoderecha2"]
 transform = Transform3D(-0.0698588, 0.140084, 0.987672, -0.0454385, -0.98951, 0.137131, 0.996521, -0.0352985, 0.0754912, -0.0560984, -0.333503, -0.115571)
@@ -7261,10 +7265,10 @@ mesh = SubResource("ArrayMesh_c5bbx")
 skeleton = NodePath("")
 
 [node name="machete" type="Node3D" parent="cosa/carlos/base/corpu2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3375, 0.31875, 0.5875)
+transform = Transform3D(0.0436195, -0.999048, -8.74228e-08, -0.999048, -0.0436195, 2.50038e-16, -3.81334e-09, 8.73396e-08, -1, 0.0375, 0.5625, 0.2125)
 
 [node name="plane" type="MeshInstance3D" parent="cosa/carlos/base/corpu2/machete"]
-transform = Transform3D(0.814116, 2.98023e-08, 0.580703, -0.568013, 0.207912, 0.796325, -0.120735, -0.978148, 0.169264, 0.523192, -0.257696, -0.20625)
+transform = Transform3D(0.814116, 2.79397e-08, 0.580703, -0.568013, 0.207912, 0.796325, -0.120735, -0.978148, 0.169264, 0.511759, -0.445929, 0.348855)
 mesh = SubResource("ArrayMesh_jhv8d")
 skeleton = NodePath("")
 
