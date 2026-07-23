@@ -9,7 +9,8 @@
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_444gr")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="daña" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.539389, 0)
 shape = SubResource("SphereShape3D_efoov")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

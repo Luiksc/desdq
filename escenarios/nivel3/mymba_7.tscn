@@ -9,7 +9,8 @@
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_77rmq")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="daña" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.408502, 0)
 shape = SubResource("SphereShape3D_hkftg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

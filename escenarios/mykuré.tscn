@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://ccnpmhqgxkiex" path="res://modelos/animañas/mykuré/Myku_5.png" id="9_jfsc7"]
 [ext_resource type="Texture2D" uid="uid://dl0oio22b18p7" path="res://modelos/animañas/mykuré/Myku_6.png" id="10_op3f4"]
 
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_homyl"]
 size = Vector3(2.22475, 1, 1.37408)
 

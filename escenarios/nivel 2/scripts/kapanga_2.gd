@@ -53,8 +53,8 @@ func _physics_process(delta: float) -> void:
 			var posicion_target = ohota[indice_ida].global_position
 			var direccion = posicion_target - global_position
 			direccion.y=0
-			var angulo = atan2(direccion.x,direccion.z)
-			rotation.y = lerp_angle(rotation.y, angulo, 2 * delta)
+			var angulo = atan2(direccion.x,direccion.z)    #
+			rotation.y = lerp_angle(rotation.y, angulo, 2 * delta)  #
 			var distancia = direccion.length()
 			direccion = direccion.normalized()
 		

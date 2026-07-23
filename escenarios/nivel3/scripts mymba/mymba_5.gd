@@ -14,9 +14,12 @@ var persigue = false
 @export var id_yuyo_esperado: String = ""
 
 func _physics_process(delta: float) -> void:
+	$"ka'i/AnimationPlayer".play("corre")
 	if persigue:
 		var direccion = jugador.global_position - global_position
 		direccion.y = 0
+		var angulo = atan2(direccion.x,direccion.z)
+		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
 	move_and_slide()
@@ -56,6 +59,8 @@ func volver_a_origen() -> void:
 	persigue = false
 	velocidad_reducida(false)
 	var direccion = ojevy.global_position - global_position
+	var angulo = atan2(direccion.x,direccion.z)
+	rotation.y = lerp_angle(rotation.y, angulo, 5)
 	direccion = direccion.normalized()
 	velocity = direccion * SPEED
 	move_and_slide()

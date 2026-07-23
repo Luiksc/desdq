@@ -3820,7 +3820,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9286, 2.10676, 128.273)
 [node name="capsulas_yuyo" type="Node3D" parent="."]
 
 [node name="mymba1_kaarurupa" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("27_woxr6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 2, 59)
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 31, 1.09162, 59)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/!")
@@ -3832,7 +3832,7 @@ collision_mask = 128
 ojevy = NodePath("../../ojevy/2")
 
 [node name="mymba3_kaarurupa" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("29_ygyfl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 2, 48)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53, 1.46933, 31)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/3")
@@ -3967,9 +3967,11 @@ visible = false
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ã" parent="Control" instance=ExtResource("37_j4qvg")]
 layout_mode = 1

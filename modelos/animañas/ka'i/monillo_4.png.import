@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://68h4ebmxaio4"
+path.s3tc="res://.godot/imported/monillo_4.png-85767c62088b168c3ea6219af29be7db.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "89c0b693ef4235e9838c00f9b86ac69a"
+}
+
+[deps]
+
+source_file="res://modelos/animañas/ka'i/monillo_4.png"
+dest_files=["res://.godot/imported/monillo_4.png-85767c62088b168c3ea6219af29be7db.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
