@@ -4657,6 +4657,7 @@ shape = SubResource("BoxShape3D_ei46q")
 
 [node name="colisione" type="StaticBody3D" parent="*objetos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6428, 0, -203.228)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="*objetos/colisione"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.493774, 4, -4.58894)
@@ -4664,6 +4665,7 @@ shape = SubResource("BoxShape3D_mqbgb")
 
 [node name="colisione3" type="StaticBody3D" parent="*objetos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6428, 0, -222.629)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="*objetos/colisione3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88899, 4, -15.0305)
@@ -4671,12 +4673,14 @@ shape = SubResource("BoxShape3D_mqbgb")
 
 [node name="colisione2" type="StaticBody3D" parent="*objetos"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.6428, 0, -198.113)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="*objetos/colisione2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32581, 4, 3.50833)
 shape = SubResource("BoxShape3D_mqbgb")
 
 [node name="VALLA" type="Node3D" parent="*objetos"]
+visible = false
 
 [node name="lavalla" parent="*objetos/VALLA" instance=ExtResource("16_06ao8")]
 transform = Transform3D(6.09551e-09, 0.139449, 1.59391, 1.6, -6.99382e-08, -5.80412e-36, 6.96721e-08, 1.59391, -0.139449, 7.44354, 1.85944, 2.28868)
@@ -4689,6 +4693,7 @@ shape = SubResource("BoxShape3D_ansc1")
 
 [node name="tendedero" type="Node3D" parent="*objetos"]
 transform = Transform3D(0.657507, 0, 0.753449, 0, 1, 0, -0.753449, 0, 0.657507, 53.0956, -1.72453, 28.3246)
+visible = false
 
 [node name="plane" type="MeshInstance3D" parent="*objetos/tendedero"]
 transform = Transform3D(0, 0.99863, 0.052336, -1, 0, 0, 0, -0.052336, 0.99863, 0, -0.79375, -7.35625)
@@ -4709,18 +4714,21 @@ shape = SubResource("CylinderShape3D_dwyek")
 
 [node name="npc_florida" parent="npcs" instance=ExtResource("3_3ccld")]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 34.2372, 0.175027, 18.4651)
+visible = false
 
 [node name="sorpresa" parent="npcs/npc_florida" instance=ExtResource("27_ujk2c")]
 transform = Transform3D(5, 0, -6.06218, 0, 10, 0, 8.66026, 0, 3.5, -0.0728045, 2.86092, -0.046299)
 
 [node name="kalo\'i" parent="npcs" instance=ExtResource("31_mq55w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0.260063, -33.8556)
+visible = false
 
 [node name="sorpresa3" parent="npcs/kalo\'i" instance=ExtResource("10_xwpb1")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.2188, 3.3165, -0.0629702)
 
 [node name="npc2-Mariano" parent="npcs" instance=ExtResource("9_4f3fa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6114, 0.382818, 0)
+visible = false
 
 [node name="sorpresa2" parent="npcs/npc2-Mariano" instance=ExtResource("10_coj83")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.0109997, 4.48728, -0.174253)
@@ -4734,46 +4742,60 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.287, 0.340874, -259.27)
 [node name="bailarine" type="Node" parent="npcs"]
 
 [node name="Node3D" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 15.4667, 0.153035, -267.759)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 15.5121, 0.184635, -267.745)
+visible = false
 
 [node name="Node3D2" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.1141, 0.153035, -266.855)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.1595, 0.184635, -266.841)
+visible = false
 
 [node name="Node3D3" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 9.34665, 0.153035, -268.353)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 9.39207, 0.184635, -268.339)
+visible = false
 
 [node name="Node3D4" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 11.8059, 0.153035, -266.484)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 11.8513, 0.184635, -266.47)
+visible = false
 
 [node name="Node3D5" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 11.3373, 0.153035, -268.437)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 11.3827, 0.184635, -268.423)
+visible = false
 
 [node name="Node3D6" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9218, 0.153035, -264.649)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9672, 0.184635, -264.635)
+visible = false
 
 [node name="Node3D7" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9218, 0.153035, -250.574)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9672, 0.184635, -250.56)
+visible = false
 
 [node name="Node3D8" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9218, 0.153035, -248.735)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 13.9672, 0.184635, -248.721)
+visible = false
 
 [node name="Node3D9" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 12.2741, 0.153035, -249.838)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 12.3195, 0.184635, -249.824)
+visible = false
 
 [node name="Node3D10" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 12.2741, 0.153035, -246.983)
+transform = Transform3D(0.834746, 0, 0, 0, 0.786206, 0, 0, 0, 0.58022, 12.3195, 0.184635, -246.969)
+visible = false
 
 [node name="Node3D11" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 10.7981, 0.153035, -246.13)
+transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 10.8435, 0.184635, -246.116)
+visible = false
 
 [node name="Node3D13" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 8.5688, 0.153035, -248.035)
+transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 8.61422, 0.184635, -248.021)
+visible = false
 
 [node name="Node3D12" parent="npcs/bailarine" instance=ExtResource("41_mkucl")]
-transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 10.7981, 0.153035, -249.793)
+transform = Transform3D(0.834746, 0, 0, 0, 0.783282, 0.0499945, 0, -0.0677432, 0.578063, 10.8435, 0.184635, -249.779)
+visible = false
 
 [node name="musiquero1" type="Node3D" parent="npcs/bailarine"]
-transform = Transform3D(-0.99615, 0, -0.0876599, 0, 1, 0, 0.0876599, 0, -0.99615, 18.5592, 0.301854, -254.17)
+transform = Transform3D(-0.99615, 0, -0.0876599, 0, 1, 0, 0.0876599, 0, -0.99615, 18.6046, 0.333454, -254.156)
+visible = false
 
 [node name="base" type="Node3D" parent="npcs/bailarine/musiquero1"]
 
@@ -5435,7 +5457,7 @@ volume_db = 8.631
 autoplay = true
 
 [node name="musica" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2789, 0, -297.552)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2789, -3.57834, -297.552)
 stream = ExtResource("58_hpo7d")
 volume_db = 5.457
 unit_size = 13.0

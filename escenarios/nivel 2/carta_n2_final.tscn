@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://dt8fxjokm7w7t"]
+[gd_scene load_steps=18 format=3 uid="uid://d2t1vs5j3vmgm"]
 
-[ext_resource type="Script" path="res://escenarios/nivel_1_final.gd" id="1_586xe"]
-[ext_resource type="Texture2D" uid="uid://ctohoc7fyid1u" path="res://UI/nivel_1_carta.png" id="1_ypj4c"]
-[ext_resource type="Texture2D" uid="uid://dvswr08jo1c6y" path="res://UI/investigar_boton.png" id="3_388bo"]
-[ext_resource type="Texture2D" uid="uid://vepgdxjn8duj" path="res://UI/investigar_boton_presionado.png" id="3_fkprq"]
-[ext_resource type="Texture2D" uid="uid://cbu6dwp2thadv" path="res://UI/QR .png" id="5_s3uvx"]
+[ext_resource type="Script" path="res://escenarios/nivel_1_final.gd" id="1_1vyrq"]
+[ext_resource type="Texture2D" uid="uid://bn5syl772cno2" path="res://UI/nivel_2_carta.png" id="2_w8urv"]
+[ext_resource type="Texture2D" uid="uid://vepgdxjn8duj" path="res://UI/investigar_boton_presionado.png" id="3_nwq6g"]
+[ext_resource type="Texture2D" uid="uid://dvswr08jo1c6y" path="res://UI/investigar_boton.png" id="4_e1ve5"]
+[ext_resource type="Texture2D" uid="uid://cbu6dwp2thadv" path="res://UI/QR .png" id="5_h6vc6"]
 
 [sub_resource type="Animation" id="Animation_n4gcv"]
 length = 0.001
@@ -160,7 +160,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_fkprq")]
+"values": [ExtResource("3_nwq6g")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -212,7 +212,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_fkprq")]
+"values": [ExtResource("3_nwq6g")]
 }
 
 [sub_resource type="Animation" id="Animation_xgwhx"]
@@ -228,7 +228,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_388bo")]
+"values": [ExtResource("4_e1ve5")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -319,7 +319,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_586xe")
+script = ExtResource("1_1vyrq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -339,14 +339,14 @@ anchor_top = 1.4892
 anchor_right = 0.5
 anchor_bottom = 1.4892
 offset_left = -304.0
-offset_top = -919.0
+offset_top = -278.0
 offset_right = 30646.0
-offset_bottom = 27131.0
+offset_bottom = 27772.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.02, 0.02)
 mouse_filter = 2
-texture = ExtResource("1_ypj4c")
+texture = ExtResource("2_w8urv")
 metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -364,7 +364,7 @@ offset_bottom = 519.0
 scale = Vector2(1e-05, 1e-05)
 pivot_offset = Vector2(91, 36)
 theme_override_colors/font_color = Color(0.814084, 0.615089, 0.675484, 1)
-icon = ExtResource("3_fkprq")
+icon = ExtResource("3_nwq6g")
 flat = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Button"]
@@ -375,7 +375,7 @@ libraries = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(729.5, 476.5)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("5_s3uvx")
+texture = ExtResource("5_h6vc6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 libraries = {

@@ -5,7 +5,10 @@ extends Node3D
 @onready var transi =$"Control/ã/AnimationPlayer"
 @onready var time = $Timer
 @onready var camara =$Camera3D
-@onready var carto =$Control/TextureRect/AnimationPlayer
+@onready var carto =$Control/final/AnimationPlayer
+@onready var fondo_carat = $Control/final
+@onready var anima_boton = $Control/final/Button/AnimationPlayer
+@onready var anima_qr = $Control/final/Sprite2D/AnimationPlayer
 
 var fino = false
 
@@ -37,6 +40,7 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	fondo_carat.hide()
 	transi.play("salida")
 	time.start()
 	cine.play("dio va")
@@ -78,9 +82,13 @@ func dialog_terminado() -> void:
 	dialogo_activo = false
 	if npc_actual == "conversa":
 		transi.play("entrafa")
-
-		carto.play("aparece")
+		fondo_carat.show()
+		carto.play("desliza")
 		await  carto.animation_finished
+		anima_boton.play("aparicion")
+		await anima_boton.animation_finished
+		anima_qr.play("aparece")
+		
 		fino = true
 		return
 func inicia_dialoga(id_npc: String) -> void:

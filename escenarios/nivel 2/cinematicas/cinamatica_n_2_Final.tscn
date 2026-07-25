@@ -1,4 +1,4 @@
-[gd_scene load_steps=452 format=4 uid="uid://v5qsj0tl4f2l"]
+[gd_scene load_steps=449 format=4 uid="uid://v5qsj0tl4f2l"]
 
 [ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="1_2q6qu"]
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinamatica_n_2.gd" id="1_jtlin"]
@@ -55,8 +55,8 @@
 [ext_resource type="Texture2D" uid="uid://b0ditg2ro8ou8" path="res://modelos/Marta/Marta_oguapy_anima_14.png" id="37_fy80m"]
 [ext_resource type="Texture2D" uid="uid://djtfdo8lib3u3" path="res://modelos/Ulises/Ulises_12.png" id="38_cc60v"]
 [ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="38_e8hfi"]
+[ext_resource type="PackedScene" uid="uid://d2t1vs5j3vmgm" path="res://escenarios/nivel 2/carta_n2_final.tscn" id="39_lwcfy"]
 [ext_resource type="Texture2D" uid="uid://duwurldtl54pw" path="res://modelos/Ulises/Ulises_13.png" id="39_s41uq"]
-[ext_resource type="Texture2D" uid="uid://bn5syl772cno2" path="res://UI/nivel_2_carta.png" id="39_ui4it"]
 [ext_resource type="Texture2D" uid="uid://bc1vmcl2hbd8i" path="res://modelos/Ulises/Ulises_14.png" id="40_fwh21"]
 [ext_resource type="Texture2D" uid="uid://xvckn5iddpgk" path="res://modelos/Ulises/Ulises_15.png" id="41_o0yg4"]
 [ext_resource type="Texture2D" uid="uid://1t1wepwpam0c" path="res://modelos/Ulises/Ulises_16.png" id="42_uvv8o"]
@@ -2095,90 +2095,6 @@ tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 _data = {
 "arregla": SubResource("Animation_n6ues"),
 "repire": SubResource("Animation_4rf7e")
-}
-
-[sub_resource type="Animation" id="Animation_usmyu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(604, 570)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(570, 250)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-
-[sub_resource type="Animation" id="Animation_lc0bb"]
-resource_name = "aparece"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(604, 570)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(570, 270), Vector2(262, 41)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:scale")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3ej1"]
-_data = {
-"RESET": SubResource("Animation_usmyu"),
-"aparece": SubResource("Animation_lc0bb")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7n1q"]
@@ -5623,6 +5539,9 @@ tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = PackedFloat32Array(0, 1, 1, 1, 1)
 
+[sub_resource type="Animation" id="Animation_q8wk0"]
+resource_name = "okemano"
+
 [sub_resource type="Animation" id="Animation_uyu8j"]
 resource_name = "okopi"
 tracks/0/type = "position_3d"
@@ -5906,9 +5825,6 @@ tracks/12/path = NodePath("base/corpu2/machete")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-
-[sub_resource type="Animation" id="Animation_q8wk0"]
-resource_name = "okemano"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_umgsb"]
 _data = {
@@ -6277,25 +6193,8 @@ offset_top = -20.0
 offset_right = -11.0
 offset_bottom = -20.0
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
-texture_filter = 1
+[node name="final" parent="Control" instance=ExtResource("39_lwcfy")]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 570.0
-offset_top = 250.0
-offset_right = 22.0
-offset_bottom = 172.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("39_ui4it")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/TextureRect"]
-libraries = {
-"": SubResource("AnimationLibrary_b3ej1")
-}
 
 [node name="posi_camara" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -2)

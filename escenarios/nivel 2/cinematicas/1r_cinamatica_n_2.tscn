@@ -3409,9 +3409,9 @@ grow_vertical = 2
 [node name="ã" parent="Control" instance=ExtResource("38_fe7wh")]
 layout_mode = 1
 offset_left = -3.0
-offset_top = 3.0
+offset_top = -9.0
 offset_right = -3.0
-offset_bottom = 3.0
+offset_bottom = -9.0
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 texture_filter = 1

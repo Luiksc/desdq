@@ -17,6 +17,8 @@ var ojeroky = false
 @onready var bloque= $Control/ColorRect
 @onready var carta =$Control/final
 @onready var anima_carta= $Control/final/AnimationPlayer
+@onready var anima_boton = $Control/final/Button/AnimationPlayer
+@onready var anima_qr = $Control/final/Sprite2D/AnimationPlayer
 
 var pochyha = false
 var seguir = false
@@ -51,6 +53,8 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	anima_qr.play("RESET")
+	anima_carta.play("RESET")
 	carta.hide()
 	mirada.hide()
 	bloque.hide()
@@ -125,7 +129,12 @@ func disparate():
 	sonido_pistola.play()
 	await sonido_pistola.finished
 	carta.show()
-	anima_carta.play("aparece")
+	anima_carta.play("desliza")
+	await anima_carta.animation_finished
+	anima_boton.play("aparicion")
+	await anima_boton.animation_finished
+	anima_qr.play("aparece")
+	
 	seguir = true
 	
 	
