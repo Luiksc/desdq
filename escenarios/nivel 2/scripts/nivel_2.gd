@@ -131,6 +131,7 @@ func _ready() -> void:
 	$"labura kopindo/AnimationPlayer".play("okopi")
 	$"labura kopindo2/AnimationPlayer".play("okopi")
 	$"labura kopindo3/AnimationPlayer".play("okopi")
+	$"labura kopindo4/AnimationPlayer".play("okopi")
 	sako_baj1.hide()
 	sako_baj2.hide()
 	sako_baj3.hide()
