@@ -1,10 +1,10 @@
-[gd_scene load_steps=109 format=4 uid="uid://b3sejkfqdkt0"]
+[gd_scene load_steps=114 format=4 uid="uid://b3sejkfqdkt0"]
 
 [ext_resource type="Script" path="res://escenarios/n_1_cinematica.gd" id="1_ypeu1"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_mwopg"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="4_yht7x"]
 [ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="5_f7vi3"]
-[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="5_ivfqn"]
+[ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="5_gua3i"]
 [ext_resource type="Texture2D" uid="uid://dobjff0w0vwfq" path="res://modelos/objetos/chaco/ÓGA+/Casa_delfina_0.png" id="23_ih2oe"]
 [ext_resource type="PackedScene" uid="uid://kaql6p3h1tgl" path="res://modelos/objetos/chaco/ÓGA+/oga.tscn" id="29_aypkw"]
 [ext_resource type="PackedScene" uid="uid://dd40h7i1a1s4g" path="res://modelos/objetos/chaco/tronco karanda'y/tronco.tscn" id="31_n6q53"]
@@ -69,6 +69,137 @@ animations = [{
 "name": &"interactura",
 "speed": 2.0
 }]
+
+[sub_resource type="Animation" id="Animation_exjlt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1289)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_lqt2t"]
+resource_name = "entrafa"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -647), Vector2(0, 653)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1289), Vector2(-6, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_4ad2x"]
+resource_name = "opyta"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, -5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_kl6ug"]
+resource_name = "salida"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-3, 648), Vector2(-3, -653)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-3, 0), Vector2(-3, -1301)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alwvl"]
+_data = {
+"RESET": SubResource("Animation_exjlt"),
+"entrafa": SubResource("Animation_lqt2t"),
+"opyta": SubResource("Animation_4ad2x"),
+"salida": SubResource("Animation_kl6ug")
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abevo"]
 resource_name = "material_0"
@@ -987,22 +1118,57 @@ offset_bottom = -284.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ã" parent="Control" instance=ExtResource("5_ivfqn")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.8
-anchor_top = -1.675
-anchor_right = 29.3
-anchor_bottom = 14.375
-offset_bottom = -6.10352e-05
-metadata/_edit_use_anchors_ = true
-
 [node name="Interac" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1
 position = Vector2(1041, 393)
 scale = Vector2(3.28125, 2.875)
 sprite_frames = SubResource("SpriteFrames_pb4u8")
 animation = &"interactura"
+
+[node name="ã" type="Control" parent="Control"]
+layout_mode = 1
+anchor_left = 0.05
+anchor_right = 28.775
+anchor_bottom = 16.025
+offset_top = -3.0
+offset_bottom = -6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/ã"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.921296
+anchor_right = 1.03472
+anchor_bottom = 1.9213
+offset_left = -3.0
+offset_top = 54.6854
+offset_right = -3.0
+offset_bottom = 54.6854
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_gua3i")
+
+[node name="ColorRect" type="ColorRect" parent="Control/ã"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = 30.0
+offset_bottom = 27.0001
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.141176, 0.278431, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/ã"]
+libraries = {
+"": SubResource("AnimationLibrary_alwvl")
+}
 
 [node name="*objetos" type="Node" parent="."]
 

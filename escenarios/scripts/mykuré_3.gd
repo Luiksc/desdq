@@ -49,7 +49,7 @@ func _physics_process(_delta: float) -> void:
 			var direccion = punto_retiro.global_position - global_position
 			
 			direccion = direccion.normalized()
-			velocity = direccion * 14
+			velocity = direccion * 18
 			move_and_slide()
 
 			if global_position.distance_to(punto_retiro.global_position) < 0.5:
