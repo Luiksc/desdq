@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7dldail7kvsf"
+path="res://.godot/imported/Canto da Cigarra - Cicadas song (Cicadoidea).mp3-75936b0ff223608d7f3ca9bf2d96cc74.mp3str"
+
+[deps]
+
+source_file="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3"
+dest_files=["res://.godot/imported/Canto da Cigarra - Cicadas song (Cicadoidea).mp3-75936b0ff223608d7f3ca9bf2d96cc74.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,8 @@
-[gd_scene load_steps=273 format=4 uid="uid://nn6rvnufx0dk"]
+[gd_scene load_steps=275 format=4 uid="uid://nn6rvnufx0dk"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinematica_despensa/cinamatica_n_2_despensa.gd" id="1_m5sjq"]
+[ext_resource type="AudioStream" uid="uid://c7dldail7kvsf" path="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3" id="2_tv3kl"]
+[ext_resource type="AudioStream" uid="uid://dt60wyg67utgn" path="res://audios/sonidos_ambiente/Paraguay natural.mp3" id="3_ps3x8"]
 [ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="3_r2301"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="4_4rc7b"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="4_elfnu"]
@@ -3503,6 +3505,16 @@ _data = {
 
 [node name="cinamatica n2" type="Node3D"]
 script = ExtResource("1_m5sjq")
+
+[node name="CantoDaCigarra-CicadasSong(cicadoidea)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_tv3kl")
+volume_db = -14.512
+autoplay = true
+
+[node name="ParaguayNatural" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ps3x8")
+volume_db = 4.031
+autoplay = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 8.74469, 3.4762, -39.3341)

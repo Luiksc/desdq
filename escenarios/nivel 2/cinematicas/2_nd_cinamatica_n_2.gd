@@ -30,7 +30,8 @@ var dialogos ={
 (Marta,ya no hay caso, muy dificilmente alcanzamos a pagar el alquiler.)"],
 		["Marta","Che aikuave'ẽmbáma la ñande mueble péro, amáske los ára ohasa, hepyve la alquiler.
 (Yo ya vendí todos nuestros muebles pero, con el pasar el tiempo cada vez es más caro el alquiler.)"],
-		["Dionisio","Mba'éiko jajapóta"]
+		["Dionisio","Mba'éiko jajapóta
+(Qué vamos a hacer)"]
 ],
 
 

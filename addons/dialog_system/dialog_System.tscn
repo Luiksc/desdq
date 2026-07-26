@@ -60,6 +60,6 @@ text = "next"
 [node name="sound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_rmm2v")
-volume_db = -29.637
+volume_db = -20.769
 
 [connection signal="pressed" from="VBoxContainer/dialogo_box/VBoxContainer/next_button" to="." method="_on_next_convo_pressed"]

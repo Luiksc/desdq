@@ -18,9 +18,9 @@ var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento
 
 var dialogos ={
 	"noticia":[
-		["Kuarahy", "Anína Karáu, ani ejerokyve, agueru ndéve la noticia, nde symi omano hague.
-(Por favor karau, no bailes más, te traigo la noticia del fallecimiento de tu mamá)"],
-		["", "No importa mi amigo, el baile no voy a dejar, la omano ko omanóma, habrá tiempo para llorar.
+		["Kuarahy", "Anína Karãu, ani ejerokyve, agueru ndéve la noticia, nde symi omano hague.
+(Por favor karãu, no bailes más, te traigo la noticia del fallecimiento de tu mamá)"],
+		["Karãu", "No importa mi amigo, el baile no voy a dejar, la omanóva ko omanóma, habrá tiempo para llorar.
 (No importa mi amigo, el baile no voy a dejar, quien falleció ya falleció, habrá tiempo para llorar.)"],
 	],
 	

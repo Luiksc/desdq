@@ -22,8 +22,6 @@ var dialogos ={
 (¡Dionisio!, todavía no arregle todo el sombrero del jefe.)"],
 		["Marta","Chekane'õiterei, ko este día rojara y elisa ndive, roipiro mandi'o ha rojarregla sombrerokuéra
 (Estoy muy cansada, hoy acarreamos agua con Elisa, pelamos mandiocas y arreglamos sombreros.)"],
-		["Dionisio", "Erumi ápe, che aterminata péa.
-(Pasame voy a terminar por vos eso.)"],
 		["Marta", "¿Ndikatúiko jasyryry ka'aguýre ha ñasẽ ko añakuágui?
 (¿No podemos escabullirnos por la selva para salir de esta fosa?.)"],
 		["Dionisio", "Peligróso upéa, oje'e Alfredo okañy akokuehe ha ojetopa hete Parana rembe'ýre.
@@ -31,12 +29,6 @@ var dialogos ={
 		["Dionisio", "Ag̃aite atopáta la forma ñasẽ ko'águi.
 (Pronto voy a encontrar como salir de acá)"]
 ],
-	"Funcionario":[
-		["Funcionario Municipal","e"],
-		["Dionisio","Erumi ápe ne sombréro, che atermináta péa 
-(Pasame tu sombrero, yo terminon por vos,)"],
-	],
-		
 }
 
 func _ready() -> void:

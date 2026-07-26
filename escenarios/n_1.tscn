@@ -60,7 +60,7 @@
 [ext_resource type="Texture2D" uid="uid://qn6wwr3ylaax" path="res://modelos/objetos/chaco/tenderropa/tenderropa_0.png" id="37_h1n2x"]
 [ext_resource type="Texture2D" uid="uid://ctfolh044sl5r" path="res://modelos/objetos/chaco/tenderropa/tenderropa_1.png" id="38_qt3dv"]
 [ext_resource type="PackedScene" uid="uid://br72pgind7jsh" path="res://escenarios/emilia.tscn" id="39_v3laf"]
-[ext_resource type="PackedScene" uid="uid://cvcmq2x0et610" path="res://UI/mate_gamarra.tscn" id="40_8o8iu"]
+[ext_resource type="PackedScene" uid="uid://cvcmq2x0et610" path="res://escenarios/mate_gamarra.tscn" id="40_8o8iu"]
 [ext_resource type="PackedScene" uid="uid://cm4gmnji8mv4e" path="res://escenarios/ojerokyva.tscn" id="41_mkucl"]
 [ext_resource type="Texture2D" uid="uid://c07a34btks0na" path="res://modelos/musiqueros/musiquero1/musiquero 1_0.png" id="48_3l7yc"]
 [ext_resource type="Texture2D" uid="uid://dccxp8u8qtqll" path="res://modelos/musiqueros/musiquero1/musiquero 1_1.png" id="49_vsc7w"]
