@@ -1,9 +1,10 @@
-[gd_scene load_steps=268 format=4 uid="uid://nn6rvnufx0dk"]
+[gd_scene load_steps=273 format=4 uid="uid://nn6rvnufx0dk"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinematica_despensa/cinamatica_n_2_despensa.gd" id="1_m5sjq"]
 [ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="3_r2301"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="4_4rc7b"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="4_elfnu"]
+[ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="4_ihv7x"]
 [ext_resource type="FontFile" uid="uid://2efbjbt4sdx" path="res://UI/fuentes/Upheaval/upheavtt.ttf" id="6_v1kxq"]
 [ext_resource type="Texture2D" uid="uid://538gw6cvuu3t" path="res://modelos/Marta/Marta_poti_0.png" id="9_j3q2u"]
 [ext_resource type="Texture2D" uid="uid://bt0ditbijeoep" path="res://modelos/Marta/Marta_poti_1.png" id="10_4qabn"]
@@ -36,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://dwxdjfqemqfl3" path="res://modelos/funcionario/gob_sapukai_0.png" id="36_sxwgy"]
 [ext_resource type="Texture2D" uid="uid://xuty1trqcn5b" path="res://modelos/funcionario/gob_sapukai_1.png" id="37_ulf7s"]
 [ext_resource type="Texture2D" uid="uid://cp8focbd4i1cl" path="res://modelos/funcionario/gob_sapukai_2.png" id="38_7l8r3"]
-[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="38_fe7wh"]
 [ext_resource type="Texture2D" uid="uid://d1trxmcx8gf67" path="res://modelos/funcionario/gob_sapukai_3.png" id="39_0frg5"]
 [ext_resource type="Texture2D" uid="uid://bn5syl772cno2" path="res://UI/nivel_2_carta.png" id="39_bqkk1"]
 [ext_resource type="Texture2D" uid="uid://brqdaox8u55l8" path="res://modelos/funcionario/gob_sapukai_4.png" id="40_4cfgr"]
@@ -68,6 +68,137 @@ length = 8.0
 _data = {
 "RESET": SubResource("Animation_7g5le"),
 "dio va": SubResource("Animation_xse7h")
+}
+
+[sub_resource type="Animation" id="Animation_exjlt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1289)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_lqt2t"]
+resource_name = "entrafa"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -647), Vector2(3, 658)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1289), Vector2(3, -4)]
+}
+
+[sub_resource type="Animation" id="Animation_4ad2x"]
+resource_name = "opyta"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-17, 20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_kl6ug"]
+resource_name = "salida"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 648), Vector2(0, -653)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1301)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alwvl"]
+_data = {
+"RESET": SubResource("Animation_exjlt"),
+"entrafa": SubResource("Animation_lqt2t"),
+"opyta": SubResource("Animation_4ad2x"),
+"salida": SubResource("Animation_kl6ug")
 }
 
 [sub_resource type="Animation" id="Animation_usmyu"]
@@ -3406,12 +3537,52 @@ offset_bottom = -0.0400391
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ã" parent="Control" instance=ExtResource("38_fe7wh")]
+[node name="ã" type="Control" parent="Control"]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = -3.0
 offset_top = -9.0
 offset_right = -3.0
 offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ã"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.921296
+anchor_right = 1.03472
+anchor_bottom = 1.9213
+offset_left = 3.0
+offset_top = 44.4169
+offset_right = 3.0
+offset_bottom = 44.4169
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_ihv7x")
+
+[node name="ColorRect" type="ColorRect" parent="Control/ã"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -4.0
+offset_right = 33.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.141176, 0.278431, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/ã"]
+libraries = {
+"": SubResource("AnimationLibrary_alwvl")
+}
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 texture_filter = 1
@@ -3462,8 +3633,11 @@ libraries = {
 [node name="posi_camara" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -2)
 
+[node name="posi_camara2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20581, 2.95365, -41.866)
+
 [node name="inicial_posi" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 10.7, 5.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.76403, 3.48961, -39.3626)
 
 [node name="DialogSystem" parent="." instance=ExtResource("99_kanaq")]
 

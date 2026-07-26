@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dng8oadtitqcr"
+uid="uid://ckgmt8ghyn0y3"
 path.s3tc="res://.godot/imported/Marta oguapy_13.png-1bda958f36e802b900778903128876e6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "c3e941d6ad765cbe045b15a20e7b2172"
 }
 
 [deps]

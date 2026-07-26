@@ -4912,21 +4912,18 @@ shape = SubResource("CylinderShape3D_dwyek")
 
 [node name="npc_florida" parent="npcs" instance=ExtResource("3_3ccld")]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 34.2372, 0.175027, 18.4651)
-visible = false
 
 [node name="sorpresa" parent="npcs/npc_florida" instance=ExtResource("27_ujk2c")]
 transform = Transform3D(5, 0, -6.06218, 0, 10, 0, 8.66026, 0, 3.5, -0.0728045, 2.86092, -0.046299)
 
 [node name="kalo\'i" parent="npcs" instance=ExtResource("31_mq55w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0.260063, -33.8556)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.650283, 0.260063, -152.535)
 
 [node name="sorpresa3" parent="npcs/kalo\'i" instance=ExtResource("10_xwpb1")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.2188, 3.3165, -0.0629702)
 
 [node name="npc2-Mariano" parent="npcs" instance=ExtResource("9_4f3fa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6114, 0.382818, 0)
-visible = false
+transform = Transform3D(0.111972, 0, -0.993711, 0, 1, 0, 0.993711, 0, 0.111972, 8.27466, 0.382818, -40.9315)
 
 [node name="sorpresa2" parent="npcs/npc2-Mariano" instance=ExtResource("10_coj83")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.0109997, 4.48728, -0.174253)

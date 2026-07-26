@@ -1,13 +1,13 @@
-[gd_scene load_steps=251 format=4 uid="uid://bljxpdxtxqd72"]
+[gd_scene load_steps=256 format=4 uid="uid://bljxpdxtxqd72"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/2_nd_cinamatica_n_2.gd" id="1_ys0wr"]
 [ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="2_sb3ia"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="3_sd5vc"]
 [ext_resource type="MeshLibrary" uid="uid://rhowvwxd6qjc" path="res://modelos/libr mesh/1libreria_chaco.tres" id="4_2qk3p"]
-[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="4_pcagr"]
 [ext_resource type="MeshLibrary" uid="uid://dbntdg3qnqfgd" path="res://modelos/libr mesh/arbustos_espinosos.tres" id="5_34ut1"]
 [ext_resource type="Texture2D" uid="uid://bn5syl772cno2" path="res://UI/nivel_2_carta.png" id="5_o5jev"]
 [ext_resource type="FontFile" uid="uid://2efbjbt4sdx" path="res://UI/fuentes/Upheaval/upheavtt.ttf" id="6_7n63n"]
+[ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="6_73ph7"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="7_44aph"]
 [ext_resource type="PackedScene" uid="uid://brqi01rbqbhir" path="res://modelos/objetos/chaco/ÓGA+/oga2.tscn" id="8_x711y"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="9_51llp"]
@@ -66,6 +66,137 @@ length = 8.0
 _data = {
 "RESET": SubResource("Animation_7g5le"),
 "dio va": SubResource("Animation_xse7h")
+}
+
+[sub_resource type="Animation" id="Animation_exjlt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1289)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_lqt2t"]
+resource_name = "entrafa"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -647), Vector2(3, 658)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1289), Vector2(3, -4)]
+}
+
+[sub_resource type="Animation" id="Animation_4ad2x"]
+resource_name = "opyta"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-17, 20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_kl6ug"]
+resource_name = "salida"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 648), Vector2(0, -653)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1301)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alwvl"]
+_data = {
+"RESET": SubResource("Animation_exjlt"),
+"entrafa": SubResource("Animation_lqt2t"),
+"opyta": SubResource("Animation_4ad2x"),
+"salida": SubResource("Animation_kl6ug")
 }
 
 [sub_resource type="Animation" id="Animation_usmyu"]
@@ -3124,12 +3255,49 @@ offset_bottom = -0.0400391
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ã" parent="Control" instance=ExtResource("4_pcagr")]
+[node name="ã" type="Control" parent="Control"]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = -3.0
 offset_top = 3.0
 offset_right = -3.0
 offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ã"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.921296
+anchor_right = 1.03472
+anchor_bottom = 1.9213
+offset_top = -1260.58
+offset_bottom = -1260.58
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_73ph7")
+
+[node name="ColorRect" type="ColorRect" parent="Control/ã"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1289.0
+offset_right = 30.0
+offset_bottom = -1284.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.141176, 0.278431, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/ã"]
+libraries = {
+"": SubResource("AnimationLibrary_alwvl")
+}
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 texture_filter = 1

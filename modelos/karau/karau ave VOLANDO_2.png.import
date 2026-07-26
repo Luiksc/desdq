@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxatbitkxu216"
+uid="uid://i1u2qlolg87q"
 path.s3tc="res://.godot/imported/karau ave VOLANDO_2.png-a80173cca3681fd13964f67eccea4a19.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "57dbfd674cc1eac0463ceaa73b7b45ba"
 }
 
 [deps]

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm3kjrh7mg7b8"
+uid="uid://dkqnardofnnnx"
 path.s3tc="res://.godot/imported/uruguaiguinge_5.png-f880d565be8064ba83574fed4d42f9d6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "698c68316a4c3cb335c8f96dc8abbcad"
 }
 
 [deps]

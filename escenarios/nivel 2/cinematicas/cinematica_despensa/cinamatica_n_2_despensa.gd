@@ -2,6 +2,7 @@ extends Node3D
 
 
 @onready var posicion = $"posi_camara"
+@onready var posicion2 = $posi_camara2
 @onready var camara = $"Camera3D"
 @onready var anima_dio =$Dionisi/AnimationPlayer
 @onready var anima_marta =$Marta/AnimationPlayer
@@ -35,20 +36,17 @@ var dialogos ={
 
 	"Funcionario":[
 		["Funcionario Municipal","Buenos dias señor, soy un funcionario municipal, he venido para avisarle que sus tierras han sido compradas por una empresa privada."],
-		["Dionisio","Bueno dias che karia'y... 
-(Buenos dias hijo...)"],
-		["Dionisio","Chedisculpami, ndapillái mba'épa eréva nde..
-(Discúlpeme, no entendí que decías.)"],
-		["Funcionario","Karai Dionisio Báez, pende yvykuéra niko hína Estado mba'e, pee niko hína ocupantes, ndaha'éi penemba'e.
-(Señor Dionisio Báez, sus tierras pertenecen al Estado, ustedes ahora son ocupantes, no son dueños.)"],
-		["Dionisio","¡Anichéneti!, che rekove entéro aimeva'ekue ápe, che taita oñotỹva'ekue ko'ã yvy.
-(¡No puede ser!, toda mi vida viví acá, mi abuelo cultivo estas tierras)"],
-		["Funcionario","Ndaipóri kuatia he'íva ko'ã yvy penemba'e.
-(No hay documentos que digan que estas tierras son suyas.)"],
+		["Dionisio","Bueno dias che karia'y... ¡ANICHÉNETI! 
+(Buenos dias hijo...¡NO PUEDE SER!)"],
+		["Dionisio","Che rekove entéro aimeva'ekue ápe, che taita oñotỹva'ekue ko'ã yvy.
+(Toda mi vida viví acá, mi abuelo cultivo estas tierras)"],
+		["Funcionario","Ndaipóri lo kuatia
+(No tiene los documentos)"],
 		["Dionisio","Chéko Lopekue che karia'y, romanomba ñande yvy rodefendévo, Estado cherenói ha machéte che pópe asẽ ahuguaitĩ che pehẽguekuéra.
 (Soy de la época de Solano López, nosotros morimos defenciendo nuestras tierrasn el Estado nos llamó y con machete en mano salí a encontrar a mis hermanos.)"],
-		["Funcionario", "..."],
-		["Funcionanrio","Ambyasy ne situación rehe.."],
+		["Funcionanrio","...Ambyasy ne situación rehe"],
+	],
+	"ipochy":[
 		["Dionisio","MAERÃIKO ROHASA'AKUE KARUGUA HA TUJUKUA APYTÉPE..MAERÃIKO SI IPAHÁPE OJEIPE'APÁTA OREHEGUI LO ÚNICO ROGUEREKO GUETERI. 
 (PARA QUÉ PASAMOS ENTRE PANTANOS Y BARRALES..PARA QUÉ SI AL FINAL NOS SACAN LO UNICO QUE TENEMOS AÚN.)"],
 		["Funcionario","..."]
@@ -142,8 +140,11 @@ func dialog_terminado() -> void:
 		await timer_func.timeout
 		moviendo_funcionario= false
 		ini_dialogan("Funcionario")
-		
-	elif  npc_actual=="Funcionario":
+	elif npc_actual == "Funcionario":
+		camara.position = posicion2.position
+		ini_dialogan("ipochy")
+	elif  npc_actual=="ipochy":
+		camara.position = $inicial_posi.position
 		vuelve_funcionario=true
 		timer_func.start()
 		await timer_func.timeout

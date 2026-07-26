@@ -90,10 +90,10 @@
 [ext_resource type="Texture2D" uid="uid://c4g27lgmtv75v" path="res://modelos/Marta/Marta oguapy_7.png" id="87_nfeg0"]
 [ext_resource type="Texture2D" uid="uid://7axilgfot47i" path="res://modelos/Marta/Marta oguapy_8.png" id="88_j6rxs"]
 [ext_resource type="Texture2D" uid="uid://c48bhc4wt3sfj" path="res://modelos/Marta/Marta oguapy_9.png" id="89_htsmo"]
-[ext_resource type="Texture2D" uid="uid://r6n8rkexf5xb" path="res://modelos/Marta/Marta oguapy_10.png" id="90_byp1v"]
-[ext_resource type="Texture2D" uid="uid://w2mrhr6wsxxv" path="res://modelos/Marta/Marta oguapy_11.png" id="91_n2qop"]
-[ext_resource type="Texture2D" uid="uid://d0u5duyn3nxn" path="res://modelos/Marta/Marta oguapy_12.png" id="92_gyq5m"]
-[ext_resource type="Texture2D" uid="uid://dng8oadtitqcr" path="res://modelos/Marta/Marta oguapy_13.png" id="93_toox3"]
+[ext_resource type="Texture2D" uid="uid://uf8b2jr7m4cg" path="res://modelos/Marta/Marta oguapy_10.png" id="90_byp1v"]
+[ext_resource type="Texture2D" uid="uid://0mstrwo16l42" path="res://modelos/Marta/Marta oguapy_11.png" id="91_n2qop"]
+[ext_resource type="Texture2D" uid="uid://dm3ncrsqiyeti" path="res://modelos/Marta/Marta oguapy_12.png" id="92_gyq5m"]
+[ext_resource type="Texture2D" uid="uid://ckgmt8ghyn0y3" path="res://modelos/Marta/Marta oguapy_13.png" id="93_toox3"]
 [ext_resource type="Texture2D" uid="uid://bvnw76k40ddd3" path="res://modelos/laburador 3/laburador3_0.png" id="95_jynvb"]
 [ext_resource type="Texture2D" uid="uid://cjlprhov7wjnl" path="res://modelos/laburador 3/laburador3_1.png" id="96_j3ht0"]
 [ext_resource type="Texture2D" uid="uid://j5x3dq8i4wlg" path="res://modelos/laburador 3/laburador3_2.png" id="97_dileu"]
@@ -6801,12 +6801,12 @@ mesh = SubResource("ArrayMesh_wdshx")
 skeleton = NodePath("")
 
 [node name="plane2" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado"]
-transform = Transform3D(-0.0738294, -0.0246273, 0.0988079, -0.00433917, 0.420014, 0.00577032, -0.0566943, -7.57072e-05, -0.129113, 0.682355, 0.204173, -0.971249)
+transform = Transform3D(-0.0738294, -0.02658, 0.0987322, -0.00433917, 0.419888, 0.00701166, -0.0566943, 0.00247687, -0.129109, 0.595843, 0.0616016, -1.04389)
 mesh = SubResource("ArrayMesh_awb15")
 skeleton = NodePath("")
 
 [node name="plane3" type="MeshInstance3D" parent="objetos/catres_tinglado/tinglado"]
-transform = Transform3D(-0.0884962, 0.0195037, 0.0504052, 0.0273531, 0.200812, 0.134748, -0.0102025, 0.369205, -0.0759527, 0.482283, 0.175914, -1.16938)
+transform = Transform3D(-0.0884962, 0.0195037, 0.0504052, 0.0273531, 0.200812, 0.134748, -0.0102025, 0.369205, -0.0759527, 0.469127, 0.130168, -1.17792)
 mesh = SubResource("ArrayMesh_awb15")
 skeleton = NodePath("")
 

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chpxgdm4x4ex1"
+uid="uid://d2dtp70b8ii1w"
 path.s3tc="res://.godot/imported/kuñatai oguapy2_11.png-16394a219d8c848f1d7db66612fc3540.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ac9536ef02bf2c93bf3adc3936483d78"
 }
 
 [deps]

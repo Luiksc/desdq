@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tsawquyvb8if"
+uid="uid://brhlfyagilxhx"
 path.s3tc="res://.godot/imported/Arpa_0.png-556aa046510ed83872eaeead6118f658.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "c5e9b9f0054fd5aca4ef4180612ea6bd"
 }
 
 [deps]
