@@ -4468,7 +4468,7 @@ label_settings = SubResource("LabelSettings_jvlji")
 
 [node name="Interac" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1
-position = Vector2(582, 575)
+position = Vector2(582, 518)
 scale = Vector2(3.28125, 2.875)
 sprite_frames = SubResource("SpriteFrames_bha3u")
 animation = &"interactura"

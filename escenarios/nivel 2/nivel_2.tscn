@@ -1,4 +1,4 @@
-[gd_scene load_steps=492 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=500 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -112,6 +112,7 @@
 [ext_resource type="Texture2D" uid="uid://ks15ec1r1bvy" path="res://modelos/laburador 3/laburador3_15.png" id="110_r40j7"]
 [ext_resource type="Texture2D" uid="uid://cxbjnsqnl2vqo" path="res://modelos/laburador 3/laburador3_16.png" id="111_shwel"]
 [ext_resource type="Texture2D" uid="uid://dsjsnta0i2cto" path="res://modelos/laburador 3/laburador3_17.png" id="112_hk850"]
+[ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="113_17jg1"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xgu5u"]
 radius = 0.7
@@ -140,7 +141,19 @@ fog_light_color = Color(0.0460866, 0.0658726, 0.124658, 1)
 fog_light_energy = 1.1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2y71m"]
-size = Vector3(0.333095, 12.6642, 0.259098)
+size = Vector3(0.333095, 12.842, 0.259098)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m1gro"]
+size = Vector3(0.295776, 7.90381, 0.349976)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxndu"]
+size = Vector3(0.291832, 17, 0.353638)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5kypm"]
+size = Vector3(0.36084, 16.7411, 0.280518)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_omdxw"]
+size = Vector3(0.751953, 0.900101, 0.633179)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_itebp"]
 size = Vector3(2.17871, 5.54168, 4.6261)
@@ -1456,7 +1469,7 @@ size = Vector3(42.7822, 13, 2.4)
 size = Vector3(1, 1.87149, 0.325684)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5is55"]
-size = Vector3(1, 3.9, 2.2)
+size = Vector3(2.22565, 3.9, 3.84162)
 
 [sub_resource type="BoxMesh" id="BoxMesh_874bj"]
 
@@ -2555,6 +2568,28 @@ _data = {
 "aparece": SubResource("Animation_nooox"),
 "desaparece": SubResource("Animation_ukv80")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlxe7"]
+atlas = ExtResource("113_17jg1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27jxw"]
+atlas = ExtResource("113_17jg1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6kca7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlxe7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27jxw")
+}],
+"loop": true,
+"name": &"interactura",
+"speed": 2.0
+}]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cs6pq"]
 resource_name = "material_0"
@@ -5849,27 +5884,21 @@ transform = Transform3D(0.692971, -0.00369876, 1.23447, -0.0595011, 0.277806, 0.
 
 [node name="StaticBody3D" type="StaticBody3D" parent="objetos/troncos/grupo troncos2/tronquiño"]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="objetos/troncos/grupo troncos2/tronquiño/StaticBody3D"]
-transform = Transform3D(1, 3.56689e-10, 7.25245e-09, 6.4169e-10, 0.987549, -0.253137, -3.45625e-09, -0.00659129, 1.0143, -0.0149626, 9.70951, -0.0128479)
-shape = SubResource("BoxShape3D_2y71m")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/troncos/grupo troncos2/tronquiño/StaticBody3D"]
+transform = Transform3D(0.999994, -7.68341e-09, 0, 4.79817e-06, 1, 1.86265e-09, 1.23382e-05, 6.28643e-09, 1, 0.0454674, 12.5481, -0.0213604)
+shape = SubResource("BoxShape3D_m1gro")
 
 [node name="tronquiño7" parent="objetos/troncos/grupo troncos2" instance=ExtResource("16_sp4sp")]
 transform = Transform3D(0.692971, -0.00369876, 1.99978, -0.0595011, 0.277806, 0.0653121, -1.66077, -0.0244367, 1.40916, -0.380555, -3.12065, -5.73258)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="objetos/troncos/grupo troncos2/tronquiño7"]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="objetos/troncos/grupo troncos2/tronquiño7/StaticBody3D"]
-transform = Transform3D(1, 3.56689e-10, 7.25245e-09, 6.4169e-10, 0.987549, -0.253137, -3.45625e-09, -0.00659129, 1.0143, -0.0149626, 9.70951, -0.0128479)
-shape = SubResource("BoxShape3D_2y71m")
 
 [node name="tronquiño8" parent="objetos/troncos/grupo troncos2" instance=ExtResource("16_sp4sp")]
 transform = Transform3D(0.366238, -0.00372468, 0.723029, -0.0314465, 0.279753, 0.0236139, -0.877726, -0.0246079, 0.509488, 8.64728, -1.34779, 0.512848)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="objetos/troncos/grupo troncos2/tronquiño8"]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="objetos/troncos/grupo troncos2/tronquiño8/StaticBody3D"]
-transform = Transform3D(1, 3.56689e-10, 7.25245e-09, 6.4169e-10, 0.987549, -0.253137, -3.45625e-09, -0.00659129, 1.0143, -0.0149626, 9.70951, -0.0128479)
-shape = SubResource("BoxShape3D_2y71m")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/troncos/grupo troncos2/tronquiño8/StaticBody3D"]
+transform = Transform3D(1, -3.41795e-07, 0, 8.97795e-07, 0.999984, -3.53903e-08, 3.57628e-07, 9.87202e-08, 1, 0.025116, 7.99999, 0.0097084)
+shape = SubResource("BoxShape3D_rxndu")
 
 [node name="tronquiño13" parent="objetos/troncos/grupo troncos2" instance=ExtResource("16_sp4sp")]
 transform = Transform3D(0.366238, 0.0216513, 0.719686, -0.0314465, 0.279671, -0.0609372, -0.877726, -0.0140167, 0.511122, -33.6963, -1.87936, -48.3157)
@@ -5894,9 +5923,9 @@ transform = Transform3D(0.45823, 0.00558353, 0.770853, -0.956744, 0.337584, 0.02
 
 [node name="StaticBody3D" type="StaticBody3D" parent="objetos/troncos/grupo troncos2/tronquiño3"]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="objetos/troncos/grupo troncos2/tronquiño3/StaticBody3D"]
-transform = Transform3D(1, 3.72529e-09, -1.3113e-06, 7.15256e-07, 0.987549, -0.253138, -1.49012e-08, -0.00659129, 1.0143, 0.0142097, 9.7095, -0.0128479)
-shape = SubResource("BoxShape3D_2y71m")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/troncos/grupo troncos2/tronquiño3/StaticBody3D"]
+transform = Transform3D(1, -6.70552e-08, 0, 7.15256e-07, 1, 1.19209e-07, 2.38419e-07, -1.86265e-08, 1, -0.026123, 7.87057, -0.00768661)
+shape = SubResource("BoxShape3D_5kypm")
 
 [node name="tronquiño4" parent="objetos/troncos/grupo troncos2" instance=ExtResource("16_sp4sp")]
 transform = Transform3D(1, -6.98009e-09, 1.62465e-09, -1.36707e-09, -0.00548069, 1.2711, -1.06363e-08, -0.655547, -0.010627, 2.20731, 0.865115, 6.60287)
@@ -5958,8 +5987,17 @@ transform = Transform3D(0.672739, 0.483863, -0.065577, -0.00171547, 0.0467302, 1
 [node name="StaticBody3D" type="StaticBody3D" parent="objetos/troncos/grupo troncos2/tronquiño12"]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="objetos/troncos/grupo troncos2/tronquiño12/StaticBody3D"]
-transform = Transform3D(0.999997, 3.56709e-10, 7.25245e-09, 6.41668e-10, 0.987549, -0.253137, -3.45625e-09, -0.00659129, 1.0143, 0.0607262, 9.71289, -0.0263764)
+transform = Transform3D(0.999997, -2.98023e-08, 1.3411e-07, -1.19209e-07, 0.987548, -0.253136, -2.23517e-08, -0.0065913, 1.0143, 0.0607033, 10.0826, -0.0288439)
 shape = SubResource("BoxShape3D_2y71m")
+
+[node name="colisiones" type="Node" parent="objetos/troncos"]
+
+[node name="troncos colisiones" type="StaticBody3D" parent="objetos/troncos/colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.738, 0, -56.6064)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/troncos/colisiones/troncos colisiones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.2164, 0.927786, 6.65651)
+shape = SubResource("BoxShape3D_omdxw")
 
 [node name="dejar" type="Area3D" parent="objetos"]
 transform = Transform3D(0.637666, 0.599122, -0.484184, -0.684738, 0.728789, 4.92041e-08, 0.352867, 0.331539, 0.874966, 26.433, 0.120685, -72.4869)
@@ -6850,7 +6888,7 @@ transform = Transform3D(0.701885, 0, -2.09747, 0, 2.21179, 0, 2.09747, 0, 0.7018
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="objetos/cabaña2/puerta_despensa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25855, 0.25663)
+transform = Transform3D(0.975014, 0, -0.222144, 0, 1, 0, 0.222144, 0, 0.975014, -0.276093, 1.25855, 0.727715)
 shape = SubResource("BoxShape3D_5is55")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="objetos/cabaña2"]
@@ -8786,6 +8824,13 @@ vertical_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_1s8oi")
 }
+
+[node name="Interac" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(582, 488)
+scale = Vector2(3.28125, 2.875)
+sprite_frames = SubResource("SpriteFrames_6kca7")
+animation = &"interactura"
 
 [node name="sorpresa" parent="." instance=ExtResource("28_jobur")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.428645, 26.0026, 25.3008)

@@ -38,7 +38,7 @@ func vincular_yuyo(yuyo: Node3D) -> void:
 
 
 func _on_yuyo_recibido(id: String) -> void:
-	print("Capsula [", name, "] recibio señal del yuyo: ", id)
+	print("Enemigo [", name, "] recibio señal del yuyo: ", id)
 	_reaccionar(id)
 
 

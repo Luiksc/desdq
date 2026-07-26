@@ -27,7 +27,7 @@ var ikatu_oho = false
 
 @onready var lista =$Control/ItemList
 
-@onready var capsulas_yuyo: Node3D = $capsulas_yuyo
+@onready var enemigos_yuyo: Node3D = $enemigos_yuyo
 
 var dialogo_activo: bool = false
 var npc_actual: String = ""
@@ -121,11 +121,11 @@ func spawn_yuyo1():
 	instancia_yuyo.global_position = marcador.global_position
 
 	
-	var nombres_capsulas = ["mymba1_kaarurupa", "mymba2_kaarurupa", "mymba3_kaarurupa"]
-	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
-	if capsula:
-		capsula.id_yuyo_esperado = "ka'arurupa"
-		capsula.vincular_yuyo(instancia_yuyo)
+	var nombres_enemigos= ["mymba1_kaarurupa", "mymba2_kaarurupa", "mymba3_kaarurupa"]
+	var enemigo = enemigos_yuyo.get_node_or_null(nombres_enemigos[idx])
+	if enemigo:
+		enemigo.id_yuyo_esperado = "ka'arurupa"
+		enemigo.vincular_yuyo(instancia_yuyo)
 	
 
 	_conectar_daña_grupo("ka'arurupa")
@@ -157,11 +157,11 @@ func spawn_yuyo2():
 	instancia_yuyo.global_position = marcador.global_position
 
 	
-	var nombres_capsulas = ["mymba4_kaare", "mymba5_kaare", "mymba6_kaare"]
-	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
-	if capsula:
-		capsula.id_yuyo_esperado = "ka'aré"
-		capsula.vincular_yuyo(instancia_yuyo)
+	var nombres_enemigos = ["mymba4_kaare", "mymba5_kaare", "mymba6_kaare"]
+	var enemigos= enemigos_yuyo.get_node_or_null(nombres_enemigos[idx])
+	if enemigos:
+		enemigos.id_yuyo_esperado = "ka'aré"
+		enemigos.vincular_yuyo(instancia_yuyo)
 	
 	_conectar_daña_grupo("ka'aré")
 
@@ -192,11 +192,11 @@ func spawn_yuyo3():
 	instancia_yuyo.global_position = marcador.global_position
 
 	
-	var nombres_capsulas = ["mymba7_ambay", "mymba8_ambay", "mymba9_ambay"]
-	var capsula = capsulas_yuyo.get_node_or_null(nombres_capsulas[idx])
-	if capsula:
-		capsula.id_yuyo_esperado = "amba'y"
-		capsula.vincular_yuyo(instancia_yuyo)
+	var nombres_enemigos = ["mymba7_ambay", "mymba8_ambay", "mymba9_ambay"]
+	var enemigos = enemigos_yuyo.get_node_or_null(nombres_enemigos[idx])
+	if enemigos:
+		enemigos.id_yuyo_esperado = "amba'y"
+		enemigos.vincular_yuyo(instancia_yuyo)
 	
 	_conectar_daña_grupo("amba'y")
 

@@ -2583,9 +2583,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="final2" parent="Control" instance=ExtResource("6_bnxux")]
-layout_mode = 1
-
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
@@ -2601,11 +2598,14 @@ libraries = {
 "": SubResource("AnimationLibrary_uqhpe")
 }
 
+[node name="fade" parent="Control" instance=ExtResource("7_h8p2y")]
+layout_mode = 1
+
 [node name="ã" parent="Control" instance=ExtResource("6_upliv")]
 visible = false
 layout_mode = 1
 
-[node name="fade" parent="Control" instance=ExtResource("7_h8p2y")]
+[node name="final2" parent="Control" instance=ExtResource("6_bnxux")]
 layout_mode = 1
 
 [node name="informacion" type="Label" parent="Control"]

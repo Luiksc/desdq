@@ -9,7 +9,7 @@ var vel_normal: float = 14
 @onready var jugador = $"../../karau"
 
 @export var ojevy : Marker3D
-var SPEED = 14
+var SPEED = 19
 var persigue = false
 
 @export var id_yuyo_esperado: String = ""
@@ -27,9 +27,11 @@ func _on_zona_daña_body_entered(body: Node3D) -> void:
 		emit_signal("jugador_danado", id_yuyo_esperado)
 
 func _physics_process(delta: float) -> void:
+	$blockbench_export/AnimationPlayer.play("picada")
 	if persigue:
 		var direccion = jugador.global_position - global_position
-		
+		var angulo = atan2(direccion.x,direccion.z)
+		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
 	move_and_slide()
@@ -46,7 +48,7 @@ func vincular_yuyo(yuyo: Node3D) -> void:
 
 
 func _on_yuyo_recibido(id: String) -> void:
-	print("Capsula [", name, "] recibio señal del yuyo: ", id)
+	print("Enemigo [", name, "] recibio señal del yuyo: ", id)
 	_reaccionar(id)
 
 
@@ -57,7 +59,7 @@ func _reaccionar(id: String) -> void:
 func velocidad_reducida(reducir: bool) -> void:
 	
 	if reducir:
-		SPEED = 0.5
+		SPEED = 0.6
 		
 	else:
 		SPEED = vel_normal

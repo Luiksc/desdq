@@ -806,7 +806,7 @@ albedo_texture = ExtResource("19_kqids")
 texture_filter = 0
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_vlao5"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_heut3"]
 _surfaces = [{
 "aabb": AABB(-0.1125, 0, -0.515625, 0.225, 1e-05, 0.84375),
 "format": 34896613377,
@@ -836,7 +836,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("//8AAP///7///wAAAAD/vwAAAAAAAP+/AAAAAP///7////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_vlao5")
+shadow_mesh = SubResource("ArrayMesh_heut3")
 
 [sub_resource type="Animation" id="Animation_n3v64"]
 resource_name = "odipara"

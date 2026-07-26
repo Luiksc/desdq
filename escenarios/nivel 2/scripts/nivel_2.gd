@@ -5,6 +5,7 @@ extends Node3D
 @onready var interac3: Label =$Control/Interactuar3
 @onready var transicion = $"Control/ã/AnimationPlayer"
 @onready var data =$"Control/Data/AnimationPlayer"
+@onready var boton_interac = $Control/Interac
 
 @onready var indicador1 =$sorpresa 
 @onready var indicador2 =$sorpresa2
@@ -104,6 +105,7 @@ che ahátama aguejy ka'a sáko amoite arriba ¡Ejúpy!"],
 }
 
 func _ready() -> void:
+	boton_interac.hide()
 	indicador1.show()
 	jugador.puede_moverse= false
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -147,6 +149,7 @@ func _ready() -> void:
 
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
+	boton_interac.play("interactura")
 	flamea.play("flamea")
 	if dialogo_activo:
 		# E funciona como "next" mientras el diálogo está ocurriendo
@@ -265,7 +268,10 @@ func recoger():
 	
 
 	if sakos1.is_empty():
-		sako_mayor.queue_free()
+		if sako_mayor == null:
+			pass
+		else:
+			sako_mayor.queue_free()
 		
 
 func oheja():
@@ -381,18 +387,20 @@ func oipoo():
 	
 	jugador.puede_moverse=false
 	perdeu.show()
+	boton_interac.show()
 	transicion.play("entrafa")
 func reset():
 	omano = false
-
-	# Mover jugador al punto de spawn
 	var spawn = get_node_or_null("spawn")
 	if spawn:
 		jugador.global_position = spawn.global_position
 		jugador.global_rotation = spawn.global_rotation
 	jugador.puede_moverse = true
-	perdeu.hide()
 	transicion.play("salida")
+	await transicion.animation_finished
+	boton_interac.hide()
+	perdeu.hide()
+
 
 	# Restaurar kapangas
 	kapanga2.velocidad = 10

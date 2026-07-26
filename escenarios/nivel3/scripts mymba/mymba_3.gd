@@ -12,7 +12,7 @@ var vel_normal: float = 14
 @export var id_yuyo_esperado: String = ""
 
 
-var SPEED = 14
+var SPEED = 19
 var persigue = false
 
 func _ready() -> void:
@@ -49,7 +49,7 @@ func vincular_yuyo(yuyo: Node3D) -> void:
 
 
 func _on_yuyo_recibido(id: String) -> void:
-	print("Capsula [", name, "] recibio señal del yuyo: ", id)
+	print("Enemigo [", name, "] recibio señal del yuyo: ", id)
 	_reaccionar(id)
 
 

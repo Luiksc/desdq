@@ -43,7 +43,7 @@ const  LERP_VAL = .15
 	
 
 func _ready() -> void:
-	
+
 	fuerza_salto = (2 * distans_salto) / timp_salto
 	gravedad = (-2 * distans_salto) / (timp_salto * timp_salto)
 	anima_activo= true

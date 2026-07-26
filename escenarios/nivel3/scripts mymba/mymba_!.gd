@@ -4,11 +4,11 @@ signal jugador_danado(id_yuyo: String)
 
 @export var teclas_combo: Array[String] = ["interaccion", "ui_up", "ui_right"]
 var pos_original: Vector3
-var vel_normal: float = 14
+var vel_normal: float = 19
 
 @onready var jugador = $"../../karau"
 @export var ojevy : Marker3D
-var SPEED = 10
+var SPEED = 19
 
 var persigue = false
 
@@ -48,7 +48,7 @@ func vincular_yuyo(yuyo: Node3D) -> void:
 
 
 func _on_yuyo_recibido(id: String) -> void:
-	print("Capsula [", name, "] recibio señal del yuyo: ", id)
+	print("Enemigo [", name, "] recibio señal del yuyo: ", id)
 	_reaccionar(id)
 
 

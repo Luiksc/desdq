@@ -3787,13 +3787,13 @@ shape = SubResource("BoxShape3D_uodmv")
 [node name="posible aparecer ka\'arurupa" type="Node" parent="."]
 
 [node name="Marker3D" type="Marker3D" parent="posible aparecer ka\'arurupa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1.4, 39)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.4, 39)
 
 [node name="Marker3D2" type="Marker3D" parent="posible aparecer ka\'arurupa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 1.4, 35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 1.4, 34)
 
 [node name="Marker3D3" type="Marker3D" parent="posible aparecer ka\'arurupa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1.4, 27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1.4, 27)
 
 [node name="posible_aparecer_ka\'are" type="Node" parent="."]
 
@@ -3817,57 +3817,57 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6, 1.36418, 94.4)
 [node name="Marker3D3" type="Marker3D" parent="posible_aparecer_amba\'y"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9286, 2.10676, 128.273)
 
-[node name="capsulas_yuyo" type="Node3D" parent="."]
+[node name="enemigos_yuyo" type="Node3D" parent="."]
 
-[node name="mymba1_kaarurupa" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("27_woxr6")]
-transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 31, 1.09162, 59)
+[node name="mymba1_kaarurupa" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("27_woxr6")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 31, 1.09162, 56)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/!")
 
-[node name="mymba2_kaarurupa" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("28_vry4x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6854, 6.13405, 47)
+[node name="mymba2_kaarurupa" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("28_vry4x")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 39.6854, 6.13405, 54)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/2")
 
-[node name="mymba3_kaarurupa" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("29_ygyfl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53, 1.46933, 31)
+[node name="mymba3_kaarurupa" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("29_ygyfl")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 53, 1.46933, 31)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/3")
 
-[node name="mymba4_kaare" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("30_mnufh")]
+[node name="mymba4_kaare" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("30_mnufh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 2.5, 62.7)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/4")
 
-[node name="mymba5_kaare" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("31_op1xe")]
+[node name="mymba5_kaare" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("31_op1xe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 3, 73)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/5")
 
-[node name="mymba6_kaare" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("32_4bqjr")]
+[node name="mymba6_kaare" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("32_4bqjr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 2, 86.3032)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/6")
 
-[node name="mymba7_ambay" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("33_y5a7j")]
+[node name="mymba7_ambay" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("33_y5a7j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 3, 119)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/7")
 
-[node name="mymba8_ambay" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("34_157vd")]
+[node name="mymba8_ambay" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("34_157vd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9, 2.4, 83.9)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/8")
 
-[node name="mymba9_ambay" parent="capsulas_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("35_u3p0c")]
+[node name="mymba9_ambay" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("35_u3p0c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.1, 3, 126.5)
 collision_layer = 128
 collision_mask = 128
@@ -3876,13 +3876,13 @@ ojevy = NodePath("../../ojevy/9")
 [node name="ojevy" type="Node" parent="."]
 
 [node name="!" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 2, 58)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 2, 116)
 
 [node name="2" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 2, 48)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 2, 63)
 
 [node name="3" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 2, 55)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 2, 55)
 
 [node name="4" type="Marker3D" parent="ojevy"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 2, 64)

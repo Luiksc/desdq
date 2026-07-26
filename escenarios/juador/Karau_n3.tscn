@@ -1174,7 +1174,7 @@ mesh = SubResource("ArrayMesh_ua7yh")
 skeleton = NodePath("")
 
 [node name="retyma3" type="Node3D" parent="karau/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, -0.16875, 0.65625, 0.221875)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, -0.16875, 0.65625, 0.221875)
 
 [node name="jyva 23" type="MeshInstance3D" parent="karau/base/extremidades2/retyma3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0125, 0.0890694, -0.0359519)
@@ -1192,7 +1192,7 @@ mesh = SubResource("ArrayMesh_lnrc6")
 skeleton = NodePath("")
 
 [node name="retyma4" type="Node3D" parent="karau/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, -0.14375, 0.65, -0.228125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, -0.14375, 0.65, -0.228125)
 
 [node name="jyva 4" type="MeshInstance3D" parent="karau/base/extremidades2/retyma4"]
 transform = Transform3D(1, 0, 0, 0, -1, -1.22465e-16, 0, 1.22465e-16, -1, -0.0375, -0.270329, 0.0322819)
@@ -1256,7 +1256,7 @@ mesh = SubResource("ArrayMesh_ocr7m")
 skeleton = NodePath("")
 
 [node name="faja" type="Node3D" parent="karau"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 1.2, -0.075)
+transform = Transform3D(0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0, 0, 1, -0.35, 1.18125, -0.075)
 
 [node name="plane" type="MeshInstance3D" parent="karau/faja"]
 transform = Transform3D(0.180351, -0.966805, -0.180999, 0.933305, 0.226298, -0.278803, 0.310508, -0.118645, 0.943138, 0, 0, 0)
