@@ -57,7 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://nniufy8eihse" path="res://modelos/chica/kuñatai oguapy2_8.png" id="54_ymo06"]
 [ext_resource type="Texture2D" uid="uid://dm2dad5njqlc" path="res://modelos/chica/kuñatai oguapy2_9.png" id="55_neiwc"]
 [ext_resource type="Texture2D" uid="uid://dlex8d0abft7n" path="res://modelos/chica/kuñatai oguapy2_10.png" id="56_5ykv1"]
-[ext_resource type="Texture2D" uid="uid://chpxgdm4x4ex1" path="res://modelos/chica/kuñatai oguapy2_11.png" id="57_1sjag"]
+[ext_resource type="Texture2D" uid="uid://d2dtp70b8ii1w" path="res://modelos/chica/kuñatai oguapy2_11.png" id="57_1sjag"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
 panorama = ExtResource("4_bklqj")
@@ -3838,7 +3838,7 @@ collision_mask = 128
 ojevy = NodePath("../../ojevy/3")
 
 [node name="mymba4_kaare" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("30_mnufh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 2.5, 62.7)
+transform = Transform3D(-0.349948, -4.55621e-05, 0.606248, 1.17177e-05, 0.7, 5.93758e-05, -0.606248, 3.98357e-05, -0.349948, -12.0399, 13.208, 67.3846)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/4")
@@ -3856,19 +3856,19 @@ collision_mask = 128
 ojevy = NodePath("../../ojevy/6")
 
 [node name="mymba7_ambay" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("33_y5a7j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 3, 119)
+transform = Transform3D(0.739768, 0, 0, 0, 0.739768, 0, 0, 0, 0.739768, 8.6, 17.3289, 130.906)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/7")
 
 [node name="mymba8_ambay" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("34_157vd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9, 2.4, 83.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9, 1.09126, 83.9)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/8")
 
 [node name="mymba9_ambay" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("35_u3p0c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.1, 3, 126.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.1, 2, 126.5)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/9")

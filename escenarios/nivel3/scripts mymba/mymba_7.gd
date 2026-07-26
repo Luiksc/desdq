@@ -15,6 +15,7 @@ var persigue = false
 @export var id_yuyo_esperado: String = ""
 
 func _physics_process(delta: float) -> void:
+	$blockbench_export/AnimationPlayer.play("picada")
 	if persigue:
 		var direccion = jugador.global_position - global_position
 		direccion.y = 0

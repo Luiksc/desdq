@@ -15,6 +15,7 @@ var persigue = false
 
 func _physics_process(delta: float) -> void:
 	if persigue:
+		$blockbench_export/AnimationPlayer.play("corre")
 		var direccion = jugador.global_position - global_position
 		direccion.y = 0
 		direccion = direccion.normalized()
@@ -60,6 +61,7 @@ func velocidad_reducida(reducir: bool) -> void:
 		SPEED = vel_normal
 
 func volver_a_origen() -> void:
+	$blockbench_export/AnimationPlayer.play("corre")
 	persigue = false
 	velocidad_reducida(false)
 	velocity = Vector3.ZERO

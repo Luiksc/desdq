@@ -4,18 +4,20 @@ signal jugador_danado(id_yuyo: String)
 
 @export var teclas_combo: Array[String] = ["ui_down", "ui_right", "ui_left"]
 var pos_original: Vector3
-var vel_normal: float = 14
+var vel_normal: float = 20
 
 @onready var jugador = $"../../karau"
 
 @export var ojevy :  Marker3D
-var SPEED = 14
+var SPEED = 20
 var persigue = false
 
 func _physics_process(delta: float) -> void:
+	$blockbench_export/AnimationPlayer.play("picada")
 	if persigue:
 		var direccion = jugador.global_position - global_position
-		direccion.y = 0
+		var angulo = atan2(direccion.x,direccion.z)
+		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
 	move_and_slide()
@@ -64,11 +66,16 @@ func velocidad_reducida(reducir: bool) -> void:
 func volver_a_origen() -> void:
 	persigue = false
 	velocidad_reducida(false)
-	velocity = Vector3.ZERO
-	if ojevy != null and is_instance_valid(ojevy):
-		global_position = ojevy.global_position
-	else:
-		global_position = pos_original
+	while global_position != ojevy.global_position:
+		if ojevy != null and is_instance_valid(ojevy):
+			var direccion = ojevy.global_position - global_position
+			var angulo = atan2(direccion.x,direccion.z)
+			rotation.y = lerp_angle(rotation.y, angulo, 5)
+			direccion = direccion.normalized()
+			velocity = direccion * SPEED
+			move_and_slide()
+		else:
+			global_position = pos_original
 	
 	
 	
