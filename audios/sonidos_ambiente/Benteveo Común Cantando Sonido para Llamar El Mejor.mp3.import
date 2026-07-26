@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2yw6tfu7gjlu"
+path="res://.godot/imported/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3-d46a4ed114db11cd23ac52a6db0b59ac.mp3str"
+
+[deps]
+
+source_file="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3"
+dest_files=["res://.godot/imported/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3-d46a4ed114db11cd23ac52a6db0b59ac.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

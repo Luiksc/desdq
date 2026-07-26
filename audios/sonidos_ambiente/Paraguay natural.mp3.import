@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dt60wyg67utgn"
+path="res://.godot/imported/Paraguay natural.mp3-70a343c9aee27551e6438876bf73ad5e.mp3str"
+
+[deps]
+
+source_file="res://audios/sonidos_ambiente/Paraguay natural.mp3"
+dest_files=["res://.godot/imported/Paraguay natural.mp3-70a343c9aee27551e6438876bf73ad5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

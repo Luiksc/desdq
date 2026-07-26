@@ -30,8 +30,8 @@
 [ext_resource type="Texture2D" uid="uid://cbp8m5uhntijn" path="res://modelos/delfina servin/delfina tranqui/delfina tranqui_11.png" id="54_5vijb"]
 [ext_resource type="Texture2D" uid="uid://tdl86p41nk2l" path="res://modelos/delfina servin/delfina tranqui/delfina tranqui_12.png" id="55_2r1s0"]
 [ext_resource type="Texture2D" uid="uid://dklkexwsf33ia" path="res://modelos/delfina servin/delfina tranqui/delfina tranqui_13.png" id="56_8qcew"]
-[ext_resource type="AudioStream" uid="uid://ogvi4vkp2wxm" path="res://audios/Sonidos del chaco. (mp3cut.net).mp3" id="57_x31gh"]
-[ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/Sonidos del Chaco ambiente.mp3" id="58_k8ycp"]
+[ext_resource type="AudioStream" uid="uid://ogvi4vkp2wxm" path="res://audios/sonidos_ambiente/Sonidos del chaco. (mp3cut.net).mp3" id="57_x31gh"]
+[ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/sonidos_ambiente/Sonidos del Chaco ambiente.mp3" id="58_k8ycp"]
 [ext_resource type="AudioStream" uid="uid://rnfh0p7isxb7" path="res://audios/sápe.mp3" id="60_6ho5w"]
 [ext_resource type="AudioStream" uid="uid://s2ssaqulrhei" path="res://audios/hýpy (mp3cut.net).mp3" id="61_7htur"]
 
@@ -1430,8 +1430,6 @@ autoplay = true
 
 [node name="chaco_ambiente" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("58_k8ycp")
-volume_db = 8.631
-autoplay = true
 
 [node name="Sápe" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("60_6ho5w")

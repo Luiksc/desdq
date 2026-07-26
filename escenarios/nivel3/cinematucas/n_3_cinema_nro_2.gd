@@ -29,6 +29,7 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	MusicaGlobal.musica_fondo_nivel3()
 	transicion_pixel.play("RESET")
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 	karau2.hide()

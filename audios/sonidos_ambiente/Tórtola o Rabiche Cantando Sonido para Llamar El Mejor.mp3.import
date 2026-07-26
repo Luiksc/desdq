@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clmwahwau6mma"
+path="res://.godot/imported/Tórtola o Rabiche Cantando Sonido para Llamar El Mejor.mp3-16919d937517d2a67fe304b3b4ab9894.mp3str"
+
+[deps]
+
+source_file="res://audios/sonidos_ambiente/Tórtola o Rabiche Cantando Sonido para Llamar El Mejor.mp3"
+dest_files=["res://.godot/imported/Tórtola o Rabiche Cantando Sonido para Llamar El Mejor.mp3-16919d937517d2a67fe304b3b4ab9894.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxbjmubjd17xm"
+path="res://.godot/imported/RAYOS Y TRUENOS efectos de sonido (mp3cut.net).mp3-0e3a23bd9eacab1a83df58f842edb3a8.mp3str"
+
+[deps]
+
+source_file="res://audios/sonidos_ambiente/RAYOS Y TRUENOS efectos de sonido (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/RAYOS Y TRUENOS efectos de sonido (mp3cut.net).mp3-0e3a23bd9eacab1a83df58f842edb3a8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

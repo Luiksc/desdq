@@ -201,6 +201,9 @@ func procesar_combo():
 				# Tecla incorrecta presionada durante el combo
 				print("mal")
 				emit_signal("combo")
+				# Subir velocidad del mymba en 2 unidades como penalización
+				if mymba_en_combo != null and "SPEED" in mymba_en_combo:
+					mymba_en_combo.SPEED += 2
 				
 	if teclas_faltantes.is_empty():
 		# Combo completado exitosamente
@@ -225,6 +228,9 @@ func procesar_combo():
 		mymba_en_combo = null
 
 func resetear_combo() -> void:
+	# Restaurar velocidad original del mymba antes de limpiarlo
+	if mymba_en_combo != null and mymba_en_combo.has_method("velocidad_reducida"):
+		mymba_en_combo.velocidad_reducida(false)
 	mymba_en_combo = null
 	teclas_faltantes.clear()
 	combo_delay_timer = 0.0

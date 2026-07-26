@@ -30,8 +30,10 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	
 	transicion_pixel.play("salida")
 	MusicaGlobal.play_music_level()
+	MusicaGlobal.jui_sonido_ambiental()
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 	timer.start()
 	await timer.timeout

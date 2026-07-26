@@ -76,6 +76,7 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicaGlobal.tortola_sonido_ambiente()
 	perdeu.hide()
 	boton_perdeu.hide()
 	transicion.play("salida")
