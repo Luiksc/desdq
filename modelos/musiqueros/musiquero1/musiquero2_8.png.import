@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwkweeo4yheys"
-path.s3tc="res://.godot/imported/musiquero2_8.png-b35236cbe148858332fba9e846378ad8.s3tc.ctex"
+path="res://.godot/imported/musiquero2_8.png-b35236cbe148858332fba9e846378ad8.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "478c9e40b1d44e06eeeb6b7df12cba36"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/musiqueros/musiquero1/musiquero2_8.png"
-dest_files=["res://.godot/imported/musiquero2_8.png-b35236cbe148858332fba9e846378ad8.s3tc.ctex"]
+dest_files=["res://.godot/imported/musiquero2_8.png-b35236cbe148858332fba9e846378ad8.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

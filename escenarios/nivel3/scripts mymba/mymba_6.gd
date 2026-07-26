@@ -10,13 +10,34 @@ var vel_normal: float = 14
 @export var ojevy :  Marker3D
 var SPEED = 14
 var persigue = false
+var volviendo_a_origen = false
 
 @export var id_yuyo_esperado: String = ""
 
 func _physics_process(delta: float) -> void:
-	if persigue:
+	if volviendo_a_origen:
+		$blockbench_export/AnimationPlayer.play("corre")
+		if ojevy != null and is_instance_valid(ojevy):
+			var direccion = ojevy.global_position - global_position
+			direccion.y = 0
+			if direccion.length() < 0.5:
+				global_position = ojevy.global_position
+				velocity = Vector3.ZERO
+				volviendo_a_origen = false
+			else:
+				var angulo = atan2(direccion.x, direccion.z)
+				rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
+				direccion = direccion.normalized()
+				velocity = direccion * SPEED
+		else:
+			global_position = pos_original
+			velocity = Vector3.ZERO
+			volviendo_a_origen = false
+	elif persigue:
 		$blockbench_export/AnimationPlayer.play("corre")
 		var direccion = jugador.global_position - global_position
+		var angulo = atan2(direccion.x, direccion.z)
+		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 		direccion.y = 0
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
@@ -61,11 +82,6 @@ func velocidad_reducida(reducir: bool) -> void:
 		SPEED = vel_normal
 
 func volver_a_origen() -> void:
-	$blockbench_export/AnimationPlayer.play("corre")
 	persigue = false
 	velocidad_reducida(false)
-	velocity = Vector3.ZERO
-	if ojevy != null and is_instance_valid(ojevy):
-		global_position = ojevy.global_position
-	else:
-		global_position = pos_original
+	volviendo_a_origen = true

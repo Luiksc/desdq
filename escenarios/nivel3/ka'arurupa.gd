@@ -4,9 +4,12 @@ var posicion1 : Vector3
 var posicion2 : Vector3
 var final = false
 var ikatu_oho = false
+var perder = false
 
 @onready var transicion = $"Control/ã/AnimationPlayer"
 @onready var final_punto = $final
+@onready var perdeu = $Control/eñehundi
+@onready var boton_perdeu = $Control/interaccion2
 @onready var jugador =$karau
 @onready var control_camara = $karau/pivote
 @onready var anima_jugon = $karau/karau/AnimationPlayer
@@ -32,7 +35,6 @@ var ikatu_oho = false
 var dialogo_activo: bool = false
 var npc_actual: String = ""
 var pensamiento_activo: bool = false  
-
 
 
 var omano = false
@@ -74,6 +76,8 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	perdeu.hide()
+	boton_perdeu.hide()
 	transicion.play("salida")
 	await transicion.animation_finished
 	randomize()
@@ -216,18 +220,18 @@ func _on_jugador_danado(id_yuyo: String) -> void:
 	if reseteando:
 		return
 	reseteando = true
-	print("¡Jugador dañado! Reseteando yuyo: ", id_yuyo)
+	print("Jugador dañado, Reseteando yuyo: ", id_yuyo)
 	await reset_por_yuyo(id_yuyo)
 	reseteando = false
 
 func reset_por_yuyo(id_yuyo: String) -> void:
-	# 1. Resetear la posición y estado de TODOS los mymbas en la escena a sus marcadores 'ojevy'
+	#resetea mymbas
 	for m in get_tree().get_nodes_in_group("mymba"):
 		if m.has_method("volver_a_origen"):
 			m.volver_a_origen()
 		m.set("persigue", false)
 	
-	# 2. Resetear el modo combo del jugador si estaba activo y restaurar la cámara
+	# resetea la camara y combos
 	if jugador != null and jugador.has_method("resetear_combo"):
 		jugador.resetear_combo()
 	if control_camara != null:
@@ -237,14 +241,12 @@ func reset_por_yuyo(id_yuyo: String) -> void:
 			control_camara.cinematica = false
 	
 	# 3. Volver al jugador a su posición inicial sin movimiento
-	jugador.global_position = posicion_inicial_jugador
-	jugador.velocity = Vector3.ZERO
-	jugador.puede_moverse = true
-	
-	# 4. Resetear la animación del jugador
-	anima_jugon.play("repira")
-	
-	# 5. Resetear ItemList al estado inicial según el yuyo y volver a hacer spawn
+	transicion.play("entrafa")
+	await transicion.animation_finished
+	perdeu.show()
+	boton_perdeu.show()
+	$Control/ItemList.hide()
+	perder = true
 	match id_yuyo:
 		"ka'arurupa":
 			lista.set_item_text(1, "Ka'arurupa 0/1")
@@ -255,6 +257,7 @@ func reset_por_yuyo(id_yuyo: String) -> void:
 		"amba'y":
 			lista.set_item_text(0, " Amba'y 0/2")
 			spawn_yuyo3()
+			
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -269,6 +272,22 @@ func _process(delta: float) -> void:
 			$DialogSystem/sound.play()
 	if ikatu_oho:
 		ohota_primio()
+	if perder:
+		if Input.is_action_just_pressed("interaccion"):
+			perder = false
+			jugador.global_position = posicion_inicial_jugador
+			jugador.velocity = Vector3.ZERO
+			jugador.puede_moverse = true
+			transicion.play("salida")
+			perdeu.hide()
+			boton_perdeu.hide()
+			$Control/ItemList.show()
+	
+	# 4. Resetear la animación del jugador
+			anima_jugon.play("repira")
+	
+	# 5. Resetear ItemList al estado inicial según el yuyo y volver a hacer spawn
+			
 
 
 func inic_dialo() -> void:
@@ -305,8 +324,6 @@ func dialog_terminado() -> void:
 		pensamiento_activo = false
 		return
 
-
-
 func mostrar_interac(id_del_npc: String) -> void:
 
 	#jugador_puede_interac = true
@@ -323,10 +340,8 @@ func hide_interac(id_del_npc: String) -> void:
 		jugador.puede_moverse = true
 
 
-
 func _on_trigger_farra_body_entered(body: Node3D) -> void:
-	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
-		# Bloquear si algún mymba está persiguiendo al jugador
+	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):		# Bloquear si algún mymba está persiguiendo al jugador
 		if hay_mymba_persiguiendo():
 			return
 		tri_fr.queue_free()
