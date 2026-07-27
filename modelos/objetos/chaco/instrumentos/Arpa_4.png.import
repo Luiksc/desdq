@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd8ocqwtqe6wj"
 path.s3tc="res://.godot/imported/Arpa_4.png-cc695c4e6a24a4c16cd2874b9a6466fe.s3tc.ctex"
+path.etc2="res://.godot/imported/Arpa_4.png-cc695c4e6a24a4c16cd2874b9a6466fe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/chaco/instrumentos/Arpa_4.png"
-dest_files=["res://.godot/imported/Arpa_4.png-cc695c4e6a24a4c16cd2874b9a6466fe.s3tc.ctex"]
+dest_files=["res://.godot/imported/Arpa_4.png-cc695c4e6a24a4c16cd2874b9a6466fe.s3tc.ctex", "res://.godot/imported/Arpa_4.png-cc695c4e6a24a4c16cd2874b9a6466fe.etc2.ctex"]
 
 [params]
 

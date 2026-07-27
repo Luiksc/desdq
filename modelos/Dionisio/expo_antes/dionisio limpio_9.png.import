@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://beqq7lucw1si4"
 path.s3tc="res://.godot/imported/dionisio limpio_9.png-c8af05ed821a238191e4a9cbf3eccb8e.s3tc.ctex"
+path.etc2="res://.godot/imported/dionisio limpio_9.png-c8af05ed821a238191e4a9cbf3eccb8e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Dionisio/expo_antes/dionisio limpio_9.png"
-dest_files=["res://.godot/imported/dionisio limpio_9.png-c8af05ed821a238191e4a9cbf3eccb8e.s3tc.ctex"]
+dest_files=["res://.godot/imported/dionisio limpio_9.png-c8af05ed821a238191e4a9cbf3eccb8e.s3tc.ctex", "res://.godot/imported/dionisio limpio_9.png-c8af05ed821a238191e4a9cbf3eccb8e.etc2.ctex"]
 
 [params]
 

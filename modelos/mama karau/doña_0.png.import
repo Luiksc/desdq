@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5lxyp28bvpme"
 path.s3tc="res://.godot/imported/doña_0.png-721d0e9b9c8c492fe7b0f825676a0975.s3tc.ctex"
+path.etc2="res://.godot/imported/doña_0.png-721d0e9b9c8c492fe7b0f825676a0975.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/mama karau/doña_0.png"
-dest_files=["res://.godot/imported/doña_0.png-721d0e9b9c8c492fe7b0f825676a0975.s3tc.ctex"]
+dest_files=["res://.godot/imported/doña_0.png-721d0e9b9c8c492fe7b0f825676a0975.s3tc.ctex", "res://.godot/imported/doña_0.png-721d0e9b9c8c492fe7b0f825676a0975.etc2.ctex"]
 
 [params]
 

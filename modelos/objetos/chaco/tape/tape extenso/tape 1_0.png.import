@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://chuww4msvxomp"
 path.s3tc="res://.godot/imported/tape 1_0.png-1f1956168300a4f6b0cf3b71c1d2262d.s3tc.ctex"
+path.etc2="res://.godot/imported/tape 1_0.png-1f1956168300a4f6b0cf3b71c1d2262d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/chaco/tape/tape extenso/tape 1_0.png"
-dest_files=["res://.godot/imported/tape 1_0.png-1f1956168300a4f6b0cf3b71c1d2262d.s3tc.ctex"]
+dest_files=["res://.godot/imported/tape 1_0.png-1f1956168300a4f6b0cf3b71c1d2262d.s3tc.ctex", "res://.godot/imported/tape 1_0.png-1f1956168300a4f6b0cf3b71c1d2262d.etc2.ctex"]
 
 [params]
 

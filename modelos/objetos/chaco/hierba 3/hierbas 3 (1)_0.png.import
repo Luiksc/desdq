@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://tcc7syul30f7"
 path.s3tc="res://.godot/imported/hierbas 3 (1)_0.png-d2c62ec2a14098b23f5c6fc16fb8c7d5.s3tc.ctex"
+path.etc2="res://.godot/imported/hierbas 3 (1)_0.png-d2c62ec2a14098b23f5c6fc16fb8c7d5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/chaco/hierba 3/hierbas 3 (1)_0.png"
-dest_files=["res://.godot/imported/hierbas 3 (1)_0.png-d2c62ec2a14098b23f5c6fc16fb8c7d5.s3tc.ctex"]
+dest_files=["res://.godot/imported/hierbas 3 (1)_0.png-d2c62ec2a14098b23f5c6fc16fb8c7d5.s3tc.ctex", "res://.godot/imported/hierbas 3 (1)_0.png-d2c62ec2a14098b23f5c6fc16fb8c7d5.etc2.ctex"]
 
 [params]
 

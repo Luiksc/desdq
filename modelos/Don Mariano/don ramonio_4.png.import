@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg2pxln6dr8x4"
 path.s3tc="res://.godot/imported/don ramonio_4.png-b8bbccc10faf1b93e51b80e414b6fafd.s3tc.ctex"
+path.etc2="res://.godot/imported/don ramonio_4.png-b8bbccc10faf1b93e51b80e414b6fafd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Don Mariano/don ramonio_4.png"
-dest_files=["res://.godot/imported/don ramonio_4.png-b8bbccc10faf1b93e51b80e414b6fafd.s3tc.ctex"]
+dest_files=["res://.godot/imported/don ramonio_4.png-b8bbccc10faf1b93e51b80e414b6fafd.s3tc.ctex", "res://.godot/imported/don ramonio_4.png-b8bbccc10faf1b93e51b80e414b6fafd.etc2.ctex"]
 
 [params]
 

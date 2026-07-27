@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ui3jmf38g77j"
 path.s3tc="res://.godot/imported/karau\'s iru_4.png-58e48f2a3cd1082e5dfc3e54311a767d.s3tc.ctex"
+path.etc2="res://.godot/imported/karau\'s iru_4.png-58e48f2a3cd1082e5dfc3e54311a767d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/iru/karau's iru_4.png"
-dest_files=["res://.godot/imported/karau\\'s iru_4.png-58e48f2a3cd1082e5dfc3e54311a767d.s3tc.ctex"]
+dest_files=["res://.godot/imported/karau\\'s iru_4.png-58e48f2a3cd1082e5dfc3e54311a767d.s3tc.ctex", "res://.godot/imported/karau\\'s iru_4.png-58e48f2a3cd1082e5dfc3e54311a767d.etc2.ctex"]
 
 [params]
 

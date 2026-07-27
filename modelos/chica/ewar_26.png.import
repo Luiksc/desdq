@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmoa1kewybfxi"
 path.s3tc="res://.godot/imported/ewar_26.png-2d1cf9b59888a8c92396d4c1c2330a49.s3tc.ctex"
+path.etc2="res://.godot/imported/ewar_26.png-2d1cf9b59888a8c92396d4c1c2330a49.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/chica/ewar_26.png"
-dest_files=["res://.godot/imported/ewar_26.png-2d1cf9b59888a8c92396d4c1c2330a49.s3tc.ctex"]
+dest_files=["res://.godot/imported/ewar_26.png-2d1cf9b59888a8c92396d4c1c2330a49.s3tc.ctex", "res://.godot/imported/ewar_26.png-2d1cf9b59888a8c92396d4c1c2330a49.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://t82bw5qrtih"
 path.s3tc="res://.godot/imported/Myku_2.png-bf6783e9b0676a4ccc17f19b749d5545.s3tc.ctex"
+path.etc2="res://.godot/imported/Myku_2.png-bf6783e9b0676a4ccc17f19b749d5545.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://modelos/animañas/mykuré/Myku_2.png"
-dest_files=["res://.godot/imported/Myku_2.png-bf6783e9b0676a4ccc17f19b749d5545.s3tc.ctex"]
+dest_files=["res://.godot/imported/Myku_2.png-bf6783e9b0676a4ccc17f19b749d5545.s3tc.ctex", "res://.godot/imported/Myku_2.png-bf6783e9b0676a4ccc17f19b749d5545.etc2.ctex"]
 
 [params]
 

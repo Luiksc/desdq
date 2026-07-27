@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqerbiletwsqq"
 path.s3tc="res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.s3tc.ctex"
+path.etc2="res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Don_menú/don menú_10.png"
-dest_files=["res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.s3tc.ctex"]
+dest_files=["res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.s3tc.ctex", "res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.etc2.ctex"]
 
 [params]
 

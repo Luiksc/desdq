@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://xuty1trqcn5b"
 path.s3tc="res://.godot/imported/gob_sapukai_1.png-f889c88924d1bb726c4f9410013b5a4a.s3tc.ctex"
+path.etc2="res://.godot/imported/gob_sapukai_1.png-f889c88924d1bb726c4f9410013b5a4a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/funcionario/gob_sapukai_1.png"
-dest_files=["res://.godot/imported/gob_sapukai_1.png-f889c88924d1bb726c4f9410013b5a4a.s3tc.ctex"]
+dest_files=["res://.godot/imported/gob_sapukai_1.png-f889c88924d1bb726c4f9410013b5a4a.s3tc.ctex", "res://.godot/imported/gob_sapukai_1.png-f889c88924d1bb726c4f9410013b5a4a.etc2.ctex"]
 
 [params]
 

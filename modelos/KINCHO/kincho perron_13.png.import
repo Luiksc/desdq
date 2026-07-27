@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://djkrt03bff772"
 path.s3tc="res://.godot/imported/kincho perron_13.png-1075da88fd31be7caf2390f982de37ed.s3tc.ctex"
+path.etc2="res://.godot/imported/kincho perron_13.png-1075da88fd31be7caf2390f982de37ed.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://modelos/KINCHO/kincho perron_13.png"
-dest_files=["res://.godot/imported/kincho perron_13.png-1075da88fd31be7caf2390f982de37ed.s3tc.ctex"]
+dest_files=["res://.godot/imported/kincho perron_13.png-1075da88fd31be7caf2390f982de37ed.s3tc.ctex", "res://.godot/imported/kincho perron_13.png-1075da88fd31be7caf2390f982de37ed.etc2.ctex"]
 
 [params]
 

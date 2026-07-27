@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://6fi3qrukma3b"
 path.s3tc="res://.godot/imported/tinglado_3.png-76ee3094e887cd6ce196eae2eeea122a.s3tc.ctex"
+path.etc2="res://.godot/imported/tinglado_3.png-76ee3094e887cd6ce196eae2eeea122a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://modelos/objetos/Alto parana/tinglado/tinglado_3.png"
-dest_files=["res://.godot/imported/tinglado_3.png-76ee3094e887cd6ce196eae2eeea122a.s3tc.ctex"]
+dest_files=["res://.godot/imported/tinglado_3.png-76ee3094e887cd6ce196eae2eeea122a.s3tc.ctex", "res://.godot/imported/tinglado_3.png-76ee3094e887cd6ce196eae2eeea122a.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy8hlarps7mhh"
 path.s3tc="res://.godot/imported/casa cutre2_7.png-8b78348984b6fc08d8ba043d530bb313.s3tc.ctex"
+path.etc2="res://.godot/imported/casa cutre2_7.png-8b78348984b6fc08d8ba043d530bb313.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/chaco/ÓGA+/casa cutre2_7.png"
-dest_files=["res://.godot/imported/casa cutre2_7.png-8b78348984b6fc08d8ba043d530bb313.s3tc.ctex"]
+dest_files=["res://.godot/imported/casa cutre2_7.png-8b78348984b6fc08d8ba043d530bb313.s3tc.ctex", "res://.godot/imported/casa cutre2_7.png-8b78348984b6fc08d8ba043d530bb313.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dypn2wq3kt7cg"
 path.s3tc="res://.godot/imported/monillo_6.png-97316416810cfb2713ad56561dbba17e.s3tc.ctex"
+path.etc2="res://.godot/imported/monillo_6.png-97316416810cfb2713ad56561dbba17e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/animañas/ka'i/monillo_6.png"
-dest_files=["res://.godot/imported/monillo_6.png-97316416810cfb2713ad56561dbba17e.s3tc.ctex"]
+dest_files=["res://.godot/imported/monillo_6.png-97316416810cfb2713ad56561dbba17e.s3tc.ctex", "res://.godot/imported/monillo_6.png-97316416810cfb2713ad56561dbba17e.etc2.ctex"]
 
 [params]
 

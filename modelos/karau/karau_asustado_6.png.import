@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0ckw7df7b4tw"
 path.s3tc="res://.godot/imported/karau_asustado_6.png-170299a9995569d4a1566cb5fc295920.s3tc.ctex"
+path.etc2="res://.godot/imported/karau_asustado_6.png-170299a9995569d4a1566cb5fc295920.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/karau/karau_asustado_6.png"
-dest_files=["res://.godot/imported/karau_asustado_6.png-170299a9995569d4a1566cb5fc295920.s3tc.ctex"]
+dest_files=["res://.godot/imported/karau_asustado_6.png-170299a9995569d4a1566cb5fc295920.s3tc.ctex", "res://.godot/imported/karau_asustado_6.png-170299a9995569d4a1566cb5fc295920.etc2.ctex"]
 
 [params]
 

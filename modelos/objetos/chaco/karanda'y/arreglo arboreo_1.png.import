@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7eacoqfeaat0"
 path.s3tc="res://.godot/imported/arreglo arboreo_1.png-e35576ffcfff603a81c90e079def6b59.s3tc.ctex"
+path.etc2="res://.godot/imported/arreglo arboreo_1.png-e35576ffcfff603a81c90e079def6b59.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/chaco/karanda'y/arreglo arboreo_1.png"
-dest_files=["res://.godot/imported/arreglo arboreo_1.png-e35576ffcfff603a81c90e079def6b59.s3tc.ctex"]
+dest_files=["res://.godot/imported/arreglo arboreo_1.png-e35576ffcfff603a81c90e079def6b59.s3tc.ctex", "res://.godot/imported/arreglo arboreo_1.png-e35576ffcfff603a81c90e079def6b59.etc2.ctex"]
 
 [params]
 

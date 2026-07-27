@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://e1sjhdu5ewsx"
 path.s3tc="res://.godot/imported/guyralio_5.png-7fd6bf5598b925fb3fa2c6d9a8c76f96.s3tc.ctex"
+path.etc2="res://.godot/imported/guyralio_5.png-7fd6bf5598b925fb3fa2c6d9a8c76f96.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/karau/guyralio_5.png"
-dest_files=["res://.godot/imported/guyralio_5.png-7fd6bf5598b925fb3fa2c6d9a8c76f96.s3tc.ctex"]
+dest_files=["res://.godot/imported/guyralio_5.png-7fd6bf5598b925fb3fa2c6d9a8c76f96.s3tc.ctex", "res://.godot/imported/guyralio_5.png-7fd6bf5598b925fb3fa2c6d9a8c76f96.etc2.ctex"]
 
 [params]
 

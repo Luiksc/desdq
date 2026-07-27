@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp1p0vnxh1rhg"
 path.s3tc="res://.godot/imported/delfina Servin_14.png-4d1bfa878d4208a6c73b3fcb10e240d1.s3tc.ctex"
+path.etc2="res://.godot/imported/delfina Servin_14.png-4d1bfa878d4208a6c73b3fcb10e240d1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/delfina servin/pochyeterei rokoko/delfina Servin_14.png"
-dest_files=["res://.godot/imported/delfina Servin_14.png-4d1bfa878d4208a6c73b3fcb10e240d1.s3tc.ctex"]
+dest_files=["res://.godot/imported/delfina Servin_14.png-4d1bfa878d4208a6c73b3fcb10e240d1.s3tc.ctex", "res://.godot/imported/delfina Servin_14.png-4d1bfa878d4208a6c73b3fcb10e240d1.etc2.ctex"]
 
 [params]
 

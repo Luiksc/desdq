@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgikimjwy5jpu"
 path.s3tc="res://.godot/imported/Mesa_0.png-0250308a29c7937db802b42418e15031.s3tc.ctex"
+path.etc2="res://.godot/imported/Mesa_0.png-0250308a29c7937db802b42418e15031.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/Alto parana/mesa/Mesa_0.png"
-dest_files=["res://.godot/imported/Mesa_0.png-0250308a29c7937db802b42418e15031.s3tc.ctex"]
+dest_files=["res://.godot/imported/Mesa_0.png-0250308a29c7937db802b42418e15031.s3tc.ctex", "res://.godot/imported/Mesa_0.png-0250308a29c7937db802b42418e15031.etc2.ctex"]
 
 [params]
 

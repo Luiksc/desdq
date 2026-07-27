@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://l0jrj1oijddx"
 path.s3tc="res://.godot/imported/arbustito_0.png-e9ed9be28ab0eda149c3b973ba90c4c9.s3tc.ctex"
+path.etc2="res://.godot/imported/arbustito_0.png-e9ed9be28ab0eda149c3b973ba90c4c9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/Alto parana/arbuto/arbustito_0.png"
-dest_files=["res://.godot/imported/arbustito_0.png-e9ed9be28ab0eda149c3b973ba90c4c9.s3tc.ctex"]
+dest_files=["res://.godot/imported/arbustito_0.png-e9ed9be28ab0eda149c3b973ba90c4c9.s3tc.ctex", "res://.godot/imported/arbustito_0.png-e9ed9be28ab0eda149c3b973ba90c4c9.etc2.ctex"]
 
 [params]
 

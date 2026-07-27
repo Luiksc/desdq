@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cke84dsv23j0"
 path.s3tc="res://.godot/imported/capanga2_13.png-38f93b1bfdadff42a90eb23fca3fc8ad.s3tc.ctex"
+path.etc2="res://.godot/imported/capanga2_13.png-38f93b1bfdadff42a90eb23fca3fc8ad.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/capanga2/capanga2_13.png"
-dest_files=["res://.godot/imported/capanga2_13.png-38f93b1bfdadff42a90eb23fca3fc8ad.s3tc.ctex"]
+dest_files=["res://.godot/imported/capanga2_13.png-38f93b1bfdadff42a90eb23fca3fc8ad.s3tc.ctex", "res://.godot/imported/capanga2_13.png-38f93b1bfdadff42a90eb23fca3fc8ad.etc2.ctex"]
 
 [params]
 

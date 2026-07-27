@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://coguu6w43d4s7"
 path.s3tc="res://.godot/imported/capanga1_16.png-e4e03a109b430a3fc9e8b4d5b5546bda.s3tc.ctex"
+path.etc2="res://.godot/imported/capanga1_16.png-e4e03a109b430a3fc9e8b4d5b5546bda.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://modelos/capanga_ya/capanga1_16.png"
-dest_files=["res://.godot/imported/capanga1_16.png-e4e03a109b430a3fc9e8b4d5b5546bda.s3tc.ctex"]
+dest_files=["res://.godot/imported/capanga1_16.png-e4e03a109b430a3fc9e8b4d5b5546bda.s3tc.ctex", "res://.godot/imported/capanga1_16.png-e4e03a109b430a3fc9e8b4d5b5546bda.etc2.ctex"]
 
 [params]
 

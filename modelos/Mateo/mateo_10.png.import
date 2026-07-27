@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1oair1iyi6wj"
 path.s3tc="res://.godot/imported/mateo_10.png-2143d4c44af2665b5071e06e1cd80367.s3tc.ctex"
+path.etc2="res://.godot/imported/mateo_10.png-2143d4c44af2665b5071e06e1cd80367.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Mateo/mateo_10.png"
-dest_files=["res://.godot/imported/mateo_10.png-2143d4c44af2665b5071e06e1cd80367.s3tc.ctex"]
+dest_files=["res://.godot/imported/mateo_10.png-2143d4c44af2665b5071e06e1cd80367.s3tc.ctex", "res://.godot/imported/mateo_10.png-2143d4c44af2665b5071e06e1cd80367.etc2.ctex"]
 
 [params]
 

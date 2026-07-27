@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1o107y0e6q0y"
 path.s3tc="res://.godot/imported/karau ave VOLANDO_0.png-5084d104adb02aee0fe6a3db5fc314e9.s3tc.ctex"
+path.etc2="res://.godot/imported/karau ave VOLANDO_0.png-5084d104adb02aee0fe6a3db5fc314e9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/karau/karau ave VOLANDO_0.png"
-dest_files=["res://.godot/imported/karau ave VOLANDO_0.png-5084d104adb02aee0fe6a3db5fc314e9.s3tc.ctex"]
+dest_files=["res://.godot/imported/karau ave VOLANDO_0.png-5084d104adb02aee0fe6a3db5fc314e9.s3tc.ctex", "res://.godot/imported/karau ave VOLANDO_0.png-5084d104adb02aee0fe6a3db5fc314e9.etc2.ctex"]
 
 [params]
 

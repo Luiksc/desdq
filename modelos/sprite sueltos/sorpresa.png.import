@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://fh2ux0bfybhv"
 path.s3tc="res://.godot/imported/sorpresa.png-779892c35c60ba02e4c08a1a6619081f.s3tc.ctex"
+path.etc2="res://.godot/imported/sorpresa.png-779892c35c60ba02e4c08a1a6619081f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://modelos/sprite sueltos/sorpresa.png"
-dest_files=["res://.godot/imported/sorpresa.png-779892c35c60ba02e4c08a1a6619081f.s3tc.ctex"]
+dest_files=["res://.godot/imported/sorpresa.png-779892c35c60ba02e4c08a1a6619081f.s3tc.ctex", "res://.godot/imported/sorpresa.png-779892c35c60ba02e4c08a1a6619081f.etc2.ctex"]
 
 [params]
 

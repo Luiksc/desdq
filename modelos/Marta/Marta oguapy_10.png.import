@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://uf8b2jr7m4cg"
 path.s3tc="res://.godot/imported/Marta oguapy_10.png-f523945f515d1adfa20f19e5745e757e.s3tc.ctex"
+path.etc2="res://.godot/imported/Marta oguapy_10.png-f523945f515d1adfa20f19e5745e757e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://modelos/Marta/Marta oguapy_10.png"
-dest_files=["res://.godot/imported/Marta oguapy_10.png-f523945f515d1adfa20f19e5745e757e.s3tc.ctex"]
+dest_files=["res://.godot/imported/Marta oguapy_10.png-f523945f515d1adfa20f19e5745e757e.s3tc.ctex", "res://.godot/imported/Marta oguapy_10.png-f523945f515d1adfa20f19e5745e757e.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://4vgquvana1fc"
 path.s3tc="res://.godot/imported/karau oñeme\'e encuenta_1.png-88cbe23afd581ef52b81f6fa9c843536.s3tc.ctex"
+path.etc2="res://.godot/imported/karau oñeme\'e encuenta_1.png-88cbe23afd581ef52b81f6fa9c843536.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/karau/karau oñeme'e encuenta_1.png"
-dest_files=["res://.godot/imported/karau oñeme\\'e encuenta_1.png-88cbe23afd581ef52b81f6fa9c843536.s3tc.ctex"]
+dest_files=["res://.godot/imported/karau oñeme\\'e encuenta_1.png-88cbe23afd581ef52b81f6fa9c843536.s3tc.ctex", "res://.godot/imported/karau oñeme\\'e encuenta_1.png-88cbe23afd581ef52b81f6fa9c843536.etc2.ctex"]
 
 [params]
 

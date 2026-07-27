@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bynqa3kpw465x"
 path.s3tc="res://.godot/imported/yvaga sky at night.png-2d7afa291541a8cd28365d994aa09dac.s3tc.ctex"
+path.etc2="res://.godot/imported/yvaga sky at night.png-2d7afa291541a8cd28365d994aa09dac.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://background/yvaga sky at night.png"
-dest_files=["res://.godot/imported/yvaga sky at night.png-2d7afa291541a8cd28365d994aa09dac.s3tc.ctex"]
+dest_files=["res://.godot/imported/yvaga sky at night.png-2d7afa291541a8cd28365d994aa09dac.s3tc.ctex", "res://.godot/imported/yvaga sky at night.png-2d7afa291541a8cd28365d994aa09dac.etc2.ctex"]
 
 [params]
 

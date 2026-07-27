@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bde46a10jqr1s"
 path.s3tc="res://.godot/imported/casa verde dentro_2.png-dd5b19b1f309b47cba4f3fa7d835da9f.s3tc.ctex"
+path.etc2="res://.godot/imported/casa verde dentro_2.png-dd5b19b1f309b47cba4f3fa7d835da9f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/chaco/ÓGA+/casa verde dentro_2.png"
-dest_files=["res://.godot/imported/casa verde dentro_2.png-dd5b19b1f309b47cba4f3fa7d835da9f.s3tc.ctex"]
+dest_files=["res://.godot/imported/casa verde dentro_2.png-dd5b19b1f309b47cba4f3fa7d835da9f.s3tc.ctex", "res://.godot/imported/casa verde dentro_2.png-dd5b19b1f309b47cba4f3fa7d835da9f.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://5lc3v85l53vl"
 path.s3tc="res://.godot/imported/arbusto2_0.png-fd89c36e4d9b4a16002b3352ef252712.s3tc.ctex"
+path.etc2="res://.godot/imported/arbusto2_0.png-fd89c36e4d9b4a16002b3352ef252712.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/chaco/arbusto2/arbusto2_0.png"
-dest_files=["res://.godot/imported/arbusto2_0.png-fd89c36e4d9b4a16002b3352ef252712.s3tc.ctex"]
+dest_files=["res://.godot/imported/arbusto2_0.png-fd89c36e4d9b4a16002b3352ef252712.s3tc.ctex", "res://.godot/imported/arbusto2_0.png-fd89c36e4d9b4a16002b3352ef252712.etc2.ctex"]
 
 [params]
 

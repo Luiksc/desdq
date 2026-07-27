@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://54g3valyfbt4"
 path.s3tc="res://.godot/imported/chica_7.png-5167317b9e942be3f3c6a6b029fa6286.s3tc.ctex"
+path.etc2="res://.godot/imported/chica_7.png-5167317b9e942be3f3c6a6b029fa6286.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/chica/chica_7.png"
-dest_files=["res://.godot/imported/chica_7.png-5167317b9e942be3f3c6a6b029fa6286.s3tc.ctex"]
+dest_files=["res://.godot/imported/chica_7.png-5167317b9e942be3f3c6a6b029fa6286.s3tc.ctex", "res://.godot/imported/chica_7.png-5167317b9e942be3f3c6a6b029fa6286.etc2.ctex"]
 
 [params]
 

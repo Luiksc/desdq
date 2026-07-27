@@ -1,4 +1,4 @@
-[gd_scene load_steps=200 format=4 uid="uid://cjse10p2bv8ca"]
+[gd_scene load_steps=197 format=4 uid="uid://cjse10p2bv8ca"]
 
 [ext_resource type="Script" path="res://UI/menu_cinema.gd" id="1_ex02h"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_hmk0p"]
@@ -46,9 +46,6 @@
 [ext_resource type="MeshLibrary" uid="uid://btt733selbmy1" path="res://modelos/libr mesh/2libreria_chaco.tres" id="104_go13q"]
 [ext_resource type="AudioStream" uid="uid://ogvi4vkp2wxm" path="res://audios/sonidos_ambiente/Sonidos del chaco. (mp3cut.net).mp3" id="109_pqus4"]
 [ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/sonidos_ambiente/Sonidos del Chaco ambiente.mp3" id="110_83miu"]
-[ext_resource type="AudioStream" uid="uid://bldraj880nhfk" path="res://audios/musica de nivel/Mateo-gamarra-Duo-Quintana-letra_yme.mp3" id="111_xbo3c"]
-[ext_resource type="AudioStream" uid="uid://rnfh0p7isxb7" path="res://audios/sápe.mp3" id="112_mqjdn"]
-[ext_resource type="AudioStream" uid="uid://s2ssaqulrhei" path="res://audios/hýpy (mp3cut.net).mp3" id="113_xbnyh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ycvxn"]
 panorama = ExtResource("2_hmk0p")
@@ -621,6 +618,22 @@ tracks/1/keys = {
 "values": [Vector3(29.6571, 2.19152, -72.2312)]
 }
 
+[sub_resource type="Animation" id="Animation_0hojm"]
+resource_name = "karau_acerca"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(31.1349, 0.368756, -71.6759)]
+}
+
 [sub_resource type="Animation" id="Animation_d4h0y"]
 resource_name = "mateo_acerca"
 length = 0.7
@@ -649,6 +662,22 @@ tracks/1/keys = {
 "values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.6571, 2.19152, -72.2312), Vector3(28.9304, 0.337657, -72.8693)]
 }
 
+[sub_resource type="Animation" id="Animation_vhtt6"]
+resource_name = "mensu_acerca"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(30.133, 0.36272, -72.2436)]
+}
+
 [sub_resource type="Animation" id="Animation_gjyxq"]
 resource_name = "seleccion"
 tracks/0/type = "value"
@@ -674,38 +703,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.6571, 2.19152, -72.2312)]
-}
-
-[sub_resource type="Animation" id="Animation_vhtt6"]
-resource_name = "mensu_acerca"
-length = 0.7
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(30.133, 0.36272, -72.2436)]
-}
-
-[sub_resource type="Animation" id="Animation_0hojm"]
-resource_name = "karau_acerca"
-length = 0.7
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(31.1349, 0.368756, -71.6759)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oupfh"]
@@ -2308,7 +2305,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 2, 1, 0, -0.971342, 0, 0.237686)
 
 [sub_resource type="Animation" id="Animation_gprqd"]
-resource_name = "desselccion"
+resource_name = "desseleccion"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -2343,7 +2340,7 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_ehofu"),
 "abre": SubResource("Animation_b6lc2"),
-"desselccion": SubResource("Animation_gprqd"),
+"desseleccion": SubResource("Animation_gprqd"),
 "seleccion": SubResource("Animation_lj558")
 }
 
@@ -2694,21 +2691,6 @@ stream = ExtResource("110_83miu")
 volume_db = 8.631
 autoplay = true
 
-[node name="musica" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2789, -3.57834, -297.552)
-stream = ExtResource("111_xbo3c")
-volume_db = 5.457
-unit_size = 13.0
-autoplay = true
-
-[node name="Sápe" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("112_mqjdn")
-volume_db = -4.333
-
-[node name="Hýpy(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("113_xbnyh")
-volume_db = -5.2
-
 [node name="torus" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.691589, 0.720356, -0.0441987, -0.0860962, 0.00958924, -0.833412, -0.717142, 0.693538, 0.057431, 33.4482, 0.17271, -75.3474)
 mesh = SubResource("ArrayMesh_niavh")
@@ -2902,7 +2884,7 @@ libraries = {
 }
 
 [node name="caso_mateo" type="Node3D" parent="."]
-transform = Transform3D(-1.22985, 0.710054, -3.10375e-08, 0, -6.2075e-08, -1.42011, -0.710054, -1.22985, 5.37585e-08, 28.8321, 0.252111, -72.9457)
+transform = Transform3D(-1.22985, 0.710055, -3.10375e-08, 0, -6.2075e-08, -1.42011, -0.710055, -1.22985, 5.37585e-08, 28.8321, 0.252111, -72.9457)
 
 [node name="hoja2" type="Node3D" parent="caso_mateo"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -1.77636e-15, 0, 1, -0.0600872, -0.221375, 4.47035e-08)
@@ -2929,7 +2911,7 @@ libraries = {
 }
 
 [node name="caso_mensu" type="Node3D" parent="."]
-transform = Transform3D(-1.22976, 0.709998, -3.1035e-08, 0, -6.20702e-08, -1.42, -0.709998, -1.22976, 5.37544e-08, 30.0531, 0.252, -72.2374)
+transform = Transform3D(-1.22976, 0.709997, -3.10349e-08, 0, -6.20702e-08, -1.42, -0.709997, -1.22976, 5.37544e-08, 30.0531, 0.252, -72.2374)
 
 [node name="hoja2" type="Node3D" parent="caso_mensu"]
 transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -7.10543e-15, 1.77636e-15, 3.55271e-15, 1, 0.0311413, -0.211327, 4.47035e-08)
@@ -2956,7 +2938,7 @@ libraries = {
 }
 
 [node name="caso_karau" type="Node3D" parent="."]
-transform = Transform3D(-1.22976, 0.709998, -3.1035e-08, 0, -6.20702e-08, -1.42, -0.709998, -1.22976, 5.37544e-08, 31.1271, 0.252, -71.7351)
+transform = Transform3D(-1.22976, 0.709997, -3.10349e-08, 0, -6.20702e-08, -1.42, -0.709997, -1.22976, 5.37544e-08, 31.1271, 0.252, -71.7351)
 
 [node name="hoja2" type="Node3D" parent="caso_karau"]
 transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -7.10543e-15, 1.77636e-15, 3.55271e-15, 1, -0.00922203, -0.289482, 4.47035e-08)

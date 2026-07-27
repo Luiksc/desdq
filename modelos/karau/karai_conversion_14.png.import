@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dttrlxne6i7sd"
 path.s3tc="res://.godot/imported/karai_conversion_14.png-28181c8afcc01475e3902821a50388ae.s3tc.ctex"
+path.etc2="res://.godot/imported/karai_conversion_14.png-28181c8afcc01475e3902821a50388ae.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/karau/karai_conversion_14.png"
-dest_files=["res://.godot/imported/karai_conversion_14.png-28181c8afcc01475e3902821a50388ae.s3tc.ctex"]
+dest_files=["res://.godot/imported/karai_conversion_14.png-28181c8afcc01475e3902821a50388ae.s3tc.ctex", "res://.godot/imported/karai_conversion_14.png-28181c8afcc01475e3902821a50388ae.etc2.ctex"]
 
 [params]
 

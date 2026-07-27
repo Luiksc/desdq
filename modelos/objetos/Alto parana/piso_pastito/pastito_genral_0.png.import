@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ie5iwx2bh3oe"
 path.s3tc="res://.godot/imported/pastito_genral_0.png-d2d45850f6b3b1afc532867287701b59.s3tc.ctex"
+path.etc2="res://.godot/imported/pastito_genral_0.png-d2d45850f6b3b1afc532867287701b59.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/Alto parana/piso_pastito/pastito_genral_0.png"
-dest_files=["res://.godot/imported/pastito_genral_0.png-d2d45850f6b3b1afc532867287701b59.s3tc.ctex"]
+dest_files=["res://.godot/imported/pastito_genral_0.png-d2d45850f6b3b1afc532867287701b59.s3tc.ctex", "res://.godot/imported/pastito_genral_0.png-d2d45850f6b3b1afc532867287701b59.etc2.ctex"]
 
 [params]
 

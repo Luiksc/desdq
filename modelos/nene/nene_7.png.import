@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ioufvl8u0dsg"
 path.s3tc="res://.godot/imported/nene_7.png-10e45b2f0c0698a910f02f6e7aa95dbe.s3tc.ctex"
+path.etc2="res://.godot/imported/nene_7.png-10e45b2f0c0698a910f02f6e7aa95dbe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/nene/nene_7.png"
-dest_files=["res://.godot/imported/nene_7.png-10e45b2f0c0698a910f02f6e7aa95dbe.s3tc.ctex"]
+dest_files=["res://.godot/imported/nene_7.png-10e45b2f0c0698a910f02f6e7aa95dbe.s3tc.ctex", "res://.godot/imported/nene_7.png-10e45b2f0c0698a910f02f6e7aa95dbe.etc2.ctex"]
 
 [params]
 

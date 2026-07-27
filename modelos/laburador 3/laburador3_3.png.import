@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwd1xhrx3oeya"
 path.s3tc="res://.godot/imported/laburador3_3.png-efe7266a953a75a00c14db51677408d1.s3tc.ctex"
+path.etc2="res://.godot/imported/laburador3_3.png-efe7266a953a75a00c14db51677408d1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/laburador 3/laburador3_3.png"
-dest_files=["res://.godot/imported/laburador3_3.png-efe7266a953a75a00c14db51677408d1.s3tc.ctex"]
+dest_files=["res://.godot/imported/laburador3_3.png-efe7266a953a75a00c14db51677408d1.s3tc.ctex", "res://.godot/imported/laburador3_3.png-efe7266a953a75a00c14db51677408d1.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://uwny7xrs5ckl"
 path.s3tc="res://.godot/imported/uruguaiguinge_6.png-45a06a19a640bf1e7b2481f53a960b1c.s3tc.ctex"
+path.etc2="res://.godot/imported/uruguaiguinge_6.png-45a06a19a640bf1e7b2481f53a960b1c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/animañas/urutau/uruguaiguinge_6.png"
-dest_files=["res://.godot/imported/uruguaiguinge_6.png-45a06a19a640bf1e7b2481f53a960b1c.s3tc.ctex"]
+dest_files=["res://.godot/imported/uruguaiguinge_6.png-45a06a19a640bf1e7b2481f53a960b1c.s3tc.ctex", "res://.godot/imported/uruguaiguinge_6.png-45a06a19a640bf1e7b2481f53a960b1c.etc2.ctex"]
 
 [params]
 

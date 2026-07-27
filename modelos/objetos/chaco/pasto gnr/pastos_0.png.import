@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr6i0pfa4k2pb"
 path.s3tc="res://.godot/imported/pastos_0.png-a7bfb4c290491945282bbccf4991d476.s3tc.ctex"
+path.etc2="res://.godot/imported/pastos_0.png-a7bfb4c290491945282bbccf4991d476.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/chaco/pasto gnr/pastos_0.png"
-dest_files=["res://.godot/imported/pastos_0.png-a7bfb4c290491945282bbccf4991d476.s3tc.ctex"]
+dest_files=["res://.godot/imported/pastos_0.png-a7bfb4c290491945282bbccf4991d476.s3tc.ctex", "res://.godot/imported/pastos_0.png-a7bfb4c290491945282bbccf4991d476.etc2.ctex"]
 
 [params]
 

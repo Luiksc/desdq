@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct81fdi2duwlx"
 path.s3tc="res://.godot/imported/arbol2_1.png-2425dcf6a87b7e9121b3fc3659acc4b2.s3tc.ctex"
+path.etc2="res://.godot/imported/arbol2_1.png-2425dcf6a87b7e9121b3fc3659acc4b2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/Alto parana/arbul3/arbol2_1.png"
-dest_files=["res://.godot/imported/arbol2_1.png-2425dcf6a87b7e9121b3fc3659acc4b2.s3tc.ctex"]
+dest_files=["res://.godot/imported/arbol2_1.png-2425dcf6a87b7e9121b3fc3659acc4b2.s3tc.ctex", "res://.godot/imported/arbol2_1.png-2425dcf6a87b7e9121b3fc3659acc4b2.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwd36sjcj3wrh"
 path.s3tc="res://.godot/imported/Emilia sentada_9.png-e9afde82d1b7fd5e3639f76532607f4f.s3tc.ctex"
+path.etc2="res://.godot/imported/Emilia sentada_9.png-e9afde82d1b7fd5e3639f76532607f4f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Emilia Ortiz/Emilia sentada_9.png"
-dest_files=["res://.godot/imported/Emilia sentada_9.png-e9afde82d1b7fd5e3639f76532607f4f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Emilia sentada_9.png-e9afde82d1b7fd5e3639f76532607f4f.s3tc.ctex", "res://.godot/imported/Emilia sentada_9.png-e9afde82d1b7fd5e3639f76532607f4f.etc2.ctex"]
 
 [params]
 

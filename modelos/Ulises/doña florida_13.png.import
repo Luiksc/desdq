@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci2ci7wnkksp2"
 path.s3tc="res://.godot/imported/doña florida_13.png-c28a264f52fd5b248c9d883470e2a5c4.s3tc.ctex"
+path.etc2="res://.godot/imported/doña florida_13.png-c28a264f52fd5b248c9d883470e2a5c4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Ulises/doña florida_13.png"
-dest_files=["res://.godot/imported/doña florida_13.png-c28a264f52fd5b248c9d883470e2a5c4.s3tc.ctex"]
+dest_files=["res://.godot/imported/doña florida_13.png-c28a264f52fd5b248c9d883470e2a5c4.s3tc.ctex", "res://.godot/imported/doña florida_13.png-c28a264f52fd5b248c9d883470e2a5c4.etc2.ctex"]
 
 [params]
 

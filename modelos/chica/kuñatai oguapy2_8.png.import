@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://nniufy8eihse"
 path.s3tc="res://.godot/imported/kuñatai oguapy2_8.png-58135721b1f3db4d123466830ee6f9c4.s3tc.ctex"
+path.etc2="res://.godot/imported/kuñatai oguapy2_8.png-58135721b1f3db4d123466830ee6f9c4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/chica/kuñatai oguapy2_8.png"
-dest_files=["res://.godot/imported/kuñatai oguapy2_8.png-58135721b1f3db4d123466830ee6f9c4.s3tc.ctex"]
+dest_files=["res://.godot/imported/kuñatai oguapy2_8.png-58135721b1f3db4d123466830ee6f9c4.s3tc.ctex", "res://.godot/imported/kuñatai oguapy2_8.png-58135721b1f3db4d123466830ee6f9c4.etc2.ctex"]
 
 [params]
 

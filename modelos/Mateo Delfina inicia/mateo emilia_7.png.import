@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://xqy1ytb2enlp"
 path.s3tc="res://.godot/imported/mateo emilia_7.png-70499f6246e4433914545fbd8a5a97b1.s3tc.ctex"
+path.etc2="res://.godot/imported/mateo emilia_7.png-70499f6246e4433914545fbd8a5a97b1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Mateo Delfina inicia/mateo emilia_7.png"
-dest_files=["res://.godot/imported/mateo emilia_7.png-70499f6246e4433914545fbd8a5a97b1.s3tc.ctex"]
+dest_files=["res://.godot/imported/mateo emilia_7.png-70499f6246e4433914545fbd8a5a97b1.s3tc.ctex", "res://.godot/imported/mateo emilia_7.png-70499f6246e4433914545fbd8a5a97b1.etc2.ctex"]
 
 [params]
 

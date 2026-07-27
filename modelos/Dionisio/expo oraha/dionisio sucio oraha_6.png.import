@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2hsmqqgukoy8"
 path.s3tc="res://.godot/imported/dionisio sucio oraha_6.png-f85bf708dc3f2a1059a74536fd0a80a3.s3tc.ctex"
+path.etc2="res://.godot/imported/dionisio sucio oraha_6.png-f85bf708dc3f2a1059a74536fd0a80a3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Dionisio/expo oraha/dionisio sucio oraha_6.png"
-dest_files=["res://.godot/imported/dionisio sucio oraha_6.png-f85bf708dc3f2a1059a74536fd0a80a3.s3tc.ctex"]
+dest_files=["res://.godot/imported/dionisio sucio oraha_6.png-f85bf708dc3f2a1059a74536fd0a80a3.s3tc.ctex", "res://.godot/imported/dionisio sucio oraha_6.png-f85bf708dc3f2a1059a74536fd0a80a3.etc2.ctex"]
 
 [params]
 

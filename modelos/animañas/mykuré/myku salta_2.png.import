@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4fgmd47732x"
 path.s3tc="res://.godot/imported/myku salta_2.png-68350327b7e6f52676e6845cf585c3ab.s3tc.ctex"
+path.etc2="res://.godot/imported/myku salta_2.png-68350327b7e6f52676e6845cf585c3ab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/animañas/mykuré/myku salta_2.png"
-dest_files=["res://.godot/imported/myku salta_2.png-68350327b7e6f52676e6845cf585c3ab.s3tc.ctex"]
+dest_files=["res://.godot/imported/myku salta_2.png-68350327b7e6f52676e6845cf585c3ab.s3tc.ctex", "res://.godot/imported/myku salta_2.png-68350327b7e6f52676e6845cf585c3ab.etc2.ctex"]
 
 [params]
 

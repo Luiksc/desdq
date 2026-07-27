@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b00kka2c0jov2"
 path.s3tc="res://.godot/imported/cama_1.png-9794060064e819626e0c856054b74fd4.s3tc.ctex"
+path.etc2="res://.godot/imported/cama_1.png-9794060064e819626e0c856054b74fd4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://modelos/objetos/chaco/cama/cama_1.png"
-dest_files=["res://.godot/imported/cama_1.png-9794060064e819626e0c856054b74fd4.s3tc.ctex"]
+dest_files=["res://.godot/imported/cama_1.png-9794060064e819626e0c856054b74fd4.s3tc.ctex", "res://.godot/imported/cama_1.png-9794060064e819626e0c856054b74fd4.etc2.ctex"]
 
 [params]
 

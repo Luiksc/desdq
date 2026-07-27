@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwctb388fxgvg"
 path.s3tc="res://.godot/imported/helecho_0.png-b9bf5b3d0637f3ccc6f8a1802246d383.s3tc.ctex"
+path.etc2="res://.godot/imported/helecho_0.png-b9bf5b3d0637f3ccc6f8a1802246d383.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/Alto parana/arbusto/helecho_0.png"
-dest_files=["res://.godot/imported/helecho_0.png-b9bf5b3d0637f3ccc6f8a1802246d383.s3tc.ctex"]
+dest_files=["res://.godot/imported/helecho_0.png-b9bf5b3d0637f3ccc6f8a1802246d383.s3tc.ctex", "res://.godot/imported/helecho_0.png-b9bf5b3d0637f3ccc6f8a1802246d383.etc2.ctex"]
 
 [params]
 

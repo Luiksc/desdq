@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2va8okvxf70m"
 path.s3tc="res://.godot/imported/el mensu_1.png-912d97d74b382e5937408c5fe9b0b72e.s3tc.ctex"
+path.etc2="res://.godot/imported/el mensu_1.png-912d97d74b382e5937408c5fe9b0b72e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/caso el mensu/el mensu_1.png"
-dest_files=["res://.godot/imported/el mensu_1.png-912d97d74b382e5937408c5fe9b0b72e.s3tc.ctex"]
+dest_files=["res://.godot/imported/el mensu_1.png-912d97d74b382e5937408c5fe9b0b72e.s3tc.ctex", "res://.godot/imported/el mensu_1.png-912d97d74b382e5937408c5fe9b0b72e.etc2.ctex"]
 
 [params]
 

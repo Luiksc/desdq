@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://8hwsfc0vv3ie"
 path.s3tc="res://.godot/imported/Guitarra_1.png-0d0224aa849d1605b7be48f4644d2566.s3tc.ctex"
+path.etc2="res://.godot/imported/Guitarra_1.png-0d0224aa849d1605b7be48f4644d2566.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://modelos/objetos/chaco/instrumentos/Guitarra_1.png"
-dest_files=["res://.godot/imported/Guitarra_1.png-0d0224aa849d1605b7be48f4644d2566.s3tc.ctex"]
+dest_files=["res://.godot/imported/Guitarra_1.png-0d0224aa849d1605b7be48f4644d2566.s3tc.ctex", "res://.godot/imported/Guitarra_1.png-0d0224aa849d1605b7be48f4644d2566.etc2.ctex"]
 
 [params]
 
