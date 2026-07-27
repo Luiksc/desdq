@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="Relatos Ocultos"
+config/version="0.0"
 run/main_scene="res://UI/menutscn.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.115193, 0.134025, 0.219034, 1)
-config/icon="res://icon.svg"
+config/icon="res://relatos ocultos logo.png"
 addons/rakugo/game_version=1.0
 addons/rakugo/narrator_name="narrator"
 addons/rakugo/debug=false
@@ -28,7 +29,7 @@ MusicaGlobal="*res://audios/musica_global.gd"
 
 [display]
 
-window/size/mode=3
+window/size/mode=2
 window/stretch/mode="viewport"
 
 [docks]
