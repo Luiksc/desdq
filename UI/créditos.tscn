@@ -1611,6 +1611,229 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s1aet")
 
+[sub_resource type="Animation" id="Animation_lo2un"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(35.5455, 0.32495, -68.6525)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.19248, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("base/extremidades2/brazoderecha2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.747014, 0.441861, 1.23164)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("base/extremidades2/brazoderecha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.4875, 1.4875, -0.3125)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("base/extremidades2/brazoizquierda2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.22015, -0.310788, 1.28274)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("base/extremidades2/retyma3:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.434852, -0.14006, 1.63756)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("base/extremidades2/retyma3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.45625, 0.74375, 0.215625)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("base/extremidades2/retyma4:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00607971, 0.0870551, 1.59671)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("base/extremidades2/retyma4:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.33125, 0.725, -0.165625)]
+}
+
+[sub_resource type="Animation" id="Animation_lmitl"]
+resource_name = "fina"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(35.5455, 0.32495, -68.6525)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.19248, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("base/extremidades2/brazoderecha2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.747014, 0.441861, 1.23164)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("base/extremidades2/brazoderecha2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.4875, 1.4875, -0.3125)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("base/extremidades2/brazoizquierda2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.22015, -0.310788, 1.28274)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("base/extremidades2/retyma3:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.434852, -0.14006, 1.63756)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("base/extremidades2/retyma3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.45625, 0.74375, 0.215625)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("base/extremidades2/retyma4:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00607971, 0.0870551, 1.59671)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("base/extremidades2/retyma4:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.33125, 0.725, -0.165625)]
+}
+
 [sub_resource type="Animation" id="Animation_ic8j2"]
 resource_name = "oguapy"
 length = 5.95833
@@ -1828,229 +2051,6 @@ tracks/14/path = NodePath("base/extremidades2/brazoizquierda2/antebrazo")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = PackedFloat32Array(0, 1, 0.115337, -0.280765, -0.220989, 0.92684)
-
-[sub_resource type="Animation" id="Animation_lmitl"]
-resource_name = "fina"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(35.5455, 0.32495, -68.6525)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 2.19248, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("base/extremidades2/brazoderecha2:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.747014, 0.441861, 1.23164)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("base/extremidades2/brazoderecha2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.4875, 1.4875, -0.3125)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("base/extremidades2/brazoizquierda2:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1.22015, -0.310788, 1.28274)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("base/extremidades2/retyma3:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.434852, -0.14006, 1.63756)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("base/extremidades2/retyma3:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.45625, 0.74375, 0.215625)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("base/extremidades2/retyma4:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.00607971, 0.0870551, 1.59671)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("base/extremidades2/retyma4:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.33125, 0.725, -0.165625)]
-}
-
-[sub_resource type="Animation" id="Animation_lo2un"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(35.5455, 0.32495, -68.6525)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 2.19248, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("base/extremidades2/brazoderecha2:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.747014, 0.441861, 1.23164)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("base/extremidades2/brazoderecha2:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.4875, 1.4875, -0.3125)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("base/extremidades2/brazoizquierda2:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1.22015, -0.310788, 1.28274)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("base/extremidades2/retyma3:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.434852, -0.14006, 1.63756)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("base/extremidades2/retyma3:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.45625, 0.74375, 0.215625)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("base/extremidades2/retyma4:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.00607971, 0.0870551, 1.59671)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("base/extremidades2/retyma4:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.33125, 0.725, -0.165625)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_78q6g"]
 _data = {
@@ -2828,7 +2828,7 @@ libraries = {
 }
 
 [node name="don menu" type="Node3D" parent="."]
-transform = Transform3D(-0.582407, 0, 0.812898, 0, 1, 0, -0.812898, 0, -0.582407, 35.5455, 0.32495, -68.6525)
+transform = Transform3D(-0.582405, 0, 0.812899, 0, 1, 0, -0.812899, 0, -0.582405, 35.5455, 0.32495, -68.6525)
 
 [node name="base" type="Node3D" parent="don menu"]
 transform = Transform3D(-0.0872378, 0.0112519, 0.996124, -0.0146644, 0.999813, -0.0125778, -0.99608, -0.0157049, -0.0870565, 7.22572, 0.6625, 2.51731)
@@ -2837,7 +2837,7 @@ transform = Transform3D(-0.0872378, 0.0112519, 0.996124, -0.0146644, 0.999813, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159931, -0.90625, 0.0588301)
 
 [node name="retyma3" type="Node3D" parent="don menu/base/extremidades2"]
-transform = Transform3D(-0.124744, -0.984078, -0.12661, 0.904912, -0.0605081, -0.421276, 0.406908, -0.167123, 0.898051, -0.45625, 0.74375, 0.215625)
+transform = Transform3D(-0.124741, -0.984078, -0.12661, 0.904912, -0.0605052, -0.421276, 0.406908, -0.167121, 0.898051, -0.45625, 0.74375, 0.215625)
 
 [node name="jyva 2" type="MeshInstance3D" parent="don menu/base/extremidades2/retyma3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0448987, 0.0325481, 0.0127631)
@@ -2855,7 +2855,7 @@ mesh = SubResource("ArrayMesh_pamws")
 skeleton = NodePath("")
 
 [node name="retyma4" type="Node3D" parent="don menu/base/extremidades2"]
-transform = Transform3D(-0.0263427, -0.995865, 0.0869436, 0.999646, -0.0259119, 0.00607967, -0.00380165, 0.0870729, 0.996195, -0.33125, 0.725, -0.165625)
+transform = Transform3D(-0.026341, -0.995865, 0.0869436, 0.999646, -0.0259103, 0.00607968, -0.0038018, 0.0870729, 0.996195, -0.33125, 0.725, -0.165625)
 
 [node name="jyva 32" type="MeshInstance3D" parent="don menu/base/extremidades2/retyma4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0100131, 0.201043, -0.0114394)
@@ -2873,7 +2873,7 @@ mesh = SubResource("ArrayMesh_7vtei")
 skeleton = NodePath("")
 
 [node name="brazoizquierda2" type="Node3D" parent="don menu/base/extremidades2"]
-transform = Transform3D(-0.00488463, -0.994456, -0.105047, 0.329351, 0.0975871, -0.939151, 0.944195, -0.0391847, 0.327048, -0.45, 1.5625, 0.35625)
+transform = Transform3D(-0.00488821, -0.994456, -0.105047, 0.329352, 0.0975861, -0.939151, 0.944195, -0.0391882, 0.327049, -0.45, 1.5625, 0.35625)
 
 [node name="jyva 1" type="MeshInstance3D" parent="don menu/base/extremidades2/brazoizquierda2"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, -0.130029, 0.987672, 0.0871557, 0.0113761, -0.0864101, 0.996195, -0.0179825, 0.15504, 0.0522356)

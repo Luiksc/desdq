@@ -1,4 +1,4 @@
-[gd_scene load_steps=502 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=503 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -56,6 +56,7 @@
 [ext_resource type="PackedScene" uid="uid://x65opk40gneo" path="res://modelos/objetos/chaco/algarrobo/algarrobo.glb" id="48_crn65"]
 [ext_resource type="FontFile" uid="uid://2efbjbt4sdx" path="res://UI/fuentes/Upheaval/upheavtt.ttf" id="51_3knho"]
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="51_c37c5"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="53_iwtx3"]
 [ext_resource type="Texture2D" uid="uid://b6buqpdkhckhs" path="res://modelos/Ulises/Ulises_0.png" id="54_c145s"]
 [ext_resource type="Texture2D" uid="uid://boumkucpslgiu" path="res://modelos/Ulises/Ulises_1.png" id="55_a8bph"]
 [ext_resource type="Texture2D" uid="uid://uvb1lekga6sg" path="res://modelos/Ulises/Ulises_2.png" id="56_8ivgc"]
@@ -8753,6 +8754,8 @@ grow_vertical = 0
 text = "[E] PARA LLEVAR"
 label_settings = SubResource("LabelSettings_1pjuo")
 metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" parent="Control" instance=ExtResource("53_iwtx3")]
 
 [node name="Interactuar3" type="Label" parent="Control"]
 layout_mode = 1

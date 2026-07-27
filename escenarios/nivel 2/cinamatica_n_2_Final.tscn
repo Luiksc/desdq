@@ -6205,6 +6205,7 @@ layout_mode = 1
 
 [node name="seguir" type="Label" parent="Control"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 395.0
 offset_top = 566.0
 offset_right = 773.0
