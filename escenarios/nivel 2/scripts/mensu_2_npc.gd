@@ -12,7 +12,7 @@ var indice_ida = 0
 var indice_vuelta=0
 var gravedad := 100
 
-var velocidad :float = 6
+var velocidad :float = 2
 
 enum estado{
 	ou,
@@ -75,7 +75,6 @@ func _physics_process(delta: float) -> void:
 			var angulo = atan2(direccion.x,-direccion.z)
 			rotation.y = lerp_angle(rotation.y, angulo, 2 * delta)
 			direccion = direccion.normalized()
-			
 			var diferencia = abs(angle_difference(rotation.y, angulo))
 	
 			if diferencia < 0.15:

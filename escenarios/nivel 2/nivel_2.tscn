@@ -1,4 +1,4 @@
-[gd_scene load_steps=503 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=502 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -56,7 +56,6 @@
 [ext_resource type="PackedScene" uid="uid://x65opk40gneo" path="res://modelos/objetos/chaco/algarrobo/algarrobo.glb" id="48_crn65"]
 [ext_resource type="FontFile" uid="uid://2efbjbt4sdx" path="res://UI/fuentes/Upheaval/upheavtt.ttf" id="51_3knho"]
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="51_c37c5"]
-[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="53_iwtx3"]
 [ext_resource type="Texture2D" uid="uid://b6buqpdkhckhs" path="res://modelos/Ulises/Ulises_0.png" id="54_c145s"]
 [ext_resource type="Texture2D" uid="uid://boumkucpslgiu" path="res://modelos/Ulises/Ulises_1.png" id="55_a8bph"]
 [ext_resource type="Texture2D" uid="uid://uvb1lekga6sg" path="res://modelos/Ulises/Ulises_2.png" id="56_8ivgc"]
@@ -114,6 +113,238 @@
 [ext_resource type="Texture2D" uid="uid://cxbjnsqnl2vqo" path="res://modelos/laburador 3/laburador3_16.png" id="111_shwel"]
 [ext_resource type="Texture2D" uid="uid://dsjsnta0i2cto" path="res://modelos/laburador 3/laburador3_17.png" id="112_hk850"]
 [ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="113_17jg1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o0fk5"]
+font = ExtResource("6_84008")
+font_size = 32
+outline_size = 11
+outline_color = Color(0.00392157, 0.027451, 0.027451, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3pkkh"]
+font = ExtResource("6_84008")
+font_size = 40
+font_color = Color(1, 0, 0.0166664, 1)
+outline_size = 11
+outline_color = Color(0.00392157, 0.027451, 0.027451, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1pjuo"]
+font = ExtResource("6_84008")
+font_size = 24
+
+[sub_resource type="Animation" id="Animation_exjlt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1289)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_lqt2t"]
+resource_name = "entrafa"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -647), Vector2(5, 658)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1289), Vector2(5, -4)]
+}
+
+[sub_resource type="Animation" id="Animation_4ad2x"]
+resource_name = "opyta"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, -9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_kl6ug"]
+resource_name = "salida"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 648), Vector2(0, -653)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1301)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alwvl"]
+_data = {
+"RESET": SubResource("Animation_exjlt"),
+"entrafa": SubResource("Animation_lqt2t"),
+"opyta": SubResource("Animation_4ad2x"),
+"salida": SubResource("Animation_kl6ug")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_04quh"]
+font = ExtResource("6_84008")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_57x23"]
+font = ExtResource("51_3knho")
+font_size = 100
+font_color = Color(1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_e2rqj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nooox"]
+resource_name = "aparece"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ukv80"]
+resource_name = "desaparece"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1s8oi"]
+_data = {
+"RESET": SubResource("Animation_e2rqj"),
+"aparece": SubResource("Animation_nooox"),
+"desaparece": SubResource("Animation_ukv80")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlxe7"]
+atlas = ExtResource("113_17jg1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27jxw"]
+atlas = ExtResource("113_17jg1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6kca7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlxe7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27jxw")
+}],
+"loop": true,
+"name": &"interactura",
+"speed": 2.0
+}]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xgu5u"]
 radius = 0.7
@@ -2365,238 +2596,6 @@ _data = {
 "RESET": SubResource("Animation_i424w"),
 "flamea": SubResource("Animation_0vhrp")
 }
-
-[sub_resource type="LabelSettings" id="LabelSettings_o0fk5"]
-font = ExtResource("6_84008")
-font_size = 32
-outline_size = 11
-outline_color = Color(0.00392157, 0.027451, 0.027451, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_3pkkh"]
-font = ExtResource("6_84008")
-font_size = 40
-font_color = Color(1, 0, 0.0166664, 1)
-outline_size = 11
-outline_color = Color(0.00392157, 0.027451, 0.027451, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_1pjuo"]
-font = ExtResource("6_84008")
-font_size = 24
-
-[sub_resource type="Animation" id="Animation_exjlt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -647)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -1289)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ColorRect:size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1182, 671)]
-}
-
-[sub_resource type="Animation" id="Animation_lqt2t"]
-resource_name = "entrafa"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -647), Vector2(5, 658)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -1289), Vector2(5, -4)]
-}
-
-[sub_resource type="Animation" id="Animation_4ad2x"]
-resource_name = "opyta"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(7, -9)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1182, 671)]
-}
-
-[sub_resource type="Animation" id="Animation_kl6ug"]
-resource_name = "salida"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 648), Vector2(0, -653)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, -1301)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_alwvl"]
-_data = {
-"RESET": SubResource("Animation_exjlt"),
-"entrafa": SubResource("Animation_lqt2t"),
-"opyta": SubResource("Animation_4ad2x"),
-"salida": SubResource("Animation_kl6ug")
-}
-
-[sub_resource type="LabelSettings" id="LabelSettings_04quh"]
-font = ExtResource("6_84008")
-font_size = 64
-
-[sub_resource type="LabelSettings" id="LabelSettings_57x23"]
-font = ExtResource("51_3knho")
-font_size = 100
-font_color = Color(1, 1, 1, 0)
-
-[sub_resource type="Animation" id="Animation_e2rqj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_nooox"]
-resource_name = "aparece"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ukv80"]
-resource_name = "desaparece"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1s8oi"]
-_data = {
-"RESET": SubResource("Animation_e2rqj"),
-"aparece": SubResource("Animation_nooox"),
-"desaparece": SubResource("Animation_ukv80")
-}
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hlxe7"]
-atlas = ExtResource("113_17jg1")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_27jxw"]
-atlas = ExtResource("113_17jg1")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6kca7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hlxe7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_27jxw")
-}],
-"loop": true,
-"name": &"interactura",
-"speed": 2.0
-}]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cs6pq"]
 resource_name = "material_0"
@@ -5682,6 +5681,172 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ItemList" type="ItemList" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -266.0
+offset_bottom = 150.0
+grow_horizontal = 0
+mouse_filter = 2
+item_count = 3
+item_0/text = "-llevar sacos de yerba mate. 0/3"
+item_1/text = "-poner a secar  la yerba"
+item_2/text = "-Comprar harina"
+
+[node name="Interactuar" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 345.0
+offset_top = 499.0
+offset_right = 828.0
+offset_bottom = 579.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[E] PARA 
+INTERACTURAR"
+label_settings = SubResource("LabelSettings_o0fk5")
+horizontal_alignment = 1
+
+[node name="espantar" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 351.0
+offset_top = 302.0
+offset_right = 835.0
+offset_bottom = 369.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[E] PARA ESPANTAR"
+label_settings = SubResource("LabelSettings_3pkkh")
+horizontal_alignment = 1
+
+[node name="Interactuar2" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.355903
+anchor_top = 0.791667
+anchor_right = 0.655382
+anchor_bottom = 0.868827
+offset_left = 73.0
+offset_right = -73.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[E] PARA LLEVAR"
+label_settings = SubResource("LabelSettings_1pjuo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Interactuar3" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.355903
+anchor_top = 0.791667
+anchor_right = 0.655382
+anchor_bottom = 0.868827
+offset_left = 73.0
+offset_right = -73.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "[E] PARA BAJAR
+"
+label_settings = SubResource("LabelSettings_1pjuo")
+metadata/_edit_use_anchors_ = true
+
+[node name="ã" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ã"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.921296
+anchor_right = 1.03472
+anchor_bottom = 1.9213
+offset_top = -1244.0
+offset_bottom = -1244.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("51_c37c5")
+
+[node name="ColorRect" type="ColorRect" parent="Control/ã"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1289.0
+offset_right = 13.0
+offset_bottom = -1266.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.141176, 0.278431, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/ã"]
+libraries = {
+"": SubResource("AnimationLibrary_alwvl")
+}
+
+[node name="gameover" type="Label" parent="Control"]
+layout_mode = 0
+anchor_left = 0.213542
+anchor_top = 0.334877
+anchor_right = 0.769097
+anchor_bottom = 0.478395
+text = "HE'ÚMA ÚLE"
+label_settings = SubResource("LabelSettings_04quh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Data" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 210.0
+offset_right = 1056.0
+offset_bottom = 393.0
+text = "TAKURU PUKU
+3 DÍAS DE TRABAJO"
+label_settings = SubResource("LabelSettings_57x23")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Data"]
+libraries = {
+"": SubResource("AnimationLibrary_1s8oi")
+}
+
+[node name="Interac" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(582, 488)
+scale = Vector2(3.28125, 2.875)
+sprite_frames = SubResource("SpriteFrames_6kca7")
+animation = &"interactura"
+
 [node name="mensu2" parent="." node_paths=PackedStringArray("outa", "ohota") instance=ExtResource("2_uajcu")]
 transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 27, 0.727514, -74)
 outa = NodePath("../waypoints mensu2/Marker3D")
@@ -8680,174 +8845,6 @@ spot_angle = 72.7761
 libraries = {
 "": SubResource("AnimationLibrary_tpjne")
 }
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="ItemList" type="ItemList" parent="Control"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -266.0
-offset_bottom = 150.0
-grow_horizontal = 0
-mouse_filter = 2
-item_count = 3
-item_0/text = "-llevar sacos de yerba mate. 0/3"
-item_1/text = "-poner a secar  la yerba"
-item_2/text = "-Comprar harina"
-
-[node name="Interactuar" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 345.0
-offset_top = 499.0
-offset_right = 828.0
-offset_bottom = 579.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "[E] PARA 
-INTERACTURAR"
-label_settings = SubResource("LabelSettings_o0fk5")
-horizontal_alignment = 1
-
-[node name="espantar" type="Label" parent="Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 351.0
-offset_top = 302.0
-offset_right = 835.0
-offset_bottom = 369.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "[E] PARA ESPANTAR"
-label_settings = SubResource("LabelSettings_3pkkh")
-horizontal_alignment = 1
-
-[node name="Interactuar2" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.355903
-anchor_top = 0.791667
-anchor_right = 0.655382
-anchor_bottom = 0.868827
-offset_left = 73.0
-offset_right = -73.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "[E] PARA LLEVAR"
-label_settings = SubResource("LabelSettings_1pjuo")
-metadata/_edit_use_anchors_ = true
-
-[node name="CanvasLayer" parent="Control" instance=ExtResource("53_iwtx3")]
-
-[node name="Interactuar3" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.355903
-anchor_top = 0.791667
-anchor_right = 0.655382
-anchor_bottom = 0.868827
-offset_left = 73.0
-offset_right = -73.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "[E] PARA BAJAR
-"
-label_settings = SubResource("LabelSettings_1pjuo")
-metadata/_edit_use_anchors_ = true
-
-[node name="ã" type="Control" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -9.0
-offset_right = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="Control/ã"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.921296
-anchor_right = 1.03472
-anchor_bottom = 1.9213
-offset_top = -1244.0
-offset_bottom = -1244.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("51_c37c5")
-
-[node name="ColorRect" type="ColorRect" parent="Control/ã"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -1289.0
-offset_right = 13.0
-offset_bottom = -1266.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.105882, 0.141176, 0.278431, 1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/ã"]
-libraries = {
-"": SubResource("AnimationLibrary_alwvl")
-}
-
-[node name="gameover" type="Label" parent="Control"]
-layout_mode = 0
-anchor_left = 0.213542
-anchor_top = 0.334877
-anchor_right = 0.769097
-anchor_bottom = 0.478395
-text = "HE'ÚMA ÚLE"
-label_settings = SubResource("LabelSettings_04quh")
-metadata/_edit_use_anchors_ = true
-
-[node name="Data" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 121.0
-offset_top = 210.0
-offset_right = 1056.0
-offset_bottom = 393.0
-text = "TAKURU PUKU
-3 DÍAS DE TRABAJO"
-label_settings = SubResource("LabelSettings_57x23")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Data"]
-libraries = {
-"": SubResource("AnimationLibrary_1s8oi")
-}
-
-[node name="Interac" type="AnimatedSprite2D" parent="Control"]
-texture_filter = 1
-position = Vector2(582, 488)
-scale = Vector2(3.28125, 2.875)
-sprite_frames = SubResource("SpriteFrames_6kca7")
-animation = &"interactura"
 
 [node name="sorpresa" parent="." instance=ExtResource("28_jobur")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.428645, 26.0026, 25.3008)

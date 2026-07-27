@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=4 uid="uid://fl2k1gdo4xpy"]
+[gd_scene load_steps=140 format=4 uid="uid://fl2k1gdo4xpy"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematucas/cinematica_mama.gd" id="1_4e7c8"]
 [ext_resource type="PackedScene" uid="uid://cw182qc1s15xy" path="res://modelos/objetos/chaco/ÓGA+/casa verde dentro.glb" id="1_mil2k"]
@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://f42qnkoos1s5" path="res://modelos/karau/karau_12.png" id="27_els16"]
 [ext_resource type="Texture2D" uid="uid://daei6783y1l02" path="res://modelos/karau/karau_13.png" id="28_aqxk0"]
 [ext_resource type="Texture2D" uid="uid://d2alrogo6x535" path="res://modelos/karau/karau_14.png" id="29_wpja5"]
-[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="30_ovy07"]
+[ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="30_xpwsk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0mpw5"]
 resource_name = "material_1"
@@ -1655,6 +1655,137 @@ _data = {
 "repira": SubResource("Animation_7m0ia")
 }
 
+[sub_resource type="Animation" id="Animation_exjlt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1289)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_lqt2t"]
+resource_name = "entrafa"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -647), Vector2(3, 658)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1289), Vector2(3, -4)]
+}
+
+[sub_resource type="Animation" id="Animation_4ad2x"]
+resource_name = "opyta"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-17, 20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_kl6ug"]
+resource_name = "salida"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 648), Vector2(0, -653)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1301)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alwvl"]
+_data = {
+"RESET": SubResource("Animation_exjlt"),
+"entrafa": SubResource("Animation_lqt2t"),
+"opyta": SubResource("Animation_4ad2x"),
+"salida": SubResource("Animation_kl6ug")
+}
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_4e7c8")
 
@@ -1946,5 +2077,46 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ã" parent="Control" instance=ExtResource("30_ovy07")]
+[node name="ã" type="Control" parent="Control"]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -13.0
+offset_right = 7.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ã"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.921296
+anchor_right = 1.03472
+anchor_bottom = 1.9213
+offset_top = -1244.0
+offset_bottom = -1244.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("30_xpwsk")
+
+[node name="ColorRect" type="ColorRect" parent="Control/ã"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1289.0
+offset_right = 13.0
+offset_bottom = -1266.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.141176, 0.278431, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/ã"]
+libraries = {
+"": SubResource("AnimationLibrary_alwvl")
+}
