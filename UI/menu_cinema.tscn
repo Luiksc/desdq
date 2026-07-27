@@ -603,7 +603,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -0.682947, 0)]
+"values": [Vector3(-1.48877, -0.788889, 0.261799)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2723,7 +2723,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.746557, 0, -0.665322, 0, 1, 0, 0.665322, 0, 0.746557, 64.4992, 2.97646, -86.0932)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.775716, 0, -0.631082, 0, 1, 0, 0.631082, 0, 0.775716, 29.6571, 2.19152, -72.2312)
+transform = Transform3D(0.863657, 0.500715, -0.0581412, 0.0212072, 0.0791465, 0.996637, 0.503633, -0.861986, 0.0577367, 29.6571, 2.19152, -72.2312)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
 libraries = {
@@ -2884,7 +2884,7 @@ libraries = {
 }
 
 [node name="caso_mateo" type="Node3D" parent="."]
-transform = Transform3D(-1.22985, 0.710055, -3.10375e-08, 0, -6.2075e-08, -1.42011, -0.710055, -1.22985, 5.37585e-08, 28.8321, 0.252111, -72.9457)
+transform = Transform3D(-1.22985, 0.710056, -3.10375e-08, 0, -6.2075e-08, -1.42011, -0.710056, -1.22985, 5.37585e-08, 28.8321, 0.252111, -72.9457)
 
 [node name="hoja2" type="Node3D" parent="caso_mateo"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -1.77636e-15, 0, 1, -0.0600872, -0.221375, 4.47035e-08)
@@ -2911,7 +2911,7 @@ libraries = {
 }
 
 [node name="caso_mensu" type="Node3D" parent="."]
-transform = Transform3D(-1.22976, 0.709997, -3.10349e-08, 0, -6.20702e-08, -1.42, -0.709997, -1.22976, 5.37544e-08, 30.0531, 0.252, -72.2374)
+transform = Transform3D(-1.22976, 0.709995, -3.10349e-08, 0, -6.20702e-08, -1.42, -0.709995, -1.22976, 5.37545e-08, 30.0531, 0.252, -72.2374)
 
 [node name="hoja2" type="Node3D" parent="caso_mensu"]
 transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -7.10543e-15, 1.77636e-15, 3.55271e-15, 1, 0.0311413, -0.211327, 4.47035e-08)
@@ -2938,7 +2938,7 @@ libraries = {
 }
 
 [node name="caso_karau" type="Node3D" parent="."]
-transform = Transform3D(-1.22976, 0.709997, -3.10349e-08, 0, -6.20702e-08, -1.42, -0.709997, -1.22976, 5.37544e-08, 31.1271, 0.252, -71.7351)
+transform = Transform3D(-1.22976, 0.709995, -3.10349e-08, 0, -6.20702e-08, -1.42, -0.709995, -1.22976, 5.37545e-08, 31.1271, 0.252, -71.7351)
 
 [node name="hoja2" type="Node3D" parent="caso_karau"]
 transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -7.10543e-15, 1.77636e-15, 3.55271e-15, 1, -0.00922203, -0.289482, 4.47035e-08)
