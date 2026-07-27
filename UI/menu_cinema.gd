@@ -9,11 +9,6 @@ extends Node3D
 @onready var anima_libro2 = $caso_mensu/AnimationPlayer
 @onready var anima_libro3 = $caso_karau/AnimationPlayer
 
-#---niveles----
-@onready var n1 = preload("res://escenarios/n_1_cinematica.tscn")
-@onready var n2 = preload("res://escenarios/nivel 2/cinematicas/1r_cinamatica_n_2.tscn")
-@onready var n3 = preload("res://escenarios/nivel3/cinematucas/mama.tscn")
-
 
 @onready var transicion = $"Control/ã/AnimationPlayer"
 @onready var anima_camara = $Camera3D/AnimationPlayer
@@ -50,17 +45,27 @@ func _process(delta: float) -> void:
 			await anima_camara.animation_finished
 			transicion.play("entrafa")
 			await transicion.animation_finished
-			get_tree().change_scene_to_file(n1)
+			get_tree().change_scene_to_file("res://escenarios/n_1_cinematica.tscn")
 	if clicki2:
 		if Input.is_action_just_pressed("clicki"):
 			clicki2=false
 			anima_libro2.play("abre")
 			await anima_libro2.animation_finished
-			anima_camara.play("mateo_acerca")
+			anima_camara.play("mensu_acerca")
 			await anima_camara.animation_finished
 			transicion.play("entrafa")
 			await transicion.animation_finished
-			get_tree().change_scene_to_file(n2)
+			get_tree().change_scene_to_file("res://escenarios/nivel 2/cinematicas/1r_cinamatica_n_2.tscn")
+	if clicki3:
+		if Input.is_action_just_pressed("clicki"):
+			clicki3=false
+			anima_libro3.play("abre")
+			await anima_libro3.animation_finished
+			anima_camara.play("karau_acerca")
+			await anima_camara.animation_finished
+			transicion.play("entrafa")
+			await transicion.animation_finished
+			get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/mama.tscn")
 func _on_button_pressed() -> void:
 	titulo.play("RESET")
 	anima_boton.play("RESET")

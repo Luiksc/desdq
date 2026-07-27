@@ -1,4 +1,4 @@
-[gd_scene load_steps=198 format=4 uid="uid://cjse10p2bv8ca"]
+[gd_scene load_steps=200 format=4 uid="uid://cjse10p2bv8ca"]
 
 [ext_resource type="Script" path="res://UI/menu_cinema.gd" id="1_ex02h"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_hmk0p"]
@@ -203,45 +203,6 @@ outline_color = Color(0, 0, 0, 0)
 shadow_size = 45
 shadow_offset = Vector2(13.43, 8.585)
 
-[sub_resource type="Animation" id="Animation_fep3w"]
-resource_name = "aparece"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0666667, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:label_settings:outline_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.0666667, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:label_settings:shadow_color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.635294)]
-}
-
 [sub_resource type="Animation" id="Animation_d7m2s"]
 length = 0.001
 tracks/0/type = "value"
@@ -279,6 +240,45 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fep3w"]
+resource_name = "aparece"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:label_settings:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:label_settings:shadow_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.635294)]
 }
 
 [sub_resource type="Animation" id="Animation_0uw4w"]
@@ -328,6 +328,21 @@ _data = {
 "desaparecce": SubResource("Animation_0uw4w")
 }
 
+[sub_resource type="Animation" id="Animation_xhjxy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_3k85c"]
 resource_name = "aparece"
 length = 0.5
@@ -342,21 +357,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_xhjxy"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_cch2a"]
@@ -594,33 +594,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1cltw")
 
-[sub_resource type="Animation" id="Animation_gjyxq"]
-resource_name = "seleccion"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, -0.682947, 0), Vector3(-1.48842, -0.7889, 0.262616)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.6571, 2.19152, -72.2312)]
-}
-
 [sub_resource type="Animation" id="Animation_enm81"]
 length = 0.001
 tracks/0/type = "value"
@@ -676,10 +649,71 @@ tracks/1/keys = {
 "values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.6571, 2.19152, -72.2312), Vector3(28.9304, 0.337657, -72.8693)]
 }
 
+[sub_resource type="Animation" id="Animation_gjyxq"]
+resource_name = "seleccion"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.682947, 0), Vector3(-1.48842, -0.7889, 0.262616)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.6571, 2.19152, -72.2312)]
+}
+
+[sub_resource type="Animation" id="Animation_vhtt6"]
+resource_name = "mensu_acerca"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(30.133, 0.36272, -72.2436)]
+}
+
+[sub_resource type="Animation" id="Animation_0hojm"]
+resource_name = "karau_acerca"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(31.1349, 0.368756, -71.6759)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oupfh"]
 _data = {
 "RESET": SubResource("Animation_enm81"),
+"karau_acerca": SubResource("Animation_0hojm"),
 "mateo_acerca": SubResource("Animation_d4h0y"),
+"mensu_acerca": SubResource("Animation_vhtt6"),
 "seleccion": SubResource("Animation_gjyxq")
 }
 
@@ -2055,33 +2089,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jy81k")
 
-[sub_resource type="Animation" id="Animation_o7dev"]
-resource_name = "abre"
-length = 2.0
-tracks/0/type = "rotation_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("tapa2")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 2, 1, 0, -0.971342, 0, 0.237686)
-
-[sub_resource type="Animation" id="Animation_x1gli"]
-resource_name = "seleccion"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1.42011, 1.42011, 1.42011), Vector3(1.7, 1.7, 1.7)]
-}
-
 [sub_resource type="Animation" id="Animation_dqvkb"]
 length = 0.001
 tracks/0/type = "value"
@@ -2097,6 +2104,17 @@ tracks/0/keys = {
 "values": [Vector3(1.42011, 1.42011, 1.42011)]
 }
 
+[sub_resource type="Animation" id="Animation_o7dev"]
+resource_name = "abre"
+length = 2.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("tapa2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 2, 1, 0, -0.971342, 0, 0.237686)
+
 [sub_resource type="Animation" id="Animation_3pjjk"]
 resource_name = "desseleccion"
 length = 0.5
@@ -2111,6 +2129,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(1.7, 1.7, 1.7), Vector3(1.42, 1.42, 1.42)]
+}
+
+[sub_resource type="Animation" id="Animation_x1gli"]
+resource_name = "seleccion"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.42011, 1.42011, 1.42011), Vector3(1.7, 1.7, 1.7)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lyiky"]
@@ -2247,33 +2281,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5ntdv")
 
-[sub_resource type="Animation" id="Animation_b6lc2"]
-resource_name = "abre"
-length = 2.0
-tracks/0/type = "rotation_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("tapa2")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 2, 1, 0, -0.971342, 0, 0.237686)
-
-[sub_resource type="Animation" id="Animation_lj558"]
-resource_name = "seleccion"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1.42, 1.42, 1.42), Vector3(1.7, 1.7, 1.7)]
-}
-
 [sub_resource type="Animation" id="Animation_ehofu"]
 length = 0.001
 tracks/0/type = "value"
@@ -2289,6 +2296,17 @@ tracks/0/keys = {
 "values": [Vector3(1.42, 1.42, 1.42)]
 }
 
+[sub_resource type="Animation" id="Animation_b6lc2"]
+resource_name = "abre"
+length = 2.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("tapa2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 2, 1, 0, -0.971342, 0, 0.237686)
+
 [sub_resource type="Animation" id="Animation_gprqd"]
 resource_name = "desselccion"
 length = 0.5
@@ -2303,6 +2321,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(1.7, 1.7, 1.7), Vector3(1.42, 1.42, 1.42)]
+}
+
+[sub_resource type="Animation" id="Animation_lj558"]
+resource_name = "seleccion"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.42, 1.42, 1.42), Vector3(1.7, 1.7, 1.7)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wahkq"]
@@ -2439,33 +2473,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v2apq")
 
-[sub_resource type="Animation" id="Animation_1osl2"]
-resource_name = "abre"
-length = 2.0
-tracks/0/type = "rotation_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("tapa2")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 2, 1, 0, -0.971342, 0, 0.237686)
-
-[sub_resource type="Animation" id="Animation_1tsvi"]
-resource_name = "seleccion"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1.42, 1.42, 1.42), Vector3(1.7, 1.7, 1.7)]
-}
-
 [sub_resource type="Animation" id="Animation_jm6bq"]
 length = 0.001
 tracks/0/type = "value"
@@ -2481,6 +2488,17 @@ tracks/0/keys = {
 "values": [Vector3(1.42, 1.42, 1.42)]
 }
 
+[sub_resource type="Animation" id="Animation_1osl2"]
+resource_name = "abre"
+length = 2.0
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("tapa2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 2, 1, 0, -0.971342, 0, 0.237686)
+
 [sub_resource type="Animation" id="Animation_j7pc4"]
 resource_name = "desseleccion"
 length = 0.5
@@ -2495,6 +2513,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(1.7, 1.7, 1.7), Vector3(1.42, 1.42, 1.42)]
+}
+
+[sub_resource type="Animation" id="Animation_1tsvi"]
+resource_name = "seleccion"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.42, 1.42, 1.42), Vector3(1.7, 1.7, 1.7)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aed2v"]
@@ -2868,7 +2902,7 @@ libraries = {
 }
 
 [node name="caso_mateo" type="Node3D" parent="."]
-transform = Transform3D(-1.22985, 0.710053, -3.10374e-08, 0, -6.20748e-08, -1.42011, -0.710053, -1.22985, 5.37583e-08, 28.8321, 0.252111, -72.9457)
+transform = Transform3D(-1.22985, 0.710054, -3.10375e-08, 0, -6.2075e-08, -1.42011, -0.710054, -1.22985, 5.37585e-08, 28.8321, 0.252111, -72.9457)
 
 [node name="hoja2" type="Node3D" parent="caso_mateo"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -1.77636e-15, 0, 1, -0.0600872, -0.221375, 4.47035e-08)
@@ -2895,7 +2929,7 @@ libraries = {
 }
 
 [node name="caso_mensu" type="Node3D" parent="."]
-transform = Transform3D(-1.22976, 0.71, -3.10351e-08, 0, -6.20702e-08, -1.42, -0.71, -1.22976, 5.37543e-08, 30.0531, 0.252, -72.2374)
+transform = Transform3D(-1.22976, 0.709998, -3.1035e-08, 0, -6.20702e-08, -1.42, -0.709998, -1.22976, 5.37544e-08, 30.0531, 0.252, -72.2374)
 
 [node name="hoja2" type="Node3D" parent="caso_mensu"]
 transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -7.10543e-15, 1.77636e-15, 3.55271e-15, 1, 0.0311413, -0.211327, 4.47035e-08)
@@ -2922,7 +2956,7 @@ libraries = {
 }
 
 [node name="caso_karau" type="Node3D" parent="."]
-transform = Transform3D(-1.22976, 0.71, -3.10351e-08, 0, -6.20702e-08, -1.42, -0.71, -1.22976, 5.37543e-08, 31.1271, 0.252, -71.7351)
+transform = Transform3D(-1.22976, 0.709998, -3.1035e-08, 0, -6.20702e-08, -1.42, -0.709998, -1.22976, 5.37544e-08, 31.1271, 0.252, -71.7351)
 
 [node name="hoja2" type="Node3D" parent="caso_karau"]
 transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -7.10543e-15, 1.77636e-15, 3.55271e-15, 1, -0.00922203, -0.289482, 4.47035e-08)
