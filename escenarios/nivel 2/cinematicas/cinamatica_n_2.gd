@@ -9,6 +9,7 @@ extends Node3D
 @onready var fondo_carat = $Control/final
 @onready var anima_boton = $Control/final/Button/AnimationPlayer
 @onready var anima_qr = $Control/final/Sprite2D/AnimationPlayer
+@onready var seguir = $Control/seguir
 
 var fino = false
 
@@ -32,6 +33,7 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	seguir.hide()
 	fondo_carat.hide()
 	transi.play("salida")
 	time.start()
@@ -80,7 +82,7 @@ func dialog_terminado() -> void:
 		anima_boton.play("aparicion")
 		await anima_boton.animation_finished
 		anima_qr.play("aparece")
-		
+		seguir.show()
 		fino = true
 		return
 func inicia_dialoga(id_npc: String) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=190 format=4 uid="uid://bqn6jif5g1ppb"]
+[gd_scene load_steps=192 format=4 uid="uid://bqn6jif5g1ppb"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematucas/n_3_cinema_final.gd" id="1_xwnb2"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_d7v4s"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bq1cn68yweeex" path="res://modelos/karau/karai_conversion_3.png" id="8_5crje"]
 [ext_resource type="Texture2D" uid="uid://iyw75hnx6m57" path="res://modelos/karau/karai_conversion_4.png" id="9_3dq2i"]
 [ext_resource type="FontFile" uid="uid://2efbjbt4sdx" path="res://UI/fuentes/Upheaval/upheavtt.ttf" id="9_dkqai"]
+[ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="10_newbx"]
 [ext_resource type="Texture2D" uid="uid://mnjg0b72cyka" path="res://modelos/karau/karai_conversion_5.png" id="10_sb6ib"]
 [ext_resource type="Texture2D" uid="uid://bjkix2wie2uh" path="res://modelos/karau/karai_conversion_6.png" id="11_k1njw"]
 [ext_resource type="Texture2D" uid="uid://bdck6b1sjv473" path="res://modelos/karau/karai_conversion_7.png" id="12_4vn20"]
@@ -32,8 +33,8 @@
 [ext_resource type="Texture2D" uid="uid://e1sjhdu5ewsx" path="res://modelos/karau/guyralio_5.png" id="28_sq1lh"]
 [ext_resource type="Texture2D" uid="uid://bued5hbpbmp32" path="res://modelos/karau/guyralio_6.png" id="29_mhobh"]
 [ext_resource type="Texture2D" uid="uid://c1o107y0e6q0y" path="res://modelos/karau/karau ave VOLANDO_0.png" id="30_dpdyd"]
-[ext_resource type="Texture2D" uid="uid://cdspcarwffw00" path="res://modelos/karau/karau ave VOLANDO_1.png" id="31_7xcdf"]
-[ext_resource type="Texture2D" uid="uid://bxatbitkxu216" path="res://modelos/karau/karau ave VOLANDO_2.png" id="32_cebn7"]
+[ext_resource type="Texture2D" uid="uid://dkfumuomjosdt" path="res://modelos/karau/karau ave VOLANDO_1.png" id="31_7xcdf"]
+[ext_resource type="Texture2D" uid="uid://i1u2qlolg87q" path="res://modelos/karau/karau ave VOLANDO_2.png" id="32_cebn7"]
 [ext_resource type="Texture2D" uid="uid://dold5hop0x8wv" path="res://modelos/karau/karau ave VOLANDO_3.png" id="33_jg1fb"]
 [ext_resource type="Texture2D" uid="uid://lkp1e4qwddva" path="res://modelos/karau/karau ave VOLANDO_4.png" id="34_wi6gu"]
 [ext_resource type="Texture2D" uid="uid://hhyh3etmiscr" path="res://modelos/karau/karau ave VOLANDO_5.png" id="35_i2cfd"]
@@ -112,6 +113,12 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_wuuhy"]
 font = ExtResource("9_dkqai")
 font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_kilgf"]
+font = ExtResource("10_newbx")
+font_size = 21
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43vwk"]
 resource_name = "material_0"
@@ -2616,15 +2623,25 @@ anchor_top = 0.802
 anchor_right = 0.638
 anchor_bottom = 0.899
 offset_left = 9.19199
-offset_top = 0.303955
+offset_top = -192.696
 offset_right = 18.024
-offset_bottom = 12.448
+offset_bottom = -180.552
 scale = Vector2(0.944752, 0.833576)
 text = "Música:
 NHE'E PORÃ: Tupã Reko'y
 Comunida Mbya Guaraní"
 label_settings = SubResource("LabelSettings_wuuhy")
 horizontal_alignment = 1
+
+[node name="seguir" type="Label" parent="Control"]
+texture_filter = 1
+offset_left = 395.0
+offset_top = 566.0
+offset_right = 773.0
+offset_bottom = 589.0
+text = "[E] para continuar
+"
+label_settings = SubResource("LabelSettings_kilgf")
 
 [node name="colisioones" type="Node" parent="."]
 

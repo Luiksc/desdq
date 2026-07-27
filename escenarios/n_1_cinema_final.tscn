@@ -1,4 +1,4 @@
-[gd_scene load_steps=163 format=4 uid="uid://oop7axty4nm8"]
+[gd_scene load_steps=165 format=4 uid="uid://oop7axty4nm8"]
 
 [ext_resource type="Script" path="res://escenarios/n_1_cinema_final.gd" id="1_ssdqi"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_m0e4m"]
@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://bwe166xxxy0wi" path="res://background/delfina_pochy1.png" id="55_e5hi2"]
 [ext_resource type="Texture2D" uid="uid://dee6pnf4np6kh" path="res://background/delfina_pochy2.png" id="56_7ttit"]
 [ext_resource type="PackedScene" uid="uid://dt8fxjokm7w7t" path="res://escenarios/nivel_1_final.tscn" id="58_3h5k6"]
+[ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="58_4efhy"]
 [ext_resource type="AudioStream" uid="uid://ogvi4vkp2wxm" path="res://audios/sonidos_ambiente/Sonidos del chaco. (mp3cut.net).mp3" id="59_2pp5e"]
 [ext_resource type="AudioStream" uid="uid://b6w3vjsjt1jer" path="res://audios/5-disparos.mp3" id="59_g5b2q"]
 [ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/sonidos_ambiente/Sonidos del Chaco ambiente.mp3" id="60_2jgir"]
@@ -2306,6 +2307,12 @@ _data = {
 "desvanecido": SubResource("Animation_015k6")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_5gldv"]
+font = ExtResource("58_4efhy")
+font_size = 21
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
 [node name="n1" type="Node3D"]
 script = ExtResource("1_ssdqi")
 
@@ -2780,6 +2787,17 @@ libraries = {
 
 [node name="final" parent="Control" instance=ExtResource("58_3h5k6")]
 layout_mode = 1
+
+[node name="seguir" type="Label" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 395.0
+offset_top = 566.0
+offset_right = 773.0
+offset_bottom = 589.0
+text = "[E] para continuar
+"
+label_settings = SubResource("LabelSettings_5gldv")
 
 [node name="Timer" type="Timer" parent="."]
 

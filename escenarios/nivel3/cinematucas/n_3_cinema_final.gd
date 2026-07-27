@@ -14,8 +14,10 @@ extends Node3D
 @onready var anima_boton = $Control/final2/Button/AnimationPlayer
 @onready var anima_qr = $Control/final2/Sprite2D/AnimationPlayer
 @onready var info = $Control/informacion
+var siguiente = false
 
 func _ready() -> void:
+	$Control/seguir.hide()
 	fondo_carta.hide()
 	info.hide()
 	carta.play("RESET")
@@ -50,6 +52,8 @@ func _ready() -> void:
 	await anima_boton.animation_finished
 	anima_qr.play("aparece")
 	info.show()
+	$Control/seguir.show()
+	siguiente = true
 	
 	
 	
@@ -57,4 +61,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if siguiente:
+		if Input.is_action_just_pressed("interaccion"):
+			pass

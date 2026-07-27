@@ -19,6 +19,7 @@ var ojeroky = false
 @onready var anima_carta= $Control/final/AnimationPlayer
 @onready var anima_boton = $Control/final/Button/AnimationPlayer
 @onready var anima_qr = $Control/final/Sprite2D/AnimationPlayer
+@onready var seguir_boton = $Control/seguir
 
 var pochyha = false
 var seguir = false
@@ -53,6 +54,7 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	seguir_boton.hide()
 	anima_qr.play("RESET")
 	anima_carta.play("RESET")
 	carta.hide()
@@ -85,7 +87,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("interaccion"):
 			transicion.play("entrafa")
 			await transicion.animation_finished
-			get_tree().change_scene_to_file("res://escenarios/nivel 2/cinematicas/1r_cinamatica_n_2.tscn")
+			get_tree().change_scene_to_file("res://UI/menu_selccion.tscn")
 func inic_dialo() -> void:
 	if npc_actual=="":
 		return
@@ -134,6 +136,8 @@ func disparate():
 	anima_boton.play("aparicion")
 	await anima_boton.animation_finished
 	anima_qr.play("aparece")
+	seguir_boton.show()
+	
 	
 	seguir = true
 	

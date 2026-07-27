@@ -1,107 +1,108 @@
-[gd_scene load_steps=449 format=4 uid="uid://v5qsj0tl4f2l"]
+[gd_scene load_steps=451 format=4 uid="uid://v5qsj0tl4f2l"]
 
-[ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="1_2q6qu"]
-[ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinamatica_n_2.gd" id="1_jtlin"]
-[ext_resource type="PackedScene" uid="uid://cm0ysn5kfaswi" path="res://modelos/objetos/Alto parana/cabaña/cabaña.glb" id="1_mmfq5"]
-[ext_resource type="PackedScene" uid="uid://dskhyu8ne3tya" path="res://modelos/objetos/Alto parana/tinglado/tinglado.glb" id="3_bcxis"]
-[ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="4_ftsph"]
-[ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="4_kar0u"]
-[ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinematica_despensa/Dionisio.gd" id="5_tthjr"]
-[ext_resource type="Texture2D" uid="uid://cqjflskulxkwa" path="res://modelos/Dionisio/expo/dionisio sucio (1)_0.png" id="6_4bwpn"]
-[ext_resource type="Texture2D" uid="uid://d4rh7hp8s3yt" path="res://modelos/Dionisio/expo/dionisio sucio (1)_1.png" id="7_3he8l"]
-[ext_resource type="Texture2D" uid="uid://beufore7fxtbg" path="res://modelos/Dionisio/expo/dionisio sucio (1)_2.png" id="8_yprgv"]
-[ext_resource type="Texture2D" uid="uid://dlglon2wret7" path="res://modelos/Dionisio/expo/dionisio sucio (1)_3.png" id="9_vdq0p"]
-[ext_resource type="Texture2D" uid="uid://ccsmb2a5gwxrh" path="res://modelos/Dionisio/expo/dionisio sucio (1)_4.png" id="10_od4wj"]
-[ext_resource type="Texture2D" uid="uid://by2n2amg4vv0o" path="res://modelos/Dionisio/expo/dionisio sucio (1)_5.png" id="11_7pxm1"]
-[ext_resource type="Texture2D" uid="uid://daav17e0w0edk" path="res://modelos/Dionisio/expo/dionisio sucio (1)_6.png" id="12_pindi"]
-[ext_resource type="Texture2D" uid="uid://c2mbcwwdqdi6" path="res://modelos/Dionisio/expo/dionisio sucio (1)_7.png" id="13_r3jc0"]
-[ext_resource type="Texture2D" uid="uid://doh8tcscokdq2" path="res://modelos/Dionisio/expo/dionisio sucio (1)_8.png" id="14_3s0gu"]
-[ext_resource type="Texture2D" uid="uid://bht2s6v452sj1" path="res://modelos/Dionisio/expo/dionisio sucio (1)_9.png" id="15_s2t2w"]
-[ext_resource type="Texture2D" uid="uid://jvmycj745g84" path="res://modelos/Dionisio/expo/dionisio sucio (1)_10.png" id="16_ney0f"]
-[ext_resource type="Texture2D" uid="uid://bxjmhf66dpvm0" path="res://modelos/Dionisio/expo/dionisio sucio (1)_11.png" id="17_4o643"]
-[ext_resource type="Texture2D" uid="uid://citc5gt13q5mt" path="res://modelos/Dionisio/expo/dionisio sucio (1)_12.png" id="18_yctkv"]
-[ext_resource type="Texture2D" uid="uid://cr27yk5q2mb4v" path="res://modelos/Dionisio/expo/dionisio sucio (1)_13.png" id="19_syi2v"]
-[ext_resource type="Texture2D" uid="uid://dipylf6p26iu4" path="res://modelos/Dionisio/expo/dionisio sucio (1)_14.png" id="20_d2why"]
-[ext_resource type="Texture2D" uid="uid://d3tyw0dn5m18j" path="res://modelos/objetos/Alto parana/catre/Katre_0.png" id="22_k06fh"]
-[ext_resource type="Texture2D" uid="uid://c6og5scdexn7g" path="res://modelos/objetos/Alto parana/catre/Katre_1.png" id="23_8codu"]
-[ext_resource type="Texture2D" uid="uid://cekeyj7y8ff76" path="res://modelos/Marta/Marta_oguapy_anima_0.png" id="23_g4p37"]
-[ext_resource type="Texture2D" uid="uid://c6kcwpp1nknx3" path="res://modelos/objetos/Alto parana/catre/Katre_2.png" id="24_qo75r"]
-[ext_resource type="Texture2D" uid="uid://dumagsw6tiq4x" path="res://modelos/Marta/Marta_oguapy_anima_1.png" id="24_t3wxq"]
-[ext_resource type="Texture2D" uid="uid://or06bl7n3rgg" path="res://modelos/Marta/Marta_oguapy_anima_2.png" id="25_c13id"]
-[ext_resource type="Texture2D" uid="uid://b7yuwkccjno5v" path="res://modelos/objetos/Alto parana/catre/Katre_3.png" id="25_ue6us"]
-[ext_resource type="Texture2D" uid="uid://cnkix500wiidn" path="res://modelos/Marta/Marta_oguapy_anima_3.png" id="26_clgcn"]
-[ext_resource type="Texture2D" uid="uid://b6buqpdkhckhs" path="res://modelos/Ulises/Ulises_0.png" id="26_gf55x"]
-[ext_resource type="Texture2D" uid="uid://qiaxhslyiovi" path="res://modelos/Marta/Marta_oguapy_anima_4.png" id="27_3jiwo"]
-[ext_resource type="Texture2D" uid="uid://boumkucpslgiu" path="res://modelos/Ulises/Ulises_1.png" id="27_l1ttj"]
-[ext_resource type="Texture2D" uid="uid://ctsvh1barfmmd" path="res://modelos/Marta/Marta_oguapy_anima_5.png" id="28_gel2u"]
-[ext_resource type="Texture2D" uid="uid://uvb1lekga6sg" path="res://modelos/Ulises/Ulises_2.png" id="28_t820u"]
-[ext_resource type="Texture2D" uid="uid://brk8rfgsucsob" path="res://modelos/Ulises/Ulises_3.png" id="29_08d8b"]
-[ext_resource type="Texture2D" uid="uid://ck32jmb0wfq7v" path="res://modelos/Marta/Marta_oguapy_anima_6.png" id="29_vuo4p"]
-[ext_resource type="Texture2D" uid="uid://cejqagbwao4o1" path="res://modelos/Marta/Marta_oguapy_anima_7.png" id="30_y7myg"]
-[ext_resource type="Texture2D" uid="uid://b6s6didpul1p6" path="res://modelos/Ulises/Ulises_4.png" id="30_y8c5r"]
-[ext_resource type="Texture2D" uid="uid://d5awjawpvc71" path="res://modelos/Ulises/Ulises_5.png" id="31_jpje6"]
-[ext_resource type="Texture2D" uid="uid://71tmr3c6hgs1" path="res://modelos/Marta/Marta_oguapy_anima_8.png" id="31_rdsu3"]
-[ext_resource type="Texture2D" uid="uid://dt48ut605wgov" path="res://modelos/Marta/Marta_oguapy_anima_9.png" id="32_j5yw1"]
-[ext_resource type="Texture2D" uid="uid://t2063uliknus" path="res://modelos/Ulises/Ulises_6.png" id="32_mxw4y"]
-[ext_resource type="Texture2D" uid="uid://b83u5yu8l6cee" path="res://modelos/Ulises/Ulises_7.png" id="33_56tt1"]
-[ext_resource type="Texture2D" uid="uid://c1olvwgkslsn4" path="res://modelos/Marta/Marta_oguapy_anima_10.png" id="33_il46d"]
-[ext_resource type="Texture2D" uid="uid://boaothnq40ap3" path="res://modelos/Marta/Marta_oguapy_anima_11.png" id="34_3bux4"]
-[ext_resource type="Texture2D" uid="uid://dvy81o1su83le" path="res://modelos/Ulises/Ulises_8.png" id="34_ho1qa"]
-[ext_resource type="Texture2D" uid="uid://crnemduv15ktm" path="res://modelos/Ulises/Ulises_9.png" id="35_ox2c6"]
-[ext_resource type="Texture2D" uid="uid://bya7m5tdoyu25" path="res://modelos/Marta/Marta_oguapy_anima_12.png" id="35_qb5x5"]
-[ext_resource type="Texture2D" uid="uid://de5ocbccegwnc" path="res://modelos/Marta/Marta_oguapy_anima_13.png" id="36_co3fk"]
-[ext_resource type="Texture2D" uid="uid://cdn2nyfqkrj8u" path="res://modelos/Ulises/Ulises_10.png" id="36_yr42b"]
-[ext_resource type="Texture2D" uid="uid://c8nqbpqm4yyfg" path="res://modelos/Ulises/Ulises_11.png" id="37_1xmel"]
-[ext_resource type="Texture2D" uid="uid://b0ditg2ro8ou8" path="res://modelos/Marta/Marta_oguapy_anima_14.png" id="37_fy80m"]
-[ext_resource type="Texture2D" uid="uid://djtfdo8lib3u3" path="res://modelos/Ulises/Ulises_12.png" id="38_cc60v"]
-[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="38_e8hfi"]
-[ext_resource type="PackedScene" uid="uid://d2t1vs5j3vmgm" path="res://escenarios/nivel 2/carta_n2_final.tscn" id="39_lwcfy"]
-[ext_resource type="Texture2D" uid="uid://duwurldtl54pw" path="res://modelos/Ulises/Ulises_13.png" id="39_s41uq"]
-[ext_resource type="Texture2D" uid="uid://bc1vmcl2hbd8i" path="res://modelos/Ulises/Ulises_14.png" id="40_fwh21"]
-[ext_resource type="Texture2D" uid="uid://xvckn5iddpgk" path="res://modelos/Ulises/Ulises_15.png" id="41_o0yg4"]
-[ext_resource type="Texture2D" uid="uid://1t1wepwpam0c" path="res://modelos/Ulises/Ulises_16.png" id="42_uvv8o"]
-[ext_resource type="Texture2D" uid="uid://4vnxkcq378ii" path="res://modelos/Ulises/Ulises_17.png" id="43_c6uc6"]
-[ext_resource type="Texture2D" uid="uid://oheovc1n6pqq" path="res://modelos/Ulises/Ulises_18.png" id="44_lbnqg"]
-[ext_resource type="Texture2D" uid="uid://dttv7s2ydgbm" path="res://modelos/objetos/guitarra/Guitarra_0.png" id="45_64u8o"]
-[ext_resource type="Texture2D" uid="uid://ojqoa3ml32cj" path="res://modelos/objetos/guitarra/Guitarra_1.png" id="46_krwoe"]
-[ext_resource type="Texture2D" uid="uid://1wkceelh115s" path="res://modelos/objetos/guitarra/Guitarra_2.png" id="47_4jlc0"]
-[ext_resource type="Texture2D" uid="uid://bb325bshpowi4" path="res://modelos/objetos/guitarra/Guitarra_3.png" id="48_npb2q"]
-[ext_resource type="Texture2D" uid="uid://dasi7l3faxio6" path="res://modelos/mensu 1/expor/mensu1_0.png" id="49_07fby"]
-[ext_resource type="Texture2D" uid="uid://d2s4pxsmnk04t" path="res://modelos/mensu 1/expor/mensu1_1.png" id="50_qm778"]
-[ext_resource type="Texture2D" uid="uid://bgccp2qgnp5xd" path="res://modelos/mensu 1/expor/mensu1_2.png" id="51_xbdpl"]
-[ext_resource type="Texture2D" uid="uid://porxftyd3yip" path="res://modelos/mensu 1/expor/mensu1_3.png" id="52_rgg87"]
-[ext_resource type="Texture2D" uid="uid://c2s7m7hya3opd" path="res://modelos/mensu 1/expor/mensu1_4.png" id="53_vn0gv"]
-[ext_resource type="Texture2D" uid="uid://s21vm50tpxes" path="res://modelos/mensu 1/expor/mensu1_5.png" id="54_jnnaw"]
-[ext_resource type="Texture2D" uid="uid://dnjd2ftkamgbj" path="res://modelos/mensu 1/expor/mensu1_6.png" id="55_jm06d"]
-[ext_resource type="Texture2D" uid="uid://cgm28jinj8pvq" path="res://modelos/mensu 1/expor/mensu1_7.png" id="56_2gclv"]
-[ext_resource type="Texture2D" uid="uid://c5lb8qtrqkhxc" path="res://modelos/mensu 1/expor/mensu1_8.png" id="57_7s46m"]
-[ext_resource type="Texture2D" uid="uid://c2x51sbtqmuq4" path="res://modelos/mensu 1/expor/mensu1_9.png" id="58_hdgca"]
-[ext_resource type="Texture2D" uid="uid://byyw7uy5x8kjd" path="res://modelos/mensu 1/expor/mensu1_10.png" id="59_2f3im"]
-[ext_resource type="Texture2D" uid="uid://do1y1bqr7ai5i" path="res://modelos/mensu 1/expor/mensu1_11.png" id="60_ukpo0"]
-[ext_resource type="Texture2D" uid="uid://d31q3hayxk8y4" path="res://modelos/mensu 1/expor/mensu1_12.png" id="61_puq23"]
-[ext_resource type="Texture2D" uid="uid://tnamo1mybhyo" path="res://modelos/mensu 1/expor/mensu1_13.png" id="62_l68r3"]
-[ext_resource type="Texture2D" uid="uid://bvnw76k40ddd3" path="res://modelos/laburador 3/laburador3_0.png" id="63_rvoua"]
-[ext_resource type="Texture2D" uid="uid://cjlprhov7wjnl" path="res://modelos/laburador 3/laburador3_1.png" id="64_rjrcs"]
-[ext_resource type="Texture2D" uid="uid://j5x3dq8i4wlg" path="res://modelos/laburador 3/laburador3_2.png" id="65_swdm2"]
-[ext_resource type="Texture2D" uid="uid://bwd1xhrx3oeya" path="res://modelos/laburador 3/laburador3_3.png" id="66_0x2vn"]
-[ext_resource type="Texture2D" uid="uid://243trfy2ext7" path="res://modelos/laburador 3/laburador3_4.png" id="67_1tjcv"]
-[ext_resource type="Texture2D" uid="uid://5xm4m51ye4pw" path="res://modelos/laburador 3/laburador3_5.png" id="68_7rut5"]
-[ext_resource type="Texture2D" uid="uid://c7ijm342uw34g" path="res://modelos/laburador 3/laburador3_6.png" id="69_nimc7"]
-[ext_resource type="Texture2D" uid="uid://ckdahw0fswhko" path="res://modelos/laburador 3/laburador3_7.png" id="70_667pk"]
-[ext_resource type="Texture2D" uid="uid://c0vrtxjl2s160" path="res://modelos/laburador 3/laburador3_8.png" id="71_gjhgk"]
-[ext_resource type="Texture2D" uid="uid://c1lshnjgkqk6e" path="res://modelos/laburador 3/laburador3_9.png" id="72_5ipr4"]
-[ext_resource type="Texture2D" uid="uid://sacqenxaokq" path="res://modelos/laburador 3/laburador3_10.png" id="73_vtm3k"]
-[ext_resource type="Texture2D" uid="uid://b5qecrc2dlbb5" path="res://modelos/laburador 3/laburador3_11.png" id="74_4gg06"]
-[ext_resource type="Texture2D" uid="uid://c6o6eubtnwu8a" path="res://modelos/laburador 3/laburador3_12.png" id="75_pmhtm"]
-[ext_resource type="Texture2D" uid="uid://cjhpst6a8t85j" path="res://modelos/laburador 3/laburador3_13.png" id="76_pv6bk"]
-[ext_resource type="Texture2D" uid="uid://depp5m73atlc" path="res://modelos/laburador 3/laburador3_14.png" id="77_2jeba"]
-[ext_resource type="Texture2D" uid="uid://ks15ec1r1bvy" path="res://modelos/laburador 3/laburador3_15.png" id="78_dna8o"]
-[ext_resource type="Texture2D" uid="uid://cxbjnsqnl2vqo" path="res://modelos/laburador 3/laburador3_16.png" id="79_6s56y"]
-[ext_resource type="Texture2D" uid="uid://dsjsnta0i2cto" path="res://modelos/laburador 3/laburador3_17.png" id="80_sv2ly"]
-[ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="97_expis"]
+[ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinamatica_n_2.gd" id="1_7po0y"]
+[ext_resource type="PackedScene" uid="uid://cm0ysn5kfaswi" path="res://modelos/objetos/Alto parana/cabaña/cabaña.glb" id="2_j7bes"]
+[ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="3_c00ss"]
+[ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="4_7woiy"]
+[ext_resource type="PackedScene" uid="uid://dskhyu8ne3tya" path="res://modelos/objetos/Alto parana/tinglado/tinglado.glb" id="5_g7khv"]
+[ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="6_hf8y0"]
+[ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinematica_despensa/Dionisio.gd" id="7_m24wx"]
+[ext_resource type="Texture2D" uid="uid://cqjflskulxkwa" path="res://modelos/Dionisio/expo/dionisio sucio (1)_0.png" id="8_ufbh6"]
+[ext_resource type="Texture2D" uid="uid://d4rh7hp8s3yt" path="res://modelos/Dionisio/expo/dionisio sucio (1)_1.png" id="9_iuc5g"]
+[ext_resource type="Texture2D" uid="uid://beufore7fxtbg" path="res://modelos/Dionisio/expo/dionisio sucio (1)_2.png" id="10_2qrno"]
+[ext_resource type="Texture2D" uid="uid://dlglon2wret7" path="res://modelos/Dionisio/expo/dionisio sucio (1)_3.png" id="11_xrfhe"]
+[ext_resource type="Texture2D" uid="uid://ccsmb2a5gwxrh" path="res://modelos/Dionisio/expo/dionisio sucio (1)_4.png" id="12_a6cen"]
+[ext_resource type="Texture2D" uid="uid://by2n2amg4vv0o" path="res://modelos/Dionisio/expo/dionisio sucio (1)_5.png" id="13_1nli3"]
+[ext_resource type="Texture2D" uid="uid://daav17e0w0edk" path="res://modelos/Dionisio/expo/dionisio sucio (1)_6.png" id="14_3hlui"]
+[ext_resource type="Texture2D" uid="uid://c2mbcwwdqdi6" path="res://modelos/Dionisio/expo/dionisio sucio (1)_7.png" id="15_ixfl8"]
+[ext_resource type="Texture2D" uid="uid://doh8tcscokdq2" path="res://modelos/Dionisio/expo/dionisio sucio (1)_8.png" id="16_dwgfg"]
+[ext_resource type="Texture2D" uid="uid://bht2s6v452sj1" path="res://modelos/Dionisio/expo/dionisio sucio (1)_9.png" id="17_g6x66"]
+[ext_resource type="Texture2D" uid="uid://jvmycj745g84" path="res://modelos/Dionisio/expo/dionisio sucio (1)_10.png" id="18_t5muo"]
+[ext_resource type="Texture2D" uid="uid://bxjmhf66dpvm0" path="res://modelos/Dionisio/expo/dionisio sucio (1)_11.png" id="19_eu2q0"]
+[ext_resource type="Texture2D" uid="uid://citc5gt13q5mt" path="res://modelos/Dionisio/expo/dionisio sucio (1)_12.png" id="20_ae6h1"]
+[ext_resource type="Texture2D" uid="uid://cr27yk5q2mb4v" path="res://modelos/Dionisio/expo/dionisio sucio (1)_13.png" id="21_agm76"]
+[ext_resource type="Texture2D" uid="uid://dipylf6p26iu4" path="res://modelos/Dionisio/expo/dionisio sucio (1)_14.png" id="22_eppse"]
+[ext_resource type="Texture2D" uid="uid://cekeyj7y8ff76" path="res://modelos/Marta/Marta_oguapy_anima_0.png" id="23_otno5"]
+[ext_resource type="Texture2D" uid="uid://dumagsw6tiq4x" path="res://modelos/Marta/Marta_oguapy_anima_1.png" id="24_aguof"]
+[ext_resource type="Texture2D" uid="uid://or06bl7n3rgg" path="res://modelos/Marta/Marta_oguapy_anima_2.png" id="25_xjtch"]
+[ext_resource type="Texture2D" uid="uid://cnkix500wiidn" path="res://modelos/Marta/Marta_oguapy_anima_3.png" id="26_pxocq"]
+[ext_resource type="Texture2D" uid="uid://qiaxhslyiovi" path="res://modelos/Marta/Marta_oguapy_anima_4.png" id="27_lmuh6"]
+[ext_resource type="Texture2D" uid="uid://ctsvh1barfmmd" path="res://modelos/Marta/Marta_oguapy_anima_5.png" id="28_ghqn1"]
+[ext_resource type="Texture2D" uid="uid://ck32jmb0wfq7v" path="res://modelos/Marta/Marta_oguapy_anima_6.png" id="29_nsm71"]
+[ext_resource type="Texture2D" uid="uid://cejqagbwao4o1" path="res://modelos/Marta/Marta_oguapy_anima_7.png" id="30_357s7"]
+[ext_resource type="Texture2D" uid="uid://71tmr3c6hgs1" path="res://modelos/Marta/Marta_oguapy_anima_8.png" id="31_bkmqp"]
+[ext_resource type="Texture2D" uid="uid://dt48ut605wgov" path="res://modelos/Marta/Marta_oguapy_anima_9.png" id="32_b3j2q"]
+[ext_resource type="Texture2D" uid="uid://c1olvwgkslsn4" path="res://modelos/Marta/Marta_oguapy_anima_10.png" id="33_t5csi"]
+[ext_resource type="Texture2D" uid="uid://boaothnq40ap3" path="res://modelos/Marta/Marta_oguapy_anima_11.png" id="34_0juqe"]
+[ext_resource type="Texture2D" uid="uid://bya7m5tdoyu25" path="res://modelos/Marta/Marta_oguapy_anima_12.png" id="35_5au73"]
+[ext_resource type="Texture2D" uid="uid://de5ocbccegwnc" path="res://modelos/Marta/Marta_oguapy_anima_13.png" id="36_qd48q"]
+[ext_resource type="Texture2D" uid="uid://b0ditg2ro8ou8" path="res://modelos/Marta/Marta_oguapy_anima_14.png" id="37_dck7f"]
+[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="38_wt4pw"]
+[ext_resource type="PackedScene" uid="uid://d2t1vs5j3vmgm" path="res://escenarios/nivel 2/carta_n2_final.tscn" id="39_0pqfo"]
+[ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="40_4pcuv"]
+[ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="41_j28iu"]
+[ext_resource type="Texture2D" uid="uid://d3tyw0dn5m18j" path="res://modelos/objetos/Alto parana/catre/Katre_0.png" id="42_34684"]
+[ext_resource type="Texture2D" uid="uid://c6og5scdexn7g" path="res://modelos/objetos/Alto parana/catre/Katre_1.png" id="43_s6v60"]
+[ext_resource type="Texture2D" uid="uid://c6kcwpp1nknx3" path="res://modelos/objetos/Alto parana/catre/Katre_2.png" id="44_hrp77"]
+[ext_resource type="Texture2D" uid="uid://b7yuwkccjno5v" path="res://modelos/objetos/Alto parana/catre/Katre_3.png" id="45_qneva"]
+[ext_resource type="Texture2D" uid="uid://b6buqpdkhckhs" path="res://modelos/Ulises/Ulises_0.png" id="46_3ndn6"]
+[ext_resource type="Texture2D" uid="uid://boumkucpslgiu" path="res://modelos/Ulises/Ulises_1.png" id="47_jyj7s"]
+[ext_resource type="Texture2D" uid="uid://uvb1lekga6sg" path="res://modelos/Ulises/Ulises_2.png" id="48_twuwk"]
+[ext_resource type="Texture2D" uid="uid://brk8rfgsucsob" path="res://modelos/Ulises/Ulises_3.png" id="49_idliu"]
+[ext_resource type="Texture2D" uid="uid://b6s6didpul1p6" path="res://modelos/Ulises/Ulises_4.png" id="50_rkqt6"]
+[ext_resource type="Texture2D" uid="uid://d5awjawpvc71" path="res://modelos/Ulises/Ulises_5.png" id="51_7nrov"]
+[ext_resource type="Texture2D" uid="uid://t2063uliknus" path="res://modelos/Ulises/Ulises_6.png" id="52_60oef"]
+[ext_resource type="Texture2D" uid="uid://b83u5yu8l6cee" path="res://modelos/Ulises/Ulises_7.png" id="53_cgb4f"]
+[ext_resource type="Texture2D" uid="uid://dvy81o1su83le" path="res://modelos/Ulises/Ulises_8.png" id="54_42fwl"]
+[ext_resource type="Texture2D" uid="uid://crnemduv15ktm" path="res://modelos/Ulises/Ulises_9.png" id="55_e0g8m"]
+[ext_resource type="Texture2D" uid="uid://cdn2nyfqkrj8u" path="res://modelos/Ulises/Ulises_10.png" id="56_u4tao"]
+[ext_resource type="Texture2D" uid="uid://c8nqbpqm4yyfg" path="res://modelos/Ulises/Ulises_11.png" id="57_4bx70"]
+[ext_resource type="Texture2D" uid="uid://djtfdo8lib3u3" path="res://modelos/Ulises/Ulises_12.png" id="58_iwbw2"]
+[ext_resource type="Texture2D" uid="uid://duwurldtl54pw" path="res://modelos/Ulises/Ulises_13.png" id="59_5sf0e"]
+[ext_resource type="Texture2D" uid="uid://bc1vmcl2hbd8i" path="res://modelos/Ulises/Ulises_14.png" id="60_vl35c"]
+[ext_resource type="Texture2D" uid="uid://xvckn5iddpgk" path="res://modelos/Ulises/Ulises_15.png" id="61_o7kql"]
+[ext_resource type="Texture2D" uid="uid://1t1wepwpam0c" path="res://modelos/Ulises/Ulises_16.png" id="62_b1g02"]
+[ext_resource type="Texture2D" uid="uid://4vnxkcq378ii" path="res://modelos/Ulises/Ulises_17.png" id="63_531bq"]
+[ext_resource type="Texture2D" uid="uid://oheovc1n6pqq" path="res://modelos/Ulises/Ulises_18.png" id="64_3efd0"]
+[ext_resource type="Texture2D" uid="uid://dttv7s2ydgbm" path="res://modelos/objetos/guitarra/Guitarra_0.png" id="65_pgdqr"]
+[ext_resource type="Texture2D" uid="uid://ojqoa3ml32cj" path="res://modelos/objetos/guitarra/Guitarra_1.png" id="66_hvgxy"]
+[ext_resource type="Texture2D" uid="uid://1wkceelh115s" path="res://modelos/objetos/guitarra/Guitarra_2.png" id="67_vq0ox"]
+[ext_resource type="Texture2D" uid="uid://bb325bshpowi4" path="res://modelos/objetos/guitarra/Guitarra_3.png" id="68_r5cwf"]
+[ext_resource type="Texture2D" uid="uid://dasi7l3faxio6" path="res://modelos/mensu 1/expor/mensu1_0.png" id="69_in54u"]
+[ext_resource type="Texture2D" uid="uid://d2s4pxsmnk04t" path="res://modelos/mensu 1/expor/mensu1_1.png" id="70_uk1d6"]
+[ext_resource type="Texture2D" uid="uid://bgccp2qgnp5xd" path="res://modelos/mensu 1/expor/mensu1_2.png" id="71_12y0o"]
+[ext_resource type="Texture2D" uid="uid://porxftyd3yip" path="res://modelos/mensu 1/expor/mensu1_3.png" id="72_7u8v1"]
+[ext_resource type="Texture2D" uid="uid://c2s7m7hya3opd" path="res://modelos/mensu 1/expor/mensu1_4.png" id="73_xi5km"]
+[ext_resource type="Texture2D" uid="uid://s21vm50tpxes" path="res://modelos/mensu 1/expor/mensu1_5.png" id="74_yrumf"]
+[ext_resource type="Texture2D" uid="uid://dnjd2ftkamgbj" path="res://modelos/mensu 1/expor/mensu1_6.png" id="75_nwbda"]
+[ext_resource type="Texture2D" uid="uid://cgm28jinj8pvq" path="res://modelos/mensu 1/expor/mensu1_7.png" id="76_jfs1f"]
+[ext_resource type="Texture2D" uid="uid://c5lb8qtrqkhxc" path="res://modelos/mensu 1/expor/mensu1_8.png" id="77_syn6h"]
+[ext_resource type="Texture2D" uid="uid://c2x51sbtqmuq4" path="res://modelos/mensu 1/expor/mensu1_9.png" id="78_36c1m"]
+[ext_resource type="Texture2D" uid="uid://do1y1bqr7ai5i" path="res://modelos/mensu 1/expor/mensu1_11.png" id="79_lvyyd"]
+[ext_resource type="Texture2D" uid="uid://d31q3hayxk8y4" path="res://modelos/mensu 1/expor/mensu1_12.png" id="80_4wk6j"]
+[ext_resource type="Texture2D" uid="uid://tnamo1mybhyo" path="res://modelos/mensu 1/expor/mensu1_13.png" id="81_5avby"]
+[ext_resource type="Texture2D" uid="uid://byyw7uy5x8kjd" path="res://modelos/mensu 1/expor/mensu1_10.png" id="82_in1v8"]
+[ext_resource type="Texture2D" uid="uid://bvnw76k40ddd3" path="res://modelos/laburador 3/laburador3_0.png" id="83_bhdot"]
+[ext_resource type="Texture2D" uid="uid://cjlprhov7wjnl" path="res://modelos/laburador 3/laburador3_1.png" id="84_wsrxq"]
+[ext_resource type="Texture2D" uid="uid://j5x3dq8i4wlg" path="res://modelos/laburador 3/laburador3_2.png" id="85_mr502"]
+[ext_resource type="Texture2D" uid="uid://bwd1xhrx3oeya" path="res://modelos/laburador 3/laburador3_3.png" id="86_f8osf"]
+[ext_resource type="Texture2D" uid="uid://243trfy2ext7" path="res://modelos/laburador 3/laburador3_4.png" id="87_evvis"]
+[ext_resource type="Texture2D" uid="uid://5xm4m51ye4pw" path="res://modelos/laburador 3/laburador3_5.png" id="88_lfspr"]
+[ext_resource type="Texture2D" uid="uid://c7ijm342uw34g" path="res://modelos/laburador 3/laburador3_6.png" id="89_a33qc"]
+[ext_resource type="Texture2D" uid="uid://ckdahw0fswhko" path="res://modelos/laburador 3/laburador3_7.png" id="90_p1x8d"]
+[ext_resource type="Texture2D" uid="uid://c0vrtxjl2s160" path="res://modelos/laburador 3/laburador3_8.png" id="91_0665c"]
+[ext_resource type="Texture2D" uid="uid://c1lshnjgkqk6e" path="res://modelos/laburador 3/laburador3_9.png" id="92_ddipd"]
+[ext_resource type="Texture2D" uid="uid://sacqenxaokq" path="res://modelos/laburador 3/laburador3_10.png" id="93_1pbty"]
+[ext_resource type="Texture2D" uid="uid://b5qecrc2dlbb5" path="res://modelos/laburador 3/laburador3_11.png" id="94_tp3xi"]
+[ext_resource type="Texture2D" uid="uid://c6o6eubtnwu8a" path="res://modelos/laburador 3/laburador3_12.png" id="95_m6m2y"]
+[ext_resource type="Texture2D" uid="uid://cjhpst6a8t85j" path="res://modelos/laburador 3/laburador3_13.png" id="96_e6ls2"]
+[ext_resource type="Texture2D" uid="uid://depp5m73atlc" path="res://modelos/laburador 3/laburador3_14.png" id="97_tkuse"]
+[ext_resource type="Texture2D" uid="uid://ks15ec1r1bvy" path="res://modelos/laburador 3/laburador3_15.png" id="98_52oub"]
+[ext_resource type="Texture2D" uid="uid://cxbjnsqnl2vqo" path="res://modelos/laburador 3/laburador3_16.png" id="99_1fw4s"]
+[ext_resource type="Texture2D" uid="uid://dsjsnta0i2cto" path="res://modelos/laburador 3/laburador3_17.png" id="100_rlb6l"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h086u"]
-panorama = ExtResource("4_ftsph")
+panorama = ExtResource("6_hf8y0")
 
 [sub_resource type="Sky" id="Sky_wuta0"]
 sky_material = SubResource("PanoramaSkyMaterial_h086u")
@@ -153,7 +154,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("6_4bwpn")
+albedo_texture = ExtResource("8_ufbh6")
 texture_filter = 0
 texture_repeat = false
 
@@ -195,7 +196,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("7_3he8l")
+albedo_texture = ExtResource("9_iuc5g")
 texture_filter = 0
 texture_repeat = false
 
@@ -237,7 +238,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("8_yprgv")
+albedo_texture = ExtResource("10_2qrno")
 texture_filter = 0
 texture_repeat = false
 
@@ -375,7 +376,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("9_vdq0p")
+albedo_texture = ExtResource("11_xrfhe")
 texture_filter = 0
 texture_repeat = false
 
@@ -449,7 +450,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("10_od4wj")
+albedo_texture = ExtResource("12_a6cen")
 texture_filter = 0
 texture_repeat = false
 
@@ -491,7 +492,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("11_7pxm1")
+albedo_texture = ExtResource("13_1nli3")
 texture_filter = 0
 texture_repeat = false
 
@@ -597,7 +598,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("12_pindi")
+albedo_texture = ExtResource("14_3hlui")
 texture_filter = 0
 texture_repeat = false
 
@@ -671,7 +672,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("13_r3jc0")
+albedo_texture = ExtResource("15_ixfl8")
 texture_filter = 0
 texture_repeat = false
 
@@ -713,7 +714,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("14_3s0gu")
+albedo_texture = ExtResource("16_dwgfg")
 texture_filter = 0
 texture_repeat = false
 
@@ -787,7 +788,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("15_s2t2w")
+albedo_texture = ExtResource("17_g6x66")
 texture_filter = 0
 texture_repeat = false
 
@@ -829,7 +830,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("16_ney0f")
+albedo_texture = ExtResource("18_t5muo")
 texture_filter = 0
 texture_repeat = false
 
@@ -871,7 +872,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("17_4o643")
+albedo_texture = ExtResource("19_eu2q0")
 texture_filter = 0
 texture_repeat = false
 
@@ -915,7 +916,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("18_yctkv")
+albedo_texture = ExtResource("20_ae6h1")
 texture_filter = 0
 texture_repeat = false
 
@@ -957,7 +958,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("19_syi2v")
+albedo_texture = ExtResource("21_agm76")
 texture_filter = 0
 texture_repeat = false
 
@@ -999,7 +1000,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("20_d2why")
+albedo_texture = ExtResource("22_eppse")
 texture_filter = 0
 texture_repeat = false
 
@@ -1195,7 +1196,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("23_g4p37")
+albedo_texture = ExtResource("23_otno5")
 texture_filter = 0
 texture_repeat = false
 
@@ -1237,7 +1238,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("24_t3wxq")
+albedo_texture = ExtResource("24_aguof")
 texture_filter = 0
 texture_repeat = false
 
@@ -1279,7 +1280,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("25_c13id")
+albedo_texture = ExtResource("25_xjtch")
 texture_filter = 0
 texture_repeat = false
 
@@ -1321,7 +1322,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("26_clgcn")
+albedo_texture = ExtResource("26_pxocq")
 texture_filter = 0
 texture_repeat = false
 
@@ -1363,7 +1364,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("27_3jiwo")
+albedo_texture = ExtResource("27_lmuh6")
 texture_filter = 0
 texture_repeat = false
 
@@ -1437,7 +1438,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("28_gel2u")
+albedo_texture = ExtResource("28_ghqn1")
 texture_filter = 0
 texture_repeat = false
 
@@ -1481,7 +1482,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("29_vuo4p")
+albedo_texture = ExtResource("29_nsm71")
 texture_filter = 0
 texture_repeat = false
 
@@ -1523,7 +1524,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("30_y7myg")
+albedo_texture = ExtResource("30_357s7")
 texture_filter = 0
 texture_repeat = false
 
@@ -1565,7 +1566,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("31_rdsu3")
+albedo_texture = ExtResource("31_bkmqp")
 texture_filter = 0
 texture_repeat = false
 
@@ -1607,7 +1608,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("32_j5yw1")
+albedo_texture = ExtResource("32_b3j2q")
 texture_filter = 0
 texture_repeat = false
 
@@ -1649,7 +1650,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("33_il46d")
+albedo_texture = ExtResource("33_t5csi")
 texture_filter = 0
 texture_repeat = false
 
@@ -1755,7 +1756,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("34_3bux4")
+albedo_texture = ExtResource("34_0juqe")
 texture_filter = 0
 texture_repeat = false
 
@@ -1797,7 +1798,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("35_qb5x5")
+albedo_texture = ExtResource("35_5au73")
 texture_filter = 0
 texture_repeat = false
 
@@ -1839,7 +1840,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("36_co3fk")
+albedo_texture = ExtResource("36_qd48q")
 texture_filter = 0
 texture_repeat = false
 
@@ -1881,7 +1882,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("37_fy80m")
+albedo_texture = ExtResource("37_dck7f")
 texture_filter = 0
 texture_repeat = false
 
@@ -2097,13 +2098,19 @@ _data = {
 "repire": SubResource("Animation_4rf7e")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_6qqrj"]
+font = ExtResource("40_4pcuv")
+font_size = 21
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7n1q"]
 resource_name = "material_0"
 transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("22_k06fh")
+albedo_texture = ExtResource("42_34684")
 texture_filter = 0
 texture_repeat = false
 
@@ -2145,7 +2152,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("23_8codu")
+albedo_texture = ExtResource("43_s6v60")
 texture_filter = 0
 texture_repeat = false
 
@@ -2219,7 +2226,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("24_qo75r")
+albedo_texture = ExtResource("44_hrp77")
 texture_filter = 0
 texture_repeat = false
 
@@ -2261,7 +2268,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("25_ue6us")
+albedo_texture = ExtResource("45_qneva")
 texture_filter = 0
 texture_repeat = false
 
@@ -2335,7 +2342,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("26_gf55x")
+albedo_texture = ExtResource("46_3ndn6")
 texture_filter = 0
 texture_repeat = false
 
@@ -2377,7 +2384,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("27_l1ttj")
+albedo_texture = ExtResource("47_jyj7s")
 texture_filter = 0
 texture_repeat = false
 
@@ -2419,7 +2426,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("28_t820u")
+albedo_texture = ExtResource("48_twuwk")
 texture_filter = 0
 texture_repeat = false
 
@@ -2461,7 +2468,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("29_08d8b")
+albedo_texture = ExtResource("49_idliu")
 texture_filter = 0
 texture_repeat = false
 
@@ -2503,7 +2510,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("30_y8c5r")
+albedo_texture = ExtResource("50_rkqt6")
 texture_filter = 0
 texture_repeat = false
 
@@ -2545,7 +2552,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("31_jpje6")
+albedo_texture = ExtResource("51_7nrov")
 texture_filter = 0
 texture_repeat = false
 
@@ -2587,7 +2594,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("32_mxw4y")
+albedo_texture = ExtResource("52_60oef")
 texture_filter = 0
 texture_repeat = false
 
@@ -2629,7 +2636,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("33_56tt1")
+albedo_texture = ExtResource("53_cgb4f")
 texture_filter = 0
 texture_repeat = false
 
@@ -2671,7 +2678,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("34_ho1qa")
+albedo_texture = ExtResource("54_42fwl")
 texture_filter = 0
 texture_repeat = false
 
@@ -2713,7 +2720,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("35_ox2c6")
+albedo_texture = ExtResource("55_e0g8m")
 texture_filter = 0
 texture_repeat = false
 
@@ -2755,7 +2762,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("36_yr42b")
+albedo_texture = ExtResource("56_u4tao")
 texture_filter = 0
 texture_repeat = false
 
@@ -2829,7 +2836,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("37_1xmel")
+albedo_texture = ExtResource("57_4bx70")
 texture_filter = 0
 texture_repeat = false
 
@@ -2871,7 +2878,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("38_cc60v")
+albedo_texture = ExtResource("58_iwbw2")
 texture_filter = 0
 texture_repeat = false
 
@@ -2913,7 +2920,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("39_s41uq")
+albedo_texture = ExtResource("59_5sf0e")
 texture_filter = 0
 texture_repeat = false
 
@@ -2987,7 +2994,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("40_fwh21")
+albedo_texture = ExtResource("60_vl35c")
 texture_filter = 0
 texture_repeat = false
 
@@ -3029,7 +3036,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("41_o0yg4")
+albedo_texture = ExtResource("61_o7kql")
 texture_filter = 0
 texture_repeat = false
 
@@ -3205,7 +3212,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("42_uvv8o")
+albedo_texture = ExtResource("62_b1g02")
 texture_filter = 0
 texture_repeat = false
 
@@ -3247,7 +3254,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("43_c6uc6")
+albedo_texture = ExtResource("63_531bq")
 texture_filter = 0
 texture_repeat = false
 
@@ -3257,7 +3264,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("44_lbnqg")
+albedo_texture = ExtResource("64_3efd0")
 texture_filter = 0
 texture_repeat = false
 
@@ -3323,7 +3330,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("45_64u8o")
+albedo_texture = ExtResource("65_pgdqr")
 texture_filter = 0
 texture_repeat = false
 
@@ -3365,7 +3372,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("46_krwoe")
+albedo_texture = ExtResource("66_hvgxy")
 texture_filter = 0
 texture_repeat = false
 
@@ -3407,7 +3414,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("47_4jlc0")
+albedo_texture = ExtResource("67_vq0ox")
 texture_filter = 0
 texture_repeat = false
 
@@ -3449,7 +3456,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("48_npb2q")
+albedo_texture = ExtResource("68_r5cwf")
 texture_filter = 0
 texture_repeat = false
 
@@ -3491,7 +3498,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("49_07fby")
+albedo_texture = ExtResource("69_in54u")
 texture_filter = 0
 texture_repeat = false
 
@@ -3533,7 +3540,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("50_qm778")
+albedo_texture = ExtResource("70_uk1d6")
 texture_filter = 0
 texture_repeat = false
 
@@ -3575,7 +3582,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("51_xbdpl")
+albedo_texture = ExtResource("71_12y0o")
 texture_filter = 0
 texture_repeat = false
 
@@ -3713,7 +3720,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("52_rgg87")
+albedo_texture = ExtResource("72_7u8v1")
 texture_filter = 0
 texture_repeat = false
 
@@ -3787,7 +3794,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("53_vn0gv")
+albedo_texture = ExtResource("73_xi5km")
 texture_filter = 0
 texture_repeat = false
 
@@ -3957,7 +3964,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("54_jnnaw")
+albedo_texture = ExtResource("74_yrumf")
 texture_filter = 0
 texture_repeat = false
 
@@ -4063,7 +4070,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("55_jm06d")
+albedo_texture = ExtResource("75_nwbda")
 texture_filter = 0
 texture_repeat = false
 
@@ -4105,7 +4112,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("56_2gclv")
+albedo_texture = ExtResource("76_jfs1f")
 texture_filter = 0
 texture_repeat = false
 
@@ -4179,7 +4186,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("57_7s46m")
+albedo_texture = ExtResource("77_syn6h")
 texture_filter = 0
 texture_repeat = false
 
@@ -4221,7 +4228,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("58_hdgca")
+albedo_texture = ExtResource("78_36c1m")
 texture_filter = 0
 texture_repeat = false
 
@@ -4263,7 +4270,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("60_ukpo0")
+albedo_texture = ExtResource("79_lvyyd")
 texture_filter = 0
 texture_repeat = false
 
@@ -4305,7 +4312,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("61_puq23")
+albedo_texture = ExtResource("80_4wk6j")
 texture_filter = 0
 texture_repeat = false
 
@@ -4347,7 +4354,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("62_l68r3")
+albedo_texture = ExtResource("81_5avby")
 texture_filter = 0
 texture_repeat = false
 
@@ -4389,7 +4396,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("59_2f3im")
+albedo_texture = ExtResource("82_in1v8")
 texture_filter = 0
 texture_repeat = false
 
@@ -4639,7 +4646,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("63_rvoua")
+albedo_texture = ExtResource("83_bhdot")
 texture_filter = 0
 texture_repeat = false
 
@@ -4681,7 +4688,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("64_rjrcs")
+albedo_texture = ExtResource("84_wsrxq")
 texture_filter = 0
 texture_repeat = false
 
@@ -4723,7 +4730,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("65_swdm2")
+albedo_texture = ExtResource("85_mr502")
 texture_filter = 0
 texture_repeat = false
 
@@ -4765,7 +4772,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("66_0x2vn")
+albedo_texture = ExtResource("86_f8osf")
 texture_filter = 0
 texture_repeat = false
 
@@ -4807,7 +4814,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("67_1tjcv")
+albedo_texture = ExtResource("87_evvis")
 texture_filter = 0
 texture_repeat = false
 
@@ -4849,7 +4856,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("68_7rut5")
+albedo_texture = ExtResource("88_lfspr")
 texture_filter = 0
 texture_repeat = false
 
@@ -4891,7 +4898,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("69_nimc7")
+albedo_texture = ExtResource("89_a33qc")
 texture_filter = 0
 texture_repeat = false
 
@@ -4933,7 +4940,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("70_667pk")
+albedo_texture = ExtResource("90_p1x8d")
 texture_filter = 0
 texture_repeat = false
 
@@ -4975,7 +4982,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("71_gjhgk")
+albedo_texture = ExtResource("91_0665c")
 texture_filter = 0
 texture_repeat = false
 
@@ -5049,7 +5056,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("72_5ipr4")
+albedo_texture = ExtResource("92_ddipd")
 texture_filter = 0
 texture_repeat = false
 
@@ -5091,7 +5098,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("73_vtm3k")
+albedo_texture = ExtResource("93_1pbty")
 texture_filter = 0
 texture_repeat = false
 
@@ -5165,7 +5172,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("74_4gg06")
+albedo_texture = ExtResource("94_tp3xi")
 texture_filter = 0
 texture_repeat = false
 
@@ -5207,7 +5214,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("75_pmhtm")
+albedo_texture = ExtResource("95_m6m2y")
 texture_filter = 0
 texture_repeat = false
 
@@ -5249,7 +5256,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("76_pv6bk")
+albedo_texture = ExtResource("96_e6ls2")
 texture_filter = 0
 texture_repeat = false
 
@@ -5259,7 +5266,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("77_2jeba")
+albedo_texture = ExtResource("97_tkuse")
 texture_filter = 0
 texture_repeat = false
 
@@ -5325,7 +5332,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("78_dna8o")
+albedo_texture = ExtResource("98_52oub")
 texture_filter = 0
 texture_repeat = false
 
@@ -5367,7 +5374,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("79_6s56y")
+albedo_texture = ExtResource("99_1fw4s")
 texture_filter = 0
 texture_repeat = false
 
@@ -5409,7 +5416,7 @@ transparency = 2
 alpha_scissor_threshold = 0.05
 alpha_antialiasing_mode = 0
 cull_mode = 2
-albedo_texture = ExtResource("80_sv2ly")
+albedo_texture = ExtResource("100_rlb6l")
 texture_filter = 0
 texture_repeat = false
 
@@ -5836,13 +5843,13 @@ _data = {
 }
 
 [node name="cinamatica n2" type="Node3D"]
-script = ExtResource("1_jtlin")
+script = ExtResource("1_7po0y")
 
-[node name="blockbench_export" parent="." instance=ExtResource("1_mmfq5")]
+[node name="blockbench_export" parent="." instance=ExtResource("2_j7bes")]
 transform = Transform3D(0.43972, 0, -0.117823, 0, 0.455232, 0, 0.117823, 0, 0.43972, 15.3732, 0.900839, -12.6239)
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("1_2q6qu")
+mesh_library = ExtResource("3_c00ss")
 cell_size = Vector3(3, 2, 3)
 data = {
 "cells": PackedInt32Array(65535, 0, 0, 0, 0, 0, 65528, 65530, 0, 65528, 65531, 0, 65528, 65532, 0, 65528, 65533, 0, 65528, 65534, 0, 65528, 65535, 0, 65528, 0, 0, 65529, 65530, 0, 65529, 65531, 0, 65529, 65532, 0, 65529, 65533, 0, 65529, 65534, 0, 65529, 65535, 0, 65529, 0, 0, 65530, 65530, 0, 65530, 65531, 0, 65530, 65532, 0, 65530, 65533, 0, 65530, 65534, 0, 65530, 65535, 0, 65531, 65530, 0, 65531, 65531, 0, 65531, 65532, 0, 65531, 65533, 0, 65531, 65534, 0, 65531, 65535, 0, 65531, 0, 0, 65532, 65530, 0, 65532, 65531, 0, 65532, 65532, 0, 65532, 65533, 0, 65532, 65534, 0, 65532, 65535, 0, 65532, 0, 0, 65533, 65530, 0, 65533, 65531, 0, 65533, 65532, 0, 65533, 65533, 0, 65533, 65534, 0, 65533, 65535, 0, 65533, 0, 0, 65534, 65530, 0, 65534, 65531, 0, 65534, 65532, 0, 65534, 65533, 0, 65534, 65534, 0, 65535, 65530, 0, 65535, 65531, 0, 65535, 65532, 0, 65535, 65533, 0, 65535, 65534, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 1, 65530, 0, 1, 65531, 0, 1, 65532, 0, 1, 65533, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 0, 1, 1, 0, 1, 2, 0, 1, 3, 0, 2, 65530, 0, 2, 65531, 0, 2, 65532, 0, 2, 65533, 0, 2, 65534, 0, 2, 65535, 0, 2, 0, 0, 2, 1, 0, 2, 2, 0, 2, 3, 0, 3, 65530, 0, 3, 65531, 0, 3, 65532, 0, 3, 65533, 0, 3, 65534, 0, 3, 65535, 0, 3, 0, 0, 3, 1, 0, 3, 2, 0, 3, 3, 0, 4, 65530, 0, 4, 65531, 0, 4, 65532, 0, 4, 65533, 0, 4, 65534, 0, 4, 65535, 0, 4, 0, 0, 4, 1, 0, 4, 2, 0, 4, 3, 0, 5, 65530, 0, 5, 65531, 0, 5, 65532, 0, 5, 65533, 0, 5, 65534, 0, 5, 65535, 0, 5, 0, 0, 5, 1, 0, 5, 2, 0, 5, 3, 0, 6, 65530, 0, 6, 65531, 0, 6, 65532, 0, 6, 65533, 0, 6, 65534, 0, 6, 65535, 0, 6, 0, 0, 6, 1, 0, 6, 2, 0, 6, 3, 0, 7, 65530, 0, 7, 65531, 0, 7, 65532, 0, 7, 65533, 0, 7, 65534, 0, 7, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 7, 3, 0, 65528, 1, 0, 65528, 2, 0, 65528, 3, 0, 65529, 1, 0, 65529, 2, 0, 65529, 3, 0, 65530, 1, 0, 65530, 2, 0, 65530, 3, 0, 65531, 1, 0, 65531, 2, 0, 65531, 3, 0, 65532, 1, 0, 65532, 2, 0, 65532, 3, 0, 65533, 1, 0, 65533, 2, 0, 65533, 3, 0, 65534, 1, 0, 65534, 2, 0, 65534, 3, 0, 65535, 1, 0, 65535, 2, 0, 65535, 3, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 65525, 65523, 0, 65525, 65524, 0, 65525, 65525, 0, 65525, 65526, 0, 65525, 65527, 0, 65525, 65528, 0, 65525, 65529, 0, 65526, 65523, 0, 65526, 65524, 0, 65526, 65525, 0, 65526, 65526, 0, 65526, 65527, 0, 65526, 65528, 0, 65526, 65529, 0, 65527, 65523, 0, 65527, 65524, 0, 65527, 65525, 0, 65527, 65526, 0, 65527, 65527, 0, 65527, 65528, 0, 65527, 65529, 0, 65528, 65523, 0, 65528, 65524, 0, 65528, 65525, 0, 65528, 65526, 0, 65528, 65527, 0, 65528, 65528, 0, 65528, 65529, 0, 65529, 65523, 0, 65529, 65528, 0, 65529, 65529, 0, 65530, 65523, 0, 65530, 65526, 0, 65530, 65527, 0, 65530, 65529, 0, 65531, 65523, 0, 65531, 65524, 0, 65531, 65526, 0, 65531, 65527, 0, 65531, 65528, 0, 65531, 65529, 0, 65532, 65523, 0, 65532, 65524, 0, 65532, 65525, 0, 65532, 65527, 0, 65532, 65528, 0, 65532, 65529, 0, 65533, 65524, 0, 65533, 65525, 0, 65533, 65527, 0, 65533, 65528, 0, 65533, 65529, 0, 65534, 65523, 0, 65534, 65525, 0, 65534, 65526, 0, 65534, 65527, 0, 65534, 65528, 0, 65534, 65529, 0, 65535, 65523, 0, 65535, 65524, 0, 65535, 65525, 0, 65535, 65527, 0, 65535, 65528, 0, 65535, 65529, 0, 0, 65523, 0, 0, 65524, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 1, 65523, 0, 1, 65524, 0, 1, 65527, 0, 1, 65528, 0, 1, 65529, 0, 2, 65523, 0, 2, 65524, 0, 2, 65526, 0, 3, 65523, 0, 3, 65524, 0, 3, 65525, 0, 3, 65526, 0, 3, 65527, 0, 3, 65528, 0, 4, 65523, 0, 4, 65524, 0, 4, 65525, 0, 4, 65526, 0, 4, 65527, 0, 4, 65528, 0, 4, 65529, 0, 5, 65523, 0, 5, 65524, 0, 5, 65525, 0, 5, 65526, 0, 5, 65527, 0, 5, 65528, 0, 5, 65529, 0, 6, 65523, 0, 6, 65524, 0, 6, 65525, 0, 6, 65526, 0, 6, 65527, 0, 6, 65528, 0, 6, 65529, 0, 7, 65523, 0, 7, 65524, 0, 7, 65525, 0, 7, 65526, 0, 7, 65527, 0, 7, 65528, 0, 7, 65529, 0, 8, 65523, 0, 8, 65524, 0, 8, 65525, 0, 8, 65526, 0, 8, 65527, 0, 8, 65528, 0, 8, 65529, 0, 9, 65523, 0, 9, 65524, 0, 9, 65525, 0, 9, 65526, 0, 9, 65527, 0, 9, 65528, 0, 9, 65529, 0, 10, 65523, 0, 10, 65524, 0, 10, 65525, 0, 10, 65526, 0, 10, 65527, 0, 10, 65528, 0, 10, 65529, 0, 65518, 65525, 0, 65518, 65526, 0, 65518, 65527, 0, 65518, 65528, 0, 65518, 65529, 0, 65518, 65530, 0, 65518, 65531, 0, 65519, 65525, 0, 65519, 65526, 0, 65519, 65527, 0, 65519, 65528, 0, 65519, 65529, 0, 65519, 65530, 0, 65519, 65531, 0, 65520, 65525, 0, 65520, 65526, 0, 65520, 65527, 0, 65520, 65528, 0, 65520, 65529, 0, 65520, 65530, 0, 65520, 65531, 0, 65521, 65525, 0, 65521, 65526, 0, 65521, 65527, 0, 65521, 65528, 0, 65521, 65529, 0, 65521, 65530, 0, 65521, 65531, 0, 65522, 65525, 0, 65522, 65526, 0, 65522, 65527, 0, 65522, 65528, 0, 65522, 65529, 0, 65522, 65530, 0, 65522, 65531, 0, 65523, 65525, 0, 65523, 65526, 0, 65523, 65527, 0, 65523, 65528, 0, 65523, 65529, 0, 65523, 65530, 0, 65523, 65531, 0, 65524, 65525, 0, 65524, 65526, 0, 65524, 65527, 0, 65524, 65528, 0, 65524, 65529, 0, 65524, 65530, 0, 65524, 65531, 0, 65525, 65530, 0, 65525, 65531, 0, 65526, 65530, 0, 65526, 65531, 0, 65529, 65524, 0, 65529, 65525, 0, 65529, 65526, 0, 65529, 65527, 0, 65530, 65528, 0, 65533, 65523, 0, 65534, 65524, 0, 0, 65525, 0, 1, 65526, 0, 2, 65527, 0, 2, 65528, 0, 2, 65529, 0, 3, 65529, 0, 65527, 65530, 0, 65527, 65531, 0, 65527, 65532, 0, 65526, 65532, 0, 65526, 65533, 0, 65527, 65533, 0, 65527, 65534, 0, 65527, 65535, 0, 65527, 0, 0, 65527, 1, 0, 65526, 1, 0, 65526, 2, 0, 65527, 2, 0, 65527, 3, 0, 65526, 3, 0, 65525, 3, 0, 65524, 3, 0, 65523, 3, 0, 65522, 3, 0, 65522, 2, 0, 65521, 2, 0, 65520, 2, 0, 65520, 1, 0, 65520, 0, 0, 65519, 0, 0, 65520, 65535, 0, 65520, 65534, 0, 65519, 65534, 0, 65519, 65533, 0, 65519, 65532, 0, 65518, 65532, 0, 65518, 65533, 0, 65518, 65534, 0, 65519, 65535, 0, 65518, 0, 0, 65518, 65535, 0, 65517, 65535, 0, 65520, 65533, 0, 65521, 65534, 0, 65521, 65535, 0, 65521, 0, 0, 65521, 1, 0, 65520, 65532, 0, 65522, 0, 0, 65523, 0, 0, 65522, 65535, 0, 65522, 65534, 0, 65522, 65533, 0, 65521, 65533, 0, 65521, 65532, 0, 65522, 1, 0, 65523, 1, 0, 65523, 2, 0, 65523, 65535, 0, 65523, 65534, 0, 65524, 1, 0, 65524, 2, 0, 65525, 2, 0, 65525, 1, 0, 65525, 0, 0, 65524, 0, 0, 65524, 65535, 0, 65524, 65534, 0, 65524, 65533, 0, 65524, 65532, 0, 65523, 65533, 0, 65523, 65532, 0, 65522, 65532, 0, 65525, 65534, 0, 65525, 65535, 0, 65526, 65535, 0, 65526, 65534, 0, 65525, 65532, 0, 65525, 65533, 0, 65526, 0, 0, 65530, 0, 0, 65518, 1, 0, 65519, 1, 0, 65518, 2, 0, 65519, 2, 0, 65520, 3, 0, 65521, 3, 0, 65519, 65523, 0, 65520, 65523, 0, 65521, 65524, 0, 65519, 65522, 0, 65519, 65524, 0, 65520, 65522, 0, 65520, 65524, 0, 65521, 65522, 0, 65521, 65523, 0, 65522, 65522, 0, 65522, 65523, 0, 65522, 65524, 0, 65523, 65522, 0, 65523, 65523, 0, 65523, 65524, 0, 65524, 65522, 0, 65524, 65523, 0, 65524, 65524, 0, 2, 65525, 0, 1, 65525, 0, 0, 65526, 0, 65535, 65526, 0, 65533, 65526, 0, 65532, 65526, 0, 65531, 65525, 0, 65530, 65525, 0, 65530, 65524, 0, 8, 65530, 0, 8, 65531, 0, 8, 65532, 0, 8, 65533, 0, 8, 65534, 0, 8, 65535, 0, 8, 0, 0, 8, 2, 0, 8, 3, 0, 9, 65530, 0, 9, 65531, 0, 9, 65532, 0, 9, 65533, 0, 9, 65534, 0, 9, 65535, 0, 9, 0, 0, 9, 2, 0, 9, 3, 0, 10, 65530, 0, 10, 65531, 0, 10, 65532, 0, 10, 65533, 0, 10, 65534, 0, 10, 65535, 0, 10, 0, 0, 10, 2, 0, 10, 3, 0, 9, 1, 0, 8, 1, 0, 10, 1, 0, 65525, 65515, 0, 65525, 65516, 0, 65525, 65517, 0, 65525, 65518, 0, 65525, 65519, 0, 65525, 65520, 0, 65525, 65521, 0, 65525, 65522, 0, 65526, 65515, 0, 65526, 65516, 0, 65526, 65517, 0, 65526, 65518, 0, 65526, 65519, 0, 65526, 65520, 0, 65526, 65521, 0, 65526, 65522, 0, 65527, 65515, 0, 65527, 65516, 0, 65527, 65517, 0, 65527, 65518, 0, 65527, 65519, 0, 65527, 65520, 0, 65527, 65521, 0, 65527, 65522, 0, 65528, 65515, 0, 65528, 65516, 0, 65528, 65517, 0, 65528, 65518, 0, 65528, 65519, 0, 65528, 65520, 0, 65528, 65521, 0, 65528, 65522, 0, 65529, 65515, 0, 65529, 65516, 0, 65529, 65517, 0, 65529, 65518, 0, 65529, 65519, 0, 65529, 65520, 0, 65529, 65521, 0, 65529, 65522, 0, 65530, 65515, 0, 65530, 65516, 0, 65530, 65517, 0, 65530, 65518, 0, 65530, 65519, 0, 65530, 65520, 0, 65530, 65521, 0, 65530, 65522, 0, 65531, 65515, 0, 65531, 65516, 0, 65531, 65517, 0, 65531, 65518, 0, 65531, 65519, 0, 65531, 65520, 0, 65531, 65521, 0, 65531, 65522, 0, 65532, 65515, 0, 65532, 65516, 0, 65532, 65517, 0, 65532, 65518, 0, 65532, 65519, 0, 65532, 65520, 0, 65532, 65521, 0, 65532, 65522, 0, 65533, 65515, 0, 65533, 65516, 0, 65533, 65517, 0, 65533, 65518, 0, 65533, 65519, 0, 65533, 65520, 0, 65533, 65521, 0, 65533, 65522, 0, 65534, 65515, 0, 65534, 65516, 0, 65534, 65517, 0, 65534, 65518, 0, 65534, 65519, 0, 65534, 65520, 0, 65534, 65521, 0, 65534, 65522, 0, 65535, 65515, 0, 65535, 65516, 0, 65535, 65517, 0, 65535, 65518, 0, 65535, 65519, 0, 65535, 65520, 0, 65535, 65521, 0, 65535, 65522, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 1, 65515, 0, 1, 65516, 0, 1, 65517, 0, 1, 65518, 0, 1, 65519, 0, 1, 65520, 0, 1, 65521, 0, 1, 65522, 0, 2, 65515, 0, 2, 65516, 0, 2, 65517, 0, 2, 65518, 0, 2, 65519, 0, 2, 65520, 0, 2, 65521, 0, 2, 65522, 0, 3, 65515, 0, 3, 65516, 0, 3, 65517, 0, 3, 65518, 0, 3, 65519, 0, 3, 65520, 0, 3, 65521, 0, 3, 65522, 0, 4, 65515, 0, 4, 65516, 0, 4, 65517, 0, 4, 65518, 0, 4, 65519, 0, 4, 65520, 0, 4, 65521, 0, 4, 65522, 0, 5, 65515, 0, 5, 65516, 0, 5, 65517, 0, 5, 65518, 0, 5, 65519, 0, 5, 65520, 0, 5, 65521, 0, 5, 65522, 0, 6, 65515, 0, 6, 65516, 0, 6, 65517, 0, 6, 65518, 0, 6, 65519, 0, 6, 65520, 0, 6, 65521, 0, 6, 65522, 0, 7, 65515, 0, 7, 65516, 0, 7, 65517, 0, 7, 65518, 0, 7, 65519, 0, 7, 65520, 0, 7, 65521, 0, 7, 65522, 0, 8, 65515, 0, 8, 65516, 0, 8, 65517, 0, 8, 65518, 0, 8, 65519, 0, 8, 65520, 0, 8, 65521, 0, 8, 65522, 0, 9, 65515, 0, 9, 65516, 0, 9, 65517, 0, 9, 65518, 0, 9, 65519, 0, 9, 65520, 0, 9, 65521, 0, 9, 65522, 0, 10, 65515, 0, 10, 65516, 0, 10, 65517, 0, 10, 65518, 0, 10, 65519, 0, 10, 65520, 0, 10, 65521, 0, 10, 65522, 0, 65520, 65515, 0, 65520, 65516, 0, 65520, 65517, 0, 65520, 65518, 0, 65520, 65519, 0, 65520, 65520, 0, 65520, 65521, 0, 65521, 65515, 0, 65521, 65516, 0, 65521, 65517, 0, 65521, 65518, 0, 65521, 65519, 0, 65521, 65520, 0, 65521, 65521, 0, 65522, 65515, 0, 65522, 65516, 0, 65522, 65517, 0, 65522, 65518, 0, 65522, 65519, 0, 65522, 65520, 0, 65522, 65521, 0, 65523, 65515, 0, 65523, 65516, 0, 65523, 65517, 0, 65523, 65518, 0, 65523, 65519, 0, 65523, 65520, 0, 65523, 65521, 0, 65524, 65515, 0, 65524, 65516, 0, 65524, 65517, 0, 65524, 65518, 0, 65524, 65519, 0, 65524, 65520, 0, 65524, 65521, 0, 65518, 65515, 0, 65518, 65516, 0, 65518, 65517, 0, 65518, 65518, 0, 65518, 65519, 0, 65518, 65520, 0, 65518, 65521, 0, 65518, 65522, 0, 65518, 65523, 0, 65518, 65524, 0, 65519, 65515, 0, 65519, 65516, 0, 65519, 65517, 0, 65519, 65518, 0, 65519, 65519, 0, 65519, 65520, 0, 65519, 65521, 0, 65508, 65515, 1048576, 65508, 65516, 1048576, 65508, 65517, 1048576, 65508, 65518, 1048576, 65508, 65519, 1048576, 65508, 65520, 1048576, 65508, 65521, 1048576, 65508, 65522, 1048576, 65508, 65523, 1048576, 65508, 65524, 1048576, 65508, 65525, 1048576, 65508, 65526, 1048576, 65508, 65527, 1048576, 65508, 65528, 1048576, 65508, 65529, 1048576, 65508, 65530, 1048576, 65508, 65531, 1048576, 65508, 65532, 1048576, 65508, 65533, 1048576, 65508, 65534, 0, 65508, 65535, 0, 65508, 0, 0, 65508, 1, 0, 65509, 65515, 1048576, 65509, 65516, 1048576, 65509, 65517, 1048576, 65509, 65518, 1048576, 65509, 65519, 1048576, 65509, 65520, 1048576, 65509, 65521, 1048576, 65509, 65522, 1048576, 65509, 65523, 1048576, 65509, 65524, 1048576, 65509, 65525, 1048576, 65509, 65526, 1048576, 65509, 65527, 1048576, 65509, 65528, 1048576, 65509, 65529, 1048576, 65509, 65530, 1048576, 65509, 65531, 1048576, 65509, 65532, 1048576, 65509, 65533, 1048576, 65509, 65534, 0, 65509, 65535, 0, 65509, 0, 0, 65509, 1, 0, 65510, 65515, 1048576, 65510, 65516, 1048576, 65510, 65517, 1048576, 65510, 65518, 1048576, 65510, 65519, 1048576, 65510, 65520, 1048576, 65510, 65521, 1048576, 65510, 65522, 1048576, 65510, 65523, 1048576, 65510, 65524, 1048576, 65510, 65525, 1048576, 65510, 65526, 1048576, 65510, 65527, 1048576, 65510, 65528, 1048576, 65510, 65529, 1048576, 65510, 65530, 1048576, 65510, 65531, 1048576, 65510, 65532, 1048576, 65510, 65533, 1048576, 65510, 65534, 0, 65510, 65535, 0, 65510, 0, 0, 65510, 1, 0, 65511, 65515, 1048576, 65511, 65516, 1048576, 65511, 65517, 1048576, 65511, 65518, 1048576, 65511, 65519, 1048576, 65511, 65520, 1048576, 65511, 65521, 1048576, 65511, 65522, 1048576, 65511, 65523, 1048576, 65511, 65524, 1048576, 65511, 65525, 1048576, 65511, 65526, 1048576, 65511, 65527, 1048576, 65511, 65528, 1048576, 65511, 65529, 1048576, 65511, 65530, 1048576, 65511, 65531, 1048576, 65511, 65532, 1048576, 65511, 65533, 1048576, 65511, 65534, 0, 65511, 65535, 0, 65511, 0, 0, 65511, 1, 0, 65512, 65515, 1048576, 65512, 65516, 1048576, 65512, 65517, 1048576, 65512, 65518, 1048576, 65512, 65519, 1048576, 65512, 65520, 1048576, 65512, 65521, 1048576, 65512, 65522, 1048576, 65512, 65523, 1048576, 65512, 65524, 1048576, 65512, 65525, 1048576, 65512, 65526, 1048576, 65512, 65527, 1048576, 65512, 65528, 1048576, 65512, 65529, 1048576, 65512, 65530, 1048576, 65512, 65531, 1048576, 65512, 65532, 1048576, 65512, 65533, 1048576, 65512, 65534, 0, 65512, 65535, 0, 65512, 0, 0, 65512, 1, 0, 65513, 65515, 1048576, 65513, 65516, 1048576, 65513, 65517, 1048576, 65513, 65518, 1048576, 65513, 65519, 1048576, 65513, 65520, 1048576, 65513, 65521, 1048576, 65513, 65522, 1048576, 65513, 65523, 1048576, 65513, 65524, 1048576, 65513, 65525, 1048576, 65513, 65526, 1048576, 65513, 65527, 1048576, 65513, 65528, 1048576, 65513, 65529, 1048576, 65513, 65530, 1048576, 65513, 65531, 1048576, 65513, 65532, 1048576, 65513, 65533, 1048576, 65513, 65534, 0, 65513, 65535, 0, 65513, 0, 0, 65513, 1, 0, 65514, 65515, 1048576, 65514, 65516, 1048576, 65514, 65517, 1048576, 65514, 65518, 1048576, 65514, 65519, 1048576, 65514, 65520, 1048576, 65514, 65521, 1048576, 65514, 65522, 1048576, 65514, 65523, 1048576, 65514, 65524, 1048576, 65514, 65525, 1048576, 65514, 65526, 1048576, 65514, 65527, 1048576, 65514, 65528, 1048576, 65514, 65529, 1048576, 65514, 65530, 1048576, 65514, 65531, 1048576, 65514, 65532, 1048576, 65514, 65533, 1048576, 65514, 65534, 0, 65514, 65535, 0, 65514, 0, 0, 65514, 1, 0, 65515, 65515, 1048576, 65515, 65516, 1048576, 65515, 65517, 1048576, 65515, 65518, 1048576, 65515, 65519, 1048576, 65515, 65520, 1048576, 65515, 65521, 1048576, 65515, 65522, 1048576, 65515, 65523, 1048576, 65515, 65524, 1048576, 65515, 65525, 1048576, 65515, 65526, 1048576, 65515, 65527, 1048576, 65515, 65528, 1048576, 65515, 65529, 1048576, 65515, 65530, 1048576, 65515, 65531, 1048576, 65515, 65532, 1048576, 65515, 65533, 1048576, 65515, 65534, 0, 65515, 65535, 0, 65515, 0, 0, 65515, 1, 0, 65516, 65515, 0, 65516, 65516, 0, 65516, 65517, 0, 65516, 65518, 0, 65516, 65519, 0, 65516, 65520, 0, 65516, 65521, 0, 65516, 65522, 0, 65516, 65523, 0, 65516, 65524, 0, 65516, 65525, 0, 65516, 65526, 0, 65516, 65527, 0, 65516, 65528, 0, 65516, 65529, 0, 65516, 65530, 0, 65516, 65531, 0, 65516, 65532, 0, 65516, 65533, 0, 65516, 65534, 0, 65516, 65535, 0, 65516, 0, 0, 65516, 1, 0, 65517, 65515, 0, 65517, 65516, 0, 65517, 65517, 0, 65517, 65518, 0, 65517, 65519, 0, 65517, 65520, 0, 65517, 65521, 0, 65517, 65522, 0, 65517, 65523, 0, 65517, 65524, 0, 65517, 65525, 0, 65517, 65526, 0, 65517, 65527, 0, 65517, 65528, 0, 65517, 65529, 0, 65517, 65530, 0, 65517, 65531, 0, 65517, 65532, 0, 65517, 65533, 0, 65517, 65534, 0, 65517, 0, 0, 65517, 1, 0, 65534, 65535, 0, 65535, 65535, 0, 65534, 0, 0, 65508, 65501, 1048576, 65508, 65502, 1048576, 65508, 65503, 1048576, 65508, 65504, 1048576, 65508, 65505, 1048576, 65508, 65506, 1048576, 65508, 65507, 1048576, 65508, 65508, 1048576, 65508, 65509, 1048576, 65508, 65510, 1048576, 65508, 65511, 1048576, 65508, 65512, 1048576, 65508, 65513, 1048576, 65508, 65514, 1048576, 65509, 65501, 1048576, 65509, 65502, 1048576, 65509, 65503, 1048576, 65509, 65504, 1048576, 65509, 65505, 1048576, 65509, 65506, 1048576, 65509, 65507, 1048576, 65509, 65508, 1048576, 65509, 65509, 1048576, 65509, 65510, 1048576, 65509, 65511, 1048576, 65509, 65512, 1048576, 65509, 65513, 1048576, 65509, 65514, 1048576, 65510, 65501, 1048576, 65510, 65502, 1048576, 65510, 65503, 1048576, 65510, 65504, 1048576, 65510, 65505, 1048576, 65510, 65506, 1048576, 65510, 65507, 1048576, 65510, 65508, 1048576, 65510, 65509, 1048576, 65510, 65510, 1048576, 65510, 65511, 1048576, 65510, 65512, 1048576, 65510, 65513, 1048576, 65510, 65514, 1048576, 65511, 65501, 1048576, 65511, 65502, 1048576, 65511, 65503, 1048576, 65511, 65504, 1048576, 65511, 65505, 1048576, 65511, 65506, 1048576, 65511, 65507, 1048576, 65511, 65508, 1048576, 65511, 65509, 1048576, 65511, 65510, 1048576, 65511, 65511, 1048576, 65511, 65512, 1048576, 65511, 65513, 1048576, 65511, 65514, 1048576, 65512, 65501, 1048576, 65512, 65502, 1048576, 65512, 65503, 1048576, 65512, 65504, 1048576, 65512, 65505, 1048576, 65512, 65506, 1048576, 65512, 65507, 1048576, 65512, 65508, 1048576, 65512, 65509, 1048576, 65512, 65510, 1048576, 65512, 65511, 1048576, 65512, 65512, 1048576, 65512, 65513, 1048576, 65512, 65514, 1048576, 65513, 65501, 1048576, 65513, 65502, 1048576, 65513, 65503, 1048576, 65513, 65504, 1048576, 65513, 65505, 1048576, 65513, 65506, 1048576, 65513, 65507, 1048576, 65513, 65508, 1048576, 65513, 65509, 1048576, 65513, 65510, 1048576, 65513, 65511, 1048576, 65513, 65512, 1048576, 65513, 65513, 1048576, 65513, 65514, 1048576, 65514, 65501, 1048576, 65514, 65502, 1048576, 65514, 65503, 1048576, 65514, 65504, 1048576, 65514, 65505, 1048576, 65514, 65506, 1048576, 65514, 65507, 1048576, 65514, 65508, 1048576, 65514, 65509, 1048576, 65514, 65510, 1048576, 65514, 65511, 1048576, 65514, 65512, 1048576, 65514, 65513, 1048576, 65514, 65514, 1048576, 65515, 65501, 1048576, 65515, 65502, 1048576, 65515, 65503, 1048576, 65515, 65504, 1048576, 65515, 65505, 1048576, 65515, 65506, 1048576, 65515, 65507, 1048576, 65515, 65508, 1048576, 65515, 65509, 1048576, 65515, 65510, 1048576, 65515, 65511, 1048576, 65515, 65512, 1048576, 65515, 65513, 1048576, 65515, 65514, 1048576, 65516, 65501, 1048576, 65516, 65502, 1048576, 65516, 65503, 1048576, 65516, 65504, 1048576, 65516, 65505, 1048576, 65516, 65506, 1048576, 65516, 65507, 1048576, 65516, 65508, 1048576, 65516, 65509, 1048576, 65516, 65510, 1048576, 65516, 65511, 1048576, 65516, 65512, 1048576, 65516, 65513, 1048576, 65516, 65514, 1048576, 65517, 65501, 1048576, 65517, 65502, 1048576, 65517, 65503, 1048576, 65517, 65504, 1048576, 65517, 65505, 1048576, 65517, 65506, 1048576, 65517, 65507, 1048576, 65517, 65508, 1048576, 65517, 65509, 1048576, 65517, 65510, 1048576, 65517, 65511, 1048576, 65517, 65512, 1048576, 65517, 65513, 1048576, 65517, 65514, 1048576, 65518, 65501, 1048576, 65518, 65502, 1048576, 65518, 65503, 1048576, 65518, 65504, 1048576, 65518, 65505, 1048576, 65518, 65506, 1048576, 65518, 65507, 1048576, 65518, 65508, 1048576, 65518, 65509, 1048576, 65518, 65510, 1048576, 65518, 65511, 1048576, 65518, 65512, 1048576, 65518, 65513, 1048576, 65518, 65514, 1048576, 65519, 65501, 1048576, 65519, 65502, 1048576, 65519, 65503, 1048576, 65519, 65504, 1048576, 65519, 65505, 1048576, 65519, 65506, 1048576, 65519, 65507, 1048576, 65519, 65508, 1048576, 65519, 65509, 1048576, 65519, 65510, 1048576, 65519, 65511, 1048576, 65519, 65512, 1048576, 65519, 65513, 1048576, 65519, 65514, 1048576, 65520, 65501, 1048576, 65520, 65502, 1048576, 65520, 65503, 1048576, 65520, 65504, 1048576, 65520, 65505, 1048576, 65520, 65506, 1048576, 65520, 65507, 1048576, 65520, 65508, 1048576, 65520, 65509, 1048576, 65520, 65510, 1048576, 65520, 65511, 1048576, 65520, 65512, 1048576, 65520, 65513, 1048576, 65520, 65514, 1048576, 65521, 65501, 1048576, 65521, 65502, 1048576, 65521, 65503, 1048576, 65521, 65504, 1048576, 65521, 65505, 1048576, 65521, 65506, 1048576, 65521, 65507, 1048576, 65521, 65508, 1048576, 65521, 65509, 1048576, 65521, 65510, 1048576, 65521, 65511, 1048576, 65521, 65512, 1048576, 65521, 65513, 1048576, 65521, 65514, 1048576, 65522, 65501, 1048576, 65522, 65502, 1048576, 65522, 65503, 1048576, 65522, 65504, 1048576, 65522, 65505, 1048576, 65522, 65506, 1048576, 65522, 65507, 1048576, 65522, 65508, 1048576, 65522, 65509, 1048576, 65522, 65510, 1048576, 65522, 65511, 1048576, 65522, 65512, 1048576, 65522, 65513, 1048576, 65522, 65514, 1048576, 65523, 65501, 1048576, 65523, 65502, 1048576, 65523, 65503, 1048576, 65523, 65504, 1048576, 65523, 65505, 1048576, 65523, 65506, 1048576, 65523, 65507, 1048576, 65523, 65508, 1048576, 65523, 65509, 1048576, 65523, 65510, 1048576, 65523, 65511, 1048576, 65523, 65512, 1048576, 65523, 65513, 1048576, 65523, 65514, 1048576, 65524, 65501, 1048576, 65524, 65502, 1048576, 65524, 65503, 1048576, 65524, 65504, 1048576, 65524, 65505, 1048576, 65524, 65506, 1048576, 65524, 65507, 1048576, 65524, 65508, 1048576, 65524, 65509, 1048576, 65524, 65510, 1048576, 65524, 65511, 1048576, 65524, 65512, 1048576, 65524, 65513, 1048576, 65524, 65514, 1048576, 65525, 65501, 1048576, 65525, 65502, 1048576, 65525, 65503, 1048576, 65525, 65504, 1048576, 65525, 65505, 1048576, 65525, 65506, 1048576, 65525, 65507, 1048576, 65525, 65508, 1048576, 65525, 65509, 1048576, 65525, 65510, 1048576, 65525, 65511, 1048576, 65525, 65512, 1048576, 65525, 65513, 1048576, 65525, 65514, 1048576, 65526, 65501, 1048576, 65526, 65502, 1048576, 65526, 65503, 1048576, 65526, 65504, 1048576, 65526, 65505, 1048576, 65526, 65506, 1048576, 65526, 65507, 1048576, 65526, 65508, 1048576, 65526, 65509, 1048576, 65526, 65510, 1048576, 65526, 65511, 1048576, 65526, 65512, 1048576, 65526, 65513, 1048576, 65526, 65514, 1048576, 65527, 65501, 1048576, 65527, 65502, 1048576, 65527, 65503, 1048576, 65527, 65504, 1048576, 65527, 65505, 1048576, 65527, 65506, 1048576, 65527, 65507, 1048576, 65527, 65508, 1048576, 65527, 65509, 1048576, 65527, 65510, 1048576, 65527, 65511, 1048576, 65527, 65512, 1048576, 65527, 65513, 1048576, 65527, 65514, 1048576, 65528, 65501, 1048576, 65528, 65502, 1048576, 65528, 65503, 1048576, 65528, 65504, 1048576, 65528, 65505, 1048576, 65528, 65506, 1048576, 65528, 65507, 1048576, 65528, 65508, 1048576, 65528, 65509, 1048576, 65528, 65510, 1048576, 65528, 65511, 1048576, 65528, 65512, 1048576, 65528, 65513, 1048576, 65528, 65514, 1048576, 65529, 65501, 1048576, 65529, 65502, 1048576, 65529, 65503, 1048576, 65529, 65504, 1048576, 65529, 65505, 1048576, 65529, 65506, 1048576, 65529, 65507, 1048576, 65529, 65508, 1048576, 65529, 65509, 1048576, 65529, 65510, 1048576, 65529, 65511, 1048576, 65529, 65512, 1048576, 65529, 65513, 1048576, 65529, 65514, 1048576, 65530, 65501, 1048576, 65530, 65502, 1048576, 65530, 65503, 1048576, 65530, 65504, 1048576, 65530, 65505, 1048576, 65530, 65506, 1048576, 65530, 65507, 1048576, 65530, 65508, 1048576, 65530, 65509, 1048576, 65530, 65510, 1048576, 65530, 65511, 1048576, 65530, 65512, 1048576, 65530, 65513, 1048576, 65530, 65514, 1048576, 65531, 65501, 1048576, 65531, 65502, 1048576, 65531, 65503, 1048576, 65531, 65504, 1048576, 65531, 65505, 1048576, 65531, 65506, 1048576, 65531, 65507, 1048576, 65531, 65508, 1048576, 65531, 65509, 1048576, 65531, 65510, 1048576, 65531, 65511, 1048576, 65531, 65512, 1048576, 65531, 65513, 1048576, 65531, 65514, 1048576, 65532, 65501, 1048576, 65532, 65502, 1048576, 65532, 65503, 1048576, 65532, 65504, 1048576, 65532, 65505, 1048576, 65532, 65506, 1048576, 65532, 65507, 1048576, 65532, 65508, 1048576, 65532, 65509, 1048576, 65532, 65510, 1048576, 65532, 65511, 1048576, 65532, 65512, 1048576, 65532, 65513, 1048576, 65532, 65514, 1048576, 65533, 65501, 1048576, 65533, 65502, 1048576, 65533, 65503, 1048576, 65533, 65504, 1048576, 65533, 65505, 1048576, 65533, 65506, 1048576, 65533, 65507, 1048576, 65533, 65508, 1048576, 65533, 65509, 1048576, 65533, 65510, 1048576, 65533, 65511, 1048576, 65533, 65512, 1048576, 65533, 65513, 1048576, 65533, 65514, 1048576, 65534, 65501, 1048576, 65534, 65502, 1048576, 65534, 65503, 1048576, 65534, 65504, 1048576, 65534, 65505, 1048576, 65534, 65506, 1048576, 65534, 65507, 1048576, 65534, 65508, 1048576, 65534, 65509, 1048576, 65534, 65510, 1048576, 65534, 65511, 1048576, 65534, 65512, 1048576, 65534, 65513, 1048576, 65534, 65514, 1048576, 65535, 65501, 1048576, 65535, 65502, 1048576, 65535, 65503, 1048576, 65535, 65504, 1048576, 65535, 65505, 1048576, 65535, 65506, 1048576, 65535, 65507, 1048576, 65535, 65508, 1048576, 65535, 65509, 1048576, 65535, 65510, 1048576, 65535, 65511, 1048576, 65535, 65512, 1048576, 65535, 65513, 1048576, 65535, 65514, 1048576, 0, 65501, 1048576, 0, 65502, 1048576, 0, 65503, 1048576, 0, 65504, 1048576, 0, 65505, 1048576, 0, 65506, 1048576, 0, 65507, 1048576, 0, 65508, 1048576, 0, 65509, 1048576, 0, 65510, 1048576, 0, 65511, 1048576, 0, 65512, 1048576, 0, 65513, 1048576, 0, 65514, 1048576, 1, 65501, 1048576, 1, 65502, 1048576, 1, 65503, 1048576, 1, 65504, 1048576, 1, 65505, 1048576, 1, 65506, 1048576, 1, 65507, 1048576, 1, 65508, 1048576, 1, 65509, 1048576, 1, 65510, 1048576, 1, 65511, 1048576, 1, 65512, 1048576, 1, 65513, 1048576, 1, 65514, 1048576, 2, 65501, 1048576, 2, 65502, 1048576, 2, 65503, 1048576, 2, 65504, 1048576, 2, 65505, 1048576, 2, 65506, 1048576, 2, 65507, 1048576, 2, 65508, 1048576, 2, 65509, 1048576, 2, 65510, 1048576, 2, 65511, 1048576, 2, 65512, 1048576, 2, 65513, 1048576, 2, 65514, 1048576, 3, 65501, 1048576, 3, 65502, 1048576, 3, 65503, 1048576, 3, 65504, 1048576, 3, 65505, 1048576, 3, 65506, 1048576, 3, 65507, 1048576, 3, 65508, 1048576, 3, 65509, 1048576, 3, 65510, 1048576, 3, 65511, 1048576, 3, 65512, 1048576, 3, 65513, 1048576, 3, 65514, 1048576, 4, 65501, 1048576, 4, 65502, 1048576, 4, 65503, 1048576, 4, 65504, 1048576, 4, 65505, 1048576, 4, 65506, 1048576, 4, 65507, 1048576, 4, 65508, 1048576, 4, 65509, 1048576, 4, 65510, 1048576, 4, 65511, 1048576, 4, 65512, 1048576, 4, 65513, 1048576, 4, 65514, 1048576, 5, 65501, 1048576, 5, 65502, 1048576, 5, 65503, 1048576, 5, 65504, 1048576, 5, 65505, 1048576, 5, 65506, 1048576, 5, 65507, 1048576, 5, 65508, 1048576, 5, 65509, 1048576, 5, 65510, 1048576, 5, 65511, 1048576, 5, 65512, 1048576, 5, 65513, 1048576, 5, 65514, 1048576, 6, 65501, 1048576, 6, 65502, 1048576, 6, 65503, 1048576, 6, 65504, 1048576, 6, 65505, 1048576, 6, 65506, 1048576, 6, 65507, 1048576, 6, 65508, 1048576, 6, 65509, 1048576, 6, 65510, 1048576, 6, 65511, 1048576, 6, 65512, 1048576, 6, 65513, 1048576, 6, 65514, 1048576, 7, 65501, 1048576, 7, 65502, 1048576, 7, 65503, 1048576, 7, 65504, 1048576, 7, 65505, 1048576, 7, 65506, 1048576, 7, 65507, 1048576, 7, 65508, 1048576, 7, 65509, 1048576, 7, 65510, 1048576, 7, 65511, 1048576, 7, 65512, 1048576, 7, 65513, 1048576, 7, 65514, 1048576, 8, 65501, 1048576, 8, 65502, 1048576, 8, 65503, 1048576, 8, 65504, 1048576, 8, 65505, 1048576, 8, 65506, 1048576, 8, 65507, 1048576, 8, 65508, 1048576, 8, 65509, 1048576, 8, 65510, 1048576, 8, 65511, 1048576, 8, 65512, 1048576, 8, 65513, 1048576, 8, 65514, 1048576, 65498, 65500, 1048576, 65498, 65501, 1048576, 65498, 65502, 1048576, 65498, 65503, 1048576, 65498, 65504, 1048576, 65498, 65505, 1048576, 65498, 65506, 1048576, 65498, 65507, 1048576, 65498, 65508, 1048576, 65498, 65509, 1048576, 65498, 65510, 1048576, 65498, 65511, 1048576, 65498, 65512, 1048576, 65498, 65513, 1048576, 65498, 65514, 1048576, 65498, 65515, 1048576, 65498, 65516, 1048576, 65498, 65517, 1048576, 65498, 65518, 1048576, 65498, 65519, 1048576, 65498, 65520, 1048576, 65498, 65521, 1048576, 65498, 65522, 1048576, 65498, 65523, 1048576, 65498, 65524, 1048576, 65498, 65525, 1048576, 65498, 65526, 1048576, 65498, 65527, 1048576, 65498, 65528, 1048576, 65498, 65529, 1048576, 65498, 65530, 1048576, 65498, 65531, 1048576, 65498, 65532, 1048576, 65498, 65533, 1048576, 65499, 65500, 1048576, 65499, 65501, 1048576, 65499, 65502, 1048576, 65499, 65503, 1048576, 65499, 65504, 1048576, 65499, 65505, 1048576, 65499, 65506, 1048576, 65499, 65507, 1048576, 65499, 65508, 1048576, 65499, 65509, 1048576, 65499, 65510, 1048576, 65499, 65511, 1048576, 65499, 65512, 1048576, 65499, 65513, 1048576, 65499, 65514, 1048576, 65499, 65515, 1048576, 65499, 65516, 1048576, 65499, 65517, 1048576, 65499, 65518, 1048576, 65499, 65519, 1048576, 65499, 65520, 1048576, 65499, 65521, 1048576, 65499, 65522, 1048576, 65499, 65523, 1048576, 65499, 65524, 1048576, 65499, 65525, 1048576, 65499, 65526, 1048576, 65499, 65527, 1048576, 65499, 65528, 1048576, 65499, 65529, 1048576, 65499, 65530, 1048576, 65499, 65531, 1048576, 65499, 65532, 1048576, 65499, 65533, 1048576, 65500, 65500, 1048576, 65500, 65501, 1048576, 65500, 65502, 1048576, 65500, 65503, 1048576, 65500, 65504, 1048576, 65500, 65505, 1048576, 65500, 65506, 1048576, 65500, 65507, 1048576, 65500, 65508, 1048576, 65500, 65509, 1048576, 65500, 65510, 1048576, 65500, 65511, 1048576, 65500, 65512, 1048576, 65500, 65513, 1048576, 65500, 65514, 1048576, 65500, 65515, 1048576, 65500, 65516, 1048576, 65500, 65517, 1048576, 65500, 65518, 1048576, 65500, 65519, 1048576, 65500, 65520, 1048576, 65500, 65521, 1048576, 65500, 65522, 1048576, 65500, 65523, 1048576, 65500, 65524, 1048576, 65500, 65525, 1048576, 65500, 65526, 1048576, 65500, 65527, 1048576, 65500, 65528, 1048576, 65500, 65529, 1048576, 65500, 65530, 1048576, 65500, 65531, 1048576, 65500, 65532, 1048576, 65500, 65533, 1048576, 65501, 65500, 1048576, 65501, 65501, 1048576, 65501, 65502, 1048576, 65501, 65503, 1048576, 65501, 65504, 1048576, 65501, 65505, 1048576, 65501, 65506, 1048576, 65501, 65507, 1048576, 65501, 65508, 1048576, 65501, 65509, 1048576, 65501, 65510, 1048576, 65501, 65511, 1048576, 65501, 65512, 1048576, 65501, 65513, 1048576, 65501, 65514, 1048576, 65501, 65515, 1048576, 65501, 65516, 1048576, 65501, 65517, 1048576, 65501, 65518, 1048576, 65501, 65519, 1048576, 65501, 65520, 1048576, 65501, 65521, 1048576, 65501, 65522, 1048576, 65501, 65523, 1048576, 65501, 65524, 1048576, 65501, 65525, 1048576, 65501, 65526, 1048576, 65501, 65527, 1048576, 65501, 65528, 1048576, 65501, 65529, 1048576, 65501, 65530, 1048576, 65501, 65531, 1048576, 65501, 65532, 1048576, 65501, 65533, 1048576, 65502, 65500, 1048576, 65502, 65501, 1048576, 65502, 65502, 1048576, 65502, 65503, 1048576, 65502, 65504, 1048576, 65502, 65505, 1048576, 65502, 65506, 1048576, 65502, 65507, 1048576, 65502, 65508, 1048576, 65502, 65509, 1048576, 65502, 65510, 1048576, 65502, 65511, 1048576, 65502, 65512, 1048576, 65502, 65513, 1048576, 65502, 65514, 1048576, 65502, 65515, 1048576, 65502, 65516, 1048576, 65502, 65517, 1048576, 65502, 65518, 1048576, 65502, 65519, 1048576, 65502, 65520, 1048576, 65502, 65521, 1048576, 65502, 65522, 1048576, 65502, 65523, 1048576, 65502, 65524, 1048576, 65502, 65525, 1048576, 65502, 65526, 1048576, 65502, 65527, 1048576, 65502, 65528, 1048576, 65502, 65529, 1048576, 65502, 65530, 1048576, 65502, 65531, 1048576, 65502, 65532, 1048576, 65502, 65533, 1048576, 65503, 65500, 1048576, 65503, 65501, 1048576, 65503, 65502, 1048576, 65503, 65503, 1048576, 65503, 65504, 1048576, 65503, 65505, 1048576, 65503, 65506, 1048576, 65503, 65507, 1048576, 65503, 65508, 1048576, 65503, 65509, 1048576, 65503, 65510, 1048576, 65503, 65511, 1048576, 65503, 65512, 1048576, 65503, 65513, 1048576, 65503, 65514, 1048576, 65503, 65515, 1048576, 65503, 65516, 1048576, 65503, 65517, 1048576, 65503, 65518, 1048576, 65503, 65519, 1048576, 65503, 65520, 1048576, 65503, 65521, 1048576, 65503, 65522, 1048576, 65503, 65523, 1048576, 65503, 65524, 1048576, 65503, 65525, 1048576, 65503, 65526, 1048576, 65503, 65527, 1048576, 65503, 65528, 1048576, 65503, 65529, 1048576, 65503, 65530, 1048576, 65503, 65531, 1048576, 65503, 65532, 1048576, 65503, 65533, 1048576, 65504, 65500, 1048576, 65504, 65501, 1048576, 65504, 65502, 1048576, 65504, 65503, 1048576, 65504, 65504, 1048576, 65504, 65505, 1048576, 65504, 65506, 1048576, 65504, 65507, 1048576, 65504, 65508, 1048576, 65504, 65509, 1048576, 65504, 65510, 1048576, 65504, 65511, 1048576, 65504, 65512, 1048576, 65504, 65513, 1048576, 65504, 65514, 1048576, 65504, 65515, 1048576, 65504, 65516, 1048576, 65504, 65517, 1048576, 65504, 65518, 1048576, 65504, 65519, 1048576, 65504, 65520, 1048576, 65504, 65521, 1048576, 65504, 65522, 1048576, 65504, 65523, 1048576, 65504, 65524, 1048576, 65504, 65525, 1048576, 65504, 65526, 1048576, 65504, 65527, 1048576, 65504, 65528, 1048576, 65504, 65529, 1048576, 65504, 65530, 1048576, 65504, 65531, 1048576, 65504, 65532, 1048576, 65504, 65533, 1048576, 65505, 65500, 1048576, 65505, 65501, 1048576, 65505, 65502, 1048576, 65505, 65503, 1048576, 65505, 65504, 1048576, 65505, 65505, 1048576, 65505, 65506, 1048576, 65505, 65507, 1048576, 65505, 65508, 1048576, 65505, 65509, 1048576, 65505, 65510, 1048576, 65505, 65511, 1048576, 65505, 65512, 1048576, 65505, 65513, 1048576, 65505, 65514, 1048576, 65505, 65515, 1048576, 65505, 65516, 1048576, 65505, 65517, 1048576, 65505, 65518, 1048576, 65505, 65519, 1048576, 65505, 65520, 1048576, 65505, 65521, 1048576, 65505, 65522, 1048576, 65505, 65523, 1048576, 65505, 65524, 1048576, 65505, 65525, 1048576, 65505, 65526, 1048576, 65505, 65527, 1048576, 65505, 65528, 1048576, 65505, 65529, 1048576, 65505, 65530, 1048576, 65505, 65531, 1048576, 65505, 65532, 1048576, 65505, 65533, 1048576, 65506, 65500, 1048576, 65506, 65501, 1048576, 65506, 65502, 1048576, 65506, 65503, 1048576, 65506, 65504, 1048576, 65506, 65505, 1048576, 65506, 65506, 1048576, 65506, 65507, 1048576, 65506, 65508, 1048576, 65506, 65509, 1048576, 65506, 65510, 1048576, 65506, 65511, 1048576, 65506, 65512, 1048576, 65506, 65513, 1048576, 65506, 65514, 1048576, 65506, 65515, 1048576, 65506, 65516, 1048576, 65506, 65517, 1048576, 65506, 65518, 1048576, 65506, 65519, 1048576, 65506, 65520, 1048576, 65506, 65521, 1048576, 65506, 65522, 1048576, 65506, 65523, 1048576, 65506, 65524, 1048576, 65506, 65525, 1048576, 65506, 65526, 1048576, 65506, 65527, 1048576, 65506, 65528, 1048576, 65506, 65529, 1048576, 65506, 65530, 1048576, 65506, 65531, 1048576, 65506, 65532, 1048576, 65506, 65533, 1048576, 65507, 65500, 1048576, 65507, 65501, 1048576, 65507, 65502, 1048576, 65507, 65503, 1048576, 65507, 65504, 1048576, 65507, 65505, 1048576, 65507, 65506, 1048576, 65507, 65507, 1048576, 65507, 65508, 1048576, 65507, 65509, 1048576, 65507, 65510, 1048576, 65507, 65511, 1048576, 65507, 65512, 1048576, 65507, 65513, 1048576, 65507, 65514, 1048576, 65507, 65515, 1048576, 65507, 65516, 1048576, 65507, 65517, 1048576, 65507, 65518, 1048576, 65507, 65519, 1048576, 65507, 65520, 1048576, 65507, 65521, 1048576, 65507, 65522, 1048576, 65507, 65523, 1048576, 65507, 65524, 1048576, 65507, 65525, 1048576, 65507, 65526, 1048576, 65507, 65527, 1048576, 65507, 65528, 1048576, 65507, 65529, 1048576, 65507, 65530, 1048576, 65507, 65531, 1048576, 65507, 65532, 1048576, 65507, 65533, 1048576, 65508, 65500, 1048576, 65509, 65500, 1048576, 65510, 65500, 1048576, 65511, 65500, 1048576, 65512, 65500, 1048576, 65513, 65500, 1048576, 65514, 65500, 1048576, 65515, 65500, 1048576)
@@ -5850,14 +5857,14 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="GridMap2" type="GridMap" parent="."]
-mesh_library = ExtResource("4_kar0u")
+mesh_library = ExtResource("4_7woiy")
 cell_size = Vector3(0.3, 2, 0.3)
 data = {
 "cells": PackedInt32Array(2, 65453, 9, 31, 65438, 9, 30, 65438, 9, 65532, 65416, 9, 65531, 65416, 9, 18, 65464, 9, 76, 65437, 9, 41, 65419, 9, 63, 65454, 9, 44, 65448, 9, 56, 65423, 9, 55, 65423, 9, 13, 65406, 9, 6, 65433, 11, -25, 65436, 11, -65514, 65459, 11, -65534, 65473, 11, -65441, 65477, 11, -65457, 65466, 11, -65458, 65443, 11, 65507, 65415, 13, 65517, 65423, 9, 16, 65440, 9, 1, 65454, 11, 131066, 65456, 11, 131066, 65457, 11, 65555, 65447, 8, 131070, 65467, 8, 65567, 65453, 1, 65579, 65459, 1, 131067, 65464, 1, 65542, 65481, 1, 131065, 65534, 1, 65555, 65529, 1, 65597, 65453, 13, 65546, 65391, 13, 130843, 65406, 13, 130962, 65409, 13, 130972, 65444, 13, 130958, 65341, 13, 131004, 65435, 12, 130937, 65366, 12, 65576, 65431, 12, 131050, 65444, 1048588, 65541, 65471, 1048578, 130995, 65422, 1048578, 65568, 65393, 1048578, 65568, 65394, 1048578, 131003, 65402, 1048578, 65613, 65487, 1048578, 65545, 65463, 1048579, 131044, 65443, 1048579, 130972, 4, 1048579, 130976, 16, 1048579, 130985, 3, 1048579, 130967, 65364, 1048587, 131064, 65388, 1048587, 131039, 65441, 1048587, 131039, 65431, 1048587, 131005, 65423, 1048587, 130984, 65356, 1048587, 131032, 65364, 1048587, 130986, 65396, 1048587, 130987, 65411, 1048587, 131050, 65404, 1048587, 31, 65413, 1048587, 46, 65433, 1048587, 65524, 65421, 1048587, 65408, 65373, 1048587, 65458, 9, 1048587, 65438, 65527, 1048587, 65424, 65500, 1048587, 65401, 65477, 1048587, 65388, 65500, 1048587, 65402, 65443, 1048587, 65402, 65442, 1048587, 65412, 65448, 1048587, 65413, 65448, 1048587, 65413, 65447, 1048587, 65449, 65437, 1048587, 65501, 65427, 1048587, 65433, 65352, 1048587, 65469, 65344, 1048587, 65460, 65367, 1048587, 65508, 65392, 1048587, 65511, 65393, 1048587, 65512, 65393, 1048587, 65513, 65392, 1048587, 29, 65407, 1048587, 29, 65408, 1048587, 30, 65408, 1048587, 65561, 65448, 1048587, 131001, 65410, 1048587, 131062, 65395, 1048587, 65543, 65437, 1048585, 130969, 65296, 1048585, 130971, 65299, 1048585, 130937, 65417, 1048585, 130986, 65430, 1048585, 131031, 65443, 1048585, 131023, 65406, 1048585, 131065, 65435, 1048585, 65559, 65452, 1048585, 130970, 65434, 1048585, 130971, 65434, 1048585, 131001, 65429, 1048585, 130977, 65489, 13, 130921, 65443, 13, 130915, 65399, 13, 130994, 65329, 13, 130867, 65439, 13, 65557, 65376, 13, 65557, 65377, 13, 65558, 65377, 13, 65558, 65376, 13, 65559, 65418, 13, 131024, 65420, 1441805, 131049, 65354, 655373, 65551, 65312, 655373, 65538, 65437, 1048589, 130985, 65482, 1048578, 130998, 65460, 1048578, -51, 65459, 1048578, -84, 65475, 1048578, -87, 65515, 1048578, -152, 65505, 1048578, -143, 7, 1048578, -164, 65483, 1048578, -126, 65513, 1048578, -65655, 65499, 1048578, -65683, 65467, 1048578, -65610, 65509, 1048578, -131171, 65525, 1048578, -65705, 65493, 1048578, 65439, 65527, 1441805, 65424, 65447, 1441805, 65355, 65476, 1441805, 65283, 65344, 1441805, 65286, 65346, 1441805, 65339, 65249, 1441805, 65340, 65247, 1441805, 65413, 65479, 655372, 65528, 65455, 655369, 11, 65466, 655369, 11, 65467, 655369, 13, 65450, 655369)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="blockbench_export2" parent="." instance=ExtResource("3_bcxis")]
+[node name="blockbench_export2" parent="." instance=ExtResource("5_g7khv")]
 transform = Transform3D(7.24444, 0, 1.94114, 0, 7.5, 0, -1.94114, 0, 7.24444, -12, 1, -14)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -5877,7 +5884,7 @@ libraries = {
 
 [node name="dio" type="Node3D" parent="."]
 transform = Transform3D(-0.999999, 0, 0.00134452, 0, 1, 0, -0.00134452, 0, -0.999999, 16.3667, 1.29081, -6.39511)
-script = ExtResource("5_tthjr")
+script = ExtResource("7_m24wx")
 
 [node name="base" type="Node3D" parent="dio"]
 
@@ -6186,15 +6193,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ã" parent="Control" instance=ExtResource("38_e8hfi")]
+[node name="ã" parent="Control" instance=ExtResource("38_wt4pw")]
 layout_mode = 1
 offset_left = -28.0
 offset_top = -20.0
 offset_right = -11.0
 offset_bottom = -20.0
 
-[node name="final" parent="Control" instance=ExtResource("39_lwcfy")]
+[node name="final" parent="Control" instance=ExtResource("39_0pqfo")]
 layout_mode = 1
+
+[node name="seguir" type="Label" parent="Control"]
+texture_filter = 1
+offset_left = 395.0
+offset_top = 566.0
+offset_right = 773.0
+offset_bottom = 589.0
+text = "[E] para continuar
+"
+label_settings = SubResource("LabelSettings_6qqrj")
 
 [node name="posi_camara" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -2)
@@ -6202,7 +6219,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -2)
 [node name="inicial_posi" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 10.7, 5.9)
 
-[node name="DialogSystem" parent="." instance=ExtResource("97_expis")]
+[node name="DialogSystem" parent="." instance=ExtResource("41_j28iu")]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
