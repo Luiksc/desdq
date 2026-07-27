@@ -24,7 +24,8 @@ var procesando_click = false
 var en_seleccion = false
 
 # Called when the node enters the scene tree for the first time.
-
+func _ready() -> void:
+	anima_camara.play("selenccionando")
 	
 
 

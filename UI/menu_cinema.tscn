@@ -1,4 +1,4 @@
-[gd_scene load_steps=197 format=4 uid="uid://cjse10p2bv8ca"]
+[gd_scene load_steps=198 format=4 uid="uid://cjse10p2bv8ca"]
 
 [ext_resource type="Script" path="res://UI/menu_cinema.gd" id="1_ex02h"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_hmk0p"]
@@ -603,7 +603,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.48877, -0.788889, 0.261799)]
+"values": [Vector3(0, -0.682424, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -705,13 +705,30 @@ tracks/1/keys = {
 "values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.6571, 2.19152, -72.2312)]
 }
 
+[sub_resource type="Animation" id="Animation_tp4pl"]
+resource_name = "selenccionando"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.48842, -0.7889, 0.262616)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oupfh"]
 _data = {
 "RESET": SubResource("Animation_enm81"),
 "karau_acerca": SubResource("Animation_0hojm"),
 "mateo_acerca": SubResource("Animation_d4h0y"),
 "mensu_acerca": SubResource("Animation_vhtt6"),
-"seleccion": SubResource("Animation_gjyxq")
+"seleccion": SubResource("Animation_gjyxq"),
+"selenccionando": SubResource("Animation_tp4pl")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6dcc2"]
@@ -2723,7 +2740,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.746557, 0, -0.665322, 0, 1, 0, 0.665322, 0, 0.746557, 64.4992, 2.97646, -86.0932)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.863657, 0.500715, -0.0581412, 0.0212072, 0.0791465, 0.996637, 0.503633, -0.861986, 0.0577367, 29.6571, 2.19152, -72.2312)
+transform = Transform3D(0.776046, 0, -0.630676, 0, 1, 0, 0.630676, 0, 0.776046, 29.6571, 2.19152, -72.2312)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
 libraries = {

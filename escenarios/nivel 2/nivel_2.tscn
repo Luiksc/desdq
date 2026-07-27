@@ -1,4 +1,4 @@
-[gd_scene load_steps=500 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=502 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -41,7 +41,7 @@
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/inicio.gd" id="34_wrvqm"]
 [ext_resource type="Texture2D" uid="uid://c6kcwpp1nknx3" path="res://modelos/objetos/Alto parana/catre/Katre_2.png" id="34_xf8xb"]
 [ext_resource type="Texture2D" uid="uid://b7yuwkccjno5v" path="res://modelos/objetos/Alto parana/catre/Katre_3.png" id="35_xo33j"]
-[ext_resource type="AudioStream" uid="uid://b3lx7jfg11bg3" path="res://audios/Sonidos de la selva - Anochecer en la selva misionera.mp3" id="36_mgxaw"]
+[ext_resource type="AudioStream" uid="uid://b3lx7jfg11bg3" path="res://audios/sonidos_ambiente/Sonidos de la selva - Anochecer en la selva misionera.mp3" id="36_mgxaw"]
 [ext_resource type="Texture2D" uid="uid://hi21a7ciwqrl" path="res://modelos/objetos/Alto parana/arbul3/arbol2_0.png" id="37_jwnve"]
 [ext_resource type="Texture2D" uid="uid://ct81fdi2duwlx" path="res://modelos/objetos/Alto parana/arbul3/arbol2_1.png" id="38_ffsr4"]
 [ext_resource type="Texture2D" uid="uid://crfwn27eliyun" path="res://modelos/objetos/Alto parana/arbul2/arbol1_0.png" id="39_vo7kp"]
@@ -1464,6 +1464,12 @@ size = Vector3(10.4762, 19.0575, 25.6412)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_em0gm"]
 size = Vector3(42.7822, 13, 2.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngayr"]
+size = Vector3(17.4243, 11.9752, 5.35181)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yx2ws"]
+size = Vector3(13.3179, 9.3725, 4.75928)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tsg3f"]
 size = Vector3(1, 1.87149, 0.325684)
@@ -6683,6 +6689,14 @@ shape = SubResource("BoxShape3D_kyu0t")
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="objetos/tinglado"]
 transform = Transform3D(0.9851, 0, 0.171981, 0, 1, 0, -0.171981, 0, 0.9851, 29.3826, 6, -29.3576)
 shape = SubResource("BoxShape3D_em0gm")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="objetos/tinglado"]
+transform = Transform3D(0.990416, 0, 0.138119, 0, 1, 0, -0.138119, 0, 0.990416, 28.8263, 5.48761, -24.7047)
+shape = SubResource("BoxShape3D_ngayr")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="objetos/tinglado"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0114, 4.18625, -21.2597)
+shape = SubResource("BoxShape3D_yx2ws")
 
 [node name="catres_tinglado" type="StaticBody3D" parent="objetos"]
 transform = Transform3D(-0.686998, 0, -0.266883, 0, 0.737016, 0, 0.266883, 0, -0.686998, -55.4061, 0, -31.244)

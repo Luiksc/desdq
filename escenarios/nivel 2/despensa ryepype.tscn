@@ -1440,9 +1440,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ã" parent="Control" instance=ExtResource("8_5b6ik")]
-layout_mode = 1
-
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
 offset_left = 1.0
@@ -1512,6 +1509,9 @@ label_settings = SubResource("LabelSettings_k8fmf")
 libraries = {
 "": SubResource("AnimationLibrary_at7m7")
 }
+
+[node name="ã" parent="Control" instance=ExtResource("8_5b6ik")]
+layout_mode = 1
 
 [node name="DialogSystem" parent="." instance=ExtResource("25_rb1pc")]
 visible = false

@@ -12,9 +12,10 @@ config_version=5
 
 config/name="Relatos Ocultos"
 config/version="0.0"
-run/main_scene="res://UI/menutscn.tscn"
+run/main_scene="res://UI/menu_cinema.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.115193, 0.134025, 0.219034, 1)
+boot_splash/show_image=false
 config/icon="res://relatos ocultos logo.png"
 addons/rakugo/game_version=1.0
 addons/rakugo/narrator_name="narrator"
