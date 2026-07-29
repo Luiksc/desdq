@@ -1,4 +1,4 @@
-[gd_scene load_steps=505 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=504 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -114,10 +114,6 @@
 [ext_resource type="Texture2D" uid="uid://cxbjnsqnl2vqo" path="res://modelos/laburador 3/laburador3_16.png" id="111_shwel"]
 [ext_resource type="Texture2D" uid="uid://dsjsnta0i2cto" path="res://modelos/laburador 3/laburador3_17.png" id="112_hk850"]
 [ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="113_17jg1"]
-
-[sub_resource type="Theme" id="Theme_14bay"]
-default_font = ExtResource("6_84008")
-default_font_size = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_o0fk5"]
 font = ExtResource("6_84008")
@@ -5702,22 +5698,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-
-[node name="ItemList" type="ItemList" parent="Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -402.0
-offset_bottom = 146.0
-grow_horizontal = 0
-mouse_filter = 2
-theme = SubResource("Theme_14bay")
-item_count = 3
-item_0/text = "-llevar sacos de yerba mate. 0/3"
-item_1/text = "-poner a secar  la yerba"
-item_2/text = "-Comprar harina"
 
 [node name="Interactuar" type="Label" parent="Control"]
 layout_mode = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=408 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=412 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/ka'arurupa.gd" id="1_86ijx"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_hgq2t"]
@@ -94,8 +94,11 @@
 [ext_resource type="Texture2D" uid="uid://cf03gapiocsu3" path="res://modelos/musiqueros/musiquero1/musiquero2_13.png" id="58_ce226"]
 [ext_resource type="Texture2D" uid="uid://c27afnjb10o27" path="res://modelos/musiqueros/musiquero1/musiquero2_14.png" id="59_r1nq0"]
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="73_70mhc"]
+[ext_resource type="Texture2D" uid="uid://cgqs2uqo7k2ht" path="res://UI/lista.png" id="80_8w547"]
+[ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="81_f10x7"]
 [ext_resource type="PackedScene" uid="uid://c5fhir01qye0n" path="res://audios/musica_global.tscn" id="95_c02ee"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="96_uv3yb"]
+[ext_resource type="AudioStream" uid="uid://w1h5npvgdfyv" path="res://audios/Undertale Damage Sound Effect (mp3cut.net).mp3" id="99_hrodh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
 panorama = ExtResource("4_bklqj")
@@ -3907,6 +3910,14 @@ animations = [{
 font = ExtResource("44_pfe3j")
 font_size = 156
 
+[sub_resource type="LabelSettings" id="LabelSettings_srr4l"]
+font = ExtResource("81_f10x7")
+font_size = 8
+font_color = Color(0.177675, 0.117699, 0.0871465, 1)
+outline_size = 5
+outline_color = Color(0.733005, 0.733005, 0.733005, 1)
+shadow_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_godd1"]
 resource_name = "material_0"
 transparency = 2
@@ -6732,7 +6743,7 @@ collision_mask = 128
 ojevy = NodePath("../../ojevy/3")
 
 [node name="mymba4_kaare" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("30_mnufh")]
-transform = Transform3D(-0.349948, -4.55621e-05, 0.606248, 1.17177e-05, 0.7, 5.93758e-05, -0.606248, 3.98357e-05, -0.349948, -12.0399, 13.208, 67.3846)
+transform = Transform3D(-0.349948, -4.55621e-05, 0.606248, 1.17177e-05, 0.7, 5.93758e-05, -0.606248, 3.98357e-05, -0.349948, -12.0399, 13.9782, 67.3846)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/4")
@@ -6750,7 +6761,7 @@ collision_mask = 128
 ojevy = NodePath("../../ojevy/6")
 
 [node name="mymba7_ambay" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("33_y5a7j")]
-transform = Transform3D(0.739768, 0, 0, 0, 0.739768, 0, 0, 0, 0.739768, 13.6, 17.3289, 124.906)
+transform = Transform3D(0.739768, 0, 0, 0, 0.739768, 0, 0, 0, 0.739768, 10.8, 15.5289, 127.706)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/7")
@@ -6773,13 +6784,13 @@ ojevy = NodePath("../../ojevy/9")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 2, 116)
 
 [node name="2" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 2, 63)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 7, 55)
 
 [node name="3" type="Marker3D" parent="ojevy"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 2, 55)
 
 [node name="4" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 2, 64)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4, 13.1741, 66.1)
 
 [node name="5" type="Marker3D" parent="ojevy"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 2, 70)
@@ -6788,7 +6799,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 2, 70)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 2, 82)
 
 [node name="7" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, 129)
+transform = Transform3D(0.997965, 0.0573374, 0.0279141, -0.0544879, 0.994088, -0.0939102, -0.0331337, 0.0921981, 0.995189, 11, 16.0046, 129.264)
 
 [node name="8" type="Marker3D" parent="ojevy"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 2, 77)
@@ -6915,22 +6926,6 @@ libraries = {
 "": SubResource("AnimationLibrary_alwvl")
 }
 
-[node name="ItemList" type="ItemList" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.807
-anchor_right = 1.0
-anchor_bottom = 0.285
-offset_left = 0.335938
-offset_bottom = 0.319977
-grow_horizontal = 0
-item_count = 5
-item_0/text = " Amba'y 0/2"
-item_1/text = "Ka'arurupa 0/1"
-item_2/text = "ka'arẽ  0/1"
-item_3/text = "Tarope 0/4"
-item_4/text = "Cedrón 0/3"
-
 [node name="interaccion" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1
 position = Vector2(252, 553)
@@ -6979,7 +6974,7 @@ offset_left = 0.439999
 offset_top = -0.0240059
 offset_right = -0.0720215
 offset_bottom = -0.0160217
-text = "EÑEHUNDÍMA"
+text = "EPOTÍMA"
 label_settings = SubResource("LabelSettings_ie83b")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -6990,6 +6985,69 @@ position = Vector2(562, 518)
 scale = Vector2(3.82128, 4.09485)
 sprite_frames = SubResource("SpriteFrames_gvs7u")
 animation = &"[E]"
+
+[node name="lista" type="Sprite2D" parent="Control"]
+visible = false
+texture_filter = 1
+position = Vector2(974.5, 86)
+scale = Vector2(1.31667, 0.52)
+texture = ExtResource("80_8w547")
+
+[node name="Label" type="Label" parent="Control/lista"]
+texture_filter = 1
+offset_left = -125.696
+offset_top = -98.0769
+offset_right = 107.304
+offset_bottom = -88.0769
+scale = Vector2(1.135, 4)
+text = " Amba'y 0/2"
+label_settings = SubResource("LabelSettings_srr4l")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/lista"]
+texture_filter = 1
+offset_left = -122.506
+offset_top = -58.0745
+offset_right = 110.494
+offset_bottom = -50.0745
+scale = Vector2(1.09, 4)
+text = "Ka'arurupa 0/1"
+label_settings = SubResource("LabelSettings_srr4l")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/lista"]
+texture_filter = 1
+offset_left = -122.506
+offset_top = -16.5905
+offset_right = 110.494
+offset_bottom = -4.59053
+scale = Vector2(1.09, 4)
+text = "ka'aré  0/1"
+label_settings = SubResource("LabelSettings_srr4l")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Control/lista"]
+texture_filter = 1
+offset_left = -122.506
+offset_top = 25.7172
+offset_right = 110.494
+offset_bottom = 33.7172
+scale = Vector2(1.09, 4)
+text = "Tarope 0/4"
+label_settings = SubResource("LabelSettings_srr4l")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Control/lista"]
+texture_filter = 1
+offset_left = -122.506
+offset_top = 66.1018
+offset_right = 110.494
+offset_bottom = 74.1018
+scale = Vector2(1.09, 4)
+text = "Cedrón 0/3
+"
+label_settings = SubResource("LabelSettings_srr4l")
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 4, 193)
@@ -7158,6 +7216,9 @@ libraries = {
 stream = ExtResource("96_uv3yb")
 volume_db = -5.643
 autoplay = true
+
+[node name="UndertaleDamageSoundEffect(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("99_hrodh")
 
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="." method="_on_trigger_farra_body_entered"]
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="objetos/casa1" method="_on_trigger_farra_body_entered"]

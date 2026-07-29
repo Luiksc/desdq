@@ -1,4 +1,4 @@
-[gd_scene load_steps=350 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=351 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -114,6 +114,7 @@
 [ext_resource type="Texture2D" uid="uid://cvuehbttygj8d" path="res://modelos/Ña florida/doña florida_14.png" id="97_swyyr"]
 [ext_resource type="Script" path="res://escenarios/scripts/mykuré.gd" id="107_4un50"]
 [ext_resource type="AudioStream" uid="uid://w1h5npvgdfyv" path="res://audios/Undertale Damage Sound Effect (mp3cut.net).mp3" id="114_5vwpt"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="115_anvs3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ycvxn"]
 panorama = ExtResource("2_whcm0")
@@ -5733,6 +5734,8 @@ volume_db = -11.556
 [node name="Hýpy(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("114_5vwpt")
 volume_db = -5.2
+
+[node name="CanvasLayer" parent="." instance=ExtResource("115_anvs3")]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

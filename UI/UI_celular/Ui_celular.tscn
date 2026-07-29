@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgryn1xmwk3dn"]
+[gd_scene load_steps=14 format=3 uid="uid://bgryn1xmwk3dn"]
 
 [ext_resource type="Texture2D" uid="uid://dcghswsmuldfp" path="res://UI/UI_celular/flecha_arriba.png" id="1_lr0fc"]
+[ext_resource type="Script" path="res://UI/UI_celular/Ui_celular.gd" id="1_vf74b"]
 [ext_resource type="Texture2D" uid="uid://b50j7gngppmno" path="res://UI/UI_celular/flecha_arriba_pressed.png" id="2_58jr2"]
 [ext_resource type="Texture2D" uid="uid://cwly2dw76at48" path="res://UI/UI_celular/flecha_derecha.png" id="3_6v5uf"]
 [ext_resource type="Texture2D" uid="uid://bjnh03qp0xcw6" path="res://UI/UI_celular/flecha_derecha_pressed.png" id="4_n4w51"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://ts6ad5hqtmqi" path="res://UI/UI_celular/E_pressed.png" id="12_nmyp5"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_vf74b")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 texture_filter = 1

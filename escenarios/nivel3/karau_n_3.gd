@@ -33,7 +33,7 @@ var gravedad : float
 
 var estuvo_suelo: bool = true
 var puede_moverse: bool = true
-var mouse_cam: bool= true #bloquea la camara al presionar escape
+var mouse_cam: bool= true 
 var input_direccion := Vector3.ZERO
 
 @export var tiem_jump_buffer: float = 0.15
@@ -49,7 +49,7 @@ func _ready() -> void:
 	anima_activo= true
 	anima_karau.play("repira")
 	
-	# Buscar los nodos AnimatedSprite2D para el combo y ocultarlos inicialmente
+	
 	var root = get_tree().get_root()
 	for accion in posibles_acciones:
 		var nodo_sprite = root.find_child(accion, true, false)
@@ -95,21 +95,20 @@ func moviminto(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, friccion * delta)
 		return
 
-	#   DIRECCION con input
+	
 	if farra == false:
 		input_direccion.x = Input.get_axis("ui_left", "ui_right")
 		input_direccion.z = Input.get_axis("ui_up", "ui_down")
-		input_direccion = input_direccion.normalized() # normaliza y regulariza movement
+		input_direccion = input_direccion.normalized() 
 
-	# coyote time
-	# estuvo_suelo se actualiza cada frame: true si está en suelo false si está en aire
+	
 	if is_on_floor():
 		estuvo_suelo = true
-		coyote_timer = tiem_coyote  # recarga el timer mientras está en suelo
+		coyote_timer = tiem_coyote  
 	elif estuvo_suelo:
-		# acaba de salir del suelo sin saltar -> activar ventana coyote
+		
 		estuvo_suelo = false
-		# el timer ya está cargado desde el frame anterior
+	
 	if coyote_timer > 0:
 		coyote_timer -= delta
 	var salto_posible = is_on_floor() or coyote_timer > 0
@@ -126,7 +125,7 @@ func moviminto(delta: float) -> void:
 		jump_buffer_timer = 0
 		coyote_timer = 0
 
-	#   MOVIMIENTO horizontal
+	#  
 	if input_direccion.length() > 0.1:
 		# Dirección relativa a la cámara (pivote), ignorando la rotación del cuerpo
 		var direccion = (pivote.global_transform.basis * input_direccion)
@@ -174,7 +173,7 @@ func _on_combo_body_entered(body: Node3D) -> void:
 		else:
 			teclas_faltantes = ["interaccion", "ui_up", "ui_right"]
 			
-		# Mostrar los sprites correspondientes al combo
+	
 		for accion in posibles_acciones:
 			if ui_combo_nodos.has(accion):
 				var sprite = ui_combo_nodos[accion]
@@ -185,7 +184,7 @@ func _on_combo_body_entered(body: Node3D) -> void:
 					sprite.hide()
 			
 		puede_moverse = false
-		combo_delay_timer = COMBO_INPUT_DELAY  # Iniciar el delay antes de detectar teclas
+		combo_delay_timer = COMBO_INPUT_DELAY  
 		if body.has_method("velocidad_reducida"):
 			body.velocidad_reducida(true)
 		
@@ -194,15 +193,15 @@ func procesar_combo():
 		if Input.is_action_just_pressed(accion):
 			if accion in teclas_faltantes:
 				teclas_faltantes.erase(accion)
-				# Cambiar al frame 1 cuando se presiona correctamente
+				
 				if ui_combo_nodos.has(accion):
 					ui_combo_nodos[accion].frame = 1
 			else:
-				# Tecla incorrecta presionada durante el combo
-				print("mal")
+				
 				emit_signal("combo")
-				# Subir velocidad del mymba en 2 unidades como penalización
+			
 				if mymba_en_combo != null and "SPEED" in mymba_en_combo:
+					$"../UndertaleDamageSoundEffect(mp3Cut_net)".play()
 					mymba_en_combo.SPEED += 2
 				
 	if teclas_faltantes.is_empty():

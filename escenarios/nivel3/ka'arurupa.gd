@@ -14,7 +14,7 @@ var perder = false
 @onready var control_camara = $karau/pivote
 @onready var anima_jugon = $karau/karau/AnimationPlayer
 @onready var tri_fr = $objetos/casa1/trigger_farra
-
+@onready var daña = $"UndertaleDamageSoundEffect(mp3Cut_net)"
 
 @onready var dialogo_piensa = $objetos/casa1
 
@@ -28,7 +28,8 @@ var perder = false
 @onready var puntos_spawn3 : Node = $"posible_aparecer_amba'y"
 @onready var ambay: Resource = preload("res://escenarios/nivel3/ambay.tscn")
 
-@onready var lista =$Control/ItemList
+@onready var lista =$Control/lista
+
 
 @onready var enemigos_yuyo: Node3D = $enemigos_yuyo
 
@@ -77,10 +78,12 @@ var dialogos ={
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MusicaGlobal.tortola_sonido_ambiente()
+
 	perdeu.hide()
 	boton_perdeu.hide()
 	transicion.play("salida")
 	await transicion.animation_finished
+	lista.show()
 	randomize()
 	posicion_inicial_jugador = jugador.global_position
 	
@@ -226,13 +229,13 @@ func _on_jugador_danado(id_yuyo: String) -> void:
 	reseteando = false
 
 func reset_por_yuyo(id_yuyo: String) -> void:
-	#resetea mymbas
+	daña.play()
 	for m in get_tree().get_nodes_in_group("mymba"):
 		if m.has_method("volver_a_origen"):
 			m.volver_a_origen()
 		m.set("persigue", false)
 	
-	# resetea la camara y combos
+
 	if jugador != null and jugador.has_method("resetear_combo"):
 		jugador.resetear_combo()
 	if control_camara != null:
@@ -241,22 +244,21 @@ func reset_por_yuyo(id_yuyo: String) -> void:
 		else:
 			control_camara.cinematica = false
 	
-	# 3. Volver al jugador a su posición inicial sin movimiento
 	transicion.play("entrafa")
 	await transicion.animation_finished
 	perdeu.show()
 	boton_perdeu.show()
-	$Control/ItemList.hide()
+	$Control/lista.hide()
 	perder = true
 	match id_yuyo:
 		"ka'arurupa":
-			lista.set_item_text(1, "Ka'arurupa 0/1")
+			$Control/lista/Label2.text = "Ka'arurupa 0/1"
 			spawn_yuyo1()
 		"ka'aré":
-			lista.set_item_text(2, "ka'arẽ  0/1")
+			$Control/lista/Label3.text = "Ka'arẽ 0/1"
 			spawn_yuyo2()
 		"amba'y":
-			lista.set_item_text(0, " Amba'y 0/2")
+			$Control/lista/Label.text = "Amba'y 0/2"
 			spawn_yuyo3()
 			
 
@@ -282,12 +284,12 @@ func _process(delta: float) -> void:
 			transicion.play("salida")
 			perdeu.hide()
 			boton_perdeu.hide()
-			$Control/ItemList.show()
+			$Control/lista.show()
 	
-	# 4. Resetear la animación del jugador
+	#
 			anima_jugon.play("repira")
 	
-	# 5. Resetear ItemList al estado inicial según el yuyo y volver a hacer spawn
+	
 			
 
 
@@ -327,7 +329,7 @@ func dialog_terminado() -> void:
 
 func mostrar_interac(id_del_npc: String) -> void:
 
-	#jugador_puede_interac = true
+	
 	npc_actual = id_del_npc
 
 func hide_interac(id_del_npc: String) -> void:
@@ -373,7 +375,7 @@ func piensa1(id_del_npc: String) -> void:
 	inic_dialo()
 	
 func ohota_primio():
-	ikatu_oho = false  # evitar que _process la llame de nuevo cada frame
+	ikatu_oho = false 
 	
 	control_camara.posiciona()
 	jugador.farra = true
@@ -383,20 +385,19 @@ func ohota_primio():
 	await anima_jugon.animation_finished
 	piensa2("pensamiento2")
 	
-# Se llama cuando el jugador entra al área de un objeto recolectable.
-# Recibe el identificador del objeto y lo añade a la lista de recogidos.
+
 
 func _on_objeto_recogido(id: String) -> void:
 	objetos_recogidos = id
 	print(objetos_recogidos) 
 	if objetos_recogidos == "ambay":
 		$DialogSystem/sound.play()
-		lista.set_item_text(0, "Amba'y 1/2")
+		$Control/lista/Label.text = "Amba'y 1/2"
 		
 	elif objetos_recogidos == "ka'arurupa":
 		$DialogSystem/sound.play()
-		lista.set_item_text(1, "Ka'arurupa 1/1")
+		$Control/lista/Label2.text = "Ka'arurupa 1/1"
 		
 	if objetos_recogidos == "ka'aré":
 		$DialogSystem/sound.play()
-		lista.set_item_text(2, "Ka'arẽ 1/1")
+		$Control/lista/Label3.text = "Ka'arẽ 1/1"
