@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://escenarios/scripts/mykuré_2.gd" id="1_nfjch"]
 [ext_resource type="Script" path="res://escenarios/scripts/area_3d_daña_2.gd" id="2_yyk1f"]
 [ext_resource type="AudioStream" uid="uid://dbwlyxyi4io4i" path="res://audios/sonido mykure.mp3" id="3_msc2w"]
-[ext_resource type="Texture2D" uid="uid://3w0q35ptigbp" path="res://modelos/animañas/mykuré/Myku_0.png" id="4_uodeu"]
+[ext_resource type="Texture2D" uid="uid://dv61qfbj6eu0j" path="res://modelos/animañas/mykuré/Myku_0.png" id="4_uodeu"]
 [ext_resource type="Texture2D" uid="uid://b8san6c5tktou" path="res://modelos/animañas/mykuré/Myku_1.png" id="5_ap10s"]
-[ext_resource type="Texture2D" uid="uid://b423wgvhmsmhb" path="res://modelos/animañas/mykuré/Myku_2.png" id="6_67ltu"]
+[ext_resource type="Texture2D" uid="uid://t82bw5qrtih" path="res://modelos/animañas/mykuré/Myku_2.png" id="6_67ltu"]
 [ext_resource type="Texture2D" uid="uid://dlfi863cha7n8" path="res://modelos/animañas/mykuré/Myku_3.png" id="7_loyvv"]
 [ext_resource type="Texture2D" uid="uid://df3rgnqblfh0f" path="res://modelos/animañas/mykuré/Myku_4.png" id="8_vwad3"]
 [ext_resource type="Texture2D" uid="uid://ccnpmhqgxkiex" path="res://modelos/animañas/mykuré/Myku_5.png" id="9_vvwxf"]
@@ -676,7 +676,7 @@ stream = ExtResource("3_msc2w")
 volume_db = -6.43
 
 [node name="blockbench_export" type="Node3D" parent="."]
-transform = Transform3D(-2.8031, 0, -4.85511, 0, 5.6062, 0, 4.85511, 0, -2.8031, 0, -0.188981, 0)
+transform = Transform3D(5.6062, 0, -4.76837e-07, 0, 5.6062, 0, 4.76837e-07, 0, 5.6062, 0, -0.188981, 0)
 
 [node name="Cabeza" type="Node3D" parent="blockbench_export"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05625, 0.14375, -0.109375)

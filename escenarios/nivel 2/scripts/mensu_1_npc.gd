@@ -42,20 +42,16 @@ func _physics_process(delta: float) -> void:
 		estado.oho:
 			if animacion.current_animation != "ojevy":
 				animacion.play("ojevy")
-			velocidad = 0.5
-			
+			velocidad = 0.4
 			var direccion = punto_ini.global_position - global_position
 			direccion.y = 0
-			var target = punto_ini.global_position
 			var distancia = direccion.length()
 			velocity = direccion * velocidad
 			var angulo = atan2(direccion.x,direccion.z)
 			rotation.y = lerp_angle(rotation.y, angulo, 2 * delta)
 			direccion = direccion.normalized()
 			
-			
-			
-			if distancia < 0.15:
+			if distancia < 0.20:
 				Estado = estado.oraha
 			
 		estado.oraha:
@@ -88,7 +84,6 @@ func _physics_process(delta: float) -> void:
 				velocity.z = move_toward(velocity.z, 1, velocidad * delta)
 			
 			if distancia < distancia_minima:
-				
 				indice_ida = indice_ida +1
 				if indice_ida >= waypoint.size():
 					Estado = estado.ojevy
@@ -134,4 +129,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 			
 func iniciar():
-	Estado = estado.oho
+	Estado = estado.ojevy
+	

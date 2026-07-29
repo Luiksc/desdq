@@ -56,6 +56,8 @@ var indice_sako_suelo=0
 var indice_sako_tata=0
 @onready var trigger_main=$objetos/dejar2
 
+
+@onready var anima_jugador = $jugador/blockbench_export2/AnimationPlayer
 signal se_va
 
 
@@ -283,12 +285,12 @@ func oheja():
 	saco2.show()
 	match sakos2.size():
 		2:
-			lista.set_item_text(0,"llevar sacos de yerba mate. 1/3")
+			$Control/Sprite2D/Label.text = "llevar sacos de yerba mate. 1/3"
 			
 		1:
-			lista.set_item_text(0,"llevar sacos de yerba mate. 2/3")
+			$Control/Sprite2D/Label.text= "llevar sacos de yerba mate. 2/3"
 		0:
-			lista.set_item_text(0,"llevar sacos de yerba mate. 3/3")
+			$Control/Sprite2D/Label.text = "llevar sacos de yerba mate. 3/3"
 			
 			
 	if sakos2.is_empty():
@@ -314,12 +316,12 @@ func dejar2():
 	saco.show()
 	match sakos4.size():
 		2:
-			lista.set_item_text(1,"poner a secar  la yerba. 1/3")
+			$Control/Sprite2D/Label2.text="poner a secar  la yerba. 1/3"
 			
 		1:
-			lista.set_item_text(1,"poner a secar  la yerba. 2/3")
+			$Control/Sprite2D/Label2.text="poner a secar  la yerba. 2/3"
 		0:
-			lista.set_item_text(1,"poner a secar  la yerba. 3/3")
+			$Control/Sprite2D/Label2.text="poner a secar  la yerba. 3/3"
 			secar=true
 			
 			
@@ -390,16 +392,18 @@ func oipoo():
 	boton_interac.show()
 	transicion.play("entrafa")
 func reset():
+	
 	omano = false
 	var spawn = get_node_or_null("spawn")
 	if spawn:
 		jugador.global_position = spawn.global_position
 		jugador.global_rotation = spawn.global_rotation
-	jugador.puede_moverse = true
 	transicion.play("salida")
 	await transicion.animation_finished
 	boton_interac.hide()
 	perdeu.hide()
+	jugador.puede_moverse = true
+	
 
 
 	# Restaurar kapangas

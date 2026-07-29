@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://w1h5npvgdfyv"
+path="res://.godot/imported/Undertale Damage Sound Effect (mp3cut.net).mp3-4e578a80b2d38b6ac8dd36ec59ad32c0.mp3str"
+
+[deps]
+
+source_file="res://audios/Undertale Damage Sound Effect (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Undertale Damage Sound Effect (mp3cut.net).mp3-4e578a80b2d38b6ac8dd36ec59ad32c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

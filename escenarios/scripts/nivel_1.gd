@@ -19,7 +19,7 @@ extends Node3D
 @onready var ambiente = $chaco_ambiente
 @onready var ambiente2= $pajaros_ambiente
 @onready var musica = $musica
-
+@onready var daña = $"UndertaleDamageSoundEffect(mp3Cut_net)"
 
 
 var jugom_anima_actio = true
@@ -227,12 +227,14 @@ func _on_final_body_entered(body: Node3D) -> void:
 		get_tree().change_scene_to_file("res://escenarios/n_1_cinema_final.tscn")
 		finiquitable = true
 func jugador_omano():
+	jugador.puede_moverse = false
+	daña.play()
 	ambiente.stop()
 	ambiente2.stop()
 	musica.stop()
 	transicion.play("entrafa")
 	await transicion.animation_finished
-	jugador.puede_moverse = false
+	
 	jgd_omamo=true
 	perder.show()
 	interac.show()

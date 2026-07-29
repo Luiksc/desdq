@@ -1,4 +1,4 @@
-[gd_scene load_steps=345 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=350 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -56,7 +56,6 @@
 [ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/sonidos_ambiente/Sonidos del Chaco ambiente.mp3" id="31_8t052"]
 [ext_resource type="PackedScene" uid="uid://bxkgxyh6ujemx" path="res://escenarios/npc3_kalo'i.tscn" id="31_mq55w"]
 [ext_resource type="AudioStream" uid="uid://rnfh0p7isxb7" path="res://audios/sápe.mp3" id="34_6xlwd"]
-[ext_resource type="AudioStream" uid="uid://s2ssaqulrhei" path="res://audios/hýpy (mp3cut.net).mp3" id="35_k2y46"]
 [ext_resource type="Texture2D" uid="uid://qn6wwr3ylaax" path="res://modelos/objetos/chaco/tenderropa/tenderropa_0.png" id="37_h1n2x"]
 [ext_resource type="Texture2D" uid="uid://ctfolh044sl5r" path="res://modelos/objetos/chaco/tenderropa/tenderropa_1.png" id="38_qt3dv"]
 [ext_resource type="PackedScene" uid="uid://br72pgind7jsh" path="res://escenarios/emilia.tscn" id="39_v3laf"]
@@ -113,6 +112,8 @@
 [ext_resource type="Texture2D" uid="uid://ce48aqttchaom" path="res://modelos/Ña florida/doña florida_12.png" id="95_vxgfq"]
 [ext_resource type="Texture2D" uid="uid://dpuchbsq3rgld" path="res://modelos/Ña florida/doña florida_13.png" id="96_5c4df"]
 [ext_resource type="Texture2D" uid="uid://cvuehbttygj8d" path="res://modelos/Ña florida/doña florida_14.png" id="97_swyyr"]
+[ext_resource type="Script" path="res://escenarios/scripts/mykuré.gd" id="107_4un50"]
+[ext_resource type="AudioStream" uid="uid://w1h5npvgdfyv" path="res://audios/Undertale Damage Sound Effect (mp3cut.net).mp3" id="114_5vwpt"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ycvxn"]
 panorama = ExtResource("2_whcm0")
@@ -382,6 +383,49 @@ animations = [{
 [sub_resource type="LabelSettings" id="LabelSettings_so4f6"]
 font = ExtResource("8_5ws1b")
 font_size = 120
+
+[sub_resource type="LabelSettings" id="LabelSettings_cgamu"]
+font = ExtResource("8_5ws1b")
+font_size = 35
+outline_size = 22
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_3xhkh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(416, 695)]
+}
+
+[sub_resource type="Animation" id="Animation_qlj3e"]
+resource_name = "sale"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.966667, 1.46667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(416, 695), Vector2(416, 296), Vector2(416, 296), Vector2(416, -176)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_duo3w"]
+_data = {
+"RESET": SubResource("Animation_3xhkh"),
+"sale": SubResource("Animation_qlj3e")
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lmal"]
 resource_name = "material_0"
@@ -4351,7 +4395,7 @@ shadow_mesh = SubResource("ArrayMesh_yut8e")
 size = Vector3(20.3725, 5.43304, 11.827)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b0g7a"]
-size = Vector3(22.7625, 1.45319, 33.8631)
+size = Vector3(22.7625, 1.45319, 32.7398)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0gvr"]
 size = Vector3(9.76758, 8.04205, 2.39233)
@@ -4503,6 +4547,25 @@ text = "EPERDEMA"
 label_settings = SubResource("LabelSettings_sp1lg")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="checkpoint" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.123
+anchor_bottom = 0.048
+offset_left = 416.0
+offset_top = 695.0
+offset_right = 564.058
+offset_bottom = 722.8
+text = "Checkpoint"
+label_settings = SubResource("LabelSettings_cgamu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/checkpoint"]
+libraries = {
+"": SubResource("AnimationLibrary_duo3w")
+}
 
 [node name="*objetos" type="Node" parent="."]
 
@@ -5519,14 +5582,14 @@ collision_mask = 2
 script = ExtResource("20_ojbyl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="zonademuerte2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53149, 0.151889, 5.33797)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53149, 0.151889, 5.8996)
 shape = SubResource("BoxShape3D_b0g7a")
 
 [node name="gestor_de_checkpoint" type="Node" parent="."]
 script = ExtResource("18_1qo41")
 
 [node name="checkpoint" parent="gestor_de_checkpoint" instance=ExtResource("19_p2ti4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43699, 0, -55.0754)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43699, 0, -127.652)
 
 [node name="gridmaps" type="Node" parent="."]
 
@@ -5534,7 +5597,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43699, 0, -55.0754)
 mesh_library = ExtResource("20_ftw31")
 cell_size = Vector3(0.3, 3, 0.3)
 data = {
-"cells": PackedInt32Array(65532, 65285, 0, 14, 65267, 0, 0, 65265, 0, 6, 65282, 0, 10, 65299, 0, 14, 65294, 0, 14, 65299, 0, 11, 65289, 0, 0, 65280, 0, 7, 65265, 0, 16, 65256, 0, 15, 65274, 0, 7, 65272, 0, 65532, 65273, 0, 65531, 65279, 0, 2, 65285, 0, 65532, 65290, 0, 7, 65291, 0, 9, 65295, 0, 65534, 65271, 1, 16, 65288, 1, 65533, 65300, 1, 5, 65299, 1, 15, 65301, 1, 65533, 64832, 1, 15, 64826, 1, 14, 64807, 1, 65534, 64896, 0, 8, 64900, 0, 14, 64891, 0, 7, 64885, 0, 11, 64884, 0, 4, 64894, 0, 13, 64899, 0, 19, 64883, 0, 14, 64876, 0, 18, 64898, 0, 22, 64906, 0, 65527, 64898, 0, 1, 64877, 0, 0, 64883, 0, 65532, 64877, 0, 65532, 64878, 0, 65532, 64888, 0, 9, 64891, 0, 1, 64888, 0, 65535, 64902, 0, 16, 64869, 0, 13, 64863, 0, 65535, 64870, 0, 18, 64861, 0, 9, 64861, 0, 6, 64867, 0, 20, 64876, 0, 65530, 64872, 0, 65531, 64872, 0, 1, 64864, 0, 65531, 64859, 0, 65530, 64859, 0, 65525, 64865, 0, 3, 64856, 0, 65534, 64853, 0, 16, 64834, 0, 65531, 64844, 0, 65530, 64851, 0, 65527, 64857, 0, 65522, 64859, 0, 65526, 64869, 0, 65520, 64866, 0, 23, 64831, 0, 32, 64835, 0, 26, 64859, 0, 20, 64860, 0, 23, 64864, 0, 65533, 64838, 0, 8, 64831, 0, 3, 64833, 0, 27, 64852, 0, 36, 64851, 0, 30, 64843, 0, 39, 64844, 0, 65524, 64850, 0, 65525, 64843, 0, 14, 64820, 0, 7, 64839, 0, 65525, 64819, 1, 65532, 64827, 0, 21, 64823, 0, 28, 64825, 0, 23, 64816, 0, 17, 64814, 0, 12, 64814, 0, 65533, 64820, 0, 8, 64806, 0, 65534, 64814, 0, 65526, 64810, 0, 65523, 64799, 1, 31, 64807, 1, 38, 64816, 1, 65514, 64804, 1, 65522, 64831, 1, 65521, 64806, 0, 65518, 64813, 0, 65522, 64819, 0, 65513, 64811, 0, 65516, 64820, 0, 65517, 64829, 0, 65525, 64826, 0, 0, 64844, 0, 33, 64860, 0, 31, 64829, 0, 37, 64839, 1, 6, 64824, 1, 30, 64818, 0, 31, 64818, 0, 37, 64831, 0, 37, 64824, 0, 65529, 64798, 0, 65535, 64795, 0, 6, 64798, 0, 65527, 64804, 0, 14, 64802, 0, 23, 64804, 0, 65534, 64805, 0, 0, 64799, 0, 0, 64809, 0, 17, 65281, 0, 13, 65284, 0, 3, 65273, 0, 6, 65287, 0)
+"cells": PackedInt32Array(65532, 65285, 0, 14, 65267, 0, 0, 65265, 0, 6, 65282, 0, 10, 65299, 0, 14, 65294, 0, 14, 65299, 0, 11, 65289, 0, 0, 65280, 0, 7, 65265, 0, 16, 65256, 0, 15, 65274, 0, 7, 65272, 0, 65532, 65273, 0, 65531, 65279, 0, 2, 65285, 0, 65532, 65290, 0, 7, 65291, 0, 9, 65295, 0, 65534, 65271, 1, 16, 65288, 1, 65533, 65300, 1, 5, 65299, 1, 15, 65301, 1, 65533, 64832, 1, 15, 64826, 1, 14, 64807, 1, 65534, 64896, 0, 8, 64900, 0, 14, 64891, 0, 7, 64885, 0, 11, 64884, 0, 4, 64894, 0, 13, 64899, 0, 19, 64883, 0, 14, 64876, 0, 18, 64898, 0, 22, 64906, 0, 65527, 64898, 0, 1, 64877, 0, 0, 64883, 0, 65532, 64877, 0, 65532, 64878, 0, 65532, 64888, 0, 9, 64891, 0, 1, 64888, 0, 65535, 64902, 0, 16, 64869, 0, 13, 64863, 0, 65535, 64870, 0, 18, 64861, 0, 9, 64861, 0, 6, 64867, 0, 20, 64876, 0, 65530, 64872, 0, 65531, 64872, 0, 1, 64864, 0, 65531, 64859, 0, 65530, 64859, 0, 65525, 64865, 0, 3, 64856, 0, 65534, 64853, 0, 16, 64834, 0, 65531, 64844, 0, 65530, 64851, 0, 65527, 64857, 0, 65522, 64859, 0, 65526, 64869, 0, 65520, 64866, 0, 23, 64831, 0, 32, 64835, 0, 26, 64859, 0, 20, 64860, 0, 23, 64864, 0, 65533, 64838, 0, 8, 64831, 0, 3, 64833, 0, 27, 64852, 0, 36, 64851, 0, 30, 64843, 0, 39, 64844, 0, 65524, 64850, 0, 65525, 64843, 0, 14, 64820, 0, 7, 64839, 0, 65525, 64819, 1, 65532, 64827, 0, 21, 64823, 0, 28, 64825, 0, 23, 64816, 0, 17, 64814, 0, 12, 64814, 0, 65533, 64820, 0, 8, 64806, 0, 65534, 64814, 0, 65526, 64810, 0, 65523, 64799, 1, 31, 64807, 1, 38, 64816, 1, 65514, 64804, 1, 65522, 64831, 1, 65521, 64806, 0, 65518, 64813, 0, 65522, 64819, 0, 65513, 64811, 0, 65516, 64820, 0, 65517, 64829, 0, 65525, 64826, 0, 0, 64844, 0, 33, 64860, 0, 31, 64829, 0, 37, 64839, 1, 6, 64824, 1, 30, 64818, 0, 31, 64818, 0, 37, 64831, 0, 37, 64824, 0, 65529, 64798, 0, 65535, 64795, 0, 6, 64798, 0, 65527, 64804, 0, 14, 64802, 0, 23, 64804, 0, 65534, 64805, 0, 0, 64799, 0, 0, 64809, 0, 17, 65281, 0, 13, 65284, 0, 3, 65273, 0, 6, 65287, 0, 11, 64800, 0, 12, 64797, 0, 19, 64799, 0, 21, 64794, 0)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
@@ -5603,14 +5666,15 @@ shape = SubResource("BoxShape3D_ynlww")
 [node name="enemigos" type="Node" parent="."]
 
 [node name="mykure" parent="enemigos" node_paths=PackedStringArray("inicio", "punto_retiro") instance=ExtResource("23_01tds")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.71032, 0.486529, -105.629)
+transform = Transform3D(0.873313, 0.00554689, -0.487128, 0.0370708, 0.996279, 0.0778043, 0.485747, -0.0860057, 0.869858, 8.71032, 0.486529, -105.629)
 collision_layer = 4
 collision_mask = 4
+script = ExtResource("107_4un50")
 inicio = NodePath("../inicio")
 punto_retiro = NodePath("../retiro")
 
 [node name="retiro" type="Marker3D" parent="enemigos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6164, 0, -100.014)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5034, 0, -93.3323)
 
 [node name="inicio" type="Marker3D" parent="enemigos"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22677, 1.0816, -107.015)
@@ -5662,8 +5726,12 @@ autoplay = true
 stream = ExtResource("34_6xlwd")
 volume_db = -4.333
 
+[node name="UndertaleDamageSoundEffect(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("114_5vwpt")
+volume_db = -11.556
+
 [node name="Hýpy(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("35_k2y46")
+stream = ExtResource("114_5vwpt")
 volume_db = -5.2
 
 [node name="Timer" type="Timer" parent="."]

@@ -676,7 +676,7 @@ stream = ExtResource("3_1xbby")
 volume_db = -5.357
 
 [node name="blockbench_export" type="Node3D" parent="."]
-transform = Transform3D(-2.54938, 0, 5.2215, 0, 5.21486, 0, -4.41565, 0, -3.01463, -0.233505, -0.276534, 0)
+transform = Transform3D(5.09875, 0, -4.05312e-06, 0, 5.21486, 0, -2.6226e-06, 0, 6.02927, -0.233505, -0.276534, 0)
 
 [node name="Cabeza" type="Node3D" parent="blockbench_export"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05625, 0.14375, -0.109375)

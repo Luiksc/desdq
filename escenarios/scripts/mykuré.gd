@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 			velocity = direccion * SPEED
 			move_and_slide()
 			
-			if global_position == punto_retiro.global_position:
+			if global_position >= punto_retiro.global_position:
 					hide()
 
 		
@@ -123,6 +123,7 @@ func es_jugador(body: Node3D) -> bool:
 
 func detenido_sape() -> void:
 	Estado = estado.retirada
+
 	if is_instance_valid(triger_mykure):
 		triger_mykure.queue_free()
 		triger_mykure = null

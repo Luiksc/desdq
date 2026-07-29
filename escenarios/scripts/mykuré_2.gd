@@ -24,23 +24,26 @@ func _ready() -> void:
 	buscar_referencias()
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	var _delta := delta
 	match Estado:
 		estado.esperando:
 			velocity = Vector3.ZERO
 
 		estado.persiguiendo:
-			
 			if jugador == null:
 				velocity = Vector3.ZERO
 				return
 			
 			var direccion = jugador.global_position - global_position
-			
 			direccion.y = 0
+			if direccion.length() > 0.01:
+				var angulo = atan2(-direccion.x, -direccion.z)
+				rotation.y = lerp_angle(rotation.y, angulo, 10 * _delta)
 			direccion = direccion.normalized()
 			velocity = direccion * SPEED
 			move_and_slide()
+			
 
 		estado.retirada:
 			if punto_retiro == null:
@@ -49,13 +52,13 @@ func _physics_process(_delta: float) -> void:
 
 			var direccion = punto_retiro.global_position - global_position
 			direccion.y = 0
+			if direccion.length() > 0.01:
+				var angulo = atan2(-direccion.x, -direccion.z)
+				rotation.y = lerp_angle(rotation.y, angulo, 8 * _delta)
 			direccion = direccion.normalized()
 			velocity = direccion * SPEED
 			move_and_slide()
 			
-			if global_position.distance_to(punto_retiro.global_position) < 0.5:
-				hide()
-
 	if Input.is_action_just_pressed("interaccion") and puede_espantar:
 		hypy.play()
 		detenido_sape()

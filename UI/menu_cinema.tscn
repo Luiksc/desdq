@@ -1,4 +1,4 @@
-[gd_scene load_steps=198 format=4 uid="uid://cjse10p2bv8ca"]
+[gd_scene load_steps=200 format=4 uid="uid://cjse10p2bv8ca"]
 
 [ext_resource type="Script" path="res://UI/menu_cinema.gd" id="1_ex02h"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_hmk0p"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="5_f455i"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="6_77ftp"]
 [ext_resource type="Texture2D" uid="uid://cwyym7sraayg2" path="res://UI/iniciar_botonm.png" id="6_254h4"]
+[ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="11_41vv7"]
+[ext_resource type="AudioStream" uid="uid://c7dldail7kvsf" path="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3" id="13_r51ts"]
 [ext_resource type="Texture2D" uid="uid://d064vyx4v5v23" path="res://modelos/Don_menú/don menú_0.png" id="20_euqvo"]
 [ext_resource type="Texture2D" uid="uid://b42v8neyl4n80" path="res://modelos/Don_menú/don menú_1.png" id="21_oqp8l"]
 [ext_resource type="Texture2D" uid="uid://iwcyn3h1ws3m" path="res://modelos/Don_menú/don menú_2.png" id="22_iciox"]
@@ -2703,9 +2705,19 @@ stream = ExtResource("109_pqus4")
 volume_db = 0.895
 autoplay = true
 
+[node name="BenteveoComúnCantandoSonidoParaLlamarElMejor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_41vv7")
+volume_db = -20.949
+autoplay = true
+
 [node name="chaco_ambiente" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("110_83miu")
 volume_db = 8.631
+autoplay = true
+
+[node name="CantoDaCigarra-CicadasSong(cicadoidea)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_r51ts")
+volume_db = -30.81
 autoplay = true
 
 [node name="torus" type="MeshInstance3D" parent="."]
@@ -2928,7 +2940,7 @@ libraries = {
 }
 
 [node name="caso_mensu" type="Node3D" parent="."]
-transform = Transform3D(-1.22976, 0.709995, -3.10349e-08, 0, -6.20702e-08, -1.42, -0.709995, -1.22976, 5.37545e-08, 30.0531, 0.252, -72.2374)
+transform = Transform3D(-1.22976, 0.709994, -3.10348e-08, 0, -6.20702e-08, -1.42, -0.709994, -1.22976, 5.37545e-08, 30.0531, 0.252, -72.2374)
 
 [node name="hoja2" type="Node3D" parent="caso_mensu"]
 transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -7.10543e-15, 1.77636e-15, 3.55271e-15, 1, 0.0311413, -0.211327, 4.47035e-08)
@@ -2955,7 +2967,7 @@ libraries = {
 }
 
 [node name="caso_karau" type="Node3D" parent="."]
-transform = Transform3D(-1.22976, 0.709995, -3.10349e-08, 0, -6.20702e-08, -1.42, -0.709995, -1.22976, 5.37545e-08, 31.1271, 0.252, -71.7351)
+transform = Transform3D(-1.22976, 0.709994, -3.10348e-08, 0, -6.20702e-08, -1.42, -0.709994, -1.22976, 5.37545e-08, 31.1271, 0.252, -71.7351)
 
 [node name="hoja2" type="Node3D" parent="caso_karau"]
 transform = Transform3D(1, 0, 1.77636e-15, 0, 1, -7.10543e-15, 1.77636e-15, 3.55271e-15, 1, -0.00922203, -0.289482, 4.47035e-08)
