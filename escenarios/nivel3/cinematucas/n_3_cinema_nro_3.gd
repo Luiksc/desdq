@@ -34,6 +34,7 @@ func _ready() -> void:
 	transicion_pixel.play("salida")
 	MusicaGlobal.play_music_level()
 	MusicaGlobal.jui_sonido_ambiental()
+	MusicaGlobal.musica_fondo_nivel3()
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 	timer.start()
 	await timer.timeout
@@ -43,7 +44,7 @@ func _ready() -> void:
 	
 
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	if dialogo_activo:
 		if Input.is_action_just_pressed("interaccion"):
@@ -71,10 +72,7 @@ func inic_dialo() -> void:
 	for linea in dialogos[npc_actual]:
 		DialogSystem.says(linea[1], linea[0])
 
-	 # bloquea el movimiento del jugador
-	#DialogSystem.says("¿No te enteraste de la fiesta que hizo la fábrica por el Día de la Raza ? Todos están ahí; seguramente Mateo también.", "Ña Clotilde")
-
-# Se llama mediante señal cuando el DialogSystem termina todos los mensajes
+	
 func dialog_terminado() -> void:
 	dialogo_activo = false
 

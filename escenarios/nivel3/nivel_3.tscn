@@ -1,4 +1,4 @@
-[gd_scene load_steps=412 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=413 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/ka'arurupa.gd" id="1_86ijx"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_hgq2t"]
@@ -99,6 +99,7 @@
 [ext_resource type="PackedScene" uid="uid://c5fhir01qye0n" path="res://audios/musica_global.tscn" id="95_c02ee"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="96_uv3yb"]
 [ext_resource type="AudioStream" uid="uid://w1h5npvgdfyv" path="res://audios/Undertale Damage Sound Effect (mp3cut.net).mp3" id="99_hrodh"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="100_qny3a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
 panorama = ExtResource("4_bklqj")
@@ -7219,6 +7220,8 @@ autoplay = true
 
 [node name="UndertaleDamageSoundEffect(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("99_hrodh")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("100_qny3a")]
 
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="." method="_on_trigger_farra_body_entered"]
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="objetos/casa1" method="_on_trigger_farra_body_entered"]

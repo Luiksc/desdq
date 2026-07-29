@@ -1,4 +1,4 @@
-[gd_scene load_steps=504 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=505 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -114,6 +114,7 @@
 [ext_resource type="Texture2D" uid="uid://cxbjnsqnl2vqo" path="res://modelos/laburador 3/laburador3_16.png" id="111_shwel"]
 [ext_resource type="Texture2D" uid="uid://dsjsnta0i2cto" path="res://modelos/laburador 3/laburador3_17.png" id="112_hk850"]
 [ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="113_17jg1"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="115_37u74"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o0fk5"]
 font = ExtResource("6_84008")
@@ -9905,6 +9906,8 @@ libraries = {
 
 [node name="spawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.8181, 1.36935, -21.2352)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("115_37u74")]
 
 [connection signal="body_entered" from="kapanga5_patrulla/atrapado5" to="." method="_on_atrapado_5_body_entered"]
 [connection signal="body_entered" from="kapanga3_patrulla/atrapado2" to="." method="_on_atrapado_2_body_entered"]
