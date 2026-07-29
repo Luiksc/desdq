@@ -48,7 +48,6 @@ func _ready() -> void:
 	transicion.play("salida")
 	await transicion.animation_finished
 	inicia_cine("Dialogo1")
-	$Control/Interac.play("interactura")
 	
 
 

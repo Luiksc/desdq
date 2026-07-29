@@ -107,21 +107,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	interac.play()
 	if dialogo_activo:
-		# E funciona como "next" mientras el diálogo está ocurriendo
+	
 		if Input.is_action_just_pressed("interaccion"):
-			
-			
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
-			
-			
 	elif jugador_puede_interac:
 		# E inicia el diálogo si el jugador está en el área y no hay diálogo activo
 		if Input.is_action_just_pressed("interaccion"):
 			inic_dialo()
 	if jgd_omamo: 
 		if Input.is_action_just_pressed("clicki") or Input.is_action_just_pressed("interaccion"):
-			print("reset")
+		
 			reset()
 	
 # Recibe el npc_id emitido por la señal corpus_entro del trigger
@@ -208,17 +204,11 @@ func espanta(_body):
 	interac.show()
 	interac.play()
 
-
 func _on_mykure_trigger_body_exited(_body: Node3D) -> void:
 	interac.hide()
 
-
-
 func _on_mykure_trigger_body_entered(body: Node3D) -> void:
 	interac.show()
-	
-	
-
 
 func _on_final_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bi4k87ocdfv4"
+path="res://.godot/imported/8   Bit Coin SOUND Effect.mp3-68d3a699ec905c2cb30c4d92626d9209.mp3str"
+
+[deps]
+
+source_file="res://audios/8   Bit Coin SOUND Effect.mp3"
+dest_files=["res://.godot/imported/8   Bit Coin SOUND Effect.mp3-68d3a699ec905c2cb30c4d92626d9209.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

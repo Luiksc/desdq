@@ -1,9 +1,8 @@
-[gd_scene load_steps=114 format=4 uid="uid://b3sejkfqdkt0"]
+[gd_scene load_steps=110 format=4 uid="uid://b3sejkfqdkt0"]
 
 [ext_resource type="Script" path="res://escenarios/n_1_cinematica.gd" id="1_ypeu1"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_mwopg"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="4_yht7x"]
-[ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="5_f7vi3"]
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="5_gua3i"]
 [ext_resource type="Texture2D" uid="uid://dobjff0w0vwfq" path="res://modelos/objetos/chaco/ÓGA+/Casa_delfina_0.png" id="23_ih2oe"]
 [ext_resource type="PackedScene" uid="uid://kaql6p3h1tgl" path="res://modelos/objetos/chaco/ÓGA+/oga.tscn" id="29_aypkw"]
@@ -47,28 +46,6 @@ sky = SubResource("Sky_ojd1x")
 ambient_light_source = 2
 ambient_light_color = Color(1, 0.909804, 0.752941, 1)
 fog_light_color = Color(1, 0.915667, 0.77, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hlxe7"]
-atlas = ExtResource("5_f7vi3")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_27jxw"]
-atlas = ExtResource("5_f7vi3")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pb4u8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hlxe7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_27jxw")
-}],
-"loop": true,
-"name": &"interactura",
-"speed": 2.0
-}]
 
 [sub_resource type="Animation" id="Animation_exjlt"]
 length = 0.001
@@ -1118,13 +1095,6 @@ offset_bottom = -284.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Interac" type="AnimatedSprite2D" parent="Control"]
-texture_filter = 1
-position = Vector2(1041, 393)
-scale = Vector2(3.28125, 2.875)
-sprite_frames = SubResource("SpriteFrames_pb4u8")
-animation = &"interactura"
-
 [node name="ã" type="Control" parent="Control"]
 layout_mode = 1
 anchor_left = 0.05
@@ -1144,10 +1114,8 @@ anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_left = -3.0
-offset_top = 54.6854
-offset_right = -3.0
-offset_bottom = 54.6854
+offset_top = -1240.31
+offset_bottom = -1240.31
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -1158,9 +1126,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3.0
-offset_right = 30.0
-offset_bottom = 27.0001
+offset_top = -1289.0
+offset_right = 33.0
+offset_bottom = -1262.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)

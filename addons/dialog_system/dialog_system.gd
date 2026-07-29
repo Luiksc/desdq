@@ -78,3 +78,7 @@ func terminar_dialogo() -> void:
 	mostrar = false
 	hide()
 	dialogo_opa.emit()
+	
+	
+func  _process(delta: float) -> void:
+	$interaccion2.play("[E]")

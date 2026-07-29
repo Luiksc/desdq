@@ -19,4 +19,5 @@ func _on_body_entered(body: Node3D) -> void:
 		checkpoint_gestor.ultima_posicion = $puntodeRespawn.global_position
 		if primera_vez:
 			$"../../Control/checkpoint/AnimationPlayer".play("sale")
+			$"../../8BitCoinSoundEffect".play()
 			primera_vez = false
