@@ -3,11 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddwkjnagh22vu"
-path.s3tc="res://.godot/imported/don menú_19.png-593b473183bb4361f5089ba79244cd4d.s3tc.ctex"
-path.etc2="res://.godot/imported/don menú_19.png-593b473183bb4361f5089ba79244cd4d.etc2.ctex"
+path="res://.godot/imported/don menú_19.png-593b473183bb4361f5089ba79244cd4d.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "416bc5b70c94895cce680aeea3788a7c"
@@ -16,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Don_menú/don menú_19.png"
-dest_files=["res://.godot/imported/don menú_19.png-593b473183bb4361f5089ba79244cd4d.s3tc.ctex", "res://.godot/imported/don menú_19.png-593b473183bb4361f5089ba79244cd4d.etc2.ctex"]
+dest_files=["res://.godot/imported/don menú_19.png-593b473183bb4361f5089ba79244cd4d.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

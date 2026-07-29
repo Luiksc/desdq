@@ -37,9 +37,8 @@ extends Node3D
 @onready var sako_baj9 = $"objetos/sako9 baj"
 
 @onready var flamea = $"luces/tatakua gnrl/AnimationPlayer"
-@onready var lista = $Control/ItemList
 @onready var perdeu = $Control/gameover
-
+@onready var lista = $Control/Sprite2D
 
 @export var sakos1: Array[Node3D]
 var ind_sako_arriba = 0
@@ -121,7 +120,7 @@ func _ready() -> void:
 	$npc_florida/Area3D.corpus_entro.connect(mostrar_interac)
 	$npc_florida/Area3D.corpus_salio.connect(hide_interac)
 	$inicio.oñepyru.connect(conversa)
-	$Control/ItemList.hide()
+	$Control/Sprite2D.hide()
 	transicion.play("opyta")
 	data.play("aparece")
 	await data.animation_finished
@@ -192,7 +191,7 @@ func _process(delta: float) -> void:
 			.")
 	
 	if llevar == true:
-		indicador2.hide()
+		indicador1.hide()
 		
 	if llevar and secar == false:
 		indicador2.show()
@@ -226,7 +225,7 @@ func dialog_terminado() -> void:
 	jugador.puede_moverse = true  # desbloquea el movimiento
 	if npc_actual == "iniciarf":
 		se_va.emit()
-		$Control/ItemList.show()
+		$Control/Sprite2D.show()
 	# Si era un pensamiento de Delfina, destruimos el trigger y listo
 	if pensamiento_activo:
 		pensamiento_activo = false
@@ -386,7 +385,7 @@ func oipoo():
 	kapanga4.global_position = kapanga4_puntoorigen.global_position
 	kapanga5.global_position = kapanga5_puntoorigen.global_position
 	kapanga6.global_position = kapanga6_puntoorigen.global_position
-	
+	lista.hide()
 	jugador.puede_moverse=false
 	perdeu.show()
 	boton_interac.show()
@@ -398,10 +397,13 @@ func reset():
 	if spawn:
 		jugador.global_position = spawn.global_position
 		jugador.global_rotation = spawn.global_rotation
-	transicion.play("salida")
-	await transicion.animation_finished
 	boton_interac.hide()
 	perdeu.hide()
+	transicion.play("salida")
+	await transicion.animation_finished
+
+	lista.show()
+	
 	jugador.puede_moverse = true
 	
 
@@ -429,7 +431,7 @@ func reset():
 		for s in sakos2:
 			s.hide()
 
-		lista.set_item_text(0, "llevar sacos de yerba mate. 0/3")
+		$Control/Sprite2D/Label.text = "Bajar sacos de yerba 0/3"
 
 		# Resetear estado de carga de tarea 1
 		llevando = false
@@ -449,9 +451,9 @@ func reset():
 		for s in sakos4:
 			s.hide()
 
-		lista.set_item_text(1, "poner a secar  la yerba. 0/3")
+		$Control/Sprite2D/Label2.text = "poner a secar la yerba 0/3"
 
-		# Resetear estado de carga de tarea 2
+		
 		llevando2 = false
 		jugador.oraha = false
 

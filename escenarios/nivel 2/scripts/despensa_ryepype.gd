@@ -111,6 +111,8 @@ func dialog_terminado() -> void:
 func _on_deber_pressed() -> void:
 	var npc_id: String ="Comprado"
 	npc_actual = npc_id
+	$Control/deber.hide()
+	$Control/compra.hide()
 	inic_dialo()
 
 

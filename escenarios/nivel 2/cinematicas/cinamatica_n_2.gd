@@ -61,7 +61,7 @@ func _process(delta: float) -> void:
 			$DialogSystem/sound.play()
 	if fino:
 		if Input.is_action_just_pressed("interaccion"):
-			get_tree().change_scene_to_file("res://UI/menu_cinema.tscn")
+			get_tree().change_scene_to_file("res://UI/menu_selccion.tscn")
 
 func inic_dialo() -> void:
 	if npc_actual=="":

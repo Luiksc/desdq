@@ -3,11 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqerbiletwsqq"
-path.s3tc="res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.s3tc.ctex"
-path.etc2="res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.etc2.ctex"
+path="res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "fd76ae9c355bdffe5c5d544d0f156562"
@@ -16,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Don_menú/don menú_10.png"
-dest_files=["res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.s3tc.ctex", "res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.etc2.ctex"]
+dest_files=["res://.godot/imported/don menú_10.png-1bdb26a05b2c4fabdb3858087aa90756.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

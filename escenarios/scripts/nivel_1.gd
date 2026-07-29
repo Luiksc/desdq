@@ -35,7 +35,7 @@ var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento
 var dialogos ={
 	"okakula":[
 		["Delfina servpin","...
-(Piensa en guaraní)"],
+(Piensa)"],
 		["Delfina","Anichéneti ko este ára niko feriado Día de la Raza.
 (No puede ser hoy es feriado por Día de la Raza.)"],
 ],

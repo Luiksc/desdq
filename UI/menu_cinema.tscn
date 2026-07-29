@@ -1,4 +1,4 @@
-[gd_scene load_steps=200 format=4 uid="uid://cjse10p2bv8ca"]
+[gd_scene load_steps=207 format=4 uid="uid://cjse10p2bv8ca"]
 
 [ext_resource type="Script" path="res://UI/menu_cinema.gd" id="1_ex02h"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_hmk0p"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="5_f455i"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="6_77ftp"]
 [ext_resource type="Texture2D" uid="uid://cwyym7sraayg2" path="res://UI/iniciar_botonm.png" id="6_254h4"]
+[ext_resource type="Script" path="res://UI/salir.gd" id="7_63dko"]
+[ext_resource type="Texture2D" uid="uid://occo4hjiplj5" path="res://UI/salir_boton.png" id="7_qbni4"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="11_41vv7"]
 [ext_resource type="AudioStream" uid="uid://c7dldail7kvsf" path="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3" id="13_r51ts"]
 [ext_resource type="Texture2D" uid="uid://d064vyx4v5v23" path="res://modelos/Don_menú/don menú_0.png" id="20_euqvo"]
@@ -38,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://c3i1506rim1vs" path="res://modelos/objetos/caso karau/libro_0.png" id="47_uqq60"]
 [ext_resource type="Texture2D" uid="uid://dcvg2jpcfy258" path="res://modelos/objetos/caso karau/libro_1.png" id="48_ac8v5"]
 [ext_resource type="Texture2D" uid="uid://dchhe1iyrj1ag" path="res://modelos/objetos/caso karau/libro_2.png" id="49_vcm55"]
+[ext_resource type="PackedScene" uid="uid://biymrd4vrgub7" path="res://modelos/objetos/terere/terere (1).glb" id="51_u78t7"]
 [ext_resource type="Texture2D" uid="uid://dttv7s2ydgbm" path="res://modelos/objetos/guitarra/Guitarra_0.png" id="64_4ggrv"]
 [ext_resource type="Texture2D" uid="uid://ojqoa3ml32cj" path="res://modelos/objetos/guitarra/Guitarra_1.png" id="65_rabf7"]
 [ext_resource type="Texture2D" uid="uid://1wkceelh115s" path="res://modelos/objetos/guitarra/Guitarra_2.png" id="66_lbyw7"]
@@ -327,22 +330,7 @@ _data = {
 "desaparecce": SubResource("Animation_0uw4w")
 }
 
-[sub_resource type="Animation" id="Animation_xhjxy"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_3k85c"]
+[sub_resource type="Animation" id="Animation_l2ein"]
 resource_name = "aparece"
 length = 0.5
 tracks/0/type = "value"
@@ -358,7 +346,22 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_cch2a"]
+[sub_resource type="Animation" id="Animation_73g81"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2s7no"]
 resource_name = "desaparece"
 length = 0.5
 tracks/0/type = "value"
@@ -374,11 +377,65 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cgky4"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3c6lh"]
 _data = {
-"RESET": SubResource("Animation_xhjxy"),
-"aparece": SubResource("Animation_3k85c"),
-"desaparece": SubResource("Animation_cch2a")
+"RESET": SubResource("Animation_73g81"),
+"aparece": SubResource("Animation_l2ein"),
+"desaparece": SubResource("Animation_2s7no")
+}
+
+[sub_resource type="Animation" id="Animation_j32uu"]
+resource_name = "aparece"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vap73"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mmyjn"]
+resource_name = "desaparece"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gfmnp"]
+_data = {
+"RESET": SubResource("Animation_vap73"),
+"aparece": SubResource("Animation_j32uu"),
+"desaparece": SubResource("Animation_mmyjn")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j85rq"]
@@ -605,7 +662,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -0.682424, 0)]
+"values": [Vector3(0, -0.158825, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -692,7 +749,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, -0.682947, 0), Vector3(-1.48842, -0.7889, 0.262616)]
+"values": [Vector3(0, -0.159348, 0), Vector3(-1.48842, -0.7889, 0.262616)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1905,7 +1962,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(35.5455, 0.32495, -68.6525), Vector3(31.8887, 0.32495, -75.3306)]
+"values": [Vector3(35.5455, 0.32495, -68.6525), Vector3(32.5354, 0.32495, -75.0611)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1942,10 +1999,10 @@ tracks/0/path = NodePath("don menu:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.3, 1.2, 1.43333),
+"times": PackedFloat32Array(0, 1.16667, 1.43333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(31.8887, 0.32495, -75.3306), Vector3(31.8887, 0.32495, -75.3306), Vector3(33.4684, 0.500054, -75.7007)]
+"values": [Vector3(32.535, 0.325, -75.061), Vector3(32.535, 0.325, -75.061), Vector3(33.4684, 0.500054, -75.7007)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1957,7 +2014,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 2.76667, 3.5, 4.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(33.734, 0.33, -74.419), Vector3(33.734, 0.33, -74.419), Vector3(33.9031, 0.873669, -74.3919), Vector3(32.6779, 1.20286, -76.014)]
+"values": [Vector3(33.734, 0.33, -74.419), Vector3(33.734, 0.33, -74.419), Vector3(33.9031, 0.873669, -74.3919), Vector3(32.8739, 1.1, -75.9047)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1969,7 +2026,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 2.76667, 3.5, 4.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.256563, -0.916298, 0.626573), Vector3(-0.256563, -0.916298, 0.626573), Vector3(-0.321141, -0.808087, 0.356047), Vector3(-0.003981, -0.623422, -1.19441)]
+"values": [Vector3(-0.256563, -0.916298, 0.626573), Vector3(-0.256563, -0.916298, 0.626573), Vector3(-0.321141, -0.808087, 0.356047), Vector3(-0.0358136, -0.614529, -1.08478)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uboo0"]
@@ -2668,7 +2725,34 @@ texture = ExtResource("6_254h4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Button"]
 libraries = {
-"": SubResource("AnimationLibrary_cgky4")
+"": SubResource("AnimationLibrary_3c6lh")
+}
+
+[node name="salir" type="Button" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.448
+anchor_right = 0.216
+anchor_bottom = 0.563
+offset_left = -0.392002
+offset_top = 109.8
+offset_right = -0.264008
+offset_bottom = 110.05
+theme_override_font_sizes/font_size = 1
+flat = true
+script = ExtResource("7_63dko")
+
+[node name="Sprite" type="Sprite2D" parent="Control/salir"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(97, 39)
+scale = Vector2(1.20958, 1.27273)
+texture = ExtResource("7_qbni4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/salir"]
+libraries = {
+"": SubResource("AnimationLibrary_gfmnp")
 }
 
 [node name="gridmaps" type="Node" parent="."]
@@ -2752,7 +2836,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.746557, 0, -0.665322, 0, 1, 0, 0.665322, 0, 0.746557, 64.4992, 2.97646, -86.0932)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.776046, 0, -0.630676, 0, 1, 0, 0.630676, 0, 0.776046, 29.6571, 2.19152, -72.2312)
+transform = Transform3D(0.987414, 0, -0.158158, 0, 1, 0, 0.158158, 0, 0.987414, 29.6571, 2.19152, -72.2312)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
 libraries = {
@@ -2813,7 +2897,7 @@ mesh = SubResource("ArrayMesh_8md8o")
 skeleton = NodePath("")
 
 [node name="antebrazo" type="Node3D" parent="don menu/base/extremidades2/brazoizquierda2"]
-transform = Transform3D(0.74467, 0.34488, -0.571423, -0.474408, 0.875723, -0.0897017, 0.469472, 0.337886, 0.815738, -0.0926719, -0.329838, 0.0726212)
+transform = Transform3D(0.744671, 0.640319, -0.188302, -0.474408, 0.706255, 0.525491, 0.469471, -0.301986, 0.829699, -0.0926719, -0.329838, 0.0726212)
 
 [node name="jyva 22" type="MeshInstance3D" parent="don menu/base/extremidades2/brazoizquierda2/antebrazo"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, 0.130029, -0.987672, -0.0871557, -0.0113761, 0.0864101, -0.996195, -0.025, 0.315625, -0.01875)
@@ -2826,7 +2910,7 @@ mesh = SubResource("ArrayMesh_bklmi")
 skeleton = NodePath("")
 
 [node name="brazoderecha2" type="Node3D" parent="don menu/base/extremidades2"]
-transform = Transform3D(0.898758, -0.132866, 0.417829, 0.153724, 0.987976, -0.016495, -0.410614, 0.0790556, 0.908376, -0.4875, 1.4875, -0.3125)
+transform = Transform3D(0.574737, -0.755801, 0.313756, 0.691926, 0.244103, -0.679451, 0.436941, 0.6076, 0.663253, -0.4875, 1.4875, -0.3125)
 
 [node name="jyva 23" type="MeshInstance3D" parent="don menu/base/extremidades2/brazoderecha2"]
 transform = Transform3D(-0.0698588, 0.140084, 0.987672, -0.0454385, -0.98951, 0.137131, 0.996521, -0.0352985, 0.0754912, 0.0214581, -0.387633, -0.116116)
@@ -3014,9 +3098,15 @@ transform = Transform3D(0.510513, 0, 0.85987, 0, 1, 0, -0.85987, 0, 0.510513, 31
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -0.094902, 0, 0.0031662)
 shape = SubResource("BoxShape3D_sf6pe")
 
+[node name="blockbench_export" parent="." instance=ExtResource("51_u78t7")]
+transform = Transform3D(0.93561, 0, 0.353034, 0, 1, 0, -0.353034, 0, 0.93561, 32.0104, 0.261349, -76.3254)
+
 [connection signal="mouse_entered" from="Control/Button" to="Control/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Button" to="Control/Button" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Control/salir" to="Control/salir" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/salir" to="Control/salir" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/salir" to="." method="_on_salir_pressed"]
 [connection signal="mouse_entered" from="StaticBody3D" to="." method="_on_mateo_mouse_entered"]
 [connection signal="mouse_exited" from="StaticBody3D" to="." method="_on_mateo_mouse_exited"]
 [connection signal="mouse_entered" from="StaticBody3D2" to="." method="_on_mensu_mouse_entered"]

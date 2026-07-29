@@ -92,7 +92,7 @@ func inic_dialo() -> void:
 func dialog_terminado() -> void:
 	dialogo_activo = false
 	if npc_actual == "Dialogo1":
-		$Control/Interac.hide()
+		
 		transicion.play("entrafa")
 		
 		await transicion.animation_finished

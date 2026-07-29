@@ -319,6 +319,6 @@ text = "Relatos Ocultos"
 label_settings = SubResource("LabelSettings_jsbrf")
 horizontal_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]

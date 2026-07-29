@@ -4,6 +4,7 @@ extends Node3D
 @onready var desplazamiento=$"desplazamiento"
 @onready var titulo = $Control/titulo/AnimationPlayer
 @onready var anima_boton = $Control/Button/AnimationPlayer
+@onready var anima_boton2 = $Control/salir/AnimationPlayer
 @onready var boton = $Control/Button
 @onready var anima_libro1 = $caso_mateo/AnimationPlayer
 @onready var anima_libro2 = $caso_mensu/AnimationPlayer
@@ -28,6 +29,7 @@ func _ready() -> void:
 	libro_mateo.input_ray_pickable = false
 	libro_mensu.input_ray_pickable = false
 	libro_karau.input_ray_pickable = false
+	anima_camara.play("RESET")
 	desplazamiento.play("desplazamiento")
 	await desplazamiento.animation_finished
 	oguapy = true
@@ -37,7 +39,7 @@ func _ready() -> void:
 	titulo.play("aparece")
 	await titulo.animation_finished
 	anima_boton.play("aparece")
-	
+	anima_boton2.play("aparece")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -100,12 +102,14 @@ func _volver_al_inicio() -> void:
 	await anima_camara.animation_finished
 	boton.show()
 	anima_boton.play("aparece")
+	anima_boton2.play("aparece")
 	titulo.play("aparece")
 
 func _on_button_pressed() -> void:
 	en_seleccion = true
 	titulo.play("RESET")
 	anima_boton.play("RESET")
+	anima_boton2.play("RESET")
 	boton.hide()
 	anima_camara.play("seleccion")
 	await anima_camara.animation_finished
@@ -138,3 +142,7 @@ func _on_karau_mouse_entered() -> void:
 func _on_karau_mouse_exited() -> void:
 	clicki3 = false
 	anima_libro3.play("desseleccion")
+
+
+func _on_salir_pressed() -> void:
+	get_tree().quit()

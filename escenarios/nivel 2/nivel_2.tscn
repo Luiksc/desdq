@@ -5858,7 +5858,7 @@ offset_top = -61.0
 offset_right = 104.0
 offset_bottom = -51.0
 scale = Vector2(1.135, 2.16)
-text = "bajar sacos de yerbe 0/3"
+text = "Bajar sacos de yerbe 0/3"
 label_settings = SubResource("LabelSettings_s84nh")
 horizontal_alignment = 1
 
@@ -5880,7 +5880,7 @@ offset_top = -6.0
 offset_right = 108.0
 offset_bottom = 2.0
 scale = Vector2(1.09, 2.16)
-text = "Comprar harina 0/3"
+text = "Comprar harina "
 label_settings = SubResource("LabelSettings_s84nh")
 horizontal_alignment = 1
 
