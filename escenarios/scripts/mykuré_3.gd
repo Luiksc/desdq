@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal jgd_omano
+
 var jugador: Node3D
 var triger_mykure: Area3D
 var puede_espantar: bool = false
@@ -140,4 +142,5 @@ func _on_mykure_trigger_3_body_entered(body: Node3D) -> void:
 
 func _on_area_3d_daña_3_body_entered(body: Node3D) -> void:
 	if es_jugador(body):
+		jgd_omano.emit()
 		reinicio()

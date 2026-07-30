@@ -5,7 +5,7 @@ var triger_mykure: Area3D
 var puede_espantar: bool = false
 var SPEED: float = 20.0
 
-@onready var hypy =$"../../Hýpy(mp3Cut_net)"
+@onready var hypy =$"../../hypy"
 @onready var atake_sond = $SonidoMykure
 @export var inicio: Marker3D
 @export var punto_retiro: Marker3D
@@ -102,8 +102,6 @@ func obtener_numero_de_mykure() -> String:
 	return numero
 
 
-func activar_persecucion(body: Node3D) -> void:
-	pass
 
 
 func es_jugador(body: Node3D) -> bool:
