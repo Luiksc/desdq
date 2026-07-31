@@ -26,3 +26,32 @@ func _activar_camara_tactil() -> void:
 		camaras[0].activar_modo_tactil()
 	else:
 		push_warning("Ui_celular: No se encontró ningún nodo en el grupo 'camara_pivot'.")
+
+func _process(_delta: float) -> void:
+	if not es_celular:
+		return
+		
+	if DialogSystem.estar_mostrando():
+		if visible:
+			hide()
+	else:
+		if not visible:
+			show()
+
+func _input(event: InputEvent) -> void:
+	if not es_celular:
+		return
+		
+	if DialogSystem.estar_mostrando():
+		if event is InputEventScreenTouch and event.pressed:
+			DialogSystem.neixt()
+			get_viewport().set_input_as_handled()
+		return
+		
+	if event is InputEventScreenTouch:
+		var mouse_event = InputEventMouseButton.new()
+		mouse_event.button_index = MOUSE_BUTTON_LEFT
+		mouse_event.position = event.position
+		mouse_event.global_position = event.position
+		mouse_event.pressed = event.pressed
+		Input.parse_input_event(mouse_event)

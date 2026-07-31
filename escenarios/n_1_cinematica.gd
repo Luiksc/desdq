@@ -26,20 +26,8 @@ var dialogos ={
 		["Mateo Gamarra","Capataz orerenói jey kokuépe, ahamíta sapy'aite ha ajevpyta che kamba
 (El capataz nos llamo de nuevo a la chacra, voy a irme un rato y vuelvo mi morena)"],
 		["Delfina Servin","Che amosaingóta la aokuéra, roha'arota.
-(Bueno,yo voy a colgar la ropa, te voy a espera)"],
-		["Delfina Servín", "Animo'akena ahendu jey la rumor nde reimeha otro kuña ndive, chekueráima Mateo.
-(Que no escuche ya otra vez ese rumor de que andás con otra mujer, me tenés harta Mateo.)"],
-		["Mateo", "Umía vyrésa, agaite aju jeýta, chau.
-Esas son tonterías, ya vuelvo, Chau."],
-],
-	"Mariano":[
-		["Don Mariano", "Mba'éichapa Ña Servín
-(Cómo está Doña Servín)"],
-		["Don Mariano", "¿Mateo? Upe karia'y jeýma, le vi kuri yendose a la fiesta en la casa de Miguel Medina
-(¿Mateo? ese muchacho ya otra vez, se estaba yendo a la fiesta en la casa de Miguel Madina)"],
-		["Don Mariano", "Chéve g̃uarã, oho ojopo Emilia Ortiz ndive, ¡Ñandejára!
-(Para mí que se iba agarrado de la mano con Emilia Ortiz, ¡Dios mío!)"]
-	]
+(Bueno,yo voy a colgar la ropa, te voy a espera)"]
+]
 }
 
 func _ready() -> void:

@@ -36,14 +36,14 @@ var dialogos ={
 	"okakula":[
 		["Delfina servpin","...
 (Piensa)"],
-		["Delfina","Anichéneti ko este ára niko feriado Día de la Raza.
-(No puede ser hoy es feriado por Día de la Raza.)"],
+		["Delfina","Moóguipa ahendu pe música 
+(De donde viene esa música.)"],
+		["Delfina", "ha Mateo ndojevýiti.
+(Y Mateo aún no vuelve.)"]
 ],
 	"florida":[
 		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],
-		["Ña florida","Hay una fiesta cerca de la fábrica por el día de la Raza"],
-		["Ña florida","Ikatu Mateo ohora'e napépe.
-(seguro se fue allá)"]
+		["Ña florida","Hay una fiesta cerca de la fábrica por el día de la Raza..."]
 ],
 	"Mariano":[
 		["Don Mariano", "Mba'éichapa Ña Servín
