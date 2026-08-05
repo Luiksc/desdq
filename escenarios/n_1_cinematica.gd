@@ -23,10 +23,12 @@ var dialogos ={
 	"Dialogo1":[
 		["Delfina Servín","Mateo,¿ Moo piko nde reho jeýta?
 (Mateo,¿Donde te vas a ir otra vez?)"],
-		["Mateo Gamarra","Capataz orerenói jey kokuépe, ahamíta sapy'aite ha ajevpyta che kamba
-(El capataz nos llamo de nuevo a la chacra, voy a irme un rato y vuelvo mi morena)"],
-		["Delfina Servin","Che amosaingóta la aokuéra, roha'arota.
-(Bueno,yo voy a colgar la ropa, te voy a espera)"]
+		["Mateo Gamarra","Aháta sapy'aite kokuére ha ajevýta
+(Me voy una la chacra, voy a irme un rato y vuelvo )"],
+		["Delfina Servin","Che amosaingóta la aokuéra, animo'ake epyta tape ykére.
+(Bueno,yo voy a colgar la ropa, no te vayas que a quedar por el camino.)"],
+		["Mateo", "A sus órdenes, he'i sepulcrero ipióla pyahu.
+(A sus ordenes, dice el sepulcrero con cuerda nueva.)"]
 ]
 }
 

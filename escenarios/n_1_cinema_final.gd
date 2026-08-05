@@ -29,24 +29,20 @@ var npc_actual: String = ""
 var pensamiento_activo: bool = false  
 var dialogos ={
 	"Dialogo1":[
-		["Ña Florida","Che ha'evoi niko ndéve Delfina
-(Te dije luego Delfina.)"],
-		["Delfina Servín","MATEO,¿MBA'ÉIKO NDE EJAPO ÁPE, ANIVÉNA PÉICHA REIKO?
-(MATEO,¿QUE HACES ACÁ, NO HAGAS ESTAS COSAS?)"],
-		["Mateo", "Ndaikáso, Si es que ejedicustárõ che apoíntene ndehegui.
+		["Ña Florida","Okámbira'e Mateo ichíka. 
+(Cambió había sido Mateo de pareja.)"],
+		["Delfina Servín","Mateo..."],
+		["Delfina","MAERÃIKO PÉICHA REIKO...
+(PARA QUÉ HACES ESTO...)"], #¿MBA'ÉIKO NDE EJAPO ÁPE?, ANIVÉNA PÉICHA REIKO MATEO QUE HACES  ACÁ NO HAGAS ESTAS COSAS
+		["Mateo", "Ha mba'e piko
+(¿Y qué?)"],
+		["Mateo","Si es que ejedicustárõ che apoíntene ndehegui.
 (No hay caso, si no te gusta te voy a dejar.)"],
 		["Delfina", "CHE HA'E DELFINA SERVÍN
 (YO SOY DELFINA SERVÍN)"],
-		["Delfina", "NE'ĨRA CHEIKUAAPA, KUÑA JEPE NIKO CHE, ANICHEVA'ERÃ CHEBURLA
+		["Delfina", "NE'ĨRA CHEIKUAAPA, KUÑA JEPE NIKO CHE, ANICHEVA'ER CHEBURLA
 (AÚN NO ME CONOCES, AUNQUE SEA MUJER, NO TE BURLES DE MÍ)"],
-	],
-	"Mariano":[
-		["Don Mariano", "Mba'éichapa Ña Servín
-(Cómo está Doña Servín)"],
-		["Don Mariano", "¿Mateo? Upe karia'y jeýma, le vi kuri yendose a la fiesta en la casa de Miguel Medina
-(¿Mateo? ese muchacho ya otra vez, se estaba yendo a la fiesta en la casa de Miguel Madina)"],
-		["Don Mariano", "Chéve g̃uarã, oho ojopo Emilia Ortiz ndive, ¡Ñandejára!
-(Para mí que se iba agarrado de la mano con Emilia Ortiz, ¡Dios mío!)"]
+		
 	]
 }
 

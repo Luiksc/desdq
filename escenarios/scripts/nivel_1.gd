@@ -34,30 +34,37 @@ var npc_actual: String = ""
 var pensamiento_activo: bool = false  # true mientras el diálogo de pensamiento está corriendo
 var dialogos ={
 	"okakula":[
-		["Delfina servpin","...
+		["Delfina servín","...
 (Piensa)"],
-		["Delfina","Moóguipa ahendu pe música 
+		["Delfina","Moõguipa ahendu pe música 
 (De donde viene esa música.)"],
-		["Delfina", "ha Mateo ndojevýiti.
-(Y Mateo aún no vuelve.)"]
+		["Delfina", "Ha Mateo ndojevýiti.
+(Y Mateo aún no vuelve.)"],
+		["Delfina","Iñestrañoléntoma
+(Es algo raro.)"]
 ],
 	"florida":[
-		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],
-		["Ña florida","Hay una fiesta cerca de la fábrica por el día de la Raza..."]
+		["Ña florida","Mba'éichapa Ña Delfina!
+(¡Cómo estás Delfina!)"],
+		["Ña florida","Henyhẽta ra'e aipo fárra, ohopaitéma lo mitã.
+(Se llena había sido la fiesta, se van todo los chicos.)"]
 ],
 	"Mariano":[
 		["Don Mariano", "Mba'éichapa Ña Servín
 (Cómo está Doña Servín)"],
-		["Don Mariano", "¿Mateo? Upe karia'y jeýma, le vi kuri yendose a la fiesta en la casa de Miguel Medina
-(¿Mateo? ese muchacho ya otra vez, se estaba yendo a la fiesta en la casa de Miguel Madina)"],
-		["Don Mariano", "Chéve g̃uarã, oho ojopo Emilia Ortiz ndive, ¡Ñandejára!
-(Para mí que se iba agarrado de la mano con Emilia Ortiz, ¡Dios mío!)"]
+		["Don Mariano", "¿Mateo? Heẽ, aje'íma ndatopavéima chupe...
+(¿Mateo? Sí, hace rato que no le encuentro...)"],
+		["Don Mariano", "Ikatu ajavy hína péro.
+(Puede que me equivoque pero)"],
+		["Don Mariano","Ndohói niko ha'eño
+(No se iba él solo)"]
 	],
 	"kaloi":[
-		["Kalo'i","Hola Señora, Mateo se fue derecho ko tapére, allaitee en la casa de Don Medina"]
+		["Kalo'i","Hola Señora."],
+		["Kalo'i","¡Karai Mateo ohokuri pya'e pya'e ko tapére!"]
 	],
 	"Piensadelfi":[
-		["delfina", "Acá esta lleno de mykurẽ, ambosápe manteva'erá ko'a vícho
+		["delfina", "Chejokopa ko'ã mykurẽ, ambosápe manteva'erá ko'a vícho
 (Acá está lleno de mykurés, Debo ahuyentarles a estos animales)"],
 		["delfina", "(Presiona E para espantar animales)"]
 	]
