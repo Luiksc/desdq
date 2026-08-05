@@ -178,6 +178,8 @@ func dialog_terminado() -> void:
 		$Dionisi/blockbench_export.show()
 		ini_dialogan("funcionario2")
 		
+	elif npc_actual == "funcionario2":
+		ini_dialogan("ipochy")
 	elif  npc_actual=="ipochy":
 		camara.position = $inicial_posi.position
 		vuelve_funcionario=true

@@ -4431,45 +4431,6 @@ _data = {
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sihy2"]
 
-[sub_resource type="Animation" id="Animation_ins42"]
-resource_name = "papel"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("base/extremidades2/brazoderecha2:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0.0436333, 0, 0), Vector3(0.316892, 0.0216931, 0.11973), Vector3(-0.113108, 0.10128, 0.850242)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../kuatias/hoja:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.6, 0.733333, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-3.18142, 0.89375, -1.87764), Vector3(-2.49784, 0.89375, -1.98127), Vector3(-2.54282, 0.943898, -1.56331), Vector3(-2.69964, 1.01076, -1.34159), Vector3(-2.88551, 1.14449, -1.14379)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../kuatias/hoja:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -0.176417, 0), Vector3(0, 0.531628, 0), Vector3(0.253437, 0.540085, 0.0663575)]
-}
-
 [sub_resource type="Animation" id="Animation_gyfr6"]
 length = 0.001
 tracks/0/type = "value"
@@ -4543,6 +4504,45 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(-0.0436333, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ins42"]
+resource_name = "papel"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("base/extremidades2/brazoderecha2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0436333, 0, 0), Vector3(0.316892, 0.0216931, 0.11973), Vector3(-0.113108, 0.10128, 0.850242)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../kuatias/hoja:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.733333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-3.18142, 0.89375, -1.87764), Vector3(-2.49784, 0.89375, -1.98127), Vector3(-2.54282, 0.943898, -1.56331), Vector3(-2.69964, 1.01076, -1.34159), Vector3(-2.88551, 1.14449, -1.14379)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../kuatias/hoja:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.176417, 0), Vector3(0, 0.531628, 0), Vector3(0.253437, 0.540085, 0.0663575)]
 }
 
 [sub_resource type="Animation" id="Animation_1ul7c"]
@@ -5878,6 +5878,6 @@ libraries = {
 transform = Transform3D(0.277315, 0, 0.960779, 0, 1, 0, -0.960779, 0, 0.277315, 6.68689, 1.125, -42.6248)
 
 [node name="hoja" type="MeshInstance3D" parent="kuatias"]
-transform = Transform3D(0.869756, 0, -0.0588586, 0, 0.882282, 0, 0.155052, 0, 0.330164, -3.18142, 0.89375, -1.87764)
+transform = Transform3D(0.869756, 0, -0.0588584, 0, 0.882282, 0, 0.155052, 0, 0.330164, -3.18142, 0.89375, -1.87764)
 mesh = SubResource("ArrayMesh_iyqcg")
 skeleton = NodePath("")
