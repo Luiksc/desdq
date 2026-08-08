@@ -2,6 +2,7 @@ extends CanvasLayer
 
 
 var es_celular: bool = false
+var _procesando_touch: bool = false  # Guard para evitar recursión en parse_input_event
 
 
 func _ready() -> void:
@@ -48,10 +49,13 @@ func _input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 		return
 		
-	if event is InputEventScreenTouch:
+	# Guard: evita que parse_input_event re-dispare _input() de forma recursiva
+	if event is InputEventScreenTouch and not _procesando_touch:
+		_procesando_touch = true
 		var mouse_event = InputEventMouseButton.new()
 		mouse_event.button_index = MOUSE_BUTTON_LEFT
 		mouse_event.position = event.position
 		mouse_event.global_position = event.position
 		mouse_event.pressed = event.pressed
 		Input.parse_input_event(mouse_event)
+		_procesando_touch = false
