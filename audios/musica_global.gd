@@ -9,7 +9,7 @@ const MUSICA_MENSU = preload("res://audios/musica de nivel/El mensú (Juan Sauce
 const musica_mateo = preload("res://audios/musica de nivel/Mateo-gamarra-Duo-Quintana-letra_yme.mp3")
 
 # ── Función base (no llamar directamente desde los niveles) ─────────────────
-func play_music(music: AudioStream, volume: float = -15.0) -> void:
+func play_music(music: AudioStream, volume: float = -16.0) -> void:
 	if stream == music:
 		return
 	stream = music

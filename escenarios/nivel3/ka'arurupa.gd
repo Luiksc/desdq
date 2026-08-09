@@ -364,7 +364,7 @@ func ohotama():
 	if distancia <= 1:
 		jugador.puede_moverse = false
 		transicion.play("entrafa")
-		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/n3_cinema-nro.tscn")
+		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematicas/n3_cinema-nro.tscn")
 		
 
 func piensa2(id_del_npc: String) -> void:

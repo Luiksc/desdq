@@ -33,12 +33,15 @@ func _ready() -> void:
 	anima_camara.play("se aleja")
 	await anima_camara.animation_finished
 	anima_ave.play("oñeme'e en cuenta")
+	$Karau.play()
 	await anima_ave.animation_finished
+	
 	await get_tree().create_timer(3.0).timeout
 	anima_camara.play("enfoca_vuelo")
 	await anima_camara.animation_finished
 	karau_ave.hide()
 	ave_karau_vuela.show()
+
 	anima_vuelo_ave.play("vuela")
 	ruta_vuelo.play("movimiento")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

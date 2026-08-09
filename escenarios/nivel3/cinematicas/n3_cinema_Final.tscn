@@ -1,8 +1,9 @@
-[gd_scene load_steps=192 format=4 uid="uid://bqn6jif5g1ppb"]
+[gd_scene load_steps=193 format=4 uid="uid://bqn6jif5g1ppb"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematicas/n_3_cinema_final.gd" id="1_xwnb2"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_d7v4s"]
 [ext_resource type="Texture2D" uid="uid://bynqa3kpw465x" path="res://background/yvaga sky at night.png" id="3_kyjoc"]
+[ext_resource type="AudioStream" uid="uid://cubjrahfce11l" path="res://audios/karau.mp3" id="4_hp2eb"]
 [ext_resource type="PackedScene" uid="uid://cocyxrb2xpew8" path="res://modelos/objetos/Alto parana/arbul2/yvyralillo.tscn" id="4_xjdr1"]
 [ext_resource type="Texture2D" uid="uid://b26w4c63qobsd" path="res://modelos/karau/karai_conversion_0.png" id="5_khmhc"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="5_y4nb6"]
@@ -2544,6 +2545,10 @@ light_energy = 2.434
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_n31lf")
+
+[node name="Karau" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hp2eb")
+volume_db = -5.652
 
 [node name="GridMap general" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)

@@ -125,7 +125,7 @@ func dialog_terminado() -> void:
 		await anima_ojeroky.animation_finished
 		transicion.play("aparece")
 		await transicion.animation_finished
-		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/n3_cinema-nro2.tscn")
+		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematicas/n3_cinema-nro2.tscn")
 		
 	return
 

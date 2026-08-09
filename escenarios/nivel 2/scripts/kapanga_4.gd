@@ -58,7 +58,7 @@ func _physics_process(delta: float) -> void:
 		
 		
 			var diferencia = abs(angle_difference(rotation.y, angulo))
-	
+
 			if diferencia < 0.15:
 				if animacion.current_animation != "camina":
 					animacion.play("camina")
@@ -75,6 +75,7 @@ func _physics_process(delta: float) -> void:
 				velocity.x = 0
 				velocity.z=0
 				indice_ida = indice_ida +1
+				$neipy.play()
 				if indice_ida >= ohota.size():
 					indice_ida =0
 				
