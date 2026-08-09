@@ -34,11 +34,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	# ── Modo CELULAR: arrastre táctil ──────────────────────────────
 	if modo_tactil:
 		if event is InputEventScreenDrag:
-			# Sentido invertido: arrastrar derecha → cámara rota izquierda
-			rotation.y += event.relative.x * sensi
+			# Arrastrar derecha → cámara rota a la derecha (dirección intuitiva)
+			rotation.y -= event.relative.x * sensi
 			rotation.y = wrapf(rotation.y, 0.0, TAU)
 
-			rotation.x += event.relative.y * sensi
+			rotation.x -= event.relative.y * sensi
 			rotation.x = clamp(rotation.x, minim_angulo_vertical, maxim_angulo_vertical)
 		return  # En celular ignorar el resto (mouse, escape, etc.)
 

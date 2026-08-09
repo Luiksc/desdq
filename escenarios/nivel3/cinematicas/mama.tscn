@@ -1,6 +1,6 @@
 [gd_scene load_steps=140 format=4 uid="uid://fl2k1gdo4xpy"]
 
-[ext_resource type="Script" path="res://escenarios/nivel3/cinematucas/cinematica_mama.gd" id="1_4e7c8"]
+[ext_resource type="Script" path="res://escenarios/nivel3/cinematicas/cinematica_mama.gd" id="1_4e7c8"]
 [ext_resource type="PackedScene" uid="uid://cw182qc1s15xy" path="res://modelos/objetos/chaco/ÓGA+/casa verde dentro.glb" id="1_mil2k"]
 [ext_resource type="Texture2D" uid="uid://bpdpqk4na5sr" path="res://modelos/objetos/Alto parana/tinglado/tinglado_1.png" id="2_m3o1u"]
 [ext_resource type="Texture2D" uid="uid://dxb4t3eibfkqf" path="res://background/yvaga sky.png" id="3_20ncc"]

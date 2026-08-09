@@ -1,4 +1,4 @@
-[gd_scene load_steps=257 format=4 uid="uid://bljxpdxtxqd72"]
+[gd_scene load_steps=266 format=4 uid="uid://bljxpdxtxqd72"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/2_nd_cinamatica_n_2.gd" id="1_ys0wr"]
 [ext_resource type="MeshLibrary" uid="uid://da2l28ykvoen1" path="res://modelos/libr mesh/libreri_Parana.tres" id="2_sb3ia"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://bxf47hd1qmojk" path="res://modelos/Dionisio/expo_antes/dionisio limpiot_12.png" id="35_1r1jv"]
 [ext_resource type="Texture2D" uid="uid://dmkrs7escmta4" path="res://modelos/Dionisio/expo_antes/dionisio limpiot_13.png" id="36_o825v"]
 [ext_resource type="Texture2D" uid="uid://dith3ach0y2ai" path="res://modelos/kapánga/expo/capanga1_0.png" id="39_pkbfw"]
+[ext_resource type="Texture2D" uid="uid://c3i1506rim1vs" path="res://modelos/objetos/caso karau/libro_0.png" id="39_yuwb8"]
 [ext_resource type="Texture2D" uid="uid://dxt66uhhvpera" path="res://modelos/kapánga/expo/capanga1_1.png" id="40_nxnca"]
 [ext_resource type="Texture2D" uid="uid://mewxhhlnjlg" path="res://modelos/kapánga/expo/capanga1_2.png" id="41_ak026"]
 [ext_resource type="Texture2D" uid="uid://ccg1lhc5rkk82" path="res://modelos/kapánga/expo/capanga1_3.png" id="42_15n12"]
@@ -55,6 +56,8 @@
 [ext_resource type="Texture2D" uid="uid://7cyej4nsa485" path="res://modelos/kapánga/expo/capanga1_15.png" id="53_gw2tr"]
 [ext_resource type="Texture2D" uid="uid://bh4drujwitu6e" path="res://modelos/kapánga/expo/capanga1_16.png" id="54_h0otk"]
 [ext_resource type="AudioStream" uid="uid://c7dldail7kvsf" path="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3" id="55_bvw6e"]
+[ext_resource type="AudioStream" uid="uid://dt60wyg67utgn" path="res://audios/sonidos_ambiente/Paraguay natural.mp3" id="56_7s331"]
+[ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="57_wty4c"]
 
 [sub_resource type="Animation" id="Animation_7g5le"]
 length = 0.001
@@ -2132,6 +2135,253 @@ _data = {
 "repira": SubResource("Animation_qp430")
 }
 
+[sub_resource type="Animation" id="Animation_24vhs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("base/extremidades2/brazoderecha2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.24375, 1.43125, -0.46875)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("base/extremidades2/brazoderecha2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0436333, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hoja:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.451674, 1.18603, -0.201023)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hoja:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0180223, 1.42416, -0.0185546)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("base/cabexa2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("base/extremidades2/brazoizquierda2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0436333, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("base/extremidades2/brazoizquierda2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.30625, 1.36875, 0.46875)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("base/cabexa2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.18125, 1.46563, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_13mu7"]
+resource_name = "papel"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("base/extremidades2/brazoderecha2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.24375, 1.43125, -0.46875), Vector3(-0.24375, 1.43125, -0.468752), Vector3(-0.243732, 1.43125, -0.468761)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("base/extremidades2/brazoderecha2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0436333, 0, 0), Vector3(0.457958, -0.0208196, 0.0993044), Vector3(0.134692, -0.162267, 0.998457)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hoja:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.533333, 1, 1.3, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.451674, 1.18603, -0.201023), Vector3(-0.296263, 1.09111, -0.850023), Vector3(0.0295753, 1.00806, -1.01661), Vector3(0.242273, 1.06178, -0.670052), Vector3(0.282351, 1.10476, -0.391628), Vector3(0.304234, 1.16923, 0.00425911)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("hoja:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0180223, 1.42416, -0.0185546), Vector3(-0.0180223, 1.42416, -0.0185546), Vector3(0.204927, 1.5246, 0.000518218), Vector3(0.353561, 1.59155, 0.0132334)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("base/cabexa2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.0632822, -0.0210469, -0.228557)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("base/extremidades2/brazoizquierda2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 1.43333, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0436333, 0, 0), Vector3(-0.0695323, 0.299602, 0.534026), Vector3(-0.182021, 0.288466, 0.906753)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("base/extremidades2/brazoizquierda2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 1.43333, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.30625, 1.36875, 0.46875), Vector3(-0.288458, 1.36875, 0.49345), Vector3(-0.184969, 1.36875, 0.471708)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("base/cabexa2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.18125, 1.46563, 0), Vector3(-0.299402, 1.46563, 0.00201225)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bx6eh"]
+_data = {
+"RESET": SubResource("Animation_24vhs"),
+"papel": SubResource("Animation_13mu7")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwvv2"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("39_yuwb8")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e8ehk"]
+_surfaces = [{
+"aabb": AABB(-0.30625, -0.21875, -0.01875, 0.6125, 0.9375, 0.0375),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYABQAAAAEABQAGAAAAAwAEAAIAAwAHAAQAAgAFAAEAAgAEAAUABgADAAAABgAHAAMA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD///////8AAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAA/////wAAAAD//wAAAAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_16jy0"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.30625, -0.21875, -0.01875, 0.6125, 0.9375, 0.0375),
+"attribute_data": PackedByteArray("/wT/fwAA/38AAP/3/wT/9/8U//f/FP9//w//f/8P//f/H/+Ef27/hH9u/3//H/9/f8b/hH/G/3//d/9//3f/hH9O/3d/TgAAAAAAAAAA/3d/pgAA/1cAAP9X/3d/pv93"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAAADAAIABAAGAAUABAAHAAYACAAKAAkACAALAAoADAAOAA0ADAAPAA4AEAASABEAEAATABIAFAAWABUAFAAXABYA"),
+"material": SubResource("StandardMaterial3D_wwvv2"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////wAA/7//////////v///AAD///+///8AAAAA/78AAAAA////vwAA//////+/AAD//wAA/78AAAAAAAD/vwAA//////+//////////7//////AAD/vwAA//8AAP+///8AAAAA/7///wAA////vwAAAAD///+/AAAAAAAA/7///wAA//8AgP///////wCAAAD/////AIAAAAAA//8AgAAA//8AAP///////wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9///////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_e8ehk")
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sihy2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sbfxn"]
@@ -3276,10 +3526,8 @@ anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_left = 0.4
-offset_top = -746.183
-offset_right = 0.400024
-offset_bottom = -746.183
+offset_top = -1260.58
+offset_bottom = -1260.58
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -3290,9 +3538,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -780.6
+offset_top = -1289.0
 offset_right = 30.0
-offset_bottom = -775.6
+offset_bottom = -1284.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)
@@ -3359,13 +3607,12 @@ wait_time = 5.0
 [node name="Timer_funcionario" type="Timer" parent="."]
 wait_time = 2.0
 
-[node name="Node" type="Node" parent="."]
-
 [node name="pilar" parent="." instance=ExtResource("8_x711y")]
 transform = Transform3D(0.755821, 0, 0, 0, 1, 0, 0, 0, 0.855283, 2.80105, 4.10146, -44.5115)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.545312, 0.838233, 0, -0.838233, 0.545312, 0, 10.7481, -23.4223)
+light_color = Color(0.78, 0.56615, 0.4134, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="DirectionalLight3D"]
 environment = SubResource("Environment_oh0tk")
@@ -3662,6 +3909,16 @@ libraries = {
 "": SubResource("AnimationLibrary_fabsm")
 }
 
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Dionisi"]
+libraries = {
+"": SubResource("AnimationLibrary_bx6eh")
+}
+
+[node name="hoja" type="MeshInstance3D" parent="Dionisi"]
+transform = Transform3D(0.129614, -0.0118922, 0.331069, -0.0164217, 0.786569, 0.00603201, -0.875546, -0.0165133, 0.0488977, -0.451674, 1.18603, -0.201023)
+mesh = SubResource("ArrayMesh_16jy0")
+skeleton = NodePath("")
+
 [node name="funcionario" type="CharacterBody3D" parent="."]
 transform = Transform3D(0.337358, 0, -0.941376, 0, 1, 0, 0.941376, 0, 0.337358, 6.17384, 1.15231, -28.2474)
 
@@ -3678,7 +3935,7 @@ transform = Transform3D(-0.372631, 0, 0.927979, 0, 1, 0, -0.927979, 0, -0.372631
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24375, 0)
 
 [node name="brazoizquierda2" type="Node3D" parent="funcionario/blockbench_export/base/extremidades2"]
-transform = Transform3D(0.906308, 0.422216, 0.0184343, -0.422618, 0.905445, 0.0395326, 0, -0.0436194, 0.999048, -0.18125, 1.43125, 0.28125)
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, -0.18125, 1.43125, 0.28125)
 
 [node name="jyva 1" type="MeshInstance3D" parent="funcionario/blockbench_export/base/extremidades2/brazoizquierda2"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, -0.130029, 0.987672, 0.0871557, 0.0113761, -0.0864101, 0.996195, 0, 0.154976, 0.0885831)
@@ -3696,7 +3953,7 @@ mesh = SubResource("ArrayMesh_gdhn4")
 skeleton = NodePath("")
 
 [node name="brazoderecha2" type="Node3D" parent="funcionario/blockbench_export/base/extremidades2"]
-transform = Transform3D(0.906308, -0.422216, 0.0184343, 0.422618, 0.905445, -0.0395326, 0, 0.0436194, 0.999048, -0.18125, 1.43125, -0.28125)
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, -0.18125, 1.43125, -0.28125)
 
 [node name="po2" type="MeshInstance3D" parent="funcionario/blockbench_export/base/extremidades2/brazoderecha2"]
 transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0, -0.649712, -0.154208)
@@ -3714,7 +3971,7 @@ mesh = SubResource("ArrayMesh_q6f3x")
 skeleton = NodePath("")
 
 [node name="retyma3" type="Node3D" parent="funcionario/blockbench_export/base/extremidades2"]
-transform = Transform3D(0.906308, -0.42101, -0.0368336, 0.422618, 0.902859, 0.0789899, 3.72529e-09, -0.0871557, 0.996195, -0.1875, 0.68125, 0.159375)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, -0.1875, 0.68125, 0.159375)
 
 [node name="jyva 23" type="MeshInstance3D" parent="funcionario/blockbench_export/base/extremidades2/retyma3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, 0.0587175, 0.0241312)
@@ -3737,7 +3994,7 @@ mesh = SubResource("ArrayMesh_ctudf")
 skeleton = NodePath("")
 
 [node name="retyma4" type="Node3D" parent="funcionario/blockbench_export/base/extremidades2"]
-transform = Transform3D(0.906308, 0.42101, -0.0368336, -0.422618, 0.902859, -0.0789899, 3.72529e-09, 0.0871557, 0.996195, -0.1875, 0.68125, -0.228125)
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, -0.1875, 0.68125, -0.228125)
 
 [node name="jyva 4" type="MeshInstance3D" parent="funcionario/blockbench_export/base/extremidades2/retyma4"]
 transform = Transform3D(1, 0, 0, 0, -1, -1.22465e-16, 0, 1.22465e-16, -1, 0.00625, -0.30146, 0.0350056)
@@ -3810,18 +4067,22 @@ libraries = {
 "": SubResource("AnimationLibrary_44p4l")
 }
 
+[node name="ParaguayNatural" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("56_7s331")
+volume_db = -21.478
+
+[node name="BenteveoComúnCantandoSonidoParaLlamarElMejor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("57_wty4c")
+volume_db = -21.108
+autoplay = true
+
+[node name="CantoDaCigarra-CicadasSong(cicadoidea)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("55_bvw6e")
+volume_db = -24.87
+autoplay = true
+
 [node name="llega" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.885284, 1, -36.2471)
 
 [node name="ida" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38052, 1, -31.239)
-
-[node name="CantoDaCigarra-CicadasSong(cicadoidea)" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("55_bvw6e")
-volume_db = -13.722
-autoplay = true
-
-[node name="ParaguayNatural" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("55_bvw6e")
-volume_db = -15.889
-autoplay = true

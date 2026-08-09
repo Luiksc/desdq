@@ -3,11 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5khwj08jbqcd"
-path.s3tc="res://.godot/imported/dionisio limpio_11.png-1a2ed3b0225781aec2d216a290528fe2.s3tc.ctex"
-path.etc2="res://.godot/imported/dionisio limpio_11.png-1a2ed3b0225781aec2d216a290528fe2.etc2.ctex"
+path="res://.godot/imported/dionisio limpio_11.png-1a2ed3b0225781aec2d216a290528fe2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "b3670b1df67ce1f0e2da1cf2cdcbda7a"
@@ -16,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Dionisio/expo_antes/dionisio limpio_11.png"
-dest_files=["res://.godot/imported/dionisio limpio_11.png-1a2ed3b0225781aec2d216a290528fe2.s3tc.ctex", "res://.godot/imported/dionisio limpio_11.png-1a2ed3b0225781aec2d216a290528fe2.etc2.ctex"]
+dest_files=["res://.godot/imported/dionisio limpio_11.png-1a2ed3b0225781aec2d216a290528fe2.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

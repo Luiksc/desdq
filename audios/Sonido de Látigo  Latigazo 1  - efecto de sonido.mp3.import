@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mck0rhtv2ge7"
+path="res://.godot/imported/Sonido de Látigo  Latigazo 1  - efecto de sonido.mp3-546658c2df12c1023e787ea8a9d44965.mp3str"
+
+[deps]
+
+source_file="res://audios/Sonido de Látigo  Latigazo 1  - efecto de sonido.mp3"
+dest_files=["res://.godot/imported/Sonido de Látigo  Latigazo 1  - efecto de sonido.mp3-546658c2df12c1023e787ea8a9d44965.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

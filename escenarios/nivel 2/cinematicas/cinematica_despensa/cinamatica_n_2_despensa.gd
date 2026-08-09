@@ -54,8 +54,8 @@ var dialogos ={
 		["Funcionario","Ambyasy  ne situacion rehe..."]
 	],
 	"ipochy":[
-		["Dionisio","MAERÃIKO ROHASA'AKUE KARUGUA HA TUJUKUA APYTÉPE..MAERÃIKO SI IPAHÁPE OJEIPE'APÁTA OREHEGUI LO ÚNICO ROGUEREKO GUETERI. 
-(PARA QUÉ PASAMOS ENTRE PANTANOS Y BARRALES..PARA QUÉ SI AL FINAL NOS SACAN LO UNICO QUE TENEMOS AÚN.)"],
+		["Dionisio","Ha ore piko mba'e...
+(Y que va a pasar de nosotros)"],
 		["Funcionario","..."]
 	]
 		
@@ -128,7 +128,7 @@ func _process(delta: float) -> void:
 		var distancia = funcio.global_position.distance_to(marker_ida.global_position)
 		if distancia > 0.1:
 			var direccion = (marker_ida.global_position - funcio.global_position).normalized()
-			funcio.global_position += direccion * 7 * delta # Puedes ajustar la velocidad aquí
+			funcio.global_position += direccion * 7 * delta 
 			if anima_funcio:
 				anima_funcio.play("oho")
 			
@@ -179,9 +179,12 @@ func dialog_terminado() -> void:
 		ini_dialogan("funcionario2")
 		
 	elif npc_actual == "funcionario2":
+		camara.position = $posi_camara2.position
 		ini_dialogan("ipochy")
 	elif  npc_actual=="ipochy":
-		camara.position = $inicial_posi.position
+		camara.position = $inicial_posi2.position
+		await get_tree().create_timer(3).timeout
+		$kuatias.hide()
 		vuelve_funcionario=true
 		timer_func.start()
 		await timer_func.timeout

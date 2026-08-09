@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpi152dldpa8t"
+path="res://.godot/imported/bag  backpack handling.mp3-b0ecc7a4124afb294084b20954b77082.mp3str"
+
+[deps]
+
+source_file="res://audios/bag  backpack handling.mp3"
+dest_files=["res://.godot/imported/bag  backpack handling.mp3-b0ecc7a4124afb294084b20954b77082.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

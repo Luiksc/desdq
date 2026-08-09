@@ -36,6 +36,8 @@ extends Node3D
 @onready var sako_baj8 = $"objetos/sako8 baj"
 @onready var sako_baj9 = $"objetos/sako9 baj"
 
+@onready var sond_dejar = $FoleySportsBagGrabPickupCatchSoundEffect
+@onready var sond_lleva = $BagBackpackHandling
 @onready var flamea = $"luces/tatakua gnrl/AnimationPlayer"
 @onready var perdeu = $Control/gameover
 @onready var lista = $Control/Sprite2D
@@ -135,6 +137,8 @@ func _ready() -> void:
 	$"labura kopindo2/AnimationPlayer".play("okopi")
 	$"labura kopindo3/AnimationPlayer".play("okopi")
 	$"labura kopindo4/AnimationPlayer".play("okopi")
+	$"labura kopindo5/AnimationPlayer".play("okopi")
+	
 	sako_baj1.hide()
 	sako_baj2.hide()
 	sako_baj3.hide()
@@ -159,36 +163,38 @@ func _process(delta: float) -> void:
 			$DialogSystem/sound.play()
 
 	elif jugador_puede_interac:
-		# E inicia el diálogo si el jugador está en el área y no hay diálogo activo
+		
 		if Input.is_action_just_pressed("interaccion"):
 			inic_dialo()
 	
 	if puede_recoger and llevando == false:
 		if Input.is_action_just_pressed("interaccion"):
+			sond_lleva.play()
 			llevando=true
 			jugador.oraha=true
-
 			recoger()
 			
 	if puede_dejar and llevando :
 		if Input.is_action_just_pressed("interaccion"):
+			sond_dejar.play()
 			oheja()
 			llevando = false
 			jugador.oraha= false
-			print("dejado")
+			
 		
 	if puede_recoger2 and llevando2 == false:
 		if Input.is_action_just_pressed("interaccion"):
+			sond_lleva.play()
 			llevando2=true
 			jugador.oraha= true
 			recoger2()
 	if puede_dejar2 and llevando2:
 		if Input.is_action_just_pressed("interaccion"):
+			sond_dejar.play()
 			dejar2()
 			llevando2=false
 			jugador.oraha = false
-			print("dejao
-			.")
+			
 	
 	if llevar == true:
 		indicador1.hide()
@@ -216,24 +222,19 @@ func inic_dialo() -> void:
 	jugador.puede_moverse = false
 	for linea in dialogos[npc_actual]:
 		DialogSystem.says(linea[1], linea[0])
-	 # bloquea el movimiento del jugador
-	#DialogSystem.says("¿No te enteraste de la fiesta que hizo la fábrica por el Día de la Raza ? Todos están ahí; seguramente Mateo también.", "Ña Clotilde")
-
-# Se llama mediante señal cuando el DialogSystem termina todos los mensajes
+	
 func dialog_terminado() -> void:
 	dialogo_activo = false
 	jugador.puede_moverse = true  # desbloquea el movimiento
 	if npc_actual == "iniciarf":
 		se_va.emit()
 		$Control/Sprite2D.show()
-	# Si era un pensamiento de Delfina, destruimos el trigger y listo
+	
 	if pensamiento_activo:
 		pensamiento_activo = false
-		#if is_instance_valid(pensamiento):
-		#	pensamiento.queue_free()
+
 		return
 
-	# Si el jugador todavía está en el área de un NPC, volvemos a mostrar el label
 	if jugador_puede_interac:
 		interac.show()
 
@@ -346,8 +347,9 @@ func _on_dejar_body_exited(body: Node3D) -> void:
 
 func _on_dejar_2_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
-		interac3.show()
 		puede_dejar2=true
+	if llevando2:
+		interac3.show()
 
 func _on_dejar_2_body_exited(body: Node3D) -> void:
 	if body.is_in_group("jugador_global") or body.is_in_group("jugon"):
@@ -374,6 +376,7 @@ func _on_atrapado_body_entered(body: Node3D) -> void:
 	oipoo()
 	
 func oipoo():
+	$"SonidoDeLátigoLatigazo1-EfectoDeSonido".play()
 	omano = true
 	kapanga2.velocidad = 0
 	kapanga3.velocidad = 0
@@ -433,7 +436,6 @@ func reset():
 
 		$Control/Sprite2D/Label.text = "Bajar sacos de yerba 0/3"
 
-		# Resetear estado de carga de tarea 1
 		llevando = false
 		jugador.oraha = false
 

@@ -3,11 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6uey6xmla2y8"
-path.s3tc="res://.godot/imported/dionisio oraha_10.png-9aa18d7f0fd101e96993bf992f2b67c6.s3tc.ctex"
-path.etc2="res://.godot/imported/dionisio oraha_10.png-9aa18d7f0fd101e96993bf992f2b67c6.etc2.ctex"
+path="res://.godot/imported/dionisio oraha_10.png-9aa18d7f0fd101e96993bf992f2b67c6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "c558bd1b1cb4811157aad271a9403045"
@@ -16,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Dionisio/expo/dionisio oraha_10.png"
-dest_files=["res://.godot/imported/dionisio oraha_10.png-9aa18d7f0fd101e96993bf992f2b67c6.s3tc.ctex", "res://.godot/imported/dionisio oraha_10.png-9aa18d7f0fd101e96993bf992f2b67c6.etc2.ctex"]
+dest_files=["res://.godot/imported/dionisio oraha_10.png-9aa18d7f0fd101e96993bf992f2b67c6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

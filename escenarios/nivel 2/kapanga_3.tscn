@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bim5hm6ray0nh" path="res://modelos/capanga_ya/capanga1_15.png" id="20_dntqf"]
 [ext_resource type="AudioStream" uid="uid://dqfwgw70l08id" path="res://audios/exclamacion.mp3" id="20_ltrrp"]
 [ext_resource type="AudioStream" uid="uid://b580x6s0gsupa" path="res://audios/llaves.mp3" id="21_a4wlg"]
-[ext_resource type="Texture2D" uid="uid://e4vwu20sa4fb" path="res://modelos/capanga_ya/capanga1_16.png" id="21_c6gj5"]
+[ext_resource type="Texture2D" uid="uid://coguu6w43d4s7" path="res://modelos/capanga_ya/capanga1_16.png" id="21_c6gj5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wq6wg"]
 height = 3.67243
@@ -1187,7 +1187,7 @@ shape = SubResource("SphereShape3D_to5os")
 
 [node name="Exclamacion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_ltrrp")
-volume_db = -7.0
+volume_db = -7.122
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 5.0

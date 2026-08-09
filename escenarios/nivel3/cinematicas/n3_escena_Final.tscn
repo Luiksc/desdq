@@ -1,6 +1,6 @@
 [gd_scene load_steps=46 format=4 uid="uid://bsofkbq5kye5o"]
 
-[ext_resource type="Script" path="res://escenarios/nivel3/cinematucas/n_3_cinema_nro_3.gd" id="1_a4cfo"]
+[ext_resource type="Script" path="res://escenarios/nivel3/cinematicas/n_3_cinema_nro_3.gd" id="1_a4cfo"]
 [ext_resource type="MeshLibrary" uid="uid://btt733selbmy1" path="res://modelos/libr mesh/2libreria_chaco.tres" id="2_b8v8c"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="3_lb8cp"]
 [ext_resource type="Texture2D" uid="uid://b3lj7li551ro4" path="res://modelos/objetos/yno'o/yno'o_0.png" id="4_fgihk"]

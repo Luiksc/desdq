@@ -3,11 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co1j5s5ghyhh1"
-path.s3tc="res://.godot/imported/dionisio preocupado_3.png-d9ee270348b46a03ecdeffe51cfad6af.s3tc.ctex"
-path.etc2="res://.godot/imported/dionisio preocupado_3.png-d9ee270348b46a03ecdeffe51cfad6af.etc2.ctex"
+path="res://.godot/imported/dionisio preocupado_3.png-d9ee270348b46a03ecdeffe51cfad6af.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "1e491edfdca911c1ddc2d13357984ee6"
@@ -16,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/Dionisio/expo_antes/dionisio preocupado_3.png"
-dest_files=["res://.godot/imported/dionisio preocupado_3.png-d9ee270348b46a03ecdeffe51cfad6af.s3tc.ctex", "res://.godot/imported/dionisio preocupado_3.png-d9ee270348b46a03ecdeffe51cfad6af.etc2.ctex"]
+dest_files=["res://.godot/imported/dionisio preocupado_3.png-d9ee270348b46a03ecdeffe51cfad6af.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

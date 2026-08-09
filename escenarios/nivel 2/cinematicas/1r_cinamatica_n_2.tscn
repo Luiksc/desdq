@@ -5027,7 +5027,7 @@ albedo_texture = ExtResource("59_igmh5")
 texture_filter = 0
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_e8ehk"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jj8kp"]
 _surfaces = [{
 "aabb": AABB(-0.30625, -0.21875, -0.01875, 0.6125, 0.9375, 0.0375),
 "format": 34896613377,
@@ -5057,14 +5057,14 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////wAA/7//////////v///AAD///+///8AAAAA/78AAAAA////vwAA//////+/AAD//wAA/78AAAAAAAD/vwAA//////+//////////7//////AAD/vwAA//8AAP+///8AAAAA/7///wAA////vwAAAAD///+/AAAAAAAA/7///wAA//8AgP///////wCAAAD/////AIAAAAAA//8AgAAA//8AAP///////wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9///////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_e8ehk")
+shadow_mesh = SubResource("ArrayMesh_jj8kp")
 
 [node name="cinamatica n2" type="Node3D"]
 script = ExtResource("1_m5sjq")
 
 [node name="CantoDaCigarra-CicadasSong(cicadoidea)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_tv3kl")
-volume_db = -14.512
+volume_db = -32.387
 autoplay = true
 
 [node name="ParaguayNatural" type="AudioStreamPlayer" parent="."]
@@ -5696,7 +5696,7 @@ transform = Transform3D(0.238792, 0, 0.831493, 0, 0.939729, 0, -0.891183, 0, 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24375, 0)
 
 [node name="brazoizquierda2" type="Node3D" parent="funcionario/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, -0.181246, 1.49375, 0.34375)
+transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, -0.18125, 1.49375, 0.34375)
 
 [node name="jyva 1" type="MeshInstance3D" parent="funcionario/base/extremidades2/brazoizquierda2"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, -0.130029, 0.987672, 0.0871557, 0.0113761, -0.0864101, 0.996195, 0, 0.0952613, 0.0234162)
@@ -5714,7 +5714,7 @@ mesh = SubResource("ArrayMesh_1ad8a")
 skeleton = NodePath("")
 
 [node name="brazoderecha2" type="Node3D" parent="funcionario/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999047, -0.181248, 1.49375, -0.28125)
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999047, -0.18125, 1.49375, -0.28125)
 
 [node name="po2" type="MeshInstance3D" parent="funcionario/base/extremidades2/brazoderecha2"]
 transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0, -0.712152, -0.151482)
@@ -5809,7 +5809,7 @@ mesh = SubResource("ArrayMesh_kscm5")
 skeleton = NodePath("")
 
 [node name="faja" type="Node3D" parent="funcionario"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 1.2, -0.075)
+transform = Transform3D(0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0, 0, 1, -0.35, 1.18125, -0.075)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="funcionario"]
 libraries = {

@@ -1311,7 +1311,7 @@ shape = SubResource("SphereShape3D_to5os")
 
 [node name="Exclamacion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_er8a6")
-volume_db = -5.6
+volume_db = -7.122
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 4.0

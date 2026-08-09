@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4yuldb5j1gjo"
+path="res://.godot/imported/Canto Urutau (mãe da lua).mp3-dded427afe9a2a1ef532efc62a0c29aa.mp3str"
+
+[deps]
+
+source_file="res://audios/sonidos_ambiente/Canto Urutau (mãe da lua).mp3"
+dest_files=["res://.godot/imported/Canto Urutau (mãe da lua).mp3-dded427afe9a2a1ef532efc62a0c29aa.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

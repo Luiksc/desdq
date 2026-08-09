@@ -18,6 +18,7 @@ extends Node3D
 @onready var marker_ida = $ida
 @onready var timer_func=$Timer_funcionario
 
+var omaña = false
 var moviendo_funcionario: bool = false
 var vuelve_funcionario: bool = false
 
@@ -26,33 +27,38 @@ var dialogo_activo: bool = false
 var npc_actual: String = ""
 var dialogos ={
 	"conversa":[
-		["Dionisio","Marta, Ndaikasovéima, hasy asýpe jahupyty la paga de alquiler
-(Marta,ya no hay caso, muy dificilmente alcanzamos a pagar el alquiler.)"],
-		["Marta","Che aikuave'ẽmbáma la ñande mueble péro, amáske los ára ohasa, hepyve la alquiler.
-(Yo ya vendí todos nuestros muebles pero, con el pasar el tiempo cada vez es más caro el alquiler.)"],
+		["Dionisio","Marta, Ndaikasovéima
+(Marta,ya no hay caso.)"],
+		["Marta","Ojupi meme pe alquiler.
+(Siempre sube el alquiler)"],
 		["Dionisio","Mba'éiko jajapóta
 (Qué vamos a hacer)"]
 ],
-
-
 
 	"Funcionario":[
 		["Contratista","Buenos días cha karai, ahendu'i la hendy kavaju resa, ¿ajépa?
 (Buenos días señor, escuché que está dificil su situacion, ¿no es así?)"],
 		["Dionisio","Mba'éichapa, Añete upéva..
 (Qué tal, es cierto...,)"],
-		["Contratista","Che cheréra Antonio ha agueru peteĩ propuesta de trabajo ka'atýpe, pemba'apóta la ka'a jejapo.
-(Yo me llamo Antonio y traigo una propuesta de trabajo en los yerbales, van a trabajar la fabricación de yerba mate.)"],
-		["Marta","¿Ka'a jejapo?, ¿ha moõpa opyta upe mba'apoha?.
-(¿Fabricación de yerba mate?,¿Y ese trabajo dónde es?)"],
-		["Contratista Antonio","¡Naimombyrý hína! Oĩ peteĩ región pyahu, hérava Takuru puku, upépe romba'apo.
-(¡No está lejos, Es en una nueva región llamada Tacurú pucú[Hernandarias] ahí trabajamos.)"],
-		["Contratista Antonio","Oĩ translado gratis, peguerekótama pagado tembi'urã, tembiporukuéra, pende uniformerã ha lugar peikove hag̃ua.
-(Tendrán traslado gratis, alimentos, herramienta, uniforme pagado y un lugar para vivir.)"],
-		["Dionisio", "Marta, jahápy hese.
-(Vamos por ello.)"]
+		["Contratista","Che cheréra Antonio ha agueru peteĩ propuesta.
+(Yo me llamo Antonio y traigo una propuesta de trabajo.)"],
+		["Contratista","La ka'atýpe akóinte ñaikotevẽ ayuda.
+(En los yerbales simpre necesitamos una ayuda.)"],
+		["Contratista Antonio","Peguerekopaitéta pene rembi'urã
+(Tendrán alimento pagado)"],
+		["Contratista Antonio","tembiporukuéra
+(Herramientas)"],
+		["Contratista Antonio","pende rogarã
+(Una casa.)"],
+		["Contratista Antonio","Ha translado gratuito ka'atýpe.
+(Y translado gratuito a los yerbales.)"],
+		
 	],
 		
+	"checkea" :[
+		["Dionisio", "Marta, jahántema hese.
+(Marta, iremos nomás ya.)"]
+	],
 }
 
 func _ready() -> void:
@@ -71,9 +77,11 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
-	anima_dio.play("repira")
-	anima_marta.play("repire")
+	
 
+	anima_marta.play("repire")
+	if omaña == false:
+		anima_dio.play("repira")
 	
 	
 	if moviendo_funcionario and marker_destino:
@@ -143,6 +151,12 @@ func dialog_terminado() -> void:
 		ini_dialogan("Funcionario")
 		
 	elif  npc_actual=="Funcionario":
+		omaña = true
+		$Dionisi/AnimationPlayer2.play("papel")
+		await $Dionisi/AnimationPlayer2.animation_finished
+		await get_tree().create_timer(3).timeout
+		ini_dialogan("checkea")
+	elif npc_actual == "checkea":
 		transi.play("entrafa")
 		await transi.animation_finished
 		get_tree().change_scene_to_file("res://escenarios/nivel 2/nivel_2.tscn")

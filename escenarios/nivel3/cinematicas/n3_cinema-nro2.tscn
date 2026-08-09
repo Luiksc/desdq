@@ -1,6 +1,6 @@
 [gd_scene load_steps=311 format=4 uid="uid://pukp5k7pxmg8"]
 
-[ext_resource type="Script" path="res://escenarios/nivel3/cinematucas/n_3_cinema_nro_2.gd" id="1_tx0ph"]
+[ext_resource type="Script" path="res://escenarios/nivel3/cinematicas/n_3_cinema_nro_2.gd" id="1_tx0ph"]
 [ext_resource type="Texture2D" uid="uid://btuvjdpwyjjmk" path="res://modelos/karau/karau oñeme'e encuenta_0.png" id="2_3hiju"]
 [ext_resource type="Texture2D" uid="uid://c2tp8ke4njqjb" path="res://modelos/karau/karau_0.png" id="2_gxxjs"]
 [ext_resource type="Texture2D" uid="uid://c7aon2lqmo8cr" path="res://modelos/karau/karau_1.png" id="3_5p3xo"]
