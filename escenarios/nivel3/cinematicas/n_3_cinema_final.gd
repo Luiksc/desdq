@@ -66,4 +66,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if siguiente:
 		if Input.is_action_just_pressed("interaccion"):
-			pass
+			$"Control/ã/AnimationPlayer".play("entrafa")
+			await $"Control/ã/AnimationPlayer".animation_finished
+			get_tree().change_scene_to_file("res://UI/créditos.tscn")

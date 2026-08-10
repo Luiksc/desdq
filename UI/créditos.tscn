@@ -1,11 +1,11 @@
-[gd_scene load_steps=135 format=4 uid="uid://cb4blvabgof1l"]
+[gd_scene load_steps=133 format=4 uid="uid://cb4blvabgof1l"]
 
 [ext_resource type="Script" path="res://UI/créditos.gd" id="1_4fekv"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="2_bpvlx"]
+[ext_resource type="PackedScene" uid="uid://c5fhir01qye0n" path="res://audios/musica_global.tscn" id="2_l07bs"]
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="3_dwdgg"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="4_jl1my"]
-[ext_resource type="Script" path="res://UI/Inicio_boton.gd" id="5_p6mvt"]
-[ext_resource type="Texture2D" uid="uid://cwyym7sraayg2" path="res://UI/iniciar_botonm.png" id="6_nqkr3"]
+[ext_resource type="FontFile" uid="uid://2efbjbt4sdx" path="res://UI/fuentes/Upheaval/upheavtt.ttf" id="4_ywx2j"]
 [ext_resource type="MeshLibrary" uid="uid://rhowvwxd6qjc" path="res://modelos/libr mesh/1libreria_chaco.tres" id="7_di63b"]
 [ext_resource type="MeshLibrary" uid="uid://btt733selbmy1" path="res://modelos/libr mesh/2libreria_chaco.tres" id="8_qk7s2"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="9_ske0a"]
@@ -51,6 +51,234 @@ sky = SubResource("Sky_ojd1x")
 ambient_light_source = 2
 ambient_light_color = Color(0.28531, 0.344709, 0.561029, 1)
 fog_light_color = Color(1, 0.915667, 0.77, 1)
+
+[sub_resource type="Animation" id="Animation_cbnet"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(33.2772, 1.43549, -75.8613)]
+}
+
+[sub_resource type="Animation" id="Animation_x418p"]
+resource_name = "sealeja"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(33.2772, 1.43549, -75.8613), Vector3(33.2772, 1.43549, -75.8613), Vector3(29.3209, 2.0162, -74.8709)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6hdx"]
+_data = {
+"RESET": SubResource("Animation_cbnet"),
+"sealeja": SubResource("Animation_x418p")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_nabre"]
+font = ExtResource("4_ywx2j")
+font_size = 31
+font_color = Color(1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_1yb6r"]
+resource_name = "credita"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6, 9, 12, 15.0333, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["
+Creado por:
+-Luis Rolón López
+-Miguel Giménez 
+-Cayo Avalos", "
+Musica y sonidos:
+-AVES y CANTOS:
+ Canto del Carrao
+
+-Sonidos Chingones FX:
+Sonido de 
+Látigo / Latigazo 1
+
+-Sound FX:
+Foley sports 
+bag grab pickup
+ catch | Sound Effect
+-8 Bit Coin SOUND Effect
+-bag  backpack handling
+-Undertale Damage 
+Sound Effect 
+-RAYOS Y TRUENOS efectos 
+de sonido 
+-Sonidos de la selva 
+ Anochecer en 
+la selva misionera", "
+Musica y sonidos:
+- Karisusi78: Sonidos 
+del Chaco
+Tórtola o Rabiche
+ Cantando Sonido
+ para Llamar
+ El Mejor
+-Canto Urutau
+ (mãe da lua)
+-Canto da 
+Cigarra- Cicadas
+ song (Cicadoidea)
+-Paraguay natural", "
+Musica y sonidos:
+-El karau - Quemil Yambay 
+-El mensú (Juan Saucedo) 
+-Mateo-gamarra-Duo-Quintana-", "Modelos 3D:
+-Cayo Avalos
+-Luis Rolón
+-Miguel Giménez", "Addon Dialogos:
+-Dialog system
+Renpy style
+Sumri", "Aguyjeterei ejuga haguére
+(Gracias por jugar)"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:label_settings:font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3, 4, 5, 6.03333, 7.03333, 8, 9, 10, 11, 12.0333, 13, 14, 15.0333, 16.0333, 17, 18, 19, 19.9667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vertical_alignment")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3, 8.93333, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 0, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:label_settings:font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3, 8.93333, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [51, 23, 23, 42]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:label_settings:font")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3, 8.93333, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_ywx2j"), ExtResource("4_jl1my"), ExtResource("4_jl1my"), ExtResource("4_ywx2j")]
+}
+
+[sub_resource type="Animation" id="Animation_vqshf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["
+Creado por:
+Axel Rolón, Miguel
+Giménez y Cayo
+Avalos"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:label_settings:font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vertical_alignment")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:label_settings:font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [31]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:label_settings:font")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_ywx2j")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hwffk"]
+_data = {
+"RESET": SubResource("Animation_vqshf"),
+"credita": SubResource("Animation_1yb6r")
+}
 
 [sub_resource type="Animation" id="Animation_exjlt"]
 length = 0.001
@@ -181,194 +409,6 @@ _data = {
 "entrafa": SubResource("Animation_lqt2t"),
 "opyta": SubResource("Animation_4ad2x"),
 "salida": SubResource("Animation_kl6ug")
-}
-
-[sub_resource type="LabelSettings" id="LabelSettings_so4f6"]
-font = ExtResource("4_jl1my")
-font_size = 70
-font_color = Color(1, 1, 1, 0)
-outline_size = 30
-outline_color = Color(0, 0, 0, 0)
-shadow_size = 45
-shadow_offset = Vector2(13.43, 8.585)
-
-[sub_resource type="Animation" id="Animation_d7m2s"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:label_settings:outline_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:label_settings:shadow_color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_fep3w"]
-resource_name = "aparece"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0666667, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:label_settings:outline_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.0666667, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:label_settings:shadow_color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.635294)]
-}
-
-[sub_resource type="Animation" id="Animation_0uw4w"]
-resource_name = "desaparecce"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:label_settings:font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:label_settings:outline_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:label_settings:shadow_color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0.635294), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ov704"]
-_data = {
-"RESET": SubResource("Animation_d7m2s"),
-"aparece": SubResource("Animation_fep3w"),
-"desaparecce": SubResource("Animation_0uw4w")
-}
-
-[sub_resource type="Animation" id="Animation_xhjxy"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_3k85c"]
-resource_name = "aparece"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_cch2a"]
-resource_name = "desaparece"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cgky4"]
-_data = {
-"RESET": SubResource("Animation_xhjxy"),
-"aparece": SubResource("Animation_3k85c"),
-"desaparece": SubResource("Animation_cch2a")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j85rq"]
@@ -1479,6 +1519,57 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s1aet")
 
+[sub_resource type="Animation" id="Animation_coqx2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("base/extremidades2/brazoizquierda2/antebrazo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.735374, 0.0154343, -0.609809)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("base/extremidades2/brazoizquierda2/antebrazo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0926704, -0.329842, 0.0726213)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("base/extremidades2/brazoderecha2/antebrazo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.019207, -0.337204, -0.100286)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("base/extremidades2/brazoderecha2/antebrazo:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.137564, 1.49451, -3.0957)]
+}
+
 [sub_resource type="Animation" id="Animation_v5y35"]
 resource_name = "toca"
 length = 5.0
@@ -1507,32 +1598,29 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(-0.0926704, -0.329842, 0.0726213), Vector3(-0.0926666, -0.329842, 0.0726213), Vector3(-0.0926704, -0.329842, 0.0726213), Vector3(-0.0926666, -0.329842, 0.0726213), Vector3(-0.0926704, -0.329842, 0.0726213), Vector3(-0.0926666, -0.329842, 0.0726213), Vector3(-0.0926704, -0.329842, 0.0726213), Vector3(-0.0926666, -0.329842, 0.0726213), Vector3(-0.0926704, -0.329842, 0.0726213), Vector3(-0.0926666, -0.329842, 0.0726213), Vector3(-0.0926704, -0.329842, 0.0726213)]
 }
-
-[sub_resource type="Animation" id="Animation_coqx2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("base/extremidades2/brazoizquierda2/antebrazo:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("base/extremidades2/brazoderecha2/antebrazo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.03333, 1.5, 2.26667, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.735374, 0.0154343, -0.609809)]
+"values": [Vector3(0.019207, -0.337204, -0.100286), Vector3(0.019207, -0.337204, -0.100286), Vector3(-0.0731792, -0.315369, -0.182943), Vector3(-0.0731792, -0.315369, -0.182943), Vector3(0.062685, -0.275558, -0.0356655), Vector3(0.062685, -0.275558, -0.0356655), Vector3(0.019207, -0.337204, -0.100286)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("base/extremidades2/brazoizquierda2/antebrazo:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("base/extremidades2/brazoderecha2/antebrazo:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.03333, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.0926704, -0.329842, 0.0726213)]
+"values": [Vector3(-0.137564, 1.49451, -3.0957), Vector3(-0.137564, 1.49451, -3.0957), Vector3(-0.137564, 1.49451, -3.0957)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7xm6j"]
@@ -1545,8 +1633,18 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00256729, -1.90735e-06, 0.0918961)
 script = ExtResource("1_4fekv")
 
+[node name="MusicaGlobal" parent="." instance=ExtResource("2_l07bs")]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7o6nb")
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 33.2772, 1.43549, -75.8613)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D2"]
+libraries = {
+"": SubResource("AnimationLibrary_n6hdx")
+}
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.916241, -0.312935, -0.25015, -0.327824, 0.226706, 0.917135, -0.230293, 0.922321, -0.310305, 0.329858, 42.0512, 1.10065)
@@ -1563,8 +1661,33 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ã" type="Control" parent="Control"]
+[node name="Label" type="Label" parent="Control"]
 layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.04
+anchor_right = 0.666
+anchor_bottom = 1.461
+offset_left = -22.24
+offset_top = 19.0
+offset_right = -22.564
+offset_bottom = -405.65
+text = "
+Creado por:
+Axel Rolón, Miguel
+Giménez y Cayo
+Avalos"
+label_settings = SubResource("LabelSettings_nabre")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Label"]
+libraries = {
+"": SubResource("AnimationLibrary_hwffk")
+}
+
+[node name="ã" type="Control" parent="."]
+layout_mode = 3
 anchor_right = 1.016
 anchor_bottom = 0.875
 offset_left = -2.0
@@ -1575,83 +1698,36 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control/ã"]
+[node name="TextureRect" type="TextureRect" parent="ã"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_top = -1245.84
+offset_top = -1244.23
 offset_right = 101.343
-offset_bottom = -1245.84
+offset_bottom = -1244.23
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("3_dwdgg")
 
-[node name="ColorRect" type="ColorRect" parent="Control/ã"]
+[node name="ColorRect" type="ColorRect" parent="ã"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1289.0
-offset_right = 11.0
-offset_bottom = -1268.0
+offset_right = 13.032
+offset_bottom = -1266.25
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/ã"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ã"]
 libraries = {
 "": SubResource("AnimationLibrary_alwvl")
-}
-
-[node name="titulo" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.047
-anchor_top = 0.111
-anchor_right = 0.55
-anchor_bottom = 0.377
-offset_left = -49.238
-offset_top = -0.150009
-offset_right = 0.299988
-offset_bottom = -0.0500031
-text = "Relatos 
-  Ocultos"
-label_settings = SubResource("LabelSettings_so4f6")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/titulo"]
-libraries = {
-"": SubResource("AnimationLibrary_ov704")
-}
-
-[node name="Button" type="Button" parent="Control"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.048
-anchor_top = 0.448
-anchor_right = 0.216
-anchor_bottom = 0.563
-offset_left = -0.392002
-offset_top = -0.200012
-offset_right = -0.264008
-offset_bottom = 0.0499878
-theme_override_font_sizes/font_size = 1
-flat = true
-script = ExtResource("5_p6mvt")
-
-[node name="Sprite2D" type="Sprite2D" parent="Control/Button"]
-self_modulate = Color(1, 1, 1, 0)
-position = Vector2(97, 39)
-scale = Vector2(1.20958, 1.27273)
-texture = ExtResource("6_nqkr3")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Button"]
-libraries = {
-"": SubResource("AnimationLibrary_cgky4")
 }
 
 [node name="gridmaps" type="Node" parent="."]
@@ -1778,7 +1854,7 @@ mesh = SubResource("ArrayMesh_8md8o")
 skeleton = NodePath("")
 
 [node name="antebrazo" type="Node3D" parent="don menu/base/extremidades2/brazoizquierda2"]
-transform = Transform3D(0.82559, 0.564155, 0.0114453, -0.424711, 0.607915, 0.670865, 0.371514, -0.55872, 0.741491, -0.0926704, -0.329842, 0.0726213)
+transform = Transform3D(0.82559, 0.564155, 0.0114453, -0.424711, 0.607915, 0.670864, 0.371514, -0.55872, 0.741491, -0.0926704, -0.329842, 0.0726213)
 
 [node name="jyva 22" type="MeshInstance3D" parent="don menu/base/extremidades2/brazoizquierda2/antebrazo"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, 0.130029, -0.987672, -0.0871557, -0.0113761, 0.0864101, -0.996195, -0.025, 0.315625, -0.01875)
@@ -1799,7 +1875,7 @@ mesh = SubResource("ArrayMesh_ddvv7")
 skeleton = NodePath("")
 
 [node name="antebrazo" type="Node3D" parent="don menu/base/extremidades2/brazoderecha2"]
-transform = Transform3D(-0.0698588, 0.140084, 0.987672, -0.0454385, -0.98951, 0.137131, 0.996521, -0.0352985, 0.0754912, 0.019207, -0.337204, -0.100286)
+transform = Transform3D(-0.0698593, 0.140084, 0.987673, -0.0454431, -0.989511, 0.137131, 0.996522, -0.0353031, 0.0754924, 0.019207, -0.337204, -0.100286)
 
 [node name="jyva 23" type="MeshInstance3D" parent="don menu/base/extremidades2/brazoderecha2/antebrazo"]
 transform = Transform3D(0.918186, -0.350834, 0.183979, 0.39091, 0.87768, -0.277248, -0.0642066, 0.326485, 0.943018, 0.0275536, -0.0493469, -0.00592232)
@@ -1874,10 +1950,3 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_7xm6j")
 }
-
-[node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 32.2822, 1.56152, -74.5909)
-
-[connection signal="mouse_entered" from="Control/Button" to="Control/Button" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Button" to="Control/Button" method="_on_mouse_exited"]
-[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
