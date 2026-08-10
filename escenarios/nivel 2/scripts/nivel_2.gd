@@ -96,8 +96,10 @@ var dialogos ={
 (Prestá antencion amigo mío, se dice que los capataces se molestaron con vos, tenés que ser rápido.)"],
 		["Dionisio", "Héẽ, almenos tre kósa mante ajapo'arã ha ja ahátama añeno
 (Sí, almenos solo tres cosas me quedan por hacer, y después ya me acuesto.)"],
-		["Rogelio", "Iporãsíto upéa, ejapysaka la llaves ipuhatã, upéa he'íse kapánga oime ag̃ui ndehegui.
-che ahátama aguejy ka'a sáko amoite arriba ¡Ejúpy!"],
+		["Rogelio", "Iporãsíto upéa, ejapysaka la llaves ipuhatã
+(Está bien eso, atendé al sonido de las llaves que suena fuerte)"],
+		["Rogelio", "Upéa he'íse kapánga oime ag̃ui ndehegui. Che ahátama aguejy ka'a sáko ¡Ejúpy!
+(Eso significa que estás cerca de voz, Yo ya me voy a bajar los sacos, ¡Vení!)"]
 	],
 	
 	"Piensadelfi":[
