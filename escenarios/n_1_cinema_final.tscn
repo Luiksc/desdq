@@ -1,7 +1,8 @@
-[gd_scene load_steps=165 format=4 uid="uid://oop7axty4nm8"]
+[gd_scene load_steps=166 format=4 uid="uid://oop7axty4nm8"]
 
 [ext_resource type="Script" path="res://escenarios/n_1_cinema_final.gd" id="1_ssdqi"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_m0e4m"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="3_1sext"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="4_jb5k5"]
 [ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="5_kgwq8"]
 [ext_resource type="Texture2D" uid="uid://di03i3g5cdwfy" path="res://modelos/KINCHO/kincho perron-reakls_0.png" id="9_8yqip"]
@@ -2318,6 +2319,8 @@ script = ExtResource("1_ssdqi")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7o6nb")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_1sext")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.916241, -0.312935, -0.25015, -0.327824, 0.226706, 0.917135, -0.230293, 0.922321, -0.310305, 0.329858, 42.0512, 1.10065)

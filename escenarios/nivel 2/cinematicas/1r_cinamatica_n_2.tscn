@@ -1,4 +1,4 @@
-[gd_scene load_steps=367 format=4 uid="uid://nn6rvnufx0dk"]
+[gd_scene load_steps=368 format=4 uid="uid://nn6rvnufx0dk"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinematica_despensa/cinamatica_n_2_despensa.gd" id="1_m5sjq"]
 [ext_resource type="AudioStream" uid="uid://c7dldail7kvsf" path="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3" id="2_tv3kl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="4_4rc7b"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="4_elfnu"]
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="4_ihv7x"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="4_nbnis"]
 [ext_resource type="FontFile" uid="uid://2efbjbt4sdx" path="res://UI/fuentes/Upheaval/upheavtt.ttf" id="6_v1kxq"]
 [ext_resource type="Texture2D" uid="uid://538gw6cvuu3t" path="res://modelos/Marta/Marta_poti_0.png" id="9_j3q2u"]
 [ext_resource type="Texture2D" uid="uid://bt0ditbijeoep" path="res://modelos/Marta/Marta_poti_1.png" id="10_4qabn"]
@@ -5071,6 +5072,8 @@ autoplay = true
 stream = ExtResource("3_ps3x8")
 volume_db = 4.031
 autoplay = true
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_nbnis")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 14.438, 4.685, -45.672)

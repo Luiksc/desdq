@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=4 uid="uid://dnajqg0f3h4cg"]
+[gd_scene load_steps=107 format=4 uid="uid://dnajqg0f3h4cg"]
 
 [ext_resource type="Texture2D" uid="uid://ruydtyeqm1v5" path="res://modelos/objetos/Alto parana/cabaña/cabaña_0.png" id="1_fpfy5"]
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/despensa_ryepype.gd" id="1_qp4aq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://btmjwoclu3onm" path="res://modelos/objetos/Alto parana/cabaña/cabaña_5.png" id="6_wa4kb"]
 [ext_resource type="Texture2D" uid="uid://dgikimjwy5jpu" path="res://modelos/objetos/Alto parana/mesa/Mesa_0.png" id="8_4huky"]
 [ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="8_5b6ik"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="8_i63jw"]
 [ext_resource type="Texture2D" uid="uid://bjfkaxbaswwrm" path="res://modelos/objetos/Alto parana/mesa/Mesa_1.png" id="9_occ55"]
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/kioskero.gd" id="10_4c2or"]
 [ext_resource type="Texture2D" uid="uid://w2leitpg2m0n" path="res://modelos/capanga2/eldelas recargas/capanga2_0.png" id="10_qx6av"]
@@ -1265,6 +1266,8 @@ skeleton = NodePath("")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -2.81695, 6.25494, 3.30526)
 fov = 83.9147
+
+[node name="CanvasLayer" parent="." instance=ExtResource("8_i63jw")]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.996195, 4.08223e-08, -0.0871556, -0.0435778, 0.866025, 0.498098, 0.075479, 0.5, -0.86273, -12, 8, -9)

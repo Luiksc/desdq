@@ -1,6 +1,7 @@
-[gd_scene load_steps=110 format=4 uid="uid://b3sejkfqdkt0"]
+[gd_scene load_steps=111 format=4 uid="uid://b3sejkfqdkt0"]
 
 [ext_resource type="Script" path="res://escenarios/n_1_cinematica.gd" id="1_ypeu1"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="2_bmey4"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_mwopg"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="4_yht7x"]
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="5_gua3i"]
@@ -1069,6 +1070,8 @@ _data = {
 
 [node name="n1" type="Node3D"]
 script = ExtResource("1_ypeu1")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_bmey4")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7o6nb")

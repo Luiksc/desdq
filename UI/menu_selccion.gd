@@ -74,7 +74,7 @@ func _abrir_nivel(nivel: int) -> void:
 			await anima_camara.animation_finished
 			transicion.play("entrafa")
 			await transicion.animation_finished
-			get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/mama.tscn")
+			get_tree().change_scene_to_file("res://escenarios/nivel3/cinematicas/mama.tscn")
 
 
 func _on_button_pressed() -> void:

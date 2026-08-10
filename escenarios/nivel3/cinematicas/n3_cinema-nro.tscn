@@ -1,7 +1,8 @@
-[gd_scene load_steps=451 format=4 uid="uid://dkcufcba7pqhm"]
+[gd_scene load_steps=452 format=4 uid="uid://dkcufcba7pqhm"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematicas/n_3_cinema_nro.gd" id="1_v0hke"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_nkfml"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="3_7aqqa"]
 [ext_resource type="Texture2D" uid="uid://dxb4t3eibfkqf" path="res://background/yvaga sky.png" id="3_14ptg"]
 [ext_resource type="Texture2D" uid="uid://bdefis7k0svan" path="res://modelos/objetos/chaco/ÓGA+/casa cutre3_0.png" id="4_yckm5"]
 [ext_resource type="Texture2D" uid="uid://nsls3lxptj1r" path="res://modelos/objetos/Alto parana/tinglado/Takuara_0.png" id="5_ow8sl"]
@@ -7915,6 +7916,8 @@ data = {
 transform = Transform3D(0.739942, 0.496967, -0.453331, -0.198267, 0.805117, 0.558996, 0.642788, -0.323744, 0.694272, -27, 19, 37)
 light_color = Color(0.227488, 0.264354, 0.707408, 1)
 light_energy = 2.434
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_7aqqa")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_n31lf")
