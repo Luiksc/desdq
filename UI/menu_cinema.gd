@@ -5,6 +5,7 @@ extends Node3D
 @onready var titulo = $Control/titulo/AnimationPlayer
 @onready var anima_boton = $Control/Button/AnimationPlayer
 @onready var anima_boton2 = $Control/salir/AnimationPlayer
+@onready var anima_boton3 = $Control/pagina_web/AnimationPlayer
 @onready var boton = $Control/Button
 @onready var anima_libro1 = $caso_mateo/AnimationPlayer
 @onready var anima_libro2 = $caso_mensu/AnimationPlayer
@@ -40,6 +41,7 @@ func _ready() -> void:
 	await titulo.animation_finished
 	anima_boton.play("aparece")
 	anima_boton2.play("aparece")
+	anima_boton3.play("aparece")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -103,6 +105,7 @@ func _volver_al_inicio() -> void:
 	boton.show()
 	anima_boton.play("aparece")
 	anima_boton2.play("aparece")
+	anima_boton3.play("aparece")
 	titulo.play("aparece")
 
 func _on_button_pressed() -> void:
@@ -110,6 +113,7 @@ func _on_button_pressed() -> void:
 	titulo.play("RESET")
 	anima_boton.play("RESET")
 	anima_boton2.play("RESET")
+	anima_boton3.play("RESET")
 	boton.hide()
 	anima_camara.play("seleccion")
 	await anima_camara.animation_finished
@@ -120,29 +124,45 @@ func _on_button_pressed() -> void:
 
 
 func _on_mateo_mouse_entered() -> void:
+	if procesando_click:
+		return
 	clicki1 = true
 	anima_libro1.play("seleccion")
 
 func _on_mateo_mouse_exited() -> void:
 	clicki1 = false
+	if procesando_click:
+		return
 	anima_libro1.play("desseleccion")
 
 func _on_mensu_mouse_entered() -> void:
+	if procesando_click:
+		return
 	clicki2 = true
 	anima_libro2.play("seleccion")
 
 func _on_mensu_mouse_exited() -> void:
 	clicki2 = false
+	if procesando_click:
+		return
 	anima_libro2.play("desseleccion")
 
 func _on_karau_mouse_entered() -> void:
+	if procesando_click:
+		return
 	clicki3 = true
 	anima_libro3.play("seleccion")
 
 func _on_karau_mouse_exited() -> void:
 	clicki3 = false
+	if procesando_click:
+		return
 	anima_libro3.play("desseleccion")
 
 
 func _on_salir_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_pagina_web_pressed() -> void:
+	OS.shell_open("https://miguelrafaelgimenez-ops.github.io/Relatos-Oculto/")

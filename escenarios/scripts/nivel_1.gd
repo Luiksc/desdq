@@ -37,7 +37,7 @@ var dialogos ={
 		["Delfina servín","...
 (Piensa)"],
 		["Delfina","Moõguipa ahendu pe música 
-(De donde viene esa música.)"],
+(¿De donde viene esa música?)"],
 		["Delfina", "Ha Mateo ndojevýiti.
 (Y Mateo aún no vuelve.)"],
 		["Delfina","Iñestrañoléntoma
@@ -64,7 +64,7 @@ var dialogos ={
 		["Kalo'i","¡Karai Mateo ohokuri pya'e pya'e ko tapére!"]
 	],
 	"Piensadelfi":[
-		["delfina", "Chejokopa ko'ã mykurẽ, ambosápe manteva'erá ko'a vícho
+		["delfina", "Chejokopa ko'ã mykurẽ, ambosápe manteva'erá ko'ã vícho
 (Acá está lleno de mykurés, Debo ahuyentarles a estos animales)"],
 		["delfina", "(Presiona E para espantar animales)"]
 	]
@@ -103,7 +103,7 @@ func _ready() -> void:
 	$"enemigos/mykure/Area3D_daña".jgd_omano.connect(jugador_omano)
 	$"enemigos/mykure2/Area3D_daña2".jgd_omano.connect(jugador_omano)
 	$"enemigos/mykure3/Area3D_daña3".jgd_omano.connect(jugador_omano)
-#on_mykure_trigger_body_entered
+
 	
 
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
@@ -119,19 +119,17 @@ func _process(delta: float) -> void:
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
 	elif jugador_puede_interac:
-		# E inicia el diálogo si el jugador está en el área y no hay diálogo activo
 		if Input.is_action_just_pressed("interaccion"):
 			inic_dialo()
 	if jgd_omamo: 
 		if Input.is_action_just_pressed("clicki") or Input.is_action_just_pressed("interaccion"):
-		
 			reset()
 	
-# Recibe el npc_id emitido por la señal corpus_entro del trigger
+
 func piensa_dialog(id: String) -> void:
 
 	if pensamiento_activo:
-		return  # evita dispararse dos veces
+		return  
 	if not dialogos.has(id):
 		return
 	

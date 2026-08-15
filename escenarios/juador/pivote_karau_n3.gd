@@ -45,21 +45,23 @@ func _process(delta: float) -> void:    #joy
 	_procesar_joystick_camara(delta)
 
 func _procesar_joystick_camara(delta: float) -> void:
-	var eje_x := Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
-	var eje_y := Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
+	if cinematica == false:
+		
+		var eje_x := Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
+		var eje_y := Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
 
-	if abs(eje_x) < deadzone_joystick:
-		eje_x = 0.0
-	if abs(eje_y) < deadzone_joystick:
-		eje_y = 0.0
+		if abs(eje_x) < deadzone_joystick:
+			eje_x = 0.0
+		if abs(eje_y) < deadzone_joystick:
+			eje_y = 0.0
 
-	if eje_x == 0.0 and eje_y == 0.0:
-		return
+		if eje_x == 0.0 and eje_y == 0.0:
+			return
 
-	rotation.y -= eje_x * sensi_joystick * delta
-	rotation.y = wrapf(rotation.y, 0.0, TAU)
-	rotation.x -= eje_y * sensi_joystick * delta
-	rotation.x = clamp(rotation.x, minim_angulo_vertical, maxim_angulo_vertical)
+		rotation.y -= eje_x * sensi_joystick * delta
+		rotation.y = wrapf(rotation.y, 0.0, TAU)
+		rotation.x -= eje_y * sensi_joystick * delta
+		rotation.x = clamp(rotation.x, minim_angulo_vertical, maxim_angulo_vertical)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -73,7 +75,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			rotation.x = clamp(rotation.x, minim_angulo_vertical, maxim_angulo_vertical)
 
 	# ── Modo celular ──
-	if modo_tactil:
+	if modo_tactil and cinematica == false:
 		if event is InputEventScreenDrag:
 			
 			rotation.y -= event.relative.x * sensi

@@ -341,6 +341,9 @@ func ohotama():
 	var direccion = final_punto.global_position - jugador.global_position
 	direccion.y = 0
 	var distancia = direccion.length()
+	if direccion.length() > 0.01:
+			var angulo = atan2(-direccion.x, -direccion.z)
+			jugador.rotation.y = lerp_angle(jugador.rotation.y, angulo, 2 )
 	direccion = direccion.normalized()
 	jugador.velocity = direccion * 8
 	if anima_jugon.current_animation != "oho":

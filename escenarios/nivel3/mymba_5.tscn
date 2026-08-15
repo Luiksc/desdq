@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://dsl4gpy0sbsdv"]
+[gd_scene load_steps=70 format=4 uid="uid://dsl4gpy0sbsdv"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/scripts mymba/mymba_5.gd" id="1_twp5q"]
 [ext_resource type="Texture2D" uid="uid://hw8g6yhywi35" path="res://modelos/animañas/ka'i/monillo_0.png" id="2_cbnde"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://b38k3ljtlwy4c" path="res://modelos/animañas/ka'i/monillo_9.png" id="11_010nj"]
 [ext_resource type="Texture2D" uid="uid://de8uaw5vkdo8r" path="res://modelos/animañas/ka'i/monillo_10.png" id="12_gdeox"]
 [ext_resource type="Texture2D" uid="uid://b0n0kctbq8ps2" path="res://modelos/animañas/ka'i/monillo_11.png" id="13_b1lht"]
+[ext_resource type="AudioStream" uid="uid://c3sl2vllmxw4f" path="res://audios/Monkey scream 1.mp3" id="14_fxhwa"]
+[ext_resource type="AudioStream" uid="uid://cr1tiu66jdxuw" path="res://audios/Monkey scream 2.mp3" id="15_s286w"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_67m63"]
 
@@ -1001,3 +1003,10 @@ collision_mask = 2
 [node name="daña" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.489764, 0.213327)
 shape = SubResource("SphereShape3D_67m63")
+
+[node name="MonkeyScream1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_fxhwa")
+
+[node name="MonkeyScream2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_s286w")
+volume_db = -15.0

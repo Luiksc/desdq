@@ -292,6 +292,7 @@ func oheja():
 			$Control/Sprite2D/Label.text= "llevar sacos de yerba mate. 2/3"
 		0:
 			$Control/Sprite2D/Label.text = "llevar sacos de yerba mate. 3/3"
+			$Control/Sprite2D/Label.modulate= Color("2d1e16")
 			
 			
 	if sakos2.is_empty():
@@ -323,6 +324,7 @@ func dejar2():
 			$Control/Sprite2D/Label2.text="poner a secar  la yerba. 2/3"
 		0:
 			$Control/Sprite2D/Label2.text="poner a secar  la yerba. 3/3"
+			$Control/Sprite2D/Label2.modulate= Color("2d1e16")
 			secar=true
 			
 			
@@ -436,6 +438,7 @@ func reset():
 			s.hide()
 
 		$Control/Sprite2D/Label.text = "Bajar sacos de yerba 0/3"
+		$Control/Sprite2D/Label.modulate= Color("968c87")
 
 		llevando = false
 		jugador.oraha = false
@@ -455,7 +458,7 @@ func reset():
 			s.hide()
 
 		$Control/Sprite2D/Label2.text = "poner a secar la yerba 0/3"
-
+		$Control/Sprite2D/Label2.modulate= Color("968c87")                 #
 		
 		llevando2 = false
 		jugador.oraha = false

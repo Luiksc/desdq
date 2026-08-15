@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://cbcbd3hmh6few"]
+[gd_scene load_steps=70 format=4 uid="uid://cbcbd3hmh6few"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/scripts mymba/mymba_!.gd" id="1_icrro"]
 [ext_resource type="Texture2D" uid="uid://hw8g6yhywi35" path="res://modelos/animañas/ka'i/monillo_0.png" id="2_mhcv5"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://de8uaw5vkdo8r" path="res://modelos/animañas/ka'i/monillo_10.png" id="12_spc0j"]
 [ext_resource type="Texture2D" uid="uid://b0n0kctbq8ps2" path="res://modelos/animañas/ka'i/monillo_11.png" id="13_re8ft"]
 [ext_resource type="AudioStream" uid="uid://cjun280scn7l7" path="res://audios/Monkey scream 3.mp3" id="14_b38rq"]
+[ext_resource type="AudioStream" uid="uid://cr1tiu66jdxuw" path="res://audios/Monkey scream 2.mp3" id="15_x70dh"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fnvng"]
 
@@ -1007,3 +1008,7 @@ shape = SubResource("SphereShape3D_fnvng")
 [node name="MonkeyScream3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_b38rq")
 volume_db = -11.0
+
+[node name="MonkeyScream2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_x70dh")
+volume_db = -15.0

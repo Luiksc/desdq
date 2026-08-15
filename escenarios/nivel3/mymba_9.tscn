@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://bnm7f5w8mo36"]
+[gd_scene load_steps=52 format=4 uid="uid://bnm7f5w8mo36"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/scripts mymba/mymba_9.gd" id="1_ivkhc"]
 [ext_resource type="Texture2D" uid="uid://dv61qfbj6eu0j" path="res://modelos/animañas/mykuré/Myku_0.png" id="2_6hohj"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://df3rgnqblfh0f" path="res://modelos/animañas/mykuré/Myku_4.png" id="6_741s1"]
 [ext_resource type="Texture2D" uid="uid://ccnpmhqgxkiex" path="res://modelos/animañas/mykuré/Myku_5.png" id="7_6la4r"]
 [ext_resource type="Texture2D" uid="uid://dl0oio22b18p7" path="res://modelos/animañas/mykuré/Myku_6.png" id="8_ntbt0"]
+[ext_resource type="AudioStream" uid="uid://dbwlyxyi4io4i" path="res://audios/sonido mykure.mp3" id="9_jie5w"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vuleb"]
 
@@ -770,3 +771,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.0362281, 0.0760044, 0.295637)
 mesh = SubResource("ArrayMesh_evpwn")
 skeleton = NodePath("")
+
+[node name="SonidoMykure" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_jie5w")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://kntyohn40tlx"]
+[gd_scene load_steps=40 format=4 uid="uid://kntyohn40tlx"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/scripts mymba/mymba_7.gd" id="1_77rmq"]
 [ext_resource type="Texture2D" uid="uid://cjnpxdu6ovtqp" path="res://modelos/animañas/urutau/uruguaiguinge_0.png" id="2_bm6lr"]
@@ -9,8 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://dkqnardofnnnx" path="res://modelos/animañas/urutau/uruguaiguinge_5.png" id="7_igxvr"]
 [ext_resource type="Texture2D" uid="uid://uwny7xrs5ckl" path="res://modelos/animañas/urutau/uruguaiguinge_6.png" id="8_0hd31"]
 [ext_resource type="Texture2D" uid="uid://c0oib8na1mgbm" path="res://modelos/animañas/urutau/uruguaiguinge_7.png" id="9_molbh"]
+[ext_resource type="AudioStream" uid="uid://bxmyvnrx2nmlw" path="res://audios/sonidos_ambiente/Canto Urutau corte.mp3" id="10_3ve68"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hkftg"]
+radius = 0.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uderw"]
 resource_name = "material_0"
@@ -479,7 +481,7 @@ shape = SubResource("SphereShape3D_hkftg")
 collision_mask = 2
 
 [node name="daña" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.408502, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569155, 0.4)
 shape = SubResource("SphereShape3D_hkftg")
 
 [node name="blockbench_export" type="Node3D" parent="."]
@@ -553,3 +555,7 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_0x8pa")
 }
+
+[node name="CantoUrutauCorte" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_3ve68")
+volume_db = -20.0

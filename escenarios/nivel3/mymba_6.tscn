@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://jl1ntqcxeoos"]
+[gd_scene load_steps=69 format=4 uid="uid://jl1ntqcxeoos"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/scripts mymba/mymba_6.gd" id="1_dlwqp"]
 [ext_resource type="Texture2D" uid="uid://hw8g6yhywi35" path="res://modelos/animañas/ka'i/monillo_0.png" id="2_psuj3"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://b38k3ljtlwy4c" path="res://modelos/animañas/ka'i/monillo_9.png" id="11_aa337"]
 [ext_resource type="Texture2D" uid="uid://de8uaw5vkdo8r" path="res://modelos/animañas/ka'i/monillo_10.png" id="12_vpp8o"]
 [ext_resource type="Texture2D" uid="uid://b0n0kctbq8ps2" path="res://modelos/animañas/ka'i/monillo_11.png" id="13_x2n05"]
+[ext_resource type="AudioStream" uid="uid://cjun280scn7l7" path="res://audios/Monkey scream 3.mp3" id="14_5dstm"]
+[ext_resource type="AudioStream" uid="uid://cr1tiu66jdxuw" path="res://audios/Monkey scream 2.mp3" id="15_c1j57"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1w6xn"]
 
@@ -995,3 +997,10 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_xdpae")
 }
+
+[node name="MonkeyScream3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_5dstm")
+
+[node name="MonkeyScream2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_c1j57")
+volume_db = -15.0

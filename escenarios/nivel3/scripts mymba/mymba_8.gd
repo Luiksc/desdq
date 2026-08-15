@@ -40,6 +40,7 @@ func _physics_process(delta: float) -> void:
 		direccion.y = 0
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
+		$MonkeyScream2.play()
 	move_and_slide()
 
 var yuyo_instancia: Node3D = null
@@ -59,8 +60,8 @@ func _on_yuyo_recibido(id: String) -> void:
 
 
 func _reaccionar(id: String) -> void:
-	
 	persigue = true
+	$MonkeyScream1.play()
 
 func _ready() -> void:
 	pos_original = global_position

@@ -1,4 +1,4 @@
-[gd_scene load_steps=207 format=4 uid="uid://cjse10p2bv8ca"]
+[gd_scene load_steps=213 format=4 uid="uid://cjse10p2bv8ca"]
 
 [ext_resource type="Script" path="res://UI/menu_cinema.gd" id="1_ex02h"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_hmk0p"]
@@ -7,6 +7,8 @@
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="6_77ftp"]
 [ext_resource type="Texture2D" uid="uid://cwyym7sraayg2" path="res://UI/iniciar_botonm.png" id="6_254h4"]
 [ext_resource type="Script" path="res://UI/salir.gd" id="7_63dko"]
+[ext_resource type="Script" path="res://UI/pagina_web_boton.gd" id="7_capjk"]
+[ext_resource type="Texture2D" uid="uid://boxijwiuwrqx3" path="res://UI/web_boton.png" id="7_j5o76"]
 [ext_resource type="Texture2D" uid="uid://occo4hjiplj5" path="res://UI/salir_boton.png" id="7_qbni4"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="11_41vv7"]
 [ext_resource type="AudioStream" uid="uid://c7dldail7kvsf" path="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3" id="13_r51ts"]
@@ -382,6 +384,96 @@ _data = {
 "RESET": SubResource("Animation_73g81"),
 "aparece": SubResource("Animation_l2ein"),
 "desaparece": SubResource("Animation_2s7no")
+}
+
+[sub_resource type="Animation" id="Animation_72cqx"]
+resource_name = "aparece"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_vtcty"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5jg7p"]
+resource_name = "desaparece"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sgycy"]
+_data = {
+"RESET": SubResource("Animation_vtcty"),
+"aparece": SubResource("Animation_72cqx"),
+"desaparece": SubResource("Animation_5jg7p")
 }
 
 [sub_resource type="Animation" id="Animation_vap73"]
@@ -2656,9 +2748,10 @@ anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_top = -1245.84
-offset_right = 101.343
-offset_bottom = -1245.84
+offset_left = 1.0
+offset_top = 49.1577
+offset_right = 102.343
+offset_bottom = 49.1577
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -2669,9 +2762,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1289.0
 offset_right = 11.0
-offset_bottom = -1268.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)
@@ -2728,7 +2820,7 @@ libraries = {
 "": SubResource("AnimationLibrary_3c6lh")
 }
 
-[node name="salir" type="Button" parent="Control"]
+[node name="pagina_web" type="Button" parent="Control"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -2737,9 +2829,36 @@ anchor_top = 0.448
 anchor_right = 0.216
 anchor_bottom = 0.563
 offset_left = -0.392002
-offset_top = 109.8
+offset_top = 91.8
+offset_right = 3.73599
+offset_bottom = 98.05
+theme_override_font_sizes/font_size = 1
+flat = true
+script = ExtResource("7_capjk")
+
+[node name="Sprite" type="Sprite2D" parent="Control/pagina_web"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(97.25, 40.5)
+scale = Vector2(1.20659, 1.25758)
+texture = ExtResource("7_j5o76")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/pagina_web"]
+libraries = {
+"": SubResource("AnimationLibrary_sgycy")
+}
+
+[node name="salir" type="Button" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.617
+anchor_right = 0.216
+anchor_bottom = 0.732
+offset_left = -0.392002
+offset_top = 80.95
 offset_right = -0.264008
-offset_bottom = 110.05
+offset_bottom = 81.2
 theme_override_font_sizes/font_size = 1
 flat = true
 script = ExtResource("7_63dko")
@@ -3104,6 +3223,9 @@ transform = Transform3D(0.93561, 0, 0.353034, 0, 1, 0, -0.353034, 0, 0.93561, 32
 [connection signal="mouse_entered" from="Control/Button" to="Control/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Button" to="Control/Button" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Control/pagina_web" to="Control/pagina_web" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/pagina_web" to="Control/pagina_web" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/pagina_web" to="." method="_on_pagina_web_pressed"]
 [connection signal="mouse_entered" from="Control/salir" to="Control/salir" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/salir" to="Control/salir" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/salir" to="." method="_on_salir_pressed"]

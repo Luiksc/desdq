@@ -35,6 +35,7 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector3.ZERO
 			volviendo_a_origen = false
 	elif persigue:
+		
 		var direccion = jugador.global_position - global_position
 		var angulo = atan2(direccion.x, direccion.z)
 		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
@@ -59,8 +60,8 @@ func _on_yuyo_recibido(id: String) -> void:
 
 
 func _reaccionar(id: String) -> void:
-	
 	persigue = true
+	$CantoUrutauCorte.play()
 
 func _ready() -> void:
 	pos_original = global_position

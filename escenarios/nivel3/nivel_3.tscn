@@ -6774,7 +6774,7 @@ collision_mask = 128
 ojevy = NodePath("../../ojevy/8")
 
 [node name="mymba9_ambay" parent="enemigos_yuyo" node_paths=PackedStringArray("ojevy") groups=["mymba"] instance=ExtResource("35_u3p0c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.1, 1.02106, 126.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.1, 1.52106, 126.5)
 collision_layer = 128
 collision_mask = 128
 ojevy = NodePath("../../ojevy/9")
@@ -6785,28 +6785,28 @@ ojevy = NodePath("../../ojevy/9")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7, 1.22878, 55)
 
 [node name="2" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 7, 55)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 17, 55)
 
 [node name="3" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 2, 43)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 1.2, 43)
 
 [node name="4" type="Marker3D" parent="ojevy"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4, 13.1741, 66.1)
 
 [node name="5" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 2, 70)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 1.2, 70)
 
 [node name="6" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 2, 82)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 1.2, 82)
 
 [node name="7" type="Marker3D" parent="ojevy"]
 transform = Transform3D(0.997965, 0.0573374, 0.0279141, -0.0544879, 0.994088, -0.0939102, -0.0331337, 0.0921981, 0.995189, 11, 16.0046, 129.264)
 
 [node name="8" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 2, 77)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 1.2, 77)
 
 [node name="9" type="Marker3D" parent="ojevy"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 2, 129)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 1.2, 129)
 
 [node name="final" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 1.38278, 193)

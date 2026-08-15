@@ -108,7 +108,7 @@ func obtener_numero_de_mykure() -> String:
 func activar_persecucion(body: Node3D) -> void:
 	if es_jugador(body):
 		atake_sond.play()
-		await get_tree().create_timer(0.4).timeout
+		await get_tree().create_timer(0.3).timeout
 		Estado = estado.persiguiendo
 		puede_espantar = true
 

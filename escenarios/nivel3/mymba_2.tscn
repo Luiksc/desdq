@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://cgfd2i107euag"]
+[gd_scene load_steps=40 format=4 uid="uid://cgfd2i107euag"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/scripts mymba/mymba_2.gd" id="1_w7pvk"]
 [ext_resource type="Texture2D" uid="uid://cjnpxdu6ovtqp" path="res://modelos/animañas/urutau/uruguaiguinge_0.png" id="2_wjugs"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dkqnardofnnnx" path="res://modelos/animañas/urutau/uruguaiguinge_5.png" id="7_dvgvb"]
 [ext_resource type="Texture2D" uid="uid://uwny7xrs5ckl" path="res://modelos/animañas/urutau/uruguaiguinge_6.png" id="8_pfbv8"]
 [ext_resource type="Texture2D" uid="uid://c0oib8na1mgbm" path="res://modelos/animañas/urutau/uruguaiguinge_7.png" id="9_k2t2e"]
+[ext_resource type="AudioStream" uid="uid://bxmyvnrx2nmlw" path="res://audios/sonidos_ambiente/Canto Urutau corte.mp3" id="10_06ew6"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_oo5xf"]
 
@@ -553,3 +554,7 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_np5ja")
 }
+
+[node name="CantoUrutauCorte" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_06ew6")
+volume_db = -20.0

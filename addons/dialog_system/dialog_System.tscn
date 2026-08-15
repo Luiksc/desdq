@@ -76,9 +76,11 @@ text = "NPC_Name:"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 19
 text = "Hello there!
 This is a sample conversation message.
 Replace this text with real dialogue later."
+tab_size = 6
 
 [node name="next_button" type="Button" parent="VBoxContainer/dialogo_box/VBoxContainer"]
 unique_name_in_owner = true

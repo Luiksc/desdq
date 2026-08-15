@@ -62,6 +62,7 @@ func _on_yuyo_recibido(id: String) -> void:
 func _reaccionar(id: String) -> void:
 	
 	persigue = true
+	$CantoUrutauCorte.play()
 
 func _ready() -> void:
 	pos_original = global_position

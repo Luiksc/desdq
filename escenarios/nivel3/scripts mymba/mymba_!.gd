@@ -50,14 +50,14 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector3.ZERO
 			volviendo_a_origen = false
 	elif persigue:
-
+		
 		var direccion = jugador.global_position - global_position
 		var angulo = atan2(direccion.x,direccion.z)
 		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 		direccion.y = 0
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
-		$MonkeyScream3.play()
+		$MonkeyScream2.play()
 	move_and_slide()
 
 func vincular_yuyo(yuyo: Node3D) -> void:
@@ -75,6 +75,7 @@ func _on_yuyo_recibido(id: String) -> void:
 
 func _reaccionar(id: String) -> void:
 	persigue = true
+	$MonkeyScream3.play()
 
 func velocidad_reducida(reducir: bool) -> void:
 	if reducir:

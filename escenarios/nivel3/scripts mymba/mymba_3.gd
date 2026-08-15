@@ -75,8 +75,9 @@ func _on_yuyo_recibido(id: String) -> void:
 
 
 func _reaccionar(id: String) -> void:
-	
+
 	persigue = true
+	$MonkeyScream1.play()
 
 func velocidad_reducida(reducir: bool) -> void:
 	
