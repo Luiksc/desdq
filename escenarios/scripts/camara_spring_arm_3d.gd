@@ -9,7 +9,7 @@ var control_conectado: bool = false
 @onready var camara = $Camera3D
 
 @export var sensi := 0.004
-@export var sensi_joystick := 3.5
+@export var sensi_joystick := 1
 @export var deadzone_joystick := 0.2
 @export_range(-90.0, 0.0, 0.1, "radians_as_degrees") var minim_angulo_vertical = -PI / 2
 @export_range(0.0, 90.0, 0.1, "radians_as_degrees") var maxim_angulo_vertical = PI / 4
