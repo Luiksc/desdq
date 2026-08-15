@@ -91,8 +91,8 @@ func moviminto(delta: float) -> void:
 
 	#   DIRECCION con input
 
-	input_direccion.x = Input.get_axis("ui_left", "ui_right")
-	input_direccion.z = Input.get_axis("ui_up", "ui_down")
+	input_direccion.x = Input.get_axis("left", "right")
+	input_direccion.z = Input.get_axis("up", "down")
 	input_direccion = input_direccion.normalized() # normaliza y regulariza movement
 
 	# coyote time

@@ -97,8 +97,8 @@ func moviminto(delta: float) -> void:
 
 	
 	if farra == false:
-		input_direccion.x = Input.get_axis("ui_left", "ui_right")
-		input_direccion.z = Input.get_axis("ui_up", "ui_down")
+		input_direccion.x = Input.get_axis("left", "right")
+		input_direccion.z = Input.get_axis("up", "down")
 		input_direccion = input_direccion.normalized() 
 
 	
@@ -171,7 +171,7 @@ func _on_combo_body_entered(body: Node3D) -> void:
 		if "teclas_combo" in body:
 			teclas_faltantes = body.teclas_combo.duplicate()
 		else:
-			teclas_faltantes = ["interaccion", "ui_up", "ui_right"]
+			teclas_faltantes = ["interaccion", "up", "right"]
 			
 	
 		for accion in posibles_acciones:

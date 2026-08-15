@@ -113,8 +113,7 @@ func _ready() -> void:
 	boton_interac.hide()
 	indicador1.show()
 	jugador.puede_moverse= false
-	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	perdeu.hide()
 	indicador2.hide()
 	indicador3.hide()

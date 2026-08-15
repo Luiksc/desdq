@@ -13,7 +13,7 @@ signal combo
 
 var mymba_en_combo: Node3D = null
 var teclas_faltantes: Array[String] = []
-var posibles_acciones = ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar"]
+var posibles_acciones = ["up", "down", "left", "right", "interaccion", "saltar"]
 var ui_combo_nodos: Dictionary = {}
 var farra := false:
 	set(value):
@@ -59,7 +59,7 @@ func _ready() -> void:
 			nodo_sprite.frame = 0
 
 
-func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo, siendo un bucle
+func _physics_process(delta: float) -> void: 
 	
 	if mymba_en_combo != null:
 		procesar_combo()
@@ -67,7 +67,6 @@ func _physics_process(delta: float) -> void: #se comprueba 60 veces por segundo,
 	moviminto(delta)
 	move_and_slide()
 	
-	# Solo cambiar animación si el movimiento está activo (para no pisar animaciones cinemáticas)
 	if puede_moverse:
 		
 		if input_direccion.length() > 0.1:
@@ -98,8 +97,8 @@ func moviminto(delta: float) -> void:
 
 	#   DIRECCION con input
 	if farra == false:
-		input_direccion.x = Input.get_axis("ui_left", "ui_right")
-		input_direccion.z = Input.get_axis("ui_up", "ui_down")
+		input_direccion.x = Input.get_axis("left", "right")
+		input_direccion.z = Input.get_axis("up", "down")
 		input_direccion = input_direccion.normalized() # normaliza y regulariza movement
 
 	# coyote time
@@ -173,7 +172,7 @@ func _on_combo_body_entered(body: Node3D) -> void:
 		if "teclas_combo" in body:
 			teclas_faltantes = body.teclas_combo.duplicate()
 		else:
-			teclas_faltantes = ["interaccion", "ui_up", "ui_right"]
+			teclas_faltantes = ["interaccion", "up", "right"]
 			
 		# Mostrar los sprites correspondientes al combo
 		for accion in posibles_acciones:

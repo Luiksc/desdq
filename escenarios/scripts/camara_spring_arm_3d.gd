@@ -36,10 +36,9 @@ func _on_joy_connection_changed(device_id: int, connected: bool) -> void:
 # Llamado por Ui_celular.gd cuando detecta que es celular
 func activar_modo_tactil() -> void:
 	modo_tactil = true
-	# Soltar el mouse para que no interfiera con la pantalla táctil
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
-func _process(delta: float) -> void:
+func _process(delta: float) -> void:    #joy
 	if cinematica or modo_tactil or not control_conectado:
 		return
 	_procesar_joystick_camara(delta)
@@ -89,7 +88,3 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
-# la funcion clamp hace que se limiten ciertos valores
-# func mueve_camara():
