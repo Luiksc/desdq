@@ -62,15 +62,15 @@ var dialogos ={
 		["Ña florida","Ikatu Mateo ohora'e napépe.\n(seguro se fue allá)"]
 	],
 	"pensamiento1":[
-		["Karáu", "Emañamina mba'eichaite ipora pe kuñatai.\nQue hermosa es esa chica."]
+		["Karãu", "Emañamina mba'eichaite ipora pe kuñatai.\nQue hermosa es esa chica."]
 	],
 	"pensamiento2":[
-		["Karáu", "Ahasamíta ko fárrare, sapy'aiténte.\n(Voy a la fiesta, un ratito nomás.)"],
+		["Karãu", "Ahasamíta ko fárrare, sapy'aiténte.\n(Voy a la fiesta, un ratito nomás.)"],
 		
 	],
 	
-	"Piensadelfi":[
-		["delfina", "Acá esta lleno de mykurẽ, ambosápe manteva'erá ko'a vícho    \n(Acá está lleno de mykurés, Debo ahuyentarles a estos animales)"],               #pensamiento ejemplo
+	"Piensakarau":[
+		["Karãu", "    \n(Acá está lleno de mykurés, Debo ahuyentarles a estos animales)"],               #pensamiento ejemplo
 		["delfina", "(Presiona E para espantar animales)"]
 	]
 }
@@ -93,15 +93,12 @@ func _ready() -> void:
 	
 	DialogSystem.dialogo_opa.connect(dialog_terminado)
 
-
-
 func hay_mymba_persiguiendo() -> bool:
 	for m in get_tree().get_nodes_in_group("mymba"):
 		if m.get("persigue") == true:
 			return true
 	return false
-
-
+	
 func spawn_yuyo1():
 	
 	if instancia_kaarurupa != null and is_instance_valid(instancia_kaarurupa):
@@ -134,8 +131,6 @@ func spawn_yuyo1():
 	if enemigo:
 		enemigo.id_yuyo_esperado = "ka'arurupa"
 		enemigo.vincular_yuyo(instancia_yuyo)
-	
-
 	_conectar_daña_grupo("ka'arurupa")
 
 func spawn_yuyo2():
@@ -255,7 +250,7 @@ func reset_por_yuyo(id_yuyo: String) -> void:
 			$Control/lista/Label2.text = "Ka'arurupa 0/1"
 			spawn_yuyo1()
 		"ka'aré":
-			$Control/lista/Label3.text = "Ka'arẽ 0/1"
+			$Control/lista/Label3.text = "Ka'aré 0/1"
 			spawn_yuyo2()
 		"amba'y":
 			$Control/lista/Label.text = "Amba'y 0/2"
@@ -289,18 +284,12 @@ func _process(delta: float) -> void:
 	#
 			anima_jugon.play("repira")
 	
-	
-			
-
-
 func inic_dialo() -> void:
 	if npc_actual=="":
 		return
 	if not dialogos.has(npc_actual):
 		
 		return
-	
-	
 	dialogo_activo = true
 	
 	jugador.puede_moverse = false
@@ -326,10 +315,7 @@ func dialog_terminado() -> void:
 	if pensamiento_activo:
 		pensamiento_activo = false
 		return
-
 func mostrar_interac(id_del_npc: String) -> void:
-
-	
 	npc_actual = id_del_npc
 
 func hide_interac(id_del_npc: String) -> void:
@@ -349,8 +335,7 @@ func _on_trigger_farra_body_entered(body: Node3D) -> void:
 			return
 		tri_fr.queue_free()
 		piensa1("pensamiento1")
-		
-		
+
 func ohotama():
 	control_camara.cinematica = true
 	var direccion = final_punto.global_position - jugador.global_position
@@ -385,8 +370,6 @@ func ohota_primio():
 	await anima_jugon.animation_finished
 	piensa2("pensamiento2")
 	
-
-
 func _on_objeto_recogido(id: String) -> void:
 	objetos_recogidos = id
 	print(objetos_recogidos) 
@@ -400,4 +383,4 @@ func _on_objeto_recogido(id: String) -> void:
 		
 	if objetos_recogidos == "ka'aré":
 		$DialogSystem/sound.play()
-		$Control/lista/Label3.text = "Ka'arẽ 1/1"
+		$Control/lista/Label3.text = "Ka'aré 1/1"

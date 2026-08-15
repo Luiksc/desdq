@@ -48,11 +48,14 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector3.ZERO
 			volviendo_a_origen = false
 	elif persigue:
+		
+		
 		var direccion = jugador.global_position - global_position
 		var angulo = atan2(direccion.x,direccion.z)
 		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
+		$MonkeyScream2.play()
 	move_and_slide()
 	
 var yuyo_instancia: Node3D = null

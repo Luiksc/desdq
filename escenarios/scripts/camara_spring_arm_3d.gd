@@ -3,14 +3,17 @@ extends Node3D
 var cinematica: bool = false
 var farra := false
 
-# true cuando el juego corre en celular — activado por Ui_celular.gd
-var modo_tactil: bool = false
 
+var modo_tactil: bool = false
+var control_conectado: bool = false
 @onready var camara = $Camera3D
 
 @export var sensi := 0.004
+@export var sensi_joystick := 3.5
+@export var deadzone_joystick := 0.2
 @export_range(-90.0, 0.0, 0.1, "radians_as_degrees") var minim_angulo_vertical = -PI / 2
 @export_range(0.0, 90.0, 0.1, "radians_as_degrees") var maxim_angulo_vertical = PI / 4
+
 
 
 func _ready() -> void:
@@ -18,14 +21,45 @@ func _ready() -> void:
 	add_to_group("camara_pivot")
 	# En PC captura el mouse normalmente
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	control_conectado = Input.get_connected_joypads().size() > 0
+	# Nos suscribimos para detectar conexión/desconexión en caliente
+	Input.joy_connection_changed.connect(_on_joy_connection_changed)
 
+func _on_joy_connection_changed(device_id: int, connected: bool) -> void:
+	control_conectado = Input.get_connected_joypads().size() > 0
+	if connected:
+		print("Mando conectado: ", Input.get_joy_name(device_id))
+	else:
+		print("Mando desconectado")
 
 # Llamado por Ui_celular.gd cuando detecta que es celular
 func activar_modo_tactil() -> void:
 	modo_tactil = true
 	# Soltar el mouse para que no interfiera con la pantalla táctil
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
+func _process(delta: float) -> void:
+	if cinematica or modo_tactil or not control_conectado:
+		return
+	_procesar_joystick_camara(delta)
 
+func _procesar_joystick_camara(delta: float) -> void:
+	var eje_x := Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
+	var eje_y := Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
+
+	if abs(eje_x) < deadzone_joystick:
+		eje_x = 0.0
+	if abs(eje_y) < deadzone_joystick:
+		eje_y = 0.0
+
+	if eje_x == 0.0 and eje_y == 0.0:
+		return
+
+	rotation.y -= eje_x * sensi_joystick * delta
+	rotation.y = wrapf(rotation.y, 0.0, TAU)
+	rotation.x -= eje_y * sensi_joystick * delta
+	rotation.x = clamp(rotation.x, minim_angulo_vertical, maxim_angulo_vertical)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if cinematica:

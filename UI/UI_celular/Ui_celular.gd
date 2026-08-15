@@ -25,6 +25,16 @@ func _activar_camara_tactil() -> void:
 		push_warning("Ui_celular: No se encontró ningún nodo en el grupo 'camara_pivot'.")
 
 
+func _label_continuar_visible() -> bool:
+	var escena = get_tree().current_scene
+	if not is_instance_valid(escena):
+		return false
+	for nodo in escena.find_children("*", "Label", true, false):
+		if nodo is Label and nodo.visible and "[E] para continuar" in nodo.text:
+			return true
+	return false
+
+
 func _process(_delta: float) -> void:
 	if not es_celular:
 		return
@@ -41,8 +51,13 @@ func _input(event: InputEvent) -> void:
 	if not es_celular:
 		return
 
-
 	if event is InputEventScreenTouch and event.pressed:
 		if DialogSystem.estar_mostrando():
 			DialogSystem.neixt()
+			get_viewport().set_input_as_handled()
+		elif _label_continuar_visible():
+			var accion := InputEventAction.new()
+			accion.action = "interaccion"
+			accion.pressed = true
+			Input.parse_input_event(accion)
 			get_viewport().set_input_as_handled()

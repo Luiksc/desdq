@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3sl2vllmxw4f"
+path="res://.godot/imported/Monkey scream 1.mp3-2315499d670ee86fb961faf17f1be425.mp3str"
+
+[deps]
+
+source_file="res://audios/Monkey scream 1.mp3"
+dest_files=["res://.godot/imported/Monkey scream 1.mp3-2315499d670ee86fb961faf17f1be425.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

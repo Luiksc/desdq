@@ -39,7 +39,7 @@ func _ready() -> void:
 	timer.start()
 	await timer.timeout
 	asigna_id("noticia")
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
 	
 	
 

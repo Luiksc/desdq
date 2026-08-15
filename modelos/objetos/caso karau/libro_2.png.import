@@ -3,11 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dchhe1iyrj1ag"
-path.s3tc="res://.godot/imported/libro_2.png-6fc2a403e348d320b2ba4ccb335da7ec.s3tc.ctex"
-path.etc2="res://.godot/imported/libro_2.png-6fc2a403e348d320b2ba4ccb335da7ec.etc2.ctex"
+path="res://.godot/imported/libro_2.png-6fc2a403e348d320b2ba4ccb335da7ec.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "21574c7076eca489020feeb381510b73"
@@ -16,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/caso karau/libro_2.png"
-dest_files=["res://.godot/imported/libro_2.png-6fc2a403e348d320b2ba4ccb335da7ec.s3tc.ctex", "res://.godot/imported/libro_2.png-6fc2a403e348d320b2ba4ccb335da7ec.etc2.ctex"]
+dest_files=["res://.godot/imported/libro_2.png-6fc2a403e348d320b2ba4ccb335da7ec.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

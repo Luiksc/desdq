@@ -4,7 +4,7 @@ signal jugador_danado(id_yuyo: String)
 
 @export var teclas_combo: Array[String] = ["ui_down", "ui_up", "ui_left"]
 var pos_original: Vector3
-var vel_normal: float = 14
+var vel_normal: float = 27
 
 @onready var jugador = $"../../karau"
 
@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 				var angulo = atan2(direccion.x, direccion.z)
 				rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 				direccion = direccion.normalized()
+				direccion.y = 0
 				velocity = direccion * SPEED
 		else:
 			global_position = pos_original

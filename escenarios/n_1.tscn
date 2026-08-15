@@ -1,4 +1,4 @@
-[gd_scene load_steps=353 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=354 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -1562,9 +1562,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j54y2")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_dwyek"]
-height = 8.79668
-radius = 0.279677
+[sub_resource type="BoxShape3D" id="BoxShape3D_tpxw4"]
+size = Vector3(0.502686, 6.74829, 0.56427)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8vmyc"]
+size = Vector3(0.463379, 5.83649, 0.488892)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvmlt"]
 resource_name = "material_0"
@@ -4427,6 +4429,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6877, 2.67893, 15.1799)
 [node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]
 visible = false
 
+[node name="CanvasLayer" parent="." instance=ExtResource("115_anvs3")]
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchor_right = 1.0
@@ -4967,12 +4971,12 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="*objetos/tendedero"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="*objetos/tendedero/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174736, 3.66283, 0.074707)
-shape = SubResource("CylinderShape3D_dwyek")
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.196339, 4.93859, 0.0627823)
+shape = SubResource("BoxShape3D_tpxw4")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="*objetos/tendedero/StaticBody3D"]
-transform = Transform3D(0.986296, -0.164596, 0.0113564, 0.164928, 0.981758, -0.0945977, 0.00442135, 0.0951743, 0.995451, 0.453979, 2.45333, -8.04248)
-shape = SubResource("CylinderShape3D_dwyek")
+transform = Transform3D(0.986292, -0.164596, 0.0113563, 0.164928, 0.981758, -0.0945977, 0.00442249, 0.0951742, 0.99545, 0.0872078, 4.63417, -7.85183)
+shape = SubResource("BoxShape3D_8vmyc")
 
 [node name="npcs" type="Node" parent="." groups=["jugador_global"]]
 
@@ -5732,8 +5736,6 @@ volume_db = -4.333
 [node name="UndertaleDamageSoundEffect(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("114_5vwpt")
 volume_db = -11.556
-
-[node name="CanvasLayer" parent="." instance=ExtResource("115_anvs3")]
 
 [node name="8BitCoinSoundEffect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("116_jefcm")

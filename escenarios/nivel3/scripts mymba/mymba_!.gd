@@ -4,7 +4,7 @@ signal jugador_danado(id_yuyo: String)
 
 @export var teclas_combo: Array[String] = ["interaccion", "ui_up", "ui_right"]
 var pos_original: Vector3
-var vel_normal: float = 19
+var vel_normal: float = 15
 
 @onready var jugador = $"../../karau"
 @export var ojevy : Marker3D
@@ -32,7 +32,7 @@ func _on_zona_daña_body_entered(body: Node3D) -> void:
 func _physics_process(delta: float) -> void:
 	$"ka'ilo/AnimationPlayer".play("corre")
 	if volviendo_a_origen:
-		if ojevy != null and is_instance_valid(ojevy):
+		if ojevy != null and is_instance_valid(ojevy): 
 			var direccion = ojevy.global_position - global_position
 			direccion.y = 0
 			if direccion.length() < 0.5:
@@ -43,18 +43,21 @@ func _physics_process(delta: float) -> void:
 				var angulo = atan2(direccion.x, direccion.z)
 				rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 				direccion = direccion.normalized()
-				velocity = direccion * SPEED
+				direccion.y = 0
+				velocity = direccion * vel_normal
 		else:
 			global_position = pos_original
 			velocity = Vector3.ZERO
 			volviendo_a_origen = false
 	elif persigue:
+
 		var direccion = jugador.global_position - global_position
 		var angulo = atan2(direccion.x,direccion.z)
 		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
 		direccion.y = 0
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
+		$MonkeyScream3.play()
 	move_and_slide()
 
 func vincular_yuyo(yuyo: Node3D) -> void:

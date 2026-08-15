@@ -16,9 +16,9 @@ func _ready() -> void:
 
 func _on_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("jugador_global"):
-		# Emitir señal al nivel_3
+		
 		emit_signal("jugador_entro", id_objeto)
-		# Ocultar el objeto instanciado
+		
 		hide()
 		# Desconectar para que no se dispare de nuevo
 		var area = get_node_or_null("MeshInstance3D/Area3D")
