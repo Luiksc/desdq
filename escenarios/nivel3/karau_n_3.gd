@@ -40,6 +40,7 @@ var estuvo_suelo: bool = true
 var puede_moverse: bool = true
 var mouse_cam: bool= true 
 var input_direccion := Vector3.ZERO
+var en_modo_combo: bool = false
 
 @export var tiem_jump_buffer: float = 0.15
 @export var tiem_coyote: float = 0.15
@@ -189,6 +190,8 @@ func _on_combo_body_entered(body: Node3D) -> void:
 					sprite.hide()
 			
 		puede_moverse = false
+		en_modo_combo = true
+		_set_joystick_habilitado(false)
 		combo_delay_timer = COMBO_INPUT_DELAY  
 		if body.has_method("velocidad_reducida"):
 			body.velocidad_reducida(true)
@@ -215,6 +218,8 @@ func procesar_combo():
 	if teclas_faltantes.is_empty():
 		# Combo completado exitosamente
 		puede_moverse = true
+		en_modo_combo = false
+		_set_joystick_habilitado(true)
 		if camara_contro.has_method("opa_combo"):
 			camara_contro.opa_combo()
 		else:
@@ -246,8 +251,29 @@ func resetear_combo() -> void:
 			ui_combo_nodos[accion].hide()
 			ui_combo_nodos[accion].frame = 0
 	puede_moverse = true
+	en_modo_combo = false
+	_set_joystick_habilitado(true)
 	if camara_contro != null:
 		if camara_contro.has_method("opa_combo"):
 			camara_contro.opa_combo()
 		else:
 			camara_contro.cinematica = false
+
+
+func _set_joystick_habilitado(habilitado: bool) -> void:
+	# Busca el Virtual Joystick en el árbol y lo habilita o deshabilita
+	# Al deshabilitar, también libera las acciones para no dejar inputs atascados
+	var joysticks = get_tree().get_nodes_in_group("joystick_virtual")
+	if joysticks.is_empty():
+		# Fallback: buscar por clase si no está en el grupo
+		var root = get_tree().get_root()
+		for nodo in root.find_children("*", "VirtualJoystick", true, false):
+			joysticks.append(nodo)
+	for j in joysticks:
+		if habilitado:
+			j.process_mode = Node.PROCESS_MODE_INHERIT
+		else:
+			# Liberar acciones antes de deshabilitar para no dejar teclas "pegadas"
+			if j.has_method("_reset"):
+				j._reset()
+			j.process_mode = Node.PROCESS_MODE_DISABLED

@@ -18,7 +18,7 @@
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_vf74b")
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+[node name="up_boton" type="TouchScreenButton" parent="."]
 texture_filter = 1
 position = Vector2(110, 269)
 scale = Vector2(4.75, 3.84375)
@@ -26,7 +26,7 @@ texture_normal = ExtResource("1_lr0fc")
 texture_pressed = ExtResource("2_58jr2")
 action = "up"
 
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+[node name="right_boton" type="TouchScreenButton" parent="."]
 texture_filter = 1
 position = Vector2(188, 324)
 scale = Vector2(4.0625, 5.34375)
@@ -34,15 +34,15 @@ texture_normal = ExtResource("3_6v5uf")
 texture_pressed = ExtResource("4_n4w51")
 action = "right"
 
-[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+[node name="down_boton" type="TouchScreenButton" parent="."]
 texture_filter = 1
 position = Vector2(104, 423)
-scale = Vector2(4.96875, 4.09375)
+scale = Vector2(4.96875, 4.01375)
 texture_normal = ExtResource("5_secsd")
 texture_pressed = ExtResource("6_15mnc")
 action = "down"
 
-[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+[node name="left_boton" type="TouchScreenButton" parent="."]
 texture_filter = 1
 position = Vector2(50, 324)
 scale = Vector2(3.9375, 5.34375)
@@ -60,8 +60,8 @@ action = "saltar"
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(777, 465)
-scale = Vector2(4, 3.9375)
+position = Vector2(793, 480)
+scale = Vector2(3.5, 3.46875)
 texture_normal = ExtResource("11_tclvq")
 texture_pressed = ExtResource("12_nmyp5")
 action = "interaccion"
