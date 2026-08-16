@@ -20,7 +20,12 @@ var original_spring_arm: Node3D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	# Fix Error 2: registrarse en el grupo para que Ui_celular.gd lo encuentre
+	add_to_group("camara_pivot")
+	# Fix Error 12: solo capturar mouse en PC, no en móvil
+	var es_movil = OS.get_name() in ["Android", "iOS"] or DisplayServer.is_touchscreen_available()
+	if not es_movil:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if camara and "spring_arm" in camara:
 		original_spring_arm = camara.spring_arm
 	control_conectado = Input.get_connected_joypads().size() > 0
@@ -85,7 +90,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			rotation.x = clamp(rotation.x, minim_angulo_vertical, maxim_angulo_vertical)
 		return 
 
-	# ── Modo PC: mouse capturado ──
+	# Fix Error 7: guardá de cinematica en modo PC también
+	if cinematica:
+		return
+	# ── Modo PC: mouse capturado ────────────────────────────────────────
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotation.y -= event.relative.x * sensi
 		rotation.y = wrapf(rotation.y, 0.0, TAU)
@@ -104,8 +112,7 @@ func posiciona():
 	punto_farra.look_at(get_parent().global_position + Vector3(0, 1, 0), Vector3.UP)
 	if camara and "spring_arm" in camara:
 		camara.spring_arm = punto_farra
-	cinematica = true
-	
+	# Fix Error 8: eliminado el cinematica = true duplicado que estaba aqui
 func posiciona_combo():
 	cinematica = true
 	

@@ -19,7 +19,12 @@ var mirando_atras : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	# Fix Error 2: registrarse en el grupo para que Ui_celular.gd lo encuentre
+	add_to_group("camara_pivot")
+	# Fix Error 12: solo capturar mouse en PC, no en móvil
+	var es_movil = OS.get_name() in ["Android", "iOS"] or DisplayServer.is_touchscreen_available()
+	if not es_movil:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	control_conectado = Input.get_connected_joypads().size() > 0
 	# Nos suscribimos para detectar conexión/desconexión en caliente
 	Input.joy_connection_changed.connect(_on_joy_connection_changed)

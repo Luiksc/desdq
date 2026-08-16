@@ -19,7 +19,6 @@ var mostrar: bool = false
 
 func _ready() -> void:
 	hide()
-	next_button.pressed.connect(_on_next_button_pressed)
 
 func says(text: String, npc_name: String = "", speed: float = -1.0) -> void:
 	queue.append({
@@ -80,5 +79,10 @@ func terminar_dialogo() -> void:
 	dialogo_opa.emit()
 	
 	
-func  _process(delta: float) -> void:
-	$interaccion2.play("[E]")
+func  _process(_delta: float) -> void:
+	# Fix Error 10: solo arranca/detiene la animación cuando cambia el estado,
+	# evitando el reinicio constante que congelaba el sprite en el frame 0
+	if mostrar and not $interaccion2.is_playing():
+		$interaccion2.play("[E]")
+	elif not mostrar and $interaccion2.is_playing():
+		$interaccion2.stop()

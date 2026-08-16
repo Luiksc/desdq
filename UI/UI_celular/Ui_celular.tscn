@@ -19,47 +19,47 @@ script = ExtResource("1_vf74b")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(74, 359)
-scale = Vector2(3.78125, 3.375)
+position = Vector2(110, 269)
+scale = Vector2(4.75, 3.84375)
 texture_normal = ExtResource("1_lr0fc")
 texture_pressed = ExtResource("2_58jr2")
-action = "ui_up"
+action = "up"
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(149, 425)
-scale = Vector2(3.40625, 3.6875)
+position = Vector2(188, 324)
+scale = Vector2(4.0625, 5.34375)
 texture_normal = ExtResource("3_6v5uf")
 texture_pressed = ExtResource("4_n4w51")
-action = "ui_right"
+action = "right"
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(70, 495)
-scale = Vector2(4, 3.8125)
+position = Vector2(104, 423)
+scale = Vector2(4.96875, 4.09375)
 texture_normal = ExtResource("5_secsd")
 texture_pressed = ExtResource("6_15mnc")
-action = "ui_down"
+action = "down"
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(13, 421)
-scale = Vector2(3.28125, 3.9375)
+position = Vector2(50, 324)
+scale = Vector2(3.9375, 5.34375)
 texture_normal = ExtResource("7_axd2l")
 texture_pressed = ExtResource("8_5vsgt")
-action = "ui_left"
+action = "left"
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(902, 497)
-scale = Vector2(4, 3.9375)
+position = Vector2(839, 273)
+scale = Vector2(5.54021, 5.35858)
 texture_normal = ExtResource("9_uweqf")
 texture_pressed = ExtResource("10_ylj11")
 action = "saltar"
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(997, 371)
+position = Vector2(777, 465)
 scale = Vector2(4, 3.9375)
 texture_normal = ExtResource("11_tclvq")
 texture_pressed = ExtResource("12_nmyp5")

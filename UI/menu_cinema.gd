@@ -27,6 +27,7 @@ var en_seleccion = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$"Control/ã/AnimationPlayer".play("RESET")
 	libro_mateo.input_ray_pickable = false
 	libro_mensu.input_ray_pickable = false
 	libro_karau.input_ray_pickable = false

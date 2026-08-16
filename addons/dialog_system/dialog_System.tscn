@@ -40,8 +40,8 @@ typewriter_speed = 60.0
 
 [node name="interaccion2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1042, 397)
-scale = Vector2(2.81688, 2.57868)
+position = Vector2(1003, 358)
+scale = Vector2(2.0303, 1.95145)
 sprite_frames = SubResource("SpriteFrames_yxjlh")
 animation = &"[E]"
 
@@ -94,4 +94,4 @@ unique_name_in_owner = true
 stream = ExtResource("3_rmm2v")
 volume_db = -18.603
 
-[connection signal="pressed" from="VBoxContainer/dialogo_box/VBoxContainer/next_button" to="." method="_on_next_convo_pressed"]
+[connection signal="pressed" from="VBoxContainer/dialogo_box/VBoxContainer/next_button" to="." method="_on_next_button_pressed"]
