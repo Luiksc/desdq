@@ -262,7 +262,7 @@ func reset_por_yuyo(id_yuyo: String) -> void:
 func _process(delta: float) -> void:
 	$"kuñatai/AnimationPlayer".play("sentada")
 	if final:
-		ohotama()
+		ohotama(delta)
 		
 	if dialogo_activo:
 		if Input.is_action_just_pressed("interaccion"):
@@ -336,14 +336,15 @@ func _on_trigger_farra_body_entered(body: Node3D) -> void:
 		tri_fr.queue_free()
 		piensa1("pensamiento1")
 
-func ohotama():
+func ohotama(delta: float):
 	control_camara.cinematica = true
 	var direccion = final_punto.global_position - jugador.global_position
 	direccion.y = 0
 	var distancia = direccion.length()
 	if direccion.length() > 0.01:
-			var angulo = atan2(-direccion.x, -direccion.z)
-			jugador.rotation.y = lerp_angle(jugador.rotation.y, angulo, 2 )
+		# Karau tiene el frente en +X, por eso se usa atan2(z, x)
+		var angulo = atan2(direccion.z, direccion.x)
+		jugador.rotation.y = lerp_angle(jugador.rotation.y, angulo, 10.0 * delta)
 	direccion = direccion.normalized()
 	jugador.velocity = direccion * 8
 	if anima_jugon.current_animation != "oho":
