@@ -6900,8 +6900,8 @@ anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_top = -1244.0
-offset_bottom = -1244.0
+offset_top = -1199.78
+offset_bottom = -1199.78
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -6914,10 +6914,10 @@ anchor_left = 0.015
 anchor_top = 0.031
 anchor_right = 1.026
 anchor_bottom = 1.066
-offset_left = -17.535
-offset_top = -1309.09
-offset_right = -17.394
-offset_bottom = -1308.77
+offset_left = -16.455
+offset_top = -1307.6
+offset_right = 56.478
+offset_bottom = -1257.6
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)
@@ -7056,6 +7056,8 @@ stream = ExtResource("42_8qywg")
 volume_db = -8.135
 unit_size = 10.58
 autoplay = true
+
+[node name="CanvasLayer" parent="." instance=ExtResource("100_qny3a")]
 
 [node name="bancos" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 67, 0.547283, 193.044)
@@ -7220,8 +7222,6 @@ autoplay = true
 
 [node name="UndertaleDamageSoundEffect(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("99_hrodh")
-
-[node name="CanvasLayer" parent="." instance=ExtResource("100_qny3a")]
 
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="." method="_on_trigger_farra_body_entered"]
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="objetos/casa1" method="_on_trigger_farra_body_entered"]

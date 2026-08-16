@@ -11,7 +11,12 @@ signal combo
 
 var mymba_en_combo: Node3D = null
 var teclas_faltantes: Array[String] = []
-var posibles_acciones = ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar"]
+var posibles_acciones = ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar",
+							"up", "down", "left", "right"]  # Las últimas 4 son alias táctiles
+# Mapa de acción táctil → acción combo equivalente (para que el joystick virtual funcione)
+var alias_tactil: Dictionary = {
+	"up": "ui_up", "down": "ui_down", "left": "ui_left", "right": "ui_right"
+}
 var ui_combo_nodos: Dictionary = {}
 var combo_delay_timer: float = 0.0  # Tiempo de espera antes de detectar teclas en el combo
 const COMBO_INPUT_DELAY: float = 0.2  # Segundos de delay al inicio del combo
@@ -167,7 +172,7 @@ func _on_combo_body_entered(body: Node3D) -> void:
 	if body.is_in_group("mymba") and mymba_en_combo == null:
 		mymba_en_combo = body
 		
-		# Leer teclas combo del mymba o usar un valor por defecto
+
 		if "teclas_combo" in body:
 			teclas_faltantes = body.teclas_combo.duplicate()
 		else:
@@ -191,19 +196,22 @@ func _on_combo_body_entered(body: Node3D) -> void:
 func procesar_combo():
 	for accion in posibles_acciones:
 		if Input.is_action_just_pressed(accion):
-			if accion in teclas_faltantes:
+			# Traducir alias táctil a la acción combo que los mymbas esperan
+			var accion_combo = alias_tactil.get(accion, accion)
+			if accion_combo in teclas_faltantes:
+				teclas_faltantes.erase(accion_combo)
+				if ui_combo_nodos.has(accion_combo):
+					ui_combo_nodos[accion_combo].frame = 1
+			elif accion in teclas_faltantes:
+				# Acción directa (sin alias) también válida
 				teclas_faltantes.erase(accion)
-				
 				if ui_combo_nodos.has(accion):
 					ui_combo_nodos[accion].frame = 1
 			else:
-				
 				emit_signal("combo")
-			
 				if mymba_en_combo != null and "SPEED" in mymba_en_combo:
 					$"../UndertaleDamageSoundEffect(mp3Cut_net)".play()
 					mymba_en_combo.SPEED += 2
-				
 	if teclas_faltantes.is_empty():
 		# Combo completado exitosamente
 		puede_moverse = true

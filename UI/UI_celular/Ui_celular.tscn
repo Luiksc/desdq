@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bgryn1xmwk3dn"]
+[gd_scene load_steps=15 format=3 uid="uid://bgryn1xmwk3dn"]
 
 [ext_resource type="Texture2D" uid="uid://dcghswsmuldfp" path="res://UI/UI_celular/flecha_arriba.png" id="1_lr0fc"]
 [ext_resource type="Script" path="res://UI/UI_celular/Ui_celular.gd" id="1_vf74b"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bi3cexkb4lsnj" path="res://UI/UI_celular/salta_pressed.png" id="10_ylj11"]
 [ext_resource type="Texture2D" uid="uid://byj0nf74pigm8" path="res://UI/UI_celular/E.png" id="11_tclvq"]
 [ext_resource type="Texture2D" uid="uid://ts6ad5hqtmqi" path="res://UI/UI_celular/E_pressed.png" id="12_nmyp5"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="14_by2fl"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_vf74b")
@@ -64,3 +65,12 @@ scale = Vector2(4, 3.9375)
 texture_normal = ExtResource("11_tclvq")
 texture_pressed = ExtResource("12_nmyp5")
 action = "interaccion"
+
+[node name="Virtual Joystick" parent="." instance=ExtResource("14_by2fl")]
+anchors_preset = -1
+anchor_top = 0.427
+anchor_right = 0.305
+offset_left = 1.0
+offset_top = -10.2
+offset_right = 7.60001
+offset_bottom = 0.0
