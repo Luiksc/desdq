@@ -20,32 +20,32 @@ script = ExtResource("1_vf74b")
 
 [node name="up_boton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(110, 269)
-scale = Vector2(4.75, 3.84375)
+position = Vector2(94, 295)
+scale = Vector2(3.625, 3.84375)
 texture_normal = ExtResource("1_lr0fc")
 texture_pressed = ExtResource("2_58jr2")
 action = "up"
 
 [node name="right_boton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(188, 324)
-scale = Vector2(4.0625, 5.34375)
+position = Vector2(167, 369)
+scale = Vector2(4.0625, 4.375)
 texture_normal = ExtResource("3_6v5uf")
 texture_pressed = ExtResource("4_n4w51")
 action = "right"
 
 [node name="down_boton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(104, 423)
-scale = Vector2(4.96875, 4.01375)
+position = Vector2(76, 460)
+scale = Vector2(4.5625, 4.01375)
 texture_normal = ExtResource("5_secsd")
 texture_pressed = ExtResource("6_15mnc")
 action = "down"
 
 [node name="left_boton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(50, 324)
-scale = Vector2(3.9375, 5.34375)
+position = Vector2(13, 368)
+scale = Vector2(3.9375, 4.34375)
 texture_normal = ExtResource("7_axd2l")
 texture_pressed = ExtResource("8_5vsgt")
 action = "left"
@@ -67,10 +67,11 @@ texture_pressed = ExtResource("12_nmyp5")
 action = "interaccion"
 
 [node name="Virtual Joystick" parent="." instance=ExtResource("14_by2fl")]
+visible = false
 anchors_preset = -1
 anchor_top = 0.427
 anchor_right = 0.305
-offset_left = 1.0
-offset_top = -10.2
-offset_right = 7.60001
-offset_bottom = 0.0
+offset_left = -40.0
+offset_top = 27.8
+offset_right = -33.4
+offset_bottom = 38.0

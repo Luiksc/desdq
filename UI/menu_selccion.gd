@@ -26,6 +26,7 @@ var en_seleccion = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	anima_camara.play("selenccionando")
+	transicion.play("salida")
 	
 
 
@@ -91,25 +92,37 @@ func _on_button_pressed() -> void:
 
 
 func _on_mateo_mouse_entered() -> void:
+	if procesando_click:
+		return
 	clicki1 = true
 	anima_libro1.play("seleccion")
 
 func _on_mateo_mouse_exited() -> void:
+	if procesando_click:
+		return
 	clicki1 = false
 	anima_libro1.play("desseleccion")
 
 func _on_mensu_mouse_entered() -> void:
+	if procesando_click:
+		return
 	clicki2 = true
 	anima_libro2.play("seleccion")
 
 func _on_mensu_mouse_exited() -> void:
+	if procesando_click:
+		return
 	clicki2 = false
 	anima_libro2.play("desseleccion")
 
 func _on_karau_mouse_entered() -> void:
+	if procesando_click:
+		return
 	clicki3 = true
 	anima_libro3.play("seleccion")
 
 func _on_karau_mouse_exited() -> void:
+	if procesando_click:
+		return
 	clicki3 = false
 	anima_libro3.play("desseleccion")

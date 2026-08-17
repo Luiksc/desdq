@@ -1071,8 +1071,6 @@ _data = {
 [node name="n1" type="Node3D"]
 script = ExtResource("1_ypeu1")
 
-[node name="CanvasLayer" parent="." instance=ExtResource("2_bmey4")]
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7o6nb")
 
@@ -1140,6 +1138,9 @@ color = Color(0.105882, 0.141176, 0.278431, 1)
 libraries = {
 "": SubResource("AnimationLibrary_alwvl")
 }
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_bmey4")]
+visible = false
 
 [node name="*objetos" type="Node" parent="."]
 

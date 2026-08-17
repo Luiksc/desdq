@@ -17,7 +17,7 @@ var dialogos ={
 ¿Cuánto sale?"],
 		["Almacenero","La harina esta 27 y el poroto a 22"],
 		["Dionisio","(Ndiiij, adebe jeýtante ko semana pe g̃uarã)
-		Ndaipóripa la ibaratovéva"],
+		Ndaipóri la ibaratovéva"],
 		["Almacenero", "Ha terehóna eporeka algo ka'aguy apytépe mba'e"]
 		
 		
@@ -25,7 +25,7 @@ var dialogos ={
 	"Comprado":[
 		["Dionisio", "Voy a deberte, mensualidad piko mboýpa ou ko mes"],
 		["Almacenero", "Dionisio Báez.
-		*Paga del mes, 150 guaraies
+		*Paga del mes, 150 guaraníes.
 		*Deuda de uniforme -18 guaraníes.
 		*Compra de machete que usted rompió -70 guaranies
 		*Fiado de alimentos del me pasado -55
@@ -70,10 +70,8 @@ func _process(delta: float) -> void:
 			
 			
 	
-		# E inicia el diálogo si el jugador está en el área y no hay diálogo activo
-		
 
-# Recibe el npc_id emitido por la señal corpus_entro del trigger
+
 
 func inic_dialo() -> void:
 	if npc_actual=="":
@@ -100,12 +98,7 @@ func dialog_terminado() -> void:
 		anima.play("entrafa")
 		await anima.animation_finished
 		get_tree().change_scene_to_file("res://escenarios/nivel 2/cinamatica_n_2_Final.tscn")
-  # desbloquea el movimiento
 
-	# Si era un pensamiento de Delfina, destruimos el trigger y listo
-
-
-	# Si el jugador todavía está en el área de un NPC, volvemos a mostrar el label
 
 
 func _on_deber_pressed() -> void:

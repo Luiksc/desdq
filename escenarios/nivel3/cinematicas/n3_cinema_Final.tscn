@@ -1,4 +1,4 @@
-[gd_scene load_steps=214 format=4 uid="uid://bqn6jif5g1ppb"]
+[gd_scene load_steps=215 format=4 uid="uid://bqn6jif5g1ppb"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematicas/n_3_cinema_final.gd" id="1_xwnb2"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_d7v4s"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ds623qsdimfwy" path="res://modelos/karau/karai_conversion_8.png" id="13_66dyr"]
 [ext_resource type="Texture2D" uid="uid://1b5lljes4ita" path="res://modelos/karau/karai_conversion_9.png" id="14_b0equ"]
 [ext_resource type="Texture2D" uid="uid://c1yhtrxgqusix" path="res://modelos/karau/karai_conversion_10.png" id="15_s2thp"]
+[ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="16_2wyv2"]
 [ext_resource type="Texture2D" uid="uid://biyf22wg1yjn5" path="res://modelos/karau/karai_conversion_11.png" id="16_3355g"]
 [ext_resource type="Texture2D" uid="uid://ccqbtrkusq36f" path="res://modelos/karau/karai_conversion_12.png" id="17_1ieto"]
 [ext_resource type="Texture2D" uid="uid://b16ncydt4slxc" path="res://modelos/karau/karai_conversion_13.png" id="18_1mewg"]
@@ -3080,10 +3081,10 @@ anchor_left = 0.585069
 anchor_top = 1.38889
 anchor_right = 0.585069
 anchor_bottom = 1.38889
-offset_left = -304.0
-offset_top = -919.002
-offset_right = 80.0
-offset_bottom = -535.002
+offset_left = -261.875
+offset_top = -852.334
+offset_right = 122.125
+offset_bottom = -468.334
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.02, 0.02)
@@ -3132,9 +3133,9 @@ anchor_top = 0.802
 anchor_right = 0.638
 anchor_bottom = 0.899
 offset_left = 9.19199
-offset_top = -192.696
+offset_top = -169.696
 offset_right = 18.024
-offset_bottom = -180.552
+offset_bottom = -152.896
 scale = Vector2(0.944752, 0.833576)
 text = "Música:
 NHE'E PORÃ: Tupã Reko'y
@@ -3173,8 +3174,8 @@ anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_top = -1244.0
-offset_bottom = -1244.0
+offset_top = -1199.78
+offset_bottom = -1199.78
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -3186,8 +3187,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1289.0
-offset_right = 13.0
-offset_bottom = -1266.0
+offset_right = 85.0
+offset_bottom = -1218.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)
@@ -3196,6 +3197,9 @@ color = Color(0.105882, 0.141176, 0.278431, 1)
 libraries = {
 "": SubResource("AnimationLibrary_alwvl")
 }
+
+[node name="CanvasLayer" parent="." instance=ExtResource("16_2wyv2")]
+visible = false
 
 [node name="colisioones" type="Node" parent="."]
 

@@ -2776,13 +2776,13 @@ libraries = {
 [node name="titulo" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.047
+anchor_left = 0.021
 anchor_top = 0.111
-anchor_right = 0.55
+anchor_right = 0.603
 anchor_bottom = 0.377
-offset_left = -49.238
+offset_left = -0.106001
 offset_top = -0.150009
-offset_right = 0.299988
+offset_right = 0.169983
 offset_bottom = -0.0500031
 text = "Relatos 
   Ocultos"
@@ -3218,7 +3218,7 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -0.09490
 shape = SubResource("BoxShape3D_sf6pe")
 
 [node name="blockbench_export" parent="." instance=ExtResource("51_u78t7")]
-transform = Transform3D(0.93561, 0, 0.353034, 0, 1, 0, -0.353034, 0, 0.93561, 32.0104, 0.261349, -76.3254)
+transform = Transform3D(0.828099, 0, 0.560581, 0, 1, 0, -0.560581, 0, 0.828099, 32.0104, 0.261349, -76.3254)
 
 [connection signal="mouse_entered" from="Control/Button" to="Control/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Button" to="Control/Button" method="_on_mouse_exited"]

@@ -71,8 +71,10 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	$Control/CanvasLayer.hide()
 	jugador.puede_moverse = false
 	siguente.hide()
+	
 	$Control/Label.hide()
 	perder.hide()
 	interac.hide()
@@ -81,6 +83,7 @@ func _ready() -> void:
 	await anima_datos.animation_finished
 	anima_datos.play("desaparece")
 	await anima_datos.animation_finished
+	$Control/CanvasLayer.show()
 	transicion.play("salida")
 	await transicion.animation_finished
 
@@ -224,11 +227,13 @@ func _on_final_body_entered(body: Node3D) -> void:
 		finiquitable = true
 func jugador_omano():
 	jugador.puede_moverse = false
+	$Control/CanvasLayer.hide()
 	daña.play()
 	ambiente.stop()
 	ambiente2.stop()
 	musica.stop()
 	transicion.play("entrafa")
+	
 	await transicion.animation_finished
 	
 	jgd_omamo=true
@@ -240,7 +245,8 @@ func jugador_omano():
 func reset():
 	perder.hide()
 	interac.hide()
-	$Control/Label.hide()#escondete kape
+	$Control/Label.hide()
+	$Control/CanvasLayer.show()
 	jgd_omamo=false
 	jugador.global_position = checkpoint.ultima_posicion
 	transicion.play("salida")

@@ -4424,12 +4424,10 @@ light_color = Color(1, 0.8045, 0.49, 1)
 shadow_enabled = true
 
 [node name="jugador" parent="." groups=["jugador_global"] instance=ExtResource("1_5bv6o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6877, 2.67893, 15.1799)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6877, 0.289764, 15.1799)
 
 [node name="DialogSystem" parent="." instance=ExtResource("6_ytt0h")]
 visible = false
-
-[node name="CanvasLayer" parent="." instance=ExtResource("115_anvs3")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -4440,6 +4438,8 @@ offset_bottom = 0.0559692
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="CanvasLayer" parent="Control" instance=ExtResource("115_anvs3")]
 
 [node name="ã" type="Control" parent="Control"]
 layout_mode = 1
@@ -4460,9 +4460,9 @@ anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_top = -1245.84
+offset_top = -1207.03
 offset_right = 101.343
-offset_bottom = -1245.84
+offset_bottom = -1207.03
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -4474,8 +4474,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1289.0
-offset_right = 11.0
-offset_bottom = -1268.0
+offset_right = 84.152
+offset_bottom = -1225.87
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)
@@ -4490,10 +4490,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 28.639
 anchor_bottom = 16.316
-offset_left = 1.0
-offset_top = 4.0
-offset_right = -31892.4
-offset_bottom = -9962.4
+offset_left = 13.0
+offset_top = 133.0
+offset_right = -29910.4
+offset_bottom = -9531.88
 grow_horizontal = 2
 grow_vertical = 2
 text = "Puerto Guaraní
@@ -4510,16 +4510,16 @@ libraries = {
 [node name="siguietne" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 180.0
-offset_top = 569.0
+offset_top = 475.0
 offset_right = 1020.0
-offset_bottom = 599.0
+offset_bottom = 505.0
 text = "[E] para el siguiente relato
 "
 label_settings = SubResource("LabelSettings_jvlji")
 
 [node name="Interac" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1
-position = Vector2(582, 518)
+position = Vector2(544, 502)
 scale = Vector2(3.28125, 2.875)
 sprite_frames = SubResource("SpriteFrames_bha3u")
 animation = &"interactura"
@@ -4530,10 +4530,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.049
 anchor_bottom = 1.553
-offset_left = 298.0
-offset_top = 264.0
-offset_right = 298.208
-offset_bottom = 263.972
+offset_left = 261.0
+offset_top = 132.0
+offset_right = 261.208
+offset_bottom = 131.972
 text = "EPERDÉMA"
 label_settings = SubResource("LabelSettings_so4f6")
 
@@ -4544,10 +4544,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -304.0
-offset_top = -38.0
-offset_right = 304.0
-offset_bottom = 38.0
+offset_left = -341.0
+offset_top = -170.0
+offset_right = 267.0
+offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "EPERDEMA"

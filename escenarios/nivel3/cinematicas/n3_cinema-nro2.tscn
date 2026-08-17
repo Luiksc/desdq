@@ -4575,6 +4575,7 @@ _data = {
 script = ExtResource("1_tx0ph")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_8c3vh")]
+visible = false
 
 [node name="karau2" type="Node3D" parent="."]
 transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 43, 1.2, 188.943)

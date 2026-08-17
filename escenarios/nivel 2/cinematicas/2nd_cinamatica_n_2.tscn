@@ -3918,7 +3918,7 @@ libraries = {
 }
 
 [node name="hoja" type="MeshInstance3D" parent="Dionisi"]
-transform = Transform3D(0.129614, -0.0118922, 0.331069, -0.0164217, 0.786569, 0.00603201, -0.875546, -0.0165133, 0.0488977, -0.451674, 1.18603, -0.201023)
+transform = Transform3D(0.129614, -0.0118922, 0.331069, -0.0164217, 0.786569, 0.006032, -0.875546, -0.0165133, 0.0488977, -0.451674, 1.18603, -0.201023)
 mesh = SubResource("ArrayMesh_16jy0")
 skeleton = NodePath("")
 

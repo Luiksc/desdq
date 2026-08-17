@@ -36,8 +36,8 @@ var dialogos ={
 ],
 
 	"Funcionario":[
-		["Contratista","Buenos días cha karai, ahendu'i la hendy kavaju resa, ¿ajépa?
-(Buenos días señor, escuché que está dificil su situacion, ¿no es así?)"],
+		["Contratista","Buenos días che karai, ahendu'i la hendy kavaju resa, ¿ajépa?
+(Buenos días señor, escuché que está dificil su situación, ¿no es así?)"],
 		["Dionisio","Mba'éichapa, Añete upéva..
 (Qué tal, es cierto...,)"],
 		["Contratista","Che cheréra Antonio ha agueru peteĩ propuesta.
