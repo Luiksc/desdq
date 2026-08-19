@@ -3473,6 +3473,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_pnl60")]
+visible = false
 
 [node name="GridMap2" type="GridMap" parent="."]
 mesh_library = ExtResource("3_sd5vc")
@@ -3529,8 +3530,8 @@ anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_top = -1260.58
-offset_bottom = -1260.58
+offset_top = -1217.25
+offset_bottom = -1217.25
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -3542,8 +3543,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1289.0
-offset_right = 30.0
-offset_bottom = -1284.0
+offset_right = 102.0
+offset_bottom = -1236.96
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)
@@ -3561,8 +3562,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 262.0
 offset_top = 41.0
-offset_right = -286.0
-offset_bottom = -55.0
+offset_right = -214.0
+offset_bottom = -7.95996
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1e-05, 1e-05)
@@ -3918,7 +3919,7 @@ libraries = {
 }
 
 [node name="hoja" type="MeshInstance3D" parent="Dionisi"]
-transform = Transform3D(0.129614, -0.0118922, 0.331069, -0.0164217, 0.786569, 0.006032, -0.875546, -0.0165133, 0.0488977, -0.451674, 1.18603, -0.201023)
+transform = Transform3D(0.129614, -0.0118922, 0.331069, -0.0164217, 0.786569, 0.00603201, -0.875546, -0.0165133, 0.0488977, -0.451674, 1.18603, -0.201023)
 mesh = SubResource("ArrayMesh_16jy0")
 skeleton = NodePath("")
 

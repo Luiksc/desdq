@@ -7918,6 +7918,7 @@ light_color = Color(0.227488, 0.264354, 0.707408, 1)
 light_energy = 2.434
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_7aqqa")]
+visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_n31lf")

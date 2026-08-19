@@ -13,8 +13,8 @@ func _ready() -> void:
 			hijo.visible = es_celular
 
 	if es_celular:
-		# Fix Error 1: reintenta hasta 10 frames para que la cámara registre su grupo
-		for _i in range(10):
+		# Reintenta hasta 3 frames para que la cámara registre su grupo
+		for _i in range(3):
 			await get_tree().process_frame
 			if get_tree().get_nodes_in_group("camara_pivot").size() > 0:
 				break
@@ -29,18 +29,8 @@ func _activar_camara_tactil() -> void:
 		push_warning("Ui_celular: No se encontró ningún nodo en el grupo 'camara_pivot'.")
 
 
-# Fix Error 11: detecta también el AnimatedSprite2D "interaccion2" del DialogSystem
-func _label_continuar_visible() -> bool:
-	var sprite = DialogSystem.get_node_or_null("interaccion2")
-	if sprite and sprite.visible:
-		return true
-	var escena = get_tree().current_scene
-	if not is_instance_valid(escena):
-		return false
-	for nodo in escena.find_children("*", "Label", true, false):
-		if nodo is Label and nodo.visible and "[E] para continuar" in nodo.text:
-			return true
-	return false
+# La acción "interaccion" en pantalla táctil es gestionada directamente
+# por TouchScreenButton6. No se necesita inyección manual de InputEventAction.
 
 
 # Fix Error 4: oculta/muestra solo los TouchScreenButton hijos, no el CanvasLayer entero
@@ -64,14 +54,11 @@ func _input(event: InputEvent) -> void:
 	if not es_celular:
 		return
 
+	# Solo gestiona el avance de diálogo con toque en pantalla.
+	# La acción "interaccion" fuera del diálogo es gestionada
+	# directamente por TouchScreenButton6, sin inyección manual
+	# (evita el doble disparo que generaba retraso e inconsistencias).
 	if event is InputEventScreenTouch and event.pressed:
 		if DialogSystem.estar_mostrando():
 			DialogSystem.neixt()
 			get_viewport().set_input_as_handled()
-		elif _label_continuar_visible():
-			var accion := InputEventAction.new()
-			accion.action = "interaccion"
-			accion.pressed = true
-			# Fix Error 5: set_input_as_handled antes de parse_input_event
-			get_viewport().set_input_as_handled()
-			Input.parse_input_event(accion)

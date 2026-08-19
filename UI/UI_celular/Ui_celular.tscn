@@ -61,7 +61,7 @@ action = "saltar"
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
 texture_filter = 1
 position = Vector2(793, 480)
-scale = Vector2(3.5, 3.46875)
+scale = Vector2(3.5, 3.5)
 texture_normal = ExtResource("11_tclvq")
 texture_pressed = ExtResource("12_nmyp5")
 action = "interaccion"
