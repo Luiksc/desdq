@@ -40,18 +40,21 @@ var dialogos ={
 
 
 	"Funcionario":[
-		["Funcionario Municipal","Buenos dias señor, soy un funcionario público."], #, he venido para avisarle que sus tierras han sido compradas por una empresa privada.
-		["Dionisio","Mba'eichapa nde ko'ẽ chera'y.
+		["Funcionario Municipal","Buenos días señor, soy un funcionario público."], #, he venido para avisarle que sus tierras han sido compradas por una empresa privada.
+		["Dionisio","Mba'éichapa nde ko'ẽ chera'y.
 (Buenos dias hijo)"],
-		["Funcionario","Agueru ndéve petei notificación municipalidad guive.
+		["Funcionario","Agueru ndéve peteĩ notificación municipalidad guive.
 (Le traigo una notificación de la municipalidad."],
 		["Funcionario","Ko'a yvy ndaha'evéima nemba'e"]
 	],
 
 	"funcionario2":[
-		["Dionisio","MBA'ERE PIKO?"],
-		["Funcionanrio","Petei empresa ogueru ko kuatia"],
-		["Funcionario","Ambyasy  ne situacion rehe..."]
+		["Dionisio","MBA'ÉRE PIKO?
+(¿POR QUÉ?)"],
+		["Funcionanrio","Peteĩ empresa ogueru ko kuatia.
+(Una empresa presentó estos documentos.)"],
+		["Funcionario","Ambyasy  ne situación rehe...
+(Lamento su situación)"]
 	],
 	"ipochy":[
 		["Dionisio","Ha ore piko mba'e...

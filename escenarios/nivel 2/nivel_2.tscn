@@ -5744,10 +5744,10 @@ texture = ExtResource("9_qm877")
 
 [node name="Label" type="Label" parent="Control/Sprite2D"]
 texture_filter = 1
-offset_left = -129.0
-offset_top = -61.0
-offset_right = 104.0
-offset_bottom = -51.0
+offset_left = -151.639
+offset_top = -64.4407
+offset_right = 81.3606
+offset_bottom = -54.4407
 scale = Vector2(1.135, 2.16)
 text = "Bajar sacos de yerbe 0/3"
 label_settings = SubResource("LabelSettings_s84nh")
@@ -5755,10 +5755,10 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Control/Sprite2D"]
 texture_filter = 1
-offset_left = -125.0
-offset_top = -34.0
-offset_right = 108.0
-offset_bottom = -26.0
+offset_left = -147.639
+offset_top = -37.4406
+offset_right = 85.3606
+offset_bottom = -29.4406
 scale = Vector2(1.09, 2.16)
 text = "poner a secar la yerba 0/3"
 label_settings = SubResource("LabelSettings_s84nh")
@@ -5766,10 +5766,10 @@ horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="Control/Sprite2D"]
 texture_filter = 1
-offset_left = -125.0
-offset_top = -6.0
-offset_right = 108.0
-offset_bottom = 2.0
+offset_left = -147.639
+offset_top = -9.44065
+offset_right = 85.3606
+offset_bottom = -1.44065
 scale = Vector2(1.09, 2.16)
 text = "Comprar harina "
 label_settings = SubResource("LabelSettings_s84nh")
@@ -7289,6 +7289,7 @@ shape = SubResource("BoxShape3D_yarf4")
 
 [node name="bordes1" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -130)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bordes1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 6, -3.8)
@@ -8755,11 +8756,9 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.428645, 26.0026, 25.300
 
 [node name="sorpresa2" parent="." instance=ExtResource("28_jobur")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 27.5714, 2.0026, -70.6992)
-visible = false
 
 [node name="sorpresa3" parent="." instance=ExtResource("28_jobur")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -63.4286, 3.0026, -68.1992)
-visible = false
 
 [node name="inicio" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.4341, 1.16402, -34.1221)

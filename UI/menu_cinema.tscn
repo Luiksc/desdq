@@ -1,4 +1,4 @@
-[gd_scene load_steps=213 format=4 uid="uid://cjse10p2bv8ca"]
+[gd_scene load_steps=225 format=4 uid="uid://cjse10p2bv8ca"]
 
 [ext_resource type="Script" path="res://UI/menu_cinema.gd" id="1_ex02h"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_hmk0p"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://occo4hjiplj5" path="res://UI/salir_boton.png" id="7_qbni4"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="11_41vv7"]
 [ext_resource type="AudioStream" uid="uid://c7dldail7kvsf" path="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3" id="13_r51ts"]
+[ext_resource type="AudioStream" uid="uid://cvbm5n610vk0p" path="res://audios/Top 50 Laser sound effects (No Copyright) (mp3cut.net).mp3" id="14_lasau"]
 [ext_resource type="Texture2D" uid="uid://d064vyx4v5v23" path="res://modelos/Don_menú/don menú_0.png" id="20_euqvo"]
 [ext_resource type="Texture2D" uid="uid://b42v8neyl4n80" path="res://modelos/Don_menú/don menú_1.png" id="21_oqp8l"]
 [ext_resource type="Texture2D" uid="uid://iwcyn3h1ws3m" path="res://modelos/Don_menú/don menú_2.png" id="22_iciox"]
@@ -43,6 +44,14 @@
 [ext_resource type="Texture2D" uid="uid://dcvg2jpcfy258" path="res://modelos/objetos/caso karau/libro_1.png" id="48_ac8v5"]
 [ext_resource type="Texture2D" uid="uid://dchhe1iyrj1ag" path="res://modelos/objetos/caso karau/libro_2.png" id="49_vcm55"]
 [ext_resource type="PackedScene" uid="uid://biymrd4vrgub7" path="res://modelos/objetos/terere/terere (1).glb" id="51_u78t7"]
+[ext_resource type="Texture2D" uid="uid://bmuhvcyfd3g76" path="res://UI/Aparece_guitarra/0.png" id="54_m3kyw"]
+[ext_resource type="Texture2D" uid="uid://cnddpnve1e1sr" path="res://UI/Aparece_guitarra/1.png" id="55_sim8c"]
+[ext_resource type="Texture2D" uid="uid://cjp6q3dc1uqms" path="res://UI/Aparece_guitarra/1.3.png" id="56_qfq1u"]
+[ext_resource type="Texture2D" uid="uid://drdndlggiuu5q" path="res://UI/Aparece_guitarra/2.png" id="57_fvc5j"]
+[ext_resource type="Texture2D" uid="uid://cq6qfjann5sq7" path="res://UI/Aparece_guitarra/2.1.png" id="58_0wy41"]
+[ext_resource type="Texture2D" uid="uid://roh6vigrwfya" path="res://UI/Aparece_guitarra/2.2.png" id="59_1uxys"]
+[ext_resource type="Texture2D" uid="uid://daos4sqlf862g" path="res://UI/Aparece_guitarra/3.png" id="60_3s643"]
+[ext_resource type="Texture2D" uid="uid://boe5lycbxibyf" path="res://UI/Aparece_guitarra/4.png" id="61_ums65"]
 [ext_resource type="Texture2D" uid="uid://dttv7s2ydgbm" path="res://modelos/objetos/guitarra/Guitarra_0.png" id="64_4ggrv"]
 [ext_resource type="Texture2D" uid="uid://ojqoa3ml32cj" path="res://modelos/objetos/guitarra/Guitarra_1.png" id="65_rabf7"]
 [ext_resource type="Texture2D" uid="uid://1wkceelh115s" path="res://modelos/objetos/guitarra/Guitarra_2.png" id="66_lbyw7"]
@@ -2707,6 +2716,43 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_sf6pe"]
 size = Vector3(1.4303, 1, 0.909668)
 
+[sub_resource type="Animation" id="Animation_dfprq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cosmico:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("54_m3kyw")]
+}
+
+[sub_resource type="Animation" id="Animation_tr4wn"]
+resource_name = "aparece"
+length = 0.47
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cosmico:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.22498, 0.273606, 0.333333, 0.366667, 0.414167, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [ExtResource("54_m3kyw"), ExtResource("55_sim8c"), ExtResource("56_qfq1u"), ExtResource("57_fvc5j"), ExtResource("58_0wy41"), ExtResource("59_1uxys"), ExtResource("60_3s643"), ExtResource("61_ums65")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ctsih"]
+_data = {
+"RESET": SubResource("Animation_dfprq"),
+"aparece": SubResource("Animation_tr4wn")
+}
+
 [node name="n1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00256729, -1.90735e-06, 0.0918961)
 script = ExtResource("1_ex02h")
@@ -2902,6 +2948,10 @@ data = {
 "cells": PackedInt32Array(-65512, 65493, 9, -65521, 65492, 9, -65519, 65492, 11, -65523, 65492, 9, -65503, 65487, 11, -65505, 65478, 11, -65505, 65479, 11, -65519, 65485, 11, 36, 65496, 1441803, -65502, 65499, 1441803, -65501, 65501, 1441803, -65510, 65501, 1441803, 29, 65500, 1441801, 22, 65490, 1441801, 37, 65494, 1441801, 22, 65486, 1441801)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Top50LaserSoundEffects(noCopyright)(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_lasau")
+volume_db = -8.043
 
 [node name="pajaros_ambiente" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("109_pqus4")
@@ -3219,6 +3269,17 @@ shape = SubResource("BoxShape3D_sf6pe")
 
 [node name="blockbench_export" parent="." instance=ExtResource("51_u78t7")]
 transform = Transform3D(0.828099, 0, 0.560581, 0, 1, 0, -0.560581, 0, 0.828099, 32.0104, 0.261349, -76.3254)
+
+[node name="cosmico_anima" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ctsih")
+}
+
+[node name="cosmico" type="Sprite3D" parent="."]
+transform = Transform3D(-1.29619, 0, 1.58381, 0, 2.08752, 0, -2.24507, 0, -0.914412, 33.5537, 1.29748, -74.5856)
+billboard = 1
+texture_filter = 0
+texture = ExtResource("54_m3kyw")
 
 [connection signal="mouse_entered" from="Control/Button" to="Control/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Button" to="Control/Button" method="_on_mouse_exited"]

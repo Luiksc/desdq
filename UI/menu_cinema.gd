@@ -27,7 +27,16 @@ var en_seleccion = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	$mbaraka3.hide()
 	$"Control/ã/AnimationPlayer".play("RESET")
+	await get_tree().create_timer(1.3).timeout
+	$"Top50LaserSoundEffects(noCopyright)(mp3Cut_net)".play()
+	$cosmico_anima.play("aparece")
+	
+	await  $cosmico_anima.animation_finished
+	$mbaraka3.show()
+	$cosmico_anima.play_backwards("aparece")
 	libro_mateo.input_ray_pickable = false
 	libro_mensu.input_ray_pickable = false
 	libro_karau.input_ray_pickable = false

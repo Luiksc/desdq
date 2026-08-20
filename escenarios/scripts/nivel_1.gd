@@ -24,6 +24,7 @@ extends Node3D
 
 var jugom_anima_actio = true
 var jgd_omamo : bool = false
+var muriendo: bool = false  # bloquea llamadas concurrentes a jugador_omano()
 var mykure_velocidad: float = 10
 var jugador_puede_interac: bool = false
 var mykure_activu: bool = false
@@ -226,6 +227,10 @@ func _on_final_body_entered(body: Node3D) -> void:
 		get_tree().change_scene_to_file("res://escenarios/n_1_cinema_final.tscn")
 		finiquitable = true
 func jugador_omano():
+	# Si ya está muriendo o ya murió, bloqueamos cualquier llamada repetida
+	if muriendo or jgd_omamo:
+		return
+	muriendo = true
 	jugador.puede_moverse = false
 	$Control/CanvasLayer.hide()
 	daña.play()
@@ -236,21 +241,41 @@ func jugador_omano():
 	
 	await transicion.animation_finished
 	
-	jgd_omamo=true
+	jgd_omamo = true
+	muriendo = false
 	perder.show()
 	interac.show()
 	$Control/Label.show()
 	
 	
 func reset():
+	if not jgd_omamo:
+		return
+	
+	jgd_omamo = false
+	muriendo = false
 	perder.hide()
 	interac.hide()
 	$Control/Label.hide()
 	$Control/CanvasLayer.show()
-	jgd_omamo=false
+	
+	# Reposicionar jugador y limpiar velocidad residual
 	jugador.global_position = checkpoint.ultima_posicion
+	if jugador is CharacterBody3D:
+		jugador.velocity = Vector3.ZERO
+	
+	# Reiniciar enemigos para evitar spawn-kill
+	if mykure and mykure.has_method("reinicio"):
+		mykure.reinicio()
+	if has_node("enemigos/mykure2") and $"enemigos/mykure2".has_method("reinicio"):
+		$"enemigos/mykure2".reinicio()
+	if has_node("enemigos/mykure3") and $"enemigos/mykure3".has_method("reinicio"):
+		$"enemigos/mykure3".reinicio()
+	
 	transicion.play("salida")
-	jugador.puede_moverse=true
+	await transicion.animation_finished
+	
+	jugador.puede_moverse = true
 	ambiente.play()
 	ambiente2.play()
 	musica.play()
@@ -258,11 +283,13 @@ func reset():
 
 
 func _on_zonademuerte_body_entered(body: Node3D) -> void:
-	jugador_omano()
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
+		jugador_omano()
 
 
 func _on_zonademuerte_2_body_entered(body: Node3D) -> void:
-	jugador_omano()
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
+		jugador_omano()
 func delfi_okalkula(id_del_npc: String) -> void:
 	npc_actual = id_del_npc
 	inic_dialo()

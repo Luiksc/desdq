@@ -376,9 +376,13 @@ func _on_llevar_2_body_exited(body: Node3D) -> void:
 			puede_recoger2=false
 
 func _on_atrapado_body_entered(body: Node3D) -> void:
-	oipoo()
+	if body.is_in_group("jugon") or body.is_in_group("jugador_global"):
+		oipoo()
 	
 func oipoo():
+	# Si ya está en estado de derrota, bloqueamos la llamada duplicada
+	if omano:
+		return
 	$"SonidoDeLátigoLatigazo1-EfectoDeSonido".play()
 	omano = true
 	kapanga2.velocidad = 0

@@ -25,7 +25,6 @@ sky_material = SubResource("PanoramaSkyMaterial_mfj3p")
 [sub_resource type="Environment" id="Environment_n31lf"]
 background_mode = 2
 sky = SubResource("Sky_knnd6")
-fog_enabled = true
 fog_light_color = Color(0.216638, 0.36117, 0.590778, 1)
 fog_light_energy = 0.1
 fog_density = 0.0547
@@ -437,7 +436,6 @@ transform = Transform3D(4.9764, 0, 0, 0, 6.9069, 0, 0, 0, 5.3625, 21, 0, 9)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 1.38278, 193)
 
 [node name="DialogSystem" parent="." instance=ExtResource("6_3njvc")]
-visible = false
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0

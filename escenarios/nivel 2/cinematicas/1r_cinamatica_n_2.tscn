@@ -5077,7 +5077,7 @@ autoplay = true
 visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 14.438, 4.685, -45.672)
+transform = Transform3D(0.695973, -0.183919, 0.694115, 0.0684749, 0.979236, 0.190809, -0.714796, -0.0852684, 0.694115, 14.438, 4.685, -45.672)
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("3_r2301")
@@ -5203,7 +5203,7 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -2)
 
 [node name="posi_camara2" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20581, 2.95365, -41.866)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13252, 3.84348, -42.2021)
 
 [node name="inicial_posi" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.438, 4.68506, -45.672)
