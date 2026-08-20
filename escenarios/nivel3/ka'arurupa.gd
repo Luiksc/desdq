@@ -236,7 +236,7 @@ func reset_por_yuyo(id_yuyo: String) -> void:
 	if control_camara != null:
 		if control_camara.has_method("opa_combo"):
 			control_camara.opa_combo()
-			$EspantaLabios.play()
+			
 		else:
 			control_camara.cinematica = false
 	

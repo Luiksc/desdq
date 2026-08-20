@@ -202,19 +202,24 @@ func procesar_combo():
 			# Traducir alias táctil a la acción combo que los mymbas esperan
 			var accion_combo = alias_tactil.get(accion, accion)
 			if accion_combo in teclas_faltantes:
+				# Tecla correcta (vía alias o directa como accion_combo)
 				teclas_faltantes.erase(accion_combo)
 				if ui_combo_nodos.has(accion_combo):
 					ui_combo_nodos[accion_combo].frame = 1
-			elif accion in teclas_faltantes:
-				# Acción directa (sin alias) también válida
+				break  # Salir del for: ya procesamos esta tecla
+			elif accion_combo != accion and accion in teclas_faltantes:
+				# Acción directa (sin alias) también válida, solo si no fue cubierta antes
 				teclas_faltantes.erase(accion)
 				if ui_combo_nodos.has(accion):
 					ui_combo_nodos[accion].frame = 1
-			else:
+				break  # Salir del for: ya procesamos esta tecla
+			elif accion in ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar"]:
+				# Solo penalizar si la tecla es una acción "real" de combo (no alias ni teclas de movimiento libre)
 				emit_signal("combo")
 				if mymba_en_combo != null and "SPEED" in mymba_en_combo:
 					$"../UndertaleDamageSoundEffect(mp3Cut_net)".play()
 					mymba_en_combo.SPEED += 2
+				break  # Salir del for para no acumular penalizaciones
 	if teclas_faltantes.is_empty():
 		# Combo completado exitosamente
 		puede_moverse = true
