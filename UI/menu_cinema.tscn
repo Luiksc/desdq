@@ -1,4 +1,4 @@
-[gd_scene load_steps=225 format=4 uid="uid://cjse10p2bv8ca"]
+[gd_scene load_steps=232 format=4 uid="uid://cjse10p2bv8ca"]
 
 [ext_resource type="Script" path="res://UI/menu_cinema.gd" id="1_ex02h"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_hmk0p"]
@@ -10,7 +10,9 @@
 [ext_resource type="Script" path="res://UI/pagina_web_boton.gd" id="7_capjk"]
 [ext_resource type="Texture2D" uid="uid://boxijwiuwrqx3" path="res://UI/web_boton.png" id="7_j5o76"]
 [ext_resource type="Texture2D" uid="uid://occo4hjiplj5" path="res://UI/salir_boton.png" id="7_qbni4"]
+[ext_resource type="Texture2D" uid="uid://b26km0dbyuxj8" path="res://UI/volver_boton.png" id="11_06d1i"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="11_41vv7"]
+[ext_resource type="Script" path="res://UI/volver.gd" id="11_qcaog"]
 [ext_resource type="AudioStream" uid="uid://c7dldail7kvsf" path="res://audios/sonidos_ambiente/Canto da Cigarra - Cicadas song (Cicadoidea).mp3" id="13_r51ts"]
 [ext_resource type="AudioStream" uid="uid://cvbm5n610vk0p" path="res://audios/Top 50 Laser sound effects (No Copyright) (mp3cut.net).mp3" id="14_lasau"]
 [ext_resource type="Texture2D" uid="uid://d064vyx4v5v23" path="res://modelos/Don_menú/don menú_0.png" id="20_euqvo"]
@@ -38,8 +40,8 @@
 [ext_resource type="Texture2D" uid="uid://bdegkmmwy41y4" path="res://modelos/objetos/caso mateo gamarra/libro_mateo_1.png" id="42_utn2g"]
 [ext_resource type="Texture2D" uid="uid://u05tm83r2lne" path="res://modelos/objetos/caso mateo gamarra/libro_mateo_2.png" id="43_p7p02"]
 [ext_resource type="Texture2D" uid="uid://bk5ig4xd5pbe5" path="res://modelos/objetos/caso el mensu/el mensu_0.png" id="44_ccq48"]
-[ext_resource type="Texture2D" uid="uid://c2va8okvxf70m" path="res://modelos/objetos/caso el mensu/el mensu_1.png" id="45_juq51"]
-[ext_resource type="Texture2D" uid="uid://dod7o17qf84wn" path="res://modelos/objetos/caso el mensu/el mensu_2.png" id="46_e3cjy"]
+[ext_resource type="Texture2D" uid="uid://dj6axeobtwguj" path="res://modelos/objetos/caso el mensu/el mensu_1.png" id="45_juq51"]
+[ext_resource type="Texture2D" uid="uid://boynpiai11f6o" path="res://modelos/objetos/caso el mensu/el mensu_2.png" id="46_e3cjy"]
 [ext_resource type="Texture2D" uid="uid://c3i1506rim1vs" path="res://modelos/objetos/caso karau/libro_0.png" id="47_uqq60"]
 [ext_resource type="Texture2D" uid="uid://dcvg2jpcfy258" path="res://modelos/objetos/caso karau/libro_1.png" id="48_ac8v5"]
 [ext_resource type="Texture2D" uid="uid://dchhe1iyrj1ag" path="res://modelos/objetos/caso karau/libro_2.png" id="49_vcm55"]
@@ -539,6 +541,60 @@ _data = {
 "desaparece": SubResource("Animation_mmyjn")
 }
 
+[sub_resource type="Animation" id="Animation_c8g6f"]
+resource_name = "aparece"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wohnk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6vq2w"]
+resource_name = "desaparece"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ljcsv"]
+_data = {
+"RESET": SubResource("Animation_wohnk"),
+"aparece": SubResource("Animation_c8g6f"),
+"desaparece": SubResource("Animation_6vq2w")
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j85rq"]
 resource_name = "material_0"
 transparency = 2
@@ -881,9 +937,27 @@ tracks/0/keys = {
 "values": [Vector3(-1.48842, -0.7889, 0.262616)]
 }
 
+[sub_resource type="Animation" id="Animation_hmuae"]
+resource_name = "está"
+length = 32.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7, 21.7333, 32.0667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.5, 2.1, -72.231), Vector3(29.86, 2.19, -72.231), Vector3(29.6571, 2.19152, -72.2312)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oupfh"]
 _data = {
 "RESET": SubResource("Animation_enm81"),
+"está": SubResource("Animation_hmuae"),
 "karau_acerca": SubResource("Animation_0hojm"),
 "mateo_acerca": SubResource("Animation_d4h0y"),
 "mensu_acerca": SubResource("Animation_vhtt6"),
@@ -2920,6 +2994,33 @@ libraries = {
 "": SubResource("AnimationLibrary_gfmnp")
 }
 
+[node name="volver" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.077
+anchor_top = 0.01
+anchor_right = 0.182
+anchor_bottom = 0.187
+offset_left = -0.314011
+offset_top = -0.0185599
+offset_right = -33.924
+offset_bottom = -32.5471
+scale = Vector2(1.42561, 1.43823)
+flat = true
+script = ExtResource("11_qcaog")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/volver"]
+libraries = {
+"": SubResource("AnimationLibrary_ljcsv")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/volver"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(40.5, 36.5)
+scale = Vector2(1.23438, 1.14063)
+texture = ExtResource("11_06d1i")
+
 [node name="gridmaps" type="Node" parent="."]
 
 [node name="GridMap_general" type="GridMap" parent="gridmaps"]
@@ -3290,6 +3391,9 @@ texture = ExtResource("54_m3kyw")
 [connection signal="mouse_entered" from="Control/salir" to="Control/salir" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/salir" to="Control/salir" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/salir" to="." method="_on_salir_pressed"]
+[connection signal="mouse_entered" from="Control/volver" to="Control/volver" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/volver" to="Control/volver" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/volver" to="." method="_on_volver_pressed"]
 [connection signal="mouse_entered" from="StaticBody3D" to="." method="_on_mateo_mouse_entered"]
 [connection signal="mouse_exited" from="StaticBody3D" to="." method="_on_mateo_mouse_exited"]
 [connection signal="mouse_entered" from="StaticBody3D2" to="." method="_on_mensu_mouse_entered"]

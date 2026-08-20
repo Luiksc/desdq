@@ -1,4 +1,4 @@
-[gd_scene load_steps=215 format=4 uid="uid://bqn6jif5g1ppb"]
+[gd_scene load_steps=219 format=4 uid="uid://bqn6jif5g1ppb"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematicas/n_3_cinema_final.gd" id="1_xwnb2"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_d7v4s"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://c1yhtrxgqusix" path="res://modelos/karau/karai_conversion_10.png" id="15_s2thp"]
 [ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="16_2wyv2"]
 [ext_resource type="Texture2D" uid="uid://biyf22wg1yjn5" path="res://modelos/karau/karai_conversion_11.png" id="16_3355g"]
+[ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="16_fvds5"]
 [ext_resource type="Texture2D" uid="uid://ccqbtrkusq36f" path="res://modelos/karau/karai_conversion_12.png" id="17_1ieto"]
 [ext_resource type="Texture2D" uid="uid://b16ncydt4slxc" path="res://modelos/karau/karai_conversion_13.png" id="18_1mewg"]
 [ext_resource type="Texture2D" uid="uid://dttrlxne6i7sd" path="res://modelos/karau/karai_conversion_14.png" id="19_gidc3"]
@@ -229,6 +230,28 @@ _data = {
 "aparece": SubResource("Animation_hjtks"),
 "desliza": SubResource("Animation_k3gdq")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hfi6"]
+atlas = ExtResource("16_fvds5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfney"]
+atlas = ExtResource("16_fvds5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivyrs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hfi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfney")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_t0a0o"]
 length = 0.001
@@ -3065,6 +3088,7 @@ grow_vertical = 2
 script = ExtResource("9_i62bm")
 
 [node name="ColorRect" type="ColorRect" parent="Control/final2"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3096,6 +3120,22 @@ metadata/_edit_use_anchors_ = true
 libraries = {
 "": SubResource("AnimationLibrary_p6c81")
 }
+
+[node name="siguiente" type="Button" parent="Control/final2"]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 506.0
+offset_right = 1034.0
+offset_bottom = 578.0
+scale = Vector2(1.00003, 1.29104)
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/final2/siguiente"]
+texture_filter = 1
+position = Vector2(41.999, 37.1793)
+scale = Vector2(2.92179, 2.2753)
+sprite_frames = SubResource("SpriteFrames_ivyrs")
+animation = &"new_animation"
 
 [node name="Button" type="Button" parent="Control/final2"]
 texture_filter = 1
@@ -3155,6 +3195,7 @@ text = "[E] para continuar
 label_settings = SubResource("LabelSettings_kilgf")
 
 [node name="ã" type="Control" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3576,6 +3617,7 @@ libraries = {
 "": SubResource("AnimationLibrary_cydti")
 }
 
+[connection signal="pressed" from="Control/final2/siguiente" to="." method="_on_button_2_pressed"]
 [connection signal="mouse_entered" from="Control/final2/Button" to="Control/final2" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Control/final2/Button" to="Control/final2" method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Control/final2/Button" to="Control/final2" method="_on_button_pressed"]

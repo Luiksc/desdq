@@ -44,8 +44,8 @@ wait_time = 5.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 stream = ExtResource("21_hah6c")
 attenuation_model = 2
-volume_db = 5.582
-unit_size = 7.0
+volume_db = 33.82
+unit_size = 4.58
 
 [node name="blockbench_export" parent="." instance=ExtResource("5_edm1c")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)

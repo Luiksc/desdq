@@ -16,7 +16,7 @@ run/main_scene="res://UI/menu_cinema.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.115193, 0.134025, 0.219034, 1)
 boot_splash/show_image=false
-config/icon="res://logo relatos ocultos.png"
+config/icon="res://RelOcs_Icon.png"
 addons/rakugo/game_version=1.0
 addons/rakugo/narrator_name="narrator"
 addons/rakugo/debug=false
@@ -152,6 +152,11 @@ left={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
 
 [rendering]
 

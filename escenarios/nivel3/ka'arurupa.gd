@@ -272,7 +272,8 @@ func _process(delta: float) -> void:
 	if ikatu_oho:
 		ohota_primio()
 	if perder:
-		if Input.is_action_just_pressed("interaccion"):
+		if Input.is_action_just_pressed("interaccion") or Input.is_action_just_pressed("clicki"):
+			$"8BitCoinSoundEffect".play()
 			perder = false
 			jugador.global_position = posicion_inicial_jugador
 			jugador.velocity = Vector3.ZERO

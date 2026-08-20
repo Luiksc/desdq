@@ -1196,8 +1196,8 @@ wait_time = 5.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 stream = ExtResource("21_a4wlg")
 attenuation_model = 2
-volume_db = 5.582
-unit_size = 7.0
+volume_db = 29.949
+unit_size = 4.13
 autoplay = true
 
 [node name="blockbench_export" type="Node3D" parent="."]

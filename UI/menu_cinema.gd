@@ -11,6 +11,10 @@ extends Node3D
 @onready var anima_libro2 = $caso_mensu/AnimationPlayer
 @onready var anima_libro3 = $caso_karau/AnimationPlayer
 
+@onready var boton_volver = $Control/volver
+@onready var boton_ini = $Control/Button
+@onready var boton_pagina = $Control/pagina_web
+@onready var boton_salir = $Control/salir
 
 @onready var transicion = $"Control/ã/AnimationPlayer"
 @onready var anima_camara = $Camera3D/AnimationPlayer
@@ -28,10 +32,15 @@ var en_seleccion = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
+	boton_ini.hide()
+	boton_pagina.hide()
+	boton_salir.hide()
+	boton_volver.hide()
 	$mbaraka3.hide()
 	$"Control/ã/AnimationPlayer".play("RESET")
 	await get_tree().create_timer(1.3).timeout
 	$"Top50LaserSoundEffects(noCopyright)(mp3Cut_net)".play()
+	
 	$cosmico_anima.play("aparece")
 	
 	await  $cosmico_anima.animation_finished
@@ -49,6 +58,11 @@ func _ready() -> void:
 	await anima_don.animation_finished
 	titulo.play("aparece")
 	await titulo.animation_finished
+	boton_ini.show()
+	boton_pagina.show()
+	boton_salir.show()
+	boton_volver.show()
+	$Camera3D/AnimationPlayer.play("está")
 	anima_boton.play("aparece")
 	anima_boton2.play("aparece")
 	anima_boton3.play("aparece")
@@ -75,6 +89,9 @@ func _process( float) -> void:
 		_abrir_nivel(3)
 
 func _abrir_nivel(nivel: int) -> void:
+	$Control/volver/AnimationPlayer.play("desaparece")
+	await $Control/volver/AnimationPlayer.animation_finished 
+	boton_volver.hide()
 	procesando_click = true
 	clicki1 = false
 	clicki2 = false
@@ -107,6 +124,8 @@ func _abrir_nivel(nivel: int) -> void:
 
 func _volver_al_inicio() -> void:
 	en_seleccion = false
+	$Control/volver/AnimationPlayer.play("desaparece")
+	boton_volver.hide()
 	libro_mateo.input_ray_pickable = false
 	libro_mensu.input_ray_pickable = false
 	libro_karau.input_ray_pickable = false
@@ -117,8 +136,11 @@ func _volver_al_inicio() -> void:
 	anima_boton2.play("aparece")
 	anima_boton3.play("aparece")
 	titulo.play("aparece")
+	$Camera3D/AnimationPlayer.play("está")
+
 
 func _on_button_pressed() -> void:
+	
 	en_seleccion = true
 	titulo.play("RESET")
 	anima_boton.play("RESET")
@@ -127,6 +149,8 @@ func _on_button_pressed() -> void:
 	boton.hide()
 	anima_camara.play("seleccion")
 	await anima_camara.animation_finished
+	boton_volver.show()
+	$Control/volver/AnimationPlayer.play("aparece")
 	libro_mateo.input_ray_pickable = true
 	libro_mensu.input_ray_pickable = true
 	libro_karau.input_ray_pickable = true
@@ -169,10 +193,11 @@ func _on_karau_mouse_exited() -> void:
 		return
 	anima_libro3.play("desseleccion")
 
-
 func _on_salir_pressed() -> void:
 	get_tree().quit()
 
-
 func _on_pagina_web_pressed() -> void:
 	OS.shell_open("https://miguelrafaelgimenez-ops.github.io/Relatos-Oculto/")
+
+func _on_volver_pressed() -> void:
+	_volver_al_inicio()

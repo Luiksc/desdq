@@ -2,15 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qtt7n0qci8jq"
+uid="uid://bpolw43ta0eb6"
 path.s3tc="res://.godot/imported/terere (1)_4.png-35c7381a6997954d8ff2a45df923cace.s3tc.ctex"
 path.etc2="res://.godot/imported/terere (1)_4.png-35c7381a6997954d8ff2a45df923cace.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "f2f0cdac4f059a442dfe44e245d1065c"
 }
 
 [deps]

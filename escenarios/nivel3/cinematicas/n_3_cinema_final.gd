@@ -14,9 +14,12 @@ extends Node3D
 @onready var anima_boton = $Control/final2/Button/AnimationPlayer
 @onready var anima_qr = $Control/final2/Sprite2D/AnimationPlayer
 @onready var info = $Control/informacion
+@onready var e_siguiente = $Control/final2/siguiente
+@onready var anima_e_siguiente = $Control/final2/siguiente/AnimatedSprite2D
 var siguiente = false
 
 func _ready() -> void:
+	e_siguiente.hide()
 	$Control/seguir.hide()
 	fondo_carta.hide()
 	info.hide()
@@ -41,10 +44,11 @@ func _ready() -> void:
 	await anima_camara.animation_finished
 	karau_ave.hide()
 	ave_karau_vuela.show()
-
+	
 	anima_vuelo_ave.play("vuela")
 	ruta_vuelo.play("movimiento")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 	await get_tree().create_timer(3.0).timeout
 	transicion.play("aparece")
 	fondo_carta.show()
@@ -52,10 +56,13 @@ func _ready() -> void:
 	carta.play("desliza")
 	await carta.animation_finished
 	anima_boton.play("aparicion")
+	
 	await anima_boton.animation_finished
 	anima_qr.play("aparece")
 	info.show()
+	e_siguiente.show()
 	$Control/seguir.show()
+	
 	siguiente = true
 	
 	
@@ -64,8 +71,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	anima_e_siguiente.play("new_animation")
 	if siguiente:
 		if Input.is_action_just_pressed("interaccion"):
 			$"Control/ã/AnimationPlayer".play("entrafa")
 			await $"Control/ã/AnimationPlayer".animation_finished
 			get_tree().change_scene_to_file("res://UI/créditos.tscn")
+
+
+
+
+func _on_button_2_pressed() -> void:
+	$"Control/ã/AnimationPlayer".play("entrafa")
+	await $"Control/ã/AnimationPlayer".animation_finished
+	get_tree().change_scene_to_file("res://UI/créditos.tscn")

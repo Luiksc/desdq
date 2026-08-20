@@ -52,15 +52,15 @@ action = "left"
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(839, 273)
-scale = Vector2(5.54021, 5.35858)
+position = Vector2(801, 319)
+scale = Vector2(4.4375, 4.32733)
 texture_normal = ExtResource("9_uweqf")
 texture_pressed = ExtResource("10_ylj11")
 action = "saltar"
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(793, 480)
+position = Vector2(911, 485)
 scale = Vector2(3.5, 3.5)
 texture_normal = ExtResource("11_tclvq")
 texture_pressed = ExtResource("12_nmyp5")

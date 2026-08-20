@@ -1,7 +1,7 @@
 extends Camera3D
 
 @export var spring_arm : Node3D
-@export var lerp_power: float = 3 #velocidad de la camara hacia el punto
+@export var lerp_power: float = 6 #velocidad de la camara hacia el punto
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

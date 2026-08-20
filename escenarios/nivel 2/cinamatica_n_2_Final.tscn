@@ -1,4 +1,4 @@
-[gd_scene load_steps=459 format=4 uid="uid://v5qsj0tl4f2l"]
+[gd_scene load_steps=463 format=4 uid="uid://v5qsj0tl4f2l"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinamatica_n_2.gd" id="1_7po0y"]
 [ext_resource type="PackedScene" uid="uid://cm0ysn5kfaswi" path="res://modelos/objetos/Alto parana/cabaña/cabaña.glb" id="2_j7bes"]
@@ -43,6 +43,7 @@
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="40_4pcuv"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="41_j28iu"]
 [ext_resource type="Texture2D" uid="uid://d3tyw0dn5m18j" path="res://modelos/objetos/Alto parana/catre/Katre_0.png" id="42_34684"]
+[ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="42_r81wy"]
 [ext_resource type="Texture2D" uid="uid://c6og5scdexn7g" path="res://modelos/objetos/Alto parana/catre/Katre_1.png" id="43_s6v60"]
 [ext_resource type="Texture2D" uid="uid://c6kcwpp1nknx3" path="res://modelos/objetos/Alto parana/catre/Katre_2.png" id="44_hrp77"]
 [ext_resource type="Texture2D" uid="uid://b7yuwkccjno5v" path="res://modelos/objetos/Alto parana/catre/Katre_3.png" id="45_qneva"]
@@ -2237,6 +2238,28 @@ font = ExtResource("40_4pcuv")
 font_size = 21
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hfi6"]
+atlas = ExtResource("42_r81wy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfney"]
+atlas = ExtResource("42_r81wy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5oayw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hfi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfney")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 3.0
+}]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7n1q"]
 resource_name = "material_0"
@@ -5991,6 +6014,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_rgjiq")]
+visible = false
 
 [node name="GridMap2" type="GridMap" parent="."]
 mesh_library = ExtResource("4_7woiy")
@@ -6166,7 +6190,7 @@ libraries = {
 }
 
 [node name="marta" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -6.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.62348, -6.6)
 
 [node name="blockbench_export" type="Node3D" parent="marta"]
 
@@ -6385,6 +6409,21 @@ offset_bottom = 589.0
 text = "[E] para continuar
 "
 label_settings = SubResource("LabelSettings_6qqrj")
+
+[node name="siguiente" type="Button" parent="Control"]
+offset_left = 963.0
+offset_top = 441.0
+offset_right = 971.0
+offset_bottom = 449.0
+scale = Vector2(11.8797, 10.9099)
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/siguiente"]
+texture_filter = 1
+position = Vector2(4.20887, 4.67466)
+scale = Vector2(0.268948, 0.278361)
+sprite_frames = SubResource("SpriteFrames_5oayw")
+animation = &"new_animation"
 
 [node name="posi_camara" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5, -2)
@@ -7375,3 +7414,5 @@ autoplay = true
 stream = ExtResource("103_8klw5")
 volume_db = -15.826
 autoplay = true
+
+[connection signal="pressed" from="Control/siguiente" to="." method="_on_siguiente_pressed"]

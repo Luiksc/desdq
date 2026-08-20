@@ -50,6 +50,7 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Control/siguiente.hide()
 	seguir_boton.hide()
 	anima_qr.play("RESET")
 	anima_carta.play("RESET")
@@ -71,6 +72,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$Control/siguiente/AnimatedSprite2D.play("new_animation")
 	anima_delfi.play("oha'aro")
 	if ojeroky:
 		anima_jeroky.play("bailan")
@@ -134,8 +136,14 @@ func disparate():
 	anima_qr.play("aparece")
 	seguir_boton.show()
 	
-	
+	$Control/siguiente.show()
 	seguir = true
 	
 	
 	
+
+
+func _on_siguiente_pressed() -> void:
+	transicion.play("entrafa")
+	await transicion.animation_finished
+	get_tree().change_scene_to_file("res://UI/menu_selccion.tscn")

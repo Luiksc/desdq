@@ -1,4 +1,4 @@
-[gd_scene load_steps=417 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=418 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/ka'arurupa.gd" id="1_86ijx"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_hgq2t"]
@@ -98,6 +98,7 @@
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="81_f10x7"]
 [ext_resource type="PackedScene" uid="uid://c5fhir01qye0n" path="res://audios/musica_global.tscn" id="95_c02ee"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="96_uv3yb"]
+[ext_resource type="AudioStream" uid="uid://bi4k87ocdfv4" path="res://audios/8   Bit Coin SOUND Effect.mp3" id="98_5surx"]
 [ext_resource type="AudioStream" uid="uid://chr2xbkqifpt" path="res://audios/espanta_labios.mp3" id="98_qqkar"]
 [ext_resource type="AudioStream" uid="uid://w1h5npvgdfyv" path="res://audios/Undertale Damage Sound Effect (mp3cut.net).mp3" id="99_hrodh"]
 [ext_resource type="AudioStream" uid="uid://263c0tj8t3d" path="res://audios/Neipy_karau.mp3" id="99_ttjso"]
@@ -7215,6 +7216,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18125, 1.89063, 0)
 libraries = {
 "": SubResource("AnimationLibrary_2xmwe")
 }
+
+[node name="8BitCoinSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("98_5surx")
 
 [node name="EspantaLabios" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("98_qqkar")

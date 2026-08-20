@@ -2362,8 +2362,8 @@ wait_time = 5.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37947, 0)
 stream = ExtResource("21_q808c")
 attenuation_model = 2
-volume_db = 5.582
-unit_size = 7.0
+volume_db = 22.297
+unit_size = 4.59
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="detecta" to="." method="_on_area_3d_body_entered"]

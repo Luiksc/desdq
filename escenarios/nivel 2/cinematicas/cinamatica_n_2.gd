@@ -33,6 +33,7 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	$Control/siguiente.hide()
 	seguir.hide()
 	fondo_carat.hide()
 	transi.play("salida")
@@ -50,6 +51,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$Control/siguiente/AnimatedSprite2D.play("new_animation")
 	$cosa/Ulise/corpu2/pecho/AnimationPlayer.play("okemano")
 	$cosa/Rogelio/AnimationPlayer.play("okemano")
 	
@@ -83,6 +85,7 @@ func dialog_terminado() -> void:
 		await anima_boton.animation_finished
 		anima_qr.play("aparece")
 		seguir.show()
+		$Control/siguiente.show()
 		fino = true
 		return
 func inicia_dialoga(id_npc: String) -> void:
@@ -90,3 +93,7 @@ func inicia_dialoga(id_npc: String) -> void:
 	inic_dialo()
 	
 	
+
+
+func _on_siguiente_pressed() -> void:
+	get_tree().change_scene_to_file("res://UI/menu_selccion.tscn")

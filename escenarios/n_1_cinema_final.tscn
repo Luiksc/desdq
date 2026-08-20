@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=4 uid="uid://oop7axty4nm8"]
+[gd_scene load_steps=175 format=4 uid="uid://oop7axty4nm8"]
 
 [ext_resource type="Script" path="res://escenarios/n_1_cinema_final.gd" id="1_ssdqi"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_m0e4m"]
@@ -56,6 +56,7 @@
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="58_4efhy"]
 [ext_resource type="AudioStream" uid="uid://ogvi4vkp2wxm" path="res://audios/sonidos_ambiente/Sonidos del chaco. (mp3cut.net).mp3" id="59_2pp5e"]
 [ext_resource type="AudioStream" uid="uid://b6w3vjsjt1jer" path="res://audios/5-disparos.mp3" id="59_g5b2q"]
+[ext_resource type="Texture2D" uid="uid://bi4ns5egsuhb0" path="res://UI/UI_boton/[E].png" id="60_0ncew"]
 [ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/sonidos_ambiente/Sonidos del Chaco ambiente.mp3" id="60_2jgir"]
 [ext_resource type="AudioStream" uid="uid://bldraj880nhfk" path="res://audios/musica de nivel/Mateo-gamarra-Duo-Quintana-letra_yme.mp3" id="61_1sqjm"]
 [ext_resource type="AudioStream" uid="uid://rnfh0p7isxb7" path="res://audios/sápe.mp3" id="62_6vwja"]
@@ -2445,6 +2446,28 @@ font_size = 21
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hfi6"]
+atlas = ExtResource("60_0ncew")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfney"]
+atlas = ExtResource("60_0ncew")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_obj0w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hfi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfney")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 10.0
+}]
+
 [node name="n1" type="Node3D"]
 script = ExtResource("1_ssdqi")
 
@@ -2892,10 +2915,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -39.0
-offset_top = -83.0
-offset_right = -22.0
-offset_bottom = -83.0
+offset_left = 337.0
+offset_top = 29.0
+offset_right = 354.0
+offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -2950,7 +2973,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 3328.0
+offset_left = -2.0
+offset_right = 3326.0
 offset_bottom = 4096.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -2963,6 +2987,10 @@ libraries = {
 
 [node name="final" parent="Control" instance=ExtResource("58_3h5k6")]
 layout_mode = 1
+offset_left = -956.0
+offset_top = -5.0
+offset_right = -956.0
+offset_bottom = -5.0
 
 [node name="seguir" type="Label" parent="Control"]
 texture_filter = 1
@@ -2975,7 +3003,25 @@ text = "[E] para continuar
 "
 label_settings = SubResource("LabelSettings_5gldv")
 
+[node name="siguiente" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 963.0
+offset_top = 441.0
+offset_right = 971.0
+offset_bottom = 449.0
+scale = Vector2(11.8797, 10.9099)
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/siguiente"]
+texture_filter = 1
+position = Vector2(4.20887, 4.67466)
+scale = Vector2(0.268948, 0.278361)
+sprite_frames = SubResource("SpriteFrames_obj0w")
+animation = &"new_animation"
+
 [node name="Timer" type="Timer" parent="."]
 
 [node name="5-disparos" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("59_g5b2q")
+
+[connection signal="pressed" from="Control/siguiente" to="." method="_on_siguiente_pressed"]

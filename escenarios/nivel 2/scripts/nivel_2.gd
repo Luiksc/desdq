@@ -211,6 +211,7 @@ func _process(delta: float) -> void:
 		indicador3.show()
 	if omano:
 		if Input.is_action_just_pressed("interaccion") or Input.is_action_just_pressed("clicki"):
+			$"8BitCoinSoundEffect".play()
 			reset()
 
 func inic_dialo() -> void:
