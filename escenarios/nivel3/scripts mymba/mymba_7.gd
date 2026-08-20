@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 signal jugador_danado(id_yuyo: String)
 
-@export var teclas_combo: Array[String] = ["ui_left", "ui_down", "interaccion"]
+@export var teclas_combo: Array[String] = ["left", "down", "interaccion"]
 var pos_original: Vector3
 var vel_normal: float = 10
 
@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector3.ZERO
 			volviendo_a_origen = false
 	elif persigue:
-		
+		$"../../NeipyKarau".play()
 		var direccion = jugador.global_position - global_position
 		var angulo = atan2(direccion.x, direccion.z)
 		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)

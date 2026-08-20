@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 signal jugador_danado(id_yuyo: String)
 
-@export var teclas_combo: Array[String] = ["ui_up", "ui_left", "ui_down"]
+@export var teclas_combo: Array[String] = ["up", "left", "down"]
 var pos_original: Vector3
 var vel_normal: float = 14
 
@@ -42,6 +42,7 @@ func _physics_process(delta: float) -> void:
 		direccion = direccion.normalized()
 		velocity = direccion * SPEED
 		$MonkeyScream2.play()
+		$"../../EspantaLabios".play()
 	move_and_slide()
 
 var yuyo_instancia: Node3D = null

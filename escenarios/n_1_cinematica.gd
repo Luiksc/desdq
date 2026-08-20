@@ -21,7 +21,7 @@ var npc_actual: String = ""
 var pensamiento_activo: bool = false  
 var dialogos ={
 	"Dialogo1":[
-		["Delfina Servín","Mateo,¿ Moo piko nde reho jeýta?
+		["Delfina Servín","Mateo,¿Moõ piko nde reho jeýta?
 (Mateo,¿Donde te vas a ir otra vez?)"],
 		["Mateo Gamarra","Aháta sapy'aite kokuére ha ajevýta
 (Me voy una la chacra, voy a irme un rato y vuelvo )"],

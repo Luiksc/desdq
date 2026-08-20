@@ -1,4 +1,4 @@
-[gd_scene load_steps=414 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=417 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/ka'arurupa.gd" id="1_86ijx"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_hgq2t"]
@@ -98,9 +98,12 @@
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="81_f10x7"]
 [ext_resource type="PackedScene" uid="uid://c5fhir01qye0n" path="res://audios/musica_global.tscn" id="95_c02ee"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="96_uv3yb"]
+[ext_resource type="AudioStream" uid="uid://chr2xbkqifpt" path="res://audios/espanta_labios.mp3" id="98_qqkar"]
 [ext_resource type="AudioStream" uid="uid://w1h5npvgdfyv" path="res://audios/Undertale Damage Sound Effect (mp3cut.net).mp3" id="99_hrodh"]
-[ext_resource type="AudioStream" uid="uid://chr2xbkqifpt" path="res://audios/espanta_labios.mp3" id="100_huqmb"]
+[ext_resource type="AudioStream" uid="uid://263c0tj8t3d" path="res://audios/Neipy_karau.mp3" id="99_ttjso"]
 [ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="100_qny3a"]
+[ext_resource type="PackedScene" uid="uid://b4ee8kkevv21g" path="res://escenarios/nivel3/ambay.tscn" id="103_6qdk0"]
+[ext_resource type="PackedScene" uid="uid://dxgjc6akvakt4" path="res://escenarios/nivel3/ka'arurupa.tscn" id="104_8wrwo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
 panorama = ExtResource("4_bklqj")
@@ -6936,28 +6939,28 @@ animation = &"[E]"
 frame = 1
 frame_progress = 1.0
 
-[node name="ui_up" type="AnimatedSprite2D" parent="Control"]
+[node name="up" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1
 position = Vector2(415, 555)
 scale = Vector2(3.9, 3.9)
 sprite_frames = SubResource("SpriteFrames_f4nrg")
 animation = &"W"
 
-[node name="ui_down" type="AnimatedSprite2D" parent="Control"]
+[node name="down" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1
 position = Vector2(562, 553.75)
 scale = Vector2(3.9, 3.9)
 sprite_frames = SubResource("SpriteFrames_m22j0")
 animation = &"s"
 
-[node name="ui_left" type="AnimatedSprite2D" parent="Control"]
+[node name="left" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1
 position = Vector2(728, 553.5)
 scale = Vector2(3.9, 3.9)
 sprite_frames = SubResource("SpriteFrames_eia1w")
 animation = &"a"
 
-[node name="ui_right" type="AnimatedSprite2D" parent="Control"]
+[node name="right" type="AnimatedSprite2D" parent="Control"]
 texture_filter = 1
 position = Vector2(896, 553.5)
 scale = Vector2(3.9, 3.9)
@@ -7213,18 +7216,28 @@ libraries = {
 "": SubResource("AnimationLibrary_2xmwe")
 }
 
+[node name="EspantaLabios" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("98_qqkar")
+
 [node name="MusicaGlobal" parent="." instance=ExtResource("95_c02ee")]
+
+[node name="NeipyKarau" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("99_ttjso")
+volume_db = 11.304
 
 [node name="BenteveoComúnCantandoSonidoParaLlamarElMejor" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("96_uv3yb")
 volume_db = -5.643
 autoplay = true
 
-[node name="EspantaLabios" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("100_huqmb")
-
 [node name="UndertaleDamageSoundEffect(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("99_hrodh")
+
+[node name="Node3D" parent="." instance=ExtResource("103_6qdk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1, 1, 172)
+
+[node name="ka\'arurupa" parent="." instance=ExtResource("104_8wrwo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, 206)
 
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="." method="_on_trigger_farra_body_entered"]
 [connection signal="body_entered" from="objetos/casa1/trigger_farra" to="objetos/casa1" method="_on_trigger_farra_body_entered"]

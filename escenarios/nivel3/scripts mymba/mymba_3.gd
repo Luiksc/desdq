@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 signal jugador_danado(id_yuyo: String)
 
-@export var teclas_combo: Array[String] = ["ui_left", "ui_down", "ui_right"]
+@export var teclas_combo: Array[String] = ["left", "down", "right"]
 var pos_original: Vector3
 var vel_normal: float = 14
 

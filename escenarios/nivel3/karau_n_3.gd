@@ -11,12 +11,9 @@ signal combo
 
 var mymba_en_combo: Node3D = null
 var teclas_faltantes: Array[String] = []
-var posibles_acciones = ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar",
-							"up", "down", "left", "right"]  # Las últimas 4 son alias táctiles
-# Mapa de acción táctil → acción combo equivalente (para que el joystick virtual funcione)
-var alias_tactil: Dictionary = {
-	"up": "ui_up", "down": "ui_down", "left": "ui_left", "right": "ui_right"
-}
+var posibles_acciones = ["up", "down", "left", "right", "interaccion", "saltar"]
+# alias_tactil ya no es necesario: los inputs del joystick virtual tienen los mismos nombres
+var alias_tactil: Dictionary = {}
 var ui_combo_nodos: Dictionary = {}
 var combo_delay_timer: float = 0.0  # Tiempo de espera antes de detectar teclas en el combo
 const COMBO_INPUT_DELAY: float = 0.2  # Segundos de delay al inicio del combo
@@ -177,7 +174,7 @@ func _on_combo_body_entered(body: Node3D) -> void:
 		if "teclas_combo" in body:
 			teclas_faltantes = body.teclas_combo.duplicate()
 		else:
-			teclas_faltantes = ["interaccion", "up", "right"]
+			teclas_faltantes = ["interaccion", "right", "up"]
 			
 	
 		for accion in posibles_acciones:
@@ -213,7 +210,7 @@ func procesar_combo():
 				if ui_combo_nodos.has(accion):
 					ui_combo_nodos[accion].frame = 1
 				break  # Salir del for: ya procesamos esta tecla
-			elif accion in ["ui_up", "ui_down", "ui_left", "ui_right", "interaccion", "saltar"]:
+			elif accion in ["up", "down", "left", "right", "interaccion", "saltar"]:
 				# Solo penalizar si la tecla es una acción "real" de combo (no alias ni teclas de movimiento libre)
 				emit_signal("combo")
 				if mymba_en_combo != null and "SPEED" in mymba_en_combo:

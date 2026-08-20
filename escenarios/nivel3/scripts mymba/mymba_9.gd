@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 signal jugador_danado(id_yuyo: String)
 
-@export var teclas_combo: Array[String] = ["interaccion", "ui_right", "ui_left"]
+@export var teclas_combo: Array[String] = ["interaccion", "right", "left"]
 var pos_original: Vector3
 var vel_normal: float = 14
 
@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector3.ZERO
 			volviendo_a_origen = false
 	elif persigue:
-
+		$"../../EspantaLabios".play()
 		var direccion = jugador.global_position - global_position
 		var angulo = atan2(direccion.x, direccion.z)
 		rotation.y = lerp_angle(rotation.y, angulo, 5 * delta)
