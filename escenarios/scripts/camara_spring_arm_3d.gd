@@ -17,13 +17,13 @@ var control_conectado: bool = false
 
 
 func _ready() -> void:
-	# Registrarse en el grupo para que Ui_celular.gd lo encuentre
+
 	add_to_group("camara_pivot")
-	# En PC captura el mouse normalmente
+
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	control_conectado = Input.get_connected_joypads().size() > 0
-	# Nos suscribimos para detectar conexión/desconexión en caliente
+
 	Input.joy_connection_changed.connect(_on_joy_connection_changed)
 
 func _on_joy_connection_changed(device_id: int, connected: bool) -> void:
@@ -33,7 +33,7 @@ func _on_joy_connection_changed(device_id: int, connected: bool) -> void:
 	else:
 		print("Mando desconectado")
 
-# Llamado por Ui_celular.gd cuando detecta que es celular
+
 func activar_modo_tactil() -> void:
 	modo_tactil = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -73,7 +73,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 			rotation.x -= event.relative.y * sensi
 			rotation.x = clamp(rotation.x, minim_angulo_vertical, maxim_angulo_vertical)
-		return  # En celular ignorar el resto (mouse, escape, etc.)
+		return  
 
 	# ── Modo PC: mouse capturado ───────────────────────────────────
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

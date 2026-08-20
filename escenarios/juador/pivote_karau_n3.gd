@@ -127,7 +127,7 @@ func opa_combo():
 	cinematica = false
 	if camara and "spring_arm" in camara and original_spring_arm:
 		camara.spring_arm = original_spring_arm
-		#la funcion clamp hace que se limiten ciertos valores
+
 	
  
 func _on_combo_body_entered(body: Node3D) -> void:

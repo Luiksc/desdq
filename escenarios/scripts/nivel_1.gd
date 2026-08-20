@@ -118,15 +118,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	interac.play()
 	if dialogo_activo:
-	
 		if Input.is_action_just_pressed("interaccion"):
 			DialogSystem.neixt()
 			$DialogSystem/sound.play()
 	elif jugador_puede_interac:
 		if Input.is_action_just_pressed("interaccion"):
+			$DialogSystem/sound.play()
 			inic_dialo()
 	if jgd_omamo: 
 		if Input.is_action_just_pressed("clicki") or Input.is_action_just_pressed("interaccion"):
+			$"8BitCoinSoundEffect".play()
 			reset()
 	
 
@@ -227,7 +228,7 @@ func _on_final_body_entered(body: Node3D) -> void:
 		get_tree().change_scene_to_file("res://escenarios/n_1_cinema_final.tscn")
 		finiquitable = true
 func jugador_omano():
-	# Si ya está muriendo o ya murió, bloqueamos cualquier llamada repetida
+
 	if muriendo or jgd_omamo:
 		return
 	muriendo = true

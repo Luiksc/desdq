@@ -100,26 +100,23 @@ func _process(delta: float) -> void:
 			moviendo_funcionario = false
 			if anima_funcio:
 				anima_funcio.play("repira")
-	else:
-		if anima_funcio:
-			anima_funcio.play("camina")
 
-	if vuelve_funcionario and marker_ida:
+	elif vuelve_funcionario and marker_ida:
 		var distancia = funcio.global_position.distance_to(marker_ida.global_position)
 		if distancia > 0.1:
 			var direccion = (marker_ida.global_position - funcio.global_position).normalized()
-			funcio.global_position += direccion * 7 * delta # Puedes ajustar la velocidad aquí
+			funcio.global_position += direccion * 4 * delta # Puedes ajustar la velocidad aquí
 			if anima_funcio:
 				anima_funcio.play("camina")
 			
 			var pos_objetivo = marker_ida.global_position
 			pos_objetivo.y = funcio.global_position.y
 			if funcio.global_position.distance_to(pos_objetivo) > 0.01:
-				funcio.rotation.y= lerp_angle(funcio.rotation.y, (atan2(direccion.x, direccion.z))+ 3*PI/2,  .15)
+				funcio.rotation.y = lerp_angle(funcio.rotation.y, (atan2(direccion.x, direccion.z)) + 3 * PI / 2, 0.15)
 		else:
-			moviendo_funcionario = false
+			vuelve_funcionario = false
 			if anima_funcio:
-				anima_funcio.play("camina")
+				anima_funcio.play("repira")
 	else:
 		if anima_funcio:
 			anima_funcio.play("repira")

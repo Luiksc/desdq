@@ -3254,6 +3254,7 @@ shadow_mesh = SubResource("ArrayMesh_x54d1")
 [sub_resource type="Animation" id="Animation_e8u2n"]
 resource_name = "camina"
 length = 1.5
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -3387,6 +3388,7 @@ tracks/8/keys = PackedFloat32Array(0, 1, 0.0436194, 0, 0, 0.999048)
 [sub_resource type="Animation" id="Animation_ay02r"]
 resource_name = "repira"
 length = 2.0
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -3939,7 +3941,7 @@ transform = Transform3D(-0.372631, 0, 0.927979, 0, 1, 0, -0.927979, 0, -0.372631
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24375, 0)
 
 [node name="brazoizquierda2" type="Node3D" parent="funcionario/blockbench_export/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, -0.18125, 1.43125, 0.28125)
+transform = Transform3D(0.906308, 0.422215, 0.0184343, -0.422618, 0.905445, 0.0395326, -1.11759e-08, -0.0436194, 0.999048, -0.18125, 1.43125, 0.28125)
 
 [node name="jyva 1" type="MeshInstance3D" parent="funcionario/blockbench_export/base/extremidades2/brazoizquierda2"]
 transform = Transform3D(0.991445, 0.130526, -9.31323e-10, -0.130029, 0.987672, 0.0871557, 0.0113761, -0.0864101, 0.996195, 0, 0.154976, 0.0885831)
@@ -3957,7 +3959,7 @@ mesh = SubResource("ArrayMesh_gdhn4")
 skeleton = NodePath("")
 
 [node name="brazoderecha2" type="Node3D" parent="funcionario/blockbench_export/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, -0.18125, 1.43125, -0.28125)
+transform = Transform3D(0.906308, -0.422216, 0.0184343, 0.422618, 0.905445, -0.0395326, -1.11759e-08, 0.0436194, 0.999048, -0.18125, 1.43125, -0.28125)
 
 [node name="po2" type="MeshInstance3D" parent="funcionario/blockbench_export/base/extremidades2/brazoderecha2"]
 transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0, -0.649712, -0.154208)
@@ -3975,7 +3977,7 @@ mesh = SubResource("ArrayMesh_q6f3x")
 skeleton = NodePath("")
 
 [node name="retyma3" type="Node3D" parent="funcionario/blockbench_export/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871558, 0, -0.0871558, 0.996195, -0.1875, 0.68125, 0.159375)
+transform = Transform3D(0.906308, -0.421011, -0.0368336, 0.422619, 0.902859, 0.0789898, -2.23517e-08, -0.0871557, 0.996195, -0.1875, 0.68125, 0.159375)
 
 [node name="jyva 23" type="MeshInstance3D" parent="funcionario/blockbench_export/base/extremidades2/retyma3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00625, 0.0587175, 0.0241312)
@@ -3998,7 +4000,7 @@ mesh = SubResource("ArrayMesh_ctudf")
 skeleton = NodePath("")
 
 [node name="retyma4" type="Node3D" parent="funcionario/blockbench_export/base/extremidades2"]
-transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, -0.1875, 0.68125, -0.228125)
+transform = Transform3D(0.906308, 0.421011, -0.0368336, -0.422619, 0.902859, -0.0789898, -2.23517e-08, 0.0871557, 0.996195, -0.1875, 0.68125, -0.228125)
 
 [node name="jyva 4" type="MeshInstance3D" parent="funcionario/blockbench_export/base/extremidades2/retyma4"]
 transform = Transform3D(1, 0, 0, 0, -1, -1.22465e-16, 0, 1.22465e-16, -1, 0.00625, -0.30146, 0.0350056)

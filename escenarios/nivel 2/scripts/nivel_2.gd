@@ -164,9 +164,10 @@ func _process(delta: float) -> void:
 			$DialogSystem/sound.play()
 
 	elif jugador_puede_interac:
-		
 		if Input.is_action_just_pressed("interaccion"):
+			$DialogSystem/sound.play()
 			inic_dialo()
+	
 	
 	if puede_recoger and llevando == false:
 		if Input.is_action_just_pressed("interaccion"):

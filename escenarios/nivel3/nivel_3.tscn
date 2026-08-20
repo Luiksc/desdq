@@ -1,4 +1,4 @@
-[gd_scene load_steps=413 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=414 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/ka'arurupa.gd" id="1_86ijx"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_hgq2t"]
@@ -99,6 +99,7 @@
 [ext_resource type="PackedScene" uid="uid://c5fhir01qye0n" path="res://audios/musica_global.tscn" id="95_c02ee"]
 [ext_resource type="AudioStream" uid="uid://c2yw6tfu7gjlu" path="res://audios/sonidos_ambiente/Benteveo Común Cantando Sonido para Llamar El Mejor.mp3" id="96_uv3yb"]
 [ext_resource type="AudioStream" uid="uid://w1h5npvgdfyv" path="res://audios/Undertale Damage Sound Effect (mp3cut.net).mp3" id="99_hrodh"]
+[ext_resource type="AudioStream" uid="uid://chr2xbkqifpt" path="res://audios/espanta_labios.mp3" id="100_huqmb"]
 [ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="100_qny3a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mfj3p"]
@@ -6869,7 +6870,6 @@ transform = Transform3D(0.417373, 0.0586673, -0.500617, 0, 0.783282, 0.0499945, 
 transform = Transform3D(0.417373, 0.0586673, -0.500617, 0, 0.783282, 0.0499945, 0.722911, -0.0338716, 0.289031, -13.891, 0.153035, 17.3969)
 
 [node name="DialogSystem" parent="." instance=ExtResource("36_8tkwm")]
-visible = false
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -7219,6 +7219,9 @@ libraries = {
 stream = ExtResource("96_uv3yb")
 volume_db = -5.643
 autoplay = true
+
+[node name="EspantaLabios" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("100_huqmb")
 
 [node name="UndertaleDamageSoundEffect(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("99_hrodh")

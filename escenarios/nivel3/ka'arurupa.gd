@@ -56,10 +56,10 @@ var reseteando: bool = false
 
 
 var dialogos ={
-	"florida":[
-		["Ña florida","¡Qué tal Ña Delfina! ¿le buscás a Mateo?"],            
-		["Ña florida","Hay una fiesta cerca de la fábrica por el día de la Raza"],
-		["Ña florida","Ikatu Mateo ohora'e napépe.\n(seguro se fue allá)"]
+	"inicio":[
+		["Karãu","Akói la ñanandy imymbareta, amondýita mante umi mymba ka'aguy.
+(Siempre hay muchos animales en el yuyal, voy a espantarles nomas a estos animales salvajes)"],            
+		["Karãu","(Seguí el patrón de teclas para espantar animales.)"],
 	],
 	"pensamiento1":[
 		["Karãu", "Emañamina mba'eichaite ipora pe kuñatai.\nQue hermosa es esa chica."]
@@ -78,7 +78,7 @@ var dialogos ={
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MusicaGlobal.tortola_sonido_ambiente()
-
+	piensa1("inicio")
 	perdeu.hide()
 	boton_perdeu.hide()
 	transicion.play("salida")
@@ -236,6 +236,7 @@ func reset_por_yuyo(id_yuyo: String) -> void:
 	if control_camara != null:
 		if control_camara.has_method("opa_combo"):
 			control_camara.opa_combo()
+			$EspantaLabios.play()
 		else:
 			control_camara.cinematica = false
 	
