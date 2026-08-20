@@ -1139,6 +1139,7 @@ _data = {
 }
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_k2yoy"]
+height = 7.19055
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_to5os"]
 radius = 10.1474
@@ -1299,7 +1300,7 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08054, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.73792, 0)
 shape = SubResource("CylinderShape3D_k2yoy")
 
 [node name="detecta" type="Area3D" parent="."]
@@ -1329,7 +1330,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51111, 0)
 stream = ExtResource("22_bs2d2")
 attenuation_model = 2
 volume_db = 5.582
-unit_size = 7.03
+unit_size = 19.81
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="detecta" to="." method="_on_area_3d_body_entered"]

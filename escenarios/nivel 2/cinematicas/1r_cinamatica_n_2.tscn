@@ -5186,9 +5186,9 @@ offset_right = 451.5
 offset_bottom = 172.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "1870-19XX
+text = "1870-1940
 Paraguarí
-posterior a
+después de la
 guerra guasu"
 label_settings = SubResource("LabelSettings_0wbqw")
 horizontal_alignment = 1

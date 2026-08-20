@@ -1,4 +1,4 @@
-[gd_scene load_steps=500 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=505 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cxu4lm8v3gba" path="res://modelos/objetos/Alto parana/cabaña/cabaña_1.png" id="9_d0wjs"]
 [ext_resource type="Texture2D" uid="uid://dkq4qc8334dke" path="res://UI/lista_n2.png" id="9_qm877"]
 [ext_resource type="Texture2D" uid="uid://cau3he65g4qf0" path="res://modelos/objetos/Alto parana/cabaña/cabaña_2.png" id="10_f7rxo"]
+[ext_resource type="Texture2D" uid="uid://bkcnruwusx3k6" path="res://UI/nivel3_atencion.png" id="10_isq0j"]
 [ext_resource type="PackedScene" uid="uid://d0jx8bidln0v6" path="res://escenarios/nivel 2/kapanga_6.tscn" id="10_j1ndj"]
 [ext_resource type="Texture2D" uid="uid://n4c46tcmmmul" path="res://modelos/objetos/Alto parana/cabaña/cabaña_3.png" id="11_37hke"]
 [ext_resource type="Texture2D" uid="uid://bwb5bdatt5ok3" path="res://modelos/objetos/Alto parana/cabaña/cabaña_4.png" id="12_m5hbl"]
@@ -356,6 +357,60 @@ font_color = Color(0.176471, 0.117647, 0.0862745, 1)
 outline_size = 5
 outline_color = Color(0.733005, 0.733005, 0.733005, 1)
 shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_s3jhe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r6g8h"]
+resource_name = "aparece"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pyi10"]
+resource_name = "desaparecer"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ffaiu"]
+_data = {
+"RESET": SubResource("Animation_s3jhe"),
+"aparece": SubResource("Animation_r6g8h"),
+"desaparecer": SubResource("Animation_pyi10")
+}
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xgu5u"]
 radius = 0.7
@@ -5678,8 +5733,8 @@ anchors_preset = -1
 anchor_top = 0.921296
 anchor_right = 1.03472
 anchor_bottom = 1.9213
-offset_top = -1244.0
-offset_bottom = -1244.0
+offset_top = -1199.78
+offset_bottom = -1199.78
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -5691,8 +5746,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1289.0
-offset_right = 13.0
-offset_bottom = -1266.0
+offset_right = 85.0
+offset_bottom = -1218.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)
@@ -5714,10 +5769,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Data" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 121.0
-offset_top = 210.0
-offset_right = 1056.0
-offset_bottom = 393.0
+offset_left = 85.0
+offset_top = 205.0
+offset_right = 1020.0
+offset_bottom = 388.0
 text = "TAKURU PUKU
 3 DÍAS DE TRABAJO"
 label_settings = SubResource("LabelSettings_57x23")
@@ -5774,6 +5829,18 @@ scale = Vector2(1.09, 2.16)
 text = "Comprar harina "
 label_settings = SubResource("LabelSettings_s84nh")
 horizontal_alignment = 1
+
+[node name="Nivel3Atencion" type="Sprite2D" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(526, 207)
+scale = Vector2(1.955, 1.76)
+texture = ExtResource("10_isq0j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Nivel3Atencion"]
+libraries = {
+"": SubResource("AnimationLibrary_ffaiu")
+}
 
 [node name="mensu2" parent="." node_paths=PackedStringArray("outa", "ohota") instance=ExtResource("2_uajcu")]
 transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 27, 0.727514, -74)

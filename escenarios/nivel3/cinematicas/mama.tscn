@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=4 uid="uid://fl2k1gdo4xpy"]
+[gd_scene load_steps=143 format=4 uid="uid://fl2k1gdo4xpy"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/cinematicas/cinematica_mama.gd" id="1_4e7c8"]
 [ext_resource type="PackedScene" uid="uid://cw182qc1s15xy" path="res://modelos/objetos/chaco/ÓGA+/casa verde dentro.glb" id="1_mil2k"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dxb4t3eibfkqf" path="res://background/yvaga sky.png" id="3_20ncc"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="4_tp616"]
 [ext_resource type="PackedScene" uid="uid://bgryn1xmwk3dn" path="res://UI/UI_celular/Ui_celular.tscn" id="5_mjic2"]
+[ext_resource type="AudioStream" uid="uid://dt60wyg67utgn" path="res://audios/sonidos_ambiente/Paraguay natural.mp3" id="6_71ei5"]
 [ext_resource type="PackedScene" uid="uid://dlbg1eeepnk3k" path="res://modelos/objetos/chaco/cama/cama.glb" id="6_ns6l2"]
+[ext_resource type="AudioStream" uid="uid://clmwahwau6mma" path="res://audios/sonidos_ambiente/Tórtola o Rabiche Cantando Sonido para Llamar El Mejor.mp3" id="6_wn2li"]
 [ext_resource type="Texture2D" uid="uid://b5lxyp28bvpme" path="res://modelos/mama karau/doña_0.png" id="7_7tl7b"]
 [ext_resource type="Texture2D" uid="uid://cqo68m6fnoa8j" path="res://modelos/mama karau/doña_1.png" id="8_hl6vc"]
 [ext_resource type="Texture2D" uid="uid://ngmkfqg8iisw" path="res://modelos/mama karau/doña_2.png" id="9_upf5p"]
@@ -1804,6 +1806,16 @@ skeleton = NodePath("")
 
 [node name="DialogSystem" parent="." instance=ExtResource("4_tp616")]
 
+[node name="TórtolaORabicheCantandoSonidoParaLlamarElMejor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_wn2li")
+volume_db = -15.826
+autoplay = true
+
+[node name="ParaguayNatural" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_71ei5")
+volume_db = -12.435
+autoplay = true
+
 [node name="CanvasLayer" parent="." instance=ExtResource("5_mjic2")]
 visible = false
 
@@ -2100,9 +2112,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -653.0
+offset_top = -647.0
 offset_right = 38.0878
-offset_bottom = -652.998
+offset_bottom = -646.998
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -2113,9 +2125,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1301.0
+offset_top = -1289.0
 offset_right = 85.0
-offset_bottom = -1230.0
+offset_bottom = -1218.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.105882, 0.141176, 0.278431, 1)

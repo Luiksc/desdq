@@ -1,4 +1,4 @@
-[gd_scene load_steps=452 format=4 uid="uid://v5qsj0tl4f2l"]
+[gd_scene load_steps=459 format=4 uid="uid://v5qsj0tl4f2l"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/cinematicas/cinamatica_n_2.gd" id="1_7po0y"]
 [ext_resource type="PackedScene" uid="uid://cm0ysn5kfaswi" path="res://modelos/objetos/Alto parana/cabaña/cabaña.glb" id="2_j7bes"]
@@ -38,8 +38,8 @@
 [ext_resource type="Texture2D" uid="uid://bya7m5tdoyu25" path="res://modelos/Marta/Marta_oguapy_anima_12.png" id="35_5au73"]
 [ext_resource type="Texture2D" uid="uid://de5ocbccegwnc" path="res://modelos/Marta/Marta_oguapy_anima_13.png" id="36_qd48q"]
 [ext_resource type="Texture2D" uid="uid://b0ditg2ro8ou8" path="res://modelos/Marta/Marta_oguapy_anima_14.png" id="37_dck7f"]
-[ext_resource type="PackedScene" uid="uid://ddmppeixmbj54" path="res://UI/transicion-.tscn" id="38_wt4pw"]
 [ext_resource type="PackedScene" uid="uid://d2t1vs5j3vmgm" path="res://escenarios/nivel 2/carta_n2_final.tscn" id="39_0pqfo"]
+[ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="39_eg7pv"]
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="40_4pcuv"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="41_j28iu"]
 [ext_resource type="Texture2D" uid="uid://d3tyw0dn5m18j" path="res://modelos/objetos/Alto parana/catre/Katre_0.png" id="42_34684"]
@@ -101,6 +101,8 @@
 [ext_resource type="Texture2D" uid="uid://ks15ec1r1bvy" path="res://modelos/laburador 3/laburador3_15.png" id="98_52oub"]
 [ext_resource type="Texture2D" uid="uid://cxbjnsqnl2vqo" path="res://modelos/laburador 3/laburador3_16.png" id="99_1fw4s"]
 [ext_resource type="Texture2D" uid="uid://dsjsnta0i2cto" path="res://modelos/laburador 3/laburador3_17.png" id="100_rlb6l"]
+[ext_resource type="AudioStream" uid="uid://cqgvoici3sngv" path="res://audios/sonidos_ambiente/Sonidos de juí.mp3" id="102_1vnls"]
+[ext_resource type="AudioStream" uid="uid://bl6c12k56h86y" path="res://audios/Door Opening Sound Effect (mp3cut.net).mp3" id="103_8klw5"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h086u"]
 panorama = ExtResource("6_hf8y0")
@@ -2097,6 +2099,137 @@ tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 _data = {
 "arregla": SubResource("Animation_n6ues"),
 "repire": SubResource("Animation_4rf7e")
+}
+
+[sub_resource type="Animation" id="Animation_exjlt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -647)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1289)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_lqt2t"]
+resource_name = "entrafa"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -647), Vector2(3, 658)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1289), Vector2(3, -4)]
+}
+
+[sub_resource type="Animation" id="Animation_4ad2x"]
+resource_name = "opyta"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-17, 20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1182, 671)]
+}
+
+[sub_resource type="Animation" id="Animation_kl6ug"]
+resource_name = "salida"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 648), Vector2(0, -653)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1301)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alwvl"]
+_data = {
+"RESET": SubResource("Animation_exjlt"),
+"entrafa": SubResource("Animation_lqt2t"),
+"opyta": SubResource("Animation_4ad2x"),
+"salida": SubResource("Animation_kl6ug")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_6qqrj"]
@@ -6196,12 +6329,48 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ã" parent="Control" instance=ExtResource("38_wt4pw")]
+[node name="ã" type="Control" parent="Control"]
 layout_mode = 1
-offset_left = -28.0
-offset_top = -20.0
-offset_right = -11.0
-offset_bottom = -20.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_right = 17.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/ã"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.921296
+anchor_right = 1.03472
+anchor_bottom = 1.9213
+offset_top = -1199.78
+offset_bottom = -1199.78
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("39_eg7pv")
+
+[node name="ColorRect" type="ColorRect" parent="Control/ã"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1289.0
+offset_right = 85.0
+offset_bottom = -1218.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.141176, 0.278431, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/ã"]
+libraries = {
+"": SubResource("AnimationLibrary_alwvl")
+}
 
 [node name="final" parent="Control" instance=ExtResource("39_0pqfo")]
 layout_mode = 1
@@ -7196,3 +7365,13 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_umgsb")
 }
+
+[node name="SonidosDeJuí" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("102_1vnls")
+volume_db = -11.304
+autoplay = true
+
+[node name="DoorOpeningSoundEffect(mp3Cut_net)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("103_8klw5")
+volume_db = -15.826
+autoplay = true

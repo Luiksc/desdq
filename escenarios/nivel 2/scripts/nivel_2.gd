@@ -7,6 +7,7 @@ extends Node3D
 @onready var data =$"Control/Data/AnimationPlayer"
 @onready var boton_interac = $Control/Interac
 
+@onready var anima_avertencia=$Control/Nivel3Atencion/AnimationPlayer
 @onready var indicador1 =$sorpresa 
 @onready var indicador2 =$sorpresa2
 @onready var indicador3 = $sorpresa3
@@ -96,12 +97,13 @@ var dialogos ={
 (Prestá antencion amigo mío, se dice que los capataces se molestaron con vos, tenés que ser rápido.)"],
 		["Dionisio", "Héẽ, almenos tre kósa mante ajapo'arã ha ja ahátama añeno
 (Sí, almenos solo tres cosas me quedan por hacer, y después ya me acuesto.)"],
+	],
+	"sigue":[
 		["Rogelio", "Iporãsíto upéa, ejapysaka la llaves ipuhatã
 (Está bien eso, atendé al sonido de las llaves que suena fuerte)"],
 		["Rogelio", "Upéa he'íse kapánga oime ag̃ui ndehegui. Che ahátama aguejy ka'a sáko ¡Ejúpy!
 (Eso significa que estás cerca de voz, Yo ya me voy a bajar los sacos, ¡Vení!)"]
 	],
-	
 	"Piensadelfi":[
 		["delfina", "Acá esta lleno de mykurẽ, ambosápe manteva'erá ko'a vícho    
 (Acá está lleno de mykurés, Debo ahuyentarles a estos animales)"],               #pensamiento ejemplo
@@ -228,9 +230,15 @@ func inic_dialo() -> void:
 func dialog_terminado() -> void:
 	dialogo_activo = false
 	jugador.puede_moverse = true  # desbloquea el movimiento
-	if npc_actual == "iniciarf":
+	if npc_actual == "sigue":
+		anima_avertencia.play("desaparecer")
 		se_va.emit()
+
+	elif npc_actual == "iniciarf":
 		$Control/Sprite2D.show()
+		anima_avertencia.play("aparece")
+		conversa("sigue")
+		
 	
 	if pensamiento_activo:
 		pensamiento_activo = false
@@ -443,7 +451,7 @@ func reset():
 			s.hide()
 
 		$Control/Sprite2D/Label.text = "Bajar sacos de yerba 0/3"
-		$Control/Sprite2D/Label.modulate= Color("968c87")
+		
 
 		llevando = false
 		jugador.oraha = false
@@ -463,7 +471,7 @@ func reset():
 			s.hide()
 
 		$Control/Sprite2D/Label2.text = "poner a secar la yerba 0/3"
-		$Control/Sprite2D/Label2.modulate= Color("968c87")                 #
+					   
 		
 		llevando2 = false
 		jugador.oraha = false

@@ -2052,7 +2052,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wq6wg"]
-height = 3.67243
+height = 7.13592
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_to5os"]
 radius = 10.6496
@@ -2340,7 +2340,7 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39596, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35205, 0)
 shape = SubResource("CapsuleShape3D_wq6wg")
 
 [node name="detecta" type="Area3D" parent="."]
