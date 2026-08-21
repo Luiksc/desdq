@@ -541,6 +541,21 @@ _data = {
 "desaparece": SubResource("Animation_mmyjn")
 }
 
+[sub_resource type="Animation" id="Animation_wohnk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_c8g6f"]
 resource_name = "aparece"
 length = 0.5
@@ -555,21 +570,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_wohnk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_6vq2w"]
@@ -834,6 +834,23 @@ tracks/1/keys = {
 "values": [Vector3(29.6571, 2.19152, -72.2312)]
 }
 
+[sub_resource type="Animation" id="Animation_hmuae"]
+resource_name = "está"
+length = 32.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7, 21.7333, 32.0667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.5, 2.1, -72.231), Vector3(29.86, 2.19, -72.231), Vector3(29.6571, 2.19152, -72.2312)]
+}
+
 [sub_resource type="Animation" id="Animation_0hojm"]
 resource_name = "karau_acerca"
 length = 0.7
@@ -935,23 +952,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(-1.48842, -0.7889, 0.262616)]
-}
-
-[sub_resource type="Animation" id="Animation_hmuae"]
-resource_name = "está"
-length = 32.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 7, 21.7333, 32.0667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(29.6571, 2.19152, -72.2312), Vector3(29.5, 2.1, -72.231), Vector3(29.86, 2.19, -72.231), Vector3(29.6571, 2.19152, -72.2312)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oupfh"]

@@ -15,6 +15,8 @@ var mymba_en_combo: Node3D = null
 var teclas_faltantes: Array[String] = []
 var posibles_acciones = ["up", "down", "left", "right", "interaccion", "saltar"]
 var ui_combo_nodos: Dictionary = {}
+@export var combo_ui_spacing: float = 140.0
+@export var combo_ui_y: float = 553.0
 var farra := false:
 	set(value):
 		farra = value
@@ -169,24 +171,45 @@ func _on_combo_body_entered(body: Node3D) -> void:
 		mymba_en_combo = body
 		
 		# Leer teclas combo del mymba o usar un valor por defecto
-		if "teclas_combo" in body:
+		if "teclas_combo" in body and body.teclas_combo.size() > 0:
 			teclas_faltantes = body.teclas_combo.duplicate()
 		else:
 			teclas_faltantes = ["interaccion", "up", "right"]
 			
-		# Mostrar los sprites correspondientes al combo
-		for accion in posibles_acciones:
-			if ui_combo_nodos.has(accion):
-				var sprite = ui_combo_nodos[accion]
-				if accion in teclas_faltantes:
-					sprite.show()
-					sprite.frame = 0
-				else:
-					sprite.hide()
+		_mostrar_combo_ui(teclas_faltantes)
 			
 		puede_moverse = false
 		if body.has_method("velocidad_reducida"):
 			body.velocidad_reducida(true)
+
+func _mostrar_combo_ui(combo_keys: Array) -> void:
+	# Ocultar todos los sprites primero
+	for accion in ui_combo_nodos:
+		if ui_combo_nodos[accion] != null:
+			ui_combo_nodos[accion].hide()
+			ui_combo_nodos[accion].frame = 0
+	
+	if combo_keys.is_empty():
+		return
+		
+	var viewport_size = get_viewport().get_visible_rect().size if get_viewport() else Vector2(1080, 600)
+	if viewport_size.x <= 0:
+		viewport_size = Vector2(1080, 600)
+		
+	var center_x = viewport_size.x / 2.0
+	var num_teclas = combo_keys.size()
+	var ancho_total = (num_teclas - 1) * combo_ui_spacing
+	var start_x = center_x - (ancho_total / 2.0)
+	
+	for i in range(num_teclas):
+		var accion = combo_keys[i]
+		if ui_combo_nodos.has(accion) and ui_combo_nodos[accion] != null:
+			var sprite = ui_combo_nodos[accion]
+			var pos_x = start_x + (i * combo_ui_spacing)
+			sprite.position = Vector2(pos_x, combo_ui_y)
+			sprite.frame = 0
+			sprite.show()
+
 		
 func procesar_combo():
 	for accion in posibles_acciones:
