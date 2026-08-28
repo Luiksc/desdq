@@ -62,7 +62,7 @@ var dialogos ={
 		["Karãu","(Seguí el patrón de teclas para espantar animales.)"],
 	],
 	"pensamiento1":[
-		["Karãu", "Emañamina mba'eichaite ipora pe kuñatai.\nQue hermosa es esa chica."]
+		["Karãu", "Emañamína mba'eichaite iporã pe kuñataĩ.\n(Que hermosa es esa chica.)"]
 	],
 	"pensamiento2":[
 		["Karãu", "Ahasamíta ko fárrare, sapy'aiténte.\n(Voy a la fiesta, un ratito nomás.)"],

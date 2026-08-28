@@ -83,6 +83,7 @@ func dialog_terminado() -> void:
 		anima_karau2_oho.play("OHO")
 		await anima_karau2_oho.animation_finished
 		transicion_pixel.play("entrafa")
+		await transicion_pixel.animation_finished
 		get_tree().change_scene_to_file("res://escenarios/nivel3/cinematicas/n3_escena_Final.tscn")
 		
 	return

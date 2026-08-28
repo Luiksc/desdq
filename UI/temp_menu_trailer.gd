@@ -95,7 +95,7 @@ func _abrir_nivel(nivel: int) -> void:
 			await anima_camara.animation_finished
 			transicion.play("entrafa")
 			await transicion.animation_finished
-			get_tree().change_scene_to_file("res://escenarios/nivel3/cinematucas/mama.tscn")
+			get_tree().change_scene_to_file("res://escenarios/nivel3/cinematicas/mama.tscn")
 
 func _volver_al_inicio() -> void:
 	en_seleccion = false

@@ -3,21 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boynpiai11f6o"
-path.s3tc="res://.godot/imported/el mensu_2.png-9310f1d9aed39858c94b62a6da42e90a.s3tc.ctex"
-path.etc2="res://.godot/imported/el mensu_2.png-9310f1d9aed39858c94b62a6da42e90a.etc2.ctex"
+path="res://.godot/imported/el mensu_2.png-9310f1d9aed39858c94b62a6da42e90a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://modelos/objetos/caso el mensu/el mensu_2.png"
-dest_files=["res://.godot/imported/el mensu_2.png-9310f1d9aed39858c94b62a6da42e90a.s3tc.ctex", "res://.godot/imported/el mensu_2.png-9310f1d9aed39858c94b62a6da42e90a.etc2.ctex"]
+dest_files=["res://.godot/imported/el mensu_2.png-9310f1d9aed39858c94b62a6da42e90a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

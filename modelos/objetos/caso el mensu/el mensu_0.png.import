@@ -3,11 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk5ig4xd5pbe5"
-path.s3tc="res://.godot/imported/el mensu_0.png-e94da12c128268a9a2ecb64bb61f74df.s3tc.ctex"
-path.etc2="res://.godot/imported/el mensu_0.png-e94da12c128268a9a2ecb64bb61f74df.etc2.ctex"
+path="res://.godot/imported/el mensu_0.png-e94da12c128268a9a2ecb64bb61f74df.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "9d0a16303285a90778f96bab637d8b0e"
@@ -16,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/objetos/caso el mensu/el mensu_0.png"
-dest_files=["res://.godot/imported/el mensu_0.png-e94da12c128268a9a2ecb64bb61f74df.s3tc.ctex", "res://.godot/imported/el mensu_0.png-e94da12c128268a9a2ecb64bb61f74df.etc2.ctex"]
+dest_files=["res://.godot/imported/el mensu_0.png-e94da12c128268a9a2ecb64bb61f74df.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -3,11 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbyknd3s1lp47"
-path.s3tc="res://.godot/imported/karau oñeme\'e encuenta_10.png-711c347102e98230b3a39469f42a21ac.s3tc.ctex"
-path.etc2="res://.godot/imported/karau oñeme\'e encuenta_10.png-711c347102e98230b3a39469f42a21ac.etc2.ctex"
+path="res://.godot/imported/karau oñeme'e encuenta_10.png-711c347102e98230b3a39469f42a21ac.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "7dc345f2aabfb3620053d878c255e995"
@@ -16,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://modelos/karau/karau oñeme'e encuenta_10.png"
-dest_files=["res://.godot/imported/karau oñeme\\'e encuenta_10.png-711c347102e98230b3a39469f42a21ac.s3tc.ctex", "res://.godot/imported/karau oñeme\\'e encuenta_10.png-711c347102e98230b3a39469f42a21ac.etc2.ctex"]
+dest_files=["res://.godot/imported/karau oñeme'e encuenta_10.png-711c347102e98230b3a39469f42a21ac.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

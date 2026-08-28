@@ -9,7 +9,7 @@
 [ext_resource type="MeshLibrary" uid="uid://tse2hyaprok8" path="res://modelos/libr mesh/n3/karugua.tres" id="5_m22pm"]
 [ext_resource type="PackedScene" uid="uid://cuf84hxkit7st" path="res://escenarios/juador/Karau_asustado.tscn" id="6_3n2sh"]
 [ext_resource type="PackedScene" uid="uid://cb2qeh0ro8vw2" path="res://addons/dialog_system/dialog_System.tscn" id="6_3njvc"]
-[ext_resource type="AudioStream" uid="uid://dryii8rb2rwu" path="res://audios/RAYOS Y TRUENOS n3.mp3" id="7_8s2ol"]
+[ext_resource type="AudioStream" uid="uid://bai214ootbgu5" path="res://audios/sonidos_ambiente/RAYOS Y TRUENOS n3.mp3" id="7_8s2ol"]
 [ext_resource type="Texture2D" uid="uid://dqp7ylxddvol5" path="res://UI/nivel_3_carta.png" id="7_o8ts2"]
 [ext_resource type="PackedScene" uid="uid://c5fhir01qye0n" path="res://audios/musica_global.tscn" id="8_ai7mt"]
 [ext_resource type="Texture2D" uid="uid://doe4rb4nj4w7i" path="res://UI/transicion.png" id="10_dx5qo"]
