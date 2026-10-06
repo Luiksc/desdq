@@ -44,6 +44,13 @@ func _physics_process(delta: float) -> void:
 		velocity.y = max(velocity.y, -gravedad * 3)
 	match Estado:
 		estado.oho:
+			if Global.kapanga_persiguiendo == null and not Global.jugador_inmune_kapanga:
+				var detecta_node = get_node_or_null("detecta")
+				if detecta_node != null:
+					for b in detecta_node.get_overlapping_bodies():
+						if b.is_in_group("jugon") or b.is_in_group("jugador_global"):
+							intentar_detectar(b)
+							break
 			if animacion.current_animation != "camina":
 				animacion.play("camina")
 			var distancia_minima := 1
@@ -117,9 +124,15 @@ func animacion_termino(nombre):
 	
 
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
+func intentar_detectar(body: Node3D) -> void:
+	if Estado != estado.oho:
+		return
 	if not (body.is_in_group("jugon") or body.is_in_group("jugador_global")):
 		return
+	if Global.kapanga_persiguiendo != null or Global.jugador_inmune_kapanga:
+		return
+	
+	Global.kapanga_persiguiendo = self
 	detectado = true
 	sond_sorpresa.play()
 	sorpresa.show()
@@ -138,12 +151,26 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	timer_omuña.start()
 
 
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	intentar_detectar(body)
+
+
 func _on_timer_timeout() -> void:
 	sorpresa.hide()
 
 
 func _on_timer_omuña_timeout() -> void:
-	# Pasaron 4 segundos: volver a patrullar
+	# Pasaron 4 segundos: volver a patrullar e iniciar inmunidad global del jugador
 	detectado = false
 	jugador = null
 	Estado = estado.oho
+	
+	if Global.kapanga_persiguiendo == self:
+		Global.kapanga_persiguiendo = null
+		Global.activar_inmunidad_kapanga(4.0)
+
+
+func _exit_tree() -> void:
+	if Global.kapanga_persiguiendo == self:
+		Global.kapanga_persiguiendo = null
+
