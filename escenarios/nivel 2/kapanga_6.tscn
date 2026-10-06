@@ -2,15 +2,13 @@
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/kapanga_6.gd" id="1_oc7qv"]
 [ext_resource type="PackedScene" uid="uid://7yu7ojmlqm7e" path="res://escenarios/sorpresa.tscn" id="2_wp2l0"]
+[ext_resource type="PackedScene" uid="uid://bhqoaxk8mruj" path="res://escenarios/nivel 2/cono_visor_capangas.tscn" id="3_mphkk"]
 [ext_resource type="PackedScene" uid="uid://byu066kad0apq" path="res://modelos/capanga2/capanga2.glb" id="5_edm1c"]
 [ext_resource type="AudioStream" uid="uid://dqfwgw70l08id" path="res://audios/exclamacion.mp3" id="20_4dq4f"]
 [ext_resource type="AudioStream" uid="uid://b580x6s0gsupa" path="res://audios/llaves.mp3" id="21_hah6c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wq6wg"]
 height = 10.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_to5os"]
-radius = 8.69542
 
 [node name="kapanga" type="CharacterBody3D"]
 script = ExtResource("1_oc7qv")
@@ -29,9 +27,8 @@ shape = SubResource("CapsuleShape3D_wq6wg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="detecta"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47222, 1.96062, -0.84851)
-shape = SubResource("SphereShape3D_to5os")
+[node name="Cone" parent="detecta" instance=ExtResource("3_mphkk")]
+transform = Transform3D(-9.19346e-08, 1.51135e-07, -5.034, 3.45755, 2.10322, 0, 2.10322, -3.45755, -2.20043e-07, 0, 0.358, 2.973)
 
 [node name="Exclamacion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_4dq4f")

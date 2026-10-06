@@ -9017,7 +9017,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.594024, -0.631691, 0.498097, 0.77242, 0.274914, -0.572529, 0.224728, 0.724837, 0.651237, -0.2125, 1.35625, -0.3125)
 
 [node name="Node3D" type="Node3D" parent="Ulises/uliseo/base/extremidades2/brazoderecha2"]
-transform = Transform3D(-0.0698592, 0.140084, 0.987672, -0.0454431, -0.98951, 0.137131, 0.996521, -0.0353031, 0.0754923, 0.0214577, -0.38763, -0.116119)
+transform = Transform3D(-0.0698593, 0.140084, 0.987672, -0.0454431, -0.98951, 0.137131, 0.996521, -0.0353031, 0.0754923, 0.0214577, -0.38763, -0.116119)
 
 [node name="jyva 22" type="MeshInstance3D" parent="Ulises/uliseo/base/extremidades2/brazoderecha2/Node3D"]
 transform = Transform3D(1, -5.96046e-08, 2.98023e-08, -5.96046e-08, 1, 0, 2.98023e-08, -2.98023e-08, 1, 7.62939e-06, 3.8147e-06, 1.90735e-06)
