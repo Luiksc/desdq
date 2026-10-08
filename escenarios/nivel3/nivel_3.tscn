@@ -1,4 +1,4 @@
-[gd_scene load_steps=418 format=4 uid="uid://cf4wwn3yv1im"]
+[gd_scene load_steps=419 format=4 uid="uid://cf4wwn3yv1im"]
 
 [ext_resource type="Script" path="res://escenarios/nivel3/ka'arurupa.gd" id="1_86ijx"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="2_hgq2t"]
@@ -3924,6 +3924,10 @@ outline_size = 5
 outline_color = Color(0.733005, 0.733005, 0.733005, 1)
 shadow_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ekgck"]
+font = ExtResource("44_pfe3j")
+font_size = 100
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_godd1"]
 resource_name = "material_0"
 transparency = 2
@@ -7053,6 +7057,19 @@ text = "Cedrón 0/3
 "
 label_settings = SubResource("LabelSettings_srr4l")
 horizontal_alignment = 1
+
+[node name="pausa" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.354
+anchor_top = 0.3
+anchor_right = 0.631
+anchor_bottom = 0.45
+offset_left = -0.320007
+offset_right = 0.519958
+text = "Pausa
+"
+label_settings = SubResource("LabelSettings_ekgck")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 4, 193)

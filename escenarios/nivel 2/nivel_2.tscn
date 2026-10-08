@@ -1,4 +1,4 @@
-[gd_scene load_steps=509 format=4 uid="uid://ry3t55tpjpai"]
+[gd_scene load_steps=510 format=4 uid="uid://ry3t55tpjpai"]
 
 [ext_resource type="Script" path="res://escenarios/nivel 2/scripts/nivel_2.gd" id="1_a4scs"]
 [ext_resource type="Texture2D" uid="uid://5vp5n4g5ug5m" path="res://background/alto parana pyhare.png" id="1_na6p1"]
@@ -270,6 +270,10 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_04quh"]
 font = ExtResource("6_84008")
 font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_crlr3"]
+font = ExtResource("51_3knho")
+font_size = 100
 
 [sub_resource type="LabelSettings" id="LabelSettings_57x23"]
 font = ExtResource("51_3knho")
@@ -5901,6 +5905,21 @@ anchor_bottom = 0.478395
 text = "HE'ÚMA ÚLE"
 label_settings = SubResource("LabelSettings_04quh")
 metadata/_edit_use_anchors_ = true
+
+[node name="Pausa" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.415
+anchor_top = 0.347
+anchor_right = 0.693
+anchor_bottom = 0.497
+offset_left = -0.200012
+offset_top = -0.199997
+offset_right = -139.44
+offset_bottom = -46.2
+text = "Pausa"
+label_settings = SubResource("LabelSettings_crlr3")
 
 [node name="Data" type="Label" parent="Control"]
 layout_mode = 0

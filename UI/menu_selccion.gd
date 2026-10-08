@@ -59,7 +59,7 @@ func _abrir_nivel(nivel: int) -> void:
 			await anima_camara.animation_finished
 			transicion.play("entrafa")
 			await transicion.animation_finished
-			get_tree().change_scene_to_file("res://escenarios/n_1_cinematica.tscn")
+			get_tree().change_scene_to_file("res://escenarios/n_1.tscn")
 		2:
 			anima_libro2.play("abre")
 			await anima_libro2.animation_finished
@@ -67,7 +67,7 @@ func _abrir_nivel(nivel: int) -> void:
 			await anima_camara.animation_finished
 			transicion.play("entrafa")
 			await transicion.animation_finished
-			get_tree().change_scene_to_file("res://escenarios/nivel 2/cinematicas/1r_cinamatica_n_2.tscn")
+			get_tree().change_scene_to_file("res://escenarios/nivel 2/nivel_2.tscn")
 		3:
 			anima_libro3.play("abre")
 			await anima_libro3.animation_finished
@@ -75,7 +75,7 @@ func _abrir_nivel(nivel: int) -> void:
 			await anima_camara.animation_finished
 			transicion.play("entrafa")
 			await transicion.animation_finished
-			get_tree().change_scene_to_file("res://escenarios/nivel3/cinematicas/mama.tscn")
+			get_tree().change_scene_to_file("res://escenarios/nivel3/nivel_3.tscn")
 
 
 func _on_button_pressed() -> void:

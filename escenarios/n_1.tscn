@@ -1,4 +1,4 @@
-[gd_scene load_steps=354 format=4 uid="uid://47xbkcamudd2"]
+[gd_scene load_steps=355 format=4 uid="uid://47xbkcamudd2"]
 
 [ext_resource type="PackedScene" uid="uid://cf5p26uaj7snn" path="res://escenarios/juador/character_body_3d.tscn" id="1_5bv6o"]
 [ext_resource type="Script" path="res://escenarios/scripts/nivel_1.gd" id="1_oxi0n"]
@@ -429,6 +429,10 @@ _data = {
 "RESET": SubResource("Animation_3xhkh"),
 "sale": SubResource("Animation_qlj3e")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_0mol1"]
+font = ExtResource("8_5ws1b")
+font_size = 100
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lmal"]
 resource_name = "material_0"
@@ -4573,6 +4577,20 @@ vertical_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_duo3w")
 }
+
+[node name="pausa" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.368
+anchor_top = 0.294
+anchor_right = 0.645
+anchor_bottom = 0.444
+offset_left = -0.176025
+offset_top = 0.0543518
+offset_right = 0.109985
+offset_bottom = -0.22406
+text = "Pausa"
+label_settings = SubResource("LabelSettings_0mol1")
 
 [node name="*objetos" type="Node" parent="."]
 
