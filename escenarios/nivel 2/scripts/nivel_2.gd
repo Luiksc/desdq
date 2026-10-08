@@ -112,6 +112,10 @@ var dialogos ={
 }
 
 func _ready() -> void:
+	var manager_pausa = load("res://UI/scrips/pausa_manager.gd").new()
+	manager_pausa.name = "PausaManager"
+	add_child(manager_pausa)
+
 	boton_interac.hide()
 	indicador1.show()
 	jugador.puede_moverse= false

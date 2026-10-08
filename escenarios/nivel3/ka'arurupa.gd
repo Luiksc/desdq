@@ -77,6 +77,10 @@ var dialogos ={
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var manager_pausa = load("res://UI/scrips/pausa_manager.gd").new()
+	manager_pausa.name = "PausaManager"
+	add_child(manager_pausa)
+
 	MusicaGlobal.tortola_sonido_ambiente()
 	piensa1("inicio")
 	perdeu.hide()
