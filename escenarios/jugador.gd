@@ -21,7 +21,7 @@ var gravedad : float
 
 var estuvo_suelo: bool = true
 var puede_moverse: bool = true
-var mouse_cam: bool= true #bloquea la camara al presionar escape
+var mouse_cam: bool= true 
 var input_direccion := Vector3.ZERO
 
 @export var tiem_jump_buffer: float = 0.15

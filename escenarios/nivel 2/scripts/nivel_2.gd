@@ -488,7 +488,7 @@ func _on_puerta_despensa_body_entered(body: Node3D) -> void:
 			transicion.play("entrafa")
 			await  transicion.animation_finished
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			get_tree().change_scene_to_file("res://escenarios/nivel 2/despensa ryepype.tscn")
+			get_tree().change_scene_to_file("res://escenarios/nivel 2/despensa_ryepype.tscn")
 
 func conversa(id_del_npc: String):
 	npc_actual = id_del_npc

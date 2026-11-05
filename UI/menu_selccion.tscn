@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=4 uid="uid://dolmkcow00oir"]
+[gd_scene load_steps=94 format=4 uid="uid://dolmkcow00oir"]
 
 [ext_resource type="Script" path="res://UI/menu_selccion.gd" id="1_8wdyy"]
 [ext_resource type="Texture2D" uid="uid://c2knom4iln3lb" path="res://background/yvaga.png" id="2_gwton"]
@@ -6,8 +6,10 @@
 [ext_resource type="FontFile" uid="uid://11f0be01x6uk" path="res://UI/fuentes/ELestandar_press_start_2p_/PressStart2P.ttf" id="4_o0k38"]
 [ext_resource type="Script" path="res://UI/Inicio_boton.gd" id="5_tg5jd"]
 [ext_resource type="Texture2D" uid="uid://cwyym7sraayg2" path="res://UI/iniciar_botonm.png" id="6_hbg40"]
+[ext_resource type="Script" path="res://UI/boton_regresar.gd" id="7_7svcn"]
 [ext_resource type="MeshLibrary" uid="uid://rhowvwxd6qjc" path="res://modelos/libr mesh/1libreria_chaco.tres" id="7_v4j6t"]
 [ext_resource type="MeshLibrary" uid="uid://btt733selbmy1" path="res://modelos/libr mesh/2libreria_chaco.tres" id="8_pbtqo"]
+[ext_resource type="Texture2D" uid="uid://b26km0dbyuxj8" path="res://UI/volver_boton.png" id="8_yyaq1"]
 [ext_resource type="MeshLibrary" uid="uid://bl8kmlimlxb7i" path="res://modelos/libr mesh/n3/prueba5.tres" id="9_wgpkr"]
 [ext_resource type="AudioStream" uid="uid://ogvi4vkp2wxm" path="res://audios/sonidos_ambiente/Sonidos del chaco. (mp3cut.net).mp3" id="10_bj776"]
 [ext_resource type="AudioStream" uid="uid://csukg2fsnikws" path="res://audios/sonidos_ambiente/Sonidos del Chaco ambiente.mp3" id="11_0m3bn"]
@@ -1106,8 +1108,10 @@ shadow_enabled = true
 layout_mode = 3
 anchor_right = 1.0
 anchor_bottom = 1.003
-offset_right = 2.0
-offset_bottom = 0.0559692
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 8.0
+offset_bottom = 5.05597
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -1116,10 +1120,10 @@ mouse_filter = 2
 layout_mode = 1
 anchor_right = 1.016
 anchor_bottom = 0.875
-offset_left = -2.0
-offset_top = -12.0
-offset_right = -3.46399
-offset_bottom = 69.2499
+offset_left = 154.0
+offset_top = 12.0
+offset_right = 152.536
+offset_bottom = 93.2499
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -1202,6 +1206,26 @@ texture = ExtResource("6_hbg40")
 libraries = {
 "": SubResource("AnimationLibrary_cgky4")
 }
+
+[node name="regresaer" type="Button" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095
+anchor_top = 0.03
+anchor_right = 0.162
+anchor_bottom = 0.15
+offset_left = 0.209991
+offset_top = -0.0556793
+offset_right = -6.284
+offset_bottom = -8.2784
+flat = true
+script = ExtResource("7_7svcn")
+
+[node name="boton_regresar" type="Sprite2D" parent="Control/regresaer"]
+position = Vector2(33, 31.5)
+scale = Vector2(1.03125, 1.01563)
+texture = ExtResource("8_yyaq1")
 
 [node name="gridmaps" type="Node" parent="."]
 
@@ -1360,6 +1384,9 @@ shape = SubResource("BoxShape3D_sf6pe")
 [connection signal="mouse_entered" from="Control/Button" to="Control/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Button" to="Control/Button" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Control/regresaer" to="Control/regresaer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/regresaer" to="Control/regresaer" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/regresaer" to="Control/regresaer" method="_on_pressed"]
 [connection signal="mouse_entered" from="StaticBody3D" to="." method="_on_mateo_mouse_entered"]
 [connection signal="mouse_exited" from="StaticBody3D" to="." method="_on_mateo_mouse_exited"]
 [connection signal="mouse_entered" from="StaticBody3D2" to="." method="_on_mensu_mouse_entered"]

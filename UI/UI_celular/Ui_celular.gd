@@ -29,9 +29,6 @@ func _activar_camara_tactil() -> void:
 		push_warning("Ui_celular: No se encontró ningún nodo en el grupo 'camara_pivot'.")
 
 
-# La acción "interaccion" en pantalla táctil es gestionada directamente
-# por TouchScreenButton6. No se necesita inyección manual de InputEventAction.
-
 
 # Fix Error 4: oculta/muestra solo los TouchScreenButton hijos, no el CanvasLayer entero
 func _set_botones_visibles(valor: bool) -> void:
@@ -54,10 +51,7 @@ func _input(event: InputEvent) -> void:
 	if not es_celular:
 		return
 
-	# Solo gestiona el avance de diálogo con toque en pantalla.
-	# La acción "interaccion" fuera del diálogo es gestionada
-	# directamente por TouchScreenButton6, sin inyección manual
-	# (evita el doble disparo que generaba retraso e inconsistencias).
+	
 	if event is InputEventScreenTouch and event.pressed:
 		if DialogSystem.estar_mostrando():
 			DialogSystem.neixt()

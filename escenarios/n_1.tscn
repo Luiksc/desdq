@@ -4818,11 +4818,22 @@ transform = Transform3D(0.262293, 0, 1.03538, 0, 1.79924, 0, -1.09388, 0, 0.2482
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, -1.63913e-07, 0, 1, -0.0517483, -0.0435181, 0.0503802)
 shape = SubResource("CylinderShape3D_n0eyx")
 
+[node name="ita6" type="Node3D" parent="*objetos"]
+transform = Transform3D(0.262293, 0, 1.03538, 0, 1.79924, 0, -1.09388, 0, 0.248268, 1.49423, 0, -76.4367)
+
+[node name="sphere" parent="*objetos/ita6" instance=ExtResource("13_yrt1l")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="*objetos/ita6/sphere"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="*objetos/ita6/sphere/StaticBody3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, -1.63913e-07, 0, 1, -0.0517483, -0.0435181, 0.0503802)
+shape = SubResource("CylinderShape3D_n0eyx")
+
 [node name="ita4" type="Node3D" parent="*objetos"]
-transform = Transform3D(0.34454, 0, 1.20887, 0, 1.79924, 0, -1.43689, 0, 0.289868, -0.348092, 0, -196.236)
+transform = Transform3D(0.34454, 0, 1.20887, 0, 1.79924, 0, -1.43689, 0, 0.289868, 0.560557, 0, -198.289)
 
 [node name="sphere" parent="*objetos/ita4" instance=ExtResource("13_yrt1l")]
-transform = Transform3D(2.62123, 0, 2.08616e-07, 0, 3.08325, 0, 0, 0, 2.56986, 1.78964, 0, 1.97159)
+transform = Transform3D(2.62123, 0, 8.9407e-08, 0, 3.08325, 0, 0, 0, 2.56986, 0.248535, 0, 1.23386)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="*objetos/ita4/sphere"]
 
